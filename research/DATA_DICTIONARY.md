@@ -42,6 +42,12 @@ Line moves ahead of `posted_et` mean the market knew first.
 `seen_at_et, game_id, date, home, away, model_margin, model_total, injury_report`, written when the model's number
 changes (a new injury report). It shows how much each report moved our number vs. how much it moved the line.
 
+### `research/live/YYYY-MM-DD.csv`: in-game lines (Action Network), every 5-minute check while games are on
+`seen_at_et, game_id, date, away, home, status (e.g. "2nd 6:46"), period, clock, away_score, home_score, book, home_spread,
+home_spread_odds, away_spread_odds, total, over_odds, under_odds, home_ml, away_ml` for Consensus, DraftKings, FanDuel and Fanatics.
+A row is written when the line, price, score or quarter changes. About one snapshot per game every 5 minutes, so it shows how books
+adjust to runs and quarters, but not every in-game move.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,
@@ -52,7 +58,7 @@ the error), so gaps in the data can be explained rather than mistaken for "nothi
 | file | what it holds |
 |---|---|
 | `picks_log.csv` | one row per game: locked model numbers (`pred_margin`, `pred_total`), opening and closing lines, edges, results, grading, and **closing line value** (`open_spread_clv`, `open_total_clv`: points the opening line beat the close by, on the model's side) |
-| `line_history.csv` | every spread and total change with the time first seen (from 5-minute checks) |
+| `line_history.csv` | every spread and total change with the time first seen (from 5-minute checks). `source` says where the line came from: `actionnetwork` (from Oct 30, 2026 evening on; fresh to about 30 seconds) or `espn` (before that, or when Action Network didn't respond; up to about 12 minutes old) |
 | `line_jumps.csv` | fast moves (1.5+ points within 60 minutes): before/after, how long the line had been steady, minutes the move took, hours to tip, toward/away from the model, news in the window, then graded (did it keep moving to the close, did the result land on the side of the move) |
 | `market_moves.csv` | moves of 3+ points toward the model's side ("Market agrees") |
 | `alerts.csv` | every phone alert, including caution alerts with reasons, graded, with `closing_line` and `clv_points` |

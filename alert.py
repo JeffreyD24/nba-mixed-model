@@ -17,6 +17,7 @@ sys.path.insert(0, W)
 from parse_injury_reports import parse as parse_pdf      # noqa: E402
 import build_report_features as brf                      # noqa: E402
 import espn                                              # noqa: E402
+import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # caution flag when the line moved this much AGAINST the bet since opening
@@ -120,6 +121,7 @@ def main():
     hpath = os.path.join(STATE, "line_history.csv")
     H_ = pd.read_csv(hpath) if os.path.exists(hpath) else pd.DataFrame(columns=["game_id", "market", "seen_at_et", "line", "open_line"])
     hist_new = []
+    SRC = {}   # game_id -> where the current line came from
 
     def record_line(gid, market, cur, opn):
         """log the line whenever it changes (or the first time it is seen), with the time we saw it"""
@@ -128,7 +130,7 @@ def main():
         old = H_[(H_.game_id == gid) & (H_.market == market)]
         last = prev[-1]["line"] if prev else (old.line.iloc[-1] if len(old) else None)
         if last is None or float(last) != float(cur):
-            hist_new.append(dict(game_id=gid, market=market, seen_at_et=str(NOW)[:16], line=cur, open_line=opn))
+            hist_new.append(dict(game_id=gid, market=market, seen_at_et=str(NOW)[:16], line=cur, open_line=opn, source=SRC.get(gid)))
 
     def history_text(gid, market, opn, fmt):
         rows = pd.concat([H_[(H_.game_id == gid) & (H_.market == market)],
@@ -166,9 +168,11 @@ def main():
                 if pm > 0 and v: mo += pm * v[0]; md += pm * v[1]
             return mo, md
 
-        L = espn.lines([day], when=("open", "current"))
+        L = espn.lines([day], when=("open", "current"))      # DraftKings opening line (and backup current line) from ESPN
+        L = actionnet.merge_current(L, day)                     # fresher current DraftKings line from Action Network
         for g in M["games"]:
             line = L[(L.home == g["home"]) & (L.away == g["away"])] if len(L) else L
+            if len(line): SRC[g["game_id"]] = line.iloc[0].get("line_source")
             if not len(line) or line.iloc[0].get("state") not in (None, "pre"): continue
             n_games += 1
             ln = line.iloc[0]
@@ -318,7 +322,7 @@ def main():
     try:
         import research, time as _time
         research.init(W); _t0 = _time.time()
-        n_odds = n_pred = n_spl = n_bk = n_pm = n_po = 0
+        n_odds = n_pred = n_spl = n_bk = n_pm = n_po = n_live = 0
         for mf in models:
             M3 = json.load(open(os.path.join(STATE, mf))); rows = []
             try:
@@ -330,6 +334,10 @@ def main():
                 a, b = research.splits_snapshot(NOW, M3["date"], M3["games"]); n_spl += a; n_bk += b
             except Exception as e:
                 print("Betting splits logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "splits " + M3["date"], e)
+            try:
+                n_live += research.live_snapshot(NOW, M3["date"], M3["games"])
+            except Exception as e:
+                print("Live line logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "live " + M3["date"], e)
             try:
                 stamp = os.path.join(W, "research", "props", f"_full_{M3['date']}.txt")
                 last_full = pd.Timestamp(open(stamp).read().strip()) if os.path.exists(stamp) else None
@@ -345,11 +353,15 @@ def main():
         n_news = research.news_log(NOW, NEWS) if NEWS is not None else 0
         n_mod = research.model_snapshot(NOW, model_rows)
         print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_spl} betting-split changes, "
-              f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_news} new news notes, {n_mod} model changes.")
+              f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_live} live line changes, {n_news} new news notes, {n_mod} model changes.")
         cl = os.path.join(W, "research", "check_log.csv")
-        pd.DataFrame([dict(at_et=str(NOW)[:16], research_seconds=round(_time.time() - _t0), odds=n_odds, predictor=n_pred,
-                           splits=n_spl, books=n_bk, props=n_pm, props_other=n_po, news=n_news, model=n_mod)]).to_csv(
-            cl, mode="a", header=not os.path.exists(cl), index=False)
+        row = pd.DataFrame([dict(at_et=str(NOW)[:16], research_seconds=round(_time.time() - _t0), odds=n_odds, predictor=n_pred,
+                                 splits=n_spl, books=n_bk, props=n_pm, props_other=n_po, live=n_live, news=n_news, model=n_mod)])
+        old_cl = pd.read_csv(cl) if os.path.exists(cl) else None
+        if old_cl is not None and list(old_cl.columns) != list(row.columns):
+            pd.concat([old_cl, row], ignore_index=True).to_csv(cl, index=False)     # new column: rewrite once
+        else:
+            row.to_csv(cl, mode="a", header=old_cl is None, index=False)
     except Exception as e:
         print("Research logging skipped:", type(e).__name__, str(e)[:120])
 

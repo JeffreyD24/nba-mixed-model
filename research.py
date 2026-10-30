@@ -269,3 +269,40 @@ def props_snapshot(now, day, odds_rows, full=False):
     newa = [dict((k, v) for k, v in a.items() if k != "_new") for a in cache.values() if a.get("_new")]
     if newa: pd.DataFrame(newa).to_csv(apath, mode="a", header=not os.path.exists(apath), index=False)
     return n1, n2
+
+
+# ---------------- live in-game lines (Action Network) ----------------
+LIVE_BOOKS = {15: "Consensus", 68: "DraftKings", 69: "FanDuel", 2988: "Fanatics"}
+
+
+def live_snapshot(now, day, games):
+    """In-game spread/total/moneyline at a few books, with the score and clock when seen. Rows only when something changed."""
+    import actionnet
+    ids = {(g["home"], g["away"]): g["game_id"] for g in games}
+    rows = []
+    for g in actionnet.games(day, tuple(LIVE_BOOKS)):
+        if g.get("status") not in ("inprogress", "halftime") and g.get("real_status") not in ("inprogress", "halftime"): continue
+        t = {x["id"]: espn.ESPN2.get(x.get("abbr")) for x in g.get("teams", [])}
+        home, away = t.get(g["home_team_id"]), t.get(g["away_team_id"])
+        gid = ids.get((home, away))
+        if gid is None: continue
+        bx = g.get("boxscore") or {}
+        ls = bx.get("linescore") or []
+        hp = sum(q.get("home_points") or 0 for q in ls); ap = sum(q.get("away_points") or 0 for q in ls)
+        base = dict(seen_at_et=str(now)[:16], game_id=gid, date=str(pd.Timestamp(day).date()), away=away, home=home,
+                    status=g.get("status_display") or g.get("status"), period=bx.get("period"), clock=bx.get("clock"),
+                    away_score=ap, home_score=hp)
+        for bid, m in (g.get("markets") or {}).items():
+            ev = (m or {}).get("event") or {}
+            pick = lambda mk, side: next((o for o in ev.get(mk, []) if o.get("side") == side and o.get("is_live")), {}) or {}
+            hs, as_, ov, un = pick("spread", "home"), pick("spread", "away"), pick("total", "over"), pick("total", "under")
+            hm, am = pick("moneyline", "home"), pick("moneyline", "away")
+            if not any([hs, ov, hm]): continue
+            rows.append(dict(base, book=LIVE_BOOKS.get(int(bid), bid), home_spread=_num(hs.get("value")),
+                             home_spread_odds=_num(hs.get("odds")), away_spread_odds=_num(as_.get("odds")),
+                             total=_num(ov.get("value")), over_odds=_num(ov.get("odds")), under_odds=_num(un.get("odds")),
+                             home_ml=_num(hm.get("odds")), away_ml=_num(am.get("odds"))))
+    os.makedirs(os.path.join(R, "live"), exist_ok=True)
+    return _append_changed(os.path.join(R, "live", f"{pd.Timestamp(day).date()}.csv"), rows, ["game_id", "book"],
+                           ["home_spread", "home_spread_odds", "away_spread_odds", "total", "over_odds", "under_odds",
+                            "home_ml", "away_ml", "home_score", "away_score", "period"])

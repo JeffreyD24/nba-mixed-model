@@ -213,6 +213,9 @@ def attach_lines_and_grade(logdf, games):
         e = logdf.pred_total - tt
         logdf[f"{line}_total_edge"] = e.abs(); logdf[f"{line}_total_bet"] = np.where(e.isna(), None, np.where(e > 0, "over", "under"))
         logdf[f"{line}_total_result"] = np.select([t.isna() | e.isna(), np.sign(t - tt) * np.sign(e) > 0, np.sign(t - tt) * np.sign(e) < 0], [None, "W", "L"], "P")
+    for mk in ("spread", "total"):        # closing line value of the opening-line bet
+        logdf[f"open_{mk}_clv"] = [round(clv(mk, b, o, c), 1) if isinstance(b, str) else np.nan
+                                   for b, o, c in zip(logdf[f"open_{mk}_bet"], logdf[f"open_{mk}"], logdf[f"close_{mk}"])]
     return logdf
 
 
@@ -251,6 +254,14 @@ def export_today_model(g, summ, box):
     say(f"Saved today's model for intraday checks ({len(games_out)} games, {len(players)} players).")
 
 
+def clv(market, side, line, close):
+    """closing line value in points, positive = you beat the closing number.
+    line/close are home-perspective spreads for side home/away, totals for over/under."""
+    if pd.isna(line) or pd.isna(close): return np.nan
+    if market == "total": return (close - line) if side == "over" else (line - close)
+    return (line - close) if side == "home" else (close - line)
+
+
 def grade_alerts(games):
     path = os.path.join(STATE, "alerts.csv")
     if not os.path.exists(path): return
@@ -267,6 +278,12 @@ def grade_alerts(games):
             v = (tt - r.line) * (1 if r.side == "over" else -1)
         out.append("W" if v > 0 else ("L" if v < 0 else "P"))
     a["result"] = out
+    lp = os.path.join(STATE, "picks_log.csv")
+    if os.path.exists(lp):
+        P = pd.read_csv(lp).set_index("game_id")
+        cl = [P[f"close_{r.market}"].get(r.game_id, np.nan) if f"close_{r.market}" in P else np.nan for r in a.itertuples()]
+        a["closing_line"] = cl
+        a["clv_points"] = [round(clv(r.market, r.side, r.line, c), 1) if not pd.isna(c) else np.nan for r, c in zip(a.itertuples(), cl)]
     a.to_csv(path, index=False)
     g = a[a.result.isin(["W", "L"])]
     if len(g):
@@ -303,6 +320,17 @@ def grade_my_bets(games, logdf):
         out.append((result, round(profit, 2) if not np.isnan(profit) else np.nan,
                     round(model_num, 1) if not np.isnan(model_num) else np.nan, round(edge, 1) if not np.isnan(edge) else np.nan))
     B["result"], B["profit"], B["model_number"], B["model_edge_at_your_line"] = zip(*out)
+    closes = {(r.date_s, r.home, r.away): (r.close_spread, r.close_total) for r in picks.itertuples()} if "close_spread" in picks else {}
+    cv, yc = [], []
+    for r in B.itertuples():
+        cs, ct = closes.get((r.date, r.home, r.away), (np.nan, np.nan))
+        if r.market == "total":
+            yc.append(ct); cv.append(clv("total", r.pick, r.line, ct))
+        else:   # your line is from your team's side; the closing spread is from the home side
+            your_close = cs if r.pick == r.home else (-cs if not pd.isna(cs) else np.nan)
+            yc.append(your_close); cv.append(np.nan if pd.isna(your_close) else r.line - your_close)
+    B["closing_line_your_side"] = yc
+    B["clv_points"] = [round(x, 1) if not pd.isna(x) else np.nan for x in cv]
     B.to_csv(path, index=False)
     d = B[B.result.isin(["W", "L", "P"])]
     if len(d):

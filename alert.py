@@ -112,6 +112,7 @@ def main():
     cgraded = A[A.result.isin(["W", "L"]) & A.skipped.notna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
     crec = (f"{int((cgraded.result == 'W').sum())}-{int((cgraded.result == 'L').sum())}" if len(cgraded) else "none graded yet")
     new, n_games = [], 0
+    model_rows = []
     try:
         NEWS = espn.injury_news(hours=24)
     except Exception as e:
@@ -178,6 +179,8 @@ def main():
                 ph = g["base_home"] + M["c_off"] * h[0] + M["c_def"] * a[1]
                 pa = g["base_away"] + M["c_off"] * a[0] + M["c_def"] * h[1]
                 margin, total = ph - pa, ph + pa; used = snap
+            model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
+                                   model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used))
             tip = pd.Timestamp(g["tip_et"]).strftime("%a %-I:%M %p")
             H, Aw = g["home"].upper(), g["away"].upper()
             for market in ("spread", "total"):
@@ -311,6 +314,21 @@ def main():
         pd.concat([H_, pd.DataFrame(hist_new)], ignore_index=True).to_csv(hpath, index=False)
     if moves_new:
         pd.concat([MV, pd.DataFrame(moves_new)], ignore_index=True).to_csv(mpath, index=False)
+    # ---- research database (never allowed to break alerts)
+    try:
+        import research
+        research.init(W)
+        n_odds = n_pred = 0
+        for mf in models:
+            M3 = json.load(open(os.path.join(STATE, mf)))
+            k, rows = research.odds_snapshot(NOW, M3["date"], M3["games"]); n_odds += k
+            n_pred += research.predictor_snapshot(NOW, M3["date"], rows)
+        n_news = research.news_log(NOW, NEWS) if NEWS is not None else 0
+        n_mod = research.model_snapshot(NOW, model_rows)
+        print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_news} new news notes, {n_mod} model changes.")
+    except Exception as e:
+        print("Research logging skipped:", type(e).__name__, str(e)[:120])
+
     n_clean = sum(1 for x in new if not x.get("skipped"))
     print(f"{NOW:%H:%M} ET: checked {n_games} upcoming games, {n_clean} alerts and {len(new) - n_clean} caution alerts sent.")
 

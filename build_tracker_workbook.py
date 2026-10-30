@@ -68,6 +68,25 @@ def interpret(w, l):
     return status, adv
 
 
+def clv_line(df, A, MB):
+    parts = []
+    for mk in ("spread", "total"):
+        c = f"open_{mk}_clv"; e = f"open_{mk}_edge"
+        if c in df:
+            x = df[(df.pick_type == "live") & (df[e] >= 3)][c].dropna()
+            if len(x): parts.append(f"scorecard {mk}s {x.mean():+.2f} pts avg, beat the close {(x > 0).mean():.0%} of the time (n={len(x)})")
+    if len(A) and "clv_points" in A:
+        x = A["clv_points"].dropna()
+        if len(x): parts.append(f"alerts {x.mean():+.2f} pts avg (n={len(x)})")
+    if len(MB) and "clv_points" in MB:
+        x = MB["clv_points"].dropna()
+        if len(x): parts.append(f"your bets {x.mean():+.2f} pts avg (n={len(x)})")
+    if not parts:
+        return "Closing line value (did a bet beat the final line?): nothing graded yet. Over time this is the best early sign of a real edge, far quicker than wins and losses."
+    return ("Closing line value (did a bet beat the final line?): " + "; ".join(parts) +
+            ". Consistently positive closing line value is the strongest early sign of a real edge, more reliable than a short win-loss record.")
+
+
 def jump_line(J):
     if not len(J):
         return "Line jumps (moves of 1.5+ pts within an hour): none logged yet. This builds a database of how lines react to news."
@@ -245,6 +264,7 @@ def build(log_csv, out_xlsx, rule, run_log):
         ("t", caution_line(A)),
         ("t", my_line),
         ("t", jump_line(JJ)),
+        ("t", clv_line(df, A, MB)),
         ("h", "My note and advice"),
         ("t", adv),
         ("t", "Reminders: the opening line logged here is the sportsbook's first posted number, which usually has low limits and moves quickly, so real results would be somewhat worse. The model has never beaten closing lines in any backtest; the closing-line rows are there as a reality check."),

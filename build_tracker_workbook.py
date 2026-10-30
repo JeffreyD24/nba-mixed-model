@@ -68,6 +68,20 @@ def interpret(w, l):
     return status, adv
 
 
+def jump_line(J):
+    if not len(J):
+        return "Line jumps (moves of 1.5+ pts within an hour): none logged yet. This builds a database of how lines react to news."
+    s = f"Line jumps logged: {len(J)} (moves of 1.5+ pts within an hour)."
+    if "result_matched_move" in J:
+        g = J[J.result_matched_move.isin(["yes", "no"])]
+        if len(g):
+            s += (f" Graded: {len(g)}; the final result went the way the line jumped {int((g.result_matched_move == 'yes').sum())} times"
+                  f" ({(g.result_matched_move == 'yes').mean():.0%}).")
+            k = J[J.kept_moving_to_close.notna()] if "kept_moving_to_close" in J else J.iloc[:0]
+            if len(k): s += f" Kept moving the same way by the close: {(k.kept_moving_to_close == 'yes').mean():.0%}."
+    return s + " Give it a few weeks of data before drawing conclusions."
+
+
 def caution_line(A):
     if not len(A) or "skipped" not in A or "result" not in A:
         return "Caution alerts (sent with a warning because a safeguard was triggered): none graded yet."
@@ -96,6 +110,28 @@ def build(log_csv, out_xlsx, rule, run_log):
     al.column_dimensions["K"].width = 20; al.column_dimensions["L"].width = 26; al.freeze_panes = "A2"
     sent = A[A.skipped.isna()] if len(A) and "skipped" in A else A
     graded = sent[sent.result.isin(["W", "L"])] if len(sent) and "result" in sent else sent.iloc[:0] if len(sent) else sent
+    # ---- line jumps database
+    jpath = os.path.join(os.path.dirname(log_csv), "line_jumps.csv")
+    JJ = pd.read_csv(jpath) if os.path.exists(jpath) else pd.DataFrame()
+    lj = wb.create_sheet("Line Jumps")
+    jcols = [("Detected (ET)", "detected_at_et"), ("Game date", "date"), ("Away", "away"), ("Home", "home"), ("Market", "market"),
+             ("From", "from_line"), ("To", "to_line"), ("Move", "move"), ("Steady since", "steady_since"), ("Move started", "move_started"),
+             ("Minutes", "minutes"), ("Hours to tip", "hours_to_tip"), ("Model", "model"), ("Direction", "direction"),
+             ("News items", "news_count"), ("Alerted", "alerted"), ("Closing line", "closing_line"),
+             ("Kept moving to close?", "kept_moving_to_close"), ("Result matched move?", "result_matched_move"), ("News around the move", "news_in_window")]
+    for k, (t, _) in enumerate(jcols): hdr(lj, 1, k + 1, t)
+    lj.row_dimensions[1].height = 30
+    for r in JJ.to_dict("records"):
+        vals = []
+        for _, c in jcols:
+            v = r.get(c)
+            if isinstance(v, float) and np.isnan(v): v = None
+            if c in ("away", "home") and isinstance(v, str): v = v.upper()
+            vals.append(v)
+        lj.append(vals)
+    for k in range(1, len(jcols) + 1): lj.column_dimensions[CL(k)].width = 12
+    lj.column_dimensions["T"].width = 80; lj.freeze_panes = "A2"
+
     # ---- the user's own logged bets
     bpath = os.path.join(os.path.dirname(log_csv), "my_bets.csv")
     MB = pd.read_csv(bpath) if os.path.exists(bpath) else pd.DataFrame()
@@ -208,6 +244,7 @@ def build(log_csv, out_xlsx, rule, run_log):
                if len(graded) else "Phone alerts: none graded yet.")),
         ("t", caution_line(A)),
         ("t", my_line),
+        ("t", jump_line(JJ)),
         ("h", "My note and advice"),
         ("t", adv),
         ("t", "Reminders: the opening line logged here is the sportsbook's first posted number, which usually has low limits and moves quickly, so real results would be somewhat worse. The model has never beaten closing lines in any backtest; the closing-line rows are there as a reality check."),

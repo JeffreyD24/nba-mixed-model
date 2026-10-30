@@ -20,6 +20,9 @@ import espn                                              # noqa: E402
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # caution flag when the line moved this much AGAINST the bet since opening
+JUMP_WINDOW_MIN = 60                # a "jump" is a move within this many minutes
+JUMP_LOG = 1.5                      # log every jump at least this big (builds the database of line moves)
+JUMP_ALERT = 3.0                    # send a "Line jump" notification at this size
 WINDOW = None                       # None = check all day; or (16, 0, 19, 0) for 4:00-7:00 PM ET
 ET = ZoneInfo("America/New_York")
 STATE = os.path.join(W, "state")
@@ -246,6 +249,64 @@ def main():
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)
         A.to_csv(apath, index=False)
+    # ---- line jumps: fast moves, logged for research and alerted when large
+    jpath = os.path.join(STATE, "line_jumps.csv")
+    J = pd.read_csv(jpath) if os.path.exists(jpath) else pd.DataFrame(columns=["game_id", "market", "detected_at_et"])
+    allh = pd.concat([H_, pd.DataFrame(hist_new)], ignore_index=True)
+    jumps_new = []
+    if len(allh):
+        allh["t"] = pd.to_datetime(allh.seen_at_et)
+        info = {}
+        for mf in models:
+            M2 = json.load(open(os.path.join(STATE, mf)))
+            for g in M2["games"]: info[g["game_id"]] = (g, M2)
+        for (gid, market), rows in allh.groupby(["game_id", "market"]):
+            if gid not in info: continue
+            rows = rows.sort_values("t"); cur = float(rows.line.iloc[-1]); t_cur = rows.t.iloc[-1]
+            start = NOW - pd.Timedelta(minutes=JUMP_WINDOW_MIN)
+            before = rows[rows.t <= start]
+            ref_row = before.iloc[-1] if len(before) else rows.iloc[0]
+            ref, t_ref = float(ref_row.line), ref_row.t
+            move = cur - ref
+            if abs(move) < JUMP_LOG or t_cur < start: continue
+            recent = J[(J.game_id == gid) & (J.market == market)]
+            if len(recent) and pd.to_datetime(recent.detected_at_et).max() >= start: continue   # already logged this jump
+            moving = rows[rows.t > start]                      # changes inside the window
+            t_move = moving.t.iloc[0] if len(moving) else t_cur  # when the line started moving
+            g, M2 = info[gid]
+            if market == "total": side_model = "over" if g["morning_total"] > cur else "under"; mod = g["morning_total"]
+            else: side_model = "home" if g["morning_margin"] + cur > 0 else "away"; mod = g["morning_margin"]
+            toward = not against_us(market, side_model, move)
+            # news posted from 30 min before the earlier line to now
+            win_news = []
+            if NEWS is not None:
+                for team in (g["away"], g["home"]):
+                    for when, text in NEWS.get(team, []):
+                        if when.replace(tzinfo=None) >= t_ref - pd.Timedelta(minutes=30):
+                            win_news.append(f"{team.upper()} {when:%-I:%M %p}: {text}")
+            tip = pd.Timestamp(g["tip_et"])
+            row = dict(detected_at_et=str(NOW)[:16], game_id=gid, date=M2["date"], away=g["away"], home=g["home"], market=market,
+                       from_line=ref, to_line=cur, move=round(move, 1), steady_since=str(t_ref)[:16], move_started=str(t_move)[:16],
+                       move_seen=str(t_cur)[:16], minutes=int((t_cur - t_move).total_seconds() // 60), hours_to_tip=round((tip - t_cur).total_seconds() / 3600, 1),
+                       model=round(mod, 1), direction="toward model" if toward else "away from model",
+                       news_in_window=" | ".join(win_news), news_count=len(win_news), alerted=abs(move) >= JUMP_ALERT)
+            jumps_new.append(row)
+            if abs(move) >= JUMP_ALERT:
+                fmt = (lambda v: f"{v:+g}") if market == "spread" else (lambda v: f"{v:g}")
+                H2, A2 = g["home"].upper(), g["away"].upper()
+                what = f"{H2} spread" if market == "spread" else "total"
+                title = f"Line jump: {A2} @ {H2} {what} {fmt(ref)} -> {fmt(cur)}"
+                speed = (f"within one check (seen {t_cur:%-I:%M %p})" if row["minutes"] < 5
+                         else f"over about {row['minutes']} min ({t_move:%-I:%M} to {t_cur:%-I:%M %p})")
+                body = (f"Moved {abs(move):.1f} pts {speed}; it had been {fmt(ref)} since {t_ref:%a %-I:%M %p}. "
+                        f"{row['hours_to_tip']:.1f} h before tip. Model: {fmt(mod) if market == 'spread' else f'{mod:.1f}'} "
+                        f"({'the move is toward the model' if toward else 'the move is away from the model'}).")
+                body += ("\nNews around the move:\n- " + "\n- ".join(win_news[:6])) if win_news else "\nNo injury news reported around the move yet: possibly breaking news or big bets."
+                notify(title, body, priority="default", tags="zap")
+                print("LINE JUMP:", title, "|", body)
+    if jumps_new:
+        pd.concat([J, pd.DataFrame(jumps_new)], ignore_index=True).to_csv(jpath, index=False)
+
     if hist_new:
         pd.concat([H_, pd.DataFrame(hist_new)], ignore_index=True).to_csv(hpath, index=False)
     if moves_new:

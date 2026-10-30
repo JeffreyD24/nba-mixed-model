@@ -311,6 +311,33 @@ def grade_my_bets(games, logdf):
             + f", ${d.profit.sum():+.2f} on ${d.stake.sum():.2f} staked.")
 
 
+def grade_jumps(games, logdf):
+    """for each logged line jump: did the line keep moving that way by the close, and did the result land on that side?"""
+    path = os.path.join(STATE, "line_jumps.csv")
+    if not os.path.exists(path): return
+    J = pd.read_csv(path)
+    if not len(J): return
+    res = games.set_index("game_id")[["home_pts", "away_pts"]]
+    close = logdf.set_index("game_id")[["close_spread", "close_total"]] if "close_spread" in logdf else None
+    kept, right, closes = [], [], []
+    for r in J.itertuples():
+        hp, ap = res.home_pts.get(r.game_id, np.nan), res.away_pts.get(r.game_id, np.nan)
+        cl = close[f"close_{r.market}"].get(r.game_id, np.nan) if close is not None else np.nan
+        sgn = np.sign(r.move)
+        closes.append(cl)
+        kept.append(None if np.isnan(cl) else ("yes" if (cl - r.to_line) * sgn > 0 else ("same" if cl == r.to_line else "no (bounced back)")))
+        if np.isnan(hp): right.append(None); continue
+        if r.market == "total":
+            v = (hp + ap - r.to_line) * sgn                  # total moved up -> market leaned over
+        else:
+            v = -((hp - ap) + r.to_line) * sgn               # home spread moved down (home more favored) -> market leaned home
+        right.append("yes" if v > 0 else ("push" if v == 0 else "no"))
+    J["closing_line"], J["kept_moving_to_close"], J["result_matched_move"] = closes, kept, right
+    J.to_csv(path, index=False)
+    g = J[J.result_matched_move.isin(["yes", "no"])]
+    if len(g): say(f"Line jumps graded: {len(g)}; the final result matched the jump's direction {int((g.result_matched_move == 'yes').sum())} times.")
+
+
 # ------------------------------------------------------------------ main
 def main():
     say(f"NBA tracker run on {TODAY.date()} (ET), predicting games on {TARGET.date()}.")
@@ -327,6 +354,7 @@ def main():
     logdf = attach_lines_and_grade(logdf, games)
     grade_alerts(games)
     grade_my_bets(games, logdf)
+    grade_jumps(games, logdf)
     logdf.sort_values(["date", "tip_et"]).to_csv(os.path.join(STATE, "picks_log.csv"), index=False)
     today = logdf[(logdf.date == TARGET) & (logdf.pick_type == "live")]
     json.dump({"today": [dict(home=r.home, away=r.away, tip=str(r.tip_et), pred_margin=round(r.pred_margin, 1),

@@ -19,7 +19,7 @@ import build_report_features as brf                      # noqa: E402
 import espn                                              # noqa: E402
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
-MAX_LINE_MOVE = 3.0                 # caution flag when the line moved this much since opening (market may know something)
+MAX_LINE_MOVE = 3.0                 # caution flag when the line moved this much AGAINST the bet since opening
 WINDOW = None                       # None = check all day; or (16, 0, 19, 0) for 4:00-7:00 PM ET
 ET = ZoneInfo("America/New_York")
 STATE = os.path.join(W, "state")
@@ -47,6 +47,13 @@ def latest_report(max_hours=16):
             if r.stdout == "200" and os.path.getsize(tmp) > 1000:
                 rows = parse_pdf(tmp); os.remove(tmp); return n, x, rows
     return None, None, []
+
+
+def against_us(market, side, move):
+    """True when the line moved away from the side the model likes (the market disagrees).
+    move = current line - opening line (spreads are from the home team's view)."""
+    if market == "total": return move < 0 if side == "over" else move > 0
+    return move > 0 if side == "home" else move < 0
 
 
 def log_link(date, away, home, market, pick, line):
@@ -102,6 +109,9 @@ def main():
     cgraded = A[A.result.isin(["W", "L"]) & A.skipped.notna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
     crec = (f"{int((cgraded.result == 'W').sum())}-{int((cgraded.result == 'L').sum())}" if len(cgraded) else "none graded yet")
     new, n_games = [], 0
+    mpath = os.path.join(STATE, "market_moves.csv")
+    MV = pd.read_csv(mpath) if os.path.exists(mpath) else pd.DataFrame(columns=["game_id", "market"])
+    moved_done = set(zip(MV.game_id, MV.market)); moves_new = []
 
     for mf in models:
         M = json.load(open(os.path.join(STATE, mf)))
@@ -155,12 +165,27 @@ def main():
                 if not is_open and opn is not None and not pd.isna(opn):
                     e_open = (margin + opn) if market == "spread" else (total - opn)
                     body += f" Edge at the opening line was {abs(e_open):.1f} pts{'' if (e_open > 0) == (e > 0) else ' the other way'}."
+                # ---- market moving toward the model by 3+ since open: one info alert per game and market
+                move = (cur - opn) if (opn is not None and not pd.isna(opn)) else 0.0
+                toward = abs(move) >= MAX_LINE_MOVE and not against_us(market, side, move)
+                if toward and (g["game_id"], market) not in moved_done and abs(e) < THRESHOLD:
+                    mtitle = f"Market agrees: {Aw} @ {H} {market}, {tip}"
+                    if market == "spread":
+                        mbody = f"Line moved {abs(move):.1f} pts toward the model: {H} opened {opn:+g}, now {cur:+g}. Model: {H} by {margin:+.1f}."
+                    else:
+                        mbody = f"Total moved {abs(move):.1f} pts toward the model ({side}): opened {opn:g}, now {cur:g}. Model {total:.1f}."
+                    mbody += f" Edge left: {abs(e):.1f} pts (under {THRESHOLD:g}, so no bet). Info only."
+                    notify(mtitle, mbody, priority="low", tags="chart_with_upwards_trend")
+                    moves_new.append(dict(at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
+                                          market=market, model_side=side, open_line=opn, line=cur, move=round(move, 1),
+                                          model=round(margin if market == "spread" else total, 2), edge_left=round(abs(e), 2)))
+                    moved_done.add((g["game_id"], market)); print("MARKET AGREES:", mtitle, "|", mbody)
                 if abs(e) < THRESHOLD: continue
                 skip = None
                 if not fresh: skip = "no current injury report"
                 elif h is None or a is None: skip = "a team has not filed its injury report"
-                elif opn is not None and not pd.isna(opn) and abs(cur - opn) >= MAX_LINE_MOVE:
-                    skip = f"line moved {abs(cur - opn):.1f} pts since open"
+                elif opn is not None and not pd.isna(opn) and abs(cur - opn) >= MAX_LINE_MOVE and against_us(market, side, cur - opn):
+                    skip = f"line moved {abs(cur - opn):.1f} pts against this bet since open"
                 if market == "spread":
                     link = log_link(M["date"], g["away"], g["home"], "spread", team, f"{bet_line:+g}")
                 else:
@@ -178,6 +203,9 @@ def main():
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
                     continue
+                if toward:
+                    body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
+                    moved_done.add((g["game_id"], market))
                 body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live."
                 rec_row["sent"] = notify(title, body, link=link)
                 new.append(rec_row); done.add((g["game_id"], market))
@@ -185,6 +213,8 @@ def main():
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)
         A.to_csv(apath, index=False)
+    if moves_new:
+        pd.concat([MV, pd.DataFrame(moves_new)], ignore_index=True).to_csv(mpath, index=False)
     n_clean = sum(1 for x in new if not x.get("skipped"))
     print(f"{NOW:%H:%M} ET: checked {n_games} upcoming games, {n_clean} alerts and {len(new) - n_clean} caution alerts sent.")
 

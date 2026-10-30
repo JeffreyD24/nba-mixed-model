@@ -39,5 +39,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          if [ -f state/_bet_title.txt ]; then gh issue edit ${{ github.event.issue.number }} -R ${{ github.repository }} --title "$(cat state/_bet_title.txt)"; fi
           gh issue comment ${{ github.event.issue.number }} -R ${{ github.repository }} --body-file state/_bet_reply.md
           gh issue close ${{ github.event.issue.number }} -R ${{ github.repository }}

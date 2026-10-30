@@ -1,0 +1,4 @@
+game_id,market,at_et,date,home,away,model_side,open_line,line,move,model,edge_left
+22600016,spread,2026-10-30 12:52:33.802087,2026-10-30,bos,chi,home,-11.5,-15.5,-4.0,15.56,0.06
+22600022,spread,2026-10-30 12:52:33.802087,2026-10-30,min,lac,away,-9.5,-6.5,3.0,4.3,2.2
+22600022,total,2026-10-30 12:52:33.802087,2026-10-30,min,lac,under,230.5,223.5,-7.0,221.06,2.44

@@ -1,2 +1,3 @@
 game_id,market,detected_at_et,date,away,home,from_line,to_line,move,steady_since,move_started,move_seen,minutes,hours_to_tip,model,direction,news_in_window,news_count,alerted
 22600018,spread,2026-10-30 16:20,2026-10-30,ny,phi,1.5,3.5,2.0,2026-10-30 13:20,2026-10-30 15:35,2026-10-30 16:20,45.0,3.2,1.3,away from model,,0.0,False
+22600018,total,2026-10-30 16:35,2026-10-30,ny,phi,227.5,225.5,-2.0,2026-10-30 15:35,2026-10-30 16:20,2026-10-30 16:35,15.0,2.9,221.6,toward model,PHI 4:23 PM: Brown (knee) is doubtful for Friday's game against the Knicks.,1.0,False

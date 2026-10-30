@@ -274,6 +274,43 @@ def grade_alerts(games):
         say(f"Alerts graded so far: {w}-{l} ({w / (w + l):.1%}), {w * 100 / 110 - l:+.1f} units at -110.")
 
 
+def grade_my_bets(games, logdf):
+    """grade bets the user logged through the 'Log a bet' form, with their own odds and stake"""
+    path = os.path.join(STATE, "my_bets.csv")
+    if not os.path.exists(path): return
+    B = pd.read_csv(path)
+    if not len(B): return
+    g = games.copy(); g["date_s"] = g.date.dt.strftime("%Y-%m-%d")
+    res = {(r.date_s, r.home, r.away): (r.home_pts, r.away_pts) for r in g.itertuples()}
+    picks = logdf.copy(); picks["date_s"] = pd.to_datetime(picks.date).dt.strftime("%Y-%m-%d")
+    model = {(r.date_s, r.home, r.away): (r.pred_margin, r.pred_total) for r in picks.itertuples()}
+    out = []
+    for r in B.itertuples():
+        hp, ap = res.get((r.date, r.home, r.away), (np.nan, np.nan))
+        mm, mt = model.get((r.date, r.home, r.away), (np.nan, np.nan))
+        if r.market == "total":
+            v = (hp + ap - r.line) * (1 if r.pick == "over" else -1)
+            model_num = mt; edge = (mt - r.line) * (1 if r.pick == "over" else -1)
+        else:
+            margin = (hp - ap) if r.pick == r.home else (ap - hp)
+            v = margin + r.line
+            mod_margin = mm if r.pick == r.home else -mm
+            model_num = mod_margin; edge = mod_margin + r.line
+        if np.isnan(v): result, profit = None, np.nan
+        elif v > 0: result, profit = "W", r.stake * (100 / abs(r.odds) if r.odds < 0 else r.odds / 100)
+        elif v < 0: result, profit = "L", -r.stake
+        else: result, profit = "P", 0.0
+        out.append((result, round(profit, 2) if not np.isnan(profit) else np.nan,
+                    round(model_num, 1) if not np.isnan(model_num) else np.nan, round(edge, 1) if not np.isnan(edge) else np.nan))
+    B["result"], B["profit"], B["model_number"], B["model_edge_at_your_line"] = zip(*out)
+    B.to_csv(path, index=False)
+    d = B[B.result.isin(["W", "L", "P"])]
+    if len(d):
+        w, l = int((d.result == "W").sum()), int((d.result == "L").sum())
+        say(f"Your logged bets: {w}-{l}" + (f"-{int((d.result == 'P').sum())}" if (d.result == "P").any() else "")
+            + f", ${d.profit.sum():+.2f} on ${d.stake.sum():.2f} staked.")
+
+
 # ------------------------------------------------------------------ main
 def main():
     say(f"NBA tracker run on {TODAY.date()} (ET), predicting games on {TARGET.date()}.")
@@ -289,6 +326,7 @@ def main():
     logdf = lock_picks(g, str(played.date.max().date()) if len(played) else "none")
     logdf = attach_lines_and_grade(logdf, games)
     grade_alerts(games)
+    grade_my_bets(games, logdf)
     logdf.sort_values(["date", "tip_et"]).to_csv(os.path.join(STATE, "picks_log.csv"), index=False)
     today = logdf[(logdf.date == TARGET) & (logdf.pick_type == "live")]
     json.dump({"today": [dict(home=r.home, away=r.away, tip=str(r.tip_et), pred_margin=round(r.pred_margin, 1),

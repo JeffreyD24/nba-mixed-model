@@ -33,14 +33,21 @@ All three can also be started by hand from the **Actions** tab (**Run workflow**
 
 Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDOW` (set it to `(16, 0, 19, 0)` to alert only 4–7 PM ET).
 
+## Logging the bets you actually place
+
+- **From an alert:** tap **Log this bet** on the notification. It opens the form with the game, pick, and line filled in. Fix the line if yours was different, add your odds and stake, and submit.
+- **Any other bet:** open the form directly: [Log a bet](https://github.com/JeffreyD24/nba-mixed-model/issues/new?template=log-bet.yml) (bookmark it), or go to **Issues → New issue → Log a bet**.
+- A workflow adds it to `state/my_bets.csv`, replies with a confirmation (or what to fix), and closes the issue. Only bets you open are recorded, even though the repo is public.
+- The morning run grades each bet at **your** line, odds, and stake, and the **My Bets** sheet shows your record, profit, return, and the model's edge at the lines you got.
+
 ## Files
 
-- `tracker.py`: the morning run. `alert.py`: the intraday check. `espn.py`: lines.
+- `tracker.py`: the morning and evening runs. `alert.py`: the intraday check. `espn.py`: lines. `log_bet.py`: records bets from the form.
 - `nba_mixed_model.py`: the mixed model (Henderson's equations, REML variance components, walk-forward).
 - `build_report_features.py`, `parse_injury_reports.py`: official injury reports to model features.
 - `build_tracker_workbook.py`: builds `NBA_Live_Tracker.xlsx`.
 - `data/`: training seasons with features and lines, last season's minutes and player ratings, and how often each injury status means a player sits.
-- `state/`: everything the runs build up. `picks_log.csv` holds the locked daily picks, `alerts.csv` the phone alerts, `injury_reports_2026_27.csv` every parsed report, and `model_YYYY-MM-DD.json` the saved model for today's and tomorrow's games, used by the intraday checks.
+- `state/`: everything the runs build up. `picks_log.csv` holds the locked daily picks, `alerts.csv` the phone alerts, `my_bets.csv` the bets you logged, `injury_reports_2026_27.csv` every parsed report, and `model_YYYY-MM-DD.json` the saved model for today's and tomorrow's games, used by the intraday checks.
 
 ## How to read the results, and what to expect
 

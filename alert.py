@@ -49,12 +49,23 @@ def latest_report(max_hours=16):
     return None, None, []
 
 
-def notify(title, body, priority="high", tags="basketball"):
+def log_link(date, away, home, market, pick, line):
+    """prefilled 'Log a bet' form on GitHub for this alert"""
+    import urllib.parse
+    repo = os.environ.get("GITHUB_REPOSITORY", "JeffreyD24/nba-mixed-model")
+    q = dict(template="log-bet.yml", title=f"Bet: {pick.upper()} {line} {away.upper()} @ {home.upper()} {date}",
+             game_date=date, away=away.upper(), home=home.upper(), market=market, pick=pick.upper() if market == "spread" else pick,
+             line=line, odds="-110")
+    return f"https://github.com/{repo}/issues/new?" + urllib.parse.urlencode(q)
+
+
+def notify(title, body, priority="high", tags="basketball", link=None):
     topic = os.environ.get("NTFY_TOPIC")
     if not topic:
         print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
-                                 headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": priority, "Tags": tags})
+                                 headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": priority, "Tags": tags,
+                                          **({"Actions": f"view, Log this bet, {link}"} if link else {})})
     urllib.request.urlopen(req, timeout=20)
     return True
 
@@ -150,6 +161,10 @@ def main():
                 elif h is None or a is None: skip = "a team has not filed its injury report"
                 elif opn is not None and not pd.isna(opn) and abs(cur - opn) >= MAX_LINE_MOVE:
                     skip = f"line moved {abs(cur - opn):.1f} pts since open"
+                if market == "spread":
+                    link = log_link(M["date"], g["away"], g["home"], "spread", team, f"{bet_line:+g}")
+                else:
+                    link = log_link(M["date"], g["away"], g["home"], "total", side, f"{cur:g}")
                 rec_row = dict(alerted_at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                tip_et=g["tip_et"], market=market, side=side, line=cur, open_line=opn,
                                model=round(margin if market == "spread" else total, 2), edge=round(abs(e), 2),
@@ -159,12 +174,12 @@ def main():
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
                                  f"\nInjury report: {used}. Caution alerts so far: {crec}.")
-                        rec_row["sent"] = notify("CAUTION - " + title, cbody, priority="default", tags="warning,basketball")
+                        rec_row["sent"] = notify("CAUTION - " + title, cbody, priority="default", tags="warning,basketball", link=link)
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
                     continue
                 body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live."
-                rec_row["sent"] = notify(title, body)
+                rec_row["sent"] = notify(title, body, link=link)
                 new.append(rec_row); done.add((g["game_id"], market))
                 print("ALERT:", title, "|", body)
     if new:

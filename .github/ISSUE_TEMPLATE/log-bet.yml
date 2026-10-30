@@ -1,0 +1,71 @@
+name: Log a bet
+description: Record a bet you placed. It gets added to state/my_bets.csv and graded after the game.
+title: "Bet: "
+labels: ["bet"]
+body:
+  - type: input
+    id: game_date
+    attributes:
+      label: Game date
+      description: The day of the game (YYYY-MM-DD)
+      placeholder: "2026-10-30"
+    validations:
+      required: true
+  - type: input
+    id: away
+    attributes:
+      label: Away team
+      description: Abbreviation or name, e.g. HOU or Houston
+    validations:
+      required: true
+  - type: input
+    id: home
+    attributes:
+      label: Home team
+      description: Abbreviation or name, e.g. DAL or Dallas
+    validations:
+      required: true
+  - type: input
+    id: market
+    attributes:
+      label: Market
+      description: "spread or total"
+    validations:
+      required: true
+  - type: input
+    id: pick
+    attributes:
+      label: Pick
+      description: "For a total: over or under. For a spread: the team you bet, e.g. HOU"
+    validations:
+      required: true
+  - type: input
+    id: line
+    attributes:
+      label: Line you got
+      description: "For a total, the number (224.5). For a spread, YOUR team's line (+4.5 or -3)"
+    validations:
+      required: true
+  - type: input
+    id: odds
+    attributes:
+      label: Odds (American)
+      description: "e.g. -110 or +105"
+      value: "-110"
+    validations:
+      required: true
+  - type: input
+    id: stake
+    attributes:
+      label: Stake ($)
+      description: Amount risked
+    validations:
+      required: true
+  - type: input
+    id: book
+    attributes:
+      label: Sportsbook (optional)
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)

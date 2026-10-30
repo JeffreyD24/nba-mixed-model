@@ -5,8 +5,10 @@ lines, and in how the betting public behaves. All times are US Eastern (ET), `YY
 Every file is append-only and keyed by `game_id` (the NBA game ID, the same one used in `state/picks_log.csv`),
 so the files join on `game_id`.
 
-Snapshots come from the 5-minute alert checks, so their timing is accurate to about 5 minutes, or to
-however late GitHub runs a check. A row is written only when something changed, so each row marks the
+Snapshots come from the 5-minute checks. How fresh each source is depends on how often it refreshes:
+Action Network (`splits/`, `books/`) every 30 seconds, so those times are good to about 5 minutes; ESPN's odds and props
+feeds (`odds/`, `props/`, and `state/line_history.csv`, `state/line_jumps.csv`) only about every 12 minutes, so those times
+can be up to about 15 minutes late. Use `books/` for timing questions about game lines. A row is written only when something changed, so each row marks the
 first time a new value was seen.
 
 ## research/ (market and information snapshots)

@@ -22,7 +22,10 @@ W = os.path.abspath(sys.argv[1])
 from zoneinfo import ZoneInfo
 ET = ZoneInfo("America/New_York")
 def now_et(): return pd.Timestamp(dt.datetime.now(ET).replace(tzinfo=None))
-TODAY = pd.Timestamp(sys.argv[2]) if len(sys.argv) > 2 else now_et().normalize()
+_args = [a for a in sys.argv[2:] if not a.startswith("--")]
+TODAY = pd.Timestamp(_args[0]) if _args else now_et().normalize()
+# morning run: predict today's games.  evening run (--tomorrow): predict tomorrow's games from tonight's 8 PM report
+TARGET = TODAY + pd.Timedelta(days=1) if "--tomorrow" in sys.argv else TODAY
 sys.path.insert(0, W)
 from nba_mixed_model import run                                  # noqa: E402
 from parse_injury_reports import parse as parse_pdf               # noqa: E402
@@ -32,7 +35,7 @@ STATE = os.path.join(W, "state"); os.makedirs(STATE, exist_ok=True)
 TMP = os.path.join(W, "_tmp"); os.makedirs(TMP, exist_ok=True)
 SEASON = 2027; SEASON_START = pd.Timestamp("2026-10-01")
 TRAIN = [2022, 2023, 2024, 2025, 2026]
-RULE = dict(line="open", market="total", edge=4.0)                 # the pre-chosen rule
+RULE = dict(line="open", markets=("spread", "total"), edge=3.0)     # the tracked rule: any opening line 3+ pts from the model
 NAME2ABBR = {"Hawks": "atl", "Celtics": "bos", "Nets": "bkn", "Hornets": "cha", "Bulls": "chi", "Cavaliers": "cle",
              "Mavericks": "dal", "Nuggets": "den", "Pistons": "det", "Warriors": "gs", "Rockets": "hou", "Pacers": "ind",
              "Clippers": "lac", "Lakers": "lal", "Grizzlies": "mem", "Heat": "mia", "Bucks": "mil", "Timberwolves": "min",
@@ -106,7 +109,7 @@ def update_reports(games):
     jobs = set()
     for d in sorted(games.date.unique()):
         d = pd.Timestamp(d)
-        if d > TODAY: break
+        if d > TARGET: break
         jobs.add(((d - pd.Timedelta(days=1)).date().isoformat(), "08PM")); jobs.add(((d - pd.Timedelta(days=1)).date().isoformat(), "09PM"))
         for s in SLOTS:
             slot_dt = d + pd.Timedelta(hours=int(s[:2]) % 12 + (12 if s.endswith("PM") else 0), minutes=30)
@@ -145,7 +148,7 @@ def build_features(games, box, reports_path):
 # ------------------------------------------------------------------ 4/5. model + locked picks
 def predict(games):
     tr = pd.read_csv(os.path.join(W, "data", "training_games.csv"))
-    games = games[(games.date == TODAY) | games.home_pts.notna()].reset_index(drop=True)   # skip past games whose scores are not in yet
+    games = games[(games.date == TARGET) | ((games.date < TARGET) & games.home_pts.notna())].reset_index(drop=True)   # skip unfinished past games
     cur = games.drop(columns=["game_id", "tip_et"]).copy()
     for c in ("spread", "total", "open_spread", "open_total"): cur[c] = np.nan
     df = pd.concat([tr, cur], ignore_index=True)
@@ -161,8 +164,8 @@ def lock_picks(g, games_through):
     logdf = pd.read_csv(path, parse_dates=["date", "tip_et", "locked_at_et"]) if os.path.exists(path) else pd.DataFrame()
     locked = set(logdf.game_id) if len(logdf) else set()
     now = now_et()
-    new = g[~g.game_id.isin(locked) & (g.date <= TODAY)].copy()
-    live_mask = (new.date == TODAY) & (new.tip_et > now)
+    new = g[~g.game_id.isin(locked) & (g.date <= TARGET)].copy()
+    live_mask = (new.date == TARGET) & (new.tip_et > now)
     new["pick_type"] = np.where(live_mask, "live", "backfilled")
     new = new[(new.pick_type == "live") | new.home_pts.notna()]                  # never lock an unfinished past game
     new["locked_at_et"] = now; new["results_through"] = games_through
@@ -170,7 +173,7 @@ def lock_picks(g, games_through):
             "pred_margin", "pred_total", "home_n_out_open", "away_n_out_open", "snap_open_home"]
     new = new[keep]
     logdf = pd.concat([logdf, new], ignore_index=True) if len(logdf) else new
-    say(f"Locked {int((new.pick_type == 'live').sum())} live picks for {TODAY.date()} and {int((new.pick_type == 'backfilled').sum())} backfilled.")
+    say(f"Locked {int((new.pick_type == 'live').sum())} live picks for {TARGET.date()} and {int((new.pick_type == 'backfilled').sum())} backfilled.")
     return logdf
 
 
@@ -218,7 +221,7 @@ def export_today_model(g, summ, box):
     """Save what alert.py needs to re-predict today's games from a newer injury report without refitting:
     each team's no-injury baseline points, the injury coefficients, and every player's value."""
     fe = summ["fixed_effects"]; c_off, c_def = fe["missing_offense"], fe["missing_opp_defense"]
-    today = g[g.date == TODAY]
+    today = g[g.date == TARGET]
     games_out = []
     for r in today.itertuples():
         ph = (r.pred_total + r.pred_margin) / 2; pa = (r.pred_total - r.pred_margin) / 2
@@ -240,8 +243,11 @@ def export_today_model(g, summ, box):
         k = brf.key(r.player)
         if k and m > 0: players[k] = [round(m / 48 * eo, 4), round(m / 48 * ed, 4)]
     p_miss = pd.read_csv(os.path.join(W, "data", "p_miss.csv"), index_col=0).iloc[:, 0].dropna()
-    json.dump(dict(date=str(TODAY.date()), c_off=c_off, c_def=c_def, p_miss={k: float(v) for k, v in p_miss.items() if isinstance(k, str)},
-                   games=games_out, players=players), open(os.path.join(STATE, "today_model.json"), "w"))
+    for f in os.listdir(STATE):                                   # keep only models for today and later
+        if f.startswith("model_") and f[6:16] < str(TODAY.date()): os.remove(os.path.join(STATE, f))
+    json.dump(dict(date=str(TARGET.date()), made_at_et=str(now_et()), c_off=c_off, c_def=c_def,
+                   p_miss={k: float(v) for k, v in p_miss.items() if isinstance(k, str)},
+                   games=games_out, players=players), open(os.path.join(STATE, f"model_{TARGET.date()}.json"), "w"))
     say(f"Saved today's model for intraday checks ({len(games_out)} games, {len(players)} players).")
 
 
@@ -270,11 +276,11 @@ def grade_alerts(games):
 
 # ------------------------------------------------------------------ main
 def main():
-    say(f"NBA tracker run for {TODAY.date()} (ET).")
+    say(f"NBA tracker run on {TODAY.date()} (ET), predicting games on {TARGET.date()}.")
     games, box = load_season_data()
-    games = games[games.date <= TODAY].reset_index(drop=True)          # only past games and today's games are needed
-    if not ((games.date >= TODAY).any()):
-        say("No regular-season games remain. Nothing to predict.");
+    games = games[games.date <= TARGET].reset_index(drop=True)         # past games plus the games being predicted
+    if not (games.date == TARGET).any():
+        say(f"No regular-season games on {TARGET.date()}; grading earlier picks only.")
     rp = update_reports(games)
     games = build_features(games, box, rp)
     g, summ = predict(games)
@@ -284,7 +290,7 @@ def main():
     logdf = attach_lines_and_grade(logdf, games)
     grade_alerts(games)
     logdf.sort_values(["date", "tip_et"]).to_csv(os.path.join(STATE, "picks_log.csv"), index=False)
-    today = logdf[(logdf.date == TODAY) & (logdf.pick_type == "live")]
+    today = logdf[(logdf.date == TARGET) & (logdf.pick_type == "live")]
     json.dump({"today": [dict(home=r.home, away=r.away, tip=str(r.tip_et), pred_margin=round(r.pred_margin, 1),
                               pred_total=round(r.pred_total, 1)) for r in today.itertuples()], "log": log},
               open(os.path.join(STATE, "last_run.json"), "w"), indent=1)

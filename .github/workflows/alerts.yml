@@ -39,6 +39,6 @@ jobs:
         run: |
           git config user.name "nba-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          for f in state/alerts.csv state/test_alert_result.txt; do if [ -f "$f" ]; then git add "$f"; fi; done
+          for f in state/alerts.csv state/market_moves.csv state/test_alert_result.txt; do if [ -f "$f" ]; then git add "$f"; fi; done
           git diff --cached --quiet || git commit -m "Alerts $(TZ=America/New_York date '+%F %H:%M')"
           git pull --rebase -q && git push -q

@@ -25,9 +25,10 @@ All three can also be started by hand from the **Actions** tab (**Run workflow**
 - **Caution alerts.** When the edge is there but a safeguard is triggered, the alert is still sent, titled **CAUTION**, at normal priority, with the reason and a reminder to bet with caution. The safeguards:
   - there's no current official injury report (one filed at or after 8 PM the night before the game),
   - a team hasn't filed its report yet, or
-  - the line has moved 3+ points since it opened, which usually means news the model doesn't have yet.
+  - the line has moved 3+ points **against** the bet since it opened (the market disagrees, which usually means news the model doesn't have yet). Big moves toward the model's side aren't flagged.
 
   If a caution clears later (for example, the team files its report and the edge is still there), a regular alert follows.
+- **"Market agrees" alerts.** When a line moves 3+ points **toward** the model's side since opening, you get a heads-up once per game and market. If the edge is still 3+, it's part of the normal bet alert ("Market agrees: …"). If the move has eaten the edge, it's a low-priority info alert with no bet. These are logged in `state/market_moves.csv`.
 - Every alert, regular or caution, goes into `state/alerts.csv` and the **Alerts** sheet of `NBA_Live_Tracker.xlsx`, and is graded after the game. Regular and caution alerts are graded separately.
 - Phone delivery uses [ntfy](https://ntfy.sh). The topic name is stored as the repository secret `NTFY_TOPIC` and never appears in the code.
 

@@ -29,6 +29,7 @@ All three can also be started by hand from the **Actions** tab (**Run workflow**
 
   If a caution clears later (for example, the team files its report and the edge is still there), a regular alert follows.
 - **"Market agrees" alerts.** When a line moves 3+ points **toward** the model's side since opening, you get a heads-up once per game and market. If the edge is still 3+, it's part of the normal bet alert ("Market agrees: …"). If the move has eaten the edge, it's a low-priority info alert with no bet. These are logged in `state/market_moves.csv`.
+- **Latest news in every alert.** Each alert ends with the newest reporter-sourced injury updates for both teams from the last 24 hours (ESPN's injury feed, which picks up beat-writer and insider reports), so you can see what's behind a line move, or that nothing has been reported.
 - Every alert, regular or caution, goes into `state/alerts.csv` and the **Alerts** sheet of `NBA_Live_Tracker.xlsx`, and is graded after the game. Regular and caution alerts are graded separately.
 - Phone delivery uses [ntfy](https://ntfy.sh). The topic name is stored as the repository secret `NTFY_TOPIC` and never appears in the code.
 

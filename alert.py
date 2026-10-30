@@ -318,9 +318,9 @@ def main():
     try:
         import research
         research.init(W)
-        n_odds = n_pred = n_spl = n_bk = 0
+        n_odds = n_pred = n_spl = n_bk = n_pm = n_po = 0
         for mf in models:
-            M3 = json.load(open(os.path.join(STATE, mf)))
+            M3 = json.load(open(os.path.join(STATE, mf))); rows = []
             try:
                 k, rows = research.odds_snapshot(NOW, M3["date"], M3["games"]); n_odds += k
                 n_pred += research.predictor_snapshot(NOW, M3["date"], rows)
@@ -330,10 +330,22 @@ def main():
                 a, b = research.splits_snapshot(NOW, M3["date"], M3["games"]); n_spl += a; n_bk += b
             except Exception as e:
                 print("Betting splits logging skipped:", type(e).__name__, str(e)[:120])
+            try:
+                stamp = os.path.join(W, "research", "props", f"_full_{M3['date']}.txt")
+                last_full = pd.Timestamp(open(stamp).read().strip()) if os.path.exists(stamp) else None
+                tips = [pd.Timestamp(g["tip_et"]) for g in M3["games"] if pd.Timestamp(g["tip_et"]) > NOW]
+                soon = any(t - NOW <= pd.Timedelta(minutes=40) for t in tips)
+                full = last_full is None or NOW - last_full >= pd.Timedelta(minutes=115) or \
+                    (soon and NOW - last_full >= pd.Timedelta(minutes=30))
+                a, b = research.props_snapshot(NOW, M3["date"], rows, full=full); n_pm += a; n_po += b
+                if full:
+                    os.makedirs(os.path.dirname(stamp), exist_ok=True); open(stamp, "w").write(str(NOW))
+            except Exception as e:
+                print("Props logging skipped:", type(e).__name__, str(e)[:120])
         n_news = research.news_log(NOW, NEWS) if NEWS is not None else 0
         n_mod = research.model_snapshot(NOW, model_rows)
         print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_spl} betting-split changes, "
-              f"{n_bk} book line changes, {n_news} new news notes, {n_mod} model changes.")
+              f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_news} new news notes, {n_mod} model changes.")
     except Exception as e:
         print("Research logging skipped:", type(e).__name__, str(e)[:120])
 

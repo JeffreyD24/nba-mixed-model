@@ -17,28 +17,38 @@ def init(workdir):
     os.makedirs(os.path.join(R, "model"), exist_ok=True)
 
 
+def _same(a, b):
+    """equal values, treating blanks alike and 5 and 5.0 alike"""
+    na = lambda v: v is None or (isinstance(v, float) and np.isnan(v)) or (isinstance(v, str) and v == "")
+    if na(a) or na(b): return na(a) and na(b)
+    try: return float(a) == float(b)
+    except (TypeError, ValueError): return str(a) == str(b)
+
+
 def _append_changed(path, rows, key_cols, value_cols):
     """append only rows whose values differ from the last recorded row for the same key"""
     if not rows: return 0
     new = pd.DataFrame(rows)
+    blank = lambda v: v is None or (isinstance(v, float) and np.isnan(v))
+    for c in key_cols: new[c] = new[c].map(lambda v: "" if blank(v) else str(v))   # keys compared as text
+    last = None
     if os.path.exists(path):
-        old = pd.read_csv(path)
-        last = old.groupby(key_cols).tail(1).set_index(key_cols)[value_cols] if len(old) else None
-    else:
-        old, last = None, None
+        old = pd.read_csv(path, dtype={c: str for c in key_cols})
+        for c in key_cols: old[c] = old[c].fillna("")
+        if len(old):
+            last = old.groupby(key_cols).tail(1).set_index(key_cols)[value_cols]
+            last = last[~last.index.duplicated(keep="last")]
     keep = []
-    for r in new.itertuples(index=False):
-        rd = r._asdict(); k = tuple(rd[c] for c in key_cols)
+    for rd in new.to_dict("records"):
+        k = tuple(rd[c] for c in key_cols)
         k = k if len(k) > 1 else k[0]
         if last is not None and k in last.index:
             prev = last.loc[k]
-            same = all((pd.isna(prev[c]) and pd.isna(rd[c])) or (not pd.isna(prev[c]) and not pd.isna(rd[c]) and str(prev[c]) == str(rd[c]))
-                       for c in value_cols)
+            same = all(_same(prev[c], rd[c]) for c in value_cols)
             if same: continue
         keep.append(rd)
     if keep:
-        out = pd.DataFrame(keep)
-        out.to_csv(path, mode="a", header=not os.path.exists(path), index=False)
+        pd.DataFrame(keep).to_csv(path, mode="a", header=not os.path.exists(path), index=False)
     return len(keep)
 
 
@@ -181,4 +191,67 @@ def splits_snapshot(now, day, games):
     n2 = _append_changed(os.path.join(R, "books", f"{dd}.csv"), books, ["game_id", "book"],
                          ["home_spread", "home_spread_odds", "away_spread_odds", "total", "over_odds", "under_odds",
                           "home_ml", "away_ml"])
+    return n1, n2
+
+
+# ---------------- player props (DraftKings via ESPN) ----------------
+def _athlete(ref, cache):
+    aid = ref.split("/athletes/")[1].split("?")[0]
+    if aid not in cache:
+        try:
+            a = espn._get(ref.replace("http://", "https://"))
+            tm = (a.get("team") or {}).get("$ref", "")
+            cache[aid] = dict(athlete_id=aid, player=a.get("displayName"), position=(a.get("position") or {}).get("abbreviation"),
+                              espn_team_id=tm.split("/teams/")[1].split("?")[0] if "/teams/" in tm else None)
+        except Exception:
+            cache[aid] = dict(athlete_id=aid, player=None, position=None, espn_team_id=None)
+        cache[aid]["_new"] = True
+    return aid
+
+
+def props_snapshot(now, day, odds_rows, full=False):
+    """DraftKings player props for each game still to tip.
+    Main over/under lines (points, rebounds, assists, 3s, combos, steals, blocks) every check;
+    with full=True also milestones (20+ points ...), team props and quarter/half lines."""
+    apath = os.path.join(R, "props_athletes.csv")
+    cache = {r["athlete_id"]: r for r in pd.read_csv(apath, dtype=str).to_dict("records")} if os.path.exists(apath) else {}
+    main, other = [], []
+    for r in odds_rows:
+        items, page = [], 1
+        while True:
+            u = (f"https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/{r['espn_event_id']}/competitions/"
+                 f"{r['espn_event_id']}/odds/100/propBets?lang=en&region=us&limit=1000&page={page}")
+            p = espn._get(u); items += p.get("items", [])
+            if page >= (p.get("pageCount") or 1): break
+            page += 1
+        seen = {}
+        for i in items:
+            name = (i.get("type") or {}).get("name", "")
+            ath = i.get("athlete", {}).get("$ref")
+            is_main = bool(ath) and name.startswith("Total ")
+            if not (is_main or full): continue
+            aid = _athlete(ath, cache) if ath else None
+            od = (i.get("odds") or {}).get("american") or {}
+            tgt = lambda w: ((i.get(w) or {}).get("target") or {}).get("value")
+            row = dict(seen_at_et=str(now)[:16], game_id=r["game_id"], date=r["date"], market=name, athlete_id=aid,
+                       player=cache.get(aid, {}).get("player") if aid else None,
+                       team_ref=(i.get("team") or {}).get("$ref", "").split("/teams/")[-1].split("?")[0] or None,
+                       line=_num(tgt("current")), odds=_num(od.get("value")),
+                       open_line=_num(tgt("open")), open_odds=_num(od.get("open")), book_updated=i.get("lastUpdated"))
+            if is_main:   # listed in pairs, over first (checked against DraftKings' milestones: 55 of 57)
+                k = (name, aid); n = seen.get(k, 0); seen[k] = n + 1
+                row["side"] = "over" if n == 0 else "under" if n == 1 else f"extra{n}"
+                main.append(row)
+            else:
+                k = (name, aid, row["team_ref"], row["line"]); n = seen.get(k, 0); seen[k] = n + 1
+                row["side"] = f"{row['line']}|{n}"   # milestones etc.: one row per threshold
+                other.append(row)
+    os.makedirs(os.path.join(R, "props"), exist_ok=True)
+    dd = pd.Timestamp(day).date()
+    vals = ["line", "odds"]
+    n1 = _append_changed(os.path.join(R, "props", f"{dd}.csv"), main, ["market", "athlete_id", "side", "game_id"], vals)
+    n2 = _append_changed(os.path.join(R, "props", f"{dd}_other.csv"), other,
+                         ["market", "athlete_id", "team_ref", "side", "game_id"], vals) if full else 0
+    newa = [dict((k, v) for k, v in a.items() if k != "_new") for a in cache.values() if a.get("_new")]
+    if newa: pd.DataFrame(newa).to_csv(apath, mode="a", header=not os.path.exists(apath), index=False)
     return n1, n2

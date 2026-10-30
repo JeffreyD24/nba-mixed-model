@@ -89,5 +89,27 @@ for Consensus, Open (Action Network's opening line), DraftKings, FanDuel, BetRiv
 Shows which book moves first, which ones lag (soft lines to bet into), and how much the books disagree.
 Totals under 150 (a few books post period or team totals there) are left blank.
 
-## Not recorded (yet)
-Player prop lines.
+### `research/props/YYYY-MM-DD.csv`: player prop over/unders (DraftKings, via ESPN), every 5-minute check
+| column | meaning |
+|---|---|
+| seen_at_et, game_id, date | when this line/price was first seen, and the game |
+| market | Total Points, Total Rebounds, Total Assists, Total 3-Point Field Goals, Total Steals, Total Blocks, and combos (Points and Rebounds, Points, Rebounds, and Assists, ...) |
+| athlete_id, player | ESPN player ID and name (`research/props_athletes.csv` has position and ESPN team ID) |
+| side | over or under. ESPN lists each pair over-first without labeling it; checked against DraftKings' milestone prices (21+ points = over 20.5), the order matched 55 of 57 times. Recheck against results once games are graded. |
+| line, odds | current line and American price for that side |
+| open_line, open_odds | DraftKings' opening line and price |
+| book_updated | when DraftKings last changed it (ESPN's timestamp, UTC) |
+
+### `research/props/YYYY-MM-DD_other.csv`: everything else DraftKings posts, every 2 hours and once more within 40 minutes of a tip
+Milestones (10+, 15+, 20+ points ...), first basket and first team scorer, double-doubles, team totals and team 3s,
+and quarter and half spreads, totals and moneylines. Same columns as above; `side` is `line|n` because one player can have
+many thresholds. `team_ref` is ESPN's team ID for team props. For milestones, `open_line`/`open_odds` are DraftKings' first posted
+values for that slot and aren't reliable.
+
+Why props: books post thousands of these a night, so they get much less attention than spreads, and they're set
+from minutes and usage projections that news (a starter ruled out) changes quickly. The questions: how fast do prop lines react
+to injury news vs. the game line, do overs on popular players get shaded (priced above fair), and can a minutes-based player model
+beat the opening prop number.
+
+Size: the full set is about 1.3 MB per snapshot, so these files are the largest in the repo. Prop rows are written only when a line
+or price changes.

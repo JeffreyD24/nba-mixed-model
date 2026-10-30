@@ -1,0 +1,43 @@
+name: Log a bet
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: state-writes
+  cancel-in-progress: false
+
+jobs:
+  log:
+    # only bets opened by the repo owner, with the form's "bet" label
+    if: github.event.issue.user.login == github.repository_owner && contains(github.event.issue.labels.*.name, 'bet')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tools
+        run: pip install -q pandas
+      - name: Record the bet
+        run: python log_bet.py . "$GITHUB_EVENT_PATH"
+      - name: Save
+        run: |
+          git config user.name "nba-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -f state/my_bets.csv ]; then git add state/my_bets.csv; fi
+          git diff --cached --quiet || git commit -m "Log bet from issue #${{ github.event.issue.number }}"
+          git pull --rebase -q && git push -q
+      - name: Reply and close
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} -R ${{ github.repository }} --body-file state/_bet_reply.md
+          gh issue close ${{ github.event.issue.number }} -R ${{ github.repository }}

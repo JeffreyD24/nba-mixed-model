@@ -96,6 +96,46 @@ def build(log_csv, out_xlsx, rule, run_log):
     al.column_dimensions["K"].width = 20; al.column_dimensions["L"].width = 26; al.freeze_panes = "A2"
     sent = A[A.skipped.isna()] if len(A) and "skipped" in A else A
     graded = sent[sent.result.isin(["W", "L"])] if len(sent) and "result" in sent else sent.iloc[:0] if len(sent) else sent
+    # ---- the user's own logged bets
+    bpath = os.path.join(os.path.dirname(log_csv), "my_bets.csv")
+    MB = pd.read_csv(bpath) if os.path.exists(bpath) else pd.DataFrame()
+    mb = wb.create_sheet("My Bets", 1)
+    mcols = [("Logged at (ET)", "logged_at_et"), ("Game date", "date"), ("Away", "away"), ("Home", "home"), ("Market", "market"),
+             ("Pick", "pick"), ("Line", "line"), ("Odds", "odds"), ("Stake ($)", "stake"), ("Book", "book"),
+             ("Model number (your side)", "model_number"), ("Model edge at your line", "model_edge_at_your_line"),
+             ("Result", "result"), ("Profit ($)", "profit"), ("Notes", "notes")]
+    for k, (t, _) in enumerate(mcols): hdr(mb, 1, k + 1, t)
+    mb.row_dimensions[1].height = 30
+    for r in MB.to_dict("records"):
+        vals = []
+        for _, c in mcols:
+            v = r.get(c)
+            if isinstance(v, float) and np.isnan(v): v = None
+            if c in ("pick", "away", "home") and isinstance(v, str): v = v.upper()
+            vals.append(v)
+        mb.append(vals)
+    n = max(mb.max_row, 2)
+    for k in range(1, len(mcols) + 1): mb.column_dimensions[CL(k)].width = 12
+    mb.column_dimensions["O"].width = 30; mb.freeze_panes = "A2"
+    r0 = n + 2
+    mb.cell(r0, 1, "Totals (formulas)").font = f_h
+    labels = [("Bets graded", f'=COUNTIF(M2:M{n},"W")+COUNTIF(M2:M{n},"L")+COUNTIF(M2:M{n},"P")'),
+              ("Wins", f'=COUNTIF(M2:M{n},"W")'), ("Losses", f'=COUNTIF(M2:M{n},"L")'), ("Pushes", f'=COUNTIF(M2:M{n},"P")'),
+              ("Staked on graded bets ($)", f'=SUMIF(M2:M{n},"?*",I2:I{n})'), ("Profit ($)", f"=SUM(N2:N{n})"),
+              ("Return on money staked", f'=IFERROR(B{r0 + 6}/B{r0 + 5},"")')]
+    for k, (lab, fml) in enumerate(labels):
+        mb.cell(r0 + 1 + k, 1, lab).font = f_bold
+        x = mb.cell(r0 + 1 + k, 2, fml); x.font = f_norm
+        if "($)" in lab: x.number_format = '$#,##0.00;-$#,##0.00'
+        if lab.startswith("Return"): x.number_format = "0.0%"
+    gb = MB[MB.result.isin(["W", "L", "P"])] if len(MB) and "result" in MB else MB.iloc[:0] if len(MB) else MB
+    if len(gb):
+        mbw, mbl = int((gb.result == "W").sum()), int((gb.result == "L").sum())
+        my_line = (f"Your logged bets: {mbw}-{mbl}, ${gb.profit.sum():+.2f} on ${gb.stake.sum():.2f} staked "
+                   f"({gb.profit.sum() / gb.stake.sum():+.1%}). Average model edge at the lines you got: {gb.model_edge_at_your_line.mean():.1f} pts. "
+                   "If your edge is usually smaller than the scorecard's opening-line edge, betting earlier would help.")
+    else:
+        my_line = "Your logged bets: none graded yet. Log bets with the 'Log a bet' form (button on each alert, or the Issues tab)."
     ps = wb.create_sheet("Picks")
     for k, (t, _) in enumerate(COLS): hdr(ps, 1, k + 1, t)
     ps.row_dimensions[1].height = 42
@@ -167,6 +207,7 @@ def build(log_csv, out_xlsx, rule, run_log):
                f" graded so far, {int((graded.result == 'W').sum()) * 100 / 110 - int((graded.result == 'L').sum()):+.1f} units at -110. These are judged against later, sharper lines than the scorecard, so expect them to do worse."
                if len(graded) else "Phone alerts: none graded yet.")),
         ("t", caution_line(A)),
+        ("t", my_line),
         ("h", "My note and advice"),
         ("t", adv),
         ("t", "Reminders: the opening line logged here is the sportsbook's first posted number, which usually has low limits and moves quickly, so real results would be somewhat worse. The model has never beaten closing lines in any backtest; the closing-line rows are there as a reality check."),

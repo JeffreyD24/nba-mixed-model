@@ -1,0 +1,96 @@
+"""
+Turn a 'Log a bet' issue into a row in state/my_bets.csv.
+
+  python log_bet.py WORKDIR EVENT_JSON
+
+Reads the GitHub issue event, parses the form, validates it, appends the bet, and writes a
+short reply to state/_bet_reply.md for the workflow to post on the issue.
+"""
+import os, re, sys, json, datetime as dt
+from zoneinfo import ZoneInfo
+import pandas as pd
+
+W = os.path.abspath(sys.argv[1]); EVENT = json.load(open(sys.argv[2]))
+STATE = os.path.join(W, "state")
+TEAMS = {  # code: words that identify the team
+    "atl": ["atl", "atlanta", "hawks"], "bos": ["bos", "boston", "celtics"], "bkn": ["bkn", "brk", "brooklyn", "nets"],
+    "cha": ["cha", "charlotte", "hornets"], "chi": ["chi", "chicago", "bulls"], "cle": ["cle", "cleveland", "cavaliers", "cavs"],
+    "dal": ["dal", "dallas", "mavericks", "mavs"], "den": ["den", "denver", "nuggets"], "det": ["det", "detroit", "pistons"],
+    "gs": ["gs", "gsw", "golden state", "warriors"], "hou": ["hou", "houston", "rockets"], "ind": ["ind", "indiana", "pacers"],
+    "lac": ["lac", "clippers", "la clippers"], "lal": ["lal", "lakers", "la lakers"], "mem": ["mem", "memphis", "grizzlies"],
+    "mia": ["mia", "miami", "heat"], "mil": ["mil", "milwaukee", "bucks"], "min": ["min", "minnesota", "timberwolves", "wolves"],
+    "no": ["no", "nop", "new orleans", "pelicans"], "ny": ["ny", "nyk", "new york", "knicks"], "okc": ["okc", "oklahoma city", "thunder"],
+    "orl": ["orl", "orlando", "magic"], "phi": ["phi", "philadelphia", "76ers", "sixers"], "phx": ["phx", "phoenix", "suns"],
+    "por": ["por", "portland", "trail blazers", "blazers"], "sac": ["sac", "sacramento", "kings"], "sa": ["sa", "sas", "san antonio", "spurs"],
+    "tor": ["tor", "toronto", "raptors"], "utah": ["utah", "uta", "jazz"], "wsh": ["wsh", "was", "washington", "wizards"]}
+ALIAS = {w: k for k, ws in TEAMS.items() for w in ws}
+
+
+def team(s):
+    s = re.sub(r"[^a-z0-9 ]", "", str(s).lower()).strip()
+    if s in ALIAS: return ALIAS[s]
+    for w, k in sorted(ALIAS.items(), key=lambda x: -len(x[0])):
+        if len(w) > 3 and w in s: return k
+    raise ValueError(f"couldn't recognize the team '{s}'")
+
+
+def fields(body):
+    out, cur = {}, None
+    for line in (body or "").splitlines():
+        m = re.match(r"^###\s+(.*)$", line.strip())
+        if m: cur = m.group(1).strip(); out[cur] = []; continue
+        if cur is not None: out[cur].append(line)
+    return {k: "\n".join(v).strip() for k, v in out.items()}
+
+
+def num(s, what):
+    s = str(s).replace("$", "").replace(",", "").strip().lower()
+    if s in ("pk", "pick", "pickem", "even", "ev"): return 0.0
+    try: return float(s)
+    except ValueError: raise ValueError(f"'{s}' is not a number for {what}")
+
+
+def main():
+    issue = EVENT["issue"]
+    f = fields(issue.get("body"))
+    get = lambda k: "" if f.get(k, "") in ("", "_No response_") else f[k]
+    try:
+        date = pd.Timestamp(get("Game date")).date()
+        away, home = team(get("Away team")), team(get("Home team"))
+        market = get("Market").lower().strip()
+        if market.startswith("s"): market = "spread"
+        elif market.startswith("t") or market.startswith("o") or market.startswith("u"): market = "total"
+        else: raise ValueError("Market must be 'spread' or 'total'")
+        pick = get("Pick").lower().strip()
+        if market == "total":
+            if pick.startswith("o"): pick = "over"
+            elif pick.startswith("u"): pick = "under"
+            else: raise ValueError("For a total, Pick must be 'over' or 'under'")
+        else:
+            pick = team(pick)
+            if pick not in (home, away): raise ValueError(f"Pick '{pick.upper()}' isn't one of the two teams")
+        line = num(get("Line you got"), "the line"); odds = num(get("Odds (American)") or "-110", "the odds")
+        stake = num(get("Stake ($)"), "the stake")
+        if abs(odds) < 100: raise ValueError("Odds should look like -110 or +105")
+        if stake <= 0: raise ValueError("Stake must be more than 0")
+    except Exception as e:
+        open(os.path.join(STATE, "_bet_reply.md"), "w").write(
+            f"⚠️ I couldn't log this bet: {e}.\n\nPlease open a new **Log a bet** form with that fixed. (This issue will be closed.)")
+        print("invalid:", e); return
+    path = os.path.join(STATE, "my_bets.csv")
+    B = pd.read_csv(path) if os.path.exists(path) else pd.DataFrame()
+    row = dict(logged_at_et=str(dt.datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None, microsecond=0)),
+               issue=issue["number"], date=str(date), away=away, home=home, market=market, pick=pick, line=line, odds=odds,
+               stake=stake, book=get("Sportsbook (optional)"), notes=get("Notes (optional)"))
+    B = pd.concat([B, pd.DataFrame([row])], ignore_index=True)
+    B.to_csv(path, index=False)
+    desc = (f"{pick.upper()} {line:g}" if market == "total" else f"{pick.upper()} {line:+g}")
+    win = stake * (100 / abs(odds) if odds < 0 else odds / 100)
+    open(os.path.join(STATE, "_bet_reply.md"), "w").write(
+        f"✅ Logged: **{desc}**, {away.upper()} @ {home.upper()} on {date}, {odds:+g} for ${stake:g} (to win ${win:.2f}).\n\n"
+        "It will be graded in the morning run after the game and show up on the **My Bets** sheet of `NBA_Live_Tracker.xlsx`.")
+    print("logged:", row)
+
+
+if __name__ == "__main__":
+    main()

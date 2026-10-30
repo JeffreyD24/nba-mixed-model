@@ -19,7 +19,7 @@ import build_report_features as brf                      # noqa: E402
 import espn                                              # noqa: E402
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
-MAX_LINE_MOVE = 3.0                 # skip games whose line moved this much since opening (market knows something)
+MAX_LINE_MOVE = 3.0                 # caution flag when the line moved this much since opening (market may know something)
 WINDOW = None                       # None = check all day; or (16, 0, 19, 0) for 4:00-7:00 PM ET
 ET = ZoneInfo("America/New_York")
 STATE = os.path.join(W, "state")
@@ -49,12 +49,12 @@ def latest_report(max_hours=16):
     return None, None, []
 
 
-def notify(title, body):
+def notify(title, body, priority="high", tags="basketball"):
     topic = os.environ.get("NTFY_TOPIC")
     if not topic:
         print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
-                                 headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": "high", "Tags": "basketball"})
+                                 headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": priority, "Tags": tags})
     urllib.request.urlopen(req, timeout=20)
     return True
 
@@ -88,6 +88,8 @@ def main():
     skipped = set((r.game_id, r.market) for r in A.itertuples() if isinstance(getattr(r, "skipped", None), str)) if len(A) else set()
     graded = A[A.result.isin(["W", "L"]) & A.skipped.isna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
     rec = (f"{int((graded.result == 'W').sum())}-{int((graded.result == 'L').sum())}" if len(graded) else "no graded alerts yet")
+    cgraded = A[A.result.isin(["W", "L"]) & A.skipped.notna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
+    crec = (f"{int((cgraded.result == 'W').sum())}-{int((cgraded.result == 'L').sum())}" if len(cgraded) else "none graded yet")
     new, n_games = [], 0
 
     for mf in models:
@@ -153,9 +155,14 @@ def main():
                                model=round(margin if market == "spread" else total, 2), edge=round(abs(e), 2),
                                injury_report=used, sent=False, skipped=skip)
                 if skip:
+                    # caution alert: still sent, once per game and market, flagged with the reason
                     if (g["game_id"], market) not in skipped:
+                        cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
+                                 f"\nInjury report: {used}. Caution alerts so far: {crec}.")
+                        rec_row["sent"] = notify("CAUTION - " + title, cbody, priority="default", tags="warning,basketball")
                         new.append(rec_row); skipped.add((g["game_id"], market))
-                    print("HELD BACK:", title, "|", skip); continue
+                        print("CAUTION ALERT:", title, "|", skip)
+                    continue
                 body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live."
                 rec_row["sent"] = notify(title, body)
                 new.append(rec_row); done.add((g["game_id"], market))
@@ -163,8 +170,8 @@ def main():
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)
         A.to_csv(apath, index=False)
-    n_sent = sum(1 for x in new if not x.get("skipped"))
-    print(f"{NOW:%H:%M} ET: checked {n_games} upcoming games, {n_sent} alerts sent, {len(new) - n_sent} held back.")
+    n_clean = sum(1 for x in new if not x.get("skipped"))
+    print(f"{NOW:%H:%M} ET: checked {n_games} upcoming games, {n_clean} alerts and {len(new) - n_clean} caution alerts sent.")
 
 
 if __name__ == "__main__":

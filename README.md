@@ -22,11 +22,13 @@ All three can also be started by hand from the **Actions** tab (**Run workflow**
 
 - **What an alert says:** the model's number, the current DraftKings line (marked "opening line" if it hasn't moved; otherwise it shows where it opened), the edge now, and the edge at the opening line.
 - **Rule:** spreads and totals, model vs. the current line, edge of 3+ points. One alert per game per market.
-- **Safeguards.** An alert is held back, and logged with the reason, when:
+- **Caution alerts.** When the edge is there but a safeguard is triggered, the alert is still sent, titled **CAUTION**, at normal priority, with the reason and a reminder to bet with caution. The safeguards:
   - there's no current official injury report (one filed at or after 8 PM the night before the game),
   - a team hasn't filed its report yet, or
   - the line has moved 3+ points since it opened, which usually means news the model doesn't have yet.
-- Every alert, sent or held back, goes into `state/alerts.csv` and the **Alerts** sheet of `NBA_Live_Tracker.xlsx`, and is graded after the game.
+
+  If a caution clears later (for example, the team files its report and the edge is still there), a regular alert follows.
+- Every alert, regular or caution, goes into `state/alerts.csv` and the **Alerts** sheet of `NBA_Live_Tracker.xlsx`, and is graded after the game. Regular and caution alerts are graded separately.
 - Phone delivery uses [ntfy](https://ntfy.sh). The topic name is stored as the repository secret `NTFY_TOPIC` and never appears in the code.
 
 Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDOW` (set it to `(16, 0, 19, 0)` to alert only 4–7 PM ET).

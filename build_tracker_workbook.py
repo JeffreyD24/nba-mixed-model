@@ -68,6 +68,16 @@ def interpret(w, l):
     return status, adv
 
 
+def caution_line(A):
+    if not len(A) or "skipped" not in A or "result" not in A:
+        return "Caution alerts (sent with a warning because a safeguard was triggered): none graded yet."
+    c = A[A.skipped.notna() & A.result.isin(["W", "L"])]
+    if not len(c): return "Caution alerts (sent with a warning because a safeguard was triggered): none graded yet."
+    w, l = int((c.result == "W").sum()), int((c.result == "L").sum())
+    return (f"Caution alerts (sent with a warning because a safeguard was triggered): {w}-{l}, {w * 100 / 110 - l:+.1f} units. "
+            "If these do clearly worse than clean alerts over time, the safeguards are doing their job.")
+
+
 def build(log_csv, out_xlsx, rule, run_log):
     df = pd.read_csv(log_csv, parse_dates=["date", "tip_et", "locked_at_et"]).sort_values(["date", "tip_et"])
     wb = Workbook(); notes = wb.active; notes.title = "Notes"
@@ -77,7 +87,7 @@ def build(log_csv, out_xlsx, rule, run_log):
     al = wb.create_sheet("Alerts")
     acols = [("Alerted at (ET)", "alerted_at_et"), ("Away", "away"), ("Home", "home"), ("Tip (ET)", "tip_et"), ("Market", "market"),
              ("Bet", "side"), ("Line when alerted", "line"), ("Opening line", "open_line"), ("Model", "model"), ("Edge", "edge"),
-             ("Injury report used", "injury_report"), ("Held back (reason)", "skipped"), ("Result", "result")]
+             ("Injury report used", "injury_report"), ("Caution (reason)", "skipped"), ("Result", "result")]
     for k, (t, _) in enumerate(acols): hdr(al, 1, k + 1, t)
     al.row_dimensions[1].height = 30
     for r in A.to_dict("records"):
@@ -154,8 +164,9 @@ def build(log_csv, out_xlsx, rule, run_log):
         ("h", "Where things stand"),
         ("t", status),
         ("t", (f"Phone alerts (edge 3+ against the line at the moment of the alert, spreads and totals): {int((graded.result == 'W').sum())}-{int((graded.result == 'L').sum())}"
-               f" graded so far, {int((graded.result == 'W').sum()) * 100 / 110 - int((graded.result == 'L').sum()):+.1f} units at -110. These are judged against later, sharper lines than the pre-chosen rule, so expect them to do worse."
+               f" graded so far, {int((graded.result == 'W').sum()) * 100 / 110 - int((graded.result == 'L').sum()):+.1f} units at -110. These are judged against later, sharper lines than the scorecard, so expect them to do worse."
                if len(graded) else "Phone alerts: none graded yet.")),
+        ("t", caution_line(A)),
         ("h", "My note and advice"),
         ("t", adv),
         ("t", "Reminders: the opening line logged here is the sportsbook's first posted number, which usually has low limits and moves quickly, so real results would be somewhat worse. The model has never beaten closing lines in any backtest; the closing-line rows are there as a reality check."),

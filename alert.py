@@ -113,6 +113,31 @@ def main():
         NEWS = espn.injury_news(hours=24)
     except Exception as e:
         NEWS = None; print("News feed unavailable:", type(e).__name__)
+    hpath = os.path.join(STATE, "line_history.csv")
+    H_ = pd.read_csv(hpath) if os.path.exists(hpath) else pd.DataFrame(columns=["game_id", "market", "seen_at_et", "line", "open_line"])
+    hist_new = []
+
+    def record_line(gid, market, cur, opn):
+        """log the line whenever it changes (or the first time it is seen), with the time we saw it"""
+        if cur is None or pd.isna(cur): return
+        prev = [r for r in hist_new if r["game_id"] == gid and r["market"] == market]
+        old = H_[(H_.game_id == gid) & (H_.market == market)]
+        last = prev[-1]["line"] if prev else (old.line.iloc[-1] if len(old) else None)
+        if last is None or float(last) != float(cur):
+            hist_new.append(dict(game_id=gid, market=market, seen_at_et=str(NOW)[:16], line=cur, open_line=opn))
+
+    def history_text(gid, market, opn, fmt):
+        rows = pd.concat([H_[(H_.game_id == gid) & (H_.market == market)],
+                          pd.DataFrame([r for r in hist_new if r["game_id"] == gid and r["market"] == market])], ignore_index=True)
+        if not len(rows): return ""
+        first = rows.iloc[0]
+        parts = []
+        if opn is not None and not pd.isna(opn) and float(first.line) != float(opn):
+            parts.append(f"opened {fmt(opn)} (before tracking began)")
+        steps = [f"{fmt(r.line)} ({'first seen ' if i == 0 else ''}{pd.Timestamp(r.seen_at_et):%a %-I:%M %p})" for i, r in enumerate(rows.itertuples())]
+        if len(steps) > 5: steps = steps[:1] + ["…"] + steps[-3:]
+        return "\nLine history: " + " -> ".join(parts + steps)
+
     news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
     mpath = os.path.join(STATE, "market_moves.csv")
     MV = pd.read_csv(mpath) if os.path.exists(mpath) else pd.DataFrame(columns=["game_id", "market"])
@@ -153,9 +178,12 @@ def main():
             tip = pd.Timestamp(g["tip_et"]).strftime("%a %-I:%M %p")
             H, Aw = g["home"].upper(), g["away"].upper()
             for market in ("spread", "total"):
-                if (g["game_id"], market) in done: continue
                 cur = ln.get(f"current_{market}"); opn = ln.get(f"open_{market}")
+                record_line(g["game_id"], market, cur, opn)
                 if cur is None or pd.isna(cur): continue
+                fmt = (lambda v: f"{v:+g}") if market == "spread" else (lambda v: f"{v:g}")
+                hist_txt = history_text(g["game_id"], market, opn, fmt)
+                if (g["game_id"], market) in done: continue
                 is_open = opn is not None and not pd.isna(opn) and cur == opn
                 if market == "spread":
                     e = margin + cur; side = "home" if e > 0 else "away"
@@ -179,7 +207,7 @@ def main():
                         mbody = f"Line moved {abs(move):.1f} pts toward the model: {H} opened {opn:+g}, now {cur:+g}. Model: {H} by {margin:+.1f}."
                     else:
                         mbody = f"Total moved {abs(move):.1f} pts toward the model ({side}): opened {opn:g}, now {cur:g}. Model {total:.1f}."
-                    mbody += f" Edge left: {abs(e):.1f} pts (under {THRESHOLD:g}, so no bet). Info only." + news_for(g)
+                    mbody += f" Edge left: {abs(e):.1f} pts (under {THRESHOLD:g}, so no bet). Info only." + hist_txt + news_for(g)
                     notify(mtitle, mbody, priority="low", tags="chart_with_upwards_trend")
                     moves_new.append(dict(at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                           market=market, model_side=side, open_line=opn, line=cur, move=round(move, 1),
@@ -203,7 +231,7 @@ def main():
                     # caution alert: still sent, once per game and market, flagged with the reason
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
-                                 f"\nInjury report: {used}. Caution alerts so far: {crec}." + news_for(g))
+                                 f"\nInjury report: {used}. Caution alerts so far: {crec}." + hist_txt + news_for(g))
                         rec_row["sent"] = notify("CAUTION - " + title, cbody, priority="default", tags="warning,basketball", link=link)
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
@@ -211,13 +239,15 @@ def main():
                 if toward:
                     body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
                     moved_done.add((g["game_id"], market))
-                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + news_for(g)
+                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + hist_txt + news_for(g)
                 rec_row["sent"] = notify(title, body, link=link)
                 new.append(rec_row); done.add((g["game_id"], market))
                 print("ALERT:", title, "|", body)
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)
         A.to_csv(apath, index=False)
+    if hist_new:
+        pd.concat([H_, pd.DataFrame(hist_new)], ignore_index=True).to_csv(hpath, index=False)
     if moves_new:
         pd.concat([MV, pd.DataFrame(moves_new)], ignore_index=True).to_csv(mpath, index=False)
     n_clean = sum(1 for x in new if not x.get("skipped"))

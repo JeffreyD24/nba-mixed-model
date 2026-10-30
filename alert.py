@@ -316,8 +316,8 @@ def main():
         pd.concat([MV, pd.DataFrame(moves_new)], ignore_index=True).to_csv(mpath, index=False)
     # ---- research database (never allowed to break alerts)
     try:
-        import research
-        research.init(W)
+        import research, time as _time
+        research.init(W); _t0 = _time.time()
         n_odds = n_pred = n_spl = n_bk = n_pm = n_po = 0
         for mf in models:
             M3 = json.load(open(os.path.join(STATE, mf))); rows = []
@@ -325,11 +325,11 @@ def main():
                 k, rows = research.odds_snapshot(NOW, M3["date"], M3["games"]); n_odds += k
                 n_pred += research.predictor_snapshot(NOW, M3["date"], rows)
             except Exception as e:
-                print("ESPN research logging skipped:", type(e).__name__, str(e)[:120])
+                print("ESPN research logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "espn odds/predictor " + M3["date"], e)
             try:
                 a, b = research.splits_snapshot(NOW, M3["date"], M3["games"]); n_spl += a; n_bk += b
             except Exception as e:
-                print("Betting splits logging skipped:", type(e).__name__, str(e)[:120])
+                print("Betting splits logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "splits " + M3["date"], e)
             try:
                 stamp = os.path.join(W, "research", "props", f"_full_{M3['date']}.txt")
                 last_full = pd.Timestamp(open(stamp).read().strip()) if os.path.exists(stamp) else None
@@ -341,11 +341,15 @@ def main():
                 if full:
                     os.makedirs(os.path.dirname(stamp), exist_ok=True); open(stamp, "w").write(str(NOW))
             except Exception as e:
-                print("Props logging skipped:", type(e).__name__, str(e)[:120])
+                print("Props logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "props " + M3["date"], e)
         n_news = research.news_log(NOW, NEWS) if NEWS is not None else 0
         n_mod = research.model_snapshot(NOW, model_rows)
         print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_spl} betting-split changes, "
               f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_news} new news notes, {n_mod} model changes.")
+        cl = os.path.join(W, "research", "check_log.csv")
+        pd.DataFrame([dict(at_et=str(NOW)[:16], research_seconds=round(_time.time() - _t0), odds=n_odds, predictor=n_pred,
+                           splits=n_spl, books=n_bk, props=n_pm, props_other=n_po, news=n_news, model=n_mod)]).to_csv(
+            cl, mode="a", header=not os.path.exists(cl), index=False)
     except Exception as e:
         print("Research logging skipped:", type(e).__name__, str(e)[:120])
 

@@ -11,6 +11,16 @@ import espn
 R = None  # set by init()
 
 
+def log_error(now, part, e):
+    """research/errors.csv: what failed and when, so silent gaps can be found"""
+    try:
+        path = os.path.join(R, "errors.csv")
+        pd.DataFrame([dict(at_et=str(now)[:16], part=part, error=f"{type(e).__name__}: {str(e)[:200]}")]).to_csv(
+            path, mode="a", header=not os.path.exists(path), index=False)
+    except Exception:
+        pass
+
+
 def init(workdir):
     global R
     R = os.path.join(workdir, "research"); os.makedirs(os.path.join(R, "odds"), exist_ok=True)
@@ -218,12 +228,16 @@ def props_snapshot(now, day, odds_rows, full=False):
     main, other = [], []
     for r in odds_rows:
         items, page = [], 1
-        while True:
-            u = (f"https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/{r['espn_event_id']}/competitions/"
-                 f"{r['espn_event_id']}/odds/100/propBets?lang=en&region=us&limit=1000&page={page}")
-            p = espn._get(u); items += p.get("items", [])
-            if page >= (p.get("pageCount") or 1): break
-            page += 1
+        try:
+            while True:
+                u = (f"https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/{r['espn_event_id']}/competitions/"
+                     f"{r['espn_event_id']}/odds/100/propBets?lang=en&region=us&limit=1000&page={page}")
+                p = espn._get(u); items += p.get("items", [])
+                if page >= (p.get("pageCount") or 1): break
+                page += 1
+        except Exception as e:
+            log_error(now, f"props {r['game_id']} page {page}", e)
+            if page == 1: continue      # nothing for this game this time; other games still saved
         seen = {}
         for i in items:
             name = (i.get("type") or {}).get("name", "")

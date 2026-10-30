@@ -10,7 +10,7 @@ day, and sends phone alerts when it disagrees with the posted line.
 |---|---|---|
 | **Evening model run** (`evening.yml`) | Daily, 9:33 PM EST / 10:33 PM EDT | Refits the model on 2021-22 to 2025-26, walks forward through 2026-27 with no lookahead, and **locks** predictions for the **next day's** games using the official 8 PM injury report. That's the same setup the backtests used, and it happens before most opening lines are posted. Locked picks are never changed. |
 | **Morning run** (`morning.yml`) | Daily, 11:41 AM EDT / 10:41 AM EST | Adds last night's results, grades finished games and alerts, refreshes today's model with the latest data, and rebuilds `NBA_Live_Tracker.xlsx`. |
-| **Line check and phone alerts** (`alerts.yml`) | Every 5 minutes (GitHub sometimes runs these late or skips some) | For today's and tomorrow's games: pulls the newest injury report and the current DraftKings lines from ESPN, re-predicts without refitting, and sends one ntfy push per game and market when the model differs from the current line by **3+ points**. |
+| **Line check and phone alerts** (`alerts.yml`) | All day, every 5 minutes | GitHub's scheduler often starts frequent jobs 30–60 minutes apart, so each run checks every 5 minutes for about 50 minutes by itself (`alert_loop.sh`), and the next run queues behind it. It pauses while a morning, evening or bet-logging run is saving. Each check covers today's and tomorrow's games: pulls the newest injury report and the current DraftKings lines from ESPN, re-predicts without refitting, and sends one ntfy push per game and market when the model differs from the current line by **3+ points**. |
 
 All three can also be started by hand from the **Actions** tab (**Run workflow**).
 
@@ -35,7 +35,7 @@ All three can also be started by hand from the **Actions** tab (**Run workflow**
 - Every alert, regular or caution, goes into `state/alerts.csv` and the **Alerts** sheet of `NBA_Live_Tracker.xlsx`, and is graded after the game. Regular and caution alerts are graded separately.
 - Phone delivery uses [ntfy](https://ntfy.sh). The topic name is stored as the repository secret `NTFY_TOPIC` and never appears in the code.
 
-Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDOW` (set it to `(16, 0, 19, 0)` to alert only 4–7 PM ET).
+Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDOW`. `WINDOW = None` (the current setting) means alerts go out at any hour; it can be set to limit alerts to certain hours.
 
 ## Logging the bets you actually place
 

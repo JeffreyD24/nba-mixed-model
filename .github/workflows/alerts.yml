@@ -2,7 +2,7 @@ name: Line check and phone alerts
 
 on:
   schedule:
-    - cron: "*/5 * * * *"      # every 5 minutes (GitHub may run these late or skip some when busy)
+    - cron: "*/10 * * * *"     # each run checks every 5 minutes for ~50 minutes; extra starts just queue behind it
   workflow_dispatch:
     inputs:
       test:
@@ -12,15 +12,16 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
-  group: state-writes
+  group: alert-loop
   cancel-in-progress: false
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 70
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,15 +32,18 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
           pip install -q pandas numpy
-      - name: Check lines and send alerts
+      - name: Send a test notification
+        if: ${{ inputs.test }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python alert.py . ${{ inputs.test && '--test' || '' }}
-      - name: Save alert log
         run: |
+          python alert.py . --test
           git config user.name "nba-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          for f in state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt; do if [ -f "$f" ]; then git add "$f"; fi; done
-          if [ -d research ]; then git add research; fi
-          git diff --cached --quiet || git commit -m "Alerts $(TZ=America/New_York date '+%F %H:%M')"
-          git pull --rebase -q && git push -q
+          git add state/test_alert_result.txt && git commit -q -m "Test alert" && git pull --rebase -q && git push -q || true
+      - name: Check lines every 5 minutes and send alerts
+        if: ${{ !inputs.test }}
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          GH_TOKEN: ${{ github.token }}
+        run: ./alert_loop.sh

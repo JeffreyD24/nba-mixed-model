@@ -1,0 +1,4 @@
+_tmp/
+__pycache__/
+*.pdf
+_latest_report.pdf

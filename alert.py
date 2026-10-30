@@ -61,8 +61,15 @@ def notify(title, body):
 
 def main():
     if "--test" in sys.argv:
-        ok = notify("Test alert: NBA tracker connected", "If you can read this, phone alerts from your GitHub tracker are working. No bet here.")
-        print("Test alert sent." if ok else "Test alert NOT sent: NTFY_TOPIC secret is missing."); return
+        topic = os.environ.get("NTFY_TOPIC") or ""
+        try:
+            ok = notify("Test alert: NBA tracker connected", "If you can read this, phone alerts from your GitHub tracker are working. No bet here.")
+            msg = (f"sent OK to a topic {len(topic)} characters long, starting with '{topic[:2]}'" if ok
+                   else "NOT sent: the NTFY_TOPIC secret is missing or empty")
+        except Exception as e:
+            msg = f"NOT sent: ntfy returned an error ({type(e).__name__}: {str(e)[:80]})"
+        open(os.path.join(STATE, "test_alert_result.txt"), "w").write(f"{NOW}: test alert {msg}\n")
+        print("Test alert", msg); return
     if not FORCE and not in_window():
         print(f"{NOW:%H:%M} ET is outside the alert window; nothing to do."); return
     models = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= str(TODAY.date()))

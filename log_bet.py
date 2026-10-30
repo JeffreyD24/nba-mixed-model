@@ -14,21 +14,23 @@ W = os.path.abspath(sys.argv[1]); EVENT = json.load(open(sys.argv[2]))
 STATE = os.path.join(W, "state")
 TEAMS = {  # code: words that identify the team
     "atl": ["atl", "atlanta", "hawks"], "bos": ["bos", "boston", "celtics"], "bkn": ["bkn", "brk", "brooklyn", "nets"],
-    "cha": ["cha", "charlotte", "hornets"], "chi": ["chi", "chicago", "bulls"], "cle": ["cle", "cleveland", "cavaliers", "cavs"],
+    "cha": ["cha", "cho", "charlotte", "hornets"], "chi": ["chi", "chicago", "bulls"], "cle": ["cle", "cleveland", "cavaliers", "cavs"],
     "dal": ["dal", "dallas", "mavericks", "mavs"], "den": ["den", "denver", "nuggets"], "det": ["det", "detroit", "pistons"],
     "gs": ["gs", "gsw", "golden state", "warriors"], "hou": ["hou", "houston", "rockets"], "ind": ["ind", "indiana", "pacers"],
     "lac": ["lac", "clippers", "la clippers"], "lal": ["lal", "lakers", "la lakers"], "mem": ["mem", "memphis", "grizzlies"],
     "mia": ["mia", "miami", "heat"], "mil": ["mil", "milwaukee", "bucks"], "min": ["min", "minnesota", "timberwolves", "wolves"],
-    "no": ["no", "nop", "new orleans", "pelicans"], "ny": ["ny", "nyk", "new york", "knicks"], "okc": ["okc", "oklahoma city", "thunder"],
-    "orl": ["orl", "orlando", "magic"], "phi": ["phi", "philadelphia", "76ers", "sixers"], "phx": ["phx", "phoenix", "suns"],
-    "por": ["por", "portland", "trail blazers", "blazers"], "sac": ["sac", "sacramento", "kings"], "sa": ["sa", "sas", "san antonio", "spurs"],
-    "tor": ["tor", "toronto", "raptors"], "utah": ["utah", "uta", "jazz"], "wsh": ["wsh", "was", "washington", "wizards"]}
+    "no": ["no", "nop", "nor", "new orleans", "pelicans", "pels"], "ny": ["ny", "nyk", "new york", "knicks"], "okc": ["okc", "oklahoma city", "thunder"],
+    "orl": ["orl", "orlando", "magic"], "phi": ["phi", "philadelphia", "76ers", "sixers"], "phx": ["phx", "pho", "phoenix", "suns"],
+    "por": ["por", "portland", "trail blazers", "blazers"], "sac": ["sac", "sacramento", "kings"], "sa": ["sa", "sas", "sa spurs", "san antonio", "spurs"],
+    "tor": ["tor", "toronto", "raptors"], "utah": ["utah", "uta", "uth", "jazz"], "wsh": ["wsh", "was", "washington", "wizards"]}
 ALIAS = {w: k for k, ws in TEAMS.items() for w in ws}
 
 
 def team(s):
     s = re.sub(r"[^a-z0-9 ]", "", str(s).lower()).strip()
     if s in ALIAS: return ALIAS[s]
+    words = [ALIAS[w] for w in s.split() if w in ALIAS and len(w) >= 3]   # "PHO Suns", "DEN Nuggets"
+    if words and len(set(words)) == 1: return words[0]
     for w, k in sorted(ALIAS.items(), key=lambda x: -len(x[0])):
         if len(w) > 3 and w in s: return k
     raise ValueError(f"couldn't recognize the team '{s}'")
@@ -71,6 +73,9 @@ def main():
             if pick not in (home, away): raise ValueError(f"Pick '{pick.upper()}' isn't one of the two teams")
         line = num(get("Line you got"), "the line"); odds = num(get("Odds (American)") or "-110", "the odds")
         stake = num(get("Stake ($)"), "the stake")
+        today = dt.datetime.now(ZoneInfo("America/New_York")).date()
+        if not (today - dt.timedelta(days=3) <= date <= today + dt.timedelta(days=10)):
+            raise ValueError(f"the game date {date} is more than a few days from today ({today}); check the date")
         if abs(odds) < 100: raise ValueError("Odds should look like -110 or +105")
         if stake <= 0: raise ValueError("Stake must be more than 0")
     except Exception as e:
@@ -89,6 +94,9 @@ def main():
     open(os.path.join(STATE, "_bet_reply.md"), "w").write(
         f"✅ Logged: **{desc}**, {away.upper()} @ {home.upper()} on {date}, {odds:+g} for ${stake:g} (to win ${win:.2f}).\n\n"
         "It will be graded in the morning run after the game and show up on the **My Bets** sheet of `NBA_Live_Tracker.xlsx`.")
+    book = get("Sportsbook (optional)")
+    open(os.path.join(STATE, "_bet_title.txt"), "w").write(
+        f"Bet {date}: {away.upper()} @ {home.upper()} {desc} {odds:+g} ${stake:g}" + (f" ({book})" if book else ""))
     print("logged:", row)
 
 

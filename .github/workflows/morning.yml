@@ -2,7 +2,7 @@ name: Morning model run
 
 on:
   schedule:
-    - cron: "41 15 * * *"      # 11:41 AM EDT / 10:41 AM EST, after the daily box-score refresh
+    - cron: "41 15 * * *"      # 11:41 AM EDT / 10:41 AM EST: add last night's results, grade, refresh today's games
   workflow_dispatch: {}
 
 permissions:

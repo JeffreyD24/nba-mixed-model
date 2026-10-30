@@ -109,7 +109,7 @@ def build(log_csv, out_xlsx, rule, run_log):
 
     sm = wb.create_sheet("Summary", 1)
     sm["A1"] = "2026-27 tracker results (formulas on the Picks sheet)"; sm["A1"].font = f_title
-    sm["A2"] = (f"The pre-chosen rule (highlighted): bet the {rule['market']} against the {rule['line']}ing line when the model differs by ≥ {rule['edge']:g} points. "
+    sm["A2"] = (f"The tracked rule (highlighted): every spread and total where the opening line differs from the model by ≥ {rule['edge']:g} points, graded at the opening line. "
                 "'Live' = locked before tip on game day. 'Backfilled' = games before tracking started, predicted with the same no-lookahead method."); sm["A2"].font = f_note
     sm["A3"] = "Break-even win % at -110:"; sm["A3"].font = f_bold
     sm["D3"] = "=110/210"; sm["D3"].number_format = "0.0%"; sm["D3"].font = f_norm
@@ -122,7 +122,7 @@ def build(log_csv, out_xlsx, rule, run_log):
             for market in ("spread", "total"):
                 ec, rc = RES_COL[f"{line}_{market}"]
                 for th in (0, 3, 4, 5, 6):
-                    is_rule = (line == rule["line"] and market == rule["market"] and th == rule["edge"])
+                    is_rule = (line == rule["line"] and market in rule["markets"] and th == rule["edge"])
                     for k, v in enumerate([line, market, th]):
                         x = sm.cell(r, k + 1, v); x.font = f_bold if is_rule else f_norm; x.alignment = center; x.border = box
                     base = f"Picks!$E$2:$E${N},{crit},Picks!${ec}$2:${ec}${N},\">=\"&$C{r}"
@@ -139,15 +139,17 @@ def build(log_csv, out_xlsx, rule, run_log):
     for c, w in zip(range(1, 8), [9, 9, 8, 8, 8, 9, 9]): sm.column_dimensions[CL(c)].width = w
 
     # ---- notes (regenerated every run)
-    w, l = record(df, rule["line"], rule["market"], rule["edge"], live_only=True)
+    w = l = 0
+    for mk in rule["markets"]:
+        a, b = record(df, rule["line"], mk, rule["edge"], live_only=True); w += a; l += b
     status, adv = interpret(w, l)
     live = df[df.pick_type == "live"]
     lw, ll = record(df, "close", "spread", 0, True)
     notes["A1"] = "NBA Live Tracker, 2026-27"; notes["A1"].font = f_title
     lines = [
         ("h", "What this is"),
-        ("t", "Every morning a scheduled task downloads the latest results and official injury reports, refits the official-injury-report mixed model (trained on 2021-22 through 2025-26), and locks its predictions for that day's games before tip-off. Locked picks are never changed. Lines are pulled from ESPN and finished games are graded."),
-        ("t", f"The pre-chosen rule, fixed before the season's live tracking began: bet the {rule['market']} against the {rule['line']}ing line whenever the model differs from it by at least {rule['edge']:g} points. Everything else on the Summary sheet is for context only; do not pick a new rule from it mid-season."),
+        ("t", "Every evening (about 9:30 PM ET) GitHub refits the official-injury-report mixed model (trained on 2021-22 through 2025-26) and locks its predictions for the next day's games using the 8 PM injury report, the same setup the backtests used. A morning run adds the latest results, grades finished games, and refreshes the data. Locked picks are never changed. Lines come from ESPN (DraftKings)."),
+        ("t", f"The tracked rule, fixed before live tracking began: every spread and total whose opening line differs from the locked model number by at least {rule['edge']:g} points counts as a bet at the opening line, even if the line moved before a bet could be placed. That measures the model itself. Everything else on the Summary sheet is context only; do not pick a new rule from it mid-season."),
         ("t", f"Picks logged: {len(df)} games ({len(live)} live, {len(df) - len(live)} backfilled from before tracking started). Latest run: {run_log[0] if run_log else ''}"),
         ("h", "Where things stand"),
         ("t", status),

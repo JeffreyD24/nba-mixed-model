@@ -40,6 +40,11 @@ Line moves ahead of `posted_et` mean the market knew first.
 `seen_at_et, game_id, date, home, away, model_margin, model_total, injury_report`, written when the model's number
 changes (a new injury report). It shows how much each report moved our number vs. how much it moved the line.
 
+### `research/check_log.csv` and `research/errors.csv`: coverage checks
+`check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
+each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,
+the error), so gaps in the data can be explained rather than mistaken for "nothing changed".
+
 ## state/ (tracker records that also feed the research)
 
 | file | what it holds |

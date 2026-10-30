@@ -1,0 +1,81 @@
+{
+ "today": [
+  {
+   "home": "wsh",
+   "away": "cha",
+   "tip": "2026-10-30 19:00:00",
+   "pred_margin": -0.3,
+   "pred_total": 222.0
+  },
+  {
+   "home": "bkn",
+   "away": "det",
+   "tip": "2026-10-30 19:30:00",
+   "pred_margin": -7.6,
+   "pred_total": 224.3
+  },
+  {
+   "home": "bos",
+   "away": "chi",
+   "tip": "2026-10-30 19:30:00",
+   "pred_margin": 15.6,
+   "pred_total": 236.4
+  },
+  {
+   "home": "phi",
+   "away": "ny",
+   "tip": "2026-10-30 19:30:00",
+   "pred_margin": 1.3,
+   "pred_total": 221.6
+  },
+  {
+   "home": "tor",
+   "away": "orl",
+   "tip": "2026-10-30 19:30:00",
+   "pred_margin": 7.6,
+   "pred_total": 222.7
+  },
+  {
+   "home": "dal",
+   "away": "hou",
+   "tip": "2026-10-30 20:00:00",
+   "pred_margin": -5.8,
+   "pred_total": 227.4
+  },
+  {
+   "home": "mia",
+   "away": "ind",
+   "tip": "2026-10-30 20:00:00",
+   "pred_margin": 4.0,
+   "pred_total": 234.5
+  },
+  {
+   "home": "min",
+   "away": "lac",
+   "tip": "2026-10-30 20:00:00",
+   "pred_margin": 4.3,
+   "pred_total": 221.1
+  },
+  {
+   "home": "gs",
+   "away": "lal",
+   "tip": "2026-10-30 22:00:00",
+   "pred_margin": -4.8,
+   "pred_total": 234.2
+  },
+  {
+   "home": "phx",
+   "away": "den",
+   "tip": "2026-10-30 22:00:00",
+   "pred_margin": -1.4,
+   "pred_total": 230.9
+  }
+ ],
+ "log": [
+  "NBA tracker run for 2026-10-30 (ET).",
+  "Schedule: 1200 regular-season games; 68 finished, results through 2026-10-28.",
+  "Injury reports: 0 snapshots requested, 0 new, 82 on file.",
+  "Saved today's model for intraday checks (10 games, 638 players).",
+  "Locked 0 live picks for 2026-10-30 and 0 backfilled."
+ ]
+}

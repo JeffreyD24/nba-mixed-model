@@ -67,6 +67,27 @@ CLV is the quickest test of a real edge: it shows up in a few hundred bets, long
   and then fail to cover? Does ESPN's predictor pull lines?
 - **Our timing:** at which hours is our edge vs. the current line largest, and does betting then produce positive CLV?
 
+### `research/splits/YYYY-MM-DD.csv`: where the bets and the money are (Action Network)
+| column | meaning |
+|---|---|
+| seen_at_et, game_id, date, away, home | when first seen, and the game |
+| num_bets | how many bets Action Network's sample has on the game (a size and popularity measure) |
+| consensus_home_spread, consensus_total | Action Network's consensus line when the split was recorded |
+| spread_home_bets_pct, spread_home_money_pct | % of spread **bets** (tickets) and % of spread **money** on the home team (away = 100 minus) |
+| over_bets_pct, over_money_pct | % of total bets and money on the over |
+| home_ml_bets_pct, home_ml_money_pct | % of moneyline bets and money on the home team |
+
+How to read it: **bets % shows the crowd; money % shows the dollars.** When money % is well above bets %
+(for example 35% of bets but 60% of money), fewer, bigger bets are on that side, which usually means sharper
+bettors. When bets % is high but the line moves the other way ("reverse line movement"), books are siding
+against the public. The splits come from Action Network's sample of sportsbooks, not the whole market, and
+are the same at every book.
+
+### `research/books/YYYY-MM-DD.csv`: lines and prices at each sportsbook
+`seen_at_et, game_id, date, away, home, book, home_spread, home_spread_odds, away_spread_odds, total, over_odds, under_odds, home_ml, away_ml`
+for Consensus, Open (Action Network's opening line), DraftKings, FanDuel, BetRivers, BetMGM, bet365, Caesars and Fanatics.
+Shows which book moves first, which ones lag (soft lines to bet into), and how much the books disagree.
+Totals under 150 (a few books post period or team totals there) are left blank.
+
 ## Not recorded (yet)
-Betting splits (% of bets and % of money on each side). VSIN's free page no longer shows NBA splits (it's for Pro subscribers),
-so they aren't scraped.
+Player prop lines.

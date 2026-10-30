@@ -318,14 +318,22 @@ def main():
     try:
         import research
         research.init(W)
-        n_odds = n_pred = 0
+        n_odds = n_pred = n_spl = n_bk = 0
         for mf in models:
             M3 = json.load(open(os.path.join(STATE, mf)))
-            k, rows = research.odds_snapshot(NOW, M3["date"], M3["games"]); n_odds += k
-            n_pred += research.predictor_snapshot(NOW, M3["date"], rows)
+            try:
+                k, rows = research.odds_snapshot(NOW, M3["date"], M3["games"]); n_odds += k
+                n_pred += research.predictor_snapshot(NOW, M3["date"], rows)
+            except Exception as e:
+                print("ESPN research logging skipped:", type(e).__name__, str(e)[:120])
+            try:
+                a, b = research.splits_snapshot(NOW, M3["date"], M3["games"]); n_spl += a; n_bk += b
+            except Exception as e:
+                print("Betting splits logging skipped:", type(e).__name__, str(e)[:120])
         n_news = research.news_log(NOW, NEWS) if NEWS is not None else 0
         n_mod = research.model_snapshot(NOW, model_rows)
-        print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_news} new news notes, {n_mod} model changes.")
+        print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_spl} betting-split changes, "
+              f"{n_bk} book line changes, {n_news} new news notes, {n_mod} model changes.")
     except Exception as e:
         print("Research logging skipped:", type(e).__name__, str(e)[:120])
 

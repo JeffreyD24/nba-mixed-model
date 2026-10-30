@@ -3,7 +3,12 @@ name: Line check and phone alerts
 on:
   schedule:
     - cron: "*/5 * * * *"      # every 5 minutes (GitHub may run these late or skip some when busy)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Send a test notification instead of checking lines"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -29,7 +34,7 @@ jobs:
       - name: Check lines and send alerts
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python alert.py .
+        run: python alert.py . ${{ inputs.test && '--test' || '' }}
       - name: Save alert log
         run: |
           git config user.name "nba-tracker-bot"

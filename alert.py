@@ -60,6 +60,9 @@ def notify(title, body):
 
 
 def main():
+    if "--test" in sys.argv:
+        ok = notify("Test alert: NBA tracker connected", "If you can read this, phone alerts from your GitHub tracker are working. No bet here.")
+        print("Test alert sent." if ok else "Test alert NOT sent: NTFY_TOPIC secret is missing."); return
     if not FORCE and not in_window():
         print(f"{NOW:%H:%M} ET is outside the alert window; nothing to do."); return
     models = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= str(TODAY.date()))

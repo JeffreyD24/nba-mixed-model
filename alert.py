@@ -109,6 +109,11 @@ def main():
     cgraded = A[A.result.isin(["W", "L"]) & A.skipped.notna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
     crec = (f"{int((cgraded.result == 'W').sum())}-{int((cgraded.result == 'L').sum())}" if len(cgraded) else "none graded yet")
     new, n_games = [], 0
+    try:
+        NEWS = espn.injury_news(hours=24)
+    except Exception as e:
+        NEWS = None; print("News feed unavailable:", type(e).__name__)
+    news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
     mpath = os.path.join(STATE, "market_moves.csv")
     MV = pd.read_csv(mpath) if os.path.exists(mpath) else pd.DataFrame(columns=["game_id", "market"])
     moved_done = set(zip(MV.game_id, MV.market)); moves_new = []
@@ -174,7 +179,7 @@ def main():
                         mbody = f"Line moved {abs(move):.1f} pts toward the model: {H} opened {opn:+g}, now {cur:+g}. Model: {H} by {margin:+.1f}."
                     else:
                         mbody = f"Total moved {abs(move):.1f} pts toward the model ({side}): opened {opn:g}, now {cur:g}. Model {total:.1f}."
-                    mbody += f" Edge left: {abs(e):.1f} pts (under {THRESHOLD:g}, so no bet). Info only."
+                    mbody += f" Edge left: {abs(e):.1f} pts (under {THRESHOLD:g}, so no bet). Info only." + news_for(g)
                     notify(mtitle, mbody, priority="low", tags="chart_with_upwards_trend")
                     moves_new.append(dict(at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                           market=market, model_side=side, open_line=opn, line=cur, move=round(move, 1),
@@ -198,7 +203,7 @@ def main():
                     # caution alert: still sent, once per game and market, flagged with the reason
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
-                                 f"\nInjury report: {used}. Caution alerts so far: {crec}.")
+                                 f"\nInjury report: {used}. Caution alerts so far: {crec}." + news_for(g))
                         rec_row["sent"] = notify("CAUTION - " + title, cbody, priority="default", tags="warning,basketball", link=link)
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
@@ -206,7 +211,7 @@ def main():
                 if toward:
                     body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
                     moved_done.add((g["game_id"], market))
-                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live."
+                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + news_for(g)
                 rec_row["sent"] = notify(title, body, link=link)
                 new.append(rec_row); done.add((g["game_id"], market))
                 print("ALERT:", title, "|", body)

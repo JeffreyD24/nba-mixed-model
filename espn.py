@@ -46,3 +46,41 @@ def lines(dates, when=("open", "close", "current")):
                 rec["error"] = str(e)[:80]
             out.append(rec)
     return pd.DataFrame(out)
+
+
+def injury_news(hours=24, now_utc=None):
+    """Latest reporter-sourced injury updates from ESPN, by team code: {code: [(time_et, text), ...]} newest first."""
+    from zoneinfo import ZoneInfo
+    FULL = {"Atlanta Hawks": "atl", "Boston Celtics": "bos", "Brooklyn Nets": "bkn", "Charlotte Hornets": "cha", "Chicago Bulls": "chi",
+            "Cleveland Cavaliers": "cle", "Dallas Mavericks": "dal", "Denver Nuggets": "den", "Detroit Pistons": "det",
+            "Golden State Warriors": "gs", "Houston Rockets": "hou", "Indiana Pacers": "ind", "LA Clippers": "lac",
+            "Los Angeles Clippers": "lac", "Los Angeles Lakers": "lal", "Memphis Grizzlies": "mem", "Miami Heat": "mia",
+            "Milwaukee Bucks": "mil", "Minnesota Timberwolves": "min", "New Orleans Pelicans": "no", "New York Knicks": "ny",
+            "Oklahoma City Thunder": "okc", "Orlando Magic": "orl", "Philadelphia 76ers": "phi", "Phoenix Suns": "phx",
+            "Portland Trail Blazers": "por", "Sacramento Kings": "sac", "San Antonio Spurs": "sa", "Toronto Raptors": "tor",
+            "Utah Jazz": "utah", "Washington Wizards": "wsh"}
+    d = _get("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/injuries")
+    now = pd.Timestamp.now(tz="UTC") if now_utc is None else now_utc
+    out = {}
+    for t in d.get("injuries", []):
+        code = FULL.get(t.get("displayName"))
+        if not code: continue
+        items = []
+        for i in t.get("injuries", []):
+            when = pd.to_datetime(i.get("date"), utc=True, errors="coerce")
+            text = (i.get("shortComment") or "").strip()
+            if text and when is not pd.NaT and now - when <= pd.Timedelta(hours=hours):
+                items.append((when.tz_convert(ZoneInfo("America/New_York")), text))
+        out[code] = sorted(items, key=lambda x: x[0], reverse=True)
+    return out
+
+
+def news_text(news, teams, per_team=3, max_chars=700):
+    """short block for a notification body"""
+    lines = []
+    for t in teams:
+        for when, text in news.get(t, [])[:per_team]:
+            lines.append(f"- {t.upper()} {when:%a %-I:%M %p}: {text}")
+    if not lines: return "Latest news: nothing reported for either team in the last 24 hours."
+    s = "Latest news:\n" + "\n".join(lines)
+    return s if len(s) <= max_chars else s[:max_chars - 1] + "…"

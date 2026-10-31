@@ -165,7 +165,10 @@ def build(log_csv, out_xlsx, rule, run_log):
 
     # ---- bet timing: the model at the open vs. later lines
     tpath = os.path.join(os.path.dirname(log_csv), "bet_timing.csv")
-    TT = pd.read_csv(tpath) if os.path.exists(tpath) else pd.DataFrame()
+    try:                                   # the file is empty until a game has been graded at the time points
+        TT = pd.read_csv(tpath) if os.path.exists(tpath) else pd.DataFrame()
+    except pd.errors.EmptyDataError:
+        TT = pd.DataFrame()
     import timing
     TS = timing.summary(TT) if len(TT) else pd.DataFrame()
     bt = wb.create_sheet("Bet Timing")

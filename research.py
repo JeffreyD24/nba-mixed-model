@@ -373,3 +373,36 @@ def linescores(now, day, games):
         old = pd.read_csv(path) if os.path.exists(path) else pd.DataFrame()
         pd.concat([old, pd.DataFrame(rows)], ignore_index=True).to_csv(path, index=False)   # rewrite: OT adds columns
     return len(rows)
+
+
+# ---------------- who played when: minutes by quarter (ESPN play-by-play) ----------------
+def minutes_log(now, day, games=None):
+    """each finished game's minutes by quarter for every player, written once per game. Returns games written."""
+    import rotations
+    os.makedirs(os.path.join(R, "minutes"), exist_ok=True)
+    path = os.path.join(R, "minutes", f"{pd.Timestamp(day).date()}.csv")
+    done = set(pd.read_csv(path, dtype={"espn_event_id": str}).espn_event_id) if os.path.exists(path) else set()
+    ids = {(g["home"], g["away"]): g["game_id"] for g in (games or [])}
+    sb = espn._get(f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={pd.Timestamp(day):%Y%m%d}")
+    out, n = [], 0
+    for ev in sb.get("events", []):
+        comp = ev["competitions"][0]
+        if comp.get("status", {}).get("type", {}).get("state") != "post" or str(ev["id"]) in done: continue
+        side = {c["homeAway"]: espn.ESPN2.get(c["team"]["abbreviation"]) for c in comp["competitors"]}
+        try:
+            rows, worst = rotations.game_minutes(ev["id"])
+        except Exception as e:
+            log_error(now, f"minutes {ev['id']}", e); continue
+        for r in rows:
+            r.update(recorded_at_et=str(now)[:16], game_id=ids.get((side.get("home"), side.get("away"))), espn_event_id=str(ev["id"]),
+                     date=str(pd.Timestamp(day).date()), home=side.get("home"), away=side.get("away"),
+                     is_home=r["team"] == side.get("home"), check_max_diff_min=worst)
+        out += rows; n += 1
+    if out:
+        new = pd.DataFrame(out)
+        front = ["recorded_at_et", "game_id", "espn_event_id", "date", "away", "home", "team", "is_home", "athlete_id", "player",
+                 "starter", "dnp", "q1", "q2", "q3", "q4", "h1", "h2", "total_min", "box_min", "diff_vs_box", "check_max_diff_min"]
+        new = new[[c for c in front if c in new] + [c for c in new if c not in front]]
+        old = pd.read_csv(path) if os.path.exists(path) else pd.DataFrame()
+        pd.concat([old, new], ignore_index=True).to_csv(path, index=False)   # rewrite: overtime adds columns
+    return n

@@ -1,0 +1,7 @@
+test,version,total_mae,close_total_e3_bets,close_total_e3_win
+2026,with refs,14.812790617096038,488.0,0.5143
+2026,without refs,14.836545293268596,469.0,0.5203
+2026,"ref adjustment size (sd, pts)",1.0033150488596851,,
+2025,with refs,14.456286483170397,542.0,0.5018
+2025,without refs,14.427868149650589,501.0,0.499
+2025,"ref adjustment size (sd, pts)",0.9594513264677319,,

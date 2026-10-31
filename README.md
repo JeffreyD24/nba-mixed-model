@@ -14,6 +14,23 @@ day, and sends phone alerts when it disagrees with the posted line.
 
 All three can also be started by hand from the **Actions** tab (**Run workflow**).
 
+## Three models, tracked side by side
+
+Since Oct 30, 2026, every morning and evening run also predicts each game with two more models and locks
+their numbers next to Model 1's, from the same night-before injury report:
+
+- **Model 1** (the original): team offense/defense strength + injury reports. **Still the only one that sends phone alerts.**
+- **Model 2** (player-based): projected minutes for tonight x each player's rating, plus what each player shows this season.
+- **Model 3** (pace x efficiency): possessions and points per possession predicted separately, then multiplied.
+
+All three are graded at the same opening and closing lines in `state/picks_log_models.csv` and on the
+**Model Comparison** sheet. Games played before Oct 31 were backfilled from earlier data only and are marked
+`backfilled`. The backtest that led to this, with results and takeaways, is in
+[`research/model_comparison/`](research/model_comparison/README.md). In short: Model 2 had the most accurate
+margins and Model 3 the most accurate totals in both test seasons; none of the three beat closing lines.
+
+If Models 2 or 3 fail in a run, the run logs why and carries on; Model 1's picks and alerts aren't affected.
+
 ## How picks are tracked
 
 **The scorecard:** every spread and total whose **opening line** differs from the locked model number by **3+ points** counts as a bet at the opening line, even if the line moved before a bet could be placed. That measures the model itself, not your timing. It's the highlighted rule on the **Summary** sheet.
@@ -58,8 +75,11 @@ Columns, and the questions the data is meant to answer, are in [`research/DATA_D
 - `nba_mixed_model.py`: the mixed model (Henderson's equations, REML variance components, walk-forward).
 - `build_report_features.py`, `parse_injury_reports.py`: official injury reports to model features.
 - `build_tracker_workbook.py`: builds `NBA_Live_Tracker.xlsx`.
+- `models_v2.py`: Models 2 and 3. `lineups.py`: projected lineups for Model 2. `models_live.py`: runs, locks and grades them each run.
+  `data/models_v2_params.json`: their fitted settings (2021-22 to 2025-26), made by `backtest_v2/fit_live_params.py`.
+  `data/last_season_minutes_2025_26.csv`, `data/team_codes.csv`: inputs for the projected lineups. `backtest_v2/`: the backtest scripts as run.
 - `data/`: training seasons with features and lines, last season's minutes and player ratings, and how often each injury status means a player sits.
-- `state/`: everything the runs build up. `picks_log.csv` holds the locked daily picks, `alerts.csv` the phone alerts, `my_bets.csv` the bets you logged, `injury_reports_2026_27.csv` every parsed report, and `model_YYYY-MM-DD.json` the saved model for today's and tomorrow's games, used by the intraday checks.
+- `state/`: everything the runs build up. `picks_log.csv` holds the locked daily picks (Model 1), `picks_log_models.csv` all three models' locked numbers and grades, `alerts.csv` the phone alerts, `my_bets.csv` the bets you logged, `injury_reports_2026_27.csv` every parsed report, and `model_YYYY-MM-DD.json` the saved model for today's and tomorrow's games, used by the intraday checks.
 
 ## How to read the results, and what to expect
 
@@ -70,5 +90,5 @@ Columns, and the questions the data is meant to answer, are in [`research/DATA_D
 
 ## Notes
 
-- Data sources: Kaggle (`eoinamoore/historical-nba-data-and-player-box-scores`) for results and minutes, official NBA injury reports (`ak-static.cms.nba.com`), and ESPN's public odds feed (DraftKings).
+- Data sources: Kaggle (`eoinamoore/historical-nba-data-and-player-box-scores`) for results, minutes, team stats and (this season) referee crews, official NBA injury reports (`ak-static.cms.nba.com`), ESPN's public odds feed (DraftKings) and, for the backtest, ESPN game summaries for past referee crews. Player ratings are EPM from Kaggle (`deocheng/nba-data-1946-2026`).
 - GitHub pauses scheduled workflows in public repos after 60 days without activity. The daily commits from these runs count as activity, so this should not happen during the season.

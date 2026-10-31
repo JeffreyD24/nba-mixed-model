@@ -18,3 +18,4 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600153,spread,2026-10-31 03:15:24.661587,2026-10-31,hou,okc,2026-10-31 20:30:00,home,-3.5,-4.5,7.48,3.98,as of 2026-10-30 23:16,True,a team has not filed its injury report,,,,,
 22600148,total,2026-10-31 12:10:24.574748,2026-10-31,cha,phi,2026-10-31 18:00:00,under,215.5,216.5,210.43,5.07,as of 2026-10-31 12:09,True,a team has not filed its injury report,,,,,
 22600148,total,2026-10-31 13:00:24.355946,2026-10-31,cha,phi,2026-10-31 18:00:00,under,215.5,216.5,208.52,6.98,2026-10-31_01_00PM,True,,,,,,
+22600152,spread,2026-10-31 14:00:23.172805,2026-10-31,sa,min,2026-10-31 20:00:00,away,-12.5,-11.5,2.95,9.55,2026-10-31_02_00PM,True,,,,,,

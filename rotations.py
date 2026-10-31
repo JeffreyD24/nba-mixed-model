@@ -28,9 +28,10 @@ def game_minutes(event_id):
         tid = tb["team"]["id"]; code = espn.ESPN2.get(tb["team"]["abbreviation"])
         st = tb["statistics"][0]; names = st["names"]
         for a in st["athletes"]:
-            aid = a["athlete"]["id"]
+            ath = a.get("athlete") or {}
+            aid = ath.get("id") or f"name:{ath.get('displayName') or ath.get('shortName')}"   # a few deep-bench entries have no ID
             mins = a["stats"][names.index("MIN")] if a.get("stats") and "MIN" in names else None
-            info[aid] = dict(team_id=tid, team=code, athlete_id=aid, player=a["athlete"]["displayName"], starter=bool(a.get("starter")),
+            info[aid] = dict(team_id=tid, team=code, athlete_id=aid, player=ath.get("displayName") or ath.get("shortName"), starter=bool(a.get("starter")),
                              box_min=float(mins) if mins not in (None, "", "--") else 0.0, dnp=bool(a.get("didNotPlay")))
         teams[tid] = code
     plays = s.get("plays", [])

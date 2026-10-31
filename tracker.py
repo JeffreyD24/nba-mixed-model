@@ -48,6 +48,33 @@ def say(*a):
 
 
 # ------------------------------------------------------------------ 1. results, box scores, schedule
+RAW = {}          # this season's Kaggle tables for Models 2 and 3 (player box scores incl. preseason, team stats, referees)
+
+
+def load_raw_for_models(g_all):
+    """keep what Models 2 and 3 need; any problem here only disables those two models"""
+    try:
+        RAW["games"] = g_all[["gameId", "hometeamId", "awayteamId", "officials"]].copy()
+        p = pd.read_csv(os.path.join(TMP, "PlayerStatistics.csv"), low_memory=False,
+                        usecols=["firstName", "lastName", "personId", "gameId", "gameDateTimeEst", "playerteamId", "home",
+                                 "numMinutes", "comment", "gameType"])
+        p["dt"] = pd.to_datetime(p.gameDateTimeEst.astype(str).str[:19], errors="coerce")
+        p = p[p.dt >= SEASON_START].copy()
+        side = RAW["games"].set_index("gameId")
+        fill = np.where(p.home == 1, p.gameId.map(side.hometeamId), p.gameId.map(side.awayteamId))
+        p["playerteamId"] = p.playerteamId.fillna(pd.Series(fill, index=p.index))
+        p["date"] = p.dt.dt.normalize()
+        p["MIN"] = pd.to_numeric(p.numMinutes, errors="coerce").fillna(0.0)
+        RAW["players"] = p.drop(columns=["numMinutes", "gameDateTimeEst"])
+        t = pd.read_csv(os.path.join(TMP, "TeamStatistics.csv"), low_memory=False,
+                        usecols=["gameId", "teamId", "gameDateTimeEst", "fieldGoalsAttempted", "reboundsOffensive",
+                                 "turnovers", "freeThrowsAttempted", "numMinutes"])
+        t["dt"] = pd.to_datetime(t.gameDateTimeEst.astype(str).str[:19], errors="coerce")
+        RAW["teams"] = t[t.dt >= SEASON_START].copy()
+    except Exception as e:
+        RAW.clear(); RAW["error"] = f"{type(e).__name__}: {e}"
+
+
 def load_season_data():
     z = os.path.join(TMP, "eoin.zip")
     r = subprocess.run(["curl", "-sL", "-m", "1200", "-o", z, "-w", "%{http_code}",
@@ -55,12 +82,14 @@ def load_season_data():
                        capture_output=True, text=True)
     if r.stdout != "200": raise RuntimeError(f"box-score download failed (HTTP {r.stdout})")
     with zipfile.ZipFile(z) as zf:
-        for f in ("Games.csv", "LeagueSchedule26_27.csv", "PlayerStatistics.csv"):
+        for f in ("Games.csv", "LeagueSchedule26_27.csv", "PlayerStatistics.csv", "TeamStatistics.csv"):
             zf.extract(f, TMP)
     os.remove(z)
     g = pd.read_csv(os.path.join(TMP, "Games.csv"), low_memory=False)
     g["dt"] = pd.to_datetime(g.gameDateTimeEst.astype(str).str[:19], errors="coerce")       # clock time is ET
+    g_all = g[g.dt >= SEASON_START].copy()
     g = g[(g.dt >= SEASON_START) & (g.gameType == "Regular Season")].copy()
+    load_raw_for_models(g_all)
     sch = pd.read_csv(os.path.join(TMP, "LeagueSchedule26_27.csv"))
     sch["dt"] = pd.to_datetime(sch.gameDateTimeEst.astype(str).str[:19], errors="coerce")
     sch = sch[sch.gameId.astype(str).str.startswith("226")]                                   # regular season
@@ -77,7 +106,8 @@ def load_season_data():
     box = pd.DataFrame({"date": p.dt.dt.normalize(), "playerid": p.personId, "player": p.firstName.fillna("") + " " + p.lastName.fillna(""),
                         "team": p.playerteamName.map(NAME2ABBR).map(GAMES2SZYM), "MIN": pd.to_numeric(p.numMinutes, errors="coerce").fillna(0),
                         "season": SEASON})
-    for f in ("Games.csv", "LeagueSchedule26_27.csv", "PlayerStatistics.csv"): os.remove(os.path.join(TMP, f))
+    for f in ("Games.csv", "LeagueSchedule26_27.csv", "PlayerStatistics.csv", "TeamStatistics.csv"):
+        if os.path.exists(os.path.join(TMP, f)): os.remove(os.path.join(TMP, f))
     played = games.dropna(subset=["home_pts"])
     say(f"Schedule: {len(games)} regular-season games; {len(played)} finished, results through {played.date.max().date() if len(played) else 'none'}.")
     return games, box
@@ -366,6 +396,29 @@ def grade_jumps(games, logdf):
     if len(g): say(f"Line jumps graded: {len(g)}; the final result matched the jump's direction {int((g.result_matched_move == 'yes').sum())} times.")
 
 
+# ------------------------------------------------------------------ Models 2 and 3 (tracked beside Model 1)
+def run_models_2_and_3(games, reports_path, logdf):
+    """Predict with Models 2 and 3, lock, and grade them against the same lines as Model 1.
+    Any failure is logged and skipped, so Model 1's picks and alerts are never affected."""
+    if "error" in RAW or not RAW:
+        say(f"Models 2 and 3 skipped: season tables not loaded ({RAW.get('error', 'missing')})."); return None
+    try:
+        import models_live
+        g = games[(games.date == TARGET) | ((games.date < TARGET) & games.home_pts.notna())].copy()
+        preds = models_live.predict(W, g, RAW, reports_path, SEASON, TARGET)
+        L = models_live.lock_and_grade(W, STATE, preds, logdf, now_et(), TARGET, say=say)
+        S = models_live.summary_table(L)
+        for r in S.to_dict("records"):
+            say(f"  Model {r['Model']}: {r['Games graded']} games graded; at the opening line, edge 3+: "
+                f"spreads {r['Open spread 3+ W-L']}, totals {r['Open total 3+ W-L']}.")
+        return L
+    except Exception as e:
+        import traceback
+        say(f"Models 2 and 3 skipped this run ({type(e).__name__}: {e}).")
+        print(traceback.format_exc(), flush=True)
+        return None
+
+
 # ------------------------------------------------------------------ main
 def main():
     say(f"NBA tracker run on {TODAY.date()} (ET), predicting games on {TARGET.date()}.")
@@ -380,6 +433,7 @@ def main():
     played = games.dropna(subset=["home_pts"])
     logdf = lock_picks(g, str(played.date.max().date()) if len(played) else "none")
     logdf = attach_lines_and_grade(logdf, games)
+    L_models = run_models_2_and_3(games, rp, logdf)
     grade_alerts(games)
     grade_my_bets(games, logdf)
     grade_jumps(games, logdf)
@@ -395,6 +449,12 @@ def main():
               open(os.path.join(STATE, "last_run.json"), "w"), indent=1)
     import build_tracker_workbook
     build_tracker_workbook.build(os.path.join(STATE, "picks_log.csv"), os.path.join(W, "NBA_Live_Tracker.xlsx"), RULE, log)
+    if L_models is not None:
+        try:
+            import models_live
+            models_live.add_sheet(os.path.join(W, "NBA_Live_Tracker.xlsx"), L_models)
+        except Exception as e:
+            say(f"Model Comparison sheet skipped ({type(e).__name__}: {e}).")
     say("Done.")
 
 

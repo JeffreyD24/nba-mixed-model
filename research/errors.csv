@@ -116,3 +116,8 @@ at_et,part,error
 2026-10-31 01:05,props 22600149 page 1,HTTPError: HTTP Error 404: Not Found
 2026-10-31 01:05,props 22600152 page 1,HTTPError: HTTP Error 404: Not Found
 2026-10-31 01:05,props 22600153 page 1,HTTPError: HTTP Error 404: Not Found
+2026-10-31 01:10,minutes 401909285,ValueError: could not convert string to float: '-'
+2026-10-31 01:10,props 22600148 page 1,HTTPError: HTTP Error 404: Not Found
+2026-10-31 01:10,props 22600149 page 1,HTTPError: HTTP Error 404: Not Found
+2026-10-31 01:10,props 22600152 page 1,HTTPError: HTTP Error 404: Not Found
+2026-10-31 01:10,props 22600153 page 1,HTTPError: HTTP Error 404: Not Found

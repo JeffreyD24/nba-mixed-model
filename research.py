@@ -443,3 +443,21 @@ def timeline_snapshot(now, days_ahead=2):
                              ["home_spread", "home_spread_odds", "away_spread_odds", "total", "over_odds", "under_odds",
                               "home_ml", "away_ml"])
     return n
+
+
+def started_rows(now, day, games, minutes=45):
+    """games that tipped within the last `minutes`: ESPN still shows DraftKings' final pre-game props for them
+    (its copy lags up to ~12 minutes), so reading them now captures the closing prop lines"""
+    sb = espn._get(f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={pd.Timestamp(day):%Y%m%d}")
+    ids = {(g["home"], g["away"]): g for g in games}
+    rows = []
+    for ev in sb.get("events", []):
+        comp = ev["competitions"][0]
+        if comp.get("status", {}).get("type", {}).get("state") != "in": continue
+        side = {c["homeAway"]: espn.ESPN2.get(c["team"]["abbreviation"]) for c in comp["competitors"]}
+        g = ids.get((side.get("home"), side.get("away")))
+        if g is None: continue
+        tip = pd.Timestamp(g["tip_et"])
+        if pd.Timedelta(0) <= now - tip <= pd.Timedelta(minutes=minutes):
+            rows.append(dict(game_id=g["game_id"], date=str(pd.Timestamp(day).date()), espn_event_id=ev["id"]))
+    return rows

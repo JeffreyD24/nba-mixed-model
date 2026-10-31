@@ -5691,3 +5691,59 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 09:05,22600147,2026-10-31,"Total Points, Rebounds, and Assists",4431736,Toumani Camara,,19.5,-108.0,19.5,-112.0,2026-10-31T05:42Z,under
 2026-10-31 09:05,22600147,2026-10-31,"Total Points, Rebounds, and Assists",4683678,Scoot Henderson,,20.5,-122.0,21.5,-115.0,2026-10-31T15:28Z,over
 2026-10-31 09:05,22600147,2026-10-31,"Total Points, Rebounds, and Assists",4683678,Scoot Henderson,,20.5,-108.0,21.5,-115.0,2026-10-31T15:28Z,under
+2026-10-31 09:10,22600151,2026-10-31,Total Points,4432158,Evan Mobley,,17.5,-123.0,17.5,-116.0,2026-10-31T10:59Z,over
+2026-10-31 09:10,22600151,2026-10-31,Total Points,4432158,Evan Mobley,,17.5,-104.0,17.5,-109.0,2026-10-31T10:59Z,under
+2026-10-31 09:10,22600151,2026-10-31,Total 3-Point Field Goals,4576087,Peyton Watson,,1.5,130.0,1.5,142.0,2026-10-31T07:12Z,over
+2026-10-31 09:10,22600151,2026-10-31,Total 3-Point Field Goals,4576087,Peyton Watson,,1.5,-172.0,1.5,-188.0,2026-10-31T07:12Z,under
+2026-10-31 09:10,22600151,2026-10-31,Total Points and Assists,3908809,Donovan Mitchell,,29.5,-125.0,29.5,-116.0,2026-10-31T16:06Z,over
+2026-10-31 09:10,22600151,2026-10-31,Total Points and Assists,3908809,Donovan Mitchell,,29.5,-106.0,29.5,-114.0,2026-10-31T16:06Z,under
+2026-10-31 09:10,22600151,2026-10-31,Total Points and Assists,4432158,Evan Mobley,,21.5,-121.0,21.5,-115.0,2026-10-31T10:34Z,over
+2026-10-31 09:10,22600151,2026-10-31,Total Points and Assists,4432158,Evan Mobley,,21.5,-109.0,21.5,-115.0,2026-10-31T10:34Z,under
+2026-10-31 09:10,22600151,2026-10-31,Total Points and Rebounds,4432158,Evan Mobley,,27.5,-113.0,27.5,-104.0,2026-10-31T07:08Z,over
+2026-10-31 09:10,22600151,2026-10-31,Total Points and Rebounds,4432158,Evan Mobley,,27.5,-117.0,27.5,-126.0,2026-10-31T07:08Z,under
+2026-10-31 09:10,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4066328,Jarrett Allen,,24.5,-126.0,25.5,-116.0,2026-10-31T16:06Z,over
+2026-10-31 09:10,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4066328,Jarrett Allen,,24.5,-105.0,25.5,-113.0,2026-10-31T16:06Z,under
+2026-10-31 09:10,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4066757,Sam Merrill,,13.5,-124.0,14.5,-110.0,2026-10-31T10:58Z,over
+2026-10-31 09:10,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4066757,Sam Merrill,,13.5,-106.0,14.5,-120.0,2026-10-31T10:58Z,under
+2026-10-31 09:10,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4432158,Evan Mobley,,31.5,-110.0,30.5,-122.0,2026-10-31T14:19Z,over
+2026-10-31 09:10,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4432158,Evan Mobley,,31.5,-120.0,30.5,-108.0,2026-10-31T14:19Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4222252,Isaiah Hartenstein,,9.5,-125.0,9.5,-131.0,2026-10-31T11:22Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4222252,Isaiah Hartenstein,,9.5,-102.0,9.5,103.0,2026-10-31T11:22Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4278073,Shai Gilgeous-Alexander,,29.5,-119.0,30.5,-111.0,2026-10-31T15:57Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4278073,Shai Gilgeous-Alexander,,29.5,-107.0,30.5,-114.0,2026-10-31T15:57Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4432639,Jabari Smith Jr.,,14.5,-121.0,15.5,-103.0,2026-10-31T12:13Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4432639,Jabari Smith Jr.,,14.5,-105.0,15.5,-123.0,2026-10-31T12:13Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4900671,Ajay Mitchell,,18.5,-124.0,18.5,-115.0,2026-10-31T11:22Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points,4900671,Ajay Mitchell,,18.5,-102.0,18.5,-111.0,2026-10-31T11:22Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points,5174983,Aday Mara,,7.5,-127.0,7.5,-137.0,2026-10-31T11:23Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points,5174983,Aday Mara,,7.5,100.0,7.5,107.0,2026-10-31T11:23Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Rebounds,3202,Kevin Durant,,4.5,-158.0,5.5,121.0,2026-10-31T10:42Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Rebounds,3202,Kevin Durant,,4.5,120.0,5.5,-160.0,2026-10-31T10:42Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Rebounds,4432639,Jabari Smith Jr.,,5.5,-143.0,5.5,-134.0,2026-10-31T10:37Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Rebounds,4432639,Jabari Smith Jr.,,5.5,108.0,5.5,102.0,2026-10-31T10:37Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4222252,Isaiah Hartenstein,,12.5,-129.0,13.5,-103.0,2026-10-31T12:08Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4222252,Isaiah Hartenstein,,12.5,-102.0,13.5,-127.0,2026-10-31T12:08Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4278073,Shai Gilgeous-Alexander,,35.5,-120.0,36.5,-113.0,2026-10-31T15:57Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4278073,Shai Gilgeous-Alexander,,35.5,-110.0,36.5,-117.0,2026-10-31T15:57Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4871144,Alperen Sengun,,24.5,-123.0,24.5,-123.0,2026-10-31T15:55Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4871144,Alperen Sengun,,24.5,-107.0,24.5,-107.0,2026-10-31T15:55Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4900671,Ajay Mitchell,,23.5,-111.0,23.5,-108.0,2026-10-31T11:58Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Assists,4900671,Ajay Mitchell,,23.5,-118.0,23.5,-122.0,2026-10-31T11:58Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,3133626,Kenrich Williams,,11.5,-115.0,12.5,-108.0,2026-10-31T12:09Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,3133626,Kenrich Williams,,11.5,-115.0,12.5,-121.0,2026-10-31T12:09Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4278073,Shai Gilgeous-Alexander,,34.5,-112.0,35.5,-109.0,2026-10-31T15:52Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4278073,Shai Gilgeous-Alexander,,34.5,-117.0,35.5,-120.0,2026-10-31T15:52Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4432639,Jabari Smith Jr.,,21.5,-104.0,21.5,-105.0,2026-10-31T15:55Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4432639,Jabari Smith Jr.,,21.5,-127.0,21.5,-125.0,2026-10-31T15:55Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4871144,Alperen Sengun,,27.5,-125.0,27.5,-124.0,2026-10-31T15:55Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4871144,Alperen Sengun,,27.5,-105.0,27.5,-106.0,2026-10-31T15:55Z,under
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4900671,Ajay Mitchell,,23.5,-105.0,22.5,-122.0,2026-10-31T15:57Z,over
+2026-10-31 09:10,22600153,2026-10-31,Total Points and Rebounds,4900671,Ajay Mitchell,,23.5,-125.0,22.5,-108.0,2026-10-31T15:57Z,under
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4278073,Shai Gilgeous-Alexander,,40.5,-111.0,40.5,-124.0,2026-10-31T15:52Z,over
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4278073,Shai Gilgeous-Alexander,,40.5,-119.0,40.5,-106.0,2026-10-31T15:52Z,under
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4683778,Jared McCain,,20.5,-113.0,20.5,-114.0,2026-10-31T11:58Z,over
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4683778,Jared McCain,,20.5,-116.0,20.5,-115.0,2026-10-31T11:58Z,under
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4684740,Amen Thompson,,28.5,-111.0,28.5,-116.0,2026-10-31T10:45Z,over
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4684740,Amen Thompson,,28.5,-119.0,28.5,-113.0,2026-10-31T10:45Z,under
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4900671,Ajay Mitchell,,27.5,-113.0,27.5,-109.0,2026-10-31T11:58Z,over
+2026-10-31 09:10,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4900671,Ajay Mitchell,,27.5,-117.0,27.5,-121.0,2026-10-31T11:58Z,under

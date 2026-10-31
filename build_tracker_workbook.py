@@ -87,6 +87,18 @@ def clv_line(df, A, MB):
             ". Consistently positive closing line value is the strongest early sign of a real edge, more reliable than a short win-loss record.")
 
 
+def timing_line(T):
+    if not len(T):
+        return ("Bet timing: nothing graded yet. Each finished game is graded at the opening line, 15 and 30 minutes and 1, 2, 4 and 8 hours "
+                "after it, and 3 hours, 1 hour and 30 minutes before tip, plus the close (Bet Timing sheet).")
+    import timing
+    S = timing.summary(T); k = S[S.kept_bets > 0]
+    if not len(k): return "Bet timing: no opening-line edges of 3+ graded yet."
+    part = "; ".join(f"{r.time_point} {r.kept_W}-{r.kept_L} ({r.kept_units:+.1f} u)" for r in k.itertuples() if r.time_point in ("open", "open+30m", "open+2h", "tip-1h", "close"))
+    return ("Bet timing, same bet placed later (opening edge 3+): " + part + ". The point where this turns from profit to loss is "
+            "how long you have to place a bet after an alert. It needs a few hundred bets before it means much.")
+
+
 def jump_line(J):
     if not len(J):
         return "Line jumps (moves of 1.5+ pts within an hour): none logged yet. This builds a database of how lines react to news."
@@ -150,6 +162,27 @@ def build(log_csv, out_xlsx, rule, run_log):
         lj.append(vals)
     for k in range(1, len(jcols) + 1): lj.column_dimensions[CL(k)].width = 12
     lj.column_dimensions["T"].width = 80; lj.freeze_panes = "A2"
+
+    # ---- bet timing: the model at the open vs. later lines
+    tpath = os.path.join(os.path.dirname(log_csv), "bet_timing.csv")
+    TT = pd.read_csv(tpath) if os.path.exists(tpath) else pd.DataFrame()
+    import timing
+    TS = timing.summary(TT) if len(TT) else pd.DataFrame()
+    bt = wb.create_sheet("Bet Timing")
+    bcols = [("Time point", "time_point"), ("Game-markets", "games"), ("Avg move from open (pts)", "avg_move_from_open"),
+             ("Same bet later: bets", "kept_bets"), ("W", "kept_W"), ("L", "kept_L"), ("Win %", "kept_win_pct"),
+             ("Units", "kept_units"), ("Avg edge left (pts)", "kept_avg_edge_left"),
+             ("Fresh 3+ edge: bets", "fresh_bets"), ("W", "fresh_W"), ("L", "fresh_L"), ("Win %", "fresh_win_pct"), ("Units", "fresh_units")]
+    bt.cell(1, 1, "How the model does if you bet at different times. 'Same bet later' = the side the model liked at the opening line "
+                  "(edge 3+), bet at that time's line and price. 'Fresh 3+ edge' = a bet only if the model is still 3+ points off then. "
+                  "Units = profit per 1 unit risked at DraftKings' price (-110 when the price wasn't recorded). Break-even is 52.4% at -110.")
+    bt.cell(1, 1).alignment = Alignment(wrap_text=True, vertical="top"); bt.row_dimensions[1].height = 45
+    for k, (t, _) in enumerate(bcols): hdr(bt, 2, k + 1, t)
+    bt.row_dimensions[2].height = 30
+    for r in TS.to_dict("records"):
+        bt.append([None if (isinstance(r.get(c), float) and np.isnan(r.get(c))) else r.get(c) for _, c in bcols])
+    for k in range(1, len(bcols) + 1): bt.column_dimensions[CL(k)].width = 13
+    bt.column_dimensions["A"].width = 14; bt.freeze_panes = "A3"
 
     # ---- the user's own logged bets
     bpath = os.path.join(os.path.dirname(log_csv), "my_bets.csv")
@@ -265,6 +298,7 @@ def build(log_csv, out_xlsx, rule, run_log):
         ("t", my_line),
         ("t", jump_line(JJ)),
         ("t", clv_line(df, A, MB)),
+        ("t", timing_line(TT)),
         ("h", "My note and advice"),
         ("t", adv),
         ("t", "Reminders: the opening line logged here is the sportsbook's first posted number, which usually has low limits and moves quickly, so real results would be somewhat worse. The model has never beaten closing lines in any backtest; the closing-line rows are there as a reality check."),

@@ -495,3 +495,17 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 00:25,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4591725,Ryan Rollins,,24.5,-122.0,24.5,-123.0,2026-10-31T06:42Z,under
 2026-10-31 00:25,22600151,2026-10-31,"Total Points, Rebounds, and Assists",5214640,Kasparas Jakucionis,,14.5,-112.0,14.5,-115.0,2026-10-31T06:59Z,over
 2026-10-31 00:25,22600151,2026-10-31,"Total Points, Rebounds, and Assists",5214640,Kasparas Jakucionis,,14.5,-117.0,14.5,-115.0,2026-10-31T06:59Z,under
+2026-10-31 00:35,22600147,2026-10-31,Total Assists,4431736,Toumani Camara,,1.5,-162.0,1.5,-195.0,2026-10-31T05:41Z,over
+2026-10-31 00:35,22600147,2026-10-31,Total Assists,4431736,Toumani Camara,,1.5,123.0,1.5,147.0,2026-10-31T05:41Z,under
+2026-10-31 00:35,22600147,2026-10-31,Total Rebounds,4683021,Deni Avdija,,7.5,105.0,7.5,108.0,2026-10-31T05:38Z,over
+2026-10-31 00:35,22600147,2026-10-31,Total Rebounds,4683021,Deni Avdija,,7.5,-138.0,7.5,-143.0,2026-10-31T05:38Z,under
+2026-10-31 00:35,22600147,2026-10-31,Total 3-Point Field Goals,4683021,Deni Avdija,,1.5,-193.0,1.5,-180.0,2026-10-31T06:48Z,over
+2026-10-31 00:35,22600147,2026-10-31,Total 3-Point Field Goals,4683021,Deni Avdija,,1.5,145.0,1.5,136.0,2026-10-31T06:48Z,under
+2026-10-31 00:35,22600147,2026-10-31,Total Points and Assists,3995,Jrue Holiday,,19.5,-102.0,19.5,-104.0,2026-10-31T06:48Z,over
+2026-10-31 00:35,22600147,2026-10-31,Total Points and Assists,3995,Jrue Holiday,,19.5,-129.0,19.5,-126.0,2026-10-31T06:48Z,under
+2026-10-31 00:35,22600147,2026-10-31,Total Points and Rebounds,6606,Damian Lillard,,26.5,-123.0,27.5,-106.0,2026-10-31T07:28Z,over
+2026-10-31 00:35,22600147,2026-10-31,Total Points and Rebounds,6606,Damian Lillard,,26.5,-107.0,27.5,-125.0,2026-10-31T07:28Z,under
+2026-10-31 00:35,22600147,2026-10-31,Total Assists and Rebounds,4431736,Toumani Camara,,6.5,-116.0,6.5,-131.0,2026-10-31T05:42Z,over
+2026-10-31 00:35,22600147,2026-10-31,Total Assists and Rebounds,4431736,Toumani Camara,,6.5,-114.0,6.5,-101.0,2026-10-31T05:42Z,under
+2026-10-31 00:35,22600147,2026-10-31,Total Assists and Rebounds,4683021,Deni Avdija,,14.5,102.0,14.5,103.0,2026-10-31T05:46Z,over
+2026-10-31 00:35,22600147,2026-10-31,Total Assists and Rebounds,4683021,Deni Avdija,,14.5,-134.0,14.5,-136.0,2026-10-31T05:46Z,under

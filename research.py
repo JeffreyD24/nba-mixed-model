@@ -155,10 +155,8 @@ AN_BOOKS = {15: "Consensus", 30: "Open", 68: "DraftKings", 69: "FanDuel", 71: "B
 
 
 def _an_get(url):
-    import urllib.request
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read())
+    import actionnet
+    return actionnet._get(url)
 
 
 def splits_snapshot(now, day, games):

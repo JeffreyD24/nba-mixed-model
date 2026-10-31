@@ -2864,3 +2864,17 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 05:15,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4278073,Shai Gilgeous-Alexander,,40.5,-114.0,40.5,-106.0,2026-10-31T11:58Z,under
 2026-10-31 05:15,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4871144,Alperen Sengun,,33.5,-116.0,33.5,-116.0,2026-10-31T10:45Z,over
 2026-10-31 05:15,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4871144,Alperen Sengun,,33.5,-113.0,33.5,-113.0,2026-10-31T10:45Z,under
+2026-10-31 05:25,22600149,2026-10-31,Total Points,2490149,CJ McCollum,,16.5,-109.0,16.5,-106.0,2026-10-31T08:51Z,over
+2026-10-31 05:25,22600149,2026-10-31,Total Points,2490149,CJ McCollum,,16.5,-117.0,16.5,-121.0,2026-10-31T08:51Z,under
+2026-10-31 05:25,22600149,2026-10-31,Total Assists,4395628,Zion Williamson,,2.5,-138.0,2.5,-113.0,2026-10-31T10:22Z,over
+2026-10-31 05:25,22600149,2026-10-31,Total Assists,4395628,Zion Williamson,,2.5,105.0,2.5,-116.0,2026-10-31T10:22Z,under
+2026-10-31 05:25,22600149,2026-10-31,Total Points and Assists,4395628,Zion Williamson,,25.5,-125.0,25.5,-117.0,2026-10-31T10:56Z,over
+2026-10-31 05:25,22600149,2026-10-31,Total Points and Assists,4395628,Zion Williamson,,25.5,-106.0,25.5,-112.0,2026-10-31T10:56Z,under
+2026-10-31 05:25,22600149,2026-10-31,Total Points and Assists,4397688,Trey Murphy III,,19.5,-116.0,19.5,-114.0,2026-10-31T10:56Z,over
+2026-10-31 05:25,22600149,2026-10-31,Total Points and Assists,4397688,Trey Murphy III,,19.5,-114.0,19.5,-115.0,2026-10-31T10:56Z,under
+2026-10-31 05:25,22600149,2026-10-31,Total Assists and Rebounds,3907497,Dejounte Murray,,11.5,-129.0,11.5,-128.0,2026-10-31T10:56Z,over
+2026-10-31 05:25,22600149,2026-10-31,Total Assists and Rebounds,3907497,Dejounte Murray,,11.5,-102.0,11.5,-103.0,2026-10-31T10:56Z,under
+2026-10-31 05:25,22600149,2026-10-31,Total Assists and Rebounds,4395628,Zion Williamson,,8.5,105.0,7.5,-134.0,2026-10-31T12:11Z,over
+2026-10-31 05:25,22600149,2026-10-31,Total Assists and Rebounds,4395628,Zion Williamson,,8.5,-139.0,7.5,101.0,2026-10-31T12:11Z,under
+2026-10-31 05:25,22600149,2026-10-31,"Total Points, Rebounds, and Assists",4395628,Zion Williamson,,31.5,-114.0,31.5,-107.0,2026-10-31T10:56Z,over
+2026-10-31 05:25,22600149,2026-10-31,"Total Points, Rebounds, and Assists",4395628,Zion Williamson,,31.5,-116.0,31.5,-123.0,2026-10-31T10:56Z,under

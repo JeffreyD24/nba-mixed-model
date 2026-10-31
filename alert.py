@@ -122,7 +122,7 @@ def main():
     bpath = os.path.join(STATE, "my_bets.csv")
     MYB = pd.read_csv(bpath) if os.path.exists(bpath) else pd.DataFrame(columns=["date", "home", "away", "market"])
 
-    def bets_note(date, home, away, market):
+    def bets_note(date, home, away, market, want=None):
         """('same market' text, 'other market' text) for bets already logged on this game"""
         if not len(MYB): return "", ""
         x = MYB[(MYB.date.astype(str) == str(date)) & (MYB.home == home) & (MYB.away == away)]
@@ -133,9 +133,15 @@ def main():
             book = f", {r.book}" if isinstance(r.book, str) and r.book else ""
             st = float(r.stake); stake = f"${st:.0f}" if st == int(st) else f"${st:.2f}"
             return f"{what} ({float(r.odds):+g}, {stake}{book}, logged {when})"
-        same = "; ".join(desc(r) for r in x[x.market == market].itertuples())
-        other = "; ".join(desc(r) for r in x[x.market != market].itertuples())
-        return same, other
+        sm = x[x.market == market]
+        if want is not None:            # bets on the same market but the OTHER side are reported separately
+            opp = sm[sm.pick.astype(str).str.lower() != str(want).lower()]
+            sm = sm[sm.pick.astype(str).str.lower() == str(want).lower()]
+        else:
+            opp = sm.iloc[:0]
+        return ("; ".join(desc(r) for r in sm.itertuples()),
+                "; ".join(desc(r) for r in x[x.market != market].itertuples()) +
+                (("; " if (x.market != market).any() else "") + "OTHER SIDE: " + "; ".join(desc(r) for r in opp.itertuples()) if len(opp) else ""))
 
     def caution_before(gid, market):
         """the caution alert sent earlier for this game and market, if any"""
@@ -359,10 +365,11 @@ def main():
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
                                  f"\nInjury report: {used}. Caution alerts so far: {crec}." + pending_text(SW, g) + hist_txt + news_for(g))
-                        same, other = bets_note(M["date"], g["home"], g["away"], market)
+                        same, other = bets_note(M["date"], g["home"], g["away"], market, (g[side] if market == "spread" else side))
                         ctitle = "CAUTION - " + title
                         if same: cbody = f"ALREADY BET: you logged {same}.\n" + cbody; ctitle = "ALREADY BET - " + ctitle
                         if other: cbody += f"\nYour other bet on this game: {other}."
+                        if "OTHER SIDE" in other: ctitle = "YOU BET THE OTHER SIDE - " + ctitle
                         rec_row["sent"] = notify(ctitle, cbody, priority="default", tags="warning,basketball", link=link, dk=dk)
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
@@ -382,12 +389,13 @@ def main():
                     why = (f"UPDATE to the CAUTION alert at {t0}: {cleared} ({used}). Edge now {abs(e):.1f} pts "
                            f"(was {float(cb.edge):.1f} at {float(cb.line):g}).\n")
                     title = "UPDATE - " + title
-                same, other = bets_note(M["date"], g["home"], g["away"], market)
+                same, other = bets_note(M["date"], g["home"], g["away"], market, (g[side] if market == "spread" else side))
                 if same:
                     why = f"ALREADY BET: you logged {same}. Only add to it if you mean to.\n" + why
                     title = "ALREADY BET - " + title; prio = "default"
                 if other:
                     body += f"\nYour other bet on this game: {other}."
+                if "OTHER SIDE" in other: title = "YOU BET THE OTHER SIDE - " + title
                 body = why + body
                 rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk)
                 new.append(rec_row); done.add((g["game_id"], market))

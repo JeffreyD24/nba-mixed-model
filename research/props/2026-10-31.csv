@@ -4186,3 +4186,7 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 07:50,22600152,2026-10-31,"Total Points, Rebounds, and Assists",4066259,De'Aaron Fox,,24.5,-108.0,24.5,-112.0,2026-10-31T10:33Z,under
 2026-10-31 07:50,22600152,2026-10-31,"Total Points, Rebounds, and Assists",4592492,Bones Hyland,,12.5,-116.0,12.5,-116.0,2026-10-31T10:23Z,over
 2026-10-31 07:50,22600152,2026-10-31,"Total Points, Rebounds, and Assists",4592492,Bones Hyland,,12.5,-113.0,12.5,-114.0,2026-10-31T10:23Z,under
+2026-10-31 07:55,22600148,2026-10-31,Total Points,4396971,Naz Reid,,17.5,-125.0,17.5,-123.0,2026-10-31T14:40Z,over
+2026-10-31 07:55,22600148,2026-10-31,Total Points,4396971,Naz Reid,,17.5,-102.0,17.5,-103.0,2026-10-31T14:40Z,under
+2026-10-31 07:55,22600148,2026-10-31,Total 3-Point Field Goals,4396971,Naz Reid,,2.5,-109.0,2.5,-107.0,2026-10-31T10:15Z,over
+2026-10-31 07:55,22600148,2026-10-31,Total 3-Point Field Goals,4396971,Naz Reid,,2.5,-120.0,2.5,-123.0,2026-10-31T10:15Z,under

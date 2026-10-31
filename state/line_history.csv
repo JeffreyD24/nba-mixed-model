@@ -77,3 +77,15 @@ game_id,market,seen_at_et,line,open_line,source
 22600023,spread,2026-10-30 21:55,3.5,1.5,actionnetwork
 22600023,spread,2026-10-30 22:05,2.5,1.5,actionnetwork
 22600024,spread,2026-10-30 22:05,4.5,2.5,actionnetwork
+22600148,spread,2026-10-30 23:20,1.5,1.5,actionnetwork
+22600148,total,2026-10-30 23:20,216.5,216.5,actionnetwork
+22600150,spread,2026-10-30 23:20,-10.5,-10.5,actionnetwork
+22600150,total,2026-10-30 23:20,233.5,234.5,actionnetwork
+22600151,spread,2026-10-30 23:20,9.5,9.5,actionnetwork
+22600151,total,2026-10-30 23:20,236.5,236.5,actionnetwork
+22600149,spread,2026-10-30 23:20,4.5,3.5,actionnetwork
+22600149,total,2026-10-30 23:20,239.5,239.5,actionnetwork
+22600152,spread,2026-10-30 23:20,-11.5,-11.5,actionnetwork
+22600152,total,2026-10-30 23:20,227.5,227.5,actionnetwork
+22600147,spread,2026-10-30 23:20,6.5,6.5,actionnetwork
+22600147,total,2026-10-30 23:20,231.5,232.5,actionnetwork

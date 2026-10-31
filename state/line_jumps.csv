@@ -1,6 +1,6 @@
 game_id,market,detected_at_et,date,away,home,from_line,to_line,move,steady_since,move_started,move_seen,minutes,hours_to_tip,model,direction,news_in_window,news_count,alerted,closing_line,kept_moving_to_close,result_matched_move
-22600018,spread,2026-10-30 16:20,2026-10-30,ny,phi,1.5,3.5,2.0,2026-10-30 13:20,2026-10-30 15:35,2026-10-30 16:20,45.0,3.2,1.3,away from model,,0.0,False,,,
-22600018,total,2026-10-30 16:35,2026-10-30,ny,phi,227.5,225.5,-2.0,2026-10-30 15:35,2026-10-30 16:20,2026-10-30 16:35,15.0,2.9,221.6,toward model,PHI 4:23 PM: Brown (knee) is doubtful for Friday's game against the Knicks.,1.0,False,,,
+22600018,spread,2026-10-30 16:20,2026-10-30,ny,phi,1.5,3.5,2.0,2026-10-30 13:20,2026-10-30 15:35,2026-10-30 16:20,45.0,3.2,1.3,away from model,,0.0,False,3.5,same,no
+22600018,total,2026-10-30 16:35,2026-10-30,ny,phi,227.5,225.5,-2.0,2026-10-30 15:35,2026-10-30 16:20,2026-10-30 16:35,15.0,2.9,221.6,toward model,PHI 4:23 PM: Brown (knee) is doubtful for Friday's game against the Knicks.,1.0,False,224.5,yes,yes
 22600151,total,2026-10-31 00:10,2026-10-31,cle,mil,236.5,238.5,2.0,2026-10-30 23:20,2026-10-30 23:20,2026-10-31 00:10,50.0,19.8,234.6,away from model,,0.0,False,,,
 22600149,total,2026-10-31 02:55,2026-10-31,atl,no,239.5,241.5,2.0,2026-10-30 23:20,2026-10-31 02:55,2026-10-31 02:55,0.0,16.1,238.8,away from model,,0.0,False,,,
 22600150,total,2026-10-31 08:15,2026-10-31,sac,mem,233.5,231.5,-2.0,2026-10-31 06:35,2026-10-31 08:15,2026-10-31 08:15,0.0,11.8,231.1,toward model,,0.0,False,,,

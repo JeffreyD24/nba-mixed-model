@@ -1,8 +1,8 @@
 logged_at_et,issue,date,away,home,market,pick,line,odds,stake,book,notes,result,profit,model_number,model_edge_at_your_line,closing_line_your_side,clv_points
-2026-10-30 12:14:19,1,2026-10-30,orl,tor,total,under,226.5,-105.0,5.0,FanDuel,,,,222.7,3.8,,
-2026-10-30 12:30:37,2,2026-10-30,den,phx,spread,phx,4.5,-112.0,5.0,FanDuel,,,,-1.4,3.1,,
-2026-10-30 13:19:28,3,2026-10-30,ny,phi,total,under,227.5,-110.0,5.0,FanDuel,,,,221.6,5.9,,
-2026-10-30 15:41:31,4,2026-10-30,lac,min,spread,lac,7.5,-118.0,5.0,DraftKings,,,,-4.3,3.2,,
-2026-10-31 10:49:57,5,2026-10-31,okc,hou,spread,hou,-3.5,-110.0,2.5,DraftKings,,,,,,,
-2026-10-31 10:50:38,6,2026-10-31,cle,mil,spread,mil,9.5,-110.0,2.5,DraftKings,,,,,,,
-2026-10-31 10:51:18,7,2026-10-31,por,utah,total,over,231.5,-110.0,2.5,DraftKings,,,,,,,
+2026-10-30 12:14:19,1,2026-10-30,orl,tor,total,under,226.5,-105.0,5.0,FanDuel,,L,-5.0,222.7,3.8,226.5,0.0
+2026-10-30 12:30:37,2,2026-10-30,den,phx,spread,phx,4.5,-112.0,5.0,FanDuel,,L,-5.0,-1.4,3.1,4.5,0.0
+2026-10-30 13:19:28,3,2026-10-30,ny,phi,total,under,227.5,-110.0,5.0,FanDuel,,W,4.55,221.6,5.9,224.5,3.0
+2026-10-30 15:41:31,4,2026-10-30,lac,min,spread,lac,7.5,-118.0,5.0,DraftKings,,L,-5.0,-4.3,3.2,6.5,1.0
+2026-10-31 10:49:57,5,2026-10-31,okc,hou,spread,hou,-3.5,-110.0,2.5,DraftKings,,,,7.5,4.0,,
+2026-10-31 10:50:38,6,2026-10-31,cle,mil,spread,mil,9.5,-110.0,2.5,DraftKings,,,,-6.0,3.5,,
+2026-10-31 10:51:18,7,2026-10-31,por,utah,total,over,231.5,-110.0,2.5,DraftKings,,,,237.5,6.0,,

@@ -2,7 +2,18 @@
 
 Captures in-game lines and scores about every **30 seconds** (GitHub's checks only manage every 5 minutes).
 
-**To run on a game night:** double-click **`Start_Live_Capture.bat`** any time before or during the games.
+**Easiest: run it automatically every night.** Double-click **`Install_Nightly_Capture.bat`** once. It creates a Windows
+scheduled task ("NBA live line capture") that starts the capture at 6:45 PM every day, wakes the laptop if it's asleep, and
+stops when the night's games are final. `Remove_Nightly_Capture.bat` undoes it.
+
+**For it to keep running all night** (Oct 30 stopped at 10:01 PM, most likely because the laptop went to sleep):
+- Keep the laptop **plugged in**.
+- Settings → System → Power & battery → **Screen and sleep**: set "When plugged in, put my device to sleep after" to **Never**.
+- Control Panel → Hardware and Sound → Power Options → **Choose what closing the lid does**: "When I close the lid" (Plugged in)
+  → **Do nothing**. Otherwise closing the lid sleeps the laptop no matter what the script asks.
+- The screen can turn off; that's fine.
+
+**To run it by hand instead:** double-click **`Start_Live_Capture.bat`** any time before or during the games.
 A window opens and prints a line every 30 seconds. Leave it open. It keeps the computer awake while it runs,
 stops by itself when every game is final (or after 3 AM), and you can close the window any time to stop.
 

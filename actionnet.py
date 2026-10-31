@@ -6,10 +6,17 @@ import espn
 DK = 68   # Action Network's DraftKings book id
 
 
-def _get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return json.loads(r.read())
+def _get(url, tries=3):
+    """fetch JSON, retrying a dropped connection twice (a few seconds apart)"""
+    import time
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return json.loads(r.read())
+        except Exception:
+            if i == tries - 1: raise
+            time.sleep(3 * (i + 1))
 
 
 def _num(x):

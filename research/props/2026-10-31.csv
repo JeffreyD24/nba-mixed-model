@@ -5412,3 +5412,32 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 08:45,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5112087,Jaylen Wells,,16.5,-103.0,16.5,-109.0,2026-10-31T15:34Z,under
 2026-10-31 08:45,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,33.5,-107.0,31.5,-109.0,2026-10-31T15:45Z,over
 2026-10-31 08:45,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,33.5,-123.0,31.5,-121.0,2026-10-31T15:45Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Points,6606,Damian Lillard,,22.5,-123.0,22.5,-115.0,2026-10-31T15:26Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Points,6606,Damian Lillard,,22.5,-103.0,22.5,-111.0,2026-10-31T15:26Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Points,4066336,Lauri Markkanen,,21.5,-109.0,22.5,-112.0,2026-10-31T14:33Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Points,4066336,Lauri Markkanen,,21.5,-117.0,22.5,-114.0,2026-10-31T14:33Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,6606,Damian Lillard,,5.5,105.0,5.5,113.0,2026-10-31T05:41Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,6606,Damian Lillard,,5.5,-138.0,5.5,-149.0,2026-10-31T05:41Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,4066336,Lauri Markkanen,,1.5,-125.0,1.5,-140.0,2026-10-31T12:48Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,4066336,Lauri Markkanen,,1.5,-105.0,1.5,107.0,2026-10-31T12:48Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,4683678,Scoot Henderson,,3.5,-114.0,3.5,-114.0,2026-10-31T05:41Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,4683678,Scoot Henderson,,3.5,-115.0,3.5,-115.0,2026-10-31T05:41Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,5105565,Donovan Clingan,,1.5,-190.0,1.5,-183.0,2026-10-31T05:41Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Assists,5105565,Donovan Clingan,,1.5,143.0,1.5,138.0,2026-10-31T05:41Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Rebounds,4066336,Lauri Markkanen,,5.5,-153.0,6.5,114.0,2026-10-31T15:23Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Rebounds,4066336,Lauri Markkanen,,5.5,116.0,6.5,-150.0,2026-10-31T15:23Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total 3-Point Field Goals,4066336,Lauri Markkanen,,2.5,106.0,2.5,109.0,2026-10-31T09:00Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total 3-Point Field Goals,4066336,Lauri Markkanen,,2.5,-140.0,2.5,-144.0,2026-10-31T09:00Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Points and Assists,4066336,Lauri Markkanen,,23.5,-106.0,24.5,-115.0,2026-10-31T14:33Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Points and Assists,4066336,Lauri Markkanen,,23.5,-124.0,24.5,-115.0,2026-10-31T14:33Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Points and Rebounds,4066336,Lauri Markkanen,,27.5,-116.0,29.5,-106.0,2026-10-31T14:58Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Points and Rebounds,4066336,Lauri Markkanen,,27.5,-113.0,29.5,-124.0,2026-10-31T14:58Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Assists and Rebounds,6606,Damian Lillard,,9.5,-115.0,9.5,102.0,2026-10-31T05:42Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Assists and Rebounds,6606,Damian Lillard,,9.5,-114.0,9.5,-134.0,2026-10-31T05:42Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Assists and Rebounds,4066336,Lauri Markkanen,,7.5,-128.0,7.5,-134.0,2026-10-31T12:51Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Assists and Rebounds,4066336,Lauri Markkanen,,7.5,-103.0,7.5,101.0,2026-10-31T12:51Z,under
+2026-10-31 08:50,22600147,2026-10-31,Total Assists and Rebounds,4433627,Keyonte George,,10.5,-116.0,10.5,-120.0,2026-10-31T12:51Z,over
+2026-10-31 08:50,22600147,2026-10-31,Total Assists and Rebounds,4433627,Keyonte George,,10.5,-114.0,10.5,-109.0,2026-10-31T12:51Z,under
+2026-10-31 08:50,22600147,2026-10-31,"Total Points, Rebounds, and Assists",4066336,Lauri Markkanen,,29.5,-117.0,30.5,-109.0,2026-10-31T14:58Z,under
+2026-10-31 08:50,22600147,2026-10-31,"Total Points, Rebounds, and Assists",5105565,Donovan Clingan,,25.5,-117.0,26.5,-106.0,2026-10-31T13:20Z,over
+2026-10-31 08:50,22600147,2026-10-31,"Total Points, Rebounds, and Assists",5105565,Donovan Clingan,,25.5,-113.0,26.5,-124.0,2026-10-31T13:20Z,under

@@ -19,7 +19,7 @@ busy() {   # 0 if another state-writing workflow is running
 }
 
 save() {
-  for f in state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json; do
+  for f in state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json state/bluesky_seen.json; do
     if [ -f "$f" ]; then git add "$f"; fi
   done
   if [ -d research ]; then git add research; fi
@@ -49,6 +49,7 @@ while :; do
     WAIT=$((TARGET - $(date +%s))); [ "$WAIT" -gt 60 ] && WAIT=60
     [ "$WAIT" -gt 0 ] && sleep "$WAIT"
     [ "$(date +%s)" -ge "$TARGET" ] && break
+    python bluesky_watch.py . || echo "Bluesky watch failed; continuing."
     python opener_watch.py .; RC=$?
     if [ "$RC" -eq 10 ]; then echo "New DraftKings line: checking now."; break; fi
   done

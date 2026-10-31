@@ -103,6 +103,12 @@ to measure, per player: how far the market moved, how fast, and whether it moved
 Questions: which players' absences move the line more than the model expects (the model's player values are from last season's
 EPM and minutes, and tend to undervalue stars), and how many minutes the line takes to adjust after a decision.
 
+### `research/bluesky/YYYY-MM-DD.csv`: reporter posts from Bluesky
+`seen_at_et, posted_at_et, lag_min` (minutes between posting and our first look), `handle, reporter, team, injury_related,
+players` (players on this season's injury reports named in an injury/lineup post), `text, url`. One row per new post from the
+watch list (`research/media/bluesky_watch.csv`), checked every minute. Join `players` and times to `research/injury_decisions.csv`
+and `research/timeline/` to measure which reporters post news first and how long before the line moves.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,

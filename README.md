@@ -47,6 +47,19 @@ If Models 2 or 3 fail in a run, the run logs why and carries on; Model 1's picks
     after it moved toward the model (edge still 3+) won about 56%. Until Oct 31, 2026 this caution needed a 3-point move.
 
   If a caution clears later (for example, the team files its report and the edge is still there), a regular alert follows, titled **UPDATE**, saying what cleared and how the edge changed since the caution.
+- **A verdict at the top of every bet alert** (since Oct 31, 2026): **[BET]**, **[PASS]** or **[OPTIONAL]** in the title and the
+  reason on the first line, from the rule the backtests support (2024-26, edge 3+):
+  | When the alert goes out | Verdict | Backtest |
+  |---|---|---|
+  | Line still at the opener, first seen within the last hour (`FRESH_OPEN_MIN`) | BET | 53-55% |
+  | Line moved toward the model, 3+ pts of edge left | BET | ~56% |
+  | Line moved toward the model, under 3 left | PASS | market caught up |
+  | Line moved against the model by 0.5+ | PASS | ~43% |
+  | Line still at the opener hours after it posted, or opened before tracking | OPTIONAL | ~49% |
+  The alert also repeats the rule, so you can apply it to the line you see in your app.
+- **Reminder if you haven't logged the bet:** 30 minutes after an alert (`REMIND_AFTER_MIN`), if no bet is logged for that game
+  and market, a **REMINDER** goes out once, before tip, with the line as it is now and an updated verdict (it may now say PASS).
+  Alerts whose first verdict was PASS don't get reminders.
 - **Key players still undecided.** Every bet alert lists questionable/doubtful/probable players worth 0.75+ model points,
   with how far the model would move if each sits. A low-priority **Key decision pending** heads-up goes out once per player,
   game and status when an undecided player is worth 1.5+ points (margin or total). When a listed player's status changes on a

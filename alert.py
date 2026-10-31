@@ -21,6 +21,8 @@ import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
+REMIND_AFTER_MIN = 30              # reminder if an alert's bet still isn't logged this many minutes later (once, before tip)
+FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen
 AGAINST_MOVE = 0.5                  # caution when the line moved this much AGAINST the bet since opening. Backtest (2024-26, lines
                                     # between open and close, edge 3+): moved against 43% winners, toward 56%, unmoved 49%
 JUMP_WINDOW_MIN = 60                # a "jump" is a move within this many minutes
@@ -182,6 +184,37 @@ def main():
         if len(steps) > 5: steps = steps[:1] + ["…"] + steps[-3:]
         return "\nLine history: " + " -> ".join(parts + steps)
 
+    LINE_NOW = {}   # (game_id, market) -> what the line and model say at this check, for reminders
+
+    def first_seen(gid, market, opn):
+        """when we first saw this line, if that first sighting was the opening number (else None: opened before tracking)"""
+        rows = pd.concat([H_[(H_.game_id == gid) & (H_.market == market)],
+                          pd.DataFrame([r for r in hist_new if r["game_id"] == gid and r["market"] == market])], ignore_index=True)
+        if not len(rows) or opn is None or pd.isna(opn) or float(rows.line.iloc[0]) != float(opn): return None
+        return pd.Timestamp(rows.seen_at_et.iloc[0])
+
+    def verdict(gid, market, side, cur, opn, e):
+        """(BET / PASS / OPTIONAL / CHECK, reason) from the betting rule (backtests 2024-26, edge 3+):
+        at the opener 53-55%; moved toward the model with 3+ left ~56%; moved against ~43%; unmoved for hours ~49%."""
+        if opn is None or pd.isna(opn): return "CHECK", "opening line unknown, so use your judgment"
+        mv = cur - opn
+        if abs(mv) >= AGAINST_MOVE and against_us(market, side, mv):
+            return "PASS", f"the line moved {abs(mv):.1f} pts AGAINST the model since it opened at {opn:g}"
+        if abs(mv) >= AGAINST_MOVE:
+            if abs(e) >= THRESHOLD:
+                return "BET", f"the line moved {abs(mv):.1f} pts toward the model and {abs(e):.1f} pts of edge are left"
+            return "PASS", f"the line moved toward the model and only {abs(e):.1f} pts of edge are left"
+        fs = first_seen(gid, market, opn)
+        if fs is not None and (NOW - fs) <= pd.Timedelta(minutes=FRESH_OPEN_MIN):
+            return "BET", f"still at the opening line, posted about {max(1, int((NOW - fs).total_seconds() // 60))} min ago"
+        if fs is not None:
+            h_ = (NOW - fs).total_seconds() / 3600
+            return "OPTIONAL", f"still at the opening line {h_:.0f}+ hours after it posted (about break-even in backtests once a line sits)"
+        return "OPTIONAL", "still at the opening line, but it posted before tracking began (time unknown)"
+
+    RULE_TXT = ("Rule: BET at the opener, or if the line moved toward the model with 3+ pts of edge left. PASS if it moved "
+                "against the model by 0.5+ since it opened. Check the line in your app and apply the rule to that number.")
+
     news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
     # ---- key players: undecided injury statuses and status changes
     spath = os.path.join(STATE, "injury_status_seen.csv")
@@ -304,6 +337,11 @@ def main():
                 if cur is None or pd.isna(cur): continue
                 fmt = (lambda v: f"{v:+g}") if market == "spread" else (lambda v: f"{v:g}")
                 hist_txt = history_text(g["game_id"], market, opn, fmt)
+                e_now = (margin + cur) if market == "spread" else (total - cur)
+                side_now = ("home" if e_now > 0 else "away") if market == "spread" else ("over" if e_now > 0 else "under")
+                LINE_NOW[(g["game_id"], market)] = dict(cur=cur, opn=opn, e=e_now, side=side_now, H=H, Aw=Aw, tip=tip,
+                                                        tip_et=g["tip_et"], date=M["date"], home=g["home"], away=g["away"],
+                                                        model=margin if market == "spread" else total, hist=hist_txt)
                 if (g["game_id"], market) in done: continue
                 is_open = opn is not None and not pd.isna(opn) and cur == opn
                 if market == "spread":
@@ -365,8 +403,11 @@ def main():
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
                                  f"\nInjury report: {used}. Caution alerts so far: {crec}." + pending_text(SW, g) + hist_txt + news_for(g))
+                        vd, vr = verdict(g["game_id"], market, side, cur, opn, e)
+                        cbody = f"{vd}: {vr}.\n{RULE_TXT}\n" + cbody
                         same, other = bets_note(M["date"], g["home"], g["away"], market, (g[side] if market == "spread" else side))
-                        ctitle = "CAUTION - " + title
+                        ctitle = f"[{vd}] CAUTION - " + title
+                        rec_row["verdict"] = vd
                         if same: cbody = f"ALREADY BET: you logged {same}.\n" + cbody; ctitle = "ALREADY BET - " + ctitle
                         if other: cbody += f"\nYour other bet on this game: {other}."
                         if "OTHER SIDE" in other: ctitle = "YOU BET THE OTHER SIDE - " + ctitle
@@ -396,12 +437,49 @@ def main():
                 if other:
                     body += f"\nYour other bet on this game: {other}."
                 if "OTHER SIDE" in other: title = "YOU BET THE OTHER SIDE - " + title
-                body = why + body
+                vd, vr = verdict(g["game_id"], market, side, cur, opn, e)
+                body = f"{vd}: {vr}.\n{RULE_TXT}\n" + why + body
+                title = f"[{vd}] " + title; rec_row["verdict"] = vd
+                if vd == "PASS": prio = "default"
                 rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk)
                 new.append(rec_row); done.add((g["game_id"], market))
                 print("ALERT:", title, "|", body)
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)
+    # ---- reminders: an alert's bet still not logged REMIND_AFTER_MIN later (you log every bet you place)
+    n_rem = 0
+    if len(A) and "sent" in A:
+        if "reminded_at_et" not in A: A["reminded_at_et"] = np.nan
+        A["reminded_at_et"] = A["reminded_at_et"].astype(object)
+        if "verdict" not in A: A["verdict"] = np.nan
+        # only alerts that carried a verdict (sent since reminders began), latest per game and market
+        last = A[A.sent.astype(str).isin(["True", "1", "1.0"]) & A.verdict.notna()].groupby(["game_id", "market"]).tail(1)
+        for i, r in last.iterrows():
+            k = (r.game_id, r.market); now_ = LINE_NOW.get(k)
+            if now_ is None or isinstance(r.get("reminded_at_et"), str): continue
+            if A[(A.game_id == r.game_id) & (A.market == r.market)].reminded_at_et.astype(str).str.len().gt(3).any(): continue
+            if NOW - pd.Timestamp(r.alerted_at_et) < pd.Timedelta(minutes=REMIND_AFTER_MIN): continue
+            if pd.Timestamp(now_["tip_et"]) <= NOW: continue
+            if str(r.get("verdict")) == "PASS": continue
+            logged = len(MYB) and ((MYB.date.astype(str) == str(r.date)) & (MYB.home == r.home) & (MYB.away == r.away) & (MYB.market == r.market)).any()
+            if logged: continue
+            cur, opn, e_, side_ = now_["cur"], now_["opn"], now_["e"], now_["side"]
+            vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
+            H, Aw = now_["H"], now_["Aw"]
+            if r.market == "spread":
+                bl = cur if side_ == "home" else -cur; what = f"{H if side_ == 'home' else Aw} {bl:+g}"
+            else:
+                what = f"{side_.upper()} {cur:g}"
+            then = f"{float(r.line):+g}" if r.market == "spread" else f"{float(r.line):g}"
+            changed = "" if float(cur) == float(r.line) else f" The line was {then} at the alert."
+            switched = "" if side_ == r.side else " NOTE: the model's side has flipped since the alert."
+            body = (f"{vd}: {vr}.\n{RULE_TXT}\nNo bet logged yet for the alert at {pd.Timestamp(r.alerted_at_et):%-I:%M %p}. "
+                    f"Now: {what}, edge {abs(e_):.1f} pts (model {now_['model']:.1f}).{changed}{switched}" + now_["hist"])
+            notify(f"[{vd}] REMINDER - {what}: {Aw} @ {H}, {now_['tip']}", body,
+                   priority="default" if vd != "PASS" else "low", tags="alarm_clock")
+            A.loc[i, "reminded_at_et"] = str(NOW)[:16]; n_rem += 1
+            print("REMINDER:", what, vd, vr)
+    if new or n_rem:
         A.to_csv(apath, index=False)
     # ---- line jumps: fast moves, logged for research and alerted when large
     jpath = os.path.join(STATE, "line_jumps.csv")

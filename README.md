@@ -42,9 +42,17 @@ If Models 2 or 3 fail in a run, the run logs why and carries on; Model 1's picks
 - **Caution alerts.** When the edge is there but a safeguard is triggered, the alert is still sent, titled **CAUTION**, at normal priority, with the reason and a reminder to bet with caution. The safeguards:
   - there's no current official injury report (one filed at or after 8 PM the night before the game),
   - a team hasn't filed its report yet, or
-  - the line has moved 3+ points **against** the bet since it opened (the market disagrees, which usually means news the model doesn't have yet). Big moves toward the model's side aren't flagged.
+  - the line has moved **half a point or more against** the bet since it opened (`AGAINST_MOVE`). In the 2024-26 backtests,
+    bets placed after the line had moved against the model won only about 43% (41-46% in every season and market), while bets
+    after it moved toward the model (edge still 3+) won about 56%. Until Oct 31, 2026 this caution needed a 3-point move.
 
   If a caution clears later (for example, the team files its report and the edge is still there), a regular alert follows, titled **UPDATE**, saying what cleared and how the edge changed since the caution.
+- **Key players still undecided.** Every bet alert lists questionable/doubtful/probable players worth 0.75+ model points,
+  with how far the model would move if each sits. A low-priority **Key decision pending** heads-up goes out once per player,
+  game and status when an undecided player is worth 1.5+ points (margin or total). When a listed player's status changes on a
+  new official report, the change is logged with the DraftKings line at that moment (`research/injury_decisions.csv`), and if
+  he's worth 1.5+ points an **Injury decision** alert goes out (high priority for Out or Available). The point: the model
+  updates as soon as the report posts, so a bet alert right after a decision may be ahead of the line.
 - **Already bet?** Every bet alert checks the bets you've logged. If you already have a bet on that game and market, the alert is titled **ALREADY BET**, shows your bet, and comes at normal priority instead of high. Bets on the other market of the same game are listed at the end.
 - **"Market agrees" alerts.** When a line moves 3+ points **toward** the model's side since opening, you get a heads-up once per game and market. If the edge is still 3+, it's part of the normal bet alert ("Market agrees: …"). If the move has eaten the edge, it's a low-priority info alert with no bet. These are logged in `state/market_moves.csv`.
 - **Line history in every alert.** The 5-minute checks record every line change with the time they first saw it (`state/line_history.csv`), so each alert shows the path, e.g. `225.5 (first seen Fri 11:45 AM) -> 223.5 (Fri 12:10 PM)`. Compare those times with the news below to see whether a move came before or after a report. Since the evening of Oct 30, 2026, current lines come from Action Network, so times are good to about 5 minutes. Earlier rows (and any check where Action Network didn't respond) used ESPN, whose copy can be up to about 15 minutes behind; the `source` column says which. Lines that opened before tracking started say so.

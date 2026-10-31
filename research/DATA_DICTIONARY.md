@@ -94,6 +94,15 @@ team's next row. Off-season and in-season changes from Wikipedia's NBA season pa
 coaching-changes section). Checked against ESPN for the current season (all 30 match). ESPN's own coach history for past seasons is
 wrong (it writes current coaches back onto old seasons), so don't use it. Add new firings here when they happen.
 
+### `research/injury_decisions.csv`: injury status changes and the line at that moment
+One row whenever a listed player's status changes between official reports (e.g. Questionable → Out) for players worth 0.5+
+model points: `detected_at_et, report, game_id, date, away, home, tip_et, team, player, from_status, to_status, p_miss_from,
+p_miss_to, home_margin_if_sits, total_if_sits` (the model's change if he sits, home perspective), `dk_spread_now, dk_total_now,
+line_source`. Join to `research/timeline/` (DraftKings' own change times) and `research/news.csv` (when reporters posted it)
+to measure, per player: how far the market moved, how fast, and whether it moved before the official report.
+Questions: which players' absences move the line more than the model expects (the model's player values are from last season's
+EPM and minutes, and tend to undervalue stars), and how many minutes the line takes to adjust after a decision.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,

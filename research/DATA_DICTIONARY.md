@@ -82,6 +82,12 @@ next two days, logged whether or not the model has run yet (so the first minutes
 `book_changed_utc` is the book's own last-change time (exact); `seen_at_et` is when the check saw it. Keyed by `an_game_id`
 (Action Network's ID) plus date, away, home. This is the source for the bet-timing grades.
 
+### `research/minutes_history/season_YYYY.csv`: minutes by quarter for past seasons
+Same columns as `research/minutes/` plus `season` (the year it ends), for every regular-season game of 2021-22 through 2025-26
+(about 6,150 games), rebuilt from ESPN play-by-play by `backfill_minutes.py` (GitHub workflow "Backfill minutes by quarter").
+97-100% of games per season are within a minute of the box score; filter on `check_max_diff_min <= 1`.
+Join to `data/training_games.csv` on date + home + away for results, lines, rest and injuries.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,

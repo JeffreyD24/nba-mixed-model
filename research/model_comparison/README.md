@@ -92,3 +92,17 @@ about 1.5 points), but they didn't make totals more accurate: 14.81 vs 14.84 wit
 - Files: `comparison_table.csv` (edges 3/4/5, both lines), `accuracy_tests.csv`, `referee_ablation.csv`,
   and `predictions_2025_26.csv` / `predictions_2024_25.csv` with every game's lines and all three models'
   numbers. Scripts are in `backtest_v2/`.
+
+## Does training on fewer seasons change anything? (added Oct 30)
+
+Each test season was predicted by models trained on the 2, 3 or 4 seasons right before it
+(`training_window_comparison.csv`). Training on just two seasons also makes 2023-24 a third test season,
+but there are no opening lines for it in our data, so it can only be scored on accuracy and closing lines.
+
+- **Training length barely matters.** On the same test season, accuracy moved by 0.06 points or less, and
+  opening-line win rates moved by 1–2 points, which is well within luck for 300–500 bets.
+- **The rankings held.** Model 2 had the most accurate margins in all three test seasons (2023-24 included).
+  Model 3 had the most accurate totals in 2024-25 and 2025-26; in 2023-24 Model 2 did.
+- **Takeaway:** keep training live on all five seasons. Fewer seasons doesn't help, and it doesn't let us
+  start any sooner: the live models already predict 2026-27 as it happens. The thing that would really add
+  evidence is opening lines for 2022-23 and 2023-24, which would give a third and fourth opening-line test.

@@ -47,7 +47,7 @@ Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDO
 ## Research database
 
 Each 5-minute check also records market data that can't be recovered later, in `research/`: the full DraftKings
-market with prices and moneylines (`research/odds/`), ESPN's matchup predictor, the share of bets and of money on each side (`research/splits/`), lines and prices at nine sportsbooks including Fanatics (`research/books/`), DraftKings player props with opening lines (`research/props/`), in-game lines with the score and clock (`research/live/`), first-half, second-half and 1st-quarter lines and team totals at each book (`research/periods/`), final scores by quarter (`research/linescores.csv`), every injury note with the time
+market with prices and moneylines (`research/odds/`), ESPN's matchup predictor, the share of bets and of money on each side (`research/splits/`), lines and prices at nine sportsbooks including Fanatics (`research/books/`), DraftKings player props with opening lines (`research/props/`), in-game lines with the score and clock (`research/live/`), first-half, second-half and 1st-quarter lines and team totals at each book (`research/periods/`), final scores by quarter (`research/linescores.csv`), each player's minutes by quarter for every finished game (`research/minutes/`, rebuilt from play-by-play), every injury note with the time
 it was first seen, and the model's number whenever it changes. Rows are written only when something changes.
 Every graded pick, alert and logged bet also gets **closing line value** (points your line beat the close by).
 Columns, and the questions the data is meant to answer, are in [`research/DATA_DICTIONARY.md`](research/DATA_DICTIONARY.md).

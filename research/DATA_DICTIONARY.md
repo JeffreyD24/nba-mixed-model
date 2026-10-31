@@ -62,6 +62,20 @@ and where does that shortcut miss (pace in 2nd halves, rest, bench-heavy teams)?
 `recorded_at_et, game_id, date, away, home, away_q1 ... home_q4` (plus OT columns when there's overtime), `away_final, home_final`.
 Written once per finished game, used to grade half, quarter and team-total lines.
 
+### `research/minutes/YYYY-MM-DD.csv`: who played when (minutes by quarter, from ESPN play-by-play)
+One row per player per finished game, written once the game is final (this season backfilled from opening night).
+| column | meaning |
+|---|---|
+| game_id, espn_event_id, date, away, home, team, is_home | the game and the player's team |
+| athlete_id, player, starter, dnp | ESPN player ID, name, started the game, did not play |
+| q1 ... q4 (ot1, ot2 ... in overtime games), h1, h2 | minutes played in each quarter and half |
+| total_min, box_min | our total vs. the official box score minutes (box score rounds to whole minutes) |
+| diff_vs_box, check_max_diff_min | this player's difference, and the worst difference in the game. Rebuilt from substitutions, so a missing substitution in ESPN's feed shows up here. In the first 68 games, 99% of player rows were within 1 minute; filter on `check_max_diff_min <= 1` for the cleanest games |
+
+Questions: which coaches shorten or lengthen their rotation in second halves, on back-to-backs, in blowouts or close games;
+how starters' 4th-quarter minutes change with the score; and whether 2nd-half and team-total lines account for it.
+Back-to-backs, rest and home/away come from joining on `game_id` / date with the schedule.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,

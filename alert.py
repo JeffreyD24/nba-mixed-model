@@ -368,6 +368,9 @@ def main():
                 full = last_full is None or NOW - last_full >= pd.Timedelta(minutes=115) or \
                     (soon and NOW - last_full >= pd.Timedelta(minutes=30))
                 a, b = research.props_snapshot(NOW, M3["date"], rows, full=full); n_pm += a; n_po += b
+                closing = research.started_rows(NOW, M3["date"], M3["games"])      # closing prop lines after tip
+                if closing:
+                    a, b = research.props_snapshot(NOW, M3["date"], closing, full=True); n_pm += a; n_po += b
                 if full:
                     os.makedirs(os.path.dirname(stamp), exist_ok=True); open(stamp, "w").write(str(NOW))
             except Exception as e:

@@ -165,5 +165,10 @@ from minutes and usage projections that news (a starter ruled out) changes quick
 to injury news vs. the game line, do overs on popular players get shaded (priced above fair), and can a minutes-based player model
 beat the opening prop number.
 
+Closing prop lines: ESPN keeps DraftKings' final pre-game props up after tip (they are **not** live props; checked Oct 30, 2026:
+a player with 25 points in the 4th still showed his pre-game 21.5). Since ESPN's copy lags up to ~12 minutes, props are also read
+for 45 minutes after each tip, so the last row per player/market is the true closing prop line. Rows with `seen_at_et` after tip
+are those closing reads.
+
 Size: the full set is about 1.3 MB per snapshot, so these files are the largest in the repo. Prop rows are written only when a line
 or price changes.

@@ -48,6 +48,20 @@ home_spread_odds, away_spread_odds, total, over_odds, under_odds, home_ml, away_
 A row is written when the line, price, score or quarter changes. About one snapshot per game every 5 minutes, so it shows how books
 adjust to runs and quarters, but not every in-game move.
 
+### `research/periods/YYYY-MM-DD.csv`: halves, 1st quarter and team totals (Action Network), every 5-minute check
+One row per game, `period` and book whenever anything changes. `period` is `game`, `firsthalf`, `secondhalf` or `firstquarter`.
+Columns: `seen_at_et, game_id, date, away, home, status` (scheduled / inprogress / halftime), `period, book, home_spread,
+home_spread_odds, away_spread_odds, total, over_odds, under_odds, home_ml, away_ml, away_team_total, away_tt_over_odds,
+away_tt_under_odds, home_team_total, home_tt_over_odds, home_tt_under_odds`. Team totals are each team's own over/under for that
+period. Not every book posts every market (blank = not offered). Values outside a sensible range for the period are left blank.
+
+Questions: do books set halves and team totals as simple shares of the game line (often about 49% of the total for the 1st half),
+and where does that shortcut miss (pace in 2nd halves, rest, bench-heavy teams)? Do team totals lag when one team's injury news moves the game line?
+
+### `research/linescores.csv`: final score by quarter
+`recorded_at_et, game_id, date, away, home, away_q1 ... home_q4` (plus OT columns when there's overtime), `away_final, home_final`.
+Written once per finished game, used to grade half, quarter and team-total lines.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,

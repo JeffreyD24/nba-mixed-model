@@ -304,3 +304,72 @@ def live_snapshot(now, day, games):
     return _append_changed(os.path.join(R, "live", f"{pd.Timestamp(day).date()}.csv"), rows, ["game_id", "book"],
                            ["home_spread", "home_spread_odds", "away_spread_odds", "total", "over_odds", "under_odds",
                             "home_ml", "away_ml", "home_score", "away_score", "period"])
+
+
+# ---------------- halves, quarters and team totals (Action Network) ----------------
+PERIODS = ("game", "firsthalf", "secondhalf", "firstquarter")
+# plausible ranges: (game total, team total) by period; anything outside is a feed glitch and left blank
+_RANGE = {"game": ((150, 300), (70, 160)), "firsthalf": ((75, 160), (35, 85)), "secondhalf": ((75, 160), (35, 85)),
+          "firstquarter": ((35, 85), (15, 45))}
+
+
+def periods_snapshot(now, day, games):
+    """Spreads, totals, moneylines and team totals for the full game, each half and the 1st quarter, at each book.
+    Written when anything changes; status says whether the game had started."""
+    import actionnet
+    ids = {(g["home"], g["away"]): g["game_id"] for g in games}
+    rows = []
+    for per in PERIODS:
+        d = actionnet._get(f"https://api.actionnetwork.com/web/v1/scoreboard/nba?period={per}"
+                           f"&bookIds={','.join(map(str, AN_BOOKS))}&date={pd.Timestamp(day):%Y%m%d}")
+        (lo, hi), (tlo, thi) = _RANGE[per]
+        ok = lambda v, a, b: v if (not np.isnan(v) and a <= v <= b) else np.nan
+        for g in d.get("games", []):
+            if g.get("status") not in ("scheduled", "inprogress", "halftime"): continue
+            t = {x["id"]: espn.ESPN2.get(x.get("abbr")) for x in g.get("teams", [])}
+            home, away = t.get(g["home_team_id"]), t.get(g["away_team_id"])
+            gid = ids.get((home, away))
+            if gid is None: continue
+            for o in g.get("odds", []) or []:
+                tot, at, ht = ok(_num(o.get("total")), lo, hi), ok(_num(o.get("away_total")), tlo, thi), ok(_num(o.get("home_total")), tlo, thi)
+                rows.append(dict(seen_at_et=str(now)[:16], game_id=gid, date=str(pd.Timestamp(day).date()), away=away, home=home,
+                                 status=g.get("status"), period=per, book=AN_BOOKS.get(o.get("book_id"), o.get("book_id")),
+                                 home_spread=_num(o.get("spread_home")), home_spread_odds=_num(o.get("spread_home_line")),
+                                 away_spread_odds=_num(o.get("spread_away_line")),
+                                 total=tot, over_odds=_num(o.get("over")) if not np.isnan(tot) else np.nan,
+                                 under_odds=_num(o.get("under")) if not np.isnan(tot) else np.nan,
+                                 home_ml=_num(o.get("ml_home")), away_ml=_num(o.get("ml_away")),
+                                 away_team_total=at, away_tt_over_odds=_num(o.get("away_over")) if not np.isnan(at) else np.nan,
+                                 away_tt_under_odds=_num(o.get("away_under")) if not np.isnan(at) else np.nan,
+                                 home_team_total=ht, home_tt_over_odds=_num(o.get("home_over")) if not np.isnan(ht) else np.nan,
+                                 home_tt_under_odds=_num(o.get("home_under")) if not np.isnan(ht) else np.nan))
+    os.makedirs(os.path.join(R, "periods"), exist_ok=True)
+    vals = ["status", "home_spread", "home_spread_odds", "away_spread_odds", "total", "over_odds", "under_odds", "home_ml", "away_ml",
+            "away_team_total", "away_tt_over_odds", "away_tt_under_odds", "home_team_total", "home_tt_over_odds", "home_tt_under_odds"]
+    return _append_changed(os.path.join(R, "periods", f"{pd.Timestamp(day).date()}.csv"), rows, ["game_id", "period", "book"], vals)
+
+
+def linescores(now, day, games):
+    """final score by quarter (and overtime) for each finished game, written once; used to grade half, quarter and team lines"""
+    import actionnet
+    path = os.path.join(R, "linescores.csv")
+    done = set(pd.read_csv(path, dtype={"game_id": str}).game_id) if os.path.exists(path) else set()
+    ids = {(g["home"], g["away"]): g["game_id"] for g in games}
+    rows = []
+    for g in actionnet.games(day, (15,)):
+        if g.get("status") not in ("complete", "closed", "final"): continue
+        t = {x["id"]: espn.ESPN2.get(x.get("abbr")) for x in g.get("teams", [])}
+        home, away = t.get(g["home_team_id"]), t.get(g["away_team_id"])
+        gid = ids.get((home, away))
+        if gid is None or str(gid) in done: continue
+        ls = (g.get("boxscore") or {}).get("linescore") or []
+        r = dict(recorded_at_et=str(now)[:16], game_id=gid, date=str(pd.Timestamp(day).date()), away=away, home=home)
+        for q in ls:
+            k = str(q.get("abbr") or q.get("id"))
+            r[f"away_q{k}"] = q.get("away_points"); r[f"home_q{k}"] = q.get("home_points")
+        r["away_final"] = sum(q.get("away_points") or 0 for q in ls); r["home_final"] = sum(q.get("home_points") or 0 for q in ls)
+        rows.append(r)
+    if rows:
+        old = pd.read_csv(path) if os.path.exists(path) else pd.DataFrame()
+        pd.concat([old, pd.DataFrame(rows)], ignore_index=True).to_csv(path, index=False)   # rewrite: OT adds columns
+    return len(rows)

@@ -13534,3 +13534,37 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-30 20:01,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4278580,Sandro Mamukelashvili,,15.5,-117.0,14.5,-109.0,2026-10-30T23:31Z,under
 2026-10-30 20:01,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4397014,Quentin Grimes,,14.5,-121.0,13.5,-110.0,2026-10-30T23:05Z,over
 2026-10-30 20:01,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4397014,Quentin Grimes,,14.5,-109.0,13.5,-120.0,2026-10-30T23:05Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Points,3907498,Matisse Thybulle,,6.5,-125.0,6.5,-126.0,2026-10-30T23:02Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Points,3907498,Matisse Thybulle,,6.5,-102.0,6.5,-101.0,2026-10-30T23:02Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Points,4278580,Sandro Mamukelashvili,,9.5,-107.0,9.5,-110.0,2026-10-30T23:30Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Points,4278580,Sandro Mamukelashvili,,9.5,-119.0,9.5,-116.0,2026-10-30T23:30Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Points,4397014,Quentin Grimes,,9.5,102.0,7.5,-129.0,2026-10-31T02:56Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Points,4397014,Quentin Grimes,,9.5,-130.0,7.5,101.0,2026-10-31T02:56Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Assists,4397014,Quentin Grimes,,2.5,108.0,2.5,138.0,2026-10-30T23:01Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Assists,4397014,Quentin Grimes,,2.5,-142.0,2.5,-183.0,2026-10-30T23:01Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Rebounds,4709138,Brandin Podziemski,,4.5,-159.0,5.5,101.0,2026-10-31T02:56Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Rebounds,4709138,Brandin Podziemski,,4.5,121.0,5.5,-133.0,2026-10-31T02:56Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,3945274,Luka Doncic,,4.5,116.0,3.5,-160.0,2026-10-30T23:25Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,3945274,Luka Doncic,,4.5,-154.0,3.5,121.0,2026-10-30T23:25Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,4066457,Austin Reaves,,2.5,138.0,2.5,140.0,2026-10-30T23:25Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,4066457,Austin Reaves,,2.5,-183.0,2.5,-186.0,2026-10-30T23:25Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,4278580,Sandro Mamukelashvili,,1.5,175.0,1.5,169.0,2026-10-31T02:56Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,4278580,Sandro Mamukelashvili,,1.5,-235.0,1.5,-226.0,2026-10-31T02:56Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,4397014,Quentin Grimes,,1.5,137.0,1.5,165.0,2026-10-30T23:01Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total 3-Point Field Goals,4397014,Quentin Grimes,,1.5,-182.0,1.5,-221.0,2026-10-30T23:01Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Points and Assists,4066457,Austin Reaves,,29.5,-110.0,29.5,-120.0,2026-10-31T01:38Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Points and Assists,4066457,Austin Reaves,,29.5,-119.0,29.5,-110.0,2026-10-31T01:38Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Points and Assists,4397014,Quentin Grimes,,11.5,-114.0,10.5,-102.0,2026-10-30T23:05Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Points and Assists,4397014,Quentin Grimes,,11.5,-115.0,10.5,-129.0,2026-10-30T23:05Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Points and Rebounds,4066457,Austin Reaves,,27.5,-119.0,27.5,-123.0,2026-10-30T23:25Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Points and Rebounds,4066457,Austin Reaves,,27.5,-110.0,27.5,-107.0,2026-10-30T23:25Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Assists and Rebounds,4066457,Austin Reaves,,10.5,107.0,10.5,106.0,2026-10-31T01:42Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Assists and Rebounds,4066457,Austin Reaves,,10.5,-141.0,10.5,-139.0,2026-10-31T01:42Z,under
+2026-10-30 20:05,22600023,2026-10-30,Total Assists and Rebounds,5175737,Yaxel Lendeborg,,10.5,-140.0,11.5,-106.0,2026-10-31T02:56Z,over
+2026-10-30 20:05,22600023,2026-10-30,Total Assists and Rebounds,5175737,Yaxel Lendeborg,,10.5,107.0,11.5,-124.0,2026-10-31T02:56Z,under
+2026-10-30 20:05,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4066457,Austin Reaves,,33.5,-119.0,34.5,-108.0,2026-10-30T23:25Z,over
+2026-10-30 20:05,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4066457,Austin Reaves,,33.5,-111.0,34.5,-122.0,2026-10-30T23:25Z,under
+2026-10-30 20:05,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4278580,Sandro Mamukelashvili,,15.5,-116.0,14.5,-121.0,2026-10-30T23:31Z,over
+2026-10-30 20:05,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4278580,Sandro Mamukelashvili,,15.5,-113.0,14.5,-109.0,2026-10-30T23:31Z,under
+2026-10-30 20:05,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4397014,Quentin Grimes,,14.5,-126.0,13.5,-110.0,2026-10-30T23:05Z,over
+2026-10-30 20:05,22600023,2026-10-30,"Total Points, Rebounds, and Assists",4397014,Quentin Grimes,,14.5,-105.0,13.5,-120.0,2026-10-30T23:05Z,under

@@ -14434,3 +14434,11 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-30 21:25,22600024,2026-10-30,"Total Points, Rebounds, and Assists",3936299,Jamal Murray,,33.5,-115.0,33.5,-121.0,2026-10-31T03:36Z,under
 2026-10-30 21:25,22600024,2026-10-30,"Total Points, Rebounds, and Assists",4278402,Jordan Goodwin,,12.5,-120.0,13.5,-106.0,2026-10-31T03:17Z,over
 2026-10-30 21:25,22600024,2026-10-30,"Total Points, Rebounds, and Assists",4278402,Jordan Goodwin,,12.5,-110.0,13.5,-124.0,2026-10-31T03:17Z,under
+2026-10-30 21:40,22600023,2026-10-30,Total Points,3213,Al Horford,,5.5,-129.0,5.5,-119.0,2026-10-30T13:26Z,under
+2026-10-30 21:40,22600023,2026-10-30,Total Points,4066457,Austin Reaves,,23.5,-104.0,23.5,-124.0,2026-10-31T04:27Z,over
+2026-10-30 21:40,22600023,2026-10-30,Total Points,4066457,Austin Reaves,,23.5,-123.0,23.5,-103.0,2026-10-31T04:27Z,under
+2026-10-30 21:40,22600023,2026-10-30,Total Points,4709138,Brandin Podziemski,,15.5,-101.0,15.5,-124.0,2026-10-31T03:52Z,over
+2026-10-30 21:40,22600023,2026-10-30,Total Points,4709138,Brandin Podziemski,,15.5,-127.0,15.5,-103.0,2026-10-31T03:52Z,under
+2026-10-30 21:40,22600023,2026-10-30,Total 3-Point Field Goals,3213,Al Horford,,0.5,-222.0,1.5,168.0,2026-10-30T23:24Z,over
+2026-10-30 21:40,22600023,2026-10-30,Total 3-Point Field Goals,3213,Al Horford,,0.5,166.0,1.5,-224.0,2026-10-30T23:24Z,under
+2026-10-30 21:40,22600023,2026-10-30,Total Points and Rebounds,3213,Al Horford,,8.5,-103.0,9.5,-121.0,2026-10-31T03:45Z,under

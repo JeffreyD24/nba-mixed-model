@@ -1,0 +1,38 @@
+name: Backfill minutes by quarter (past seasons)
+
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: "Seasons to backfill (year each ends), space-separated"
+        default: "2022 2023 2024 2025 2026"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backfill-minutes
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tools
+        run: pip install -q pandas numpy
+      - name: Backfill, saving after each season
+        run: |
+          git config user.name "nba-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          for s in ${{ inputs.seasons }}; do
+            python backfill_minutes.py . "$s"
+            git add research/minutes_history
+            git diff --cached --quiet || git commit -q -m "Backfill minutes by quarter: season $s"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 10; done
+          done

@@ -1,0 +1,26 @@
+name: Test the Bluesky watcher (no alerts, no saving)
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: pip install -q pandas numpy
+      - name: Run the watcher twice (second run should find nothing new)
+        run: |
+          python bluesky_watch.py .
+          python - <<'PY'
+          import glob, pandas as pd
+          for f in glob.glob("research/bluesky/*.csv"):
+              d = pd.read_csv(f); print(f, len(d), "rows;", int(d.injury_related.sum()), "injury/lineup")
+              print(d.sort_values("posted_at_et").tail(8)[["posted_at_et", "lag_min", "reporter", "injury_related", "players", "text"]].to_string(max_colwidth=70))
+          PY
+          python bluesky_watch.py .

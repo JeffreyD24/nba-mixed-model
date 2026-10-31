@@ -95,3 +95,19 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-30 23:20,22600147,2026-10-31,"Total Points, Rebounds, and Assists",4683678,Scoot Henderson,,21.5,-120.0,21.5,-115.0,2026-10-31T05:42Z,under
 2026-10-30 23:20,22600147,2026-10-31,"Total Points, Rebounds, and Assists",5105565,Donovan Clingan,,25.5,-123.0,26.5,-106.0,2026-10-31T05:46Z,over
 2026-10-30 23:20,22600147,2026-10-31,"Total Points, Rebounds, and Assists",5105565,Donovan Clingan,,25.5,-107.0,26.5,-124.0,2026-10-31T05:46Z,under
+2026-10-30 23:40,22600151,2026-10-31,Total Points,4395725,Tyler Herro,,21.5,-109.0,21.5,-109.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,Total Points,4395725,Tyler Herro,,21.5,-117.0,21.5,-117.0,2026-10-31T06:32Z,under
+2026-10-30 23:40,22600151,2026-10-31,Total Assists,4395725,Tyler Herro,,4.5,101.0,4.5,101.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,Total Assists,4395725,Tyler Herro,,4.5,-133.0,4.5,-133.0,2026-10-31T06:32Z,under
+2026-10-30 23:40,22600151,2026-10-31,Total Rebounds,4395725,Tyler Herro,,4.5,-129.0,4.5,-129.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,Total Rebounds,4395725,Tyler Herro,,4.5,-102.0,4.5,-102.0,2026-10-31T06:32Z,under
+2026-10-30 23:40,22600151,2026-10-31,Total 3-Point Field Goals,4395725,Tyler Herro,,2.5,-135.0,2.5,-135.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,Total 3-Point Field Goals,4395725,Tyler Herro,,2.5,102.0,2.5,102.0,2026-10-31T06:32Z,under
+2026-10-30 23:40,22600151,2026-10-31,Total Points and Assists,4395725,Tyler Herro,,25.5,-119.0,25.5,-123.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,Total Points and Assists,4395725,Tyler Herro,,25.5,-110.0,25.5,-107.0,2026-10-31T06:32Z,under
+2026-10-30 23:40,22600151,2026-10-31,Total Points and Rebounds,4395725,Tyler Herro,,26.5,-110.0,26.5,-110.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,Total Points and Rebounds,4395725,Tyler Herro,,26.5,-120.0,26.5,-120.0,2026-10-31T06:32Z,under
+2026-10-30 23:40,22600151,2026-10-31,Total Assists and Rebounds,4395725,Tyler Herro,,9.5,102.0,9.5,102.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,Total Assists and Rebounds,4395725,Tyler Herro,,9.5,-134.0,9.5,-134.0,2026-10-31T06:32Z,under
+2026-10-30 23:40,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4395725,Tyler Herro,,30.5,-121.0,30.5,-121.0,2026-10-31T06:32Z,over
+2026-10-30 23:40,22600151,2026-10-31,"Total Points, Rebounds, and Assists",4395725,Tyler Herro,,30.5,-109.0,30.5,-109.0,2026-10-31T06:32Z,under

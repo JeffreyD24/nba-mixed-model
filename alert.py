@@ -322,8 +322,11 @@ def main():
     try:
         import research, time as _time
         research.init(W); _t0 = _time.time()
-        n_odds = n_pred = n_spl = n_bk = n_pm = n_po = n_live = 0
-        for mf in models:
+        n_odds = n_pred = n_spl = n_bk = n_pm = n_po = n_live = n_per = n_ls = 0
+        # include last night's games until 8 AM, so games running past midnight keep their live lines and final scores
+        early = str((NOW - pd.Timedelta(hours=8)).date())
+        rmodels = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= early)
+        for mf in rmodels:
             M3 = json.load(open(os.path.join(STATE, mf))); rows = []
             try:
                 k, rows = research.odds_snapshot(NOW, M3["date"], M3["games"]); n_odds += k
@@ -334,6 +337,14 @@ def main():
                 a, b = research.splits_snapshot(NOW, M3["date"], M3["games"]); n_spl += a; n_bk += b
             except Exception as e:
                 print("Betting splits logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "splits " + M3["date"], e)
+            try:
+                n_per += research.periods_snapshot(NOW, M3["date"], M3["games"])
+            except Exception as e:
+                print("Half/quarter/team total logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "periods " + M3["date"], e)
+            try:
+                n_ls += research.linescores(NOW, M3["date"], M3["games"])
+            except Exception as e:
+                print("Linescore logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "linescores " + M3["date"], e)
             try:
                 n_live += research.live_snapshot(NOW, M3["date"], M3["games"])
             except Exception as e:
@@ -353,10 +364,10 @@ def main():
         n_news = research.news_log(NOW, NEWS) if NEWS is not None else 0
         n_mod = research.model_snapshot(NOW, model_rows)
         print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_spl} betting-split changes, "
-              f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_live} live line changes, {n_news} new news notes, {n_mod} model changes.")
+              f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_live} live line changes, {n_per} half/quarter/team-total changes, {n_ls} final linescores, {n_news} new news notes, {n_mod} model changes.")
         cl = os.path.join(W, "research", "check_log.csv")
         row = pd.DataFrame([dict(at_et=str(NOW)[:16], research_seconds=round(_time.time() - _t0), odds=n_odds, predictor=n_pred,
-                                 splits=n_spl, books=n_bk, props=n_pm, props_other=n_po, live=n_live, news=n_news, model=n_mod)])
+                                 splits=n_spl, books=n_bk, props=n_pm, props_other=n_po, live=n_live, periods=n_per, linescores=n_ls, news=n_news, model=n_mod)])
         old_cl = pd.read_csv(cl) if os.path.exists(cl) else None
         if old_cl is not None and list(old_cl.columns) != list(row.columns):
             pd.concat([old_cl, row], ignore_index=True).to_csv(cl, index=False)     # new column: rewrite once

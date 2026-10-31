@@ -1,9 +1,8 @@
 # NBA, NHL and NFL mixed models: overview and shared lessons
 
 Written Oct 31, 2026, to bring the NHL and NFL projects into this one. Sources: the three GitHub repos
-(`JeffreyD24/nba-mixed-model`, `nhl-mixed-model`, `nfl-mixed-model`): their READMEs, backtest files, research notes and
-commit history. The NHL and NFL chats themselves can't be read from this project; anything decided only in those chats
-and not written to their repos isn't here (see "Filling the gaps" at the end).
+(`JeffreyD24/nba-mixed-model`, `nhl-mixed-model`, `nfl-mixed-model`) and the full handoffs written in the NHL and NFL
+projects (`analysis/handoffs/NHL_HANDOFF_2026-10-31.md`, `analysis/handoffs/NFL_HANDOFF_2026-10-31.md`).
 
 ## The three trackers at a glance
 
@@ -43,10 +42,16 @@ and not written to their repos isn't here (see "Filling the gaps" at the end).
    biggest gain was knowing the starting goalie (+41-49 units at opening prices with the confirmed goalie). The edge is in
    absorbing player news faster than the line. This is why the NBA tracker now warns about undecided key players and logs
    how the line moves when each status is decided.
-7. **Things that didn't help:** referees (NBA totals), in-season updating of home and back-to-back effects (NHL), QB-quality
+7. **The same rule, reached independently in two sports: a weaker edge is only worth taking at the opening price.** NHL
+   (decided Oct 31): goals-model bets at +150 or longer alert only while the price is within 1.5 win-% points of the open
+   ("OPENING PRICE ONLY"), because they made +2.1% per bet at the open but lost at later prices.
+8. **Why the NBA model does better than the NFL one** (NFL handoff): softer NBA openers (lines gain ~0.3 pts of accuracy by the
+   close vs ~0.1 in the NFL), the NBA model is about as accurate as the opener (NFL: 0.1-0.5 pts worse), 82 vs 17 games per team,
+   and NBA injury reports often come out before the opener.
+9. **Things that didn't help:** referees (NBA totals), in-season updating of home and back-to-back effects (NHL), QB-quality
    and EPA models (NFL), team-specific or coach-specific back-to-back rotation habits (NBA), first/second-half lines (NFL),
    hockey totals.
-8. **Judge by closing line value early.** Positive CLV while losing usually means bad luck; negative CLV means a real problem
+10. **Judge by closing line value early.** Positive CLV while losing usually means bad luck; negative CLV means a real problem
    (NHL Oct 31 cold-stretch review: shot model +1.0% CLV while losing, goals model -3.6%).
 
 ## What was ported on Oct 31, 2026
@@ -71,8 +76,21 @@ and not written to their repos isn't here (see "Filling the gaps" at the end).
 - **Cold-stretch review for NBA:** the NHL `season_diagnostic.py` approach (season-only models, loss breakdowns by price
   band, favorite/underdog, home/away) is worth porting before the first NBA losing streak, not after.
 
-## Filling the gaps from the other chats
+## Ideas from the other projects that could carry over to the NBA
 
-To bring anything that was only said in the NHL and NFL chats (preferences, plans, ideas not yet built), open each of those
-projects and ask: "Write a HANDOFF.md to the repo summarizing everything we discussed: decisions, preferences, open ideas
-and anything not already in the README." Then any session can read it from GitHub.
+- **Market-informed priors** (NFL idea): start each season from preseason win totals or power ratings instead of only last
+  season's effects. Most useful early in the season, when the NBA model's team effects are weakest.
+- **Halftime overreaction** (NFL idea): do second-half lines overreact to the first-half score? The NBA tracker now records
+  in-game and second-half lines at several books (`research/live/`, `research/periods/`), so this can be tested after a few weeks.
+- **Faster player news** (NHL lesson: knowing the goalie was the biggest gain): for the NBA, the equivalent is getting
+  injury decisions before the line moves, which the new key-player alerts and `injury_decisions.csv` start to measure.
+- **Backtest at real intraday prices** (NHL plan): once a few weeks of line history are saved, grade alerts at the price that
+  was actually available when they fired.
+
+## Shared practices (all three projects)
+
+- Never change thresholds mid-season based on what's hitting; test ideas on past seasons first, then forward-test with a fixed rule.
+- Judge after a few hundred rule bets (NBA ~150 per market, NHL ~300 per model, NFL more than one season); use CLV for an earlier read.
+- Bets are placed by hand (sportsbook terms ban automated betting); small stakes on alerts to test whether bets can be placed
+  before lines move; logging mistakes are expected and should be excluded when results are calculated.
+- Each repo's bot commits every 5 minutes, so always pull before pushing.

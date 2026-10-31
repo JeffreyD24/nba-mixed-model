@@ -116,6 +116,28 @@ def main():
     done = set(zip(sent_ok.game_id, sent_ok.market))
     skipped = set((r.game_id, r.market) for r in A.itertuples() if isinstance(getattr(r, "skipped", None), str)) if len(A) else set()
     graded = A[A.result.isin(["W", "L"]) & A.skipped.isna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
+    bpath = os.path.join(STATE, "my_bets.csv")
+    MYB = pd.read_csv(bpath) if os.path.exists(bpath) else pd.DataFrame(columns=["date", "home", "away", "market"])
+
+    def bets_note(date, home, away, market):
+        """('same market' text, 'other market' text) for bets already logged on this game"""
+        if not len(MYB): return "", ""
+        x = MYB[(MYB.date.astype(str) == str(date)) & (MYB.home == home) & (MYB.away == away)]
+        def desc(r):
+            pick = str(r.pick).upper(); ln = float(r.line)
+            what = f"{pick} {ln:g}" if r.market == "total" else f"{pick} {ln:+g}"
+            when = pd.Timestamp(r.logged_at_et).strftime("%-I:%M %p") if isinstance(r.logged_at_et, str) else "earlier"
+            book = f", {r.book}" if isinstance(r.book, str) and r.book else ""
+            st = float(r.stake); stake = f"${st:.0f}" if st == int(st) else f"${st:.2f}"
+            return f"{what} ({float(r.odds):+g}, {stake}{book}, logged {when})"
+        same = "; ".join(desc(r) for r in x[x.market == market].itertuples())
+        other = "; ".join(desc(r) for r in x[x.market != market].itertuples())
+        return same, other
+
+    def caution_before(gid, market):
+        """the caution alert sent earlier for this game and market, if any"""
+        c = A[(A.game_id == gid) & (A.market == market) & A.skipped.notna()] if len(A) and "skipped" in A else A.iloc[:0]
+        return c.iloc[-1] if len(c) else None
     rec = (f"{int((graded.result == 'W').sum())}-{int((graded.result == 'L').sum())}" if len(graded) else "no graded alerts yet")
     cgraded = A[A.result.isin(["W", "L"]) & A.skipped.notna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
     crec = (f"{int((cgraded.result == 'W').sum())}-{int((cgraded.result == 'L').sum())}" if len(cgraded) else "none graded yet")
@@ -249,7 +271,11 @@ def main():
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
                                  f"\nInjury report: {used}. Caution alerts so far: {crec}." + hist_txt + news_for(g))
-                        rec_row["sent"] = notify("CAUTION - " + title, cbody, priority="default", tags="warning,basketball", link=link)
+                        same, other = bets_note(M["date"], g["home"], g["away"], market)
+                        ctitle = "CAUTION - " + title
+                        if same: cbody = f"ALREADY BET: you logged {same}.\n" + cbody; ctitle = "ALREADY BET - " + ctitle
+                        if other: cbody += f"\nYour other bet on this game: {other}."
+                        rec_row["sent"] = notify(ctitle, cbody, priority="default", tags="warning,basketball", link=link)
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
                     continue
@@ -257,7 +283,25 @@ def main():
                     body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
                     moved_done.add((g["game_id"], market))
                 body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + hist_txt + news_for(g)
-                rec_row["sent"] = notify(title, body, link=link)
+                prio = "high"; why = ""
+                cb = caution_before(g["game_id"], market)
+                if cb is not None:      # a caution went out earlier: say why this one follows it
+                    t0 = pd.Timestamp(cb.alerted_at_et).strftime("%-I:%M %p")
+                    reason = str(cb.skipped)
+                    cleared = ("both teams have now filed injury reports" if "filed" in reason else
+                               "a current injury report is now out" if "injury report" in reason else
+                               "the line is no longer 3+ pts against this bet" if "against" in reason else "the caution no longer applies")
+                    why = (f"UPDATE to the CAUTION alert at {t0}: {cleared} ({used}). Edge now {abs(e):.1f} pts "
+                           f"(was {float(cb.edge):.1f} at {float(cb.line):g}).\n")
+                    title = "UPDATE - " + title
+                same, other = bets_note(M["date"], g["home"], g["away"], market)
+                if same:
+                    why = f"ALREADY BET: you logged {same}. Only add to it if you mean to.\n" + why
+                    title = "ALREADY BET - " + title; prio = "default"
+                if other:
+                    body += f"\nYour other bet on this game: {other}."
+                body = why + body
+                rec_row["sent"] = notify(title, body, priority=prio, link=link)
                 new.append(rec_row); done.add((g["game_id"], market))
                 print("ALERT:", title, "|", body)
     if new:

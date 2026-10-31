@@ -2916,3 +2916,7 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 05:30,22600153,2026-10-31,Total Points and Rebounds,4900671,Ajay Mitchell,,22.5,-110.0,22.5,-108.0,2026-10-31T11:58Z,under
 2026-10-31 05:30,22600153,2026-10-31,Total Assists and Rebounds,4871144,Alperen Sengun,,13.5,-127.0,13.5,-128.0,2026-10-31T10:45Z,over
 2026-10-31 05:30,22600153,2026-10-31,Total Assists and Rebounds,4871144,Alperen Sengun,,13.5,-104.0,13.5,-103.0,2026-10-31T10:45Z,under
+2026-10-31 05:40,22600149,2026-10-31,Total Points,4277813,Herbert Jones,,5.5,-124.0,5.5,-101.0,2026-10-31T08:40Z,over
+2026-10-31 05:40,22600149,2026-10-31,Total Points,4277813,Herbert Jones,,5.5,-103.0,5.5,-126.0,2026-10-31T08:40Z,under
+2026-10-31 05:40,22600149,2026-10-31,Total Points and Rebounds,4277813,Herbert Jones,,8.5,-106.0,7.5,-120.0,2026-10-31T12:22Z,over
+2026-10-31 05:40,22600149,2026-10-31,Total Points and Rebounds,4277813,Herbert Jones,,8.5,-124.0,7.5,-110.0,2026-10-31T12:22Z,under

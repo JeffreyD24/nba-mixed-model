@@ -1,0 +1,3 @@
+detected_at_et,report,game_id,date,away,home,tip_et,team,player,from_status,to_status,p_miss_from,p_miss_to,home_margin_if_sits,total_if_sits,dk_spread_now,dk_total_now,line_source
+2026-10-31 17:00,2026-10-31_05_00PM,22600149,2026-10-31,atl,no,2026-10-31 19:00:00,atl,Keshon Gilbert,Doubtful,Out,0.9825949367088608,0.9988292226038089,-1.29,1.2,4.5,241.5,actionnetwork
+2026-10-31 17:00,2026-10-31_05_00PM,22600149,2026-10-31,atl,no,2026-10-31 19:00:00,atl,Jalen Wilson,Doubtful,Out,0.9825949367088608,0.9988292226038089,-0.74,0.22,4.5,241.5,actionnetwork

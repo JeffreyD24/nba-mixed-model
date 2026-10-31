@@ -88,6 +88,12 @@ Same columns as `research/minutes/` plus `season` (the year it ends), for every 
 97-100% of games per season are within a minute of the box score; filter on `check_max_diff_min <= 1`.
 Join to `data/training_games.csv` on date + home + away for results, lines, rest and injuries.
 
+### `data/coaches.csv`: who coached each team, by date (2021-22 to now)
+`team, coach, start, interim, season, source`: one row per coaching stint. A coach runs a team's games from `start` until the
+team's next row. Off-season and in-season changes from Wikipedia's NBA season pages (2022-23 entered by hand; that page has no
+coaching-changes section). Checked against ESPN for the current season (all 30 match). ESPN's own coach history for past seasons is
+wrong (it writes current coaches back onto old seasons), so don't use it. Add new firings here when they happen.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,

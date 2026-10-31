@@ -15500,3 +15500,41 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 17:15,22600150,2026-10-31,"Total Points, Rebounds, and Assists",4431679,Precious Achiuwa,,22.5,-119.0,22.5,-119.0,2026-11-01T00:03Z,under
 2026-10-31 17:15,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,33.5,-108.0,31.5,-109.0,2026-11-01T00:01Z,over
 2026-10-31 17:15,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,33.5,-122.0,31.5,-121.0,2026-11-01T00:01Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Points,4433247,Jonathan Kuminga,,13.5,-125.0,13.5,-114.0,2026-11-01T00:18Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Points,4433247,Jonathan Kuminga,,13.5,-102.0,13.5,-112.0,2026-11-01T00:18Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Rebounds,4431671,Jaden McDaniels,,5.5,-108.0,5.5,101.0,2026-10-31T21:00Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Rebounds,4431671,Jaden McDaniels,,5.5,-122.0,5.5,-133.0,2026-10-31T21:00Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Rebounds,4433247,Jonathan Kuminga,,5.5,-108.0,5.5,110.0,2026-10-31T21:00Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Rebounds,4433247,Jonathan Kuminga,,5.5,-122.0,5.5,-146.0,2026-10-31T21:00Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Points and Assists,4433247,Jonathan Kuminga,,16.5,-110.0,15.5,-126.0,2026-10-31T21:00Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Points and Assists,4433247,Jonathan Kuminga,,16.5,-120.0,15.5,-105.0,2026-10-31T21:00Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Points and Rebounds,4433247,Jonathan Kuminga,,19.5,-117.0,18.5,-126.0,2026-10-31T21:00Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Points and Rebounds,4433247,Jonathan Kuminga,,19.5,-113.0,18.5,-104.0,2026-10-31T21:00Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Points and Rebounds,4845367,Stephon Castle,,21.5,-126.0,22.5,-108.0,2026-11-01T00:18Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Points and Rebounds,4845367,Stephon Castle,,21.5,-104.0,22.5,-122.0,2026-11-01T00:18Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Assists and Rebounds,4431671,Jaden McDaniels,,8.5,-113.0,8.5,-103.0,2026-10-31T21:00Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Assists and Rebounds,4431671,Jaden McDaniels,,8.5,-117.0,8.5,-127.0,2026-10-31T21:00Z,under
+2026-10-31 17:25,22600152,2026-10-31,Total Assists and Rebounds,4433247,Jonathan Kuminga,,7.5,-127.0,7.5,-108.0,2026-10-31T21:00Z,over
+2026-10-31 17:25,22600152,2026-10-31,Total Assists and Rebounds,4433247,Jonathan Kuminga,,7.5,-104.0,7.5,-121.0,2026-10-31T21:00Z,under
+2026-10-31 17:25,22600152,2026-10-31,"Total Points, Rebounds, and Assists",4433247,Jonathan Kuminga,,21.5,-125.0,21.5,-109.0,2026-11-01T00:18Z,over
+2026-10-31 17:25,22600152,2026-10-31,"Total Points, Rebounds, and Assists",4433247,Jonathan Kuminga,,21.5,-105.0,21.5,-121.0,2026-11-01T00:18Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Points,4222252,Isaiah Hartenstein,,9.5,-119.0,9.5,-131.0,2026-10-31T20:00Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Points,4222252,Isaiah Hartenstein,,9.5,-107.0,9.5,103.0,2026-10-31T20:00Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Rebounds,4432639,Jabari Smith Jr.,,5.5,-136.0,5.5,-134.0,2026-10-31T20:00Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Rebounds,4432639,Jabari Smith Jr.,,5.5,103.0,5.5,102.0,2026-10-31T20:00Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total 3-Point Field Goals,3133626,Kenrich Williams,,0.5,-239.0,0.5,-238.0,2026-11-01T00:09Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total 3-Point Field Goals,3133626,Kenrich Williams,,0.5,179.0,0.5,178.0,2026-11-01T00:09Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Assists,2990992,Marcus Smart,,12.5,-116.0,12.5,-124.0,2026-10-31T21:10Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Assists,2990992,Marcus Smart,,12.5,-113.0,12.5,-106.0,2026-10-31T21:10Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Assists,4222252,Isaiah Hartenstein,,12.5,-129.0,13.5,-103.0,2026-11-01T00:09Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Assists,4222252,Isaiah Hartenstein,,12.5,-102.0,13.5,-127.0,2026-11-01T00:09Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Assists,4278073,Shai Gilgeous-Alexander,,35.5,-106.0,36.5,-113.0,2026-10-31T23:05Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Assists,4278073,Shai Gilgeous-Alexander,,35.5,-124.0,36.5,-117.0,2026-10-31T23:05Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Rebounds,4222252,Isaiah Hartenstein,,19.5,-112.0,20.5,-106.0,2026-10-31T18:18Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Points and Rebounds,4222252,Isaiah Hartenstein,,19.5,-117.0,20.5,-125.0,2026-10-31T18:18Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Assists and Rebounds,3202,Kevin Durant,,8.5,-103.0,8.5,-103.0,2026-10-31T20:00Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Assists and Rebounds,3202,Kevin Durant,,8.5,-128.0,8.5,-127.0,2026-10-31T20:00Z,under
+2026-10-31 17:25,22600153,2026-10-31,Total Assists and Rebounds,4871144,Alperen Sengun,,14.5,-108.0,13.5,-128.0,2026-10-31T20:03Z,over
+2026-10-31 17:25,22600153,2026-10-31,Total Assists and Rebounds,4871144,Alperen Sengun,,14.5,-122.0,13.5,-103.0,2026-10-31T20:03Z,under
+2026-10-31 17:25,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4222252,Isaiah Hartenstein,,22.5,-124.0,23.5,-114.0,2026-11-01T00:09Z,over
+2026-10-31 17:25,22600153,2026-10-31,"Total Points, Rebounds, and Assists",4222252,Isaiah Hartenstein,,22.5,-106.0,23.5,-115.0,2026-11-01T00:09Z,under

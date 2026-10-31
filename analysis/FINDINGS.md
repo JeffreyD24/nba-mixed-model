@@ -34,3 +34,16 @@ Script: `analysis/coach_rotations.py`. Close games (final margin 10 or less), in
   better in 55% of resamples), while the worst drawdown grows in proportion. Same as betting about 1.4u flat on everything.
 - Takeaway: don't scale stakes by edge size with this model. Set one unit size from bankroll (about 1% or less) and keep it flat.
   Revisit if live results ever show bigger edges winning more often.
+
+## 2026-10-31: how fast the edge disappears, and which way the line moved (Model 1, night-before report, 2024-25 + 2025-26)
+Lines between open and close are interpolated (open + fraction × (close − open), rounded to the half point), so this assumes
+the line moved steadily one way; the live 5-minute history and the Bet Timing sheet will check it.
+- Edge 3+: opening line 53.3% spreads / 54.6% totals; halfway 48.7% / 48.2%; close 48.8% / 48.0%. Raising the bar to 4, 5 or 6+
+  didn't rescue halfway bets (e.g. edge 5+ halfway 51.4% / 48.0%).
+- By direction (halfway line, edge 3+ at that line): moved **against** the bet 43.4% (854 bets, −146u); not moved 48.7%;
+  moved **toward** the model 56.0% (550 bets, +38u). Against: 42.3/45.5% (2024-25 spreads/totals), 40.7/43.5% (2025-26);
+  toward: 63.4/51.1%, 60.6/56.5%. Size of the move against: 0.5 pt 45.0%, 1 pt 45.2%, 1.5-2 43.5%, 2+ 42.5%.
+- NFL backtest (2023-25), same test: against 46.6% / 48.7% (spreads/totals), toward 55.1% / 52.5%.
+- Applied: alerts now flag CAUTION after any half-point move against the bet (was 3 points), in the NBA and NFL trackers.
+- Takeaway: bet at or very near the opener; a later line that has moved against the model is the market knowing something.
+  A line that moved toward the model with edge left is the best later bet.

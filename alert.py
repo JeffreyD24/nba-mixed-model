@@ -72,13 +72,14 @@ def log_link(date, away, home, market, pick, line):
     return f"https://github.com/{repo}/issues/new?" + urllib.parse.urlencode(q)
 
 
-def notify(title, body, priority="high", tags="basketball", link=None):
+def notify(title, body, priority="high", tags="basketball", link=None, dk=None):
     topic = os.environ.get("NTFY_TOPIC")
     if not topic:
-        print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
+        print("NTFY_TOPIC not set; would have sent:", title, "|", body, "| DK:", dk or "-"); return False
+    actions = "; ".join(a for a in (f"view, Bet on DraftKings, {dk}" if dk else "", f"view, Log this bet, {link}" if link else "") if a)
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
                                  headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": priority, "Tags": tags,
-                                          **({"Actions": f"view, Log this bet, {link}"} if link else {})})
+                                          **({"Actions": actions} if actions else {})})
     urllib.request.urlopen(req, timeout=20)
     return True
 
@@ -338,6 +339,17 @@ def main():
                     link = log_link(M["date"], g["away"], g["home"], "spread", team, f"{bet_line:+g}")
                 else:
                     link = log_link(M["date"], g["away"], g["home"], "total", side, f"{cur:g}")
+                dkv = ln.get({"home": "dk_link_home_spread", "away": "dk_link_away_spread", "over": "dk_link_over",
+                              "under": "dk_link_under"}[side]) or ln.get("dk_link_game")
+                dk = dkv if isinstance(dkv, str) and dkv.startswith("http") else None
+                if dk and "outcomes=" in dk:          # the bet-slip link has the line built in (P750 = +7.5, O23350 = 233.5);
+                    import re as _re                  # ESPN's copy can lag, so use the game page if it isn't today's line
+                    m_ = _re.search(r"(?:HC\d+([PN])(\d+)|OU\d+[OU](\d+))_", dk)
+                    if m_:
+                        lv = (int(m_.group(2)) / 100 * (1 if m_.group(1) == "P" else -1)) if m_.group(2) else int(m_.group(3)) / 100
+                        want = (bet_line if market == "spread" else cur)
+                        if abs(lv - float(want)) > 0.01:
+                            gl = ln.get("dk_link_game"); dk = gl if isinstance(gl, str) and gl.startswith("http") else None
                 rec_row = dict(alerted_at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                tip_et=g["tip_et"], market=market, side=side, line=cur, open_line=opn,
                                model=round(margin if market == "spread" else total, 2), edge=round(abs(e), 2),
@@ -351,7 +363,7 @@ def main():
                         ctitle = "CAUTION - " + title
                         if same: cbody = f"ALREADY BET: you logged {same}.\n" + cbody; ctitle = "ALREADY BET - " + ctitle
                         if other: cbody += f"\nYour other bet on this game: {other}."
-                        rec_row["sent"] = notify(ctitle, cbody, priority="default", tags="warning,basketball", link=link)
+                        rec_row["sent"] = notify(ctitle, cbody, priority="default", tags="warning,basketball", link=link, dk=dk)
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
                     continue
@@ -377,7 +389,7 @@ def main():
                 if other:
                     body += f"\nYour other bet on this game: {other}."
                 body = why + body
-                rec_row["sent"] = notify(title, body, priority=prio, link=link)
+                rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk)
                 new.append(rec_row); done.add((g["game_id"], market))
                 print("ALERT:", title, "|", body)
     if new:

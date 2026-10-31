@@ -63,6 +63,18 @@ If Models 2 or 3 fail in a run, the run logs why and carries on; Model 1's picks
 
 Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDOW`. `WINDOW = None` (the current setting) means alerts go out at any hour; it can be set to limit alerts to certain hours.
 
+## Getting alerts sooner, and placing bets faster (ported from the NHL tracker, Oct 31, 2026)
+
+- **Tomorrow's model is ready from the morning.** DraftKings posts NBA lines around 8:30 PM the night before, but GitHub often
+  starts the evening run late (e.g. 11:16 PM on Oct 30). So the morning run now also saves tomorrow's model (`--model-only`:
+  nothing is locked). The 5-minute checks use it with the newest official report, so they can alert as soon as lines post.
+  The evening run still locks tomorrow's scorecard picks from the 8 PM report.
+- **New lines within about a minute:** between 5-minute checks, `opener_watch.py` looks every minute for games where DraftKings
+  has just posted a line; a new line triggers a full check at once. In the backtests the edge was gone by the time the line was
+  halfway to its close, so the first minutes matter.
+- **Bet on DraftKings button:** alerts carry a button that opens DraftKings with that bet on your slip (the link from ESPN).
+  If ESPN's copy of the line is behind DraftKings' current line, the button opens the game page instead. You still confirm the bet.
+
 ## Logging the bets you actually place
 
 - **From an alert:** tap **Log this bet** on the notification. It opens the form with the game, pick, and line filled in. Fix the line if yours was different, add your odds and stake, and submit.

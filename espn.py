@@ -40,12 +40,29 @@ def lines(dates, when=("open", "close", "current")):
                     for w in when:
                         rec[f"{w}_spread"] = _num(((hto.get(w) or {}).get("pointSpread") or {}).get("american"))
                         rec[f"{w}_total"] = _num((((it.get(w) or {}).get("total")) or {}).get("american"))
+                    rec.update(dk_links(it))
                     if np.isnan(rec.get("current_spread", np.nan)): rec["current_spread"] = _num(it.get("spread"))
                     if np.isnan(rec.get("current_total", np.nan)): rec["current_total"] = _num(it.get("overUnder"))
             except Exception as e:
                 rec["error"] = str(e)[:80]
             out.append(rec)
     return pd.DataFrame(out)
+
+
+DK_REL = {"homeSpread": "dk_link_home_spread", "awaySpread": "dk_link_away_spread", "over": "dk_link_over",
+          "under": "dk_link_under", "home": "dk_link_home_ml", "away": "dk_link_away_ml", "game": "dk_link_game"}
+
+
+def dk_links(it):
+    """DraftKings bet-slip links from ESPN's odds item (opening one puts that bet on your DraftKings slip). ESPN wraps them
+    in a referral link; the direct DraftKings address is inside (preurl=...). Ported from nhl-mixed-model."""
+    import urllib.parse
+    out = {}
+    for l in it.get("links", []) or []:
+        rel = (l.get("rel") or [None])[0]; href = l.get("href") or ""
+        if rel not in DK_REL or "draftkings" not in href: continue
+        out[DK_REL[rel]] = urllib.parse.parse_qs(urllib.parse.urlparse(href).query).get("preurl", [href])[0]
+    return out
 
 
 def injury_news(hours=24, now_utc=None):

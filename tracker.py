@@ -430,6 +430,11 @@ def main():
     games = build_features(games, box, rp)
     g, summ = predict(games)
     export_today_model(g, summ, box)
+    if "--model-only" in sys.argv:
+        # morning run, second step: save tomorrow's model early so the 5-minute checks can alert as soon as DraftKings
+        # posts tomorrow's lines (about 8:30 PM the night before). Nothing is locked or graded here; the evening run
+        # still locks tomorrow's scorecard picks from the 8 PM report and overwrites this model file.
+        say(f"Saved the model for {TARGET.date()} for the line checks (no picks locked)."); return
     played = games.dropna(subset=["home_pts"])
     logdf = lock_picks(g, str(played.date.max().date()) if len(played) else "none")
     logdf = attach_lines_and_grade(logdf, games)

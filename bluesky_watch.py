@@ -52,6 +52,13 @@ def players_index():
     for t, p in zip(rep.team, rep.player):
         code = brf.ABBR2GAMES.get(brf.FULL2ABBR.get(t)) if isinstance(t, str) else None
         if code and isinstance(p, str): team_of[brf.key(p)] = (code, " ".join(reversed([x.strip() for x in p.split(",", 1)])) if "," in p else p)
+    # the 5-minute checks save every player on the newest official report: key = "date|team|normalized name"
+    sp = os.path.join(STATE, "injury_status_seen.csv")
+    if os.path.exists(sp):
+        for k in pd.read_csv(sp).key.astype(str):
+            parts = k.split("|")
+            if len(parts) == 3 and parts[2] not in team_of:
+                team_of[parts[2]] = (parts[1], parts[2].title())
     idx = {}
     for mf in models:
         M = json.load(open(os.path.join(STATE, mf)))

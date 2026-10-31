@@ -26,7 +26,11 @@ $dataDir = Join-Path $PSScriptRoot "data"
 New-Item -ItemType Directory -Force -Path $dataDir | Out-Null
 $out = Join-Path $dataDir "$Date.csv"
 $url = "https://api.actionnetwork.com/web/v2/scoreboard/nba?bookIds=15,68,69,2988&date=" + $Date.Replace("-", "")
+$outP = Join-Path $dataDir "periods_$Date.csv"
+$pBooks = @{ "15" = "Consensus"; "30" = "Open"; "68" = "DraftKings"; "69" = "FanDuel"; "71" = "BetRivers"; "75" = "BetMGM"; "79" = "bet365"; "123" = "Caesars"; "2988" = "Fanatics" }
+$periods = @("game", "firsthalf", "secondhalf", "firstquarter")
 $last = @{}       # game|book -> last saved values
+$lastP = @{}      # game|period|book -> last saved values
 $errors = 0
 
 function Pick($list, $side) {
@@ -81,7 +85,39 @@ while ($true) {
         }
     }
     if ($rows.Count -gt 0) { $rows | Export-Csv -Path $out -Append -NoTypeInformation -Encoding UTF8 }
-    Write-Host ("{0:HH:mm:ss}  {1} games live, {2} changes saved" -f (Get-Date), $live.Count, $rows.Count)
+
+    # halves, 1st quarter and team totals at each book (raw values as posted; games not yet final)
+    $prow = @()
+    foreach ($per in $periods) {
+        try {
+            $pu = "https://api.actionnetwork.com/web/v1/scoreboard/nba?period=$per&bookIds=15,30,68,69,71,75,79,123,2988&date=" + $Date.Replace("-", "")
+            $pr = Invoke-RestMethod -Uri $pu -Headers @{ "User-Agent" = "Mozilla/5.0"; "Accept" = "application/json" } -TimeoutSec 20
+        } catch { Write-Host ("{0:HH:mm:ss}  couldn't get {1} lines this time" -f (Get-Date), $per); continue }
+        foreach ($g in @($pr.games)) {
+            if (@("scheduled", "inprogress", "halftime") -notcontains $g.status) { continue }
+            $abbr = @{}; foreach ($t in @($g.teams)) { $abbr[[string]$t.id] = $t.abbr }
+            $hp = 0; $ap = 0
+            foreach ($q in @($g.boxscore.linescore)) { if ($q.home_points) { $hp += $q.home_points }; if ($q.away_points) { $ap += $q.away_points } }
+            foreach ($o in @($g.odds)) {
+                if (-not $o) { continue }
+                $r = [ordered]@{
+                    seen_at_et = $stamp; an_game_id = $g.id; date = $Date
+                    away = $abbr[[string]$g.away_team_id]; home = $abbr[[string]$g.home_team_id]
+                    status = $g.status; game_clock = $g.status_display; away_score = $ap; home_score = $hp
+                    period = $per; book = $pBooks[[string]$o.book_id]
+                    home_spread = $o.spread_home; home_spread_odds = $o.spread_home_line; away_spread_odds = $o.spread_away_line
+                    total = $o.total; over_odds = $o.over; under_odds = $o.under; home_ml = $o.ml_home; away_ml = $o.ml_away
+                    away_team_total = $o.away_total; away_tt_over_odds = $o.away_over; away_tt_under_odds = $o.away_under
+                    home_team_total = $o.home_total; home_tt_over_odds = $o.home_over; home_tt_under_odds = $o.home_under
+                }
+                $key = "$($g.id)|$per|$($o.book_id)"
+                $sig = ($r.Keys | Where-Object { @("seen_at_et", "game_clock", "away_score", "home_score") -notcontains $_ } | ForEach-Object { [string]$r[$_] }) -join ","
+                if ($lastP[$key] -ne $sig) { $lastP[$key] = $sig; $prow += [pscustomobject]$r }
+            }
+        }
+    }
+    if ($prow.Count -gt 0) { $prow | Export-Csv -Path $outP -Append -NoTypeInformation -Encoding UTF8 }
+    Write-Host ("{0:HH:mm:ss}  {1} games live, {2} live-line and {3} half/quarter/team-total changes saved" -f (Get-Date), $live.Count, $rows.Count, $prow.Count)
     if ($games.Count -gt 0 -and $notDone.Count -eq 0) { Write-Host "All games are final. Done for tonight."; break }
     $h = (Get-Date).Hour
     if ($live.Count -eq 0 -and $h -ge 3 -and $h -lt 12) { Write-Host "No games live and it's after 3 AM. Done for tonight."; break }

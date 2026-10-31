@@ -10,6 +10,9 @@ stops by itself when every game is final (or after 3 AM), and you can close the 
   a line, price, score or quarter changes. Columns match `research/live/` in the repo.
 - The laptop needs to be plugged in or charged, connected to the internet, and not shut. Closing the lid usually puts it to sleep
   regardless, so leave it open.
+- Halves, 1st quarter and team totals go to `live_capture\data\periods_YYYY-MM-DD.csv`: one row per game, period
+  (game, firsthalf, secondhalf, firstquarter) and book, at nine books, whenever a line or price changes, for games not yet final.
+  Values are saved exactly as posted (a few books sometimes post odd totals; those get filtered in analysis).
 - Copy the data into the repo next session (Claude can do it from this folder).
 
 Source: Action Network (refreshes about every 30 seconds, so checking faster would gain nothing).

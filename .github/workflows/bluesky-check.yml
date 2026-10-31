@@ -1,0 +1,32 @@
+name: Check reporters on Bluesky (one-time)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bluesky-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: pip install -q pandas
+      - name: Look up each reporter on Bluesky
+        run: python tools/bluesky_check.py .
+      - name: Save
+        run: |
+          git config user.name "nba-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add research/media/bluesky_check.csv
+          git diff --cached --quiet || git commit -q -m "Bluesky check of NBA reporters"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 10; done

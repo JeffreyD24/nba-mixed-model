@@ -20,7 +20,9 @@ import espn                                              # noqa: E402
 import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
-MAX_LINE_MOVE = 3.0                 # caution flag when the line moved this much AGAINST the bet since opening
+MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
+AGAINST_MOVE = 0.5                  # caution when the line moved this much AGAINST the bet since opening. Backtest (2024-26, lines
+                                    # between open and close, edge 3+): moved against 43% winners, toward 56%, unmoved 49%
 JUMP_WINDOW_MIN = 60                # a "jump" is a move within this many minutes
 JUMP_LOG = 1.5                      # log every jump at least this big (builds the database of line moves)
 JUMP_ALERT = 3.0                    # send a "Line jump" notification at this size
@@ -174,6 +176,47 @@ def main():
         return "\nLine history: " + " -> ".join(parts + steps)
 
     news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
+    # ---- key players: undecided injury statuses and status changes
+    spath = os.path.join(STATE, "injury_status_seen.csv")
+    SEEN = pd.read_csv(spath) if os.path.exists(spath) else pd.DataFrame(columns=["key", "status", "snapshot"])
+    seen = dict(zip(SEEN.key, SEEN.status)); seen_new = {}
+    kpath = os.path.join(STATE, "key_player_alerts.csv")
+    KP = pd.read_csv(kpath) if os.path.exists(kpath) else pd.DataFrame(columns=["key"])
+    kp_done = set(KP.key); kp_new = []
+    dec_rows = []
+    PENDING = ("Questionable", "Doubtful", "Probable")
+    KEY_SWING = 1.5        # model points (margin or total) a player is worth if he sits: "key player"
+
+    def player_swings(M, rep, g):
+        """[(player, team, status, p_miss, home-margin change if he sits, total change if he sits)] for both teams' listed players"""
+        out = []
+        for team in (g["home"], g["away"]):
+            r = rep[rep.team_g == team] if len(rep) else rep
+            for p, st in zip(r.player, r.status) if len(r) else []:
+                v = M["players"].get(brf.key(p))
+                if not v: continue
+                dm = M["c_off"] * v[0] - M["c_def"] * v[1]           # his team's margin if he sits (vs plays)
+                dt = M["c_off"] * v[0] + M["c_def"] * v[1]           # game total if he sits
+                out.append((p, team, st, M["p_miss"].get(st, 0.0), dm if team == g["home"] else -dm, dt))
+        return out
+
+    def fnum(x, signed=False):
+        try: return f"{float(x):+g}" if signed else f"{float(x):g}"
+        except (TypeError, ValueError): return "n/a"
+
+    def name(p):
+        return " ".join(reversed([x.strip() for x in p.split(",", 1)])) if "," in p else p
+
+    def pending_text(sw, g):
+        """undecided players worth 0.75+ model points, biggest first"""
+        rows = [x for x in sw if x[2] in PENDING and max(abs(x[4]), abs(x[5])) >= 0.75]
+        rows.sort(key=lambda x: -max(abs(x[4]), abs(x[5])))
+        if not rows: return ""
+        H = g["home"].upper(); parts = []
+        for p, team, st, pm, dmh, dt in rows[:4]:
+            parts.append(f"{name(p)} ({team.upper()}, {st.lower()}): if he sits, model {H} {dmh:+.1f}, total {dt:+.1f} "
+                         f"(already counts a {pm:.0%} chance)")
+        return "\nUndecided: " + "; ".join(parts) + "."
     mpath = os.path.join(STATE, "market_moves.csv")
     MV = pd.read_csv(mpath) if os.path.exists(mpath) else pd.DataFrame(columns=["game_id", "market"])
     moved_done = set(zip(MV.game_id, MV.market)); moves_new = []
@@ -206,6 +249,38 @@ def main():
             n_games += 1
             ln = line.iloc[0]
             h, a = missing(g["home"]), missing(g["away"])
+            SW = player_swings(M, rep, g) if snap else []
+            for p, team, st, pm, dmh, dt in SW:
+                k = f"{M['date']}|{team}|{brf.key(p)}"
+                prev = seen.get(k)
+                if prev != st:
+                    seen_new[k] = (st, snap)
+                    if prev is not None and max(abs(dmh), abs(dt)) >= 0.5:
+                        dec_rows.append(dict(detected_at_et=str(NOW)[:16], report=snap, game_id=g["game_id"], date=M["date"],
+                                             away=g["away"], home=g["home"], tip_et=g["tip_et"], team=team, player=name(p),
+                                             from_status=prev, to_status=st, p_miss_from=M["p_miss"].get(prev, 0.0), p_miss_to=pm,
+                                             home_margin_if_sits=round(dmh, 2), total_if_sits=round(dt, 2),
+                                             dk_spread_now=ln.get("current_spread"), dk_total_now=ln.get("current_total"),
+                                             line_source=ln.get("line_source")))
+                        if max(abs(dmh), abs(dt)) >= KEY_SWING and pd.Timestamp(g["tip_et"]) > NOW:
+                            H, Aw = g["home"].upper(), g["away"].upper()
+                            notify(f"Injury decision: {name(p)} {st.upper()} ({Aw} @ {H})",
+                                   f"{name(p)} ({team.upper()}) changed from {prev.lower()} to {st.lower()} on the {snap} report. "
+                                   f"Worth {dmh:+.1f} to {H}'s margin and {dt:+.1f} to the total if he sits (model). "
+                                   f"DraftKings now: {H} {fnum(ln.get('current_spread'), True)}, total {fnum(ln.get('current_total'))}. "
+                                   "If the line hasn't moved yet, the bet alerts below (if any) are ahead of the market." + news_for(g),
+                                   priority="high" if st in ("Out", "Available") else "default", tags="hospital")
+            for p, team, st, pm, dmh, dt in SW:
+                k = f"{M['date']}|{g['game_id']}|{brf.key(p)}|{st}"
+                if st in PENDING and max(abs(dmh), abs(dt)) >= KEY_SWING and k not in kp_done and pd.Timestamp(g["tip_et"]) > NOW:
+                    H, Aw = g["home"].upper(), g["away"].upper()
+                    notify(f"Key decision pending: {name(p)} {st.lower()} ({Aw} @ {H})",
+                           f"{name(p)} ({team.upper()}) is {st.lower()} on the {snap} report. If he sits, the model moves {H} {dmh:+.1f} "
+                           f"and the total {dt:+.1f} (it already counts a {pm:.0%} chance he sits). Expect the line to move when "
+                           f"his status is decided. DraftKings now: {H} {fnum(ln.get('current_spread'), True)}, total "
+                           f"{fnum(ln.get('current_total'))}." + news_for(g), priority="low", tags="hourglass")
+                    kp_done.add(k); kp_new.append(dict(key=k, sent_at_et=str(NOW)[:16], game_id=g["game_id"], player=name(p), status=st,
+                                                       home_margin_if_sits=round(dmh, 2), total_if_sits=round(dt, 2)))
             if h is None or a is None or not fresh:
                 margin, total = g["morning_margin"], g["morning_total"]; used = f"as of {M.get('made_at_et', 'the last model run')[:16]}"
             else:
@@ -256,8 +331,9 @@ def main():
                 skip = None
                 if not fresh: skip = "no current injury report"
                 elif h is None or a is None: skip = "a team has not filed its injury report"
-                elif opn is not None and not pd.isna(opn) and abs(cur - opn) >= MAX_LINE_MOVE and against_us(market, side, cur - opn):
-                    skip = f"line moved {abs(cur - opn):.1f} pts against this bet since open"
+                elif opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE and against_us(market, side, cur - opn):
+                    skip = (f"line moved {abs(cur - opn):.1f} pts against this bet since open (in backtests, bets after the line "
+                            f"moved against the model won only about 43%)")
                 if market == "spread":
                     link = log_link(M["date"], g["away"], g["home"], "spread", team, f"{bet_line:+g}")
                 else:
@@ -270,7 +346,7 @@ def main():
                     # caution alert: still sent, once per game and market, flagged with the reason
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
-                                 f"\nInjury report: {used}. Caution alerts so far: {crec}." + hist_txt + news_for(g))
+                                 f"\nInjury report: {used}. Caution alerts so far: {crec}." + pending_text(SW, g) + hist_txt + news_for(g))
                         same, other = bets_note(M["date"], g["home"], g["away"], market)
                         ctitle = "CAUTION - " + title
                         if same: cbody = f"ALREADY BET: you logged {same}.\n" + cbody; ctitle = "ALREADY BET - " + ctitle
@@ -282,7 +358,7 @@ def main():
                 if toward:
                     body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
                     moved_done.add((g["game_id"], market))
-                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + hist_txt + news_for(g)
+                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + pending_text(SW, g) + hist_txt + news_for(g)
                 prio = "high"; why = ""
                 cb = caution_before(g["game_id"], market)
                 if cb is not None:      # a caution went out earlier: say why this one follows it
@@ -365,6 +441,17 @@ def main():
     if jumps_new:
         pd.concat([J, pd.DataFrame(jumps_new)], ignore_index=True).to_csv(jpath, index=False)
 
+    if seen_new:
+        S2 = pd.concat([SEEN[~SEEN.key.isin(seen_new)], pd.DataFrame([dict(key=k, status=v[0], snapshot=v[1]) for k, v in seen_new.items()])])
+        S2 = S2[S2.key.str[:10] >= str((NOW - pd.Timedelta(days=3)).date())]          # keep a few days
+        S2.to_csv(spath, index=False)
+    if kp_new:
+        pd.concat([KP, pd.DataFrame(kp_new)], ignore_index=True).to_csv(kpath, index=False)
+    if dec_rows:
+        os.makedirs(os.path.join(W, "research"), exist_ok=True)
+        dp = os.path.join(W, "research", "injury_decisions.csv")
+        pd.DataFrame(dec_rows).to_csv(dp, mode="a", header=not os.path.exists(dp), index=False)
+        print(f"Injury status changes logged: {len(dec_rows)}")
     if hist_new:
         pd.concat([H_, pd.DataFrame(hist_new)], ignore_index=True).to_csv(hpath, index=False)
     if moves_new:

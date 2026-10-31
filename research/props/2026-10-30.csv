@@ -14802,3 +14802,15 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-30 22:20,22600024,2026-10-30,"Total Points, Rebounds, and Assists",3936299,Jamal Murray,,33.5,-110.0,33.5,-109.0,2026-10-31T05:10Z,over
 2026-10-30 22:20,22600024,2026-10-30,"Total Points, Rebounds, and Assists",3936299,Jamal Murray,,33.5,-119.0,33.5,-121.0,2026-10-31T05:10Z,under
 2026-10-30 22:20,22600024,2026-10-30,"Total Points, Rebounds, and Assists",4278402,Jordan Goodwin,,12.5,-109.0,13.5,-124.0,2026-10-31T05:10Z,under
+2026-10-30 22:25,22600023,2026-10-30,Total Rebounds,2990969,Georges Niang,,2.5,115.0,2.5,-143.0,2026-10-30T23:29Z,over
+2026-10-30 22:25,22600023,2026-10-30,Total Rebounds,2990969,Georges Niang,,2.5,-151.0,2.5,108.0,2026-10-30T23:29Z,under
+2026-10-30 22:25,22600023,2026-10-30,Total Rebounds,3945274,Luka Doncic,,7.5,111.0,7.5,107.0,2026-10-31T05:09Z,over
+2026-10-30 22:25,22600023,2026-10-30,Total Rebounds,3945274,Luka Doncic,,7.5,-147.0,7.5,-140.0,2026-10-31T05:09Z,under
+2026-10-30 22:25,22600023,2026-10-30,Total Points and Rebounds,2990969,Georges Niang,,9.5,-116.0,10.5,-110.0,2026-10-30T23:29Z,over
+2026-10-30 22:25,22600023,2026-10-30,Total Points and Rebounds,2990969,Georges Niang,,9.5,-113.0,10.5,-120.0,2026-10-30T23:29Z,under
+2026-10-30 22:25,22600023,2026-10-30,Total Points and Rebounds,4277811,Collin Sexton,,13.5,-114.0,13.5,-110.0,2026-10-31T03:09Z,over
+2026-10-30 22:25,22600023,2026-10-30,Total Points and Rebounds,4277811,Collin Sexton,,13.5,-116.0,13.5,-120.0,2026-10-31T03:09Z,under
+2026-10-30 22:25,22600023,2026-10-30,Total Assists and Rebounds,4277811,Collin Sexton,,3.5,-154.0,3.5,-130.0,2026-10-31T03:09Z,over
+2026-10-30 22:25,22600023,2026-10-30,Total Assists and Rebounds,4277811,Collin Sexton,,3.5,116.0,3.5,-101.0,2026-10-31T03:09Z,under
+2026-10-30 22:25,22600023,2026-10-30,"Total Points, Rebounds, and Assists",2990969,Georges Niang,,11.5,-101.0,12.5,-103.0,2026-10-30T23:29Z,over
+2026-10-30 22:25,22600023,2026-10-30,"Total Points, Rebounds, and Assists",2990969,Georges Niang,,11.5,-131.0,12.5,-128.0,2026-10-30T23:29Z,under

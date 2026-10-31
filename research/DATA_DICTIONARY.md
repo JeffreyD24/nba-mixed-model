@@ -76,6 +76,12 @@ Questions: which coaches shorten or lengthen their rotation in second halves, on
 how starters' 4th-quarter minutes change with the score; and whether 2nd-half and team-total lines account for it.
 Back-to-backs, rest and home/away come from joining on `game_id` / date with the schedule.
 
+### `research/timeline/YYYY-MM-DD.csv`: every game line from the moment it's posted (Action Network)
+Game spread, total, moneyline and prices at DraftKings, FanDuel, Fanatics, Consensus and Action Network's Open, for today and the
+next two days, logged whether or not the model has run yet (so the first minutes after a line is posted aren't missed).
+`book_changed_utc` is the book's own last-change time (exact); `seen_at_et` is when the check saw it. Keyed by `an_game_id`
+(Action Network's ID) plus date, away, home. This is the source for the bet-timing grades.
+
 ### `research/check_log.csv` and `research/errors.csv`: coverage checks
 `check_log.csv` has one row per 5-minute check: when it ran, how many seconds the research logging took, and how many rows
 each file got. A missing time is a check that didn't run. `errors.csv` records any fetch that failed (which source, which game,
@@ -90,6 +96,7 @@ the error), so gaps in the data can be explained rather than mistaken for "nothi
 | `line_jumps.csv` | fast moves (1.5+ points within 60 minutes): before/after, how long the line had been steady, minutes the move took, hours to tip, toward/away from the model, news in the window, then graded (did it keep moving to the close, did the result land on the side of the move) |
 | `market_moves.csv` | moves of 3+ points toward the model's side ("Market agrees") |
 | `alerts.csv` | every phone alert, including caution alerts with reasons, graded, with `closing_line` and `clv_points` |
+| `bet_timing.csv` | each finished game and market graded at 11 time points: the opening line, 15 and 30 minutes and 1, 2, 4 and 8 hours after it, 3 hours, 1 hour and 30 minutes before tip, and the close. Shows the DraftKings line and price at each point, how far it had moved, the model's edge, and two grades: `kept_*` (the side the model liked at the open, bet at that time's line and price) and `fresh_*` (a bet only if the model is still 3+ points off then). `open_time_exact` is true when we saw the line at the moment DraftKings posted it |
 | `my_bets.csv` | bets you logged, graded at your line, odds and stake, with `closing_line_your_side` and `clv_points` |
 | `injury_reports_2026_27.csv` | every parsed official NBA injury report |
 | `model_YYYY-MM-DD.json` | the fitted model state used by the intraday checks |

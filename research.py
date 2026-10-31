@@ -406,3 +406,40 @@ def minutes_log(now, day, games=None):
         old = pd.read_csv(path) if os.path.exists(path) else pd.DataFrame()
         pd.concat([old, new], ignore_index=True).to_csv(path, index=False)   # rewrite: overtime adds columns
     return n
+
+
+# ---------------- line timeline from the first posting (Action Network), independent of the model ----------------
+TIMELINE_BOOKS = {68: "DraftKings", 69: "FanDuel", 2988: "Fanatics", 15: "Consensus", 30: "Open"}
+
+
+def timeline_snapshot(now, days_ahead=2):
+    """Game lines at a few books for today and the next days, from the first time they're posted, whether or not
+    the model has run yet. book_changed_utc is the book's own last-change time (exact), seen_at_et is when we saw it."""
+    import actionnet
+    n = 0
+    os.makedirs(os.path.join(R, "timeline"), exist_ok=True)
+    base = (now - pd.Timedelta(hours=6)).normalize()
+    for k in range(days_ahead + 1):
+        day = base + pd.Timedelta(days=k)
+        d = actionnet._get(f"https://api.actionnetwork.com/web/v1/scoreboard/nba?period=game"
+                           f"&bookIds={','.join(map(str, TIMELINE_BOOKS))}&date={day:%Y%m%d}")
+        rows = []
+        for g in d.get("games", []) or []:
+            if g.get("status") not in ("scheduled", None): continue
+            t = {x["id"]: espn.ESPN2.get(x.get("abbr")) for x in g.get("teams", [])}
+            for o in g.get("odds", []) or []:
+                tot = _num(o.get("total"))
+                if not np.isnan(tot) and tot < 150: tot = np.nan
+                rows.append(dict(seen_at_et=str(now)[:16], date=str(day.date()), an_game_id=g.get("id"),
+                                 away=t.get(g["away_team_id"]), home=t.get(g["home_team_id"]), tip_utc=g.get("start_time"),
+                                 book=TIMELINE_BOOKS.get(o.get("book_id"), o.get("book_id")),
+                                 home_spread=_num(o.get("spread_home")), home_spread_odds=_num(o.get("spread_home_line")),
+                                 away_spread_odds=_num(o.get("spread_away_line")), total=tot,
+                                 over_odds=_num(o.get("over")) if not np.isnan(tot) else np.nan,
+                                 under_odds=_num(o.get("under")) if not np.isnan(tot) else np.nan,
+                                 home_ml=_num(o.get("ml_home")), away_ml=_num(o.get("ml_away")),
+                                 book_changed_utc=o.get("inserted")))
+        n += _append_changed(os.path.join(R, "timeline", f"{day.date()}.csv"), rows, ["an_game_id", "book"],
+                             ["home_spread", "home_spread_odds", "away_spread_odds", "total", "over_odds", "under_odds",
+                              "home_ml", "away_ml"])
+    return n

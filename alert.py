@@ -95,7 +95,14 @@ def main():
     if not FORCE and not in_window():
         print(f"{NOW:%H:%M} ET is outside the alert window; nothing to do."); return
     models = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= str(TODAY.date()))
-    if not models: print("No model saved for today or tomorrow yet."); return
+    if not models:
+        print("No model saved for today or tomorrow yet.")
+        try:      # still record lines from the moment they're posted
+            import research
+            research.init(W); print(f"Line timeline: {research.timeline_snapshot(NOW)} changes.")
+        except Exception as e:
+            print("Line timeline logging skipped:", type(e).__name__, str(e)[:120])
+        return
     snap, snap_time, rows = latest_report()
     allrep = pd.DataFrame(rows, columns=["snapshot", "as_of", "game_date", "game_time_et", "matchup", "team", "player", "status"])
     if len(allrep):
@@ -365,13 +372,18 @@ def main():
                     os.makedirs(os.path.dirname(stamp), exist_ok=True); open(stamp, "w").write(str(NOW))
             except Exception as e:
                 print("Props logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "props " + M3["date"], e)
+        n_tl = 0
+        try:
+            n_tl = research.timeline_snapshot(NOW)
+        except Exception as e:
+            print("Line timeline logging skipped:", type(e).__name__, str(e)[:120]); research.log_error(NOW, "timeline", e)
         n_news = research.news_log(NOW, NEWS) if NEWS is not None else 0
         n_mod = research.model_snapshot(NOW, model_rows)
         print(f"Research log: {n_odds} odds changes, {n_pred} predictor snapshots, {n_spl} betting-split changes, "
-              f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_live} live line changes, {n_per} half/quarter/team-total changes, {n_ls} final linescores, {n_min} games of minutes by quarter, {n_news} new news notes, {n_mod} model changes.")
+              f"{n_bk} book line changes, {n_pm} player prop changes, {n_po} other prop changes, {n_live} live line changes, {n_per} half/quarter/team-total changes, {n_ls} final linescores, {n_min} games of minutes by quarter, {n_tl} line timeline changes, {n_news} new news notes, {n_mod} model changes.")
         cl = os.path.join(W, "research", "check_log.csv")
         row = pd.DataFrame([dict(at_et=str(NOW)[:16], research_seconds=round(_time.time() - _t0), odds=n_odds, predictor=n_pred,
-                                 splits=n_spl, books=n_bk, props=n_pm, props_other=n_po, live=n_live, periods=n_per, linescores=n_ls, minutes=n_min, news=n_news, model=n_mod)])
+                                 splits=n_spl, books=n_bk, props=n_pm, props_other=n_po, live=n_live, periods=n_per, linescores=n_ls, minutes=n_min, timeline=n_tl, news=n_news, model=n_mod)])
         old_cl = pd.read_csv(cl) if os.path.exists(cl) else None
         if old_cl is not None and list(old_cl.columns) != list(row.columns):
             pd.concat([old_cl, row], ignore_index=True).to_csv(cl, index=False)     # new column: rewrite once

@@ -383,6 +383,11 @@ def main():
     grade_alerts(games)
     grade_my_bets(games, logdf)
     grade_jumps(games, logdf)
+    try:
+        import timing
+        tt = timing.grade(W, logdf); say(f"Bet timing: graded {tt.game_id.nunique() if len(tt) else 0} games at up to 11 time points.")
+    except Exception as e:
+        say(f"Bet timing skipped: {type(e).__name__} {str(e)[:120]}")
     logdf.sort_values(["date", "tip_et"]).to_csv(os.path.join(STATE, "picks_log.csv"), index=False)
     today = logdf[(logdf.date == TARGET) & (logdf.pick_type == "live")]
     json.dump({"today": [dict(home=r.home, away=r.away, tip=str(r.tip_et), pred_margin=round(r.pred_margin, 1),

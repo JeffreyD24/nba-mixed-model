@@ -217,6 +217,9 @@ def main():
 
     def notify(title, body, url):
         """phone alert through ntfy (repository secret NTFY_TOPIC), with a button that opens the post"""
+        from alert import BET_ONLY      # phone alerts only for bets (Nov 1, 2026): reporter posts are logged, not pushed
+        if BET_ONLY:
+            print("Logged only (not pushed):", title); return
         topic = os.environ.get("NTFY_TOPIC")
         if not topic:
             print("NTFY_TOPIC not set; would have sent:", title, "|", body); return

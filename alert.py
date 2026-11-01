@@ -21,7 +21,8 @@ import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
-REMIND_AFTER_MIN = 30              # reminder if an alert's bet still isn't logged this many minutes later (once, before tip)
+BET_ONLY = True                     # phone alerts only for BET verdicts and the DON'T BET follow-up (Nov 1, 2026);
+                                    # everything else is still logged, just not pushed. False = the old behaviour.
 FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen
 AGAINST_MOVE = 0.5                  # caution when the line moved this much AGAINST the bet since opening. Backtest (2024-26, lines
                                     # between open and close, edge 3+): moved against 43% winners, toward 56%, unmoved 49%
@@ -74,7 +75,10 @@ def log_link(date, away, home, market, pick, line):
     return f"https://github.com/{repo}/issues/new?" + urllib.parse.urlencode(q)
 
 
-def notify(title, body, priority="high", tags="basketball", link=None, dk=None):
+def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info"):
+    """kind: 'bet' (a BET verdict), 'stop' (DON'T BET follow-up), 'test', or 'info' (not pushed while BET_ONLY)"""
+    if BET_ONLY and kind not in ("bet", "stop", "test"):
+        print("Logged only (not pushed):", title); return False
     topic = os.environ.get("NTFY_TOPIC")
     if not topic:
         print("NTFY_TOPIC not set; would have sent:", title, "|", body, "| DK:", dk or "-"); return False
@@ -90,7 +94,7 @@ def main():
     if "--test" in sys.argv:
         topic = os.environ.get("NTFY_TOPIC") or ""
         try:
-            ok = notify("Test alert: NBA tracker connected", "If you can read this, phone alerts from your GitHub tracker are working. No bet here.")
+            ok = notify("Test alert: NBA tracker connected", "If you can read this, phone alerts from your GitHub tracker are working. No bet here.", kind="test")
             msg = (f"sent OK to a topic {len(topic)} characters long, starting with '{topic[:2]}'" if ok
                    else "NOT sent: the NTFY_TOPIC secret is missing or empty")
         except Exception as e:
@@ -118,6 +122,12 @@ def main():
     apath = os.path.join(STATE, "alerts.csv")
     A = pd.read_csv(apath) if os.path.exists(apath) else pd.DataFrame(columns=["game_id", "market"])
     sent_ok = A[A["skipped"].isna()] if len(A) and "skipped" in A else A
+    if len(A) and "verdict" in A and "sent" in A:
+        pushed = sent_ok.sent.astype(str).isin(["True", "1", "1.0"]) | sent_ok.verdict.isna()
+        quiet = set(zip(sent_ok[~pushed].game_id, sent_ok[~pushed].market, sent_ok[~pushed].verdict, sent_ok[~pushed].side))
+        sent_ok = sent_ok[pushed]
+    else:
+        quiet = set()
     done = set(zip(sent_ok.game_id, sent_ok.market))
     news_done = set((r.game_id, r.market, r.news_key) for r in A.itertuples()
                     if isinstance(getattr(r, "news_key", None), str)) if len(A) else set()
@@ -547,46 +557,55 @@ def main():
                            "before betting.\n") + why
                 body = f"{vd}: {vr}.\n{RULE_TXT}\n" + why + body
                 title = f"[{vd}] " + title; rec_row["verdict"] = vd
-                if vd == "PASS": prio = "default"
-                rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk)
+                if vd != "BET":           # not a bet: logged once per verdict and side, not pushed; a later BET can still alert
+                    qk = (g["game_id"], market, vd, side)
+                    if qk in quiet: continue
+                    quiet.add(qk); rec_row["sent"] = False; new.append(rec_row)
+                    print("LOGGED ONLY (not a bet):", title, "|", vr); continue
+                rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk, kind="bet")
                 new.append(rec_row); done.add((g["game_id"], market))
                 if is_news: news_done.add((g["game_id"], market, NK))
                 print("ALERT:", title, "|", body)
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)
-    # ---- reminders: an alert's bet still not logged REMIND_AFTER_MIN later (you log every bet you place)
+    # ---- DON'T BET follow-up: a pushed BET alert, still not logged, that stopped being a bet before tip
     n_rem = 0
     if len(A) and "sent" in A:
-        if "reminded_at_et" not in A: A["reminded_at_et"] = np.nan
-        A["reminded_at_et"] = A["reminded_at_et"].astype(object)
+        if "stopped_at_et" not in A: A["stopped_at_et"] = np.nan
+        A["stopped_at_et"] = A["stopped_at_et"].astype(object)
         if "verdict" not in A: A["verdict"] = np.nan
-        # only alerts that carried a verdict (sent since reminders began), latest per game and market
-        last = A[A.sent.astype(str).isin(["True", "1", "1.0"]) & A.verdict.notna()].groupby(["game_id", "market"]).tail(1)
+        last = A[A.sent.astype(str).isin(["True", "1", "1.0"]) & (A.verdict == "BET")].groupby(["game_id", "market"]).tail(1)
         for i, r in last.iterrows():
-            k = (r.game_id, r.market); now_ = LINE_NOW.get(k)
-            if now_ is None or isinstance(r.get("reminded_at_et"), str): continue
-            if A[(A.game_id == r.game_id) & (A.market == r.market)].reminded_at_et.astype(str).str.len().gt(3).any(): continue
-            if NOW - pd.Timestamp(r.alerted_at_et) < pd.Timedelta(minutes=REMIND_AFTER_MIN): continue
+            now_ = LINE_NOW.get((r.game_id, r.market))
+            if now_ is None or isinstance(r.get("stopped_at_et"), str): continue
             if pd.Timestamp(now_["tip_et"]) <= NOW: continue
-            if str(r.get("verdict")) == "PASS": continue
             logged = len(MYB) and ((MYB.date.astype(str) == str(r.date)) & (MYB.home == r.home) & (MYB.away == r.away) & (MYB.market == r.market)).any()
             if logged: continue
             cur, opn, e_, side_ = now_["cur"], now_["opn"], now_["e"], now_["side"]
-            vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
             H, Aw = now_["H"], now_["Aw"]
-            if r.market == "spread":
-                bl = cur if side_ == "home" else -cur; what = f"{H if side_ == 'home' else Aw} {bl:+g}"
+            if side_ != r.side:
+                why = "the model now likes the OTHER side"
+            elif abs(e_) < THRESHOLD:
+                why = f"the edge is down to {abs(e_):.1f} pts (under {THRESHOLD:g})"
             else:
-                what = f"{side_.upper()} {cur:g}"
-            then = f"{float(r.line):+g}" if r.market == "spread" else f"{float(r.line):g}"
-            changed = "" if float(cur) == float(r.line) else f" The line was {then} at the alert."
-            switched = "" if side_ == r.side else " NOTE: the model's side has flipped since the alert."
-            body = (f"{vd}: {vr}.\n{RULE_TXT}\nNo bet logged yet for the alert at {pd.Timestamp(r.alerted_at_et):%-I:%M %p}. "
-                    f"Now: {what}, edge {abs(e_):.1f} pts (model {now_['model']:.1f}).{changed}{switched}" + now_["hist"])
-            notify(f"[{vd}] REMINDER - {what}: {Aw} @ {H}, {now_['tip']}", body,
-                   priority="default" if vd != "PASS" else "low", tags="alarm_clock")
-            A.loc[i, "reminded_at_et"] = str(NOW)[:16]; n_rem += 1
-            print("REMINDER:", what, vd, vr)
+                # only a real change stops a bet: the rule now says PASS (moved 0.5+ against since the open), or the line moved
+                # 0.5+ against this bet since the alert. An opener that just got older is not a reason.
+                vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
+                mv = float(cur) - float(r.line)
+                if vd == "PASS": why = vr
+                elif abs(mv) >= AGAINST_MOVE and against_us(r.market, side_, mv):
+                    why = f"the line moved {abs(mv):.1f} pts against this bet since the alert ({float(r.line):g} -> {float(cur):g})"
+                else: continue
+            if r.market == "spread":
+                bl = float(r.line) if r.side == "home" else -float(r.line); what = f"{H if r.side == 'home' else Aw} {bl:+g}"
+                nowtxt = f"{H} {cur:+g}"
+            else:
+                what = f"{str(r.side).upper()} {float(r.line):g}"; nowtxt = f"{cur:g}"
+            body = (f"DON'T BET: {why}.\nThe BET alert at {pd.Timestamp(r.alerted_at_et):%-I:%M %p} was {what}; no bet is logged for it. "
+                    f"DraftKings now: {nowtxt}, model {now_['model']:.1f}. If you did bet it, log it and ignore this." + now_["hist"])
+            notify(f"DON'T BET - {what}: {Aw} @ {H}, {now_['tip']}", body, priority="high", tags="no_entry", kind="stop")
+            A.loc[i, "stopped_at_et"] = str(NOW)[:16]; n_rem += 1
+            print("DON'T BET:", what, "|", why)
     if new or n_rem:
         A.to_csv(apath, index=False)
     # ---- line jumps: fast moves, logged for research and alerted when large

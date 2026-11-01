@@ -1,0 +1,27 @@
+name: GDP paper tracker
+on:
+  schedule:
+    - cron: "17 0,6,12,18 * * *"     # every 6 hours (UTC); one run lands in each window before a release
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: econ-gdp
+  cancel-in-progress: false
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas openpyxl
+      - run: python econ/gdp_tracker.py
+      - name: Save
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add econ/live
+          git diff --cached --quiet && exit 0
+          git commit -q -m "GDP tracker $(TZ=America/New_York date '+%F %H:%M')"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 10; done

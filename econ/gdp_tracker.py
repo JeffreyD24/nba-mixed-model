@@ -94,6 +94,9 @@ def main():
     M["strike"] = M.yes_sub_title.str.extract(r"(-?\d+(?:\.\d+)?)%")[0].astype(float)
     M["close"] = pd.to_datetime(M.close_time, utc=True, format="ISO8601").dt.tz_convert("America/New_York").dt.tz_localize(None)
     NC = {q: g.set_index("date").nowcast for q, g in TA.groupby("quarter")}
+    print("Open Kalshi GDP events:", ", ".join(f"{e} (closes {c:%Y-%m-%d})" for e, c in
+                                               M.groupby("event_ticker").close.min().items()))
+    lq = max(NC); print(f"Latest GDPNow: {float(NC[lq].iloc[-1]):.2f}% for quarter ending {lq:%Y-%m-%d}, dated {NC[lq].index[-1]:%Y-%m-%d}")
     rel = dict(zip(TR.quarter, TR.release)); adv = dict(zip(TR.quarter, TR.advance))
     snaps, trades = [], []
     P = pd.read_csv(PAPER) if os.path.exists(PAPER) else pd.DataFrame(columns=["ticker", "window_h"])

@@ -35,7 +35,8 @@ TEAM_CODE = {"Atlanta": "atl", "Boston": "bos", "Brooklyn": "bkn", "Charlotte": 
 # clear statements of a final decision. A sentence counts only if it names the player, matches one side and not the
 # other, and has no hedge word. The model then uses it until the next official report (alert.py, state/news_overrides.json).
 OUT_RX = re.compile(r"\b(ruled out|will not play|won'?t play|not playing|(?:is|are) out\b(?! of)|will be out\b(?! of)|out tonight|"
-                    r"resting|will rest|to rest|sit(?:ting|s)? out|dnp|inactive|will miss|won'?t be available|not available)", re.I)
+                    r"resting|will rest|to rest|sit(?:ting|s)? out|dnp|inactive|will miss|won'?t be available|not available|sidelined|"
+                    r"out for (?:tonight|today|the game))", re.I)
 IN_RX = re.compile(r"\b(will play|is playing|are playing|available to play|(?:is|are|will be) available|cleared to play|will return|"
                    r"returns tonight|will start|is starting|good to go|in the lineup|upgraded to available|will suit up)\b", re.I)
 HEDGE_RX = re.compile(r"\b(questionable|doubtful|probable|game[- ]time|gtd|likely|unlikely|could|might|may|hope|hoping|"
@@ -106,14 +107,40 @@ def mentioned(text, team, idx):
     return out
 
 
+def without_player(sent, k):
+    """True if the sentence says a team is without this player: "without" right before his full or last name"""
+    t = re.sub(r"[^a-z' ]", " ", sent.lower())
+    names = [k] + ([k.split()[-1]] if " " in k else [])
+    return any(re.search(rf"\bwithout\s+(?:(?:star|forward|guard|center)\s+)?{re.escape(n)}\b", t) for n in names)
+
+
+def target_game(k, idx, now, day=None):
+    """the game a post is about for this player: the day it names, else his next game not started (None if none)"""
+    up = sorted((gm for gm in idx[k] if pd.Timestamp(gm["game"]["tip_et"]) > now and (day is None or gm["date"] == day)),
+                key=lambda gm: gm["game"]["tip_et"])
+    return up[0] if up else None
+
+
+def player_day(text, k, now):
+    """the day named in the first sentence that mentions this player ('tonight', 'Monday'...), else None"""
+    last = k.split()[-1]
+    for sent in re.split(r"(?<=[.!?;])\s+|\n", text):
+        if last in sent.lower():
+            d = day_hint(sent, now)
+            if d: return d
+    return None
+
+
 def decisions(text, team, idx, now=None):
     """[(player key, ('Out' or 'Available', game date or None))] for clear statements in a post"""
     out = {}
     now = now if now is not None else pd.Timestamp.now(tz=ET).tz_localize(None)
     for sent in re.split(r"(?<=[.!?;])\s+|\n", text):
-        o, i = bool(OUT_RX.search(sent)), bool(IN_RX.search(sent))
-        if o == i or HEDGE_RX.search(sent): continue
+        if HEDGE_RX.search(sent): continue
+        o_all, i = bool(OUT_RX.search(sent)), bool(IN_RX.search(sent))
         for k, _ in mentioned(sent, team, idx):
+            o = o_all or without_player(sent, k)     # "Raptors without Leonard (knee)"
+            if o == i: continue
             out[k] = ("Out" if o else "Available", day_hint(sent, now))
     return list(out.items())
 
@@ -140,18 +167,17 @@ def process(posts, watch, seen, idx, now, notify=None, overrides=None):
         dec = dict(decisions(text, team, idx, now)) if inj else {}
         for k, (st, day) in list(dec.items()):   # news the model should use now: that day's game, else his next one not started
             dec[k] = st
-            up = sorted((gm for gm in idx[k] if pd.Timestamp(gm["game"]["tip_et"]) > now and (day is None or gm["date"] == day)),
-                        key=lambda gm: gm["game"]["tip_et"])
-            if not up: continue
-            gm = up[0]; ok = f"{gm['date']}|{gm['team']}|{k}"
+            gm = target_game(k, idx, now, day)
+            if gm is None: continue
+            ok = f"{gm['date']}|{gm['team']}|{k}"
             if overrides.get(ok, {}).get("status") == st: continue
             overrides[ok] = dict(status=st, player=gm["name"], game_id=gm["game"]["game_id"], reporter=w.get("name", handle),
                                  posted_at_et=str(created)[:19], seen_at_et=str(now)[:19], url=rows[-1]["url"], text=text[:300],
                                  swing=round(max(abs(gm["home_margin_if_sits"]), abs(gm["total_if_sits"])), 2), new=True)
-        for k, games in names:
-            for gm in games:
+        for k, games in names:      # alert only for the game the post is about (named day, else his next game)
+            gm0 = target_game(k, idx, now, player_day(text, k, now))
+            for gm in ([gm0] if gm0 else []):
                 g = gm["game"]
-                if pd.Timestamp(g["tip_et"]) <= now: continue
                 if max(abs(gm["home_margin_if_sits"]), abs(gm["total_if_sits"])) < KEY_SWING: continue
                 ak = f"{k}|{g['game_id']}"          # one alert per player and game per hour, however many reporters post it
                 last = seen.setdefault("_alerted", {}).get(ak)

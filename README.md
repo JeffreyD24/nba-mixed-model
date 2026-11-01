@@ -74,7 +74,7 @@ If Models 2 or 3 fail in a run, the run logs why and carries on; Model 1's picks
   players who appear on an official injury report this season. The biggest national breakers (Shams Charania, Chris Haynes) don't
   post on Bluesky; an X watcher for them is planned.
 - **Acting on reporter news right away** (since Oct 31, 2026). When a post states a final decision in one sentence ("ruled out",
-  "won't play", "resting", or "will play", "cleared to play") with the player's name and no hedge word ("questionable", "expected",
+  "won't play", "resting", "without [player]", or "will play", "cleared to play") with the player's name and no hedge word ("questionable", "expected",
   "likely", "could"...), the watcher saves it to `state/news_overrides.json` and a full check runs at once instead of at the next
   5-minute mark. That check treats the player as Out (or playing) until an official report newer than the post comes out. If the
   news opens a 3+ point edge, the bet alert is titled **NEWS** (even if that game already alerted, when the news flips the side

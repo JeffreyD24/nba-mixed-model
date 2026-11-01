@@ -84,6 +84,9 @@ def main():
         print("invalid:", e); return
     path = os.path.join(STATE, "my_bets.csv")
     B = pd.read_csv(path) if os.path.exists(path) else pd.DataFrame()
+    if len(B) and "issue" in B and (pd.to_numeric(B.issue, errors="coerce") == issue["number"]).any():
+        open(os.path.join(STATE, "_bet_reply.md"), "w").write("✅ This bet is already logged.")
+        print("already logged:", issue["number"]); return          # a retry after this bet was already saved
     row = dict(logged_at_et=str(dt.datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None, microsecond=0)),
                issue=issue["number"], date=str(date), away=away, home=home, market=market, pick=pick, line=line, odds=odds,
                stake=stake, book=get("Sportsbook (optional)"), notes=get("Notes (optional)"))

@@ -3590,3 +3590,41 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-01 06:35,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4066457,Austin Reaves,,33.5,-123.0,32.5,-119.0,2026-11-01T13:51Z,under
 2026-11-01 06:35,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4433136,Walker Kessler,,24.5,-110.0,24.5,-119.0,2026-11-01T14:27Z,over
 2026-11-01 06:35,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4433136,Walker Kessler,,24.5,-119.0,24.5,-110.0,2026-11-01T14:27Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4395724,Immanuel Quickley,,17.5,-109.0,17.5,-117.0,2026-11-01T07:50Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4395724,Immanuel Quickley,,17.5,-117.0,17.5,-109.0,2026-11-01T07:50Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4433134,Scottie Barnes,,23.5,-108.0,23.5,-110.0,2026-11-01T07:50Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4433134,Scottie Barnes,,23.5,-118.0,23.5,-116.0,2026-11-01T07:50Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4433137,Ziaire Williams,,9.5,101.0,7.5,-113.0,2026-11-01T14:40Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4433137,Ziaire Williams,,9.5,-129.0,7.5,-113.0,2026-11-01T14:40Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4684272,Ja'Kobe Walter,,11.5,-107.0,11.5,101.0,2026-11-01T11:00Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points,4684272,Ja'Kobe Walter,,11.5,-119.0,11.5,-128.0,2026-11-01T11:00Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Rebounds,3907498,Matisse Thybulle,,2.5,131.0,2.5,131.0,2026-11-01T13:51Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Rebounds,3907498,Matisse Thybulle,,2.5,-173.0,2.5,-173.0,2026-11-01T13:51Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Rebounds,4433136,Walker Kessler,,10.5,100.0,9.5,-139.0,2026-11-01T13:51Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Rebounds,4433136,Walker Kessler,,10.5,-131.0,9.5,106.0,2026-11-01T13:51Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Rebounds,4684272,Ja'Kobe Walter,,3.5,109.0,3.5,112.0,2026-11-01T07:49Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Rebounds,4684272,Ja'Kobe Walter,,3.5,-144.0,3.5,-147.0,2026-11-01T07:49Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total 3-Point Field Goals,4395724,Immanuel Quickley,,2.5,-114.0,2.5,-118.0,2026-11-01T07:45Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total 3-Point Field Goals,4395724,Immanuel Quickley,,2.5,-115.0,2.5,-112.0,2026-11-01T07:45Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total 3-Point Field Goals,4433134,Scottie Barnes,,1.5,171.0,1.5,166.0,2026-11-01T07:47Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total 3-Point Field Goals,4433134,Scottie Barnes,,1.5,-229.0,1.5,-222.0,2026-11-01T07:47Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total 3-Point Field Goals,4684272,Ja'Kobe Walter,,2.5,107.0,2.5,111.0,2026-11-01T07:45Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total 3-Point Field Goals,4684272,Ja'Kobe Walter,,2.5,-141.0,2.5,-146.0,2026-11-01T07:45Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Assists,4395724,Immanuel Quickley,,23.5,-110.0,23.5,-115.0,2026-11-01T07:52Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Assists,4395724,Immanuel Quickley,,23.5,-120.0,23.5,-115.0,2026-11-01T07:52Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Assists,4684272,Ja'Kobe Walter,,13.5,-105.0,12.5,-120.0,2026-11-01T14:39Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Assists,4684272,Ja'Kobe Walter,,13.5,-125.0,12.5,-110.0,2026-11-01T14:39Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,3945274,Luka Doncic,,41.5,-123.0,41.5,-113.0,2026-11-01T11:12Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,3945274,Luka Doncic,,41.5,-107.0,41.5,-116.0,2026-11-01T11:12Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,4395724,Immanuel Quickley,,20.5,-120.0,20.5,-123.0,2026-11-01T07:52Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,4395724,Immanuel Quickley,,20.5,-110.0,20.5,-107.0,2026-11-01T07:52Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,4433136,Walker Kessler,,23.5,-109.0,22.5,-114.0,2026-11-01T13:51Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,4433136,Walker Kessler,,23.5,-121.0,22.5,-115.0,2026-11-01T13:51Z,under
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,4684272,Ja'Kobe Walter,,14.5,-123.0,14.5,-111.0,2026-11-01T07:52Z,over
+2026-11-01 06:50,22600157,2026-11-01,Total Points and Rebounds,4684272,Ja'Kobe Walter,,14.5,-107.0,14.5,-119.0,2026-11-01T07:52Z,under
+2026-11-01 06:50,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4395724,Immanuel Quickley,,26.5,-120.0,26.5,-124.0,2026-11-01T14:05Z,over
+2026-11-01 06:50,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4395724,Immanuel Quickley,,26.5,-110.0,26.5,-106.0,2026-11-01T14:05Z,under
+2026-11-01 06:50,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4433136,Walker Kessler,,24.5,-114.0,24.5,-119.0,2026-11-01T14:27Z,over
+2026-11-01 06:50,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4433136,Walker Kessler,,24.5,-116.0,24.5,-110.0,2026-11-01T14:27Z,under
+2026-11-01 06:50,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4684272,Ja'Kobe Walter,,16.5,-118.0,16.5,-108.0,2026-11-01T07:52Z,over
+2026-11-01 06:50,22600157,2026-11-01,"Total Points, Rebounds, and Assists",4684272,Ja'Kobe Walter,,16.5,-111.0,16.5,-122.0,2026-11-01T07:52Z,under

@@ -227,7 +227,7 @@ def main():
                        f"still shows this number; if the line has already jumped toward the model, the edge is gone")
 
     RULE_TXT = ("Rule: BET at the opener, or if the line moved toward the model with 3+ pts of edge left. PASS if it moved "
-                "against the model by 0.5+ since it opened. Check the line in your app and apply the rule to that number.")
+                "against the model by 0.5+ since it opened.")
 
     news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
     # ---- key players: undecided injury statuses and status changes
@@ -287,9 +287,28 @@ def main():
             a, b = (1 - pm) * dt, -pm * dt; lt += min(a, b); ht += max(a, b)
         return len(rows), lm, hm, lt, ht
 
-    def limbo_text(sw, g, margin, total, market=None, side=None, e=None):
+    def unrated_pending(g):
+        """undecided players on the report for this game that the model has no rating for (new or barely played)"""
+        if not len(rep) or "status" not in rep: return []
+        r = rep[rep.team_g.isin([g["home"], g["away"]]) & rep.status.isin(PENDING)]
+        return [f"{name(p)} ({t.upper()}, {st.lower()})" for p, t, st in zip(r.player, r.team_g, r.status)
+                if isinstance(p, str) and brf.key(p) not in M["players"]]
+
+    def limbo_text(sw, g, margin, total, market=None, side=None, e=None, always=False):
         n, lm, hm, lt, ht = limbo(sw)
-        if not n or max(hm - lm, ht - lt) < 0.5: return ""
+        unr = unrated_pending(g) if always else []
+        unr_t = (" Not rated by the model (assumed not to move it): " + ", ".join(unr[:4]) + ".") if unr else ""
+        if not n or max(hm - lm, ht - lt) < 0.5:
+            if not always: return ""
+            if not len(rep) or (rep[rep.team_g.isin([g["home"], g["away"]])].status == "NOT YET SUBMITTED").any() \
+                    or not rep.team_g.isin([g["home"], g["away"]]).any():
+                return ("\nPoints in limbo: unknown. A team has not filed its injury report for this game yet, so the model "
+                        "could still move when it does." + unr_t)
+            if not n:
+                return "\nPoints in limbo: none. No undecided players the model rates, so final statuses should not move the model." + unr_t
+            w = max(hm - lm, ht - lt)
+            return (f"\nPoints in limbo ({n} undecided): under 0.5 pts. Final statuses should move the model by {w:.1f} pts at most."
+                    + unr_t)
         H = g["home"].upper()
         t = (f"\nPoints in limbo ({n} undecided): once statuses are final the model could land at {H} {margin + lm:+.1f} to "
              f"{margin + hm:+.1f} (now {margin:+.1f}) and total {total + lt:.1f} to {total + ht:.1f} (now {total:.1f}).")
@@ -298,7 +317,7 @@ def main():
             sg = 1 if side in ("home", "over") else -1
             a, b = sorted((sg * (e + lo), sg * (e + hi)))
             t += f" This bet's edge could end up {a:+.1f} to {b:+.1f}" + (" (it could flip to the other side)." if a < 0 else ".")
-        return t
+        return t + unr_t
     mpath = os.path.join(STATE, "market_moves.csv")
     MV = pd.read_csv(mpath) if os.path.exists(mpath) else pd.DataFrame(columns=["game_id", "market"])
     moved_done = set(zip(MV.game_id, MV.market)); moves_new = []
@@ -485,7 +504,7 @@ def main():
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
                                  f"\nInjury report: {used}. Caution alerts so far: {crec}." + news_text(g) + pending_text(SW, g)
-                                 + limbo_text(SW, g, margin, total, market, side, e) + hist_txt + news_for(g))
+                                 + limbo_text(SW, g, margin, total, market, side, e, always=True) + hist_txt + news_for(g))
                         vd, vr = verdict(g["game_id"], market, side, cur, opn, e)
                         cbody = f"{vd}: {vr}.\n{RULE_TXT}\n" + cbody
                         same, other = bets_note(M["date"], g["home"], g["away"], market, (g[side] if market == "spread" else side))
@@ -502,7 +521,7 @@ def main():
                     body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
                     moved_done.add((g["game_id"], market))
                 body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + news_text(g) + pending_text(SW, g)
-                body += limbo_text(SW, g, margin, total, market, side, e) + hist_txt + news_for(g)
+                body += limbo_text(SW, g, margin, total, market, side, e, always=True) + hist_txt + news_for(g)
                 prio = "high"; why = ""
                 cb = caution_before(g["game_id"], market)
                 if cb is not None:      # a caution went out earlier: say why this one follows it

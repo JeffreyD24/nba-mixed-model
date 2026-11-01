@@ -58,7 +58,11 @@ def _append_changed(path, rows, key_cols, value_cols):
             if same: continue
         keep.append(rd)
     if keep:
-        pd.DataFrame(keep).to_csv(path, mode="a", header=not os.path.exists(path), index=False)
+        K = pd.DataFrame(keep)
+        if os.path.exists(path) and list(pd.read_csv(path, nrows=0).columns) != list(K.columns):     # new columns: rewrite
+            pd.concat([pd.read_csv(path, dtype={c: str for c in key_cols}), K], ignore_index=True).to_csv(path, index=False)
+        else:
+            K.to_csv(path, mode="a", header=not os.path.exists(path), index=False)
     return len(keep)
 
 

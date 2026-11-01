@@ -73,6 +73,17 @@ If Models 2 or 3 fail in a run, the run logs why and carries on; Model 1's picks
   post, what he's worth to the line, and an **Open post** button (one alert per player and game per hour). It only recognizes
   players who appear on an official injury report this season. The biggest national breakers (Shams Charania, Chris Haynes) don't
   post on Bluesky; an X watcher for them is planned.
+- **Acting on reporter news right away** (since Oct 31, 2026). When a post states a final decision in one sentence ("ruled out",
+  "won't play", "resting", or "will play", "cleared to play") with the player's name and no hedge word ("questionable", "expected",
+  "likely", "could"...), the watcher saves it to `state/news_overrides.json` and a full check runs at once instead of at the next
+  5-minute mark. That check treats the player as Out (or playing) until an official report newer than the post comes out. If the
+  news opens a 3+ point edge, the bet alert is titled **NEWS** (even if that game already alerted, when the news flips the side
+  or adds 1+ point of edge). For the first 20 minutes after the post its verdict is BET ("bet now if your app still shows this
+  number"), or CHECK if the line had already moved 0.5+ against the model. Read the post first: the alert links it.
+- **Points in limbo.** Every bet alert and Key decision pending alert has a line adding up every undecided player
+  (questionable, doubtful, probable): the range the model's spread and total can still land in once their statuses are final,
+  and for a bet alert, the range of its edge (and a warning if it could flip sides). The model's number already counts each
+  player's chance of sitting, so "sits" moves it by (1 - chance) x his value and "plays" by -chance x his value.
 - **Already bet?** Every bet alert checks the bets you've logged. If you already have a bet on that game and market on the same side, the alert is titled **ALREADY BET**, shows your bet, and comes at normal priority instead of high; if your bet is on the other side, it starts with **YOU BET THE OTHER SIDE**. Bets on the other market of the same game are listed at the end.
 - **"Market agrees" alerts.** When a line moves 3+ points **toward** the model's side since opening, you get a heads-up once per game and market. If the edge is still 3+, it's part of the normal bet alert ("Market agrees: …"). If the move has eaten the edge, it's a low-priority info alert with no bet. These are logged in `state/market_moves.csv`.
 - **Line history in every alert.** The 5-minute checks record every line change with the time they first saw it (`state/line_history.csv`), so each alert shows the path, e.g. `225.5 (first seen Fri 11:45 AM) -> 223.5 (Fri 12:10 PM)`. Compare those times with the news below to see whether a move came before or after a report. Since the evening of Oct 30, 2026, current lines come from Action Network, so times are good to about 5 minutes. Earlier rows (and any check where Action Network didn't respond) used ESPN, whose copy can be up to about 15 minutes behind; the `source` column says which. Lines that opened before tracking started say so.

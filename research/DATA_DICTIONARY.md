@@ -39,8 +39,10 @@ is the only lasting record. `posted_et` is ESPN's timestamp; `first_seen_et` is 
 Line moves ahead of `posted_et` mean the market knew first.
 
 ### `research/model/YYYY-MM-DD.csv`: the model's number through the day
-`seen_at_et, game_id, date, home, away, model_margin, model_total, injury_report`, written when the model's number
-changes (a new injury report). It shows how much each report moved our number vs. how much it moved the line.
+`seen_at_et, game_id, date, home, away, model_margin, model_total, injury_report` (says "+ reporter news" when a Bluesky
+post was used ahead of the official report), and since Oct 31, 2026 `limbo_players, limbo_margin_lo, limbo_margin_hi,
+limbo_total_lo, limbo_total_hi` (how far the number could still move once undecided players' statuses are final), written when
+the model's number changes (a new injury report). It shows how much each report moved our number vs. how much it moved the line.
 
 ### `research/live/YYYY-MM-DD.csv`: in-game lines (Action Network), every 5-minute check while games are on
 `seen_at_et, game_id, date, away, home, status (e.g. "2nd 6:46"), period, clock, away_score, home_score, book, home_spread,
@@ -105,7 +107,9 @@ EPM and minutes, and tend to undervalue stars), and how many minutes the line ta
 
 ### `research/bluesky/YYYY-MM-DD.csv`: reporter posts from Bluesky
 `seen_at_et, posted_at_et, lag_min` (minutes between posting and our first look), `handle, reporter, team, injury_related,
-players` (players on this season's injury reports named in an injury/lineup post), `text, url`. One row per new post from the
+players` (players on this season's injury reports named in an injury/lineup post), `text, url`, and since Oct 31, 2026
+`decisions` (players the post clearly rules out or in, e.g. "Stephen Curry Out"; these go to `state/news_overrides.json` and the
+model uses them until the next official report). `state/alerts.csv` has a `news_key` column on NEWS alerts. One row per new post from the
 watch list (`research/media/bluesky_watch.csv`), checked every minute. Join `players` and times to `research/injury_decisions.csv`
 and `research/timeline/` to measure which reporters post news first and how long before the line moves.
 

@@ -32,6 +32,26 @@ TEAM_CODE = {"Atlanta": "atl", "Boston": "bos", "Brooklyn": "bkn", "Charlotte": 
              "New Orleans": "no", "New York": "ny", "Oklahoma City": "okc", "Orlando": "orl", "Philadelphia": "phi",
              "Phoenix": "phx", "Portland": "por", "Sacramento": "sac", "San Antonio": "sa", "Toronto": "tor", "Utah": "utah",
              "Washington": "wsh", "League-wide": ""}
+# clear statements of a final decision. A sentence counts only if it names the player, matches one side and not the
+# other, and has no hedge word. The model then uses it until the next official report (alert.py, state/news_overrides.json).
+OUT_RX = re.compile(r"\b(ruled out|will not play|won'?t play|not playing|(?:is|are) out\b(?! of)|will be out\b(?! of)|out tonight|"
+                    r"resting|will rest|to rest|sit(?:ting|s)? out|dnp|inactive|will miss|won'?t be available|not available)", re.I)
+IN_RX = re.compile(r"\b(will play|is playing|are playing|available to play|(?:is|are|will be) available|cleared to play|will return|"
+                   r"returns tonight|will start|is starting|good to go|in the lineup|upgraded to available|will suit up)\b", re.I)
+HEDGE_RX = re.compile(r"\b(questionable|doubtful|probable|game[- ]time|gtd|likely|unlikely|could|might|may|hope|hoping|"
+                      r"expected|expects|if he|whether|unclear|uncertain|undecided|considered|plans? to)\b", re.I)
+DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+
+
+def day_hint(sent, now):
+    """the game date a sentence is about, if it says ('tonight', 'tomorrow', 'Sunday'); else None (= his next game)"""
+    t = sent.lower()
+    if re.search(r"\b(tonight|today)\b", t): return str(now.date())
+    if re.search(r"\btomorrow\b", t): return str((now + pd.Timedelta(days=1)).date())
+    for i, d in enumerate(DAYS):
+        if re.search(rf"\b{d}\b", t):
+            return str((now + pd.Timedelta(days=(i - now.weekday()) % 7)).date())
+    return None
 
 
 def api(method, **q):
@@ -86,9 +106,22 @@ def mentioned(text, team, idx):
     return out
 
 
-def process(posts, watch, seen, idx, now, notify=None):
-    """posts: list of (handle, post dict from getAuthorFeed). Returns rows to log; updates seen; sends alerts."""
+def decisions(text, team, idx, now=None):
+    """[(player key, ('Out' or 'Available', game date or None))] for clear statements in a post"""
+    out = {}
+    now = now if now is not None else pd.Timestamp.now(tz=ET).tz_localize(None)
+    for sent in re.split(r"(?<=[.!?;])\s+|\n", text):
+        o, i = bool(OUT_RX.search(sent)), bool(IN_RX.search(sent))
+        if o == i or HEDGE_RX.search(sent): continue
+        for k, _ in mentioned(sent, team, idx):
+            out[k] = ("Out" if o else "Available", day_hint(sent, now))
+    return list(out.items())
+
+
+def process(posts, watch, seen, idx, now, notify=None, overrides=None):
+    """posts: list of (handle, post dict from getAuthorFeed). Returns rows to log; updates seen and overrides; sends alerts."""
     rows = []
+    if overrides is None: overrides = {}
     for handle, p in posts:
         rec = p.get("record") or {}; uri = p.get("uri", "")
         if handle == "_alerted" or not uri or uri in seen.get(handle, []): continue
@@ -102,7 +135,19 @@ def process(posts, watch, seen, idx, now, notify=None):
         rows.append(dict(seen_at_et=str(now)[:19], posted_at_et=str(created)[:19], lag_min=round((now - created).total_seconds() / 60, 1),
                          handle=handle, reporter=w.get("name", ""), team=w.get("team", ""), injury_related=inj,
                          players="; ".join(g[0]["name"] for _, g in names), text=text[:500],
+                         decisions="; ".join(f"{idx[k][0]['name']} {st[0]}" for k, st in (decisions(text, team, idx, now) if inj else [])),
                          url=f"https://bsky.app/profile/{handle}/post/{uri.rsplit('/', 1)[-1]}"))
+        dec = dict(decisions(text, team, idx, now)) if inj else {}
+        for k, (st, day) in list(dec.items()):   # news the model should use now: that day's game, else his next one not started
+            dec[k] = st
+            up = sorted((gm for gm in idx[k] if pd.Timestamp(gm["game"]["tip_et"]) > now and (day is None or gm["date"] == day)),
+                        key=lambda gm: gm["game"]["tip_et"])
+            if not up: continue
+            gm = up[0]; ok = f"{gm['date']}|{gm['team']}|{k}"
+            if overrides.get(ok, {}).get("status") == st: continue
+            overrides[ok] = dict(status=st, player=gm["name"], game_id=gm["game"]["game_id"], reporter=w.get("name", handle),
+                                 posted_at_et=str(created)[:19], seen_at_et=str(now)[:19], url=rows[-1]["url"], text=text[:300],
+                                 swing=round(max(abs(gm["home_margin_if_sits"]), abs(gm["total_if_sits"])), 2), new=True)
         for k, games in names:
             for gm in games:
                 g = gm["game"]
@@ -117,7 +162,9 @@ def process(posts, watch, seen, idx, now, notify=None):
                     notify(f"Reporter: {gm['name']} ({A} @ {H})",
                            f"{w.get('name', handle)} on Bluesky, {created:%-I:%M %p}: \"{text[:300]}\"\n"
                            f"Model: if {gm['name']} sits, {H} {gm['home_margin_if_sits']:+.1f} and total {gm['total_if_sits']:+.1f}. "
-                           f"Check whether the line has moved yet; the next check will alert if there's an edge.",
+                           + (f"Read as {gm['name']} {dec[k].upper()}: the model is using this now and a full check is running; "
+                              f"a NEWS alert follows if it opens an edge. Read the post to make sure."
+                              if k in dec else "Not a clear final decision, so the model waits for the official report."),
                            rows[-1]["url"])
     return rows
 
@@ -153,7 +200,15 @@ def main():
         try: urllib.request.urlopen(req, timeout=15)
         except Exception as e: print("Alert not sent:", type(e).__name__)
 
-    rows = process(posts, watch, seen, idx, now, notify=notify)
+    opath = os.path.join(STATE, "news_overrides.json")
+    overrides = json.load(open(opath)) if os.path.exists(opath) else {}
+    for v in overrides.values(): v.pop("new", None)
+    rows = process(posts, watch, seen, idx, now, notify=notify, overrides=overrides)
+    fresh_news = [v for v in overrides.values() if v.get("new")]
+    for v in overrides.values(): v.pop("new", None)
+    keep = str((now - pd.Timedelta(days=2)).date())
+    overrides = {k: v for k, v in overrides.items() if k.split("|")[0] >= keep}
+    json.dump(overrides, open(opath, "w"), indent=1)
     for h in seen:
         if h != "_alerted": seen[h] = seen[h][-60:]                          # keep the file small
     seen["_alerted"] = {k: v for k, v in seen.get("_alerted", {}).items() if now - pd.Timestamp(v) < pd.Timedelta(days=2)}
@@ -161,10 +216,17 @@ def main():
     if rows:
         os.makedirs(os.path.join(R, "bluesky"), exist_ok=True)
         p = os.path.join(R, "bluesky", f"{now.date()}.csv")
-        pd.DataFrame(rows).to_csv(p, mode="a", header=not os.path.exists(p), index=False)
+        D = pd.DataFrame(rows)
+        if os.path.exists(p):
+            old = pd.read_csv(p)
+            if list(old.columns) != list(D.columns): D = pd.concat([old, D], ignore_index=True); D.to_csv(p, index=False)   # new column
+            else: D.to_csv(p, mode="a", header=False, index=False)
+        else: D.to_csv(p, index=False)
     n_inj = sum(r["injury_related"] for r in rows)
     print(f"Bluesky: {len(watch)} reporters, {len(rows)} new posts ({n_inj} injury/lineup), {errors} feeds unavailable.")
+    for v in fresh_news: print(f"NEWS: {v['player']} {v['status']} ({v['reporter']}, posted {v['posted_at_et'][11:16]})")
+    return 10 if any(v["swing"] >= 0.75 for v in fresh_news) else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

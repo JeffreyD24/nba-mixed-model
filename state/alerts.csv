@@ -22,4 +22,4 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600149,total,2026-10-31 15:00:24.179159,2026-10-31,no,atl,2026-10-31 19:00:00,under,241.5,239.5,238.33,3.17,2026-10-31_03_00PM,True,"line moved 2.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,,,
 22600152,total,2026-10-31 19:35:23.484409,2026-10-31,sa,min,2026-10-31 20:00:00,under,230.5,227.5,227.17,3.33,2026-10-31_07_30PM,True,"line moved 3.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,
 22600154,total,2026-10-31 21:50:23.594474,2026-11-01,orl,bos,2026-11-01 15:30:00,over,222.5,222.5,228.9,6.4,2026-10-31_09_45PM,True,,,,,,,BET,,
-22600156,total,2026-10-31 23:10:23.852781,2026-11-01,gs,lac,2026-11-01 20:30:00,over,219.5,,222.56,3.06,2026-10-31_11_00PM,True,,,,,,,CHECK,,
+22600156,total,2026-10-31 23:10:23.852781,2026-11-01,gs,lac,2026-11-01 20:30:00,over,219.5,,222.56,3.06,2026-10-31_11_00PM,True,,,,,,,CHECK,2026-10-31 23:45,

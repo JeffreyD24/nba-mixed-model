@@ -144,3 +144,36 @@ Columns, and the questions the data is meant to answer, are in [`research/DATA_D
 
 - Data sources: Kaggle (`eoinamoore/historical-nba-data-and-player-box-scores`) for results, minutes, team stats and (this season) referee crews, official NBA injury reports (`ak-static.cms.nba.com`), ESPN's public odds feed (DraftKings) and, for the backtest, ESPN game summaries for past referee crews. Player ratings are EPM from Kaggle (`deocheng/nba-data-1946-2026`).
 - GitHub pauses scheduled workflows in public repos after 60 days without activity. The daily commits from these runs count as activity, so this should not happen during the season.
+
+## Polymarket US tracking (paper trades only)
+
+`polymarket.py` (the same file in the NHL, NBA and NFL repos) watches **Polymarket US**, the CFTC-regulated exchange, and
+records what the model would do there. **It never trades.** Connecticut has ordered Polymarket to stop offering sports
+contracts there, so this builds the record now for use from a state where it's allowed.
+
+**Why an exchange is different:** you trade against other people, not a book, so winners don't get limited, and you can post
+your own price (a limit order, no fee) instead of taking the best offer (taker fee ≈ 5% × price × (1 − price) per contract,
+about 1.25¢ at 50¢; set in `TAKER_FEE_RATE`).
+
+**What runs:** right after each 5-minute `alert.py` check (`alert_loop.sh`), so it uses the number alert.py just computed:
+1. pulls this league's games from Polymarket's public data API (`gateway.polymarket.us`, no key) and matches them to
+   `state/model_*.json`;
+2. saves the best bid, best offer and depth of every moneyline, spread and total contract to
+   `research/polymarket/YYYY-MM-DD.csv` (only when something changed);
+3. turns the model's number into a probability for each contract: Model 1's live margin and total plus its misses in the 2024-25 and 2025-26 backtests (`data/poly_residuals.json`, 2,448 games, margin miss sd 14.2, total 18.5), centred on zero so a model total equal to the line is a 50/50 over. P(home covers −5.5) = the share of past misses that would have put the home team ahead by 6+. Its win chances are calibrated (55.2% predicted vs 55.0% actual home wins) but less accurate than the closing line (Brier 0.205 vs 0.199), the same story as the betting results.
+4. logs paper trades on the moneyline, spread and total to `state/poly_paper.csv`, one per game, market and model:
+   - **taker**: buy at the best offer the first time expected value after the fee is **5%+**;
+   - **maker**: a limit bid at the highest price that still has 5% expected value, counted as filled if the best
+     offer later falls to it before the game (approximate: ignores who was first in line);
+   - each with DraftKings' price on the same bet at that moment (from `research/odds/`), to see which is cheaper.
+
+The **morning run** grades finished trades from Polymarket's settlement prices (`--grade`), adds closing line value (last mid
+price before the start minus the price paid, in cents) and rewrites `research/polymarket/REPORT.md`.
+
+**First runs:** this was built from Polymarket US's documentation and tested against mock responses; it had not yet seen real
+data. Each day it saves one raw event and one price reply to `research/polymarket/samples/`, and anything it can't read goes
+to `research/polymarket/unmatched.csv` (the `line_source` column in the snapshots says whether a spread's sign came from the
+side's own text or had to be assumed). Check those after the first day. To pause it, add a repository variable
+`POLYMARKET_OFF` = `1` (Settings → Secrets and variables → Actions → Variables); delete it to resume.
+
+Settings at the top of `polymarket.py`: `THRESHOLD`, `PAPER_MARKETS`, `TAKER_FEE_RATE`, `MAKER`, `MIN_DEPTH` (20 contracts).

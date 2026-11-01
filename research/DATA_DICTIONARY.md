@@ -197,3 +197,29 @@ are those closing reads.
 
 Size: the full set is about 1.3 MB per snapshot, so these files are the largest in the repo. Prop rows are written only when a line
 or price changes.
+
+## research/polymarket/ and Polymarket paper trades (`polymarket.py`)
+
+### `research/polymarket/YYYY-MM-DD.csv`: Polymarket US prices, every 5-minute check (a row only when something changed)
+| column | meaning |
+|---|---|
+| seen_at_et, game_id, date, away, home | when first seen, and the game (same game_id as everywhere else) |
+| market, line_home | moneyline / spread / total; the home team's spread, or the total |
+| long_side | which outcome the contract's "Yes" (long) side is: home, away, over, under |
+| slug | Polymarket's contract ID |
+| bid, ask, bid_depth, ask_depth | best bid and offer for the long side, in dollars per $1 contract (= chance), and size behind them |
+| mid_home_or_over | mid price converted to the home team's (or the over's) chance, comparable across contracts |
+| last, shares_traded, open_interest | last trade price, contracts traded, contracts open |
+| line_source | where the line's sign came from (`side description` is reliable; `market line` was assumed) |
+
+`unmatched.csv`: events or contracts the tracker couldn't read, with the reason. `samples/`: one raw event and price reply a
+day. `REPORT.md`: the paper-trading scorecard.
+
+### `state/poly_paper.csv`: paper trades
+`kind` (taker / maker), `status` (filled, open, unfilled), `model`, `market`, `side`, `line` (the side's own line), `slug`,
+`pm_side` (long or short side of the contract), `price`, `fee`, `cost` (price + fee), `american` (cost as sportsbook odds),
+`model_p`, `model_push`, `ev` (expected value per $1), `depth`, `bid_at_log`, `ask_at_log`, `dk_line`, `dk_price`, `dk_fair_p`
+(DraftKings at the same moment, no-vig chance), then after the game `settle` (1 = this side won), `result`, `profit` (units
+per $1 spent), `close_mid` and `clv` (cents).
+
+`state/poly_last.json` remembers the last price seen per contract so unchanged prices aren't written again.

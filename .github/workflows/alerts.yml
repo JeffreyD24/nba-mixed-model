@@ -44,6 +44,7 @@ jobs:
       - name: Check lines every 5 minutes and send alerts
         if: ${{ !inputs.test }}
         env:
+          POLYMARKET_OFF: ${{ vars.POLYMARKET_OFF }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           GH_TOKEN: ${{ github.token }}
         run: ./alert_loop.sh

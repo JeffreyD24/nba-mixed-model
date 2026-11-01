@@ -18829,3 +18829,7 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 20:11,22600153,2026-10-31,Total Rebounds,3133626,Kenrich Williams,,4.5,-142.0,4.5,-120.0,2026-10-31T20:00Z,under
 2026-10-31 20:11,22600153,2026-10-31,Total Assists and Rebounds,4278073,Shai Gilgeous-Alexander,,9.5,-137.0,9.5,-142.0,2026-11-01T02:31Z,over
 2026-10-31 20:11,22600153,2026-10-31,Total Assists and Rebounds,4278073,Shai Gilgeous-Alexander,,9.5,104.0,9.5,108.0,2026-11-01T02:31Z,under
+2026-10-31 20:15,22600151,2026-10-31,Total Assists,4576087,Peyton Watson,,2.5,137.0,2.5,137.0,2026-10-31T14:07Z,over
+2026-10-31 20:15,22600151,2026-10-31,Total Assists,4576087,Peyton Watson,,2.5,-181.0,2.5,-181.0,2026-10-31T14:07Z,under
+2026-10-31 20:15,22600151,2026-10-31,Total Points and Assists,5214640,Kasparas Jakucionis,,10.5,-132.0,11.5,-107.0,2026-11-01T03:07Z,over
+2026-10-31 20:15,22600151,2026-10-31,Total Points and Assists,5214640,Kasparas Jakucionis,,10.5,100.0,11.5,-123.0,2026-11-01T03:07Z,under

@@ -1,11 +1,11 @@
 {
  "today": [
   {
-   "home": "gs",
-   "away": "lac",
-   "tip": "2026-11-01 20:30:00",
-   "pred_margin": 1.0,
-   "pred_total": 222.6
+   "home": "orl",
+   "away": "bos",
+   "tip": "2026-11-01 15:30:00",
+   "pred_margin": -5.0,
+   "pred_total": 228.9
   },
   {
    "home": "ind",
@@ -15,34 +15,34 @@
    "pred_total": 232.3
   },
   {
+   "home": "gs",
+   "away": "lac",
+   "tip": "2026-11-01 20:30:00",
+   "pred_margin": 1.0,
+   "pred_total": 222.6
+  },
+  {
    "home": "lal",
    "away": "tor",
    "tip": "2026-11-01 21:00:00",
    "pred_margin": 3.1,
    "pred_total": 224.7
-  },
-  {
-   "home": "orl",
-   "away": "bos",
-   "tip": "2026-11-01 15:30:00",
-   "pred_margin": -5.0,
-   "pred_total": 228.9
   }
  ],
  "log": [
-  "NBA tracker run on 2026-10-31 (ET), predicting games on 2026-11-01.",
-  "Schedule: 1200 regular-season games; 81 finished, results through 2026-10-30.",
-  "Injury reports: 9 snapshots requested, 6 new, 95 on file.",
-  "Saved today's model for intraday checks (4 games, 639 players).",
-  "Locked 4 live picks for 2026-11-01 and 0 backfilled.",
-  "Lines: pulled DraftKings lines from ESPN for 4 games.",
-  "Model comparison: locked 8 live and 0 backfilled Model 2/3 predictions.",
+  "NBA tracker run on 2026-11-01 (ET), predicting games on 2026-11-01.",
+  "Schedule: 1200 regular-season games; 88 finished, results through 2026-10-31.",
+  "Injury reports: 3 snapshots requested, 0 new, 95 on file.",
+  "Saved today's model for intraday checks (4 games, 641 players).",
+  "Locked 0 live picks for 2026-11-01 and 0 backfilled.",
+  "Lines: pulled DraftKings lines from ESPN for 7 games.",
+  "Model comparison: locked 0 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 3 - pace x efficiency: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
-  "Alerts graded so far: 5-7 (41.7%), -2.5 units at -110.",
-  "Your logged bets: 1-3, $-10.45 on $20.00 staked.",
-  "Line jumps graded: 2; the final result matched the jump's direction 1 times.",
-  "Bet timing: graded 10 games at up to 11 time points."
+  "Alerts graded so far: 11-11 (50.0%), -1.0 units at -110.",
+  "Your logged bets: 4-5, $-10.10 on $31.00 staked.",
+  "Line jumps graded: 21; the final result matched the jump's direction 7 times.",
+  "Bet timing: graded 17 games at up to 11 time points."
  ]
 }

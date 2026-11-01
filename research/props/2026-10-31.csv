@@ -18817,3 +18817,15 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-10-31 20:05,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5112087,Jaylen Wells,,19.5,-125.0,16.5,-109.0,2026-11-01T02:54Z,under
 2026-10-31 20:05,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,33.5,-107.0,31.5,-109.0,2026-11-01T02:50Z,over
 2026-10-31 20:05,22600150,2026-10-31,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,33.5,-123.0,31.5,-121.0,2026-11-01T02:50Z,under
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4278073,Shai Gilgeous-Alexander,,5.5,-123.0,5.5,-115.0,2026-10-31T20:00Z,over
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4278073,Shai Gilgeous-Alexander,,5.5,-107.0,5.5,-114.0,2026-10-31T20:00Z,under
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4432823,Jaylin Williams,,2.5,120.0,2.5,119.0,2026-11-01T02:27Z,over
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4432823,Jaylin Williams,,2.5,-158.0,2.5,-157.0,2026-11-01T02:27Z,under
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4871144,Alperen Sengun,,5.5,-132.0,5.5,104.0,2026-10-31T20:00Z,over
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4871144,Alperen Sengun,,5.5,100.0,5.5,-138.0,2026-10-31T20:00Z,under
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4900671,Ajay Mitchell,,3.5,-168.0,4.5,111.0,2026-11-01T02:05Z,over
+2026-10-31 20:11,22600153,2026-10-31,Total Assists,4900671,Ajay Mitchell,,3.5,127.0,4.5,-146.0,2026-11-01T02:05Z,under
+2026-10-31 20:11,22600153,2026-10-31,Total Rebounds,3133626,Kenrich Williams,,4.5,108.0,4.5,-109.0,2026-10-31T20:00Z,over
+2026-10-31 20:11,22600153,2026-10-31,Total Rebounds,3133626,Kenrich Williams,,4.5,-142.0,4.5,-120.0,2026-10-31T20:00Z,under
+2026-10-31 20:11,22600153,2026-10-31,Total Assists and Rebounds,4278073,Shai Gilgeous-Alexander,,9.5,-137.0,9.5,-142.0,2026-11-01T02:31Z,over
+2026-10-31 20:11,22600153,2026-10-31,Total Assists and Rebounds,4278073,Shai Gilgeous-Alexander,,9.5,104.0,9.5,108.0,2026-11-01T02:31Z,under

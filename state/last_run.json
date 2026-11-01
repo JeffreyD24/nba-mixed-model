@@ -1,62 +1,42 @@
 {
  "today": [
   {
-   "home": "utah",
-   "away": "por",
-   "tip": "2026-10-31 15:00:00",
-   "pred_margin": -6.1,
-   "pred_total": 237.5
+   "home": "gs",
+   "away": "lac",
+   "tip": "2026-11-01 20:30:00",
+   "pred_margin": 1.0,
+   "pred_total": 222.6
   },
   {
-   "home": "cha",
-   "away": "phi",
-   "tip": "2026-10-31 18:00:00",
-   "pred_margin": -2.7,
-   "pred_total": 215.6
+   "home": "ind",
+   "away": "bkn",
+   "tip": "2026-11-01 17:00:00",
+   "pred_margin": 2.0,
+   "pred_total": 232.3
   },
   {
-   "home": "no",
-   "away": "atl",
-   "tip": "2026-10-31 19:00:00",
-   "pred_margin": -5.3,
-   "pred_total": 238.8
+   "home": "lal",
+   "away": "tor",
+   "tip": "2026-11-01 21:00:00",
+   "pred_margin": 3.1,
+   "pred_total": 224.7
   },
   {
-   "home": "mem",
-   "away": "sac",
-   "tip": "2026-10-31 20:00:00",
-   "pred_margin": 10.5,
-   "pred_total": 231.1
-  },
-  {
-   "home": "mil",
-   "away": "cle",
-   "tip": "2026-10-31 20:00:00",
-   "pred_margin": -6.0,
-   "pred_total": 234.6
-  },
-  {
-   "home": "sa",
-   "away": "min",
-   "tip": "2026-10-31 20:00:00",
-   "pred_margin": 1.9,
-   "pred_total": 225.5
-  },
-  {
-   "home": "hou",
-   "away": "okc",
-   "tip": "2026-10-31 20:30:00",
-   "pred_margin": 7.5,
-   "pred_total": 220.8
+   "home": "orl",
+   "away": "bos",
+   "tip": "2026-11-01 15:30:00",
+   "pred_margin": -5.0,
+   "pred_total": 228.9
   }
  ],
  "log": [
-  "NBA tracker run on 2026-10-31 (ET), predicting games on 2026-10-31.",
+  "NBA tracker run on 2026-10-31 (ET), predicting games on 2026-11-01.",
   "Schedule: 1200 regular-season games; 81 finished, results through 2026-10-30.",
-  "Injury reports: 4 snapshots requested, 1 new, 89 on file.",
-  "Saved today's model for intraday checks (7 games, 639 players).",
-  "Locked 0 live picks for 2026-10-31 and 0 backfilled.",
-  "Model comparison: locked 0 live and 0 backfilled Model 2/3 predictions.",
+  "Injury reports: 9 snapshots requested, 6 new, 95 on file.",
+  "Saved today's model for intraday checks (4 games, 639 players).",
+  "Locked 4 live picks for 2026-11-01 and 0 backfilled.",
+  "Lines: pulled DraftKings lines from ESPN for 4 games.",
+  "Model comparison: locked 8 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 3 - pace x efficiency: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",

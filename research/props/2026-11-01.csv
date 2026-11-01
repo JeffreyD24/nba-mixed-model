@@ -6455,3 +6455,6 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-01 11:00,22600157,2026-11-01,Total Points and Rebounds,4684272,Ja'Kobe Walter,,15.5,-122.0,14.5,-119.0,2026-11-01T16:52Z,under
 2026-11-01 11:00,22600157,2026-11-01,Total Assists and Rebounds,4395724,Immanuel Quickley,,9.5,-103.0,9.5,105.0,2026-11-01T07:52Z,over
 2026-11-01 11:00,22600157,2026-11-01,Total Assists and Rebounds,4395724,Immanuel Quickley,,9.5,-127.0,9.5,-138.0,2026-11-01T07:52Z,under
+2026-11-01 11:15,22600154,2026-11-01,Total Steals,4251,Paul George,,1.5,115.0,1.5,116.0,2026-11-01T18:03Z,over
+2026-11-01 11:15,22600154,2026-11-01,Total Steals,4251,Paul George,,1.5,-152.0,1.5,-154.0,2026-11-01T18:03Z,under
+2026-11-01 11:15,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4065648,Jayson Tatum,,41.5,-108.0,42.5,-123.0,2026-11-01T19:04Z,under

@@ -58,7 +58,6 @@ key,status,snapshot
 2026-11-01|ind|johnny furphy,Out,2026-10-31_05_00PM
 2026-11-01|ind|tyrese haliburton,Out,2026-10-31_05_00PM
 2026-11-01|ind|t j mcconnell,Out,2026-10-31_05_00PM
-2026-11-01|ind|aaron nesmith,Probable,2026-10-31_05_00PM
 2026-11-01|ind|ben sheppard,Out,2026-10-31_05_00PM
 2026-11-01|ind|ivica zubac,Out,2026-10-31_05_00PM
 2026-11-01|bkn|mikel brown,Out,2026-10-31_05_00PM
@@ -84,7 +83,6 @@ key,status,snapshot
 2026-11-01|lac|max strus,Out,2026-10-31_08_00PM
 2026-11-01|lal|walker kessler,Available,2026-10-31_08_00PM
 2026-11-01|lal|adou thiero,Out,2026-10-31_08_00PM
-2026-11-01|lal|ziaire williams,Questionable,2026-10-31_08_00PM
 2026-11-01|bos|mitchell robinson,Out,2026-11-01_10_15AM
 2026-11-02|no|yves missi,Out,2026-11-01_03_00PM
 2026-11-02|no|trey murphy,Probable,2026-11-01_03_00PM
@@ -95,3 +93,8 @@ key,status,snapshot
 2026-11-02|hou|clint capela,Questionable,2026-11-01_03_30PM
 2026-11-02|hou|julian phillips,Out,2026-11-01_03_30PM
 2026-11-02|hou|reed sheppard,Questionable,2026-11-01_03_30PM
+2026-11-01|ind|aaron nesmith,Available,2026-11-01_04_00PM
+2026-11-01|lal|ziaire williams,Out,2026-11-01_04_00PM
+2026-11-02|chi|tobe awaka,Probable,2026-11-01_04_00PM
+2026-11-02|chi|nic claxton,Doubtful,2026-11-01_04_00PM
+2026-11-02|chi|jalen smith,Probable,2026-11-01_04_00PM

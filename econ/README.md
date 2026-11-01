@@ -26,3 +26,10 @@ Graded on Kalshi's settlement.
   down, and one quarter made 59% of the profit. GDPNow was about as accurate as the market. Too few releases to tell; worth
   watching, not betting.
 - Not tested: jobs and unemployment (no free forecast to compare with), Fed decisions (the market is the forecast).
+
+## GDP paper tracker (live since Nov 1, 2026)
+`gdp_tracker.py`, run every 6 hours by the "GDP paper tracker" workflow. Saves every open Kalshi GDP contract's bid/ask
+next to the model's probability from the latest GDPNow (`econ/live/gdp_snapshots.csv`), logs paper trades under the fixed
+backtest rule (5%+ value after fees, 5-95 cents, spread 10 cents or less, at most one per contract in each window: 7 days,
+3 days, 1 day, 6 hours before the release) in `econ/live/gdp_paper.csv`, grades them from Kalshi's settlement, and rewrites
+`econ/live/REPORT.md`. Four releases a year: judge it after several years, not quarters. No alerts; it never trades.

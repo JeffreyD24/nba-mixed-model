@@ -119,6 +119,8 @@ def main():
     A = pd.read_csv(apath) if os.path.exists(apath) else pd.DataFrame(columns=["game_id", "market"])
     sent_ok = A[A["skipped"].isna()] if len(A) and "skipped" in A else A
     done = set(zip(sent_ok.game_id, sent_ok.market))
+    news_done = set((r.game_id, r.market, r.news_key) for r in A.itertuples()
+                    if isinstance(getattr(r, "news_key", None), str)) if len(A) else set()
     skipped = set((r.game_id, r.market) for r in A.itertuples() if isinstance(getattr(r, "skipped", None), str)) if len(A) else set()
     graded = A[A.result.isin(["W", "L"]) & A.skipped.isna()] if ("result" in A and "skipped" in A) else A.iloc[:0]
     bpath = os.path.join(STATE, "my_bets.csv")
@@ -212,6 +214,18 @@ def main():
             return "OPTIONAL", f"still at the opening line {h_:.0f}+ hours after it posted (about break-even in backtests once a line sits)"
         return "OPTIONAL", "still at the opening line, but it posted before tracking began (time unknown)"
 
+    def news_verdict(g, market, side, cur, opn, e):
+        """verdict for an alert caused by reporter news: what matters is whether the line has reacted yet"""
+        vs = [v for v in NEWSOV.values() if str(v.get("game_id")) == str(g["game_id"])]
+        age = min(((NOW - pd.Timestamp(v["posted_at_et"])).total_seconds() / 60 for v in vs), default=None)
+        if age is None or age > NEWS_FRESH_MIN:
+            return verdict(g["game_id"], market, side, cur, opn, e)
+        if opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE and against_us(market, side, cur - opn):
+            return "CHECK", (f"the news is {age:.0f} min old, but the line has moved {abs(cur - opn):.1f} pts against the model "
+                             f"since it opened at {opn:g}, so the market may know something else")
+        return "BET", (f"reporter news {age:.0f} min old and {abs(e):.1f} pts of edge at the current line. Bet now if your app "
+                       f"still shows this number; if the line has already jumped toward the model, the edge is gone")
+
     RULE_TXT = ("Rule: BET at the opener, or if the line moved toward the model with 3+ pts of edge left. PASS if it moved "
                 "against the model by 0.5+ since it opened. Check the line in your app and apply the rule to that number.")
 
@@ -225,6 +239,10 @@ def main():
     kp_done = set(KP.key); kp_new = []
     dec_rows = []
     PENDING = ("Questionable", "Doubtful", "Probable")
+    # reporter news (bluesky_watch.py): a clear "out"/"will play" post newer than the official report is used right away
+    opath = os.path.join(STATE, "news_overrides.json")
+    NEWSOV = json.load(open(opath)) if os.path.exists(opath) else {}
+    NEWS_FRESH_MIN = 20          # a NEWS alert says BET only while the post is this new (the market catches up fast)
     KEY_SWING = 1.5        # model points (margin or total) a player is worth if he sits: "key player"
 
     def player_swings(M, rep, g):
@@ -237,7 +255,8 @@ def main():
                 if not v: continue
                 dm = M["c_off"] * v[0] - M["c_def"] * v[1]           # his team's margin if he sits (vs plays)
                 dt = M["c_off"] * v[0] + M["c_def"] * v[1]           # game total if he sits
-                out.append((p, team, st, M["p_miss"].get(st, 0.0), dm if team == g["home"] else -dm, dt))
+                pmx = dict(M["p_miss"], NEWS_Out=1.0, NEWS_Available=0.0)
+                out.append((p, team, st, pmx.get(st, 0.0), dm if team == g["home"] else -dm, dt))
         return out
 
     def fnum(x, signed=False):
@@ -257,6 +276,29 @@ def main():
             parts.append(f"{name(p)} ({team.upper()}, {st.lower()}): if he sits, model {H} {dmh:+.1f}, total {dt:+.1f} "
                          f"(already counts a {pm:.0%} chance)")
         return "\nUndecided: " + "; ".join(parts) + "."
+
+    def limbo(sw):
+        """(n undecided, margin lo, hi, total lo, hi): how far the model can still move once every undecided player's status
+        is final. Today's number already counts each one's chance of sitting, so 'sits' moves it (1-p) x swing, 'plays' -p x swing."""
+        rows = [x for x in sw if x[2] in PENDING and max(abs(x[4]), abs(x[5])) >= 0.25]
+        lm = hm = lt = ht = 0.0
+        for p, team, st, pm, dmh, dt in rows:
+            a, b = (1 - pm) * dmh, -pm * dmh; lm += min(a, b); hm += max(a, b)
+            a, b = (1 - pm) * dt, -pm * dt; lt += min(a, b); ht += max(a, b)
+        return len(rows), lm, hm, lt, ht
+
+    def limbo_text(sw, g, margin, total, market=None, side=None, e=None):
+        n, lm, hm, lt, ht = limbo(sw)
+        if not n or max(hm - lm, ht - lt) < 0.5: return ""
+        H = g["home"].upper()
+        t = (f"\nPoints in limbo ({n} undecided): once statuses are final the model could land at {H} {margin + lm:+.1f} to "
+             f"{margin + hm:+.1f} (now {margin:+.1f}) and total {total + lt:.1f} to {total + ht:.1f} (now {total:.1f}).")
+        if market and e is not None:
+            lo, hi = (lm, hm) if market == "spread" else (lt, ht)
+            sg = 1 if side in ("home", "over") else -1
+            a, b = sorted((sg * (e + lo), sg * (e + hi)))
+            t += f" This bet's edge could end up {a:+.1f} to {b:+.1f}" + (" (it could flip to the other side)." if a < 0 else ".")
+        return t
     mpath = os.path.join(STATE, "market_moves.csv")
     MV = pd.read_csv(mpath) if os.path.exists(mpath) else pd.DataFrame(columns=["game_id", "market"])
     moved_done = set(zip(MV.game_id, MV.market)); moves_new = []
@@ -269,6 +311,32 @@ def main():
         fresh = snap_time is not None and snap_time >= day - pd.Timedelta(days=1) + pd.Timedelta(hours=20)
         rep = allrep[allrep.gd == day] if len(allrep) else allrep
 
+        # reporter news newer than the official report replaces that player's status until the next report
+        news_used = {}            # game team -> [override]
+        if len(NEWSOV):
+            rep = rep.copy() if len(rep) else pd.DataFrame(columns=allrep.columns if len(allrep) else ["team_g", "player", "status"])
+            for k, v in NEWSOV.items():
+                d, team_, pk = k.split("|", 2)
+                if d != M["date"] or pk not in M["players"]: continue
+                if snap_time is not None and pd.Timestamp(v["posted_at_et"]) <= snap_time: continue      # official report caught up
+                m_ = (rep.team_g == team_) & (rep.player.map(brf.key) == pk) if len(rep) else pd.Series(dtype=bool)
+                off = rep.loc[m_, "status"].iloc[0] if len(rep) and m_.any() else None
+                if off == v["status"] or (off == "Available" and v["status"] == "Available"): continue
+                if off is None and v["status"] == "Available": continue                     # not listed: already counted as playing
+                v = dict(v, official=off or "not listed")
+                if len(rep) and m_.any(): rep.loc[m_, "status"] = "NEWS_" + v["status"]
+                else: rep = pd.concat([rep, pd.DataFrame([dict(team_g=team_, player=v["player"], status="NEWS_" + v["status"])])],
+                                      ignore_index=True)
+                news_used.setdefault(team_, []).append(v)
+        PM = dict(M["p_miss"], NEWS_Out=1.0, NEWS_Available=0.0)
+
+        def news_text(g):
+            vs = news_used.get(g["home"], []) + news_used.get(g["away"], [])
+            if not vs: return ""
+            return "\nReporter news used (official report not updated yet): " + "; ".join(
+                f"{v['player']} {v['status'].upper()} per {v['reporter']} at {pd.Timestamp(v['posted_at_et']):%-I:%M %p} "
+                f"(official: {str(v['official']).lower()})" for v in vs) + ". Read the post: " + vs[0]["url"]
+
         def missing(team):
             """(miss_off, miss_def) for a team from the latest report; None if the team has not filed"""
             if not len(rep): return None
@@ -276,7 +344,7 @@ def main():
             if (r.status == "NOT YET SUBMITTED").any(): return None
             mo = md = 0.0
             for p, st in zip(r.player, r.status):
-                pm = M["p_miss"].get(st, 0.0); v = M["players"].get(brf.key(p))
+                pm = PM.get(st, 0.0); v = M["players"].get(brf.key(p))
                 if pm > 0 and v: mo += pm * v[0]; md += pm * v[1]
             return mo, md
 
@@ -289,8 +357,9 @@ def main():
             n_games += 1
             ln = line.iloc[0]
             h, a = missing(g["home"]), missing(g["away"])
+            rep_off = allrep[allrep.gd == day] if len(allrep) else allrep
             SW = player_swings(M, rep, g) if snap else []
-            for p, team, st, pm, dmh, dt in SW:
+            for p, team, st, pm, dmh, dt in (player_swings(M, rep_off, g) if snap else []):
                 k = f"{M['date']}|{team}|{brf.key(p)}"
                 prev = seen.get(k)
                 if prev != st:
@@ -318,7 +387,8 @@ def main():
                            f"{name(p)} ({team.upper()}) is {st.lower()} on the {snap} report. If he sits, the model moves {H} {dmh:+.1f} "
                            f"and the total {dt:+.1f} (it already counts a {pm:.0%} chance he sits). Expect the line to move when "
                            f"his status is decided. DraftKings now: {H} {fnum(ln.get('current_spread'), True)}, total "
-                           f"{fnum(ln.get('current_total'))}." + news_for(g), priority="low", tags="hourglass")
+                           f"{fnum(ln.get('current_total'))}." + limbo_text(SW, g, g["morning_margin"], g["morning_total"]) + news_for(g),
+                           priority="low", tags="hourglass")
                     kp_done.add(k); kp_new.append(dict(key=k, sent_at_et=str(NOW)[:16], game_id=g["game_id"], player=name(p), status=st,
                                                        home_margin_if_sits=round(dmh, 2), total_if_sits=round(dt, 2)))
             if h is None or a is None or not fresh:
@@ -327,8 +397,13 @@ def main():
                 ph = g["base_home"] + M["c_off"] * h[0] + M["c_def"] * a[1]
                 pa = g["base_away"] + M["c_off"] * a[0] + M["c_def"] * h[1]
                 margin, total = ph - pa, ph + pa; used = snap
+                if news_used.get(g["home"]) or news_used.get(g["away"]): used = f"{snap} + reporter news"
+            nl, lm_, hm_, lt_, ht_ = limbo(SW)
             model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
-                                   model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used))
+                                   model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used,
+                                   limbo_players=nl, limbo_margin_lo=round(margin + lm_, 2), limbo_margin_hi=round(margin + hm_, 2),
+                                   limbo_total_lo=round(total + lt_, 2), limbo_total_hi=round(total + ht_, 2)))
+            NK = ";".join(sorted(f"{v['player']}|{v['status']}" for v in news_used.get(g["home"], []) + news_used.get(g["away"], [])))
             tip = pd.Timestamp(g["tip_et"]).strftime("%a %-I:%M %p")
             H, Aw = g["home"].upper(), g["away"].upper()
             for market in ("spread", "total"):
@@ -342,7 +417,8 @@ def main():
                 LINE_NOW[(g["game_id"], market)] = dict(cur=cur, opn=opn, e=e_now, side=side_now, H=H, Aw=Aw, tip=tip,
                                                         tip_et=g["tip_et"], date=M["date"], home=g["home"], away=g["away"],
                                                         model=margin if market == "spread" else total, hist=hist_txt)
-                if (g["game_id"], market) in done: continue
+                is_news = bool(NK) and (g["game_id"], market, NK) not in news_done
+                if (g["game_id"], market) in done and not is_news: continue
                 is_open = opn is not None and not pd.isna(opn) and cur == opn
                 if market == "spread":
                     e = margin + cur; side = "home" if e > 0 else "away"
@@ -354,6 +430,11 @@ def main():
                     title = f"Bet {side.upper()} {cur:g}: {Aw} @ {H}, {tip}"
                     body = f"Model total {total:.1f}. DraftKings {cur:g}" + (" (opening line)." if is_open else f" (opened {opn:g}).")
                 body += f" Edge {abs(e):.1f} pts."
+                if is_news and (g["game_id"], market) in done:
+                    # already alerted on this game: re-alert only if the news flips the side or adds 1+ pt of edge
+                    prev = A[(A.game_id == g["game_id"]) & (A.market == market)].tail(1)
+                    if len(prev) and prev.side.iloc[0] == side and abs(e) < float(prev.edge.iloc[0]) + 1.0:
+                        continue
                 if not is_open and opn is not None and not pd.isna(opn):
                     e_open = (margin + opn) if market == "spread" else (total - opn)
                     body += f" Edge at the opening line was {abs(e_open):.1f} pts{'' if (e_open > 0) == (e > 0) else ' the other way'}."
@@ -376,7 +457,8 @@ def main():
                 skip = None
                 if not fresh: skip = "no current injury report"
                 elif h is None or a is None: skip = "a team has not filed its injury report"
-                elif opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE and against_us(market, side, cur - opn):
+                elif (not is_news and opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE
+                      and against_us(market, side, cur - opn)):
                     skip = (f"line moved {abs(cur - opn):.1f} pts against this bet since open (in backtests, bets after the line "
                             f"moved against the model won only about 43%)")
                 if market == "spread":
@@ -397,12 +479,13 @@ def main():
                 rec_row = dict(alerted_at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                tip_et=g["tip_et"], market=market, side=side, line=cur, open_line=opn,
                                model=round(margin if market == "spread" else total, 2), edge=round(abs(e), 2),
-                               injury_report=used, sent=False, skipped=skip)
+                               injury_report=used, sent=False, skipped=skip, news_key=NK if is_news else np.nan)
                 if skip:
                     # caution alert: still sent, once per game and market, flagged with the reason
                     if (g["game_id"], market) not in skipped:
                         cbody = (body + f"\nCAUTION: {skip}. The model may be missing news here; place this bet with caution."
-                                 f"\nInjury report: {used}. Caution alerts so far: {crec}." + pending_text(SW, g) + hist_txt + news_for(g))
+                                 f"\nInjury report: {used}. Caution alerts so far: {crec}." + news_text(g) + pending_text(SW, g)
+                                 + limbo_text(SW, g, margin, total, market, side, e) + hist_txt + news_for(g))
                         vd, vr = verdict(g["game_id"], market, side, cur, opn, e)
                         cbody = f"{vd}: {vr}.\n{RULE_TXT}\n" + cbody
                         same, other = bets_note(M["date"], g["home"], g["away"], market, (g[side] if market == "spread" else side))
@@ -418,7 +501,8 @@ def main():
                 if toward:
                     body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
                     moved_done.add((g["game_id"], market))
-                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + pending_text(SW, g) + hist_txt + news_for(g)
+                body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + news_text(g) + pending_text(SW, g)
+                body += limbo_text(SW, g, margin, total, market, side, e) + hist_txt + news_for(g)
                 prio = "high"; why = ""
                 cb = caution_before(g["game_id"], market)
                 if cb is not None:      # a caution went out earlier: say why this one follows it
@@ -437,12 +521,17 @@ def main():
                 if other:
                     body += f"\nYour other bet on this game: {other}."
                 if "OTHER SIDE" in other: title = "YOU BET THE OTHER SIDE - " + title
-                vd, vr = verdict(g["game_id"], market, side, cur, opn, e)
+                vd, vr = news_verdict(g, market, side, cur, opn, e) if is_news else verdict(g["game_id"], market, side, cur, opn, e)
+                if is_news:
+                    title = "NEWS - " + title
+                    why = ("NEWS: reporter news changed the model before the official report did. Read the post (link below) "
+                           "before betting.\n") + why
                 body = f"{vd}: {vr}.\n{RULE_TXT}\n" + why + body
                 title = f"[{vd}] " + title; rec_row["verdict"] = vd
                 if vd == "PASS": prio = "default"
                 rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk)
                 new.append(rec_row); done.add((g["game_id"], market))
+                if is_news: news_done.add((g["game_id"], market, NK))
                 print("ALERT:", title, "|", body)
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)

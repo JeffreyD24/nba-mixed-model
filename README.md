@@ -177,3 +177,13 @@ side's own text or had to be assumed). Check those after the first day. To pause
 `POLYMARKET_OFF` = `1` (Settings → Secrets and variables → Actions → Variables); delete it to resume.
 
 Settings at the top of `polymarket.py`: `THRESHOLD`, `PAPER_MARKETS`, `TAKER_FEE_RATE`, `MAKER`, `MIN_DEPTH` (20 contracts).
+
+
+## Phone alerts: bets only (since Nov 1, 2026)
+`BET_ONLY = True` in `alert.py`. Your phone gets only:
+- **[BET]** alerts (the rule's verdict is BET), once per game and market. PASS, OPTIONAL and CHECK verdicts and CAUTION
+  alerts are logged in `state/alerts.csv` (`sent` = False) but not pushed; if one later becomes a BET, that alert goes out.
+- **DON'T BET** follow-ups: a BET alert you haven't logged, before tip, where the model's side flipped, the edge fell under 3,
+  or the line moved 0.5+ against it (since the open or since the alert). Once per alert (`stopped_at_et`).
+Injury decisions, key decisions pending, reporter posts, market-agrees and line-jump alerts are still detected and saved
+in their files; they are just not pushed. The 30-minute reminder was replaced by DON'T BET. Set `BET_ONLY = False` to go back.

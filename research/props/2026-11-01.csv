@@ -3656,3 +3656,13 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-01 06:55,22600156,2026-11-01,Total Points and Assists,2991139,Kris Dunn,,13.5,-128.0,13.5,-127.0,2026-11-01T07:41Z,under
 2026-11-01 06:55,22600156,2026-11-01,Total Points and Rebounds,3936099,Derrick Jones Jr.,,15.5,-112.0,14.5,-120.0,2026-11-01T11:14Z,over
 2026-11-01 06:55,22600156,2026-11-01,Total Points and Rebounds,3936099,Derrick Jones Jr.,,15.5,-117.0,14.5,-110.0,2026-11-01T11:14Z,under
+2026-11-01 07:10,22600156,2026-11-01,Total Points,4709138,Brandin Podziemski,,16.5,-102.0,16.5,-105.0,2026-11-01T07:07Z,over
+2026-11-01 07:10,22600156,2026-11-01,Total Points,4709138,Brandin Podziemski,,16.5,-125.0,16.5,-121.0,2026-11-01T07:07Z,under
+2026-11-01 07:10,22600156,2026-11-01,Total 3-Point Field Goals,4709138,Brandin Podziemski,,2.5,117.0,2.5,105.0,2026-11-01T07:07Z,over
+2026-11-01 07:10,22600156,2026-11-01,Total 3-Point Field Goals,4709138,Brandin Podziemski,,2.5,-155.0,2.5,-139.0,2026-11-01T07:07Z,under
+2026-11-01 07:10,22600156,2026-11-01,Total Points and Assists,4709138,Brandin Podziemski,,20.5,-120.0,20.5,-127.0,2026-11-01T15:07Z,over
+2026-11-01 07:10,22600156,2026-11-01,Total Points and Assists,4709138,Brandin Podziemski,,20.5,-109.0,20.5,-103.0,2026-11-01T15:07Z,under
+2026-11-01 07:10,22600156,2026-11-01,Total Points and Rebounds,4709138,Brandin Podziemski,,21.5,-121.0,22.5,-109.0,2026-11-01T15:07Z,over
+2026-11-01 07:10,22600156,2026-11-01,Total Points and Rebounds,4709138,Brandin Podziemski,,21.5,-108.0,22.5,-120.0,2026-11-01T15:07Z,under
+2026-11-01 07:10,22600156,2026-11-01,"Total Points, Rebounds, and Assists",4709138,Brandin Podziemski,,26.5,-113.0,27.5,-106.0,2026-11-01T13:45Z,over
+2026-11-01 07:10,22600156,2026-11-01,"Total Points, Rebounds, and Assists",4709138,Brandin Podziemski,,26.5,-116.0,27.5,-124.0,2026-11-01T13:45Z,under

@@ -6531,3 +6531,25 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-01 11:30,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4277847,Wendell Carter Jr.,,21.5,-105.0,21.5,-108.0,2026-11-01T19:17Z,under
 2026-11-01 11:30,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4712849,Anthony Black,,21.5,-122.0,21.5,-108.0,2026-11-01T05:29Z,over
 2026-11-01 11:30,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4712849,Anthony Black,,21.5,-108.0,21.5,-122.0,2026-11-01T05:29Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Points,4397424,Neemias Queta,,10.5,107.0,9.5,-136.0,2026-11-01T19:42Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Points,4397424,Neemias Queta,,10.5,-137.0,9.5,106.0,2026-11-01T19:42Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Rebounds,4251,Paul George,,4.5,-125.0,4.5,-104.0,2026-11-01T18:03Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Rebounds,4251,Paul George,,4.5,-105.0,4.5,-127.0,2026-11-01T18:03Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Rebounds,4397424,Neemias Queta,,7.5,107.0,6.5,-140.0,2026-11-01T19:41Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Rebounds,4397424,Neemias Queta,,7.5,-140.0,6.5,107.0,2026-11-01T19:41Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Assists,4065648,Jayson Tatum,,33.5,-109.0,33.5,-115.0,2026-11-01T18:14Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Assists,4065648,Jayson Tatum,,33.5,-120.0,33.5,-115.0,2026-11-01T18:14Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,4251,Paul George,,22.5,-126.0,22.5,-111.0,2026-11-01T19:42Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,4251,Paul George,,22.5,-104.0,22.5,-119.0,2026-11-01T19:42Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,3078576,Derrick White,,17.5,-122.0,17.5,-125.0,2026-11-01T18:13Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,3078576,Derrick White,,17.5,-108.0,17.5,-105.0,2026-11-01T18:13Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,4065648,Jayson Tatum,,34.5,-115.0,35.5,-107.0,2026-11-01T18:13Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,4065648,Jayson Tatum,,34.5,-115.0,35.5,-123.0,2026-11-01T18:13Z,under
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,4397424,Neemias Queta,,17.5,-113.0,16.5,-118.0,2026-11-01T19:41Z,over
+2026-11-01 11:45,22600154,2026-11-01,Total Points and Rebounds,4397424,Neemias Queta,,17.5,-117.0,16.5,-111.0,2026-11-01T19:41Z,under
+2026-11-01 11:45,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4251,Paul George,,26.5,-117.0,25.5,-119.0,2026-11-01T18:03Z,over
+2026-11-01 11:45,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4251,Paul George,,26.5,-113.0,25.5,-110.0,2026-11-01T18:03Z,under
+2026-11-01 11:45,22600154,2026-11-01,"Total Points, Rebounds, and Assists",3078576,Derrick White,,22.5,-127.0,22.5,-126.0,2026-11-01T19:42Z,over
+2026-11-01 11:45,22600154,2026-11-01,"Total Points, Rebounds, and Assists",3078576,Derrick White,,22.5,-104.0,22.5,-105.0,2026-11-01T19:42Z,under
+2026-11-01 11:45,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4065648,Jayson Tatum,,41.5,-117.0,42.5,-107.0,2026-11-01T19:17Z,over
+2026-11-01 11:45,22600154,2026-11-01,"Total Points, Rebounds, and Assists",4065648,Jayson Tatum,,41.5,-112.0,42.5,-123.0,2026-11-01T19:17Z,under

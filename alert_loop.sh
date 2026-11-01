@@ -26,7 +26,7 @@ save() {
   git diff --cached --quiet && return 0
   git commit -q -m "Alerts $(TZ=America/New_York date '+%F %H:%M')"
   for i in 1 2 3; do
-    if git pull --rebase -q && git push -q; then return 0; fi
+    if git pull --rebase --autostash -q && git push -q; then return 0; fi
     git rebase --abort 2>/dev/null
     sleep 5
   done
@@ -36,7 +36,7 @@ save() {
 
 while :; do
   while busy; do echo "Another run is saving; waiting."; sleep 30; done
-  git pull --rebase -q || { git rebase --abort 2>/dev/null; git fetch -q; git reset -q --hard origin/main; }
+  git pull --rebase --autostash -q || { git rebase --abort 2>/dev/null; git fetch -q; git reset -q --hard origin/main; }
   echo "=== check at $(TZ=America/New_York date '+%F %H:%M:%S') ET ==="
   python alert.py . || echo "Check failed; trying again next time."
   while busy; do echo "Another run is saving; waiting."; sleep 30; done

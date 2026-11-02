@@ -1,0 +1,16 @@
+placed_et,issue,date,away,home,market,pick,line,odds,stake,version,status,profit,units
+2026-10-30 12:14:19,1.0,2026-10-30,orl,tor,total,under,226.5,-105.0,5.0,NBA totals v1,L,-5.0,-1.0
+2026-10-30 12:30:37,2.0,2026-10-30,den,phx,spread,phx,4.5,-112.0,5.0,NBA spreads v1,L,-5.0,-1.0
+2026-10-30 13:19:28,3.0,2026-10-30,ny,phi,total,under,227.5,-110.0,5.0,NBA totals v1,W,4.55,0.9099999999999999
+2026-10-30 15:41:31,4.0,2026-10-30,lac,min,spread,lac,7.5,-118.0,5.0,NBA spreads v1,L,-5.0,-1.0
+2026-10-31 10:49:57,5.0,2026-10-31,okc,hou,spread,hou,-3.5,-110.0,2.5,NBA spreads v1,W,2.27,0.908
+2026-10-31 10:50:38,6.0,2026-10-31,cle,mil,spread,mil,9.5,-110.0,2.5,NBA spreads v1,L,-2.5,-1.0
+2026-10-31 10:51:18,7.0,2026-10-31,por,utah,total,over,231.5,-110.0,2.5,NBA totals v1,L,-2.5,-1.0
+2026-10-31 12:12:00,,2026-10-31,phi,cha,total,under,215.5,-115.0,2.5,NBA totals v1,W,2.17,0.868
+2026-10-31 14:05:00,9.0,2026-10-31,min,sa,spread,min,12.5,-110.0,1.0,NBA spreads v1,W,0.91,0.91
+2026-10-31 21:51:00,8.0,2026-11-01,bos,orl,total,over,222.5,-110.0,2.5,NBA totals v1,pending,,
+2026-10-31 23:47:00,11.0,2026-11-01,lac,gs,total,over,219.5,-110.0,2.5,NBA totals v1,pending,,
+2026-11-01 20:17:00,12.0,2026-11-02,mil,min,spread,min,-11.5,-105.0,2.5,NBA spreads v1,pending,,
+2026-11-01 20:17:00,13.0,2026-11-02,det,cha,total,over,209.5,-110.0,2.5,NBA totals v2,pending,,
+2026-11-01 20:18:00,14.0,2026-11-02,utah,sa,total,over,230.5,-105.0,2.5,NBA totals v2,pending,,
+2026-11-02 05:42:00,15.0,2026-11-02,sac,dal,total,under,234.5,-110.0,2.5,NBA totals v2,pending,,

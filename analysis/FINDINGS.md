@@ -300,3 +300,15 @@ CLOSING spread, so absolute results are weak (Feb-Apr 48.9%, -109u); what matter
 - Home underdogs lose in both halves (47.4% / 46.2%, positive in only 2-3 of 12 seasons): the home-dog rule is solid.
 - Against playoff-spot teams: 49.1% Feb-Apr vs 49.2% Oct-Jan (not specifically a late-season effect in older seasons).
 - Feb-Apr outside the traps and no home dogs: 379 bets 52.8% +2.8u (7 of 12 seasons positive) vs 48.9% for all Feb-Apr bets.
+
+## NBA (and NFL) moneyline (Nov 2, 2026)
+`analysis/nba_moneyline.py` (output `nba_moneyline_output.txt`). Win chance = logistic(model margin), fit leaving the season out;
+DraftKings opening moneyline, 2023-24..2025-26, both teams 10+ games.
+- Model accuracy is below DraftKings' opener (Brier 0.2055 vs 0.2007). Live spread model, EV 6%+: 1,814 bets +3.0u (-39.2 /
+  +45.3 / -3.1). Base Model 1: -69.7u.
+- With the spread rules (no home dogs; Feb-Apr outside traps): 861 bets +55.3u (+6.4%) but 2023-24 -11.9u (2 of 3 seasons).
+  Favorites only +16.0u; Oct-Jan +41.2u (-20.6 / +38.0 / +23.8). It is the same signal as the spread bets, on the same games.
+- Pinnacle's first moneyline against our side: 641 bets -82.6u (all three seasons negative); agrees/same +85.6u.
+- Not adopted as BET alerts: not consistent enough, and it doubles exposure on games already bet on the spread.
+- NFL moneyline (DraftKings openers 2020-24, early-week model): 775 bets -42.3u at EV 6%+; model less accurate than the opener
+  (Brier 0.2264 vs 0.2172). No edge.

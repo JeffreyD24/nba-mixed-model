@@ -244,3 +244,27 @@ game-time wind and temperature, outdoor/open roofs only). Each weight fit leavin
 - NHL: second-chance bets (EV under 6% at DK's opener, 6%+ at DK's price when Pinnacle posts, Pinnacle agrees): 172 bets,
   +17.2u (+10.0%), positive all five seasons (+1.8, +0.4, +2.5, +7.2, +5.2). Small but consistent.
 - Following Pinnacle on its own (no model): NBA loses; NHL mixed by season. No standalone "Pinnacle model".
+
+## Home stands, road trips, travel and time zones (Nov 2, 2026)
+`analysis/travel_schedule.py` (output `travel_schedule_output.txt`; per-game features in `travel_nba_games.csv`,
+`travel_nhl_games.csv`), `analysis/travel_fixes.py` (output `travel_fixes_output.txt`). NBA and NHL 2021-22..2025-26.
+- **Market misses (vs the closing line, consistent across seasons):**
+  - NBA games at Denver/Utah go OVER the closing total by +3.2 pts (positive 5 of 5 seasons: +3.5, +0.3, +2.7, +3.8, +5.6).
+  - NHL: when only the away team is on a back-to-back, home teams win 4.3 win-% pts more than the closing price says (5 of 5
+    seasons); only the home team on a b2b: -4.6 (4 of 5).
+  - Teams that flew WEST since their last game do better than priced: NHL -3.6 pts for the home team (4 of 5 seasons),
+    NBA home cover -1.8 pts when the away team moved 2-3 zones west (4 of 5).
+  - Home stand / road trip length, distance alone, 3-in-4: nothing consistent.
+- **Added to the models (weights fit leaving the test season out), at DraftKings openers:**
+  - NHL shot model moneyline + away b2b, home b2b, away moved west: +159.6u vs +96.1u on 2,350 vs 1,978 bets (+6.8% vs +4.9%),
+    better in 4 of 5 seasons (2023-24 +16.0 -> +5.5), better Brier.
+  - NBA totals + altitude: +159.5u vs +147.1u (2 of 3 seasons better). Time zones / away b2b: no gain.
+  - NBA spreads: home b2b, westward travel, back from a long trip: no meaningful change.
+- NBA totals bets when the away team moved 1+ zone east: 65.9% (352 bets; 64/69/66% by season) vs 55.0% otherwise.
+
+## What "Pinnacle opened against us" means (NBA spreads, Nov 2, 2026)
+Pinnacle posts ~5-7 h after DraftKings, usually at DK's number; when it moves off it (median 1 pt) against our side, the
+sharp book has already decided our side is overvalued. Those bets (265) are mostly big underdogs (87%, +5.1 pts), weaker
+teams (.440), more of OUR players out at the open (4.6 vs 4.0), our team on a back-to-back 19% (vs 7%), 57% in Feb-Apr.
+Predicting it at DK's open is weak (AUC 0.60). Inside the live window (Oct-Jan, no home dogs): Pinnacle against 63 bets
+50.8% -1.9u (coin flips); toward 204 bets 62.3% +38.5u; same 91 bets 56.0% +6.4u.

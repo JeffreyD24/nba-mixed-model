@@ -1,0 +1,401 @@
+============================== NBA: MARKET (closing line), 2021-22..2025-26 -- home cover margin vs the close (pts)
+  Home stand game #
+    1st                      n= 2680  home covers by  -0.38 (+/- 0.26)
+    2nd                      n= 1642  home covers by  -0.03 (+/- 0.33)
+    3rd                      n=  916  home covers by  -0.08 (+/- 0.44)
+    4th                      n=  499  home covers by  +1.55 (+/- 0.64)
+    5th+                     n=  399  home covers by  -0.83 (+/- 0.65)
+  Home team's first game back from a road trip of N
+    not back from trip       n= 3531  home covers by  +0.06 (+/- 0.23)
+    1-2                      n= 1677  home covers by  -0.20 (+/- 0.32)
+    3-4                      n=  677  home covers by  -0.21 (+/- 0.53)
+    5+                       n=  251  home covers by  -1.78 (+/- 0.80)
+  Away team's road trip game #
+    1st                      n= 2680  home covers by  -0.19 (+/- 0.26)
+    2nd                      n= 1625  home covers by  -0.20 (+/- 0.34)
+    3rd                      n=  940  home covers by  -0.24 (+/- 0.45)
+    4th                      n=  514  home covers by  +0.28 (+/- 0.56)
+    5th+                     n=  377  home covers by  +0.53 (+/- 0.71)
+  Away team's travel since last game
+    <50 km                   n=  346  home covers by  +0.85 (+/- 0.71)
+    50-800                   n= 2097  home covers by  -0.29 (+/- 0.30)
+    800-1600                 n= 2340  home covers by  +0.01 (+/- 0.27)
+    1600-2800                n= 1088  home covers by  -0.20 (+/- 0.41)
+    2800+                    n=  265  home covers by  -0.69 (+/- 0.84)
+  Away team's time-zone move since last game
+    moved 2-3 west           n=  306  home covers by  -1.84 (+/- 0.78)
+    1 west                   n= 1045  home covers by  +0.06 (+/- 0.43)
+    same                     n= 3414  home covers by  -0.30 (+/- 0.23)
+    1 east                   n= 1031  home covers by  +0.67 (+/- 0.40)
+    moved 2-3 east           n=  340  home covers by  +0.43 (+/- 0.71)
+  Away team playing vs its home time
+    2-3 h west of home       n=  909  home covers by  -0.78 (+/- 0.47)
+    1 west                   n= 1020  home covers by  -0.63 (+/- 0.44)
+    same                     n= 2274  home covers by  -0.16 (+/- 0.28)
+    1 east                   n= 1027  home covers by  +0.57 (+/- 0.40)
+    2-3 h east of home       n=  906  home covers by  +0.46 (+/- 0.45)
+  Rest: home vs away
+                             n= 4299  home covers by  +0.02 (+/- 0.20)
+     away b2b                n=  859  home covers by  -0.10 (+/- 0.46)
+    home b2b                 n=  679  home covers by  -1.28 (+/- 0.52)
+    home b2b away b2b        n=  299  home covers by  +0.63 (+/- 0.78)
+  3 games in 4 nights
+                             n= 3502  home covers by  -0.17 (+/- 0.23)
+     away 3in4               n= 1102  home covers by  +0.51 (+/- 0.41)
+    home 3in4                n= 1000  home covers by  -0.42 (+/- 0.42)
+    home 3in4 away 3in4      n=  532  home covers by  -0.48 (+/- 0.62)
+  Altitude (DEN/UTA/COL)
+    0                        n= 5726  home covers by  -0.15 (+/- 0.18)
+    1                        n=  410  home covers by  +0.31 (+/- 0.67)
+
+  over margin vs the closing total (pts), same groups
+  Home stand game #
+    1st                      n= 2681  over by  +0.48 (+/- 0.34)
+    2nd                      n= 1643  over by  +0.84 (+/- 0.45)
+    3rd                      n=  916  over by  +0.92 (+/- 0.61)
+    4th                      n=  499  over by  +0.62 (+/- 0.82)
+    5th+                     n=  399  over by  -0.64 (+/- 0.86)
+  Home team's first game back from a road trip of N
+    not back from trip       n= 3532  over by  +0.71 (+/- 0.31)
+    1-2                      n= 1677  over by  +0.20 (+/- 0.44)
+    3-4                      n=  678  over by  +0.99 (+/- 0.65)
+    5+                       n=  251  over by  +0.22 (+/- 1.08)
+  Away team's road trip game #
+    1st                      n= 2681  over by  +0.46 (+/- 0.35)
+    2nd                      n= 1626  over by  +0.36 (+/- 0.44)
+    3rd                      n=  940  over by  +0.99 (+/- 0.60)
+    4th                      n=  514  over by  +1.18 (+/- 0.74)
+    5th+                     n=  377  over by  +0.58 (+/- 0.91)
+  Away team's travel since last game
+    <50 km                   n=  346  over by  +1.34 (+/- 0.96)
+    50-800                   n= 2098  over by  +0.24 (+/- 0.40)
+    800-1600                 n= 2341  over by  +0.79 (+/- 0.37)
+    1600-2800                n= 1088  over by  +0.72 (+/- 0.54)
+    2800+                    n=  265  over by  -0.12 (+/- 1.08)
+  Away team's time-zone move since last game
+    moved 2-3 west           n=  306  over by  +0.15 (+/- 1.00)
+    1 west                   n= 1046  over by  +0.52 (+/- 0.55)
+    same                     n= 3415  over by  +0.33 (+/- 0.31)
+    1 east                   n= 1031  over by  +1.55 (+/- 0.55)
+    moved 2-3 east           n=  340  over by  +0.74 (+/- 0.95)
+  Away team playing vs its home time
+    2-3 h west of home       n=  909  over by  +0.71 (+/- 0.59)
+    1 west                   n= 1022  over by  +0.24 (+/- 0.55)
+    same                     n= 2274  over by  +0.24 (+/- 0.39)
+    1 east                   n= 1027  over by  +1.79 (+/- 0.55)
+    2-3 h east of home       n=  906  over by  +0.33 (+/- 0.58)
+  Rest: home vs away
+                             n= 4300  over by  +0.44 (+/- 0.27)
+     away b2b                n=  860  over by  +1.42 (+/- 0.62)
+    home b2b                 n=  679  over by  +0.44 (+/- 0.70)
+    home b2b away b2b        n=  299  over by  +0.59 (+/- 1.12)
+  3 games in 4 nights
+                             n= 3503  over by  +0.75 (+/- 0.30)
+     away 3in4               n= 1103  over by  +0.35 (+/- 0.54)
+    home 3in4                n= 1000  over by  -0.55 (+/- 0.57)
+    home 3in4 away 3in4      n=  532  over by  +2.05 (+/- 0.80)
+  Altitude (DEN/UTA/COL)
+    0                        n= 5728  over by  +0.40 (+/- 0.24)
+    1                        n=  410  over by  +3.19 (+/- 0.93)
+
+============================== NBA SPREAD BETS (live spread model, DK openers) 1044 bets, 52.0%
+  Home stand game #
+    1st                      n=  459  win % +52.07 (+/- 2.33) | 52.1% -2.7u
+    2nd                      n=  275  win % +48.00 (+/- 3.02) | 48.0% -23.0u
+    3rd                      n=  150  win % +57.33 (+/- 4.05) | 57.3% +14.2u
+    4th                      n=   83  win % +54.22 (+/- 5.50) | 54.2% +2.9u
+    5th+                     n=   77  win % +53.25 (+/- 5.72) | 53.2% +1.3u
+  Home team's first game back from a road trip of N
+    not back from trip       n=  585  win % +51.97 (+/- 2.07) | 52.0% -4.6u
+    1-2                      n=  287  win % +51.22 (+/- 2.96) | 51.2% -6.4u
+    3-4                      n=  121  win % +52.07 (+/- 4.56) | 52.1% -0.7u
+    5+                       n=   51  win % +56.86 (+/- 7.00) | 56.9% +4.4u
+  Away team's road trip game #
+    1st                      n=  445  win % +51.91 (+/- 2.37) | 51.9% -4.0u
+    2nd                      n=  280  win % +52.50 (+/- 2.99) | 52.5% +0.6u
+    3rd                      n=  176  win % +51.14 (+/- 3.78) | 51.1% -4.2u
+    4th                      n=   87  win % +50.57 (+/- 5.39) | 50.6% -3.0u
+    5th+                     n=   56  win % +55.36 (+/- 6.70) | 55.4% +3.2u
+  Away team's travel since last game
+    <50 km                   n=   58  win % +68.97 (+/- 6.13) | 69.0% +18.4u
+    50-800                   n=  328  win % +54.57 (+/- 2.75) | 54.6% +13.7u
+    800-1600                 n=  420  win % +49.05 (+/- 2.44) | 49.0% -26.7u
+    1600-2800                n=  185  win % +48.11 (+/- 3.68) | 48.1% -15.1u
+    2800+                    n=   53  win % +54.72 (+/- 6.90) | 54.7% +2.4u
+  Away team's time-zone move since last game
+    moved 2-3 west           n=   56  win % +53.57 (+/- 6.72) | 53.6% +1.3u
+    1 west                   n=  181  win % +53.59 (+/- 3.72) | 53.6% +4.2u
+    same                     n=  563  win % +53.46 (+/- 2.10) | 53.5% +11.6u
+    1 east                   n=  183  win % +46.45 (+/- 3.70) | 46.4% -20.7u
+    moved 2-3 east           n=   61  win % +49.18 (+/- 6.45) | 49.2% -3.7u
+  Away team playing vs its home time
+    2-3 h west of home       n=  162  win % +50.62 (+/- 3.94) | 50.6% -5.5u
+    1 west                   n=  185  win % +52.97 (+/- 3.68) | 53.0% +2.1u
+    same                     n=  354  win % +55.08 (+/- 2.65) | 55.1% +18.3u
+    1 east                   n=  182  win % +43.96 (+/- 3.69) | 44.0% -29.3u
+    2-3 h east of home       n=  161  win % +54.66 (+/- 3.94) | 54.7% +7.0u
+  Rest: home vs away
+                             n=  700  win % +51.71 (+/- 1.89) | 51.7% -8.9u
+     away b2b                n=  130  win % +53.08 (+/- 4.39) | 53.1% +1.7u
+    home b2b                 n=  156  win % +54.49 (+/- 4.00) | 54.5% +6.3u
+    home b2b away b2b        n=   58  win % +46.55 (+/- 6.61) | 46.6% -6.5u
+  3 games in 4 nights
+                             n=  553  win % +50.81 (+/- 2.13) | 50.8% -16.5u
+     away 3in4               n=  199  win % +49.75 (+/- 3.55) | 49.7% -10.0u
+    home 3in4                n=  191  win % +53.40 (+/- 3.62) | 53.4% +3.7u
+    home 3in4 away 3in4      n=  101  win % +60.40 (+/- 4.89) | 60.4% +15.5u
+  Altitude (DEN/UTA/COL)
+    0                        n=  979  win % +52.20 (+/- 1.60) | 52.2% -3.5u
+    1                        n=   65  win % +49.23 (+/- 6.25) | 49.2% -3.9u
+
+============================== NBA TOTALS BETS (live model) 1593 bets, 57.4%
+  Home stand game #
+    1st                      n=  666  win % +57.51 (+/- 1.92) | 57.5% +65.2u
+    2nd                      n=  434  win % +59.68 (+/- 2.36) | 59.7% +60.5u
+    3rd                      n=  248  win % +53.23 (+/- 3.17) | 53.2% +4.0u
+    4th                      n=  128  win % +60.94 (+/- 4.33) | 60.9% +20.9u
+    5th+                     n=  117  win % +52.99 (+/- 4.63) | 53.0% +1.4u
+  Home team's first game back from a road trip of N
+    not back from trip       n=  927  win % +57.28 (+/- 1.63) | 57.3% +86.7u
+    1-2                      n=  419  win % +55.13 (+/- 2.43) | 55.1% +22.0u
+    3-4                      n=  176  win % +59.09 (+/- 3.72) | 59.1% +22.5u
+    5+                       n=   71  win % +67.61 (+/- 5.59) | 67.6% +20.6u
+  Away team's road trip game #
+    1st                      n=  664  win % +59.49 (+/- 1.91) | 59.5% +90.1u
+    2nd                      n=  438  win % +60.05 (+/- 2.34) | 60.0% +64.1u
+    3rd                      n=  244  win % +51.64 (+/- 3.21) | 51.6% -3.5u
+    4th                      n=  130  win % +50.00 (+/- 4.40) | 50.0% -5.9u
+    5th+                     n=  117  win % +55.56 (+/- 4.61) | 55.6% +7.1u
+  Away team's travel since last game
+    <50 km                   n=   87  win % +50.57 (+/- 5.39) | 50.6% -3.0u
+    50-800                   n=  543  win % +57.83 (+/- 2.12) | 57.8% +56.5u
+    800-1600                 n=  602  win % +58.14 (+/- 2.01) | 58.1% +66.2u
+    1600-2800                n=  293  win % +55.63 (+/- 2.91) | 55.6% +18.2u
+    2800+                    n=   68  win % +63.24 (+/- 5.89) | 63.2% +14.1u
+  Away team's time-zone move since last game
+    moved 2-3 west           n=   78  win % +52.56 (+/- 5.69) | 52.6% +0.3u
+    1 west                   n=  278  win % +51.44 (+/- 3.00) | 51.4% -5.0u
+    same                     n=  885  win % +56.27 (+/- 1.67) | 56.3% +65.7u
+    1 east                   n=  260  win % +65.77 (+/- 2.95) | 65.8% +66.5u
+    moved 2-3 east           n=   92  win % +66.30 (+/- 4.95) | 66.3% +24.5u
+  Away team playing vs its home time
+    2-3 h west of home       n=  247  win % +57.49 (+/- 3.15) | 57.5% +24.1u
+    1 west                   n=  257  win % +54.47 (+/- 3.11) | 54.5% +10.3u
+    same                     n=  576  win % +58.68 (+/- 2.05) | 58.7% +69.3u
+    1 east                   n=  268  win % +57.46 (+/- 3.03) | 57.5% +26.0u
+    2-3 h east of home       n=  245  win % +57.14 (+/- 3.17) | 57.1% +22.3u
+  Rest: home vs away
+                             n= 1072  win % +56.62 (+/- 1.51) | 56.6% +86.8u
+     away b2b                n=  214  win % +57.01 (+/- 3.39) | 57.0% +18.9u
+    home b2b                 n=  205  win % +60.00 (+/- 3.43) | 60.0% +29.8u
+    home b2b away b2b        n=  102  win % +60.78 (+/- 4.86) | 60.8% +16.4u
+  3 games in 4 nights
+                             n=  870  win % +58.05 (+/- 1.67) | 58.0% +94.1u
+     away 3in4               n=  291  win % +56.36 (+/- 2.91) | 56.4% +22.1u
+    home 3in4                n=  276  win % +57.61 (+/- 2.98) | 57.6% +27.5u
+    home 3in4 away 3in4      n=  156  win % +55.13 (+/- 3.99) | 55.1% +8.2u
+  Altitude (DEN/UTA/COL)
+    0                        n= 1494  win % +57.10 (+/- 1.28) | 57.1% +134.5u
+    1                        n=   99  win % +61.62 (+/- 4.91) | 61.6% +17.5u
+
+============================== NHL: MARKET (closing moneyline), 2021-22..2025-26 -- home wins above the market's chance (win-% pts)
+  Home stand game #
+    1st                      n= 2733  home above market  +0.50 (+/- 0.92)
+    2nd                      n= 1725  home above market  +0.15 (+/- 1.16)
+    3rd                      n=  969  home above market  +0.63 (+/- 1.55)
+    4th                      n=  498  home above market  -1.42 (+/- 2.14)
+    5th+                     n=  408  home above market  -1.71 (+/- 2.41)
+  Home team's first game back from a road trip of N
+    not back from trip       n= 3684  home above market  -0.09 (+/- 0.79)
+    1-2                      n= 1644  home above market  -0.33 (+/- 1.19)
+    3-4                      n=  763  home above market  +3.07 (+/- 1.73)
+    5+                       n=  242  home above market  -2.70 (+/- 3.19)
+  Away team's road trip game #
+    1st                      n= 2722  home above market  -0.41 (+/- 0.93)
+    2nd                      n= 1652  home above market  +1.33 (+/- 1.18)
+    3rd                      n= 1020  home above market  -1.86 (+/- 1.51)
+    4th                      n=  560  home above market  +3.02 (+/- 2.06)
+    5th+                     n=  379  home above market  -0.15 (+/- 2.48)
+  Away team's travel since last game
+    <50 km                   n=  364  home above market  -1.46 (+/- 2.53)
+    50-800                   n= 2997  home above market  +0.89 (+/- 0.88)
+    800-1600                 n= 1632  home above market  +0.27 (+/- 1.18)
+    1600-2800                n=  937  home above market  -0.74 (+/- 1.58)
+    2800+                    n=  403  home above market  -2.67 (+/- 2.44)
+  Away team's time-zone move since last game
+    moved 2-3 west           n=  351  home above market  -5.67 (+/- 2.56)
+    1 west                   n=  864  home above market  -2.72 (+/- 1.64)
+    same                     n= 3944  home above market  +1.15 (+/- 0.77)
+    1 east                   n=  809  home above market  +0.04 (+/- 1.70)
+    moved 2-3 east           n=  365  home above market  +1.66 (+/- 2.57)
+  Away team playing vs its home time
+    2-3 h west of home       n= 1061  home above market  -1.25 (+/- 1.48)
+    1 west                   n=  839  home above market  -2.74 (+/- 1.68)
+    same                     n= 2557  home above market  +0.31 (+/- 0.95)
+    1 east                   n=  839  home above market  +2.86 (+/- 1.66)
+    2-3 h east of home       n= 1037  home above market  +1.22 (+/- 1.51)
+  Rest: home vs away
+                             n= 4670  home above market  -0.45 (+/- 0.71)
+     away b2b                n= 1003  home above market  +4.30 (+/- 1.49)
+    home b2b                 n=  356  home above market  -4.57 (+/- 2.56)
+    home b2b away b2b        n=  304  home above market  +0.86 (+/- 2.78)
+  3 games in 4 nights
+                             n= 4358  home above market  +0.27 (+/- 0.73)
+     away 3in4               n=  972  home above market  +1.92 (+/- 1.53)
+    home 3in4                n=  607  home above market  -3.47 (+/- 1.96)
+    home 3in4 away 3in4      n=  396  home above market  -0.26 (+/- 2.42)
+  Altitude (DEN/UTA/COL)
+    0                        n= 5933  home above market  +0.07 (+/- 0.63)
+    1                        n=  400  home above market  +1.03 (+/- 2.37)
+
+============================== NHL SHOT MODEL BETS (moneyline + puck line, opener, EV 6%+): 3463 bets, +224.6u
+  Home stand game #
+    1st                      n= 1513  ROI % +10.31 (+/- 2.75) | +155.9u, bets on home 52%
+    2nd                      n=  934  ROI %  +3.65 (+/- 3.51) | +34.1u, bets on home 55%
+    3rd                      n=  519  ROI %  +2.43 (+/- 4.80) | +12.6u, bets on home 52%
+    4th                      n=  289  ROI % +10.34 (+/- 6.25) | +29.9u, bets on home 51%
+    5th+                     n=  208  ROI %  -3.79 (+/- 7.59) | -7.9u, bets on home 52%
+  Home team's first game back from a road trip of N
+    not back from trip       n= 2001  ROI %  +3.35 (+/- 2.42) | +67.1u, bets on home 53%
+    1-2                      n=  933  ROI % +13.42 (+/- 3.47) | +125.2u, bets on home 52%
+    3-4                      n=  393  ROI %  +7.86 (+/- 5.39) | +30.9u, bets on home 52%
+    5+                       n=  136  ROI %  +1.02 (+/- 9.27) | +1.4u, bets on home 52%
+  Away team's road trip game #
+    1st                      n= 1534  ROI %  +3.75 (+/- 2.74) | +57.5u, bets on home 50%
+    2nd                      n=  901  ROI % +13.03 (+/- 3.55) | +117.4u, bets on home 57%
+    3rd                      n=  559  ROI %  +4.74 (+/- 4.56) | +26.5u, bets on home 55%
+    4th                      n=  264  ROI %  +1.17 (+/- 6.62) | +3.1u, bets on home 51%
+    5th+                     n=  205  ROI %  +9.83 (+/- 7.77) | +20.1u, bets on home 49%
+  Away team's travel since last game
+    <50 km                   n=  225  ROI % +14.62 (+/- 6.92) | +32.9u, bets on home 57%
+    50-800                   n= 1681  ROI %  +7.11 (+/- 2.64) | +119.5u, bets on home 57%
+    800-1600                 n=  885  ROI %  +7.10 (+/- 3.61) | +62.8u, bets on home 52%
+    1600-2800                n=  461  ROI %  +2.29 (+/- 5.02) | +10.5u, bets on home 39%
+    2800+                    n=  211  ROI %  -0.54 (+/- 7.31) | -1.1u, bets on home 46%
+  Away team's time-zone move since last game
+    moved 2-3 west           n=  178  ROI %  +1.79 (+/- 7.87) | +3.2u, bets on home 37%
+    1 west                   n=  459  ROI %  +2.59 (+/- 5.07) | +11.9u, bets on home 44%
+    same                     n= 2243  ROI %  +7.82 (+/- 2.27) | +175.4u, bets on home 57%
+    1 east                   n=  405  ROI %  +8.56 (+/- 5.32) | +34.7u, bets on home 52%
+    moved 2-3 east           n=  178  ROI %  -0.28 (+/- 8.22) | -0.5u, bets on home 46%
+  Away team playing vs its home time
+    2-3 h west of home       n=  569  ROI %  +9.92 (+/- 4.60) | +56.4u, bets on home 48%
+    1 west                   n=  453  ROI %  +8.30 (+/- 5.09) | +37.6u, bets on home 42%
+    same                     n= 1458  ROI %  +6.34 (+/- 2.81) | +92.4u, bets on home 53%
+    1 east                   n=  437  ROI %  +9.65 (+/- 5.11) | +42.2u, bets on home 63%
+    2-3 h east of home       n=  546  ROI %  -0.72 (+/- 4.53) | -3.9u, bets on home 56%
+  Rest: home vs away
+                             n= 2304  ROI %  +7.86 (+/- 2.26) | +181.1u, bets on home 47%
+     away b2b                n=  731  ROI %  +4.30 (+/- 3.85) | +31.4u, bets on home 85%
+    home b2b                 n=  248  ROI %  +7.22 (+/- 6.77) | +17.9u, bets on home 14%
+    home b2b away b2b        n=  180  ROI %  -3.21 (+/- 7.94) | -5.8u, bets on home 46%
+  3 games in 4 nights
+                             n= 2320  ROI %  +7.10 (+/- 2.24) | +164.6u, bets on home 49%
+     away 3in4               n=  585  ROI %  +5.21 (+/- 4.40) | +30.5u, bets on home 70%
+    home 3in4                n=  333  ROI %  +7.35 (+/- 6.05) | +24.5u, bets on home 45%
+    home 3in4 away 3in4      n=  225  ROI %  +2.22 (+/- 6.78) | +5.0u, bets on home 58%
+  Altitude (DEN/UTA/COL)
+    0                        n= 3237  ROI %  +6.87 (+/- 1.89) | +222.3u, bets on home 53%
+    1                        n=  226  ROI %  +1.03 (+/- 7.04) | +2.3u, bets on home 51%
+/home/claude/tracker/analysis/travel_schedule.py:134: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  B["bet_side"] = np.where(B.side == "home", "bet HOME", "bet AWAY")
+
+  NHL shot model, split by the side we bet:
+   bet AWAY
+  Home stand game #
+    1st                      n=  728  ROI % +13.17 (+/- 4.07) | +95.9u
+    2nd                      n=  421  ROI %  +4.60 (+/- 5.32) | +19.4u
+    3rd                      n=  248  ROI %  +5.93 (+/- 7.19) | +14.7u
+    4th                      n=  142  ROI % +19.05 (+/- 9.13) | +27.1u
+    5th+                     n=   99  ROI %  +7.61 (+/- 11.30) | +7.5u
+  Home team's first game back from a road trip of N
+    not back from trip       n=  935  ROI %  +7.21 (+/- 3.61) | +67.4u
+    1-2                      n=  449  ROI % +17.97 (+/- 5.19) | +80.7u
+    3-4                      n=  189  ROI %  +4.13 (+/- 7.89) | +7.8u
+    5+                       n=   65  ROI % +13.30 (+/- 13.95) | +8.6u
+  Away team's road trip game #
+    1st                      n=  764  ROI %  +3.91 (+/- 3.94) | +29.9u
+    2nd                      n=  388  ROI % +15.64 (+/- 5.57) | +60.7u
+    3rd                      n=  252  ROI % +19.74 (+/- 7.02) | +49.8u
+    4th                      n=  130  ROI %  -1.88 (+/- 9.69) | -2.4u
+    5th+                     n=  104  ROI % +25.68 (+/- 11.32) | +26.7u
+  Away team's travel since last game
+    <50 km                   n=   96  ROI % +21.28 (+/- 10.27) | +20.4u
+    50-800                   n=  722  ROI % +13.37 (+/- 4.19) | +96.5u
+    800-1600                 n=  423  ROI % +10.56 (+/- 5.43) | +44.7u
+    1600-2800                n=  283  ROI %  +0.31 (+/- 6.42) | +0.9u
+    2800+                    n=  114  ROI %  +1.80 (+/- 9.55) | +2.1u
+  Away team's time-zone move since last game
+    moved 2-3 west           n=  113  ROI % +10.38 (+/- 9.73) | +11.7u
+    1 west                   n=  259  ROI % +10.65 (+/- 6.95) | +27.6u
+    same                     n=  974  ROI % +11.36 (+/- 3.55) | +110.7u
+    1 east                   n=  195  ROI %  +8.81 (+/- 7.84) | +17.2u
+    moved 2-3 east           n=   97  ROI %  -2.68 (+/- 11.24) | -2.6u
+  Away team playing vs its home time
+    2-3 h west of home       n=  294  ROI % +18.15 (+/- 6.46) | +53.4u
+    1 west                   n=  262  ROI % +12.68 (+/- 6.77) | +33.2u
+    same                     n=  680  ROI %  +7.93 (+/- 4.20) | +53.9u
+    1 east                   n=  162  ROI %  +7.28 (+/- 8.79) | +11.8u
+    2-3 h east of home       n=  240  ROI %  +5.12 (+/- 7.15) | +12.3u
+  Rest: home vs away
+                             n= 1219  ROI % +12.13 (+/- 3.17) | +147.8u
+     away b2b                n=  109  ROI % -20.90 (+/- 10.09) | -22.8u
+    home b2b                 n=  213  ROI % +16.52 (+/- 7.36) | +35.2u
+    home b2b away b2b        n=   97  ROI %  +4.47 (+/- 11.40) | +4.3u
+  3 games in 4 nights
+                             n= 1185  ROI %  +8.82 (+/- 3.21) | +104.5u
+     away 3in4               n=  177  ROI % +11.09 (+/- 8.37) | +19.6u
+    home 3in4                n=  182  ROI % +14.46 (+/- 8.24) | +26.3u
+    home 3in4 away 3in4      n=   94  ROI % +15.06 (+/- 10.80) | +14.2u
+  Altitude (DEN/UTA/COL)
+    0                        n= 1527  ROI % +10.10 (+/- 2.82) | +154.2u
+    1                        n=  111  ROI %  +9.34 (+/- 10.66) | +10.4u
+   bet HOME
+  Home stand game #
+    1st                      n=  785  ROI %  +7.65 (+/- 3.71) | +60.0u
+    2nd                      n=  513  ROI %  +2.86 (+/- 4.67) | +14.7u
+    3rd                      n=  271  ROI %  -0.77 (+/- 6.43) | -2.1u
+    4th                      n=  147  ROI %  +1.93 (+/- 8.53) | +2.8u
+    5th+                     n=  109  ROI % -14.13 (+/- 10.18) | -15.4u
+  Home team's first game back from a road trip of N
+    not back from trip       n= 1066  ROI %  -0.03 (+/- 3.24) | -0.3u
+    1-2                      n=  484  ROI %  +9.20 (+/- 4.64) | +44.5u
+    3-4                      n=  204  ROI % +11.32 (+/- 7.40) | +23.1u
+    5+                       n=   71  ROI % -10.22 (+/- 12.28) | -7.3u
+  Away team's road trip game #
+    1st                      n=  770  ROI %  +3.59 (+/- 3.81) | +27.7u
+    2nd                      n=  513  ROI % +11.05 (+/- 4.60) | +56.7u
+    3rd                      n=  307  ROI %  -7.58 (+/- 5.89) | -23.3u
+    4th                      n=  134  ROI %  +4.12 (+/- 9.07) | +5.5u
+    5th+                     n=  101  ROI %  -6.50 (+/- 10.43) | -6.6u
+  Away team's travel since last game
+    <50 km                   n=  129  ROI %  +9.67 (+/- 9.36) | +12.5u
+    50-800                   n=  959  ROI %  +2.40 (+/- 3.37) | +23.0u
+    800-1600                 n=  462  ROI %  +3.93 (+/- 4.81) | +18.1u
+    1600-2800                n=  178  ROI %  +5.42 (+/- 8.06) | +9.7u
+    2800+                    n=   97  ROI %  -3.30 (+/- 11.32) | -3.2u
+  Away team's time-zone move since last game
+    moved 2-3 west           n=   65  ROI % -13.14 (+/- 13.26) | -8.5u
+    1 west                   n=  200  ROI %  -7.84 (+/- 7.34) | -15.7u
+    same                     n= 1269  ROI %  +5.10 (+/- 2.94) | +64.7u
+    1 east                   n=  210  ROI %  +8.32 (+/- 7.25) | +17.5u
+    moved 2-3 east           n=   81  ROI %  +2.59 (+/- 12.13) | +2.1u
+  Away team playing vs its home time
+    2-3 h west of home       n=  275  ROI %  +1.12 (+/- 6.51) | +3.1u
+    1 west                   n=  191  ROI %  +2.29 (+/- 7.69) | +4.4u
+    same                     n=  778  ROI %  +4.94 (+/- 3.76) | +38.5u
+    1 east                   n=  275  ROI % +11.04 (+/- 6.26) | +30.4u
+    2-3 h east of home       n=  306  ROI %  -5.31 (+/- 5.82) | -16.2u
+  Rest: home vs away
+                             n= 1085  ROI %  +3.06 (+/- 3.23) | +33.2u
+     away b2b                n=  622  ROI %  +8.72 (+/- 4.15) | +54.2u
+    home b2b                 n=   35  ROI % -49.41 (+/- 14.00) | -17.3u
+    home b2b away b2b        n=   83  ROI % -12.17 (+/- 10.91) | -10.1u
+  3 games in 4 nights
+                             n= 1135  ROI %  +5.30 (+/- 3.12) | +60.2u
+     away 3in4               n=  408  ROI %  +2.67 (+/- 5.16) | +10.9u
+    home 3in4                n=  151  ROI %  -1.22 (+/- 8.89) | -1.8u
+    home 3in4 away 3in4      n=  131  ROI %  -7.00 (+/- 8.63) | -9.2u
+  Altitude (DEN/UTA/COL)
+    0                        n= 1710  ROI %  +3.98 (+/- 2.54) | +68.1u
+    1                        n=  115  ROI %  -6.99 (+/- 9.23) | -8.0u

@@ -77,3 +77,8 @@ print(f"\nOf {s0.sum()} bets at DK's opener: Pinnacle posted {hrs[s0].median():.
       f"Value gone: {gone.sum()} bets, which made {u0[gone].sum():+.1f}u at the open")
 for lab, k in (("still value AND Pinnacle agrees/same", still & (diff >= -0.005)), ("still value, Pinnacle disagrees", still & (diff < -0.005))):
     print(f"  {lab}: {k.sum()} bets, {u[k].sum():+.1f}u waiting")
+# G: second-chance bets: NOT a bet at DK's opener (EV < 6%), but 6%+ at DK's price when Pinnacle posts and Pinnacle agrees
+extra = ~s0 & (ev >= 0.06) & (diff >= -0.005) & Q.w_h.notna()
+print(f"\nSecond-chance bets (no bet at the open, value at DK when Pinnacle posts, Pinnacle agrees): {extra.sum()} bets, "
+      f"{u[extra].sum():+.1f}u ({u[extra].sum() / max(extra.sum(), 1):+.1%}); by season " +
+      ", ".join(f"{yr}: {u[extra & (Q.season.values == yr)].sum():+.1f} ({(extra & (Q.season.values == yr)).sum()})" for yr in (2022, 2023, 2024, 2025, 2026)))

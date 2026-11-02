@@ -1,0 +1,12 @@
+
+TOTALS: hours from DK open to Pinnacle open, median 0
+  2024: A at DK open  618 56.1%  +44.5u | B wait, Pinnacle agrees  473 55.6%  +29.1u | C second chance   71 54.9%   +3.5u
+  2025: A at DK open  479 56.8%  +40.3u | B wait, Pinnacle agrees  321 51.1%   -7.9u | C second chance   86 48.8%   -5.8u
+  2026: A at DK open  505 59.0%  +63.9u | B wait, Pinnacle agrees  375 58.7%  +45.0u | C second chance   40 52.5%   +0.1u
+  all : A 1602 57.2% +148.6u | B 1169 55.3%  +66.2u | C  197 51.8%   -2.3u | A+C 1799 56.6% +146.4u
+
+SPREADS (Oct-Jan, no home dogs): hours from DK open to Pinnacle open, median 0
+  2024: A at DK open  128 58.6%  +15.2u | B wait, Pinnacle agrees  103 53.4%   +2.0u | C second chance   15 40.0%   -3.5u
+  2025: A at DK open  122 60.7%  +19.3u | B wait, Pinnacle agrees   99 54.5%   +4.1u | C second chance   21 52.4%   +0.0u
+  2026: A at DK open  103 56.3%   +7.7u | B wait, Pinnacle agrees   80 57.5%   +7.8u | C second chance    9 55.6%   +0.5u
+  all : A  353 58.6%  +42.2u | B  282 55.0%  +13.9u | C   45 48.9%   -3.0u | A+C  398 57.5%  +39.2u

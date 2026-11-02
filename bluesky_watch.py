@@ -66,7 +66,7 @@ def players_index():
     and team membership from the official injury reports (the players whose status matters)."""
     import build_report_features as brf
     now = pd.Timestamp.now(tz=ET).tz_localize(None)
-    models = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= str((now - pd.Timedelta(hours=8)).date()))
+    models = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f.endswith(".json") and f[6:16] >= str((now - pd.Timedelta(hours=8)).date()))
     rp = os.path.join(STATE, "injury_reports_2026_27.csv")
     rep = pd.read_csv(rp) if os.path.exists(rp) else pd.DataFrame(columns=["team", "player"])
     team_of = {}

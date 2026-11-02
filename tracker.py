@@ -486,6 +486,18 @@ def main():
     logdf = attach_lines_and_grade(logdf, games)
     L_models = run_models_2_and_3(games, rp, logdf)
     grade_alerts(games)
+    try:                     # NBA moneyline TEST picks (alert.py): grade finished games
+        mp_ = os.path.join(STATE, "ml_test.csv")
+        if os.path.exists(mp_):
+            MT = pd.read_csv(mp_); res = games.set_index("game_id")[["home_pts", "away_pts"]]
+            MT["home_pts"] = MT.game_id.map(res.home_pts); MT["away_pts"] = MT.game_id.map(res.away_pts)
+            won = MT.away_pts > MT.home_pts; dec_ = np.where(MT.price > 0, 1 + MT.price / 100, 1 + 100 / MT.price.abs())
+            MT["result"] = np.where(MT.home_pts.isna(), None, np.where(won, "W", "L"))
+            MT["units"] = np.where(MT.home_pts.isna(), np.nan, np.where(won, dec_ - 1, -1.0))
+            MT.to_csv(mp_, index=False); g_ = MT.dropna(subset=["units"])
+            say(f"Moneyline TEST (away +150 or shorter): {len(g_)} graded, {(g_.result == 'W').sum()}-{(g_.result == 'L').sum()}, {g_.units.sum():+.2f}u.")
+    except Exception as e:
+        say(f"Moneyline test grading skipped: {type(e).__name__}")
     grade_my_bets(games, logdf)
     grade_jumps(games, logdf)
     try:

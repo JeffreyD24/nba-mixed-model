@@ -23,6 +23,9 @@ THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
 ALT_W = 3.8                         # Nov 2, 2026 (approved): totals at Denver/Utah go over the close by ~3 pts (5 of 5 seasons);
 ALT_HOMES = ("den", "utah")          #   added to the model total, fit leaving each season out: +159.5u vs +147.1u 2023-26
+ML_TEST = (-0.0640, 0.1388)         # NBA moneyline TEST tracking (Nov 2, 2026; analysis/nba_ml_takeaways.py): home win chance =
+                                    #   logistic(a + b x live model margin); AWAY moneylines +150 or shorter, EV 6%+, near DK's opener,
+                                    #   spread rules (10+ games, Feb-Apr traps) -> state/ml_test.csv. Recorded only, never pushed.
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
@@ -71,6 +74,19 @@ STATE = os.path.join(W, "state")
 NOW = pd.Timestamp(dt.datetime.now(ET).replace(tzinfo=None))
 TODAY = NOW.normalize()
 BASE = "https://ak-static.cms.nba.com/referee/injury/Injury-Report_"
+
+
+def dk_moneylines():
+    """{(home, away): (first, now) DraftKings moneylines as dicts home/away} from pinnacle_watch.py's recorder"""
+    try: js = json.load(open(os.path.join(W, "state", "pinnacle_now.json")))
+    except Exception: return {}
+    out = {}
+    for ev in js.get("dk_nba", {}).values():
+        h, a = PIN_NBA.get(ev.get("home")), PIN_NBA.get(ev.get("away"))
+        f, n = ev.get("first", {}), ev.get("now", {})
+        if h and a and ev.get("home") in f and ev.get("away") in f and ev.get("away") in n:
+            out[(h, a)] = (dict(home=f[ev["home"]], away=f[ev["away"]]), dict(home=n.get(ev["home"]), away=n[ev["away"]]))
+    return out
 
 
 def in_window():
@@ -318,6 +334,7 @@ def main():
     lpath = os.path.join(STATE, "nba_luck.json")
     LUCK = json.load(open(lpath)) if os.path.exists(lpath) else None
     PINS = pinnacle_spreads()                 # Pinnacle first spreads (pinnacle_watch.py), for PIN_SPREAD_RULE
+    DKML = dk_moneylines(); ml_rows = []
     NEWS_FRESH_MIN = 20          # a NEWS alert says BET only while the post is this new (the market catches up fast)
     KEY_SWING = 1.5        # model points (margin or total) a player is worth if he sits: "key player"
 
@@ -519,6 +536,23 @@ def main():
             if g["home"] in RS and g["away"] in RS and min(RS[g["home"]]["games"], RS[g["away"]]["games"]) >= 10:
                 roster_adj = ROSTER_W * (RS[g["home"]]["delta"] - RS[g["away"]]["delta"]); margin = margin + roster_adj
             else: sp_ready = False
+            # ---- NBA moneyline TEST tracking (away, +150 or shorter, EV 6%+, near the opener, spread rules); never pushed
+            ml = DKML.get((g["home"], g["away"]))
+            if ml and sp_ready:
+                (f_, n_) = ml; pa_now = n_["away"]
+                p_home = 1 / (1 + np.exp(-(ML_TEST[0] + ML_TEST[1] * margin))); d_ = (1 + pa_now / 100) if pa_now > 0 else (1 + 100 / abs(pa_now))
+                ev_a = (1 - p_home) * d_ - 1
+                imp = lambda o: (100 / (o + 100)) if o > 0 else (abs(o) / (abs(o) + 100))
+                near = abs(imp(pa_now) - imp(f_["away"])) <= 0.015
+                late_ok = True
+                if pd.Timestamp(M["date"]).month not in SPREAD_LIVE_MONTHS:
+                    ST, AR = M.get("standing", {}), M.get("arrivals", {})
+                    late_ok = (g["away"] in ST and g["home"] in ST and ST[g["away"]]["cat"] != "tanking" and ST[g["home"]]["cat"] != "middle"
+                               and AR.get(g["away"], 0) == 0)
+                if pa_now <= 150 and ev_a >= 0.06 and near and late_ok:
+                    ml_rows.append(dict(recorded_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
+                                        tip_et=g["tip_et"], pick=g["away"], price=pa_now, open_price=f_["away"], model_margin=round(margin, 2),
+                                        p_away=round(1 - p_home, 4), ev=round(ev_a, 4)))
             nl, lm_, hm_, lt_, ht_ = limbo(SW)
             model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
                                    model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used,
@@ -685,6 +719,11 @@ def main():
                 new.append(rec_row); done.add((g["game_id"], market))
                 if is_news: news_done.add((g["game_id"], market, NK))
                 print("ALERT:", title, "|", body)
+    if ml_rows:      # moneyline test picks: first qualifying sighting per game only
+        mp_ = os.path.join(STATE, "ml_test.csv")
+        MT = pd.read_csv(mp_) if os.path.exists(mp_) else pd.DataFrame(columns=["game_id"])
+        newml = pd.DataFrame(ml_rows); newml = newml[~newml.game_id.isin(MT.game_id)]
+        if len(newml): pd.concat([MT, newml], ignore_index=True).to_csv(mp_, index=False); print(f"Moneyline TEST picks recorded: {len(newml)}")
     if new:
         A = pd.concat([A, pd.DataFrame(new)], ignore_index=True)
     # ---- DON'T BET follow-up: a pushed BET alert, still not logged, that stopped being a bet before tip

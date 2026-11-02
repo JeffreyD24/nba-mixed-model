@@ -252,6 +252,8 @@ def main():
     # reporter news (bluesky_watch.py): a clear "out"/"will play" post newer than the official report is used right away
     opath = os.path.join(STATE, "news_overrides.json")
     NEWSOV = json.load(open(opath)) if os.path.exists(opath) else {}
+    lpath = os.path.join(STATE, "nba_luck.json")
+    LUCK = json.load(open(lpath)) if os.path.exists(lpath) else None
     NEWS_FRESH_MIN = 20          # a NEWS alert says BET only while the post is this new (the market catches up fast)
     KEY_SWING = 1.5        # model points (margin or total) a player is worth if he sits: "key player"
 
@@ -427,9 +429,19 @@ def main():
                 pa = g["base_away"] + M["c_off"] * a[0] + M["c_def"] * h[1]
                 margin, total = ph - pa, ph + pa; used = snap
                 if news_used.get(g["home"]) or news_used.get(g["away"]): used = f"{snap} + reporter news"
+            # shooting-luck correction for totals (nba_luck.py; backtested better at the opener in 2024-25 and 2025-26):
+            # teams that have scored more than their shot quality deserves (or allowed less) inflate the model's total
+            total_raw, luck_adj = total, 0.0
+            if LUCK:
+                th, ta = LUCK["teams"].get(g["home"]), LUCK["teams"].get(g["away"])
+                if th and ta and min(th["games"], ta["games"]) >= LUCK.get("min_games", 5):
+                    lg = LUCK.get("league_luck_per_team_game", 0.0)      # league-wide shift taken out (4 terms)
+                    luck_adj = -LUCK.get("weight", 0.5) * (th["luck"] + th["luck_allowed"] + ta["luck"] + ta["luck_allowed"] - 4 * lg)
+                    total = total + luck_adj
             nl, lm_, hm_, lt_, ht_ = limbo(SW)
             model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
                                    model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used,
+                                   model_total_before_luck=round(total_raw, 2), luck_adjustment=round(luck_adj, 2),
                                    limbo_players=nl, limbo_margin_lo=round(margin + lm_, 2), limbo_margin_hi=round(margin + hm_, 2),
                                    limbo_total_lo=round(total + lt_, 2), limbo_total_hi=round(total + ht_, 2)))
             NK = ";".join(sorted(f"{v['player']}|{v['status']}" for v in news_used.get(g["home"], []) + news_used.get(g["away"], [])))
@@ -457,7 +469,8 @@ def main():
                 else:
                     e = total - cur; side = "over" if e > 0 else "under"
                     title = f"Bet {side.upper()} {cur:g}: {Aw} @ {H}, {tip}"
-                    body = f"Model total {total:.1f}. DraftKings {cur:g}" + (" (opening line)." if is_open else f" (opened {opn:g}).")
+                    body = f"Model total {total:.1f}" + (f" (shooting-luck adjustment {luck_adj:+.1f})" if luck_adj else "") + \
+                           f". DraftKings {cur:g}" + (" (opening line)." if is_open else f" (opened {opn:g}).")
                 body += f" Edge {abs(e):.1f} pts."
                 if is_news and (g["game_id"], market) in done:
                     # already alerted on this game: re-alert only if the news flips the side or adds 1+ pt of edge

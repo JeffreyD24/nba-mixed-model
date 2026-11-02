@@ -187,3 +187,11 @@ Settings at the top of `polymarket.py`: `THRESHOLD`, `PAPER_MARKETS`, `TAKER_FEE
   or the line moved 0.5+ against it (since the open or since the alert). Once per alert (`stopped_at_et`).
 Injury decisions, key decisions pending, reporter posts, market-agrees and line-jump alerts are still detected and saved
 in their files; they are just not pushed. The 30-minute reminder was replaced by DON'T BET. Set `BET_ONLY = False` to go back.
+
+## Shooting-luck correction for totals (since Nov 1, 2026)
+`nba_luck.py` (morning run) downloads this season's shots from ESPN, rates each by shot quality (`data/shot_quality_model.json`,
+fit on 1.09M shots from 2021-22 to 2025-26) and saves each team's season-to-date luck (FG points above or below expected) and
+luck allowed in `state/nba_luck.json`. Once both teams have 5+ games, the alerts' model total becomes
+model total - 0.5 x (both teams' luck + luck allowed - the league's average so far). Backtest at the opener, edge 3+
+(`analysis/FINDINGS.md`): 2024-25 +23.3u vs +16.5u without it, 2025-26 +50.0u vs +46.5u, about 240 more bets. Totals alerts
+show the adjustment ("shooting-luck adjustment -4.2"), and `research/model/` logs `model_total_before_luck` and `luck_adjustment`.

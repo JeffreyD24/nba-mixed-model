@@ -24,6 +24,8 @@ MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line mov
 BET_ONLY = True                     # phone alerts only for BET verdicts and the DON'T BET follow-up (Nov 1, 2026);
                                     # everything else is still logged, just not pushed. False = the old behaviour.
 FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen
+MAX_PRICE = -120                    # worst price to bet at: bets with 3+ pts of edge won about 55% at the opener in the
+                                    # backtests (bigger edges no better), and 55% breaks even at about -122
 AGAINST_MOVE = 0.5                  # caution when the line moved this much AGAINST the bet since opening. Backtest (2024-26, lines
                                     # between open and close, edge 3+): moved against 43% winners, toward 56%, unmoved 49%
 JUMP_WINDOW_MIN = 60                # a "jump" is a move within this many minutes
@@ -244,24 +246,24 @@ def main():
     def bet_range(market, side, margin, total, opn, H, Aw):
         """the numbers the rule still says BET at: from the opener to the worst line with 3+ pts of edge; and the move
         the other way (0.5+ against the model since the open) that turns it into a PASS"""
-        if opn is None or pd.isna(opn): return "BET RANGE: opening line unknown; bet only with 3+ pts of edge."
+        if opn is None or pd.isna(opn): return f"BET RANGE: opening line unknown; bet only with 3+ pts of edge, at {MAX_PRICE} or better."
         o = float(opn)
         if market == "spread":
             if side == "home":
                 worst = math.ceil((THRESHOLD - margin) * 2) / 2; t = H
                 lo, stop = o, o + AGAINST_MOVE
                 return (f"BET RANGE: {t} {lo:+g} down to {worst:+g}. Skip if it's worse than {worst:+g}, "
-                        f"or if it moves the other way to {t} {stop:+g} (the market moving against the model).")
+                        f"or if it moves the other way to {t} {stop:+g} (the market moving against the model). Price {MAX_PRICE} or better.")
             worst = math.ceil((THRESHOLD + margin) * 2) / 2; t = Aw
             return (f"BET RANGE: {t} {-o:+g} down to {worst:+g}. Skip if it's worse than {worst:+g}, "
-                    f"or if it moves the other way to {t} {-o + AGAINST_MOVE:+g} (the market moving against the model).")
+                    f"or if it moves the other way to {t} {-o + AGAINST_MOVE:+g} (the market moving against the model). Price {MAX_PRICE} or better.")
         if side == "over":
             worst = math.floor((total - THRESHOLD) * 2) / 2
             return (f"BET RANGE: over {o:g} up to {worst:g}. Skip if it's higher than {worst:g}, "
-                    f"or if it drops to {o - AGAINST_MOVE:g} or lower (the market moving against the model).")
+                    f"or if it drops to {o - AGAINST_MOVE:g} or lower (the market moving against the model). Price {MAX_PRICE} or better.")
         worst = math.ceil((total + THRESHOLD) * 2) / 2
         return (f"BET RANGE: under {o:g} down to {worst:g}. Skip if it's lower than {worst:g}, "
-                f"or if it rises to {o + AGAINST_MOVE:g} or higher (the market moving against the model).")
+                f"or if it rises to {o + AGAINST_MOVE:g} or higher (the market moving against the model). Price {MAX_PRICE} or better.")
 
     RULE_TXT = ("Rule: BET at the opener, or if the line moved toward the model with 3+ pts of edge left. PASS if it moved "
                 "against the model by 0.5+ since it opened.")
@@ -593,6 +595,8 @@ def main():
                     body += f"\nYour other bet on this game: {other}."
                 if "OTHER SIDE" in other: title = "YOU BET THE OTHER SIDE - " + title
                 vd, vr = news_verdict(g, market, side, cur, opn, e) if is_news else verdict(g["game_id"], market, side, cur, opn, e)
+                if vd == "BET" and px is not None and not pd.isna(px) and float(px) < MAX_PRICE:
+                    vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
                 if is_news:
                     title = "NEWS - " + title
                     why = ("NEWS: reporter news changed the model before the official report did. Read the post (link below) "

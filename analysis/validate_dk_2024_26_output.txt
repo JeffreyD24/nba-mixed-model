@@ -1,0 +1,18 @@
+games at DK lines: {2024: 1074, 2025: 1069, 2026: 1069}
+
+TOTALS (live: luck + form)
+  2024: open:  620 56.3%  +46.3u | m15:  620 56.3%  +46.3u | m30:  618 56.6%  +50.2u | m60:  612 55.6%  +37.1u | close:  633 52.9%   +6.5u
+  2025: open:  479 56.8%  +40.3u | m15:  479 57.2%  +44.1u | m30:  474 57.4%  +45.3u | m60:  466 56.9%  +39.9u | close:  511 47.0%  -52.8u
+  2026: open:  516 58.5%  +60.5u | m15:  517 58.4%  +59.5u | m30:  517 58.0%  +55.7u | m60:  509 58.0%  +54.2u | close:  511 53.2%   +8.3u
+
+SPREADS (test-only: roster + form)
+  2024: open:  349 48.1%  -28.3u | m15:  343 48.1%  -28.0u | m30:  343 46.6%  -37.5u | m60:  347 46.7%  -37.7u | close:  409 50.6%  -13.8u
+  2025: open:  339 55.2%  +18.0u | m15:  341 55.4%  +19.8u | m30:  339 55.2%  +18.0u | m60:  333 54.7%  +14.5u | close:  384 50.8%  -11.7u
+  2026: open:  353 52.7%   +2.1u | m15:  355 53.0%   +3.9u | m30:  356 52.5%   +1.0u | m60:  356 52.0%   -2.8u | close:  386 46.9%  -40.5u
+  2024 at open: Oct-Jan  177 55.4%  +10.1u | Feb-Apr  172 40.7%  -38.4u | Oct-Jan no home dogs  129 58.9%  +16.1u
+  2025 at open: Oct-Jan  173 58.4%  +19.8u | Feb-Apr  166 51.8%   -1.8u | Oct-Jan no home dogs  122 60.7%  +19.3u
+  2026 at open: Oct-Jan  177 53.1%   +2.5u | Feb-Apr  176 52.3%   -0.4u | Oct-Jan no home dogs  104 55.8%   +6.7u
+
+Sharp-move model (trained 2021-24) on 2024-25/2025-26 totals: r with actual move = +nan
+  2025: all  479 56.8%  +40.3u | sharp model agrees  334 56.0%  +23.0u | disagrees  145 58.6%  +17.3u
+  2026: all  516 58.5%  +60.5u | sharp model agrees  324 59.6%  +44.5u | disagrees  192 56.8%  +16.1u

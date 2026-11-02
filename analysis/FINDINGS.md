@@ -199,3 +199,13 @@ November is weakest (52.9%, +2.1u; luck and form aren't active yet), overs Oct-J
   motivation, as with the NBA after January.
 - Away spreads -25.9u (negative 5 of 6); betting against a team whose QB is out 40.0%, -13.0u (the model over-penalizes a
   missing QB); outdoor overs 45.8% -16.5u vs outdoor unders 56.6% +14.6u (weather isn't in the model).
+
+## All three seasons at real DraftKings lines (2024-26 odds downloaded Nov 2, 2026)
+`analysis/validate_dk_2024_26.py` (output `validate_dk_2024_26_output.txt`). Edge 3+.
+- **Totals (live: luck + form):** opener +46.3u / +40.3u / +60.5u (2023-24 / 2024-25 / 2025-26), 1,615 bets, ~57%. Still
+  +37 to +55u per season at +60 min; at the close +6.5 / -52.8 / +8.3. Bet within the hour.
+- **Spreads (roster + form, test-only):** opener -28.3 / +18.0 / +2.1. Oct-Jan +10.1 / +19.8 / +2.5; Oct-Jan without home
+  underdogs +16.1 / +19.3 / +6.7 (355 bets, 58.3%, +42.1u). Feb-Apr -38.4 / -1.8 / -0.4.
+- **Sharp-move model filter:** no help out of sample (2024-25: agrees 56.0%, disagrees 58.6%; 2025-26: 59.6% vs 56.8%). Dropped.
+- **NHL, Pinnacle's first price disagrees with the shot model:** negative all five seasons (-4.1, -16.9, -10.5, -3.6, -6.9;
+  405 bets, -42.0u); agrees or same: 1,573 bets +138.1u. Holds up as a warning signal.

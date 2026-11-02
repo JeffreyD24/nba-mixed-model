@@ -279,3 +279,5 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-01 19:50,22600158,2026-11-02,"Total Points, Rebounds, and Assists",4683778,Jared McCain,,19.5,-121.0,19.5,-113.0,2026-11-02T03:32Z,under
 2026-11-01 19:50,22600158,2026-11-02,"Total Points, Rebounds, and Assists",4900671,Ajay Mitchell,,25.5,-105.0,24.5,-121.0,2026-11-02T03:42Z,over
 2026-11-01 19:50,22600158,2026-11-02,"Total Points, Rebounds, and Assists",4900671,Ajay Mitchell,,25.5,-125.0,24.5,-109.0,2026-11-02T03:42Z,under
+2026-11-01 19:51,22600158,2026-11-02,Total 3-Point Field Goals,3992,James Harden,,2.5,-123.0,2.5,-127.0,2026-11-02T03:31Z,over
+2026-11-01 19:51,22600158,2026-11-02,Total 3-Point Field Goals,3992,James Harden,,2.5,-107.0,2.5,-104.0,2026-11-02T03:31Z,under

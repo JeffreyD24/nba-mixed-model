@@ -1,0 +1,30 @@
+
+===== 2024  (1074 games)
+  league: actual total 228.6, DK open 228.5, DK close 228.5, model 228.9; overs vs close 48.3%; avg move open->close +0.07, |move| 2.79
+  model error: mean (model - actual) +0.25; close error -0.10; MAE model 14.70, open 14.64, close 14.31
+  at OPEN : all  620 56.3%  +46.3u | overs  350 57.7%  +35.6u | unders  270 54.4%  +10.6u
+  at CLOSE: all  633 52.9%   +6.5u | overs  348 54.0%  +10.9u | unders  285 51.6%   -4.4u
+  close bets where the line had moved TOWARD us since open  181 50.8%   -5.4u | moved AWAY  410 53.4%   +8.1u | no move   42 57.1%   +3.8u
+  close bets by month: 10:    0 0.0%   +0.0u | 11:   81 43.2%  -14.2u | 12:  113 53.1%   +1.5u | 1:  134 52.2%   -0.4u | 2:   97 53.6%   +2.3u | 3:  146 58.9%  +18.2u | 4:   62 51.6%   -0.9u
+  close bets that were ALSO bets at the open  440 53.6%  +10.5u | close-only bets (no edge at open)  177 51.4%   -3.3u
+  close bets by edge: 3-4  150 54.7%   +6.5u | 4-6  212 48.6%  -15.4u | 6+  271 55.4%  +15.4u
+
+===== 2025  (1069 games)
+  league: actual total 227.9, DK open 227.2, DK close 227.1, model 227.0; overs vs close 52.5%; avg move open->close -0.15, |move| 3.27
+  model error: mean (model - actual) -0.91; close error -0.83; MAE model 14.48, open 14.51, close 13.99
+  at OPEN : all  479 56.8%  +40.3u | overs  225 58.2%  +25.1u | unders  254 55.5%  +15.2u
+  at CLOSE: all  511 47.0%  -52.8u | overs  251 48.6%  -18.1u | unders  260 45.4%  -34.7u
+  close bets where the line had moved TOWARD us since open   73 39.7%  -17.6u | moved AWAY  415 47.5%  -38.9u | no move   23 60.9%   +3.7u
+  close bets by month: 10:    0 0.0%   +0.0u | 11:   62 38.7%  -16.2u | 12:   81 48.1%   -6.5u | 1:  109 46.8%  -11.6u | 2:  101 43.6%  -17.0u | 3:  110 47.3%  -10.7u | 4:   48 62.5%   +9.3u
+  close bets that were ALSO bets at the open  234 48.3%  -18.3u | close-only bets (no edge at open)  248 46.0%  -30.4u
+  close bets by edge: 3-4  123 53.7%   +3.0u | 4-6  200 45.0%  -28.2u | 6+  188 44.7%  -27.6u
+
+===== 2026  (1069 games)
+  league: actual total 230.9, DK open 230.2, DK close 230.6, model 229.8; overs vs close 48.6%; avg move open->close +0.34, |move| 2.65
+  model error: mean (model - actual) -1.09; close error -0.30; MAE model 14.85, open 14.95, close 14.68
+  at OPEN : all  516 58.5%  +60.5u | overs  218 56.0%  +14.9u | unders  298 60.4%  +45.6u
+  at CLOSE: all  511 53.2%   +8.3u | overs  187 50.8%   -5.6u | unders  324 54.6%  +13.9u
+  close bets where the line had moved TOWARD us since open  103 55.3%   +5.8u | moved AWAY  351 52.7%   +2.2u | no move   57 52.6%   +0.3u
+  close bets by month: 10:    0 0.0%   +0.0u | 11:   73 53.4%   +1.5u | 12:  100 50.0%   -4.5u | 1:  114 50.9%   -3.3u | 2:   72 54.2%   +2.5u | 3:  108 55.6%   +6.5u | 4:   44 59.1%   +5.6u
+  close bets that were ALSO bets at the open  295 55.6%  +18.1u | close-only bets (no edge at open)  203 48.8%  -14.0u
+  close bets by edge: 3-4  131 53.4%   +2.6u | 4-6  203 49.3%  -12.1u | 6+  177 57.6%  +17.7u

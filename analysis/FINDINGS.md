@@ -291,3 +291,12 @@ player who joined from another team in the last 30 days. Live spread model, DK o
   because the line moved away (close-only: 248 bets, -30.4u). Betting into a moved line = betting against the sharps.
 - Same model, same season, at the opener: 479 bets, 56.8%, +40.3u. The close numbers are a stress test, not a strategy; the live
   rules already cover it (bet within the hour; PASS / DON'T BET once the line moves 0.5+ against).
+
+## Feb-Apr spread traps on 12 older seasons (Nov 2, 2026)
+`analysis/old_seasons.py`, `analysis/old_seasons_traps.py` (output `old_seasons_traps_output.txt`). 2009-10..2020-21 from the
+2007-2024 closing-line dataset; Model 1 WITHOUT injury features (no injury reports or openers that far back), graded at the
+CLOSING spread, so absolute results are weak (Feb-Apr 48.9%, -109u); what matters is the comparison:
+- Betting tanking teams Feb-Apr 46.4% (-65.2u) vs Oct-Jan 53.4% (+6.5u): the tanking trap is real and late-season.
+- Home underdogs lose in both halves (47.4% / 46.2%, positive in only 2-3 of 12 seasons): the home-dog rule is solid.
+- Against playoff-spot teams: 49.1% Feb-Apr vs 49.2% Oct-Jan (not specifically a late-season effect in older seasons).
+- Feb-Apr outside the traps and no home dogs: 379 bets 52.8% +2.8u (7 of 12 seasons positive) vs 48.9% for all Feb-Apr bets.

@@ -9,7 +9,7 @@ permissions:
   issues: write
 
 concurrency:
-  group: state-writes
+  group: log-bet-${{ github.event.issue.number || github.run_id }}   # one per bet (several bets at once were cancelling each other); the save step retries on conflicts
   cancel-in-progress: false
 
 jobs:

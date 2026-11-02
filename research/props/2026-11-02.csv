@@ -6529,3 +6529,25 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-02 06:15,22600164,2026-11-02,"Total Points, Rebounds, and Assists",5041939,Cooper Flagg,,38.5,-106.0,38.5,-107.0,2026-11-02T14:08Z,under
 2026-11-02 06:15,22600164,2026-11-02,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,34.5,-107.0,34.5,-107.0,2026-11-02T11:52Z,over
 2026-11-02 06:15,22600164,2026-11-02,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,34.5,-123.0,34.5,-123.0,2026-11-02T11:52Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points,3992,James Harden,,18.5,-112.0,18.5,-116.0,2026-11-02T03:53Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points,3992,James Harden,,18.5,-114.0,18.5,-109.0,2026-11-02T03:53Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points,4576087,Peyton Watson,,13.5,-104.0,12.5,-115.0,2026-11-02T13:44Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points,4576087,Peyton Watson,,13.5,-123.0,12.5,-111.0,2026-11-02T13:44Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Assists,4576087,Peyton Watson,,1.5,-120.0,1.5,-151.0,2026-11-02T03:53Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Assists,4576087,Peyton Watson,,1.5,-110.0,1.5,114.0,2026-11-02T03:53Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Assists,3992,James Harden,,25.5,-113.0,25.5,-113.0,2026-11-02T03:53Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Assists,3992,James Harden,,25.5,-116.0,25.5,-116.0,2026-11-02T03:53Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Assists,4576087,Peyton Watson,,14.5,-129.0,14.5,-117.0,2026-11-02T13:44Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Assists,4576087,Peyton Watson,,14.5,-102.0,14.5,-112.0,2026-11-02T13:44Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,3992,James Harden,,23.5,-108.0,23.5,-119.0,2026-11-02T03:53Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,3992,James Harden,,23.5,-121.0,23.5,-110.0,2026-11-02T03:53Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,4066328,Jarrett Allen,,20.5,-125.0,21.5,-105.0,2026-11-02T10:12Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,4066328,Jarrett Allen,,20.5,-105.0,21.5,-125.0,2026-11-02T10:12Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,4576087,Peyton Watson,,17.5,-121.0,17.5,-107.0,2026-11-02T03:53Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,4576087,Peyton Watson,,17.5,-108.0,17.5,-122.0,2026-11-02T03:53Z,under
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,4900671,Ajay Mitchell,,21.5,-120.0,20.5,-115.0,2026-11-02T09:00Z,over
+2026-11-02 06:25,22600158,2026-11-02,Total Points and Rebounds,4900671,Ajay Mitchell,,21.5,-109.0,20.5,-115.0,2026-11-02T09:00Z,under
+2026-11-02 06:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",3992,James Harden,,30.5,-109.0,30.5,-114.0,2026-11-02T03:53Z,over
+2026-11-02 06:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",3992,James Harden,,30.5,-121.0,30.5,-116.0,2026-11-02T03:53Z,under
+2026-11-02 06:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",4576087,Peyton Watson,,19.5,-117.0,19.5,-108.0,2026-11-02T03:53Z,over
+2026-11-02 06:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",4576087,Peyton Watson,,19.5,-113.0,19.5,-122.0,2026-11-02T03:53Z,under

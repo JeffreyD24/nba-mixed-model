@@ -25,6 +25,33 @@ ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_f
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
                                      #   at DraftKings openers 2023-26 +16.1/+19.3/+6.7u (355 bets, 58%); Feb-Apr lost every season (approved Nov 2, 2026)
+PIN_SPREAD_RULE = True               # Nov 2, 2026: no spread bet when Pinnacle's first spread is on the other side of DraftKings'
+                                     #   opener (2023-26: 265 bets, 44.5%, -39.7u; negative in 5 of 6 season-halves)
+PIN_NBA = {"Atlanta Hawks": "atl", "Brooklyn Nets": "bkn", "Boston Celtics": "bos", "Charlotte Hornets": "cha", "Chicago Bulls": "chi",
+           "Cleveland Cavaliers": "cle", "Dallas Mavericks": "dal", "Denver Nuggets": "den", "Detroit Pistons": "det",
+           "Golden State Warriors": "gs", "Houston Rockets": "hou", "Indiana Pacers": "ind", "Los Angeles Clippers": "lac", "LA Clippers": "lac",
+           "Los Angeles Lakers": "lal", "Memphis Grizzlies": "mem", "Miami Heat": "mia", "Milwaukee Bucks": "mil", "Minnesota Timberwolves": "min",
+           "New Orleans Pelicans": "no", "New York Knicks": "ny", "Oklahoma City Thunder": "okc", "Orlando Magic": "orl",
+           "Philadelphia 76ers": "phi", "Phoenix Suns": "phx", "Portland Trail Blazers": "por", "San Antonio Spurs": "sa",
+           "Sacramento Kings": "sac", "Toronto Raptors": "tor", "Utah Jazz": "utah", "Washington Wizards": "wsh"}
+
+
+def pinnacle_spreads():
+    """{(home, away): Pinnacle's first home spread} from pinnacle_watch.py (state/pinnacle_now.json)"""
+    try: js = json.load(open(os.path.join(W, "state", "pinnacle_now.json")))
+    except Exception: return {}
+    out = {}
+    for ev in js.get("nba", {}).values():
+        h, a = PIN_NBA.get(ev.get("home")), PIN_NBA.get(ev.get("away"))
+        v = ev.get("first", {}).get(f"spreads|{ev.get('home')}")
+        if h and a and v and v[1] is not None: out[(h, a)] = float(v[1])
+    return out
+
+
+def pin_against(pin, side, opn):
+    """True when Pinnacle's first spread is on the other side of DraftKings' opener for this bet (home-perspective spreads)"""
+    if pin is None or opn is None or pd.isna(opn): return False
+    return (float(opn) - pin) < 0 if side == "home" else (float(opn) - pin) > 0
 BET_ONLY = True                     # phone alerts only for BET verdicts and the DON'T BET follow-up (Nov 1, 2026);
                                     # everything else is still logged, just not pushed. False = the old behaviour.
 FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen
@@ -287,6 +314,7 @@ def main():
     NEWSOV = json.load(open(opath)) if os.path.exists(opath) else {}
     lpath = os.path.join(STATE, "nba_luck.json")
     LUCK = json.load(open(lpath)) if os.path.exists(lpath) else None
+    PINS = pinnacle_spreads()                 # Pinnacle first spreads (pinnacle_watch.py), for PIN_SPREAD_RULE
     NEWS_FRESH_MIN = 20          # a NEWS alert says BET only while the post is this new (the market catches up fast)
     KEY_SWING = 1.5        # model points (margin or total) a player is worth if he sits: "key player"
 
@@ -617,6 +645,9 @@ def main():
                 vd, vr = news_verdict(g, market, side, cur, opn, e) if is_news else verdict(g["game_id"], market, side, cur, opn, e)
                 if vd == "BET" and px is not None and not pd.isna(px) and float(px) < MAX_PRICE:
                     vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
+                if vd == "BET" and market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((g["home"], g["away"])), side, opn):
+                    vd, vr = "PASS", (f"Pinnacle (the sharp book) opened {g['home'].upper()} {PINS[(g['home'], g['away'])]:+g} vs DraftKings' "
+                                      f"{float(opn):+g}, the other side of this bet; those lost in 5 of 6 season-halves 2023-26")
                 if vd == "BET" and market == "spread" and SPREAD_TEST_ONLY:
                     month_ok = pd.Timestamp(M["date"]).month in SPREAD_LIVE_MONTHS
                     home_dog = side == "home" and float(cur) > 0
@@ -667,6 +698,9 @@ def main():
                 vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
                 mv = float(cur) - float(r.line)
                 if vd == "PASS": why = vr
+                elif r.market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((r.home, r.away)), side_, opn):
+                    why = (f"Pinnacle (the sharp book) has now opened {str(r.home).upper()} {PINS[(r.home, r.away)]:+g} vs DraftKings' opener "
+                           f"{float(opn):+g}, the other side of this bet; those lost in 5 of 6 season-halves 2023-26")
                 elif abs(mv) >= AGAINST_MOVE and against_us(r.market, side_, mv):
                     why = f"the line moved {abs(mv):.1f} pts against this bet since the alert ({float(r.line):g} -> {float(cur):g})"
                 else: continue

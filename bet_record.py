@@ -33,6 +33,7 @@ def main():
         v = V[(V.market == r.market) & (V.live_from_et <= r.placed_et)].sort_values("live_from_et")
         return v.iloc[-1].version if len(v) else "before tracking"
     B["version"] = [version(r) for r in B.itertuples()]
+    B.loc[B.notes.astype(str).str.contains("OFF-MODEL"), "version"] = "off-model (no alert)"      # bets the model did not call for
     B["status"] = np.where(B.result.isin(["W", "L", "P"]), B.result, "pending")
     B["units"] = np.where(B.status == "pending", np.nan, B.profit / B.stake)
     keep = ["placed_et", "issue", "date", "away", "home", "market", "pick", "line", "odds", "stake", "version", "status", "profit", "units"]

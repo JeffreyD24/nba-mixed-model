@@ -1,0 +1,55 @@
+1044 spread bets (roster + form model, DK openers, edge 3+)
+  Feb-Apr:  514 48.2%  -40.5u  by season 2024:  172 40.7%  -38.4u 2025:  166 51.8%   -1.8u 2026:  176 52.3%   -0.4u
+  Oct-Jan:  530 55.7%  +33.2u  by season 2024:  180 55.6%  +10.9u 2025:  173 58.4%  +19.8u 2026:  177 53.1%   +2.5u
+
+THE TWO HALVES, averages over our bets (Oct-Jan | Feb-Apr):
+  points we get (+ = underdog)               +2.87 |   +4.69
+  share underdogs                            +0.75 |   +0.77
+  share home                                 +0.49 |   +0.49
+  our team's win %                           +0.49 |   +0.45
+  opponent's win %                           +0.51 |   +0.53
+  our players out at open                    +3.94 |   +4.67
+  their players out at open                  +3.19 |   +3.25
+  OUR players ruled out after the open       +0.36 |   +0.50
+  THEIR players ruled out after the open     +0.35 |   +0.37
+  value lost by us after open (EPM)          -0.02 |   +0.04
+  value lost by them after open              +0.06 |   +0.04
+  roster change (ours - theirs)              +0.39 |   +0.61
+  DK line move toward us (pts)               +0.90 |   +0.53
+  Pinnacle opener vs DK (toward us)          +0.59 |   +0.38
+  Pinnacle move toward us (pts)              +0.30 |   +0.17
+  our edge vs the sharp close (pts)          +3.73 |   +4.41
+
+WIN RATE by market move, each half (does the market already know when we're wrong?)
+  Feb-Apr Pinnacle moved against us 1+    144 36.8%  -42.8u
+  Feb-Apr Pinnacle moved against <1        63 49.2%   -3.8u
+  Feb-Apr no Pinnacle move                 66 50.0%   -3.0u
+  Feb-Apr Pinnacle moved toward us        241 54.4%   +9.1u
+  Oct-Jan Pinnacle moved against us 1+    123 51.2%   -2.7u
+  Oct-Jan Pinnacle moved against <1        66 51.5%   -1.1u
+  Oct-Jan no Pinnacle move                 92 55.4%   +5.4u
+  Oct-Jan Pinnacle moved toward us        249 59.0%  +31.6u
+
+WIN RATE by late scratches (players ruled out AFTER the opener)
+  Feb-Apr we lost a player late           175 49.1%  -10.8u
+  Feb-Apr they lost a player late         164 52.4%   +0.2u
+  Feb-Apr no late scratches               239 46.0%  -29.0u
+  Oct-Jan we lost a player late           154 55.2%   +8.3u
+  Oct-Jan they lost a player late         160 53.1%   +2.3u
+  Oct-Jan no late scratches               268 56.7%  +22.2u
+
+WIN RATE by team quality (tanking / resting)
+  Feb-Apr we bet a bad team (<40%)        236 44.9%  -33.6u
+  Feb-Apr we bet a good team (>60%)       134 53.7%   +3.5u
+  Feb-Apr we bet a middling team          144 48.6%  -10.4u
+  Feb-Apr opponent is bad (<40%)           73 53.4%   +1.5u
+  Feb-Apr opponent is good (>60%)         166 56.0%  +11.5u
+  Oct-Jan we bet a bad team (<40%)        159 56.0%  +10.9u
+  Oct-Jan we bet a good team (>60%)       146 55.5%   +8.6u
+  Oct-Jan we bet a middling team          225 55.6%  +13.6u
+  Oct-Jan opponent is bad (<40%)          113 59.3%  +14.9u
+  Oct-Jan opponent is good (>60%)         160 52.5%   +0.4u
+
+How often games change after the open (all games, not just bets), per game:
+  Oct-Jan: players ruled out after the open 0.89 per game; average line move open->close 1.48 pts; moves of 2+ pts 32%
+  Feb-Apr: players ruled out after the open 1.00 per game; average line move open->close 1.65 pts; moves of 2+ pts 35%

@@ -16324,3 +16324,43 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-02 11:05,22600172,2026-11-02,"Total Points, Rebounds, and Assists",4066261,Bam Adebayo,,32.5,-126.0,31.5,-113.0,2026-11-02T19:02Z,under
 2026-11-02 11:05,22600172,2026-11-02,"Total Points, Rebounds, and Assists",4601025,Pelle Larsson,,19.5,-119.0,19.5,-116.0,2026-11-02T17:17Z,over
 2026-11-02 11:05,22600172,2026-11-02,"Total Points, Rebounds, and Assists",4601025,Pelle Larsson,,19.5,-111.0,19.5,-113.0,2026-11-02T17:17Z,under
+2026-11-02 11:10,22600168,2026-11-02,Total Points,5041955,Darryn Peterson,,13.5,100.0,13.5,100.0,2026-11-02T16:17Z,over
+2026-11-02 11:10,22600168,2026-11-02,Total Points,5041955,Darryn Peterson,,13.5,-128.0,13.5,-127.0,2026-11-02T16:17Z,under
+2026-11-02 11:10,22600168,2026-11-02,Total Rebounds,4397077,Jaxson Hayes,,5.5,-148.0,5.5,-141.0,2026-11-02T18:57Z,over
+2026-11-02 11:10,22600168,2026-11-02,Total Rebounds,4397077,Jaxson Hayes,,5.5,112.0,5.5,107.0,2026-11-02T18:57Z,under
+2026-11-02 11:10,22600168,2026-11-02,Total Points and Assists,4845367,Stephon Castle,,22.5,-104.0,22.5,-114.0,2026-11-02T11:14Z,over
+2026-11-02 11:10,22600168,2026-11-02,Total Points and Assists,4845367,Stephon Castle,,22.5,-127.0,22.5,-115.0,2026-11-02T11:14Z,under
+2026-11-02 11:10,22600168,2026-11-02,Total Points and Rebounds,4592479,Julian Champagnie,,14.5,-102.0,13.5,-129.0,2026-11-02T17:20Z,over
+2026-11-02 11:10,22600168,2026-11-02,Total Points and Rebounds,4592479,Julian Champagnie,,14.5,-129.0,13.5,-102.0,2026-11-02T17:20Z,under
+2026-11-02 11:10,22600168,2026-11-02,Total Points and Rebounds,5041955,Darryn Peterson,,17.5,-103.0,16.5,-127.0,2026-11-02T18:57Z,over
+2026-11-02 11:10,22600168,2026-11-02,Total Points and Rebounds,5041955,Darryn Peterson,,17.5,-128.0,16.5,-104.0,2026-11-02T18:57Z,under
+2026-11-02 11:10,22600168,2026-11-02,Total Assists and Rebounds,4066259,De'Aaron Fox,,10.5,105.0,10.5,105.0,2026-11-02T11:14Z,over
+2026-11-02 11:10,22600168,2026-11-02,Total Assists and Rebounds,4066259,De'Aaron Fox,,10.5,-139.0,10.5,-138.0,2026-11-02T11:14Z,under
+2026-11-02 11:10,22600168,2026-11-02,Total Assists and Rebounds,5037871,Dylan Harper,,10.5,104.0,9.5,-142.0,2026-11-02T17:15Z,over
+2026-11-02 11:10,22600168,2026-11-02,Total Assists and Rebounds,5037871,Dylan Harper,,10.5,-137.0,9.5,108.0,2026-11-02T17:15Z,under
+2026-11-02 11:10,22600168,2026-11-02,"Total Points, Rebounds, and Assists",4683766,Isaiah Collier,,15.5,-104.0,15.5,-112.0,2026-11-02T15:24Z,over
+2026-11-02 11:10,22600168,2026-11-02,"Total Points, Rebounds, and Assists",4683766,Isaiah Collier,,15.5,-127.0,15.5,-118.0,2026-11-02T15:24Z,under
+2026-11-02 11:10,22600168,2026-11-02,"Total Points, Rebounds, and Assists",4845367,Stephon Castle,,27.5,-113.0,27.5,-122.0,2026-11-02T11:14Z,over
+2026-11-02 11:10,22600168,2026-11-02,"Total Points, Rebounds, and Assists",4845367,Stephon Castle,,27.5,-117.0,27.5,-108.0,2026-11-02T11:14Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Points,4278402,Jordan Goodwin,,7.5,-102.0,7.5,-102.0,2026-11-02T16:01Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Points,4278402,Jordan Goodwin,,7.5,-125.0,7.5,-124.0,2026-11-02T16:01Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Assists,4278402,Jordan Goodwin,,2.5,132.0,2.5,142.0,2026-11-02T12:45Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Assists,4278402,Jordan Goodwin,,2.5,-175.0,2.5,-188.0,2026-11-02T12:45Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Assists,4278585,Collin Gillespie,,4.5,111.0,4.5,118.0,2026-11-02T12:45Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Assists,4278585,Collin Gillespie,,4.5,-146.0,4.5,-156.0,2026-11-02T12:45Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Rebounds,5203685,Khaman Maluach,,6.5,-148.0,7.5,-105.0,2026-11-02T16:28Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Rebounds,5203685,Khaman Maluach,,6.5,112.0,7.5,-125.0,2026-11-02T16:28Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total 3-Point Field Goals,4278402,Jordan Goodwin,,1.5,107.0,1.5,111.0,2026-11-02T11:54Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total 3-Point Field Goals,4278402,Jordan Goodwin,,1.5,-140.0,1.5,-146.0,2026-11-02T11:54Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Assists,4278402,Jordan Goodwin,,9.5,-109.0,9.5,-108.0,2026-11-02T12:46Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Assists,4278402,Jordan Goodwin,,9.5,-121.0,9.5,-122.0,2026-11-02T12:46Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Rebounds,6589,Draymond Green,,9.5,-133.0,10.5,102.0,2026-11-02T18:59Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Rebounds,6589,Draymond Green,,9.5,101.0,10.5,-134.0,2026-11-02T18:59Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Rebounds,4066383,Miles Bridges,,22.5,-126.0,22.5,-107.0,2026-11-02T18:59Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Rebounds,4066383,Miles Bridges,,22.5,-104.0,22.5,-123.0,2026-11-02T18:59Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Rebounds,4278402,Jordan Goodwin,,11.5,-109.0,11.5,-107.0,2026-11-02T12:34Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Points and Rebounds,4278402,Jordan Goodwin,,11.5,-120.0,11.5,-123.0,2026-11-02T12:34Z,under
+2026-11-02 11:10,22600170,2026-11-02,Total Assists and Rebounds,4278402,Jordan Goodwin,,6.5,-102.0,6.5,105.0,2026-11-02T12:46Z,over
+2026-11-02 11:10,22600170,2026-11-02,Total Assists and Rebounds,4278402,Jordan Goodwin,,6.5,-130.0,6.5,-138.0,2026-11-02T12:46Z,under
+2026-11-02 11:10,22600170,2026-11-02,"Total Points, Rebounds, and Assists",4278402,Jordan Goodwin,,13.5,-117.0,13.5,-115.0,2026-11-02T12:46Z,over
+2026-11-02 11:10,22600170,2026-11-02,"Total Points, Rebounds, and Assists",4278402,Jordan Goodwin,,13.5,-113.0,13.5,-114.0,2026-11-02T12:46Z,under

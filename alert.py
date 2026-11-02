@@ -23,6 +23,8 @@ THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
+SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
+                                     #   at DraftKings openers 2023-26 +16.1/+19.3/+6.7u (355 bets, 58%); Feb-Apr lost every season (approved Nov 2, 2026)
 BET_ONLY = True                     # phone alerts only for BET verdicts and the DON'T BET follow-up (Nov 1, 2026);
                                     # everything else is still logged, just not pushed. False = the old behaviour.
 FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen
@@ -470,19 +472,20 @@ def main():
                     luck_adj = -LUCK.get("weight", 0.5) * (th["luck"] + th["luck_allowed"] + ta["luck"] + ta["luck_allowed"] - 4 * lg)
                     total = total + luck_adj
             # recent form (nba_luck.py; analysis/form_adjust.py, Nov 2, 2026): last 10 games vs season-to-date
-            form_adj = form_adj_sp = 0.0
+            form_adj = form_adj_sp = 0.0; sp_ready = False
             if LUCK:
                 th, ta = LUCK["teams"].get(g["home"]), LUCK["teams"].get(g["away"])
                 fm = LUCK.get("form_min_games", 10)
                 if th and ta and min(th.get("form_games", 0), ta.get("form_games", 0)) >= fm:
                     form_adj = LUCK.get("form_weight_total", 0.0) * (th["form_total"] + ta["form_total"])
                     form_adj_sp = LUCK.get("form_weight_spread", 0.0) * (th["form_margin"] - ta["form_margin"])
-                    total = total + form_adj; margin = margin + form_adj_sp
+                    total = total + form_adj; margin = margin + form_adj_sp; sp_ready = True
             # roster strength vs the season so far (trades, buyouts, returns): spreads only (test-only), weight 0.57 per EPM pt
             roster_adj = 0.0
             RS = M.get("roster", {})
             if g["home"] in RS and g["away"] in RS and min(RS[g["home"]]["games"], RS[g["away"]]["games"]) >= 10:
                 roster_adj = ROSTER_W * (RS[g["home"]]["delta"] - RS[g["away"]]["delta"]); margin = margin + roster_adj
+            else: sp_ready = False
             nl, lm_, hm_, lt_, ht_ = limbo(SW)
             model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
                                    model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used,
@@ -615,7 +618,13 @@ def main():
                 if vd == "BET" and px is not None and not pd.isna(px) and float(px) < MAX_PRICE:
                     vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
                 if vd == "BET" and market == "spread" and SPREAD_TEST_ONLY:
-                    vd, vr = "TEST", "NBA spreads are test-only (no edge in the 2023-24 holdout); recorded for grading, not a bet"
+                    month_ok = pd.Timestamp(M["date"]).month in SPREAD_LIVE_MONTHS
+                    home_dog = side == "home" and float(cur) > 0
+                    if not (month_ok and sp_ready and not home_dog):
+                        why_t = ("Feb-Apr: spreads lost every season then" if not month_ok else
+                                 "home underdog: these lost every season" if home_dog else
+                                 "both teams need 10+ games before the roster and form adjustments kick in")
+                        vd, vr = "TEST", f"NBA spreads are test-only here ({why_t}); recorded for grading, not a bet"
                 if is_news:
                     title = "NEWS - " + title
                     why = ("NEWS: reporter news changed the model before the official report did. Read the post (link below) "

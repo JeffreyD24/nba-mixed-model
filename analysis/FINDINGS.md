@@ -345,3 +345,12 @@ model's disagreement to trust.
   17-18 -2.26u, overs 25 bets 15-10 +3.95u; old rules (plain model, both bets) 116 bets -8.15u. Pinnacle and second-chance
   rules can't be replayed (Pinnacle recording started Nov 2).
 - Samples this small (one to four weeks) can't confirm or reject anything; the backtests remain the evidence.
+
+## NFL retest with DraftKings openers through 2025-26 (Nov 2, 2026)
+NFL 2024-26 odds downloaded (credits left ~204,000). Early-week model, edge 3+, opener, 2020-2025:
+- Spreads: 462 bets 50.6% -15.3u (2024 -5.6, 2025 -4.5). Totals: 521 bets 53.7% +13.5u (2024 +9.2, 2025 -12.7).
+- With fixes (each fit leaving the season out): totals + wind/cold + week 15+ shrink 438 bets 55.7% +27.8u (2 of 6 seasons
+  negative: 2021 -5.4, 2025 -6.5); spreads + week 15+ shrink 362 bets 53.6% +8.4u (3 of 6 negative). QB and home fixes don't help.
+- Moneyline (1,725 games): model Brier 0.2250 vs DraftKings opener 0.2159; EV 6%+ 944 bets -63.2u (4 of 6 seasons negative).
+- Second-half totals can't be checked at real openers: the odds history has full-game markets only.
+- Verdict unchanged: full-game NFL stays test-only; weather + late-season tracking continues live this season.

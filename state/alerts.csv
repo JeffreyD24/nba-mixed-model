@@ -52,3 +52,5 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600160,total,2026-11-02 15:02:37.835369,2026-11-02,ind,atl,2026-11-02 19:30:00,over,229.5,234.5,233.3,3.8,2026-11-02_03_00PM,False,"line moved 5.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,,,,
 22600171,spread,2026-11-02 16:00:23.436687,2026-11-02,lac,tor,2026-11-02 22:00:00,home,5.5,5.5,0.26,5.76,2026-11-02_04_00PM,False,,,,,,,OPTIONAL,,,,,
 22600172,spread,2026-11-02 16:00:23.436687,2026-11-02,lal,mia,2026-11-02 22:00:00,home,-1.5,-1.5,6.03,4.53,2026-11-02_04_00PM,False,,,,,,,OPTIONAL,,,,,
+22600171,spread,2026-11-02 16:20:27.285085,2026-11-02,lac,tor,2026-11-02 22:00:00,home,4.5,5.5,0.26,4.76,2026-11-02_04_15PM,False,,,,,,,TEST,,,,,
+22600172,spread,2026-11-02 16:20:27.285085,2026-11-02,lal,mia,2026-11-02 22:00:00,home,-2.5,-1.5,6.03,3.53,2026-11-02_04_15PM,False,,,,,,,TEST,,,,,

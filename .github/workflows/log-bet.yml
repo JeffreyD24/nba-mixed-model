@@ -37,7 +37,7 @@ jobs:
             python log_bet.py . "$GITHUB_EVENT_PATH"
             python bet_record.py . > /dev/null 2>&1 || true
             if [ -f state/my_bets.csv ]; then git add state/my_bets.csv; fi
-            for f in state/bet_record.csv state/record_by_version.csv; do [ -f "$f" ] && git add "$f"; done
+            for f in state/bet_record.csv state/record_by_version.csv; do if [ -f "$f" ]; then git add "$f"; fi; done
             if git diff --cached --quiet; then echo "Nothing new to save."; exit 0; fi
             git commit -q -m "Log bet from issue #${{ github.event.issue.number }}"
             if git push -q; then exit 0; fi

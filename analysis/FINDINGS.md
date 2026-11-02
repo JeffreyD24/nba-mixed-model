@@ -319,3 +319,8 @@ DraftKings opening moneyline, 2023-24..2025-26, both teams 10+ games.
 - Across every market tested: the line moving our way after the bet = wins, against = losses; Pinnacle's first price against
   our side = losses (NBA spreads, NBA moneyline, NHL moneyline); the opener is about as accurate as our models overall, so
   the edge lives in specific disagreement spots (NBA totals, NHL moneyline/overs, NBA spreads Oct-Jan), not in every game.
+- Moneyline takeaways (`analysis/nba_ml_takeaways.py`, output `nba_ml_takeaways_output.txt`), EV 6%+ at DK openers 2023-26:
+  home moneylines lose every season (728 bets -42.7u): the model overrates home teams, the same bias behind the home-dog spread
+  losses. Long shots (+200 or longer) carry the swings (-18.3 / +39.8 / -16.8). Away moneylines +150 or shorter: 460 bets
+  +29.4u, positive all three seasons; with the live rules 313 bets +27.8u (+4.9 / +9.7 / +13.2), but half are games that already
+  have a live spread bet; the new games add only +7.9u over three seasons (161 bets). Not adopted; paper-track candidate.

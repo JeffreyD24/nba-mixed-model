@@ -47,4 +47,5 @@ jobs:
           POLYMARKET_OFF: ${{ vars.POLYMARKET_OFF }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           GH_TOKEN: ${{ github.token }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: ./alert_loop.sh

@@ -96,7 +96,6 @@ key,status,snapshot
 2026-11-02|wsh|jamir watkins,Out,2026-11-01_04_30PM
 2026-11-02|cle|nae qwan tomlin,Out,2026-11-01_04_45PM
 2026-11-02|cle|jaylon tyson,Out,2026-11-01_04_45PM
-2026-11-02|cle|peyton watson,Questionable,2026-11-01_04_45PM
 2026-11-02|cha|kon knueppel,Out,2026-11-01_05_00PM
 2026-11-02|cha|grant williams,Out,2026-11-01_05_00PM
 2026-11-02|det|jalen duren,Out,2026-11-01_05_00PM
@@ -111,7 +110,6 @@ key,status,snapshot
 2026-11-02|okc|cason wallace,Out,2026-11-01_05_15PM
 2026-11-02|okc|jalen williams,Out,2026-11-01_05_15PM
 2026-11-02|sa|tobias harris,Out,2026-11-01_05_30PM
-2026-11-02|dal|santi aldama,Doubtful,2026-11-01_05_45PM
 2026-11-02|dal|dereck lively,Out,2026-11-01_05_45PM
 2026-11-02|dal|caleb martin,Available,2026-11-01_05_45PM
 2026-11-02|sac|zach lavine,Questionable,2026-11-01_06_00PM
@@ -161,7 +159,6 @@ key,status,snapshot
 2026-11-02|wsh|reece beekman,Out,2026-11-02_01_00PM
 2026-11-02|wsh|anthony gill,Out,2026-11-02_01_00PM
 2026-11-02|wsh|alex sarr,Out,2026-11-02_01_00PM
-2026-11-02|dal|kyrie irving,Doubtful,2026-11-02_01_45PM
 2026-11-02|no|trey murphy,Available,2026-11-02_01_45PM
 2026-11-02|no|julian reese,Available,2026-11-02_01_45PM
 2026-11-02|hou|clint capela,Out,2026-11-02_02_00PM
@@ -201,3 +198,6 @@ key,status,snapshot
 2026-11-02|sac|dylan cardwell,Out,2026-11-02_06_30PM
 2026-11-02|min|terrence shannon,Out,2026-11-02_06_30PM
 2026-11-02|utah|kobe bufkin,Available,2026-11-02_06_30PM
+2026-11-02|cle|peyton watson,Out,2026-11-02_06_45PM
+2026-11-02|dal|santi aldama,Out,2026-11-02_06_45PM
+2026-11-02|dal|kyrie irving,Out,2026-11-02_06_45PM

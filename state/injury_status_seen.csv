@@ -91,9 +91,6 @@ key,status,snapshot
 2026-11-02|hou|reed sheppard,Questionable,2026-11-01_03_30PM
 2026-11-01|ind|aaron nesmith,Available,2026-11-01_04_00PM
 2026-11-01|lal|ziaire williams,Out,2026-11-01_04_00PM
-2026-11-02|chi|tobe awaka,Probable,2026-11-01_04_00PM
-2026-11-02|chi|nic claxton,Doubtful,2026-11-01_04_00PM
-2026-11-02|chi|jalen smith,Probable,2026-11-01_04_00PM
 2026-11-02|wsh|justin champagnie,Out,2026-11-01_04_30PM
 2026-11-02|wsh|tristan vukcevic,Out,2026-11-01_04_30PM
 2026-11-02|wsh|jamir watkins,Out,2026-11-01_04_30PM
@@ -182,7 +179,6 @@ key,status,snapshot
 2026-11-02|tor|kawhi leonard,Out,2026-11-02_03_15PM
 2026-11-02|tor|jakob poeltl,Questionable,2026-11-02_03_15PM
 2026-11-02|tor|malachi smith,Out,2026-11-02_03_15PM
-2026-11-02|sac|dylan cardwell,Questionable,2026-11-02_03_30PM
 2026-11-02|gs|jimmy butler,Out,2026-11-02_04_00PM
 2026-11-02|gs|al horford,Out,2026-11-02_04_00PM
 2026-11-02|gs|moses moody,Out,2026-11-02_04_00PM
@@ -201,3 +197,7 @@ key,status,snapshot
 2026-11-02|atl|keshon gilbert,Out,2026-11-02_04_30PM
 2026-11-02|atl|jalen wilson,Out,2026-11-02_04_30PM
 2026-11-02|no|dejounte murray,Out,2026-11-02_05_30PM
+2026-11-02|sac|dylan cardwell,Doubtful,2026-11-02_05_45PM
+2026-11-02|chi|tobe awaka,Available,2026-11-02_05_45PM
+2026-11-02|chi|nic claxton,Out,2026-11-02_05_45PM
+2026-11-02|chi|jalen smith,Available,2026-11-02_05_45PM

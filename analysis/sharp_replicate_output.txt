@@ -1,0 +1,38 @@
+1. WHAT MOVES THE LINE (DraftKings open -> Pinnacle close), all three seasons, standardized weights (pts per 1 SD)
+  spread: 3146 games, avg |move| 1.60; explained 15% (injury news after the open alone 7%)
+     news_sp          +0.60
+     form10_sp        +0.55
+     form_gap_sp      +0.41
+     L_margin         -0.32
+     ats_diff         -0.31
+     inj_sp_open      +0.30
+     rest_diff        +0.30
+     dk_open_spread   -0.08
+     last_sp          +0.06
+  total: 3133 games, avg |move| 2.60; explained 13% (injury news after the open alone 6%)
+     news_tot         +0.78
+     inj_tot_open     +0.60
+     ou_both          +0.57
+     L_total          -0.25
+     pace_gap_tot     +0.24
+     h_rest           +0.15
+     dk_open_total    -0.09
+     a_rest           +0.07
+
+2. SHARP MODEL: predict the move from what's known at DraftKings' open (train 2 seasons, test the 3rd)
+  spread ridge   2022: r=+0.25 | 0.5+: 515 bets 55.0% +25.3u, line moved our way 59% | 1.0+: 190 bets 54.7% +8.5u, line moved our way 66% | 1.5+: 47 bets 66.0% +12.2u, line moved our way 77%
+  spread ridge   2023: r=+0.22 | 0.5+: 349 bets 50.4% -13.0u, line moved our way 59% | 1.0+: 75 bets 52.0% -0.5u, line moved our way 60% | 1.5+: 5 bets 0.0% -5.0u, line moved our way 40%
+  spread ridge   2024: r=+0.27 | 0.5+: 382 bets 51.6% -5.9u, line moved our way 59% | 1.0+: 87 bets 54.0% +2.7u, line moved our way 64% | 1.5+: 19 bets 47.4% -1.8u, line moved our way 70%
+  spread ridge   all: r=+0.24 | 0.5+: 1246 bets 52.6% +6.4u, line moved our way 59% | 1.0+: 352 bets 54.0% +10.7u, line moved our way 64% | 1.5+: 71 bets 56.3% +5.4u, line moved our way 72%
+  spread boosted 2022: r=+0.22 | 0.5+: 572 bets 51.0% -14.5u, line moved our way 56% | 1.0+: 235 bets 54.9% +11.3u, line moved our way 61% | 1.5+: 60 bets 61.7% +10.6u, line moved our way 75%
+  spread boosted 2023: r=+0.16 | 0.5+: 375 bets 48.0% -31.4u, line moved our way 57% | 1.0+: 90 bets 44.4% -13.6u, line moved our way 60% | 1.5+: 19 bets 42.1% -3.7u, line moved our way 74%
+  spread boosted 2024: r=+0.22 | 0.5+: 426 bets 51.4% -7.9u, line moved our way 55% | 1.0+: 121 bets 54.5% +5.0u, line moved our way 60% | 1.5+: 16 bets 56.2% +1.2u, line moved our way 50%
+  spread boosted all: r=+0.20 | 0.5+: 1373 bets 50.3% -53.8u, line moved our way 56% | 1.0+: 446 bets 52.7% +2.6u, line moved our way 61% | 1.5+: 95 bets 56.8% +8.1u, line moved our way 70%
+  total ridge   2022: r=+0.32 | 0.5+: 879 bets 47.7% -79.1u, line moved our way 48% | 1.0+: 653 bets 49.0% -42.1u, line moved our way 51% | 1.5+: 424 bets 49.5% -23.1u, line moved our way 56%
+  total ridge   2023: r=+0.22 | 0.5+: 544 bets 52.6% +2.0u, line moved our way 55% | 1.0+: 221 bets 56.6% +17.6u, line moved our way 62% | 1.5+: 93 bets 53.8% +2.5u, line moved our way 65%
+  total ridge   2024: r=+0.29 | 0.5+: 624 bets 52.4% +0.3u, line moved our way 57% | 1.0+: 323 bets 57.0% +28.3u, line moved our way 60% | 1.5+: 133 bets 56.4% +10.2u, line moved our way 66%
+  total ridge   all: r=+0.19 | 0.5+: 2047 bets 50.4% -76.8u, line moved our way 53% | 1.0+: 1197 bets 52.5% +3.8u, line moved our way 56% | 1.5+: 650 bets 51.5% -10.5u, line moved our way 59%
+  total boosted 2022: r=+0.22 | 0.5+: 689 bets 50.1% -30.4u, line moved our way 52% | 1.0+: 495 bets 49.9% -23.5u, line moved our way 54% | 1.5+: 338 bets 53.3% +5.6u, line moved our way 55%
+  total boosted 2023: r=+0.20 | 0.5+: 652 bets 50.6% -22.0u, line moved our way 52% | 1.0+: 349 bets 51.6% -5.4u, line moved our way 54% | 1.5+: 173 bets 51.4% -3.1u, line moved our way 60%
+  total boosted 2024: r=+0.20 | 0.5+: 660 bets 53.6% +15.8u, line moved our way 54% | 1.0+: 386 bets 56.5% +30.2u, line moved our way 55% | 1.5+: 199 bets 57.3% +18.6u, line moved our way 59%
+  total boosted all: r=+0.17 | 0.5+: 2001 bets 51.4% -36.5u, line moved our way 53% | 1.0+: 1230 bets 52.4% +1.4u, line moved our way 54% | 1.5+: 710 bets 53.9% +21.2u, line moved our way 57%

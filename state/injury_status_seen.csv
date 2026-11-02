@@ -87,7 +87,6 @@ key,status,snapshot
 2026-11-02|no|jordan poole,Out,2026-11-01_03_00PM
 2026-11-01|ind|obi toppin,Out,2026-11-01_03_30PM
 2026-11-02|hou|steven adams,Out,2026-11-01_03_30PM
-2026-11-02|hou|clint capela,Questionable,2026-11-01_03_30PM
 2026-11-02|hou|julian phillips,Out,2026-11-01_03_30PM
 2026-11-02|hou|reed sheppard,Questionable,2026-11-01_03_30PM
 2026-11-01|ind|aaron nesmith,Available,2026-11-01_04_00PM
@@ -122,7 +121,6 @@ key,status,snapshot
 2026-11-02|dal|santi aldama,Doubtful,2026-11-01_05_45PM
 2026-11-02|dal|dereck lively,Out,2026-11-01_05_45PM
 2026-11-02|dal|caleb martin,Available,2026-11-01_05_45PM
-2026-11-02|sac|dylan cardwell,Questionable,2026-11-01_06_00PM
 2026-11-02|sac|zach lavine,Questionable,2026-11-01_06_00PM
 2026-11-02|sac|keegan murray,Out,2026-11-01_06_00PM
 2026-11-02|sac|sean pedulla,Out,2026-11-01_06_00PM
@@ -179,3 +177,9 @@ key,status,snapshot
 2026-11-02|no|trey murphy,Available,2026-11-02_01_45PM
 2026-11-02|no|dejounte murray,Questionable,2026-11-02_01_45PM
 2026-11-02|no|julian reese,Available,2026-11-02_01_45PM
+2026-11-02|sac|dylan cardwell,Probable,2026-11-02_02_00PM
+2026-11-02|hou|clint capela,Out,2026-11-02_02_00PM
+2026-11-02|bos|devin carter,Out,2026-11-02_02_00PM
+2026-11-02|bos|paul george,Out,2026-11-02_02_00PM
+2026-11-02|min|lamelo ball,Questionable,2026-11-02_02_00PM
+2026-11-02|min|terrence shannon,Questionable,2026-11-02_02_00PM

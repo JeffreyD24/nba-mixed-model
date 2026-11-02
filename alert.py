@@ -577,7 +577,10 @@ def main():
                 side_now = ("home" if e_now > 0 else "away") if market == "spread" else ("over" if e_now > 0 else "under")
                 LINE_NOW[(g["game_id"], market)] = dict(cur=cur, opn=opn, e=e_now, side=side_now, H=H, Aw=Aw, tip=tip,
                                                         tip_et=g["tip_et"], date=M["date"], home=g["home"], away=g["away"],
-                                                        model=margin if market == "spread" else total, hist=hist_txt)
+                                                        model=margin if market == "spread" else total, hist=hist_txt,
+                                                        margin=margin, total=total,
+                                                        px={"home": ln.get("current_home_spread_odds"), "away": ln.get("current_away_spread_odds"),
+                                                            "over": ln.get("current_over_odds"), "under": ln.get("current_under_odds")})
                 is_news = bool(NK) and (g["game_id"], market, NK) not in news_done
                 if (g["game_id"], market) in done and not is_news: continue
                 is_open = opn is not None and not pd.isna(opn) and cur == opn
@@ -756,12 +759,17 @@ def main():
                 worse = (mv > 0 if side_ == "over" else mv < 0 if side_ == "under" else mv < 0 if side_ == "home" else mv > 0)
                 ok = (side_ == r.side and abs(e_) >= THRESHOLD and vd == "BET" and not worse
                       and not (r.market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((r.home, r.away)), side_, opn)))
+                px_now = (now_.get("px") or {}).get(side_)
+                if ok and px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE: ok = False     # price too expensive
                 if not ok: continue
                 if r.market == "spread":
                     bl = float(cur) if side_ == "home" else -float(cur); what = f"{H if side_ == 'home' else Aw} {bl:+g}"
                 else:
                     what = f"{str(side_).upper()} {float(cur):g}"
-                body = (f"BET: back in range. The DON'T BET at {pd.Timestamp(r.stopped_at_et):%-I:%M %p} no longer applies: DraftKings is "
+                ptxt = price_txt(px_now) if (px_now is not None and not pd.isna(px_now)) else ""
+                what = what + ptxt
+                body = (bet_range(r.market, side_, now_["margin"], now_["total"], opn, H, Aw) + "\n"
+                        f"BET: back in range. The DON'T BET at {pd.Timestamp(r.stopped_at_et):%a %-I:%M %p} no longer applies: DraftKings is "
                         f"{what} again, model {now_['model']:.1f} (edge {abs(e_):.1f}), no worse than the original alert ({float(r.line):g}). "
                         f"{vr}. Bet it now if you still want it; log it after." + now_["hist"])
                 notify(f"BACK IN RANGE - BET {what}: {Aw} @ {H}, {now_['tip']}", body, priority="high", tags="white_check_mark", kind="bet")

@@ -280,3 +280,14 @@ player who joined from another team in the last 30 days. Live spread model, DK o
   The same exclusions don't matter Oct-Jan (traps +20.3u there). Found on the same seasons: paper-track before betting.
 - Betting against a top-4 team in Feb-Apr: 155 bets 57.4% +14.9u (-6.2, +8.7, +12.4): top seeds rest late.
 - Market (closing line, 2021-26 Feb-Apr): home bubble teams vs playoff-spot or top teams fail to cover by ~3 pts (4 of 5 seasons).
+
+## Why totals at the CLOSE lost in 2024-25 (Nov 2, 2026)
+`analysis/close_2025.py` (output `close_2025_output.txt`). At the opener the live totals model won every season (+46.3 / +40.3 /
++60.5u); at the close it was +6.5 / -52.8 / +8.3u.
+- 2024-25 lines moved much more during the day: average total move open->close 3.19 pts (2.43-2.83 in other seasons), even in
+  games with no late injury news (3.05 vs 2.27-2.65). The close improved on the opener by 0.52 pts of error (vs 0.33 and 0.27):
+  that season the market (sharps) found and priced the information late.
+- At the close, most "bets" are against a line that moved away from the model (415 bets, -38.9u in 2024-25) or exist only
+  because the line moved away (close-only: 248 bets, -30.4u). Betting into a moved line = betting against the sharps.
+- Same model, same season, at the opener: 479 bets, 56.8%, +40.3u. The close numbers are a stress test, not a strategy; the live
+  rules already cover it (bet within the hour; PASS / DON'T BET once the line moves 0.5+ against).

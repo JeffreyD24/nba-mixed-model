@@ -26,7 +26,8 @@ ALT_HOMES = ("den", "utah")          #   added to the model total, fit leaving e
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
-                                     #   at DraftKings openers 2023-26 +16.1/+19.3/+6.7u (355 bets, 58%); Feb-Apr lost every season (approved Nov 2, 2026)
+                                     #   at DraftKings openers 2023-26 +16.1/+19.3/+6.7u (355 bets, 58%). Feb-Apr only outside three traps (tanking team,
+                                     #   against a playoff-spot team, our team added a player in 30 days): 87 bets 63% +18.0u 2023-26 (approved Nov 2, 2026)
 PIN_SPREAD_RULE = True               # Nov 2, 2026: no spread bet when Pinnacle's first spread is on the other side of DraftKings'
                                      #   opener (2023-26: 265 bets, 44.5%, -39.7u; negative in 5 of 6 season-halves)
 PIN_NBA = {"Atlanta Hawks": "atl", "Brooklyn Nets": "bkn", "Boston Celtics": "bos", "Charlotte Hornets": "cha", "Chicago Bulls": "chi",
@@ -655,8 +656,17 @@ def main():
                 if vd == "BET" and market == "spread" and SPREAD_TEST_ONLY:
                     month_ok = pd.Timestamp(M["date"]).month in SPREAD_LIVE_MONTHS
                     home_dog = side == "home" and float(cur) > 0
+                    late_why = None
+                    if not month_ok:      # Feb-Apr rule (approved Nov 2, 2026; analysis/late_season.py): only outside the three traps
+                        ST, AR = M.get("standing", {}), M.get("arrivals", {})
+                        us, them = (g["home"], g["away"]) if side == "home" else (g["away"], g["home"])
+                        if us not in ST or them not in ST: late_why = "Feb-Apr: standings unavailable"
+                        elif ST[us]["cat"] == "tanking": late_why = f"Feb-Apr: {us.upper()} is tanking (bets on tanking teams lost every season)"
+                        elif ST[them]["cat"] == "middle": late_why = f"Feb-Apr: {them.upper()} is in a playoff spot (5-10) and fighting for seeding (lost every season)"
+                        elif AR.get(us, 0) > 0: late_why = f"Feb-Apr: {us.upper()} added a player in the last 30 days (lost every season)"
+                        else: month_ok = True
                     if not (month_ok and sp_ready and not home_dog):
-                        why_t = ("Feb-Apr: spreads lost every season then" if not month_ok else
+                        why_t = (late_why if late_why else
                                  "home underdog: these lost every season" if home_dog else
                                  "both teams need 10+ games before the roster and form adjustments kick in")
                         vd, vr = "TEST", f"NBA spreads are test-only here ({why_t}); recorded for grading, not a bet"

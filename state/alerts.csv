@@ -43,3 +43,4 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600168,spread,2026-11-01 22:50:32.796320,2026-11-02,sa,utah,2026-11-02 20:30:00,away,-16.5,-15.5,12.81,3.69,2026-11-01_10_45PM,False,"line moved 1.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,,
 22600172,spread,2026-11-01 23:36:54.946922,2026-11-02,lal,mia,2026-11-02 22:00:00,home,-1.5,,6.46,4.96,as of 2026-11-01 22:22,False,a team has not filed its injury report,,,,,,CHECK,,,
 22600172,total,2026-11-01 23:36:54.946922,2026-11-02,lal,mia,2026-11-02 22:00:00,under,239.5,,228.75,10.75,as of 2026-11-01 22:22,False,a team has not filed its injury report,,,,,,CHECK,,,
+22600171,spread,2026-11-01 23:50:24.350579,2026-11-02,lac,tor,2026-11-02 22:00:00,home,5.5,5.5,-0.27,5.23,as of 2026-11-01 22:22,False,a team has not filed its injury report,,,,,,BET,,,

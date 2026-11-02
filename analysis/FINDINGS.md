@@ -102,3 +102,26 @@ two weeks are being re-downloaded). Edge 3+.
   the open: 2023-24 -38.4u, 2024-25 +17.1u, 2025-26 +2.7u -> 610-573 (51.6%), below the 52.4% break-even at -110.
 - Model edge vs open-to-close move: totals r = +0.28, spreads r = +0.16.
 Scripts: analysis/validate_2023_24_model.py, analysis/validate_2023_24.py
+
+## Following and copying the sharps (Nov 2, 2026)
+Data: every hourly-or-finer snapshot of 10 books, NBA and NHL 2021-22..2023-24 (data/odds_history/{nba,nhl}_snapshots.csv.gz).
+Pinnacle = the sharp book. Scripts: analysis/sharp_nba.py, sharp_replicate.py, sharp_nhl.py (outputs in *_output.txt).
+- **Who moves first:** DraftKings opens first: NBA median 12.6 h before Pinnacle, NHL about 7 h. At hourly resolution neither
+  book reliably leads the other (each "follows" the other ~25-30% of the time within 2 h).
+- **NBA: Pinnacle's opener carries no edge over DraftKings.** Betting DK on the side Pinnacle's opener prefers: 374 bets, 50.5%.
+  Pinnacle's opener is a little more accurate than DK's (spread MAE 10.34 vs 10.42; totals 14.32 vs 14.44) but by the close
+  every book is the same. The sharp information arrives during the day, not at Pinnacle's open.
+- **What moves NBA lines (DK open -> Pinnacle close):** injury news after the open (biggest), last-10-game form, season form vs
+  the opener, injuries already known at the open (DK under-prices them), rest; sharps fade shooting luck and against-the-spread
+  streaks. Totals: injury news, injuries known at open, teams' over/under records, fading shooting luck. Explains ~15% of moves.
+- **A "sharp model"** (predict the move from what's known at DK's open; train two seasons, test the third): r = 0.2-0.3 and the
+  line moves its way ~60%, but betting it is about break-even (spreads +10.7u on 352 at 1+ pt; totals +3.8u on 1,197). Predicting
+  where the line goes isn't enough on its own; our totals model already does this (r = 0.28).
+- Combined with our totals model (2023-24, edge 3+): when the sharp model also expects a move our way, 480 bets 55.8% +31.6u vs
+  146 bets 50.7% -4.7u. One season; watch, not a rule. It does not rescue spreads (47-48% either way).
+- **NHL: Pinnacle disagreeing is a warning.** Shot model moneyline bets at DK's opener, EV 6%+ (1,331 bets, +64.5u): when
+  Pinnacle's first price likes our side less than DK did, 260 bets -31.5u (-12%), negative in all three seasons (-4.1, -16.9,
+  -10.5); agrees or same: 1,071 bets +95.9u (+9%). Waiting for Pinnacle costs too much (DK's price at Pinnacle's open: +32.4u),
+  so the use is a filter when Pinnacle is already posted at alert time (20% of games at DK's open; there: disagree 55 bets -11.4u).
+- NHL "follow Pinnacle" (bet DK when Pinnacle's no-vig chance is 2+ pts higher for a side): 1,208 bets +85.7u, positive all three
+  seasons, but 1%+ and 3%+ are flat, so not trusted yet.

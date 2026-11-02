@@ -412,7 +412,7 @@ def grade_my_bets(games, logdf):
     if len(d):
         w, l = int((d.result == "W").sum()), int((d.result == "L").sum())
         say(f"Your logged bets: {w}-{l}" + (f"-{int((d.result == 'P').sum())}" if (d.result == "P").any() else "")
-            + f", ${d.profit.sum():+.2f} on ${d.stake.sum():.2f} staked.")
+            + f", {d.profit.sum():+.2f}u on {d.stake.sum():g} units staked.")
 
 
 def grade_jumps(games, logdf):

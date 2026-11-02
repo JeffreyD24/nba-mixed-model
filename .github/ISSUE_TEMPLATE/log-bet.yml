@@ -57,10 +57,11 @@ body:
   - type: input
     id: stake
     attributes:
-      label: Stake ($)
-      description: Amount risked
+      label: Stake (units)
+      description: "Units risked: 1 unless you bet more (e.g. 2)"
+      value: "1"
     validations:
-      required: true
+      required: false
   - type: input
     id: book
     attributes:

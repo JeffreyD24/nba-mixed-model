@@ -297,12 +297,36 @@ def export_today_model(g, summ, box):
             if now is not None and len(prev) >= 1: roster[t] = dict(value=round(now, 3), delta=round(now - float(np.mean(prev)), 3), games=len(prev))
     except Exception as e:
         say(f"Roster strength skipped: {type(e).__name__} {str(e)[:100]}")
+    # Feb-Apr spread rule inputs (analysis/late_season.py, Nov 2, 2026): conference standing category before today, and
+    # rotation players who joined from another team in the last 30 days
+    standing, arrivals = {}, {}
+    try:
+        EAST = {"atl", "bos", "bkn", "cha", "chi", "cle", "det", "ind", "mia", "mil", "ny", "orl", "phi", "tor", "wsh"}
+        done_ = g[(g.date < TARGET) & g.home_pts.notna()]
+        rec = {}
+        for r in done_.itertuples():
+            for t, won in ((r.home, r.home_pts > r.away_pts), (r.away, r.away_pts > r.home_pts)):
+                w_, l_ = rec.get(t, (0, 0)); rec[t] = (w_ + int(won), l_ + int(not won))
+        if len(rec) == 30:
+            for conf in (True, False):
+                c = sorted([(t, w_, l_) for t, (w_, l_) in rec.items() if (t in EAST) == conf], key=lambda x: -x[1] / max(x[1] + x[2], 1))
+                w10, l10 = c[9][1], c[9][2]
+                for i, (t, w_, l_) in enumerate(c, 1):
+                    gb10 = ((w10 - l10) - (w_ - l_)) / 2
+                    standing[t] = dict(rank=i, gb10=gb10, cat="top" if i <= 4 else "middle" if i <= 10 else "bubble" if (i <= 12 and gb10 <= 4) else "tanking")
+        B2 = cur.copy(); B2["date"] = pd.to_datetime(B2.date); B2["g"] = B2.team.map(brf.ABBR2GAMES).fillna(B2.team)
+        first_any = B2.groupby("playerid").date.min()
+        ft = B2.groupby(["playerid", "g"]).agg(t0=("date", "min"), mpg=("MIN", "mean"), gp=("MIN", "size")).reset_index()
+        ft = ft[(ft.t0 > ft.playerid.map(first_any) + pd.Timedelta(days=3)) & (ft.mpg >= 12) & (ft.gp >= 3) & (ft.t0 >= pd.Timestamp(TARGET) - pd.Timedelta(days=30))]
+        arrivals = {t: int(n) for t, n in ft.groupby("g").size().items()}
+    except Exception as e:
+        say(f"Standings / arrivals skipped: {type(e).__name__} {str(e)[:100]}")
     p_miss = pd.read_csv(os.path.join(W, "data", "p_miss.csv"), index_col=0).iloc[:, 0].dropna()
     for f in os.listdir(STATE):                                   # keep only models for today and later
         if f.startswith("model_") and f[6:16] < str(TODAY.date()): os.remove(os.path.join(STATE, f))
     json.dump(dict(date=str(TARGET.date()), made_at_et=str(now_et()), c_off=c_off, c_def=c_def,
                    p_miss={k: float(v) for k, v in p_miss.items() if isinstance(k, str)},
-                   games=games_out, players=players, roster=roster), open(os.path.join(STATE, f"model_{TARGET.date()}.json"), "w"))
+                   games=games_out, players=players, roster=roster, standing=standing, arrivals=arrivals), open(os.path.join(STATE, f"model_{TARGET.date()}.json"), "w"))
     say(f"Saved today's model for intraday checks ({len(games_out)} games, {len(players)} players).")
 
 

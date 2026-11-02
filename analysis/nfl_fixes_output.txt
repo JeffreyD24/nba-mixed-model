@@ -1,0 +1,16 @@
+games with an opener by season: {2020: 272, 2021: 302, 2022: 299, 2023: 286, 2024: 284, 2025: 285}
+games matched to nflverse weather: 1.0
+seasons [np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+TOTALS
+  current                      +8.5 -10.1 +7.4 +11.4 -1.4 -11.9 | 525 bets 52.8% +3.8u  MAE 10.644
+  weather (wind + cold)        +11.8 -7.5 +9.3 +13.2 -4.6 -3.5 | 577 bets 54.1% +18.6u  MAE 10.619
+  wind only                    +11.8 -5.5 +11.3 +12.4 -2.7 -4.5 | 573 bets 54.5% +22.6u  MAE 10.613
+  late-season shrink           +6.1 -9.8 +13.8 +12.7 +5.5 -10.0 | 396 bets 54.8% +18.3u  MAE 10.554
+  weather + late shrink        +9.5 -5.4 +14.8 +12.8 +0.3 -4.5 | 444 bets 55.6% +27.5u  MAE 10.541
+SPREADS
+  current                      +9.7 -15.8 +5.2 -4.2 -5.6 -2.1 | 471 bets 51.0% -12.8u  MAE 10.221
+  home shift                   -2.0 -14.2 +7.1 -4.2 -1.8 -3.5 | 494 bets 50.4% -18.6u  MAE 10.235
+  QB out (both teams)          +6.8 -10.9 +2.0 -4.7 -7.5 +3.2 | 496 bets 51.2% -11.1u  MAE 10.244
+  late-season shrink           +5.5 -9.3 +12.7 +2.3 -1.8 +1.6 | 367 bets 54.0% +11.0u  MAE 10.090
+  home + QB                    +2.8 -12.2 +3.8 -7.5 -4.8 -1.7 | 516 bets 50.4% -19.6u  MAE 10.252
+  home + QB + late shrink      +3.5 -7.5 +10.6 +0.1 -1.0 +0.3 | 395 bets 53.2% +5.9u  MAE 10.123

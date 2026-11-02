@@ -223,3 +223,15 @@ November is weakest (52.9%, +2.1u; luck and form aren't active yet), overs Oct-J
   Same pattern as the NHL Pinnacle rule. (For totals, Pinnacle's opener showed no such signal.)
 - Why sharps beat spreads where we can't: their edge is information about who plays and who's trying (rest, tanking, rotations),
   priced through the day; ours is team strength at the open. In Oct-Jan strength dominates, late season motivation does.
+
+## NFL fixes: weather, QB, home, late season (Nov 2, 2026)
+`analysis/nfl_fixes.py` (output `nfl_fixes_output.txt`); weather from the nflverse schedule (nfl-mixed-model/data/nflverse_games.csv:
+game-time wind and temperature, outdoor/open roofs only). Each weight fit leaving the test season out; opener, edge 3+, 2020-2025.
+| Totals | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | Total |
+|---|---|---|---|---|---|---|---|
+| current | +8.5 | -10.1 | +7.4 | +11.4 | -1.4 | -11.9 | +3.8u (525) |
+| wind | +11.8 | -5.5 | +11.3 | +12.4 | -2.7 | -4.5 | +22.6u (573) |
+| wind + cold + week 15+ shrink | +9.5 | -5.4 | +14.8 | +12.8 | +0.3 | -4.5 | +27.5u (444, 55.6%) |
+- Weather helps totals in 4-5 of 6 seasons (lower error too). The week 15+ fit puts ~zero weight on the model, i.e. skip late weeks.
+- Spreads: home-field shift and QB-out corrections don't help (-18.6u, -11.1u vs -12.8u). Skipping week 15+: +11.0u (367 bets, 54.0%).
+- Still too thin to bet: full-game NFL stays test-only. Live weather would need a game-time forecast (the nflverse values are actuals).

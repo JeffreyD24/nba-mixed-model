@@ -47,3 +47,17 @@ the line moved steadily one way; the live 5-minute history and the Bet Timing sh
 - Applied: alerts now flag CAUTION after any half-point move against the bet (was 3 points), in the NBA and NFL trackers.
 - Takeaway: bet at or very near the opener; a later line that has moved against the model is the market knowing something.
   A line that moved toward the model with edge left is the best later bet.
+
+## Shot quality and shooting luck (Nov 1, 2026)
+`nba_shots.py` (1.09M field-goal attempts, 2021-22 to 2025-26, ESPN play-by-play: location, distance, shot type) and
+`analysis/shot_quality.py`. Expected make probability from distance, corner/deep three, shot type (dunk, layup, pull-up,
+step-back, float...), fit on earlier seasons only (log-loss 0.646 vs 0.692 for league average). "Luck" = actual FG points -
+expected FG points, season to date before each game (5+ games).
+- Repeatable? First-half vs second-half correlation: a team's own "luck" +0.69 (mostly shot-making skill the location model
+  can't see), luck allowed +0.39, shot quality itself +0.80.
+- **Spreads: nothing.** Luck gap vs home cover r = -0.002 (4,580 games at the close), r = +0.001 at the open (2025-26).
+- **Totals: a small, fairly consistent signal.** Games whose four inputs (both teams' luck for and against) were lucky went
+  under, unlucky went over: r = -0.040 (about 2.7 standard errors). Betting it at 5+ points/game of combined luck: closing
+  totals 53.2% on 2,095 (2023 50.2%, 2024 55.3%, 2025 55.4%, 2026 52.7%); opening totals 2025-26 54.0% on 879. Most of it
+  comes from the luck allowed by the away team. Break-even is 52.4%, so on its own this is thin; the next test is whether it
+  improves Model 1's totals when added as a correction (needs Model 1's walk-forward predictions re-run for 2023-26).

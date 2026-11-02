@@ -1,16 +1,16 @@
-games with an opener by season: {2020: 272, 2021: 302, 2022: 299, 2023: 286, 2024: 284, 2025: 285}
+games with an opener by season: {2020: 272, 2021: 302, 2022: 299, 2023: 286, 2024: 286, 2025: 285}
 games matched to nflverse weather: 1.0
 seasons [np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
 TOTALS
-  current                      +8.5 -10.1 +7.4 +11.4 -1.4 -11.9 | 525 bets 52.8% +3.8u  MAE 10.644
-  weather (wind + cold)        +11.8 -7.5 +9.3 +13.2 -4.6 -3.5 | 577 bets 54.1% +18.6u  MAE 10.619
-  wind only                    +11.8 -5.5 +11.3 +12.4 -2.7 -4.5 | 573 bets 54.5% +22.6u  MAE 10.613
-  late-season shrink           +6.1 -9.8 +13.8 +12.7 +5.5 -10.0 | 396 bets 54.8% +18.3u  MAE 10.554
-  weather + late shrink        +9.5 -5.4 +14.8 +12.8 +0.3 -4.5 | 444 bets 55.6% +27.5u  MAE 10.541
+  current                      +8.5 -10.1 +7.4 +11.4 +9.2 -12.7 | 521 bets 53.7% +13.5u  MAE 10.654
+  weather (wind + cold)        +12.7 -7.5 +9.3 +13.2 +2.4 -5.5 | 571 bets 54.6% +24.6u  MAE 10.627
+  wind only                    +11.8 -4.6 +11.3 +12.4 +1.3 -5.5 | 571 bets 54.8% +26.5u  MAE 10.622
+  late-season shrink           +6.1 -9.8 +13.8 +12.7 +10.4 -10.8 | 390 bets 55.4% +22.4u  MAE 10.562
+  weather + late shrink        +9.5 -5.4 +14.8 +12.8 +2.5 -6.5 | 438 bets 55.7% +27.8u  MAE 10.549
 SPREADS
-  current                      +9.7 -15.8 +5.2 -4.2 -5.6 -2.1 | 471 bets 51.0% -12.8u  MAE 10.221
-  home shift                   -2.0 -14.2 +7.1 -4.2 -1.8 -3.5 | 494 bets 50.4% -18.6u  MAE 10.235
-  QB out (both teams)          +6.8 -10.9 +2.0 -4.7 -7.5 +3.2 | 496 bets 51.2% -11.1u  MAE 10.244
-  late-season shrink           +5.5 -9.3 +12.7 +2.3 -1.8 +1.6 | 367 bets 54.0% +11.0u  MAE 10.090
-  home + QB                    +2.8 -12.2 +3.8 -7.5 -4.8 -1.7 | 516 bets 50.4% -19.6u  MAE 10.252
-  home + QB + late shrink      +3.5 -7.5 +10.6 +0.1 -1.0 +0.3 | 395 bets 53.2% +5.9u  MAE 10.123
+  current                      +9.7 -15.8 +5.2 -4.2 -5.6 -4.5 | 462 bets 50.6% -15.3u  MAE 10.217
+  home shift                   -2.0 -15.2 +7.1 -4.2 -3.5 -9.7 | 480 bets 49.4% -27.5u  MAE 10.230
+  QB out (both teams)          +6.8 -10.9 +2.0 -5.6 -4.5 +1.7 | 484 bets 51.2% -10.5u  MAE 10.240
+  late-season shrink           +5.5 -9.3 +12.7 +2.3 -1.1 -1.7 | 362 bets 53.6% +8.4u  MAE 10.092
+  home + QB                    +2.8 -13.2 +3.8 -8.5 -6.5 -4.3 | 503 bets 49.7% -25.7u  MAE 10.248
+  home + QB + late shrink      +2.5 -7.5 +10.6 -0.8 -1.9 -3.2 | 386 bets 52.3% -0.4u  MAE 10.125

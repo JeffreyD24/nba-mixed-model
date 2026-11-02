@@ -1,0 +1,68 @@
+1593 totals bets: 914 won (57.4%)
+WINS vs LOSSES averages:
+  edge (signed)                          wins    -0.10  losses    -0.11
+  opening total                          wins  +228.62  losses  +229.27
+  line move our way (pts)                wins    +2.07  losses    +1.00
+  offense missing at open                wins    +0.28  losses    +0.17
+  injury news after open (+ = helped us) wins    +0.08  losses    -0.02
+  shooting-luck agrees (+)               wins    +2.97  losses    +3.26
+  form agrees (+)                        wins    +1.28  losses    +1.48
+  back-to-backs in game                  wins    +0.40  losses    +0.37
+
+Over or under
+  over                        787 bets  won 57.6%   +77.8u   [2024:+36 2025:+19 2026:+23]
+  under                       806 bets  won 57.2%   +74.1u   [2024:+11 2025:+20 2026:+44]
+
+Edge size
+  (3, 4]                      430 bets  won 60.2%   +64.5u   [2024:+29 2025:+20 2026:+16]
+  (4, 5]                      351 bets  won 54.1%   +11.7u   [2024:-0 2025:+3 2026:+10]
+  (5, 7]                      449 bets  won 57.0%   +39.7u   [2024:-2 2025:+17 2026:+25]
+  (7, 30]                     363 bets  won 57.6%   +36.0u   [2024:+20 2025:-0 2026:+16]
+
+Opening total
+  (0, 215]                    121 bets  won 61.2%   +20.3u   [2024:+18 2025:+2 2026:-0]
+  (215, 225]                  425 bets  won 57.2%   +38.9u   [2024:+14 2025:+7 2026:+17]
+  (225, 235]                  596 bets  won 58.1%   +64.5u   [2024:+10 2025:+22 2026:+32]
+  (235, 400]                  451 bets  won 55.7%   +28.2u   [2024:+3 2025:+7 2026:+18]
+
+Side x total level
+  over high                   115 bets  won 60.9%   +18.6u   [2024:+9 2025:+1 2026:+8]
+  over low                    283 bets  won 59.4%   +37.7u   [2024:+25 2025:+8 2026:+5]
+  over mid                    389 bets  won 55.3%   +21.5u   [2024:+2 2025:+10 2026:+10]
+  under high                  495 bets  won 56.0%   +33.8u   [2024:+2 2025:+7 2026:+25]
+  under low                    30 bets  won 66.7%    +8.2u   [2024:+1 2025:+1 2026:+7]
+  under mid                   281 bets  won 58.4%   +32.1u   [2024:+8 2025:+12 2026:+12]
+
+Line move
+  against                     435 bets  won 49.7%   -22.6u   [2024:-11 2025:-9 2026:-2]
+  none                        159 bets  won 53.5%    +3.3u   [2024:+4 2025:+2 2026:-3]
+  our way                     999 bets  won 61.4%  +171.3u   [2024:+54 2025:+46 2026:+71]
+
+Injury news after open
+  hurt us                     353 bets  won 55.5%   +21.2u   [2024:+3 2025:+12 2026:+7]
+  none                        827 bets  won 57.2%   +76.0u   [2024:+13 2025:+8 2026:+55]
+  helped us                   413 bets  won 59.3%   +54.7u   [2024:+30 2025:+19 2026:+5]
+
+Back-to-backs
+  0.0                        1072 bets  won 56.6%   +86.8u   [2024:+26 2025:+32 2026:+29]
+  1.0                         419 bets  won 58.5%   +48.7u   [2024:+12 2025:+11 2026:+25]
+  2.0                         102 bets  won 60.8%   +16.4u   [2024:+8 2025:-3 2026:+12]
+
+Shooting luck
+  against us                  241 bets  won 57.7%   +24.4u   [2024:+17 2025:-4 2026:+12]
+  neutral                     556 bets  won 58.3%   +62.5u   [2024:+11 2025:+19 2026:+33]
+  with us                     796 bets  won 56.7%   +65.0u   [2024:+19 2025:+24 2026:+22]
+
+Month
+  1                           318 bets  won 57.5%   +31.4u   [2024:+22 2025:+0 2026:+10]
+  2                           238 bets  won 56.7%   +19.7u   [2024:+11 2025:-6 2026:+15]
+  3                           368 bets  won 56.5%   +29.1u   [2024:+6 2025:+7 2026:+16]
+  4                           155 bets  won 64.5%   +35.9u   [2024:+19 2025:+22 2026:-5]
+  11                          227 bets  won 52.9%    +2.1u   [2024:-19 2025:-0 2026:+21]
+  12                          287 bets  won 58.5%   +33.7u   [2024:+7 2025:+16 2026:+10]
+
+Side x half of season
+  over Feb-Apr                416 bets  won 61.1%   +68.9u   [2024:+28 2025:+17 2026:+24]
+  over Oct-Jan                371 bets  won 53.6%    +8.9u   [2024:+8 2025:+2 2026:-1]
+  under Feb-Apr               345 bets  won 54.8%   +15.8u   [2024:+8 2025:+5 2026:+2]
+  under Oct-Jan               461 bets  won 59.0%   +58.3u   [2024:+2 2025:+14 2026:+42]

@@ -183,3 +183,19 @@ spreads stay test-only; the adjustment (weight 0.11) is applied to the test-only
 - Totals: roster strength doesn't help (+97.9u vs +104.8u); form stays the only totals change.
 - Spreads with roster + form are break-even overall (+3.5u), still -28.4u in 2023-24, so spreads stay test-only. Both are now in
   the test-only spread tracking (tracker.py exports roster deltas; alert.py ROSTER_W = 0.57 once both teams have 10+ games).
+
+## Totals autopsy (Nov 2, 2026)
+`analysis/total_autopsy.py` (output `total_autopsy_output.txt`). 1,593 live-model totals bets (luck + form), edge 3+ at the
+opener, 2023-24..2025-26: 57.4%, +152u. No losing pocket: overs and unders, every edge size, every total level, every month,
+back-to-backs, injuries all positive. Only "line moved against us" loses (435 bets, 49.7%, -22.6u), already the DON'T BET rule.
+November is weakest (52.9%, +2.1u; luck and form aren't active yet), overs Oct-Jan 53.6% vs Feb-Apr 61.1%.
+
+## NFL autopsy (Nov 2, 2026)
+`analysis/nfl_autopsy.py` (output `nfl_autopsy_output.txt`); openers: DraftKings from the odds history (2020-23,
+`analysis/nfl_openers.py`), backtest opener (2024-25). Full-game bets at the opener, edge 3+, early-week model, 2020-2025:
+- Spreads: 471 bets, 51.0%, -12.8u (+9.7, -15.8, +5.2, -4.2, -5.6, -2.1). Totals: 525 bets, 52.8%, +3.8u (2025 -11.9u).
+  No proven full-game edge at the opener.
+- Week 15+: spreads 108 bets 41.7% -22.1u (negative 5 of 6 seasons), totals 129 bets 46.5% -14.5u: late-season rest and
+  motivation, as with the NBA after January.
+- Away spreads -25.9u (negative 5 of 6); betting against a team whose QB is out 40.0%, -13.0u (the model over-penalizes a
+  missing QB); outdoor overs 45.8% -16.5u vs outdoor unders 56.6% +14.6u (weather isn't in the model).

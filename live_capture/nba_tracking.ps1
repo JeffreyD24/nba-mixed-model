@@ -14,15 +14,19 @@ param([string]$Season = "2026-27", [string]$GameDate = "")
 $ErrorActionPreference = "Continue"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Add-Type -AssemblyName System.Net.Http
-$client = New-Object System.Net.Http.HttpClient
-$client.Timeout = [TimeSpan]::FromSeconds(60)
+$handler = New-Object System.Net.Http.HttpClientHandler
+$handler.AutomaticDecompression = [System.Net.DecompressionMethods]::GZip -bor [System.Net.DecompressionMethods]::Deflate
+$client = New-Object System.Net.Http.HttpClient($handler)
+$client.Timeout = [TimeSpan]::FromSeconds(30)
 $h = $client.DefaultRequestHeaders
-[void]$h.TryAddWithoutValidation("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36")
-[void]$h.TryAddWithoutValidation("Referer", "https://www.nba.com/")
-[void]$h.TryAddWithoutValidation("Origin", "https://www.nba.com")
-[void]$h.TryAddWithoutValidation("Accept", "application/json, text/plain, */*")
-[void]$h.TryAddWithoutValidation("x-nba-stats-origin", "stats")
-[void]$h.TryAddWithoutValidation("x-nba-stats-token", "true")
+# stats.nba.com answers only requests that look like they come from a browser on nba.com; anything else just hangs
+foreach ($kv in @(
+    @("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"),
+    @("Accept", "application/json, text/plain, */*"), @("Accept-Language", "en-US,en;q=0.9"),
+    @("Accept-Encoding", "gzip, deflate"), @("Referer", "https://www.nba.com/"), @("Origin", "https://www.nba.com"),
+    @("x-nba-stats-origin", "stats"), @("x-nba-stats-token", "true"), @("Connection", "keep-alive"),
+    @("Pragma", "no-cache"), @("Cache-Control", "no-cache"), @("Sec-Fetch-Dest", "empty"), @("Sec-Fetch-Mode", "cors"),
+    @("Sec-Fetch-Site", "same-site"))) { [void]$h.TryAddWithoutValidation($kv[0], $kv[1]) }
 
 $today = Get-Date
 if ($GameDate -eq "") { $GameDate = $today.AddDays(-1).ToString("yyyy-MM-dd") }
@@ -34,23 +38,26 @@ $ok = 0; $bad = 0
 
 function Save($name, $endpoint, $query) {
     $url = $base + $endpoint + "?" + $query
-    for ($i = 1; $i -le 3; $i++) {
+    Write-Host -NoNewline "  $name ... "
+    if ($script:ok -eq 0 -and $script:bad -ge 3) { Write-Host "skipped"; return $null }   # the site isn't answering at all
+    for ($i = 1; $i -le 2; $i++) {
         try {
             $r = $client.GetAsync($url).GetAwaiter().GetResult()
             $body = $r.Content.ReadAsStringAsync().GetAwaiter().GetResult()
             if ($r.IsSuccessStatusCode -and $body.Length -gt 50) {
                 [IO.File]::WriteAllText((Join-Path $outDir "$name.json"), $body)
-                Add-Content $log "OK   $name ($($body.Length) bytes)"
+                Add-Content $log "OK   $name ($($body.Length) bytes)"; Write-Host "ok"
                 $script:ok++; Start-Sleep -Milliseconds 1500; return $body
             }
             Add-Content $log "TRY $i $name : HTTP $([int]$r.StatusCode)"
         } catch { Add-Content $log "TRY $i $name : $($_.Exception.Message)" }
         Start-Sleep -Seconds (5 * $i)
     }
-    Add-Content $log "FAIL $name : $url"; $script:bad++; return $null
+    Add-Content $log "FAIL $name : $url"; Write-Host "FAILED"; $script:bad++; return $null
 }
 
 Add-Content $log "=== $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') season $Season, games of $GameDate"
+Write-Host "Downloading NBA tracking stats (season $Season, games of $GameDate). This takes about 3-5 minutes."
 $common = "LeagueID=00&Season=$Season&SeasonType=Regular+Season&PerMode=PerGame&LastNGames=0&Month=0&OpponentTeamID=0&PORound=0&Period=0" +
           "&DateFrom=&DateTo=&GameScope=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=" +
           "&Conference=&Division=&TeamID=0&College=&Country=&DraftPick=&DraftYear=&Height=&Weight=&ISTRound="
@@ -87,4 +94,5 @@ if ($sb) {
     Add-Content $log "games found: $($games.Count)"
 }
 Add-Content $log "done: $ok saved, $bad failed"
-Write-Host "NBA tracking download: $ok saved, $bad failed. Details in $log"
+if ($ok -eq 0) { Write-Host "stats.nba.com didn't answer any request. Tell Claude; details in $log" }
+else { Write-Host "NBA tracking download: $ok saved, $bad failed. Details in $log" }

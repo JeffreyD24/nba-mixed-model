@@ -108,5 +108,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzdyp2bln62l",
   "text": "Trey Murphy: Will play Monday    https://www.rotowire.com/basketball/player/trey-murphy-5401",
   "swing": 1.06
+ },
+ "2026-11-02|bos|paul george": {
+  "status": "Out",
+  "player": "Paul George",
+  "game_id": 22600167,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-02 14:06:48",
+  "seen_at_et": "2026-11-02 14:13:02",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzdzgkxicw27",
+  "text": "Paul George: Will sit out Monday    https://www.rotowire.com/basketball/player/paul-george-3114",
+  "swing": 0.44
  }
 }

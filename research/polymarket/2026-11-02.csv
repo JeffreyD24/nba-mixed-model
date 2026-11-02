@@ -859,3 +859,4 @@ seen_at_et,game_id,date,away,home,market,line_home,long_side,slug,bid,ask,bid_de
 2026-11-01 20:48,22600166,2026-11-02,mil,min,moneyline,,away,aec-nba-mil-min-2026-11-02,0.2,0.21,14.0,16.0,0.795,0.2,3503.7,2656.76,team
 2026-11-01 20:48,22600164,2026-11-02,sac,dal,moneyline,,away,aec-nba-sac-dal-2026-11-02,0.21,0.22,14.0,15.0,0.785,0.22,9376.97,4871.32,team
 2026-11-01 20:48,22600171,2026-11-02,tor,lac,moneyline,,away,aec-nba-tor-lac-2026-11-02,0.64,0.66,13.0,13.0,0.35,0.64,227.33,165.41,team
+2026-11-01 20:50,22600160,2026-11-02,atl,ind,moneyline,,away,aec-nba-atl-ind-2026-11-02,0.63,0.64,16.0,11.0,0.365,0.63,3887.0,1465.11,team

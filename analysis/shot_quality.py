@@ -58,6 +58,7 @@ opp = TG[["espn_event_id", "team", "luck", "luck3", "xpts", "pts"]].rename(colum
 TG = TG.merge(TG[["espn_event_id", "team"]].rename(columns={"team": "opp"}), on="espn_event_id")
 TG = TG[TG.team != TG.opp].merge(opp, on=["espn_event_id", "opp"])
 TG = TG.sort_values(["season", "team", "date"])
+TG.to_csv(os.path.join(W, "analysis", "shot_quality_team_games.csv.gz"), index=False, compression="gzip")
 # season-to-date averages BEFORE each game (no lookahead), at least 5 games
 for c in ("luck", "opp_luck", "luck3", "opp_luck3", "xpts", "opp_xpts"):
     g = TG.groupby(["season", "team"])[c]

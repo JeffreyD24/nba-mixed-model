@@ -1,188 +1,281 @@
 {
- "made_at": "2026-11-01 20:04",
+ "made_at": "2026-11-02 11:37",
  "weight": 0.5,
  "min_games": 5,
- "league_luck_per_team_game": -2.395,
+ "form_weight_total": 0.2,
+ "form_weight_spread": 0.11,
+ "form_min_games": 10,
+ "league_luck_per_team_game": -2.202,
  "teams": {
   "atl": {
    "games": 6,
    "luck": -3.596,
    "luck_allowed": -1.465,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 7,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "bkn": {
    "games": 6,
    "luck": -7.253,
    "luck_allowed": -0.298,
-   "through": "2026-11-01"
+   "through": "2026-11-01",
+   "form_games": 5,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "bos": {
    "games": 6,
    "luck": 0.671,
    "luck_allowed": -4.606,
-   "through": "2026-11-01"
+   "through": "2026-11-01",
+   "form_games": 5,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "cha": {
    "games": 7,
    "luck": -10.364,
    "luck_allowed": -0.952,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 7,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "chi": {
    "games": 6,
    "luck": -14.171,
    "luck_allowed": 1.487,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "cle": {
    "games": 5,
    "luck": 2.387,
    "luck_allowed": -5.231,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "dal": {
    "games": 6,
    "luck": 5.356,
    "luck_allowed": -6.197,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "den": {
    "games": 5,
    "luck": 1.865,
    "luck_allowed": -2.229,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 5,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "det": {
    "games": 6,
    "luck": -2.655,
    "luck_allowed": -9.51,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "gs": {
-   "games": 6,
-   "luck": -1.819,
-   "luck_allowed": 5.169,
-   "through": "2026-10-30"
+   "games": 7,
+   "luck": 1.632,
+   "luck_allowed": 3.274,
+   "through": "2026-11-01",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "hou": {
    "games": 7,
    "luck": 2.606,
    "luck_allowed": -3.9,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 7,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "ind": {
    "games": 7,
    "luck": -1.432,
    "luck_allowed": -1.906,
-   "through": "2026-11-01"
+   "through": "2026-11-01",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "lac": {
-   "games": 5,
-   "luck": -1.231,
-   "luck_allowed": 0.593,
-   "through": "2026-10-30"
+   "games": 6,
+   "luck": -2.375,
+   "luck_allowed": 4.217,
+   "through": "2026-11-01",
+   "form_games": 5,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "lal": {
-   "games": 6,
-   "luck": 6.675,
-   "luck_allowed": 0.227,
-   "through": "2026-10-30"
+   "games": 7,
+   "luck": 8.193,
+   "luck_allowed": -0.772,
+   "through": "2026-11-01",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "mem": {
    "games": 5,
    "luck": 4.431,
    "luck_allowed": -7.248,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "mia": {
    "games": 6,
    "luck": -0.872,
    "luck_allowed": 6.757,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "mil": {
    "games": 6,
    "luck": -6.336,
    "luck_allowed": -0.563,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "min": {
    "games": 7,
    "luck": 2.64,
    "luck_allowed": -6.927,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 7,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "no": {
    "games": 5,
    "luck": -3.916,
    "luck_allowed": -3.7,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "ny": {
    "games": 6,
    "luck": -8.601,
    "luck_allowed": -1.407,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "okc": {
    "games": 6,
    "luck": -7.698,
    "luck_allowed": -5.21,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "orl": {
    "games": 6,
    "luck": -0.286,
    "luck_allowed": -1.43,
-   "through": "2026-11-01"
+   "through": "2026-11-01",
+   "form_games": 5,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "phi": {
    "games": 7,
    "luck": -2.811,
    "luck_allowed": -7.036,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 7,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "phx": {
    "games": 4,
    "luck": 0.586,
    "luck_allowed": 7.791,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 4,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "por": {
    "games": 4,
    "luck": 6.221,
    "luck_allowed": -5.558,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 5,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "sa": {
    "games": 6,
    "luck": -5.215,
    "luck_allowed": -2.13,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "sac": {
    "games": 5,
    "luck": -7.283,
    "luck_allowed": 7.015,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "tor": {
-   "games": 5,
-   "luck": -4.94,
-   "luck_allowed": -6.27,
-   "through": "2026-10-30"
+   "games": 6,
+   "luck": -5.244,
+   "luck_allowed": -2.342,
+   "through": "2026-11-01",
+   "form_games": 5,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "utah": {
    "games": 6,
    "luck": -5.326,
    "luck_allowed": -0.053,
-   "through": "2026-10-31"
+   "through": "2026-10-31",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   },
   "wsh": {
    "games": 6,
    "luck": -4.692,
    "luck_allowed": -13.303,
-   "through": "2026-10-30"
+   "through": "2026-10-30",
+   "form_games": 6,
+   "form_total": 0.0,
+   "form_margin": 0.0
   }
  }
 }

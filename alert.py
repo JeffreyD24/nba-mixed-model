@@ -21,6 +21,7 @@ import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
+LUCK_SHRINK_K = 15                  # see the luck correction below
 ALT_W = 3.8                         # Nov 2, 2026 (approved): totals at Denver/Utah go over the close by ~3 pts (5 of 5 seasons);
 ALT_HOMES = ("den", "utah")          #   added to the model total, fit leaving each season out: +159.5u vs +147.1u 2023-26
 ML_TEST = (-0.0640, 0.1388)         # NBA moneyline TEST tracking (Nov 2, 2026; analysis/nba_ml_takeaways.py): home win chance =
@@ -518,6 +519,9 @@ def main():
                 if th and ta and min(th["games"], ta["games"]) >= LUCK.get("min_games", 5):
                     lg = LUCK.get("league_luck_per_team_game", 0.0)      # league-wide shift taken out (4 terms)
                     luck_adj = -LUCK.get("weight", 0.5) * (th["luck"] + th["luck_allowed"] + ta["luck"] + ta["luck_allowed"] - 4 * lg)
+                    # early-season shrink (Nov 2, 2026; totals v4): a few games of shooting luck is mostly noise, so scale by
+                    # games / (games + 15) for the team with fewer games (2023-26 at DK openers: +107.4u vs +97.2u)
+                    n_g = min(th["games"], ta["games"]); luck_adj *= n_g / (n_g + LUCK_SHRINK_K)
                     total = total + luck_adj
             # recent form (nba_luck.py; analysis/form_adjust.py, Nov 2, 2026): last 10 games vs season-to-date
             alt_adj = ALT_W if g["home"] in ALT_HOMES else 0.0

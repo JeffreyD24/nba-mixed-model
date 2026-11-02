@@ -141,5 +141,16 @@
   "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzeaew2muc2r",
   "text": "The Toronto Raptors list Kawhi Leonard (knee injury management) as out for tonight at LA.  Scottie Barnes (left hip) is questionable. Jakob Poeltl, out last night due to left shoulder bursitis, also questionable.",
   "swing": 2.93
+ },
+ "2026-11-02|lac|rui hachimura": {
+  "status": "Out",
+  "player": "Rui Hachimura",
+  "game_id": 22600171,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-02 16:19:33",
+  "seen_at_et": "2026-11-02 16:20:14",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzeatx2bhh27",
+  "text": "Rui Hachimura: Won't play Monday    https://www.rotowire.com/basketball/player/rui-hachimura-4778",
+  "swing": 0.36
  }
 }

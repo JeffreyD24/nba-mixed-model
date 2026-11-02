@@ -354,3 +354,28 @@ NFL 2024-26 odds downloaded (credits left ~204,000). Early-week model, edge 3+, 
 - Moneyline (1,725 games): model Brier 0.2250 vs DraftKings opener 0.2159; EV 6%+ 944 bets -63.2u (4 of 6 seasons negative).
 - Second-half totals can't be checked at real openers: the odds history has full-game markets only.
 - Verdict unchanged: full-game NFL stays test-only; weather + late-season tracking continues live this season.
+
+## NFL: player-based strength and the totals-with-weather autopsy (Nov 2, 2026)
+Scripts: analysis/nfl_player_model.py, analysis/nfl_totals_autopsy.py (bets: nfl_totals_autopsy_bets.csv, output: nfl_totals_autopsy_out.txt).
+Player features: nfl-mixed-model nfl_player.py / dev/player_features.py (nflverse play-by-play 2017-2026). For each team: expected starting
+QB's EPA/dropback (career, recency-weighted, shrunk), rushing EPA, pass/rush EPA allowed, pace, QB-change flag. Walk-forward, DK openers 2020-25.
+Fixed: 37 games had two DK opener rows (duplicates) in earlier NFL scripts; deduped here (the weather totals rule is +29.8u, not +17.8u).
+
+**Spreads: the player model does not help.** Alone: 968 bets, 50.3%, -38.3u (MAE 10.84 vs the opener's 9.93). Added to the team model: -9.9u.
+Added to the opener: no edge. The NFL spread market already prices QBs and matchups better than box-score EPA can.
+
+**Totals: the player model is a useful second opinion.** Alone +22.5u (598 bets). Unbiased in 2026 (mean error +0.2 pts).
+
+Weather totals autopsy (436 bets, 56.0%, +29.8u):
+- Weeks 1-4 lose: -13.4u (lost in 2021, 2024, 2025; also lost for the player model and the plain team model, and in 2026: weeks 1-4 -2.5u to -3.3u).
+  From week 5: 310 bets, 59.7%, +43.2u, worst season -0.4u. Reason: early in the season the models still run on last year's teams.
+- Unders +25.0u vs overs +4.8u; unders at outdoor stadiums +18.3u; unders with wind 11+ mph 60.6%.
+- Divisional games +20.8u (positive every season) vs +9.0u non-divisional.
+- Opening total 46-49: -17.9u (43.0%); totals 40 or under and 49+ were the best. Not used (no clear reason, could be noise).
+- Line moved our way by the close: +38.3u; moved against us: -8.2u (the existing 0.5-pt "against" caution covers this live).
+- 46-60 F outdoor +26.6u every season (mostly the weeks 5-14 effect). Grass vs turf, rest, pace, kickoff slot: nothing consistent.
+- Player model agrees (weeks 5+): 216 bets, 61.1%, +36.0u, positive all 6 seasons; disagrees: 94 bets, +7.2u.
+
+**Adopted (test-only, live switch TOTALS_LIVE in alert.py):** total = average of (team + weather model) and (player model + its own weather),
+bet at 2+ pts of edge, weeks 5-14 only. 2020-25: 475 bets, 57.3%, +44.3u, every season positive (+3 to +13u). 2026 weeks 5-8 (true out of
+sample, ESPN openers): 20-12, +6.2u. Caveat: the week-5 cutoff was picked after looking; it held for three separate models and in 2026.

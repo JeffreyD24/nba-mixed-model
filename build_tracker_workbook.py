@@ -192,9 +192,9 @@ def build(log_csv, out_xlsx, rule, run_log):
     MB = pd.read_csv(bpath) if os.path.exists(bpath) else pd.DataFrame()
     mb = wb.create_sheet("My Bets", 1)
     mcols = [("Logged at (ET)", "logged_at_et"), ("Game date", "date"), ("Away", "away"), ("Home", "home"), ("Market", "market"),
-             ("Pick", "pick"), ("Line", "line"), ("Odds", "odds"), ("Stake ($)", "stake"), ("Book", "book"),
+             ("Pick", "pick"), ("Line", "line"), ("Odds", "odds"), ("Stake (units)", "stake"), ("Book", "book"),
              ("Model number (your side)", "model_number"), ("Model edge at your line", "model_edge_at_your_line"),
-             ("Result", "result"), ("Profit ($)", "profit"), ("Notes", "notes")]
+             ("Result", "result"), ("Profit (units)", "profit"), ("Notes", "notes")]
     for k, (t, _) in enumerate(mcols): hdr(mb, 1, k + 1, t)
     mb.row_dimensions[1].height = 30
     for r in MB.to_dict("records"):
@@ -212,7 +212,7 @@ def build(log_csv, out_xlsx, rule, run_log):
     mb.cell(r0, 1, "Totals (formulas)").font = f_h
     labels = [("Bets graded", f'=COUNTIF(M2:M{n},"W")+COUNTIF(M2:M{n},"L")+COUNTIF(M2:M{n},"P")'),
               ("Wins", f'=COUNTIF(M2:M{n},"W")'), ("Losses", f'=COUNTIF(M2:M{n},"L")'), ("Pushes", f'=COUNTIF(M2:M{n},"P")'),
-              ("Staked on graded bets ($)", f'=SUMIF(M2:M{n},"?*",I2:I{n})'), ("Profit ($)", f"=SUM(N2:N{n})"),
+              ("Units staked on graded bets", f'=SUMIF(M2:M{n},"?*",I2:I{n})'), ("Profit ($)", f"=SUM(N2:N{n})"),
               ("Return on money staked", f'=IFERROR(B{r0 + 6}/B{r0 + 5},"")')]
     for k, (lab, fml) in enumerate(labels):
         mb.cell(r0 + 1 + k, 1, lab).font = f_bold
@@ -222,7 +222,7 @@ def build(log_csv, out_xlsx, rule, run_log):
     gb = MB[MB.result.isin(["W", "L", "P"])] if len(MB) and "result" in MB else MB.iloc[:0] if len(MB) else MB
     if len(gb):
         mbw, mbl = int((gb.result == "W").sum()), int((gb.result == "L").sum())
-        my_line = (f"Your logged bets: {mbw}-{mbl}, ${gb.profit.sum():+.2f} on ${gb.stake.sum():.2f} staked "
+        my_line = (f"Your logged bets: {mbw}-{mbl}, {gb.profit.sum():+.2f}u on {gb.stake.sum():g} units staked "
                    f"({gb.profit.sum() / gb.stake.sum():+.1%}). Average model edge at the lines you got: {gb.model_edge_at_your_line.mean():.1f} pts. "
                    "If your edge is usually smaller than the scorecard's opening-line edge, betting earlier would help.")
     else:

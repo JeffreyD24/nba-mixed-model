@@ -72,7 +72,7 @@ def main():
             pick = team(pick)
             if pick not in (home, away): raise ValueError(f"Pick '{pick.upper()}' isn't one of the two teams")
         line = num(get("Line you got"), "the line"); odds = num(get("Odds (American)") or "-110", "the odds")
-        stake = num(get("Stake ($)"), "the stake")
+        stake = num(get("Stake (units)") or get("Stake ($)") or "1", "the stake")   # units (Nov 2, 2026: every bet is 1 unit unless stated)
         today = dt.datetime.now(ZoneInfo("America/New_York")).date()
         if not (today - dt.timedelta(days=3) <= date <= today + dt.timedelta(days=10)):
             raise ValueError(f"the game date {date} is more than a few days from today ({today}); check the date")
@@ -95,11 +95,11 @@ def main():
     desc = (f"{pick.upper()} {line:g}" if market == "total" else f"{pick.upper()} {line:+g}")
     win = stake * (100 / abs(odds) if odds < 0 else odds / 100)
     open(os.path.join(STATE, "_bet_reply.md"), "w").write(
-        f"✅ Logged: **{desc}**, {away.upper()} @ {home.upper()} on {date}, {odds:+g} for ${stake:g} (to win ${win:.2f}).\n\n"
+        f"✅ Logged: **{desc}**, {away.upper()} @ {home.upper()} on {date}, {odds:+g} for {stake:g}u (to win {win:.2f}u).\n\n"
         "It will be graded in the morning run after the game and show up on the **My Bets** sheet of `NBA_Live_Tracker.xlsx`.")
     book = get("Sportsbook (optional)")
     open(os.path.join(STATE, "_bet_title.txt"), "w").write(
-        f"Bet {date}: {away.upper()} @ {home.upper()} {desc} {odds:+g} ${stake:g}" + (f" ({book})" if book else ""))
+        f"Bet {date}: {away.upper()} @ {home.upper()} {desc} {odds:+g} {stake:g}u" + (f" ({book})" if book else ""))
     print("logged:", row)
 
 

@@ -42,13 +42,13 @@ def main():
         d = g[g.status != "pending"]; w, l, p = (d.status == "W").sum(), (d.status == "L").sum(), (d.status == "P").sum()
         desc = V[V.version == label].description.iloc[0] if label in set(V.version) else ""
         rows.append(dict(version=label, market=market, bets=len(g), graded=len(d), wins=int(w), losses=int(l), pushes=int(p),
-                         pending=int((g.status == "pending").sum()), units=round(d.units.sum(), 2), dollars=round(d.profit.sum(), 2),
+                         pending=int((g.status == "pending").sum()), units=round(d.units.sum(), 2),
                          roi=round(d.units.sum() / len(d), 4) if len(d) else None, description=desc))
     for (ver, mk), g in B.groupby(["version", "market"]): summ(g, ver, mk)
     summ(B, "OVERALL", "all")
     R = pd.DataFrame(rows); R.to_csv(os.path.join(STATE, "record_by_version.csv"), index=False)
     for r in R.itertuples():
-        print(f"{r.version:28s} {r.market:10s} {r.wins}-{r.losses}-{r.pushes} ({r.pending} pending)  {r.units:+.2f}u  ${r.dollars:+.2f}")
+        print(f"{r.version:28s} {r.market:10s} {r.wins}-{r.losses}-{r.pushes} ({r.pending} pending)  {r.units:+.2f}u")
 
 
 if __name__ == "__main__":

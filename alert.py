@@ -197,7 +197,7 @@ def main():
             what = f"{pick} {ln:g}" if r.market == "total" else f"{pick} {ln:+g}"
             when = pd.Timestamp(r.logged_at_et).strftime("%-I:%M %p") if isinstance(r.logged_at_et, str) else "earlier"
             book = f", {r.book}" if isinstance(r.book, str) and r.book else ""
-            st = float(r.stake); stake = f"${st:.0f}" if st == int(st) else f"${st:.2f}"
+            st = float(r.stake); stake = f"{st:g}u"
             return f"{what} ({float(r.odds):+g}, {stake}{book}, logged {when})"
         sm = x[x.market == market]
         if want is not None:            # bets on the same market but the OTHER side are reported separately

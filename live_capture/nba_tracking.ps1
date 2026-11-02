@@ -9,7 +9,7 @@
 # Run by hand: double-click Get_NBA_Tracking.bat. Scheduled daily by install_nightly_task.ps1.
 # Works in Windows PowerShell 5.1 and PowerShell 7.
 
-param([string]$Season = "2026-27", [string]$GameDate = "")
+param([string]$Season = "2026-27", [string]$GameDate = "", [switch]$Backfill)
 
 $ErrorActionPreference = "Continue"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -27,6 +27,61 @@ foreach ($kv in @(
     @("x-nba-stats-origin", "stats"), @("x-nba-stats-token", "true"), @("Connection", "keep-alive"),
     @("Pragma", "no-cache"), @("Cache-Control", "no-cache"), @("Sec-Fetch-Dest", "empty"), @("Sec-Fetch-Mode", "cors"),
     @("Sec-Fetch-Site", "same-site"))) { [void]$h.TryAddWithoutValidation($kv[0], $kv[1]) }
+
+# -Backfill: past seasons, once. Season tables for 2013-14 (first tracking season) to 2025-26, and the per-game tracking,
+# hustle and advanced box scores for every game from 2021-22 on. Resumes where it stopped (skips files already saved).
+# Takes several hours; run it overnight with Backfill_NBA_Tracking.bat.
+function SeasonName($y) { return "$y-" + ([string]($y + 1)).Substring(2) }
+if ($Backfill) {
+    $root = Join-Path (Join-Path $PSScriptRoot "data") "tracking_history"
+    $log = Join-Path $root "_log.txt"; New-Item -ItemType Directory -Force -Path $root | Out-Null
+    $script:ok = 0; $script:bad = 0
+    function Get1($path, $endpoint, $query) {
+        if (Test-Path $path) { return [IO.File]::ReadAllText($path) }
+        $url = "https://stats.nba.com/stats/" + $endpoint + "?" + $query
+        for ($i = 1; $i -le 3; $i++) {
+            try {
+                $r = $client.GetAsync($url).GetAwaiter().GetResult(); $body = $r.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+                if ($r.IsSuccessStatusCode -and $body.Length -gt 50) {
+                    New-Item -ItemType Directory -Force -Path (Split-Path $path) | Out-Null
+                    [IO.File]::WriteAllText($path, $body); $script:ok++; Start-Sleep -Milliseconds 1200; return $body
+                }
+                Add-Content $log "TRY $i $path : HTTP $([int]$r.StatusCode)"
+            } catch { Add-Content $log "TRY $i $path : $($_.Exception.Message)" }
+            Start-Sleep -Seconds (10 * $i)
+        }
+        Add-Content $log "FAIL $path"; $script:bad++; return $null
+    }
+    $measures = @("SpeedDistance", "Passing", "Drives", "CatchShoot", "PullUpShot", "Possessions", "Rebounding", "Defense",
+                  "ElbowTouch", "PostTouch", "PaintTouch", "Efficiency")
+    for ($y = 2013; $y -le 2025; $y++) {
+        $sn = SeasonName $y; $sd = Join-Path (Join-Path $root "seasons") $sn
+        Write-Host "Season tables $sn ..."
+        $c = "LeagueID=00&Season=$sn&SeasonType=Regular+Season&PerMode=PerGame&LastNGames=0&Month=0&OpponentTeamID=0&PORound=0&Period=0" +
+             "&DateFrom=&DateTo=&GameScope=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=" +
+             "&Conference=&Division=&TeamID=0&College=&Country=&DraftPick=&DraftYear=&Height=&Weight=&ISTRound="
+        foreach ($who in @("Team", "Player")) { foreach ($m in $measures) { [void](Get1 (Join-Path $sd "pt_$($who.ToLower())_$m.json") "leaguedashptstats" "$c&PlayerOrTeam=$who&PtMeasureType=$m") } }
+        if ($y -ge 2015) { [void](Get1 (Join-Path $sd "hustle_team.json") "leaguehustlestatsteam" $c); [void](Get1 (Join-Path $sd "hustle_player.json") "leaguehustlestatsplayer" $c) }
+    }
+    # per-game box scores, 2021-22 to 2025-26: game ids come from each season's game log
+    for ($y = 2021; $y -le 2025; $y++) {
+        $sn = SeasonName $y
+        $gl = Get1 (Join-Path (Join-Path (Join-Path $root "seasons") $sn) "team_game_log.json") "leaguegamelog" "Counter=1000&Direction=ASC&LeagueID=00&PlayerOrTeam=T&Season=$sn&SeasonType=Regular+Season&Sorter=DATE"
+        if (-not $gl) { continue }
+        $rs = (ConvertFrom-Json $gl).resultSets[0]; $gi = [array]::IndexOf($rs.headers, "GAME_ID")
+        $ids = @($rs.rowSet | ForEach-Object { $_[$gi] } | Sort-Object -Unique)
+        $n = 0
+        foreach ($g in $ids) {
+            $gd = Join-Path (Join-Path $root "games") $sn
+            [void](Get1 (Join-Path $gd "box_track_$g.json") "boxscoreplayertrackv3" "GameID=$g")
+            [void](Get1 (Join-Path $gd "box_hustle_$g.json") "boxscorehustlev2" "GameID=$g")
+            [void](Get1 (Join-Path $gd "box_advanced_$g.json") "boxscoreadvancedv3" "GameID=$g&StartPeriod=0&EndPeriod=0&StartRange=0&EndRange=0&RangeType=0")
+            $n++; if ($n % 25 -eq 0) { Write-Host "  $sn games: $n of $($ids.Count) ($script:ok saved, $script:bad failed so far)" }
+        }
+    }
+    Write-Host "Backfill finished: $script:ok saved this run, $script:bad failed. Run it again to retry failures."
+    return
+}
 
 $today = Get-Date
 if ($GameDate -eq "") { $GameDate = $today.AddDays(-1).ToString("yyyy-MM-dd") }
@@ -63,7 +118,7 @@ $common = "LeagueID=00&Season=$Season&SeasonType=Regular+Season&PerMode=PerGame&
           "&Conference=&Division=&TeamID=0&College=&Country=&DraftPick=&DraftYear=&Height=&Weight=&ISTRound="
 
 # season-to-date tracking tables (team and player)
-$measures = @("SpeedDistance", "Touches", "Passing", "Drives", "CatchShoot", "PullUpShot", "Possessions", "Rebounding", "Defense",
+$measures = @("SpeedDistance", "Passing", "Drives", "CatchShoot", "PullUpShot", "Possessions", "Rebounding", "Defense",
               "ElbowTouch", "PostTouch", "PaintTouch", "Efficiency")
 foreach ($who in @("Team", "Player")) {
     foreach ($m in $measures) { [void](Save "pt_$($who.ToLower())_$m" "leaguedashptstats" "$common&PlayerOrTeam=$who&PtMeasureType=$m") }

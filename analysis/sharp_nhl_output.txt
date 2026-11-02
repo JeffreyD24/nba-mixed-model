@@ -1,27 +1,35 @@
-Pinnacle posts its moneyline before DraftKings in 8% of games; median gap DK-Pinnacle -7.0 h
+Pinnacle posts its moneyline before DraftKings in 5% of games; median gap DK-Pinnacle -6.0 h
 
 Bet DraftKings' moneyline when Pinnacle's no-vig win chance is k points higher for that side (first time per game):
-  1%+: 3409 bets, won 55.5%, +15.2u (+0.4%); by season 2022: -3.0, 2023: +23.8, 2024: -5.6
-  2%+: 1208 bets, won 60.0%, +85.7u (+7.1%); by season 2022: +58.9, 2023: +12.4, 2024: +14.5
-  3%+: 215 bets, won 57.2%, +5.8u (+2.7%); by season 2022: +12.6, 2023: -0.5, 2024: -6.3
-  4%+: 17 bets, won 64.7%, +3.5u (+20.9%); by season 2022: +1.2, 2023: +5.2, 2024: -2.8
+  1%+: 5395 bets, won 55.4%, +83.2u (+1.5%); by season 2022: -3.0, 2023: +23.8, 2024: -5.6, 2025: +75.7, 2026: -7.8
+  2%+: 1551 bets, won 58.7%, +93.5u (+6.0%); by season 2022: +58.9, 2023: +12.4, 2024: +14.5, 2025: -5.1, 2026: +12.9
+  3%+: 249 bets, won 55.0%, -2.5u (-1.0%); by season 2022: +12.6, 2023: -0.5, 2024: -6.3, 2025: -5.2, 2026: -3.1
+  4%+: 24 bets, won 54.2%, +0.7u (+2.8%); by season 2022: +1.2, 2023: +5.2, 2024: -2.8, 2025: -0.2, 2026: -2.6
 
-Shot model moneyline bets at DK's opener, EV 6%+: 1331 bets, +64.5u
-  Pinnacle already up at DK's open: 20% of games
+Shot model moneyline bets at DK's opener, EV 6%+: 1978 bets, +96.1u
+  Pinnacle already up at DK's open: 13% of games
   Pinnacle at DK's open        agrees (likes our side more)  :   76 bets,   +1.4u (+1.8%)
-  Pinnacle at DK's open        about the same                :  127 bets,   +2.3u (+1.8%)
+  Pinnacle at DK's open        about the same                :  130 bets,   +2.0u (+1.6%)
   Pinnacle at DK's open        disagrees                     :   55 bets,  -11.4u (-20.7%)
-  Pinnacle's first price       agrees (likes our side more)  :  691 bets,  +54.4u (+7.9%)
-  Pinnacle's first price       about the same                :  380 bets,  +41.5u (+10.9%)
-  Pinnacle's first price       disagrees                     :  260 bets,  -31.5u (-12.1%)
-  Pinnacle's close (hindsight) agrees (likes our side more)  :  905 bets,  +82.7u (+9.1%)
-  Pinnacle's close (hindsight) about the same                :  161 bets,   -3.4u (-2.1%)
-  Pinnacle's close (hindsight) disagrees                     :  265 bets,  -14.9u (-5.6%)
+  Pinnacle's first price       agrees (likes our side more)  : 1056 bets,  +84.4u (+8.0%)
+  Pinnacle's first price       about the same                :  517 bets,  +53.7u (+10.4%)
+  Pinnacle's first price       disagrees                     :  405 bets,  -42.0u (-10.4%)
+  Pinnacle's close (hindsight) agrees (likes our side more)  : 1318 bets, +131.1u (+9.9%)
+  Pinnacle's close (hindsight) about the same                :  230 bets,   -7.1u (-3.1%)
+  Pinnacle's close (hindsight) disagrees                     :  430 bets,  -27.8u (-6.5%)
 
 Wait for Pinnacle, then bet DraftKings' price at that moment (shot model EV 6%+):
-  all                       : 1135 bets,  +32.4u (+2.9%); by season 2022: +21.6, 2023: -4.7, 2024: +15.5
-  Pinnacle agrees or same   :  917 bets,  +41.1u (+4.5%); by season 2022: +25.8, 2023: +6.1, 2024: +9.2
-  Pinnacle disagrees        :  218 bets,   -8.6u (-4.0%); by season 2022: -4.2, 2023: -10.7, 2024: +6.3
+  all                       : 1770 bets,  +67.1u (+3.8%); by season 2022: +21.6, 2023: -4.7, 2024: +15.5, 2025: +17.2, 2026: +17.4
+  Pinnacle agrees or same   : 1451 bets,  +82.9u (+5.7%); by season 2022: +25.8, 2023: +6.1, 2024: +9.2, 2025: +19.2, 2026: +22.6
+  Pinnacle disagrees        :  319 bets,  -15.8u (-5.0%); by season 2022: -4.2, 2023: -10.7, 2024: +6.3, 2025: -2.0, 2026: -5.2
   2022 at DK open: all 489 bets +41.3u | Pinnacle first price disagrees: 87 bets -4.1u
   2023 at DK open: all 506 bets +7.1u | Pinnacle first price disagrees: 94 bets -16.9u
   2024 at DK open: all 336 bets +16.0u | Pinnacle first price disagrees: 79 bets -10.5u
+  2025 at DK open: all 349 bets +12.2u | Pinnacle first price disagrees: 85 bets -3.6u
+  2026 at DK open: all 298 bets +19.5u | Pinnacle first price disagrees: 60 bets -6.9u
+
+Of 1978 bets at DK's opener: Pinnacle posted 4.1 h later (median). Still 6%+ value at DK then: 1549 (78%); those made +47.9u waiting vs +55.7u at the open. Value gone: 291 bets, which made +31.5u at the open
+  still value AND Pinnacle agrees/same: 1279 bets, +65.7u waiting
+  still value, Pinnacle disagrees: 270 bets, -17.8u waiting
+
+Second-chance bets (no bet at the open, value at DK when Pinnacle posts, Pinnacle agrees): 172 bets, +17.2u (+10.0%); by season 2022: +1.8 (42), 2023: +0.4 (18), 2024: +2.5 (22), 2025: +7.2 (52), 2026: +5.2 (38)

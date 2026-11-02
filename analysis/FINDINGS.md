@@ -235,3 +235,12 @@ game-time wind and temperature, outdoor/open roofs only). Each weight fit leavin
 - Weather helps totals in 4-5 of 6 seasons (lower error too). The week 15+ fit puts ~zero weight on the model, i.e. skip late weeks.
 - Spreads: home-field shift and QB-out corrections don't help (-18.6u, -11.1u vs -12.8u). Skipping week 15+: +11.0u (367 bets, 54.0%).
 - Still too thin to bet: full-game NFL stays test-only. Live weather would need a game-time forecast (the nflverse values are actuals).
+
+## Betting after Pinnacle posts (Nov 2, 2026)
+`analysis/pinnacle_second_chance.py` (NBA, 2023-26), `analysis/sharp_nhl.py` section G (NHL, 2021-26).
+- NBA: waiting for Pinnacle and betting DraftKings only when Pinnacle agrees is worse than betting the opener (totals +66.2u vs
+  +148.6u; spreads Oct-Jan +13.9u vs +42.2u). "Second-chance" bets (no edge at the opener, edge when Pinnacle posts and agrees)
+  lose (totals 197 bets -2.3u, spreads 45 bets -3.0u). Bet the opener; use Pinnacle only to cancel.
+- NHL: second-chance bets (EV under 6% at DK's opener, 6%+ at DK's price when Pinnacle posts, Pinnacle agrees): 172 bets,
+  +17.2u (+10.0%), positive all five seasons (+1.8, +0.4, +2.5, +7.2, +5.2). Small but consistent.
+- Following Pinnacle on its own (no model): NBA loses; NHL mixed by season. No standalone "Pinnacle model".

@@ -26,8 +26,8 @@ res["wind_x"] = np.where(res.outdoor, res.wind.fillna(res.wind.median()), 0.0); 
 G = G.merge(res[["date", "home", "away", "season", "week", "home_score", "away_score", "spread_line", "total_line", "wind_x", "cold_x", "div_game"]], on=["date", "home", "away"])
 G["margin_y"] = G.home_score - G.away_score; G["total_y"] = G.home_score + G.away_score
 # matchup features
-G["pass_edge"] = (G.h_qb_epa - G.a_pass_def) - (G.a_qb_epa - G.h_pass_def)        # home passing advantage, EPA/play
-G["rush_edge"] = (G.h_rush_off - G.a_rush_def) - (G.a_rush_off - G.h_rush_def)
+G["pass_edge"] = (G.h_qb_epa + G.a_pass_def) - (G.a_qb_epa + G.h_pass_def)    # fixed Nov 2: defense = EPA allowed, so it adds        # home passing advantage, EPA/play
+G["rush_edge"] = (G.h_rush_off + G.a_rush_def) - (G.a_rush_off + G.h_rush_def)
 G["pass_sum"] = (G.h_qb_epa + G.a_pass_def) + (G.a_qb_epa + G.h_pass_def)
 G["rush_sum"] = (G.h_rush_off + G.a_rush_def) + (G.a_rush_off + G.h_rush_def)
 G["pace"] = G.h_plays + G.a_plays

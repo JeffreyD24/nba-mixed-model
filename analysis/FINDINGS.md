@@ -377,5 +377,25 @@ Weather totals autopsy (436 bets, 56.0%, +29.8u):
 - Player model agrees (weeks 5+): 216 bets, 61.1%, +36.0u, positive all 6 seasons; disagrees: 94 bets, +7.2u.
 
 **Adopted (test-only, live switch TOTALS_LIVE in alert.py):** total = average of (team + weather model) and (player model + its own weather),
-bet at 2+ pts of edge, weeks 5-14 only. 2020-25: 475 bets, 57.3%, +44.3u, every season positive (+3 to +13u). 2026 weeks 5-8 (true out of
+bet at 2+ pts of edge, weeks 5-14 only. 2020-25: 375 bets, 58.4%, +43.1u, every season positive (+0.7 to +13.2u). (The first write-up
+said 475 bets / +44.3u; that count wrongly included weeks 15+, which added 100 bets and about +1u.) 2026 weeks 5-8 (true out of
 sample, ESPN openers): 20-12, +6.2u. Caveat: the week-5 cutoff was picked after looking; it held for three separate models and in 2026.
+
+### Follow-up (Nov 2, 2026): totals v2 switched LIVE; QB model diagnostics; v2 wins vs losses
+Scripts: analysis/nfl_qb_diagnostics.py, analysis/nfl_totals_v2_autopsy.py (output nfl_totals_v2_autopsy_out.txt).
+**Bug found:** the spread version of the player model had the defense sign backwards (EPA allowed was subtracted instead of added).
+Totals were not affected (the totals sum was correct). Fixed: player spread model MAE 10.94 -> 10.28 (team model 10.21, opener 9.93),
+but it still loses at the opener (-12.2u alone; -4.4u added to the team model). Conclusion unchanged: no spread edge.
+Why QB stats don't beat the spread:
+- QB EPA per dropback repeats only 0.44 season to season (CPOE 0.36, team passing 0.41, point margin 0.42): about half of a season's
+  QB efficiency is noise (tipped interceptions, fumble luck, drops, opponents).
+- 1 SD of QB passing edge = 1.8 pts of margin; recent point margin = 2.8 pts. The QB is one input of several.
+- The starter differs from last game's in 13.7% of team-games; using the actual starter (known by kickoff) barely helps
+  (MAE 10.33 -> 10.29) and bets were worse: the market prices QB news within minutes.
+- Longer memory, opponent adjustment, CPOE, special teams, team passing instead of QB: none beat the opener.
+v2 autopsy (375 bets): unders 61.7% +31.2u (all six seasons positive) vs overs 55.5% +11.9u; overs at outdoor stadiums -1.0u;
+unders in close games (spread 6.5 or less) 64.6% +29.5u; unders in wind 10+ mph 64.0%; cold (40 F or below) 41.9% -6.2u (unders 37%);
+overs on 47.5+ totals 48.4%; both models past the line 67.4%; line moved against us by close 50.0%.
+Stronger signs (both models past the line, or an under in wind 10+ / a close game, with no weaker sign): 141 bets, 66.7%, +38.5u.
+Weaker signs (over outdoors, 40 F or colder, over on 47.5+): 122 bets, 47.5%, -11.3u. In 2026 weeks 5-8 the weaker group went 4-1,
+so it is shown as a note in the alerts, not a rule. Revisit at season end.

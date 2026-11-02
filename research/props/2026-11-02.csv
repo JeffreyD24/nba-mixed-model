@@ -5508,3 +5508,27 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-02 05:00,22600172,2026-11-02,"Total Points, Rebounds, and Assists",4066261,Bam Adebayo,,31.5,-108.0,31.5,-113.0,2026-11-02T11:53Z,under
 2026-11-02 05:00,22600172,2026-11-02,"Total Points, Rebounds, and Assists",4278053,Davion Mitchell,,22.5,-122.0,22.5,-118.0,2026-11-02T11:53Z,over
 2026-11-02 05:00,22600172,2026-11-02,"Total Points, Rebounds, and Assists",4278053,Davion Mitchell,,22.5,-108.0,22.5,-112.0,2026-11-02T11:53Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total Assists,3157465,Duncan Robinson,,2.5,137.0,2.5,147.0,2026-11-02T08:57Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total Assists,3157465,Duncan Robinson,,2.5,-182.0,2.5,-195.0,2026-11-02T08:57Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total Assists,4432166,Cade Cunningham,,8.5,-135.0,8.5,-146.0,2026-11-02T08:56Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total Assists,4432166,Cade Cunningham,,8.5,103.0,8.5,111.0,2026-11-02T08:56Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total 3-Point Field Goals,3135045,Grayson Allen,,2.5,136.0,1.5,-194.0,2026-11-02T09:49Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total 3-Point Field Goals,3135045,Grayson Allen,,2.5,-180.0,1.5,146.0,2026-11-02T09:49Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total Points and Assists,3157465,Duncan Robinson,,15.5,-103.0,15.5,-106.0,2026-11-02T12:55Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total Points and Assists,3157465,Duncan Robinson,,15.5,-128.0,15.5,-124.0,2026-11-02T12:55Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total Points and Assists,4433287,Brandon Miller,,26.5,-110.0,27.5,-113.0,2026-11-02T09:48Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total Points and Assists,4433287,Brandon Miller,,26.5,-119.0,27.5,-117.0,2026-11-02T09:48Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total Points and Assists,5107199,Daniss Jenkins,,13.5,-130.0,13.5,-129.0,2026-11-02T11:15Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total Points and Assists,5107199,Daniss Jenkins,,13.5,-101.0,13.5,-102.0,2026-11-02T11:15Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total Assists and Rebounds,4396971,Naz Reid,,9.5,-135.0,9.5,-133.0,2026-11-02T10:39Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total Assists and Rebounds,4396971,Naz Reid,,9.5,102.0,9.5,101.0,2026-11-02T10:39Z,under
+2026-11-02 05:05,22600159,2026-11-02,Total Assists and Rebounds,4684742,Ausar Thompson,,11.5,105.0,10.5,-135.0,2026-11-02T10:57Z,over
+2026-11-02 05:05,22600159,2026-11-02,Total Assists and Rebounds,4684742,Ausar Thompson,,11.5,-139.0,10.5,102.0,2026-11-02T10:57Z,under
+2026-11-02 05:05,22600159,2026-11-02,"Total Points, Rebounds, and Assists",3157465,Duncan Robinson,,17.5,-119.0,17.5,-119.0,2026-11-02T08:57Z,over
+2026-11-02 05:05,22600159,2026-11-02,"Total Points, Rebounds, and Assists",3157465,Duncan Robinson,,17.5,-110.0,17.5,-111.0,2026-11-02T08:57Z,under
+2026-11-02 05:05,22600163,2026-11-02,Total Points and Rebounds,5124612,VJ Edgecombe,,19.5,-109.0,19.5,-109.0,2026-11-02T10:28Z,over
+2026-11-02 05:05,22600163,2026-11-02,Total Points and Rebounds,5124612,VJ Edgecombe,,19.5,-121.0,19.5,-121.0,2026-11-02T10:28Z,under
+2026-11-02 05:05,22600163,2026-11-02,Total Assists and Rebounds,3917376,Jaylen Brown,,10.5,-132.0,10.5,-132.0,2026-11-02T08:49Z,over
+2026-11-02 05:05,22600163,2026-11-02,Total Assists and Rebounds,3917376,Jaylen Brown,,10.5,100.0,10.5,100.0,2026-11-02T08:49Z,under
+2026-11-02 05:05,22600163,2026-11-02,Total Steals and Blocks,5095151,Caleb Wilson,,2.5,-101.0,2.5,125.0,2026-11-02T08:37Z,over
+2026-11-02 05:05,22600163,2026-11-02,Total Steals and Blocks,5095151,Caleb Wilson,,2.5,-131.0,2.5,-167.0,2026-11-02T08:37Z,under

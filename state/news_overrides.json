@@ -163,5 +163,27 @@
   "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzebskru2s2r",
   "text": "Some matchup items for Raptors at LA for Monday night  Kawhi Leonard and Brandon Ingram are out. Scottie Barnes and Jakob Poeltl are questionable. Clippers starters Derrick Jones Jr. and Rui Hachimura are out. Max Strus returns and Gradey Dick #RevengeGame. Expect 25 Clippers turnovers",
   "swing": 0.36
+ },
+ "2026-11-02|ny|jose alvarado": {
+  "status": "Available",
+  "player": "Jose Alvarado",
+  "game_id": 22600161,
+  "reporter": "Fred Katz",
+  "posted_at_et": "2026-11-02 17:55:24",
+  "seen_at_et": "2026-11-02 17:56:40",
+  "url": "https://bsky.app/profile/fredkatz.bsky.social/post/3mzeg7ctv722o",
+  "text": "Jose Alvarado (ankle) will play tonight, Mike Brown says.",
+  "swing": 0.19
+ },
+ "2026-11-02|atl|jalen johnson": {
+  "status": "Out",
+  "player": "Jalen Johnson",
+  "game_id": 22600160,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-02 17:58:06",
+  "seen_at_et": "2026-11-02 17:59:00",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzege5cxwi2z",
+  "text": "Jalen Johnson: Ruled out Monday    https://www.rotowire.com/basketball/player/jalen-johnson-5329",
+  "swing": 0.62
  }
 }

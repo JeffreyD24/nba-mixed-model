@@ -1,0 +1,18 @@
+NBA TOTALS at DK openers (2023-24 2024-25 2025-26)
+  live model                       +46.3 +40.3 +60.5 | 1615 bets 57.2% +147.1u  MAE 14.676
+  + altitude                       +45.5 +47.0 +67.1 | 1656 bets 57.4% +159.5u  MAE 14.670
+  + away b2b                       +47.2 +39.7 +57.5 | 1633 bets 57.0% +144.4u  MAE 14.680
+  + time-zone move (east/west)     +44.5 +44.7 +50.5 | 1651 bets 56.8% +139.7u  MAE 14.693
+  + all three                      +30.5 +45.2 +58.7 | 1704 bets 56.5% +134.5u  MAE 14.696
+NBA SPREADS at DK openers, all bets / live filter (Oct-Jan, no home dogs)
+  live model                       -27.5 +18.0 +2.1 | 1044 bets 52.0% -7.4u  MAE 11.155 || +16.9 +19.3 +6.7 | 358 bets 58.7% +42.9u  MAE 11.155
+  + home b2b                       -26.9 +21.3 -1.5 | 1082 bets 52.0% -7.2u  MAE 11.151 || +17.6 +21.6 +5.2 | 387 bets 58.4% +44.5u  MAE 11.151
+  + away moved west                -23.9 +17.0 +0.0 | 1055 bets 52.0% -6.9u  MAE 11.159 || +17.7 +18.3 +3.6 | 367 bets 58.0% +39.6u  MAE 11.159
+  + home back from 5+ trip         -28.5 +18.9 +1.2 | 1045 bets 52.0% -8.4u  MAE 11.157 || +15.8 +20.2 +5.7 | 363 bets 58.4% +41.7u  MAE 11.157
+  + all three                      -25.2 +22.1 -1.6 | 1091 bets 52.2% -4.7u  MAE 11.157 || +17.4 +21.5 +2.1 | 400 bets 57.8% +41.0u  MAE 11.157
+NHL SHOT MODEL MONEYLINE at DK openers, EV 6%+ (2021-22 .. 2025-26)
+  live model                       +41.3 +7.1 +16.0 +12.2 +19.5 | 1978 bets +96.1u (+4.9%)  Brier 0.2338
+  + away b2b                       +50.3 +8.8 +12.3 +30.1 +21.3 | 2192 bets +122.7u (+5.6%)  Brier 0.2337
+  + home b2b                       +46.6 +14.7 +17.2 +16.3 +24.3 | 2064 bets +119.1u (+5.8%)  Brier 0.2338
+  + away moved west                +44.1 +24.0 +11.0 +8.2 +26.6 | 2156 bets +113.9u (+5.3%)  Brier 0.2336
+  + all three                      +53.0 +42.0 +5.5 +31.4 +27.7 | 2350 bets +159.6u (+6.8%)  Brier 0.2335

@@ -28,6 +28,8 @@ jobs:
           pip install -q -r requirements.txt
       - name: Run tracker
         run: python tracker.py .
+      - name: Shooting luck for the totals (this season's shots so far)
+        run: python nba_luck.py . || echo "Shooting luck not updated; alerts use yesterday's file."
       - name: Save tomorrow's model early (for alerts when DraftKings opens tomorrow's lines)
         run: python tracker.py . --tomorrow --model-only || echo "Tomorrow's model not saved this time; the evening run will make it."
       - name: Grade Polymarket paper trades

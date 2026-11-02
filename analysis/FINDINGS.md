@@ -268,3 +268,15 @@ sharp book has already decided our side is overvalued. Those bets (265) are most
 teams (.440), more of OUR players out at the open (4.6 vs 4.0), our team on a back-to-back 19% (vs 7%), 57% in Feb-Apr.
 Predicting it at DK's open is weak (AUC 0.60). Inside the live window (Oct-Jan, no home dogs): Pinnacle against 63 bets
 50.8% -1.9u (coin flips); toward 204 bets 62.3% +38.5u; same 91 bets 56.0% +6.4u.
+
+## Second-half spreads by standings and roster changes (Nov 2, 2026)
+`analysis/late_season.py` (output `late_season_output.txt`, bets `late_season_bets.csv`). Conference rank before each game:
+top (1-4), middle (5-10), bubble (11-12 within 4 games of 10th), tanking (13-15 or further back). Recent arrival = a 12+ min
+player who joined from another team in the last 30 days. Live spread model, DK openers, edge 3+, 2023-24..2025-26.
+- Feb-Apr traps, negative all three seasons: betting a tanking team 239 bets 45.6% -30.9u; betting AGAINST a team in a playoff
+  spot (5-10) 250 bets 41.6% -51.5u; tanking vs playoff-spot team 132 bets 40.2% -30.8u; our team with a recent arrival
+  185 bets 43.2% -32.3u (new players valued at full EPM before they fit in).
+- Feb-Apr excluding those three: 113 bets 60.2% +16.8u (+3.7, +3.0, +10.1); also no home dogs: 87 bets 63.2% +18.0u.
+  The same exclusions don't matter Oct-Jan (traps +20.3u there). Found on the same seasons: paper-track before betting.
+- Betting against a top-4 team in Feb-Apr: 155 bets 57.4% +14.9u (-6.2, +8.7, +12.4): top seeds rest late.
+- Market (closing line, 2021-26 Feb-Apr): home bubble teams vs playoff-spot or top teams fail to cover by ~3 pts (4 of 5 seasons).

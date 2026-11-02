@@ -21,6 +21,7 @@ import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
+ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 BET_ONLY = True                     # phone alerts only for BET verdicts and the DON'T BET follow-up (Nov 1, 2026);
                                     # everything else is still logged, just not pushed. False = the old behaviour.
@@ -477,11 +478,16 @@ def main():
                     form_adj = LUCK.get("form_weight_total", 0.0) * (th["form_total"] + ta["form_total"])
                     form_adj_sp = LUCK.get("form_weight_spread", 0.0) * (th["form_margin"] - ta["form_margin"])
                     total = total + form_adj; margin = margin + form_adj_sp
+            # roster strength vs the season so far (trades, buyouts, returns): spreads only (test-only), weight 0.57 per EPM pt
+            roster_adj = 0.0
+            RS = M.get("roster", {})
+            if g["home"] in RS and g["away"] in RS and min(RS[g["home"]]["games"], RS[g["away"]]["games"]) >= 10:
+                roster_adj = ROSTER_W * (RS[g["home"]]["delta"] - RS[g["away"]]["delta"]); margin = margin + roster_adj
             nl, lm_, hm_, lt_, ht_ = limbo(SW)
             model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
                                    model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used,
                                    model_total_before_luck=round(total_raw, 2), luck_adjustment=round(luck_adj, 2),
-                                   form_adjustment_total=round(form_adj, 2), form_adjustment_margin=round(form_adj_sp, 2),
+                                   form_adjustment_total=round(form_adj, 2), form_adjustment_margin=round(form_adj_sp, 2), roster_adjustment_margin=round(roster_adj, 2),
                                    limbo_players=nl, limbo_margin_lo=round(margin + lm_, 2), limbo_margin_hi=round(margin + hm_, 2),
                                    limbo_total_lo=round(total + lt_, 2), limbo_total_hi=round(total + ht_, 2)))
             NK = ";".join(sorted(f"{v['player']}|{v['status']}" for v in news_used.get(g["home"], []) + news_used.get(g["away"], [])))

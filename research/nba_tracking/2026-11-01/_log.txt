@@ -1,0 +1,86 @@
+=== 2026-11-01 19:24:32 season 2026-27, games of 2026-10-31
+=== 2026-11-01 19:24:48 season 2026-27, games of 2026-10-31
+=== 2026-11-01 19:25:56 season 2026-27, games of 2026-10-31
+TRY 1 pt_team_SpeedDistance : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+TRY 2 pt_team_SpeedDistance : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+TRY 3 pt_team_SpeedDistance : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+FAIL pt_team_SpeedDistance : https://stats.nba.com/stats/leaguedashptstats?LeagueID=00&Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame&LastNGames=0&Month=0&OpponentTeamID=0&PORound=0&Period=0&DateFrom=&DateTo=&GameScope=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=&Conference=&Division=&TeamID=0&College=&Country=&DraftPick=&DraftYear=&Height=&Weight=&ISTRound=&PlayerOrTeam=Team&PtMeasureType=SpeedDistance
+TRY 1 pt_team_Touches : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+TRY 2 pt_team_Touches : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+TRY 3 pt_team_Touches : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+FAIL pt_team_Touches : https://stats.nba.com/stats/leaguedashptstats?LeagueID=00&Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame&LastNGames=0&Month=0&OpponentTeamID=0&PORound=0&Period=0&DateFrom=&DateTo=&GameScope=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=&Conference=&Division=&TeamID=0&College=&Country=&DraftPick=&DraftYear=&Height=&Weight=&ISTRound=&PlayerOrTeam=Team&PtMeasureType=Touches
+=== 2026-11-01 19:33:05 season 2026-27, games of 2026-10-31
+TRY 1 pt_team_SpeedDistance : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+=== 2026-11-01 19:35:24 season 2026-27, games of 2026-10-31
+TRY 1 pt_team_SpeedDistance : Exception calling "GetResult" with "0" argument(s): "A task was canceled."
+=== 2026-11-01 19:37:10 season 2026-27, games of 2026-10-31
+OK   pt_team_SpeedDistance (3357 bytes)
+TRY 1 pt_team_Touches : HTTP 400
+TRY 2 pt_team_Touches : HTTP 400
+FAIL pt_team_Touches : https://stats.nba.com/stats/leaguedashptstats?LeagueID=00&Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame&LastNGames=0&Month=0&OpponentTeamID=0&PORound=0&Period=0&DateFrom=&DateTo=&GameScope=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=&Conference=&Division=&TeamID=0&College=&Country=&DraftPick=&DraftYear=&Height=&Weight=&ISTRound=&PlayerOrTeam=Team&PtMeasureType=Touches
+OK   pt_team_Passing (3877 bytes)
+OK   pt_team_Drives (4998 bytes)
+OK   pt_team_CatchShoot (3585 bytes)
+OK   pt_team_PullUpShot (3509 bytes)
+OK   pt_team_Possessions (4482 bytes)
+OK   pt_team_Rebounding (6705 bytes)
+OK   pt_team_Defense (3112 bytes)
+OK   pt_team_ElbowTouch (5099 bytes)
+OK   pt_team_PostTouch (5041 bytes)
+OK   pt_team_PaintTouch (5200 bytes)
+OK   pt_team_Efficiency (4639 bytes)
+OK   pt_player_SpeedDistance (39485 bytes)
+TRY 1 pt_player_Touches : HTTP 400
+TRY 2 pt_player_Touches : HTTP 400
+FAIL pt_player_Touches : https://stats.nba.com/stats/leaguedashptstats?LeagueID=00&Season=2026-27&SeasonType=Regular+Season&PerMode=PerGame&LastNGames=0&Month=0&OpponentTeamID=0&PORound=0&Period=0&DateFrom=&DateTo=&GameScope=&Location=&Outcome=&PlayerExperience=&PlayerPosition=&SeasonSegment=&StarterBench=&VsConference=&VsDivision=&Conference=&Division=&TeamID=0&College=&Country=&DraftPick=&DraftYear=&Height=&Weight=&ISTRound=&PlayerOrTeam=Player&PtMeasureType=Touches
+OK   pt_player_Passing (44374 bytes)
+OK   pt_player_Drives (57562 bytes)
+OK   pt_player_CatchShoot (40336 bytes)
+OK   pt_player_PullUpShot (40038 bytes)
+OK   pt_player_Possessions (50522 bytes)
+OK   pt_player_Rebounding (72660 bytes)
+OK   pt_player_Defense (35507 bytes)
+OK   pt_player_ElbowTouch (57586 bytes)
+OK   pt_player_PostTouch (57354 bytes)
+OK   pt_player_PaintTouch (58443 bytes)
+OK   pt_player_Efficiency (51657 bytes)
+OK   team_shots_def_wide_open (4155 bytes)
+OK   opp_shots_def_wide_open (4150 bytes)
+OK   team_shots_def_tight (4212 bytes)
+OK   opp_shots_def_tight (4193 bytes)
+OK   team_shots_def_open (4178 bytes)
+OK   opp_shots_def_open (4189 bytes)
+OK   team_shots_def_very_tight (4082 bytes)
+OK   opp_shots_def_very_tight (4083 bytes)
+OK   team_defend_Overall (2864 bytes)
+OK   team_defend_3_Pointers (2909 bytes)
+OK   team_defend_2_Pointers (2913 bytes)
+OK   team_defend_Less_Than_6Ft (2949 bytes)
+OK   team_defend_Less_Than_10Ft (2943 bytes)
+OK   team_defend_Greater_Than_15Ft (2940 bytes)
+OK   hustle_team (4680 bytes)
+OK   hustle_player (62230 bytes)
+OK   scoreboard_2026-10-31 (20408 bytes)
+OK   box_track_0022600147 (20189 bytes)
+OK   box_hustle_0022600147 (12661 bytes)
+OK   box_advanced_0022600147 (20777 bytes)
+OK   box_track_0022600148 (20267 bytes)
+OK   box_hustle_0022600148 (12130 bytes)
+OK   box_advanced_0022600148 (20712 bytes)
+OK   box_track_0022600149 (19523 bytes)
+OK   box_hustle_0022600149 (10511 bytes)
+OK   box_advanced_0022600149 (20084 bytes)
+OK   box_track_0022600150 (20884 bytes)
+OK   box_hustle_0022600150 (10993 bytes)
+OK   box_advanced_0022600150 (21512 bytes)
+OK   box_track_0022600151 (21651 bytes)
+OK   box_hustle_0022600151 (11553 bytes)
+OK   box_advanced_0022600151 (22275 bytes)
+OK   box_track_0022600152 (19640 bytes)
+OK   box_hustle_0022600152 (11050 bytes)
+OK   box_advanced_0022600152 (20040 bytes)
+OK   box_track_0022600153 (20258 bytes)
+OK   box_hustle_0022600153 (11070 bytes)
+OK   box_advanced_0022600153 (20812 bytes)
+games found: 7
+done: 62 saved, 2 failed

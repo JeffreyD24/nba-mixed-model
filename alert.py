@@ -21,6 +21,8 @@ import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
+ALT_W = 3.8                         # Nov 2, 2026 (approved): totals at Denver/Utah go over the close by ~3 pts (5 of 5 seasons);
+ALT_HOMES = ("den", "utah")          #   added to the model total, fit leaving each season out: +159.5u vs +147.1u 2023-26
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
@@ -500,6 +502,8 @@ def main():
                     luck_adj = -LUCK.get("weight", 0.5) * (th["luck"] + th["luck_allowed"] + ta["luck"] + ta["luck_allowed"] - 4 * lg)
                     total = total + luck_adj
             # recent form (nba_luck.py; analysis/form_adjust.py, Nov 2, 2026): last 10 games vs season-to-date
+            alt_adj = ALT_W if g["home"] in ALT_HOMES else 0.0
+            total = total + alt_adj
             form_adj = form_adj_sp = 0.0; sp_ready = False
             if LUCK:
                 th, ta = LUCK["teams"].get(g["home"]), LUCK["teams"].get(g["away"])
@@ -518,7 +522,7 @@ def main():
             model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
                                    model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used,
                                    model_total_before_luck=round(total_raw, 2), luck_adjustment=round(luck_adj, 2),
-                                   form_adjustment_total=round(form_adj, 2), form_adjustment_margin=round(form_adj_sp, 2), roster_adjustment_margin=round(roster_adj, 2),
+                                   form_adjustment_total=round(form_adj, 2), altitude_adjustment=round(alt_adj, 2), form_adjustment_margin=round(form_adj_sp, 2), roster_adjustment_margin=round(roster_adj, 2),
                                    limbo_players=nl, limbo_margin_lo=round(margin + lm_, 2), limbo_margin_hi=round(margin + hm_, 2),
                                    limbo_total_lo=round(total + lt_, 2), limbo_total_hi=round(total + ht_, 2)))
             NK = ";".join(sorted(f"{v['player']}|{v['status']}" for v in news_used.get(g["home"], []) + news_used.get(g["away"], [])))
@@ -548,7 +552,7 @@ def main():
                     e = total - cur; side = "over" if e > 0 else "under"
                     px = ln.get("current_over_odds" if side == "over" else "current_under_odds")
                     title = f"Bet {side.upper()} {cur:g}{price_txt(px)}: {Aw} @ {H}, {tip}"
-                    body = f"Model total {total:.1f}" + (f" (shooting-luck adjustment {luck_adj:+.1f})" if luck_adj else "") + (f" (recent-form adjustment {form_adj:+.1f})" if form_adj else "") + \
+                    body = f"Model total {total:.1f}" + (f" (shooting-luck adjustment {luck_adj:+.1f})" if luck_adj else "") + (f" (recent-form adjustment {form_adj:+.1f})" if form_adj else "") + (f" (altitude {alt_adj:+.1f})" if alt_adj else "") + \
                            f". DraftKings {cur:g}" + (" (opening line)." if is_open else f" (opened {opn:g}).")
                 body += f" Edge {abs(e):.1f} pts."
                 if is_news and (g["game_id"], market) in done:

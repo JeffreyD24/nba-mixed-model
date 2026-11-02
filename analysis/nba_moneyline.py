@@ -66,3 +66,23 @@ for lab, k in (("spread rules (no home dogs; Feb-Apr outside traps)", rule), (" 
                ("  ... underdogs only", rule & (B.price > 0)), ("  ... + Pinnacle agrees/same (if waiting were free)", rule & (B.pin >= -0.005)),
                ("  ... Oct-Jan only", rule & ~B.late)):
     print(f"  {lab:52s} {s_(B[k])}")
+# ---- blend: win chance = w x model + (1 - w) x DraftKings' no-vig opener, w fit leaving the season out (log-loss)
+print("\nBLEND of model and DraftKings' opening price (weight on the model fit leaving the season out):")
+G["mkt"] = nv(G.ml_h, G.ml_a)
+from scipy.optimize import minimize_scalar
+pm = {}
+for s in SEAS:
+    tr = G[G.season != s]; G_ = G[G.season == s]
+    m = LogisticRegression(C=100).fit(tr[["m_live"]], tr.hw)
+    ptr = m.predict_proba(tr[["m_live"]])[:, 1]
+    ll = lambda w: -np.mean(tr.hw * np.log(np.clip(w * ptr + (1 - w) * tr.mkt, 1e-6, 1)) + (1 - tr.hw) * np.log(np.clip(1 - w * ptr - (1 - w) * tr.mkt, 1e-6, 1)))
+    w = minimize_scalar(ll, bounds=(0, 1), method="bounded").x
+    G.loc[G.season == s, "pb"] = w * m.predict_proba(G_[["m_live"]])[:, 1] + (1 - w) * G_.mkt; pm[s] = round(w, 2)
+print("  weight on the model by test season:", pm, "| Brier blend", round(((G.pb - G.hw) ** 2).mean(), 4), "vs DK open", round(((G.mkt - G.hw) ** 2).mean(), 4))
+dh, da = dec(G.ml_h), dec(G.ml_a); evh, eva = G.pb * dh - 1, (1 - G.pb) * da - 1; home = evh >= eva; ev = np.maximum(evh, eva)
+won = np.where(home, G.hw == 1, G.hw == 0); u = np.where(won, np.where(home, dh, da) - 1, -1.0)
+hdog = home & (G.ml_h > 0)
+for bar in (0.01, 0.02, 0.03, 0.05):
+    k = ev >= bar
+    print(f"  blend EV {bar:.0%}+: {k.sum():4d} bets {u[k].sum():+6.1f}u [" + " ".join(f"{s % 100}:{u[k & (G.season == s).values].sum():+.1f}" for s in SEAS) + "]"
+          + f" | no home dogs: {(k & ~hdog).sum()} bets {u[k & ~hdog].sum():+.1f}u [" + " ".join(f"{s % 100}:{u[k & ~hdog & (G.season == s).values].sum():+.1f}" for s in SEAS) + "]")

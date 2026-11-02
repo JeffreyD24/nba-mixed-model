@@ -29,3 +29,10 @@ live model, EV 6%+, with the spread rules:
     ... underdogs only                                  471 bets  +39.3u (+8.3%) [24:-20.7 25:+37.7 26:+22.3]
     ... + Pinnacle agrees/same (if waiting were free)   611 bets  +70.6u (+11.6%) [24:+3.4 25:+44.0 26:+23.2]
     ... Oct-Jan only                                    732 bets  +41.2u (+5.6%) [24:-20.6 25:+38.0 26:+23.8]
+
+BLEND of model and DraftKings' opening price (weight on the model fit leaving the season out):
+  weight on the model by test season: {2024: np.float64(0.26), 2025: np.float64(0.11), 2026: np.float64(0.21)} | Brier blend 0.2005 vs DK open 0.2007
+  blend EV 1%+:  738 bets   -1.2u [24:+0.5 25:+13.8 26:-15.5] | no home dogs: 545 bets +8.2u [24:-5.3 25:+9.7 26:+3.8]
+  blend EV 2%+:  587 bets  -17.1u [24:-0.5 25:+10.2 26:-26.7] | no home dogs: 431 bets +1.4u [24:-4.1 25:+12.4 26:-6.9]
+  blend EV 3%+:  482 bets   -1.1u [24:+15.3 25:-1.2 26:-15.2] | no home dogs: 350 bets +15.3u [24:+10.9 25:-0.6 26:+5.1]
+  blend EV 5%+:  318 bets   -9.6u [24:+7.8 25:-6.0 26:-11.5] | no home dogs: 226 bets -0.3u [24:+5.6 25:-10.0 26:+4.0]

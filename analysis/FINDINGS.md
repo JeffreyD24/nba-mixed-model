@@ -312,3 +312,10 @@ DraftKings opening moneyline, 2023-24..2025-26, both teams 10+ games.
 - Not adopted as BET alerts: not consistent enough, and it doubles exposure on games already bet on the spread.
 - NFL moneyline (DraftKings openers 2020-24, early-week model): 775 bets -42.3u at EV 6%+; model less accurate than the opener
   (Brier 0.2264 vs 0.2172). No edge.
+- Moneyline blend (model + DraftKings' opener, weight fit leaving the season out): the best weight on the model is only
+  0.11-0.26, Brier 0.2005 vs 0.2007 for the opener alone; no bet threshold is consistent. The NBA moneyline opener already
+  holds nearly everything the model knows. The -39/+45/-3 swings come from longshot underdogs (most bets +100 or longer):
+  ~1,800 bets with big payouts give a season-to-season spread of about +/-35u, so with an average near zero the swings are noise.
+- Across every market tested: the line moving our way after the bet = wins, against = losses; Pinnacle's first price against
+  our side = losses (NBA spreads, NBA moneyline, NHL moneyline); the opener is about as accurate as our models overall, so
+  the edge lives in specific disagreement spots (NBA totals, NHL moneyline/overs, NBA spreads Oct-Jan), not in every game.

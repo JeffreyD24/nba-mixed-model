@@ -66,3 +66,14 @@ win0 = np.where(home0, P.home_goals > P.away_goals, P.away_goals > P.home_goals)
 for yr in (2022, 2023, 2024):
     s = (np.maximum(evh0, eva0) >= 0.06) & (P.season.values == yr)
     print(f"  {yr} at DK open: all {s.sum()} bets {u0[s].sum():+.1f}u | Pinnacle first price disagrees: {(s & (d0 < -0.005)).sum()} bets {u0[s & (d0 < -0.005)].sum():+.1f}u")
+# F: of the bets at DK's opener, how many still had value at DK's price when Pinnacle posted?
+s0 = np.maximum(evh0, eva0) >= 0.06
+same_side = home0 == home
+still = s0 & (ev >= 0.06) & same_side & Q.w_h.notna()
+gone = s0 & ~still & Q.w_h.notna()
+hrs = ((P.pin_t - P.open_t).dt.total_seconds() / 3600)
+print(f"\nOf {s0.sum()} bets at DK's opener: Pinnacle posted {hrs[s0].median():.1f} h later (median). Still 6%+ value at DK then: "
+      f"{still.sum()} ({still.sum() / s0.sum():.0%}); those made {u[still].sum():+.1f}u waiting vs {u0[still].sum():+.1f}u at the open. "
+      f"Value gone: {gone.sum()} bets, which made {u0[gone].sum():+.1f}u at the open")
+for lab, k in (("still value AND Pinnacle agrees/same", still & (diff >= -0.005)), ("still value, Pinnacle disagrees", still & (diff < -0.005))):
+    print(f"  {lab}: {k.sum()} bets, {u[k].sum():+.1f}u waiting")

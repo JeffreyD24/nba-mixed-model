@@ -125,3 +125,13 @@ Pinnacle = the sharp book. Scripts: analysis/sharp_nba.py, sharp_replicate.py, s
   so the use is a filter when Pinnacle is already posted at alert time (20% of games at DK's open; there: disagree 55 bets -11.4u).
 - NHL "follow Pinnacle" (bet DK when Pinnacle's no-vig chance is 2+ pts higher for a side): 1,208 bets +85.7u, positive all three
   seasons, but 1%+ and 3%+ are flat, so not trusted yet.
+
+## Recent form and waiting for Pinnacle (Nov 2, 2026)
+- **Last-10-game form** (analysis/form10_test.py): beyond our model, a team's last 10 games vs its season level adds a little to
+  the result vs the opener in all three seasons (spreads +0.08/+0.09/+0.13 pts per pt; totals +0.20/+0.16/+0.01). Adding it
+  to spreads at weight 0.15: 2023-24 -42.4u -> -39.1u, 2024-25 +3.5u -> +30.0u, 2025-26 -1.3u -> +11.6u (weight picked on the
+  same seasons, so optimistic). Totals: no consistent gain. Spreads stay test-only; re-test with a proper recency term in Model 1.
+- **NHL, waiting for Pinnacle:** of 1,331 shot-model bets at DK's opener, Pinnacle posted a median 3 h later; 78% (1,033) still had
+  6%+ value at DK then (made +24.6u waiting vs +29.5u at the open). The 160 that lost value had made +26.1u at the open (the
+  market moved our way). Waiting and betting only when Pinnacle agrees: 835 bets +36.2u, vs +64.5u for betting every open.
+- Live recording of Pinnacle + 9 US books every 5 min started Nov 2 (pinnacle_watch.py -> research/live_odds/).

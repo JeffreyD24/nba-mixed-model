@@ -1,0 +1,26 @@
+3212 games (both teams 10+ games in)
+
+SPREAD: recent form (last 10 vs season)
+  2024: corr with line move +0.146 | with result vs open +0.033 | vs close +0.011 | extra pts per pt of form, beyond our model: +0.075
+  2025: corr with line move +0.083 | with result vs open +0.030 | vs close +0.018 | extra pts per pt of form, beyond our model: +0.093
+  2026: corr with line move +0.055 | with result vs open +0.063 | vs close +0.056 | extra pts per pt of form, beyond our model: +0.132
+  our edge 3+ bets, form agrees with our bet: 498 bets, 52.2%
+  our edge 3+ bets, form against our bet: 552 bets, 48.7%
+TOTAL: recent form (last 10 vs season)
+  2024: corr with line move +0.221 | with result vs open +0.049 | vs close +0.006 | extra pts per pt of form, beyond our model: +0.204
+  2025: corr with line move +0.067 | with result vs open +0.028 | vs close +0.014 | extra pts per pt of form, beyond our model: +0.156
+  2026: corr with line move +0.124 | with result vs open -0.002 | vs close -0.024 | extra pts per pt of form, beyond our model: +0.009
+  our edge 3+ bets, form agrees with our bet: 444 bets, 57.7%
+  our edge 3+ bets, form against our bet: 912 bets, 54.3%
+
+Adding recent form to the model: units at the opener, edge 3+, by weight (pts added per pt of recent form)
+  spread weight 0.00: 2024: 344 bets 45.9% -42.4u | 2025: 363 bets 52.9% +3.5u | 2026: 343 bets 52.2% -1.3u
+  spread weight 0.05: 2024: 353 bets 46.2% -41.8u | 2025: 354 bets 53.1% +4.9u | 2026: 348 bets 52.0% -2.5u
+  spread weight 0.10: 2024: 357 bets 47.1% -36.3u | 2025: 350 bets 53.4% +7.0u | 2026: 371 bets 54.4% +14.6u
+  spread weight 0.15: 2024: 377 bets 46.9% -39.1u | 2025: 348 bets 56.9% +30.0u | 2026: 395 bets 53.9% +11.6u
+  spread weight 0.20: 2024: 402 bets 47.5% -37.4u | 2025: 356 bets 56.2% +25.8u | 2026: 414 bets 53.9% +11.7u
+  total weight 0.00: 2024: 574 bets 54.0% +17.8u | 2025: 426 bets 53.8% +11.2u | 2026: 356 bets 59.6% +48.7u
+  total weight 0.05: 2024: 561 bets 53.3% +9.8u | 2025: 420 bets 53.3% +7.6u | 2026: 351 bets 59.5% +48.0u
+  total weight 0.10: 2024: 550 bets 53.3% +9.4u | 2025: 410 bets 53.9% +11.9u | 2026: 368 bets 59.8% +52.0u
+  total weight 0.15: 2024: 517 bets 52.4% +0.4u | 2025: 398 bets 53.3% +6.7u | 2026: 383 bets 60.1% +56.1u
+  total weight 0.20: 2024: 514 bets 54.3% +18.6u | 2025: 397 bets 54.9% +19.2u | 2026: 417 bets 58.5% +48.8u

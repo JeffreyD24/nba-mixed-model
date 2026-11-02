@@ -324,3 +324,15 @@ DraftKings opening moneyline, 2023-24..2025-26, both teams 10+ games.
   losses. Long shots (+200 or longer) carry the swings (-18.3 / +39.8 / -16.8). Away moneylines +150 or shorter: 460 bets
   +29.4u, positive all three seasons; with the live rules 313 bets +27.8u (+4.9 / +9.7 / +13.2), but half are games that already
   have a live spread bet; the new games add only +7.9u over three seasons (161 bets). Not adopted; paper-track candidate.
+
+## Blending every model with DraftKings' opener (Nov 2, 2026)
+`analysis/blend_all.py` (output `blend_all_output.txt`); NHL in nhl-mixed-model backtests/IDEA_TESTS.md. For spreads and totals
+a blend (w x model + (1-w) x line) is the same as a bigger edge bar, so w (fit leaving the season out) says how much of the
+model's disagreement to trust.
+- NHL moneyline: blend adopted (55/45, EV 4%+): +158.1u, every season +19u or better.
+- NBA totals: w = 0.49-0.52, i.e. the current edge-3 rule already IS the best blend (blended edge 1.5 = +163.1u vs +165.3u). No change.
+- NBA spreads (live rules): w = 0.14-0.27 overall; blending removes nearly every bet. The live-rule bets at edge 3+ (442 bets
+  59.5% +60.1u, every season positive) already filter to the spots where the model is right. No change.
+- NBA moneyline: w = 0.11-0.26 (earlier test), no consistent bets. NFL: spreads w ~0 (-0.11 to +0.06), totals w = 0.14-0.32;
+  the market already holds what the NFL model knows, consistent with full-game NFL staying test-only.
+- NHL puck line and overs: blending removes the edge (puck line +12.0u vs +85.6u). Keep model-only.

@@ -61,3 +61,12 @@ expected FG points, season to date before each game (5+ games).
   totals 53.2% on 2,095 (2023 50.2%, 2024 55.3%, 2025 55.4%, 2026 52.7%); opening totals 2025-26 54.0% on 879. Most of it
   comes from the luck allowed by the away team. Break-even is 52.4%, so on its own this is thin; the next test is whether it
   improves Model 1's totals when added as a correction (needs Model 1's walk-forward predictions re-run for 2023-26).
+
+## Lineups and player plus-minus from substitutions (Nov 1, 2026)
+`analysis/lineup_stints.py`: 188,626 stints (same ten players on the floor) in 6,146 games, 2021-22 to 2025-26, 99.7% of games with
+5-on-5 in every stint, with the score change in each (`data/nba_stints_hist.csv.gz`). Player ratings by season from them
+(regularized adjusted plus-minus, margin per 48 minutes, `analysis/rapm_by_season.csv`). Sensible at the top (Jokic +17.6 to
++21.9, SGA +14.5 to +16.8), but one season of RAPM only correlates +0.30 to +0.39 with the next (players with 800+ minutes both
+years), well below what the model's EPM ratings carry. Next test: whether RAPM (or a blend with EPM) values missing players
+better than EPM alone, scored against how the line actually moved on each injury decision (`research/injury_decisions.csv`)
+and against game results at the opener.

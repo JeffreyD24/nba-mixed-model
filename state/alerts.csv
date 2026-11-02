@@ -33,7 +33,7 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600169,spread,2026-11-01 20:00:30.692126,2026-11-02,den,por,2026-11-02 21:00:00,away,-4.5,-4.5,1.0,3.5,2026-11-01_08_00PM,False,,,,,,,OPTIONAL,,,,
 22600165,total,2026-11-01 20:00:30.692126,2026-11-02,mem,no,2026-11-02 20:00:00,under,235.5,235.5,231.92,3.58,2026-11-01_08_00PM,False,,,,,,,OPTIONAL,,,,
 22600166,spread,2026-11-01 20:00:30.692126,2026-11-02,min,mil,2026-11-02 20:00:00,home,-11.5,-10.5,15.19,3.69,2026-11-01_08_00PM,True,,,,,,,BET,,,,
-22600163,total,2026-11-01 20:00:30.692126,2026-11-02,phi,chi,2026-11-02 19:30:00,under,238.5,239.5,233.49,5.01,2026-11-01_08_00PM,True,,,,,,,BET,,,2026-11-01 20:05,
+22600163,total,2026-11-01 20:00:30.692126,2026-11-02,phi,chi,2026-11-02 19:30:00,under,238.5,239.5,233.49,5.01,2026-11-01_08_00PM,True,,,,,,,BET,,,2026-11-01 20:05,2026-11-02 12:50
 22600168,total,2026-11-01 20:00:30.692126,2026-11-02,sa,utah,2026-11-02 20:30:00,over,229.5,229.5,232.76,3.26,2026-11-01_08_00PM,False,,,,,,,OPTIONAL,,,,
 22600159,total,2026-11-01 20:05:24.561255,2026-11-02,cha,det,2026-11-02 19:30:00,over,209.5,208.5,216.09,6.59,2026-11-01_08_00PM,True,,,,,,,BET,,,,
 22600161,total,2026-11-01 20:05:24.561255,2026-11-02,ny,bkn,2026-11-02 19:30:00,over,222.5,222.5,226.91,4.41,as of 2026-11-01 11:11,False,a team has not filed its injury report,,,,,,OPTIONAL,,,,
@@ -47,3 +47,5 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600169,total,2026-11-02 09:45:23.580173,2026-11-02,den,por,2026-11-02 21:00:00,over,230.5,231.5,235.41,4.91,2026-11-02_09_45AM,False,"line moved 1.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,,,
 22600169,total,2026-11-02 10:15:23.900901,2026-11-02,den,por,2026-11-02 21:00:00,over,231.5,231.5,235.41,3.91,2026-11-02_10_15AM,False,,,,,,,OPTIONAL,,,,
 22600171,total,2026-11-02 11:40:23.414553,2026-11-02,lac,tor,2026-11-02 22:00:00,under,221.5,220.5,216.12,5.38,as of 2026-11-02 11:37,False,a team has not filed its injury report,,,,,,PASS,,,,
+22600166,total,2026-11-02 12:50:32.675138,2026-11-02,min,mil,2026-11-02 20:00:00,under,234.5,233.5,231.06,3.44,2026-11-02_12_45PM,False,"line moved 1.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,,,
+22600161,spread,2026-11-02 12:50:32.675138,2026-11-02,ny,bkn,2026-11-02 19:30:00,away,-14.5,-14.5,10.35,4.15,2026-11-02_12_45PM,False,,,,,,,OPTIONAL,,,,

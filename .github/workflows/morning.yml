@@ -32,6 +32,8 @@ jobs:
         run: python nba_luck.py . || echo "Shooting luck not updated; alerts use yesterday's file."
       - name: Save tomorrow's model early (for alerts when DraftKings opens tomorrow's lines)
         run: python tracker.py . --tomorrow --model-only || echo "Tomorrow's model not saved this time; the evening run will make it."
+      - name: Bet record by model version
+        run: python bet_record.py . || echo "Bet record not updated; it will run again tomorrow."
       - name: Grade Polymarket paper trades
         run: python polymarket.py . --grade || echo "Polymarket grading failed; it will try again tomorrow."
       - name: Save results

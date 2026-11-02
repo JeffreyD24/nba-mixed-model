@@ -1,0 +1,5 @@
+version,market,bets,graded,wins,losses,pushes,pending,units,dollars,roi,description
+NBA spreads v1,spread,6,5,2,3,0,1,-1.18,-9.32,-0.2364,Model 1; bet when the opener is 3+ pts off
+NBA totals v1,total,6,4,2,2,0,2,-0.22,-0.78,-0.0555,Model 1 (mixed model + injury reports); bet when the opener is 3+ pts off
+NBA totals v2,total,3,0,0,0,0,3,0.0,0.0,,+ shooting-luck correction (league-relative 0.5); price cap -120; alerts only for bets
+OVERALL,all,15,9,4,5,0,6,-1.4,-10.1,-0.156,

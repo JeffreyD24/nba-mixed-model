@@ -35,7 +35,9 @@ jobs:
           for i in 1 2 3 4 5 6; do
             git fetch -q origin main && git reset -q --hard origin/main
             python log_bet.py . "$GITHUB_EVENT_PATH"
+            python bet_record.py . > /dev/null 2>&1 || true
             if [ -f state/my_bets.csv ]; then git add state/my_bets.csv; fi
+            for f in state/bet_record.csv state/record_by_version.csv; do [ -f "$f" ] && git add "$f"; done
             if git diff --cached --quiet; then echo "Nothing new to save."; exit 0; fi
             git commit -q -m "Log bet from issue #${{ github.event.issue.number }}"
             if git push -q; then exit 0; fi

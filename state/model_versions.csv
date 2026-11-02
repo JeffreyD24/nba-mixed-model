@@ -1,0 +1,7 @@
+version,market,live_from_et,description
+NBA totals v1,total,2026-10-30 10:45,Model 1 (mixed model + injury reports); bet when the opener is 3+ pts off
+NBA totals v2,total,2026-11-01 20:04,+ shooting-luck correction (league-relative 0.5); price cap -120; alerts only for bets
+NBA totals v3,total,2026-11-02 09:43,+ recent form (last 10 games' totals; both teams 10+ games) + altitude +3.8 at DEN/UTA
+NBA spreads v1,spread,2026-10-30 10:45,Model 1; bet when the opener is 3+ pts off
+NBA spreads (test-only),spread,2026-11-02 04:55,spreads test-only: no model bets (anything bet here was off-model)
+NBA spreads v2,spread,2026-11-02 09:54,roster strength + recent form; Oct-Jan both teams 10+ games; no home dogs; Feb-Apr outside traps; Pinnacle rule

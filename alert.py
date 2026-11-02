@@ -21,6 +21,7 @@ import actionnet
 
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
+SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 BET_ONLY = True                     # phone alerts only for BET verdicts and the DON'T BET follow-up (Nov 1, 2026);
                                     # everything else is still logged, just not pushed. False = the old behaviour.
 FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen
@@ -597,6 +598,8 @@ def main():
                 vd, vr = news_verdict(g, market, side, cur, opn, e) if is_news else verdict(g["game_id"], market, side, cur, opn, e)
                 if vd == "BET" and px is not None and not pd.isna(px) and float(px) < MAX_PRICE:
                     vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
+                if vd == "BET" and market == "spread" and SPREAD_TEST_ONLY:
+                    vd, vr = "TEST", "NBA spreads are test-only (no edge in the 2023-24 holdout); recorded for grading, not a bet"
                 if is_news:
                     title = "NEWS - " + title
                     why = ("NEWS: reporter news changed the model before the official report did. Read the post (link below) "

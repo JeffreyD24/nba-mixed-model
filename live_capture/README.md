@@ -27,3 +27,11 @@ stops by itself when every game is final (or after 3 AM), and you can close the 
 - Copy the data into the repo next session (Claude can do it from this folder).
 
 Source: Action Network (refreshes about every 30 seconds, so checking faster would gain nothing).
+
+## NBA tracking stats (daily, since Nov 1, 2026)
+`nba_tracking.ps1` downloads the NBA's player-tracking and hustle stats from stats.nba.com (blocked for cloud servers, so the
+laptop does it): season-to-date tables for every team and player (speed and distance, touches, passing, drives,
+catch-and-shoot, pull-ups, paint/post/elbow touches, rebounding chances, rim defense, shots by closest-defender distance,
+hustle stats) and per-game tracking/hustle/advanced box scores for the previous day's games. Raw replies go to
+`data\tracking\YYYY-MM-DD\` with a `_log.txt`. Double-click `Get_NBA_Tracking.bat` to run it now; `Install_Nightly_Capture.bat`
+schedules it every day at 10:30 AM alongside the live capture.

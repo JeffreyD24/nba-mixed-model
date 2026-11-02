@@ -151,3 +151,19 @@ spreads stay test-only; the adjustment (weight 0.11) is applied to the test-only
 - Window check (same out-of-season method), totals units over three seasons: none +104.8, last 10 +140.6, last 12 +121.1,
   last 15 +130.7, last 20 +109.7, last 25 +99.8, average of 10 and 15 +142.6, 10 and 15 as two weights +131.4. Every window from
   8 to 20 beats no form; neighbouring windows differ by 10-20u (noise), so last 10 stays. Spreads: all windows still negative.
+
+## Spread autopsy: why NBA spreads lose (Nov 2, 2026)
+`analysis/spread_autopsy.py` -> `spread_autopsy_bets.csv`. 1,050 Model 1 spread bets at the opener, edge 3+, 2023-24..2025-26
+(both teams 10+ games), wins vs losses.
+- **The model goes blind after January.** Oct-Jan: 492 bets, 56%, +36.8u, positive every season (+2.1/+20.2/+14.5).
+  Feb-Apr: 558 bets, 45%, -76.9u, negative every season. Regressing results on model and line: the model's weight is 0.42-0.80
+  in Oct-Jan and -0.18 to +0.20 in Feb-Apr. Likely cause: the trade deadline, buyouts, tanking and resting change who actually
+  plays, and the model's team ratings don't catch up (the line does). Totals don't fade (Feb-Apr 58-59% all three seasons).
+- **Home underdogs lose:** 408 bets, 44.9%, -58.6u, negative every season; everything else 642 bets +18.1u. Results come in
+  below both the model and the line for home teams (home-court residual -0.1 to -0.7 pts), so the model's home edge is too big.
+- 84% of the model's spread bets are underdogs (it rarely disagrees with the favorite).
+- Injuries: when our side is missing more player value at the open than the opponent and the model still likes it, 400 bets,
+  46.5%, -44.9u (2023-24 and 2024-25 bad, 2025-26 flat): the model under-penalizes injuries to the side it likes.
+- Not home dogs AND Oct-Jan: 318 bets, 60%, +48.5u (+10.1/+19.2/+19.3). Found on the same seasons, so it needs a fresh test.
+- No pattern: edge size, recent form, back-to-backs, injury news after the open. The line moving against us is the biggest
+  single tell (37.7% won), which is what the DON'T BET rule already uses.

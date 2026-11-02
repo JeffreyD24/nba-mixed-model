@@ -1,0 +1,31 @@
+games: {2024: 1074, 2025: 1069, 2026: 1069}
+units by season (2023-24 2024-25 2025-26):
+  base Model 1, EV 6%+                                  -18.0   +1.7  -53.4 | 1813 bets  -69.7u (-3.8%)  Brier model 0.2067 vs DK open 0.2007
+  live spread model (roster + form), EV 4%+             -47.4  +45.8  -10.5 | 2025 bets  -12.1u (-0.6%)  Brier model 0.2055 vs DK open 0.2007
+  live spread model (roster + form), EV 6%+             -39.2  +45.3   -3.1 | 1814 bets   +3.0u (+0.2%)  Brier model 0.2055 vs DK open 0.2007
+  live spread model (roster + form), EV 9%+             -35.9  +34.6  +14.5 | 1523 bets  +13.1u (+0.9%)  Brier model 0.2055 vs DK open 0.2007
+  live spread model (roster + form), EV 12%+            -30.4  +50.3  -10.1 | 1297 bets   +9.8u (+0.8%)  Brier model 0.2055 vs DK open 0.2007
+  live model, EV 6%+                                    -39.2  +45.3   -3.1 | 1814 bets   +3.0u (+0.2%)  Brier model 0.2055 vs DK open 0.2007
+
+live model, EV 6%+, by group:
+  favorites                             574 bets  +19.8u (+3.4%) [24:+2.0 25:+11.0 26:+6.8]
+  underdogs +100..+199                  515 bets  -21.6u (-4.2%) [24:-23.0 25:-5.5 26:+6.9]
+  underdogs +200 and longer             725 bets   +4.8u (+0.7%) [24:-18.3 25:+39.8 26:-16.8]
+  home                                  728 bets  -42.7u (-5.9%) [24:-29.7 25:-4.8 26:-8.2]
+  away                                 1086 bets  +45.7u (+4.2%) [24:-9.5 25:+50.1 26:+5.1]
+  home underdogs                        441 bets  -40.3u (-9.1%) [24:-24.6 25:-7.2 26:-8.4]
+  Oct-Jan                               938 bets  +46.9u (+5.0%) [24:-25.1 25:+26.1 26:+45.9]
+  Feb-Apr                               876 bets  -43.9u (-5.0%) [24:-14.1 25:+19.2 26:-49.0]
+  Feb-Apr outside traps                 158 bets  +14.2u (+9.0%) [24:+5.9 25:+9.5 26:-1.2]
+  Feb-Apr traps                         718 bets  -58.1u (-8.1%) [24:-20.0 25:+9.8 26:-47.9]
+  Pinnacle first price agrees/same     1173 bets  +85.6u (+7.3%) [24:+9.9 25:+61.9 26:+13.8]
+  Pinnacle first price against          641 bets  -82.6u (-12.9%) [24:-49.1 25:-16.6 26:-16.9]
+  price moved our way by the close      998 bets +163.7u (+16.4%) [24:+35.0 25:+76.5 26:+52.3]
+  price moved against by the close      705 bets -163.8u (-23.2%) [24:-70.8 25:-39.9 26:-53.2]
+
+live model, EV 6%+, with the spread rules:
+  spread rules (no home dogs; Feb-Apr outside traps)    861 bets  +55.3u (+6.4%) [24:-11.9 25:+45.3 26:+21.9]
+    ... favorites only                                  390 bets  +16.0u (+4.1%) [24:+8.8 25:+7.7 26:-0.4]
+    ... underdogs only                                  471 bets  +39.3u (+8.3%) [24:-20.7 25:+37.7 26:+22.3]
+    ... + Pinnacle agrees/same (if waiting were free)   611 bets  +70.6u (+11.6%) [24:+3.4 25:+44.0 26:+23.2]
+    ... Oct-Jan only                                    732 bets  +41.2u (+5.6%) [24:-20.6 25:+38.0 26:+23.8]

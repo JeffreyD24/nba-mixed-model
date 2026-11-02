@@ -96,7 +96,20 @@ def do_day(day):
         if js is None: continue
         r = rows_of(js, day); snaps[t] = r
         for x in r: seen.setdefault(x["event_id"], t)
-    if not DRY:
+    if not DRY and snaps:
+        # lines already up at the first planned snapshot (opening night, national TV games are posted days early):
+        # step back 6 hours at a time (up to 10 days) until they're not there yet, so the opener can be pinned down too
+        t_first = min(snaps); early = {x["event_id"] for x in snaps[t_first]}
+        t, steps = t_first, 0
+        while early and steps < 40:
+            t = t - pd.Timedelta(hours=6); steps += 1
+            js = snapshot(t)
+            if js is None: break
+            r = rows_of(js, day); snaps[t] = r
+            early &= {x["event_id"] for x in r}
+        seen = {}
+        for tt in sorted(snaps):
+            for x in snaps[tt]: seen.setdefault(x["event_id"], tt)
         # pin each batch of openers down to ~10 minutes: bisect between the last snapshot without them and the first with
         times = sorted(snaps)
         for first in sorted(set(seen.values())):

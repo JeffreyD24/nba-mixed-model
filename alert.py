@@ -156,7 +156,7 @@ def main():
         print("Test alert", msg); return
     if not FORCE and not in_window():
         print(f"{NOW:%H:%M} ET is outside the alert window; nothing to do."); return
-    models = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= str(TODAY.date()))
+    models = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f.endswith(".json") and f[6:16] >= str(TODAY.date()))
     if not models:
         print("No model saved for today or tomorrow yet.")
         try:      # still record lines from the moment they're posted
@@ -875,7 +875,7 @@ def main():
         n_odds = n_pred = n_spl = n_bk = n_pm = n_po = n_live = n_per = n_ls = n_min = 0
         # include last night's games until 8 AM, so games running past midnight keep their live lines and final scores
         early = str((NOW - pd.Timedelta(hours=8)).date())
-        rmodels = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= early)
+        rmodels = sorted(f for f in os.listdir(STATE) if f.startswith("model_") and f.endswith(".json") and f[6:16] >= early)
         for mf in rmodels:
             M3 = json.load(open(os.path.join(STATE, mf))); rows = []
             try:

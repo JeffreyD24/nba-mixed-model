@@ -1,9 +1,9 @@
 """
 Bet record by model version. Every logged bet (state/my_bets.csv) is tagged with the model version that was live when it was
-placed (state/model_versions.csv: one row per version and market, with the ET time it went live). Writes
+placed (state/bet_versions.csv: one row per version and market, with the ET time it went live). Writes
   state/bet_record.csv          every bet with its version, result, profit ($) and units (profit / stake)
   state/record_by_version.csv   W-L-P, units, ROI per version (and per market), plus an OVERALL row
-Add a row to model_versions.csv whenever a model or betting rule changes; bets placed after that time start a new record.
+Add a row to bet_versions.csv whenever a model or betting rule changes; bets placed after that time start a new record.
   python bet_record.py WORKDIR
 """
 import os, re, sys
@@ -27,7 +27,7 @@ def placed_at(r):
 
 def main():
     B = pd.read_csv(os.path.join(STATE, "my_bets.csv"))
-    V = pd.read_csv(os.path.join(STATE, "model_versions.csv"), parse_dates=["live_from_et"])
+    V = pd.read_csv(os.path.join(STATE, "bet_versions.csv"), parse_dates=["live_from_et"])
     B["placed_et"] = [placed_at(r) for r in B.itertuples()]
     def version(r):
         v = V[(V.market == r.market) & (V.live_from_et <= r.placed_et)].sort_values("live_from_et")

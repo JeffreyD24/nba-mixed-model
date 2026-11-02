@@ -27,6 +27,8 @@ ALT_HOMES = ("den", "utah")          #   added to the model total, fit leaving e
 ML_TEST = (-0.0640, 0.1388)         # NBA moneyline TEST tracking (Nov 2, 2026; analysis/nba_ml_takeaways.py): home win chance =
                                     #   logistic(a + b x live model margin); AWAY moneylines +150 or shorter, EV 6%+, near DK's opener,
                                     #   spread rules (10+ games, Feb-Apr traps) -> state/ml_test.csv. Recorded only, never pushed.
+REMIND_EVERY_MIN = 30               # Nov 2, 2026: an alerted BET still not logged and still a bet -> REMINDER push every 30 min,
+REMIND_HOURS = (6, 20)              #   only 6 AM - 8 PM ET (user asleep 8 PM - 4 AM)
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
@@ -741,6 +743,26 @@ def main():
         if "verdict" not in A: A["verdict"] = np.nan
         if "resumed_at_et" not in A: A["resumed_at_et"] = np.nan
         A["resumed_at_et"] = A["resumed_at_et"].astype(object)
+        if "last_reminder_at_et" not in A: A["last_reminder_at_et"] = np.nan
+        A["last_reminder_at_et"] = A["last_reminder_at_et"].astype(object)
+
+        def remind(i, r, side_, cur, opn, e_, now_):
+            """REMINDER push for a bet that is still a BET and not logged: every REMIND_EVERY_MIN minutes, REMIND_HOURS only"""
+            if not (REMIND_HOURS[0] <= NOW.hour < REMIND_HOURS[1]): return 0
+            ref = next((x for x in (r.get("last_reminder_at_et"), r.get("resumed_at_et"), r.alerted_at_et) if isinstance(x, str)), None)
+            if ref is None or NOW - pd.Timestamp(ref) < pd.Timedelta(minutes=REMIND_EVERY_MIN): return 0
+            px_now = (now_.get("px") or {}).get(side_)
+            if px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE: return 0
+            if r.market == "spread":
+                bl = float(cur) if side_ == "home" else -float(cur); what = f"{now_['H'] if side_ == 'home' else now_['Aw']} {bl:+g}"
+            else:
+                what = f"{str(side_).upper()} {float(cur):g}"
+            what += price_txt(px_now) if px_now is not None else ""
+            body = (bet_range(r.market, side_, now_["margin"], now_["total"], opn, now_["H"], now_["Aw"]) + "\n"
+                    f"REMINDER: still a BET and not logged yet. Alerted {pd.Timestamp(r.alerted_at_et):%a %-I:%M %p}; DraftKings now {what}, "
+                    f"model {now_['model']:.1f} (edge {abs(e_):.1f}). Tip {now_['tip']}. If you already bet it, log it to stop these." + now_["hist"])
+            notify(f"REMINDER - BET {what}: {now_['Aw']} @ {now_['H']}, {now_['tip']}", body, priority="default", tags="alarm_clock", kind="bet")
+            A.loc[i, "last_reminder_at_et"] = str(NOW)[:16]; print("REMINDER:", what); return 1
         last = A[A.sent.astype(str).isin(["True", "1", "1.0"]) & (A.verdict == "BET")].groupby(["game_id", "market"]).tail(1)
         for i, r in last.iterrows():
             now_ = LINE_NOW.get((r.game_id, r.market))
@@ -753,7 +775,6 @@ def main():
             if isinstance(r.get("stopped_at_et"), str):
                 # BACK IN RANGE (Nov 2, 2026): after a DON'T BET, once per game and market, if it is a BET again: same side, 3+ edge,
                 # the rule says BET, Pinnacle not against, and the line is no worse than at the original alert
-                if isinstance(r.get("resumed_at_et"), str): continue
                 vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
                 mv = float(cur) - float(r.line)
                 worse = (mv > 0 if side_ == "over" else mv < 0 if side_ == "under" else mv < 0 if side_ == "home" else mv > 0)
@@ -762,6 +783,8 @@ def main():
                 px_now = (now_.get("px") or {}).get(side_)
                 if ok and px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE: ok = False     # price too expensive
                 if not ok: continue
+                if isinstance(r.get("resumed_at_et"), str):          # already back in range once: reminders only
+                    n_rem += remind(i, r, side_, cur, opn, e_, now_); continue
                 if r.market == "spread":
                     bl = float(cur) if side_ == "home" else -float(cur); what = f"{H if side_ == 'home' else Aw} {bl:+g}"
                 else:
@@ -790,7 +813,8 @@ def main():
                            f"{float(opn):+g}, the other side of this bet; those lost in 5 of 6 season-halves 2023-26")
                 elif abs(mv) >= AGAINST_MOVE and against_us(r.market, side_, mv):
                     why = f"the line moved {abs(mv):.1f} pts against this bet since the alert ({float(r.line):g} -> {float(cur):g})"
-                else: continue
+                else:
+                    n_rem += remind(i, r, side_, cur, opn, e_, now_); continue
             if r.market == "spread":
                 bl = float(r.line) if r.side == "home" else -float(r.line); what = f"{H if r.side == 'home' else Aw} {bl:+g}"
                 nowtxt = f"{H} {cur:+g}"

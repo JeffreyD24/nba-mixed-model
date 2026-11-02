@@ -135,3 +135,16 @@ Pinnacle = the sharp book. Scripts: analysis/sharp_nba.py, sharp_replicate.py, s
   6%+ value at DK then (made +24.6u waiting vs +29.5u at the open). The 160 that lost value had made +26.1u at the open (the
   market moved our way). Waiting and betting only when Pinnacle agrees: 835 bets +36.2u, vs +64.5u for betting every open.
 - Live recording of Pinnacle + 9 US books every 5 min started Nov 2 (pinnacle_watch.py -> research/live_odds/).
+
+## Recent-form adjustment, adopted for totals (Nov 2, 2026)
+`analysis/form_adjust.py`, `form_adjust_results.csv`. Form = a team's last k games minus its season-to-date average. Each test
+season's weight is fit only on the OTHER two seasons' Model 1 predictions (residual vs form). Edge 3+ at the opener, both teams 10+ games:
+| Totals (from the live luck-corrected model) | 2023-24 | 2024-25 | 2025-26 | Total |
+|---|---|---|---|---|
+| no form | +21.0u | +30.5u | +53.3u | +104.8u (1,621 bets) |
+| last-10 game totals | +34.5u | +39.3u | +66.8u | +140.6u (1,631 bets) |
+Better all three seasons; error vs the final score lower in two of three. Last 15 also helped; last 5 and shot-quality form
+(no shooting luck) were mixed. Live: weight 0.20 (fit on all three, se 0.034), typical adjustment +/-1.9 pts, applied once both
+teams have 10+ games (nba_luck.py -> state/nba_luck.json; alert.py "recent-form adjustment").
+Spreads, last-10 margin: better all three seasons (-42.4 -> -38.3, +3.5 -> +6.9, -1.3 -> +16.0) but still -15.4u overall, so
+spreads stay test-only; the adjustment (weight 0.11) is applied to the test-only spread tracking.

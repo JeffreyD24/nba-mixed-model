@@ -24,6 +24,11 @@ OUT = os.path.join(STATE, "nba_luck.json")
 SEASON_START = "2026-10-01"
 LUCK_WEIGHT = 0.5
 MIN_GAMES = 5
+# recent form (adopted Nov 2, 2026; analysis/form_adjust.py): a team's last 10 games minus its season-to-date average.
+# Weights fit on 2023-24..2025-26 Model 1 predictions; out-of-season tests improved totals in all three seasons (+35.8u).
+FORM_GAMES, FORM_MIN = 10, 10
+FORM_W_TOTAL = 0.20       # pts added to the model total per pt of (home + away) recent game-total form
+FORM_W_SPREAD = 0.11      # pts added to the home margin per pt of (home - away) recent margin form (spreads are test-only)
 FLAGS = {"dunk": "dunk", "layup": "layup|finger roll", "hook": "hook", "pullup": "pullup", "stepback": "step back",
          "fade": "fade|turnaround", "float": "float", "driving": "driving", "cutting": "cutting", "running": "running",
          "putback": "putback|tip", "alleyoop": "alley oop", "heave": "heave", "bank": "bank"}
@@ -57,6 +62,25 @@ def fit():
     print(f"shot-quality model fit on {len(S)} shots")
 
 
+def recent_form():
+    """per team: last FORM_GAMES games' average game total and margin, minus its season-to-date average (finished games)"""
+    p = os.path.join(STATE, "picks_log.csv")
+    if not os.path.exists(p): return {}
+    G = pd.read_csv(p).dropna(subset=["home_pts", "away_pts"]).drop_duplicates("game_id")
+    G = G[G.date >= SEASON_START]
+    rows = []
+    for r in G.itertuples():
+        rows += [dict(team=r.home, date=r.date, tp=r.home_pts + r.away_pts, mg=r.home_pts - r.away_pts),
+                 dict(team=r.away, date=r.date, tp=r.home_pts + r.away_pts, mg=r.away_pts - r.home_pts)]
+    if not rows: return {}
+    L = pd.DataFrame(rows).sort_values("date"); out = {}
+    for t, g in L.groupby("team"):
+        n = len(g)
+        out[t] = dict(form_games=n, form_total=round(float(g.tp.tail(FORM_GAMES).mean() - g.tp.mean()), 3),
+                      form_margin=round(float(g.mg.tail(FORM_GAMES).mean() - g.mg.mean()), 3))
+    return out
+
+
 def main():
     if "--fit" in sys.argv or not os.path.exists(MODEL): fit()
     import nba_shots
@@ -88,10 +112,13 @@ def main():
     TG = TG[TG.team != TG.opp].merge(opp, on=["espn_event_id", "opp"])
     out = {t: dict(games=int(len(g)), luck=round(float(g.luck.mean()), 3), luck_allowed=round(float(g.opp_luck.mean()), 3),
                    through=str(g.date.max())) for t, g in TG.groupby("team")}
+    form = recent_form()
+    for t, v in form.items(): out.setdefault(t, dict(games=0, luck=0.0, luck_allowed=0.0, through=None)).update(v)
     # league-wide shift this season (every team shooting below/above the shot model): measured so it can be taken out,
     # so the correction only moves games whose teams were luckier or unluckier than the league (backtested Nov 1, 2026)
     league = round(float(TG.luck.mean()), 3)
     json.dump(dict(made_at=str(pd.Timestamp.now(tz="America/New_York"))[:16], weight=LUCK_WEIGHT, min_games=MIN_GAMES,
+                   form_weight_total=FORM_W_TOTAL, form_weight_spread=FORM_W_SPREAD, form_min_games=FORM_MIN,
                    league_luck_per_team_game=league, teams=out),
               open(OUT, "w"), indent=1)
     top = sorted(out.items(), key=lambda kv: -(kv[1]["luck"] + kv[1]["luck_allowed"] - 2 * league))

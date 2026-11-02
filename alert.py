@@ -468,10 +468,20 @@ def main():
                     lg = LUCK.get("league_luck_per_team_game", 0.0)      # league-wide shift taken out (4 terms)
                     luck_adj = -LUCK.get("weight", 0.5) * (th["luck"] + th["luck_allowed"] + ta["luck"] + ta["luck_allowed"] - 4 * lg)
                     total = total + luck_adj
+            # recent form (nba_luck.py; analysis/form_adjust.py, Nov 2, 2026): last 10 games vs season-to-date
+            form_adj = form_adj_sp = 0.0
+            if LUCK:
+                th, ta = LUCK["teams"].get(g["home"]), LUCK["teams"].get(g["away"])
+                fm = LUCK.get("form_min_games", 10)
+                if th and ta and min(th.get("form_games", 0), ta.get("form_games", 0)) >= fm:
+                    form_adj = LUCK.get("form_weight_total", 0.0) * (th["form_total"] + ta["form_total"])
+                    form_adj_sp = LUCK.get("form_weight_spread", 0.0) * (th["form_margin"] - ta["form_margin"])
+                    total = total + form_adj; margin = margin + form_adj_sp
             nl, lm_, hm_, lt_, ht_ = limbo(SW)
             model_rows.append(dict(seen_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], away=g["away"], home=g["home"],
                                    model_margin=round(margin, 2), model_total=round(total, 2), injury_report=used,
                                    model_total_before_luck=round(total_raw, 2), luck_adjustment=round(luck_adj, 2),
+                                   form_adjustment_total=round(form_adj, 2), form_adjustment_margin=round(form_adj_sp, 2),
                                    limbo_players=nl, limbo_margin_lo=round(margin + lm_, 2), limbo_margin_hi=round(margin + hm_, 2),
                                    limbo_total_lo=round(total + lt_, 2), limbo_total_hi=round(total + ht_, 2)))
             NK = ";".join(sorted(f"{v['player']}|{v['status']}" for v in news_used.get(g["home"], []) + news_used.get(g["away"], [])))
@@ -501,7 +511,7 @@ def main():
                     e = total - cur; side = "over" if e > 0 else "under"
                     px = ln.get("current_over_odds" if side == "over" else "current_under_odds")
                     title = f"Bet {side.upper()} {cur:g}{price_txt(px)}: {Aw} @ {H}, {tip}"
-                    body = f"Model total {total:.1f}" + (f" (shooting-luck adjustment {luck_adj:+.1f})" if luck_adj else "") + \
+                    body = f"Model total {total:.1f}" + (f" (shooting-luck adjustment {luck_adj:+.1f})" if luck_adj else "") + (f" (recent-form adjustment {form_adj:+.1f})" if form_adj else "") + \
                            f". DraftKings {cur:g}" + (" (opening line)." if is_open else f" (opened {opn:g}).")
                 body += f" Edge {abs(e):.1f} pts."
                 if is_news and (g["game_id"], market) in done:

@@ -336,3 +336,12 @@ model's disagreement to trust.
 - NBA moneyline: w = 0.11-0.26 (earlier test), no consistent bets. NFL: spreads w ~0 (-0.11 to +0.06), totals w = 0.14-0.32;
   the market already holds what the NFL model knows, consistent with full-game NFL staying test-only.
 - NHL puck line and overs: blending removes the edge (puck line +12.0u vs +85.6u). Keep model-only.
+
+## This season so far under the current rules (replay, Nov 2, 2026)
+`analysis/season_replay_nba.py`; nhl-mixed-model `dev/season_replay.py`. Opening prices, locked picks (same information lag as live).
+- NBA (88 games, Oct 20-31): totals v3 42 bets 19-23 -5.73u vs Model 1 alone 36 bets 18-18 -1.64u. Luck correction active in
+  only 8 games (2-4 on its bets), altitude in 7 (1-4). Spreads: no bets yet (both teams need 10+ games).
+- NHL (188 games, Oct 6 - Nov 1): 76 bets 41-35 +6.19u (+8.1%): moneyline (blend) 16 bets 9-7 +4.49u, puck line 35 bets
+  17-18 -2.26u, overs 25 bets 15-10 +3.95u; old rules (plain model, both bets) 116 bets -8.15u. Pinnacle and second-chance
+  rules can't be replayed (Pinnacle recording started Nov 2).
+- Samples this small (one to four weeks) can't confirm or reject anything; the backtests remain the evidence.

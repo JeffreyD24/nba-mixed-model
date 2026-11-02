@@ -12,7 +12,7 @@ import actionnet
 
 STATE = os.path.join(W, "state")
 today = dt.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
-days = sorted({f[6:16] for f in os.listdir(STATE) if f.startswith("model_") and f[6:16] >= today})
+days = sorted({f[6:16] for f in os.listdir(STATE) if f.startswith("model_") and f.endswith(".json") and f[6:16] >= today})
 path = os.path.join(STATE, "openers_seen.json")
 seen = set(json.load(open(path))) if os.path.exists(path) else set()
 new = []

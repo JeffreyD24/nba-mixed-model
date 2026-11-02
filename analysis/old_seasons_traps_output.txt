@@ -1,0 +1,19 @@
+Old seasons 2009-10..2020-21, no-injury Model 1, CLOSING spreads, edge 3+
+
+Oct-Jan: all  1523 bets 50.0%   -68.3u  (positive in 4 of 12 seasons)
+  bet a tanking team                         339 bets 53.4%    +6.5u  (positive in 7 of 12 seasons)
+  bet against a playoff-spot (5-10) team     612 bets 49.2%   -37.4u  (positive in 6 of 12 seasons)
+  bet against a top-4 team                   483 bets 49.9%   -22.9u  (positive in 5 of 12 seasons)
+  home underdogs                             622 bets 47.4%   -58.8u  (positive in 2 of 12 seasons)
+  TRAPS (tanking or vs playoff spot)         793 bets 50.4%   -29.4u  (positive in 5 of 12 seasons)
+  outside the traps                          730 bets 49.6%   -38.9u  (positive in 2 of 12 seasons)
+  outside the traps, no home dogs            476 bets 50.4%   -17.8u  (positive in 4 of 12 seasons)
+
+Feb-Apr: all  1642 bets 48.9%  -109.0u  (positive in 3 of 12 seasons)
+  bet a tanking team                         573 bets 46.4%   -65.2u  (positive in 4 of 12 seasons)
+  bet against a playoff-spot (5-10) team     788 bets 49.1%   -49.2u  (positive in 3 of 12 seasons)
+  bet against a top-4 team                   513 bets 48.7%   -35.7u  (positive in 4 of 12 seasons)
+  home underdogs                             731 bets 46.2%   -85.7u  (positive in 3 of 12 seasons)
+  TRAPS (tanking or vs playoff spot)        1047 bets 48.1%   -84.8u  (positive in 5 of 12 seasons)
+  outside the traps                          595 bets 50.3%   -24.2u  (positive in 5 of 12 seasons)
+  outside the traps, no home dogs            379 bets 52.8%    +2.8u  (positive in 7 of 12 seasons)

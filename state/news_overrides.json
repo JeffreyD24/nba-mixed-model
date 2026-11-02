@@ -86,5 +86,16 @@
   "url": "https://bsky.app/profile/joshrobbins.bsky.social/post/3mzdvvzcevk2o",
   "text": "The Wizards will face a severely injury-depleted Magic team tonight. In addition to having Paolo Banchero, Jalen Suggs, Jonathan Isaac and Noah Penda out, the Magic have listed Anthony Black as out for tonight's game because of right ankle injury management.",
   "swing": 0.58
+ },
+ "2026-11-02|ind|pascal siakam": {
+  "status": "Out",
+  "player": "Pascal Siakam",
+  "game_id": 22600160,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-02 13:06:10",
+  "seen_at_et": "2026-11-02 13:06:11",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzdw25dbis27",
+  "text": "Pascal Siakam: Resting against Hawks    https://www.rotowire.com/basketball/player/pascal-siakam-3922",
+  "swing": 1.15
  }
 }

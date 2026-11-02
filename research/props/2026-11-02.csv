@@ -1294,3 +1294,12 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-02 01:05,22600161,2026-11-02,Total Points and Rebounds,3136195,Karl-Anthony Towns,,33.5,-112.0,33.5,-117.0,2026-11-02T08:49Z,under
 2026-11-02 01:05,22600161,2026-11-02,"Total Points, Rebounds, and Assists",3136195,Karl-Anthony Towns,,38.5,-112.0,38.5,-107.0,2026-11-02T08:49Z,over
 2026-11-02 01:05,22600161,2026-11-02,"Total Points, Rebounds, and Assists",3136195,Karl-Anthony Towns,,38.5,-118.0,38.5,-123.0,2026-11-02T08:49Z,under
+2026-11-02 01:10,22600165,2026-11-02,Total Points,4397688,Trey Murphy III,,16.5,-105.0,14.5,-114.0,2026-11-02T09:02Z,over
+2026-11-02 01:10,22600165,2026-11-02,Total Points and Assists,4395628,Zion Williamson,,22.5,-125.0,23.5,-104.0,2026-11-02T09:02Z,over
+2026-11-02 01:10,22600165,2026-11-02,Total Points and Assists,4395628,Zion Williamson,,22.5,-105.0,23.5,-126.0,2026-11-02T09:02Z,under
+2026-11-02 01:10,22600165,2026-11-02,Total Points and Assists,4397688,Trey Murphy III,,19.5,-110.0,18.5,-108.0,2026-11-02T08:42Z,over
+2026-11-02 01:10,22600165,2026-11-02,Total Points and Assists,4397688,Trey Murphy III,,19.5,-119.0,18.5,-122.0,2026-11-02T08:42Z,under
+2026-11-02 01:10,22600165,2026-11-02,Total Points and Rebounds,4397688,Trey Murphy III,,21.5,-112.0,20.5,-111.0,2026-11-02T08:35Z,over
+2026-11-02 01:10,22600165,2026-11-02,Total Points and Rebounds,4397688,Trey Murphy III,,21.5,-118.0,20.5,-119.0,2026-11-02T08:35Z,under
+2026-11-02 01:10,22600165,2026-11-02,"Total Points, Rebounds, and Assists",4397688,Trey Murphy III,,24.5,-116.0,23.5,-116.0,2026-11-02T08:35Z,over
+2026-11-02 01:10,22600165,2026-11-02,"Total Points, Rebounds, and Assists",4397688,Trey Murphy III,,24.5,-113.0,23.5,-113.0,2026-11-02T08:35Z,under

@@ -89,3 +89,16 @@ injuries out at the open, back-to-backs, season-to-date shooting luck, each team
   | 1.0 | 765 bets, 54.1%, +25.4u | 706 bets, 56.5%, +55.7u |
   0.5 was better than the current model in both seasons (+20u over two seasons, 285 more bets). Spreads: no robust gain
   (c 0.25 slightly better in both seasons, larger c worse), so spreads stay as they are.
+
+## Holdout season 2023-24 at real DraftKings openers (The Odds API history), Nov 1 2026
+Model 1 walk-forward, trained on 2021-22 and 2022-23 only, graded at DraftKings' first posted line (1,113 games; the first
+two weeks are being re-downloaded). Edge 3+.
+- **Totals hold up:** 590 bets, 54.1%, +19.0u. With the shooting-luck correction (league-relative, 0.5): 659 bets, 54.3%,
+  +24.5u. The correction beat the plain model for the third season in a row.
+- Totals timing: with the luck correction the edge survives about an hour after the open (+22.9u at 15 min, +24.9u at 30,
+  +25.2u at 60) and is mostly gone by the close (+9.7u). Without it, it fades faster (+6.4u at 60 min).
+- DraftKings' opening NBA prices were -110 on both sides, so the -120 cap never applied at the open.
+- **Spreads fail:** 359 bets, 46.8%, -38.4u; no edge size, home/away or line-movement filter rescues it. Three seasons at
+  the open: 2023-24 -38.4u, 2024-25 +17.1u, 2025-26 +2.7u -> 610-573 (51.6%), below the 52.4% break-even at -110.
+- Model edge vs open-to-close move: totals r = +0.28, spreads r = +0.16.
+Scripts: analysis/validate_2023_24_model.py, analysis/validate_2023_24.py

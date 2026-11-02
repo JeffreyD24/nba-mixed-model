@@ -5532,3 +5532,23 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-02 05:05,22600163,2026-11-02,Total Assists and Rebounds,3917376,Jaylen Brown,,10.5,100.0,10.5,100.0,2026-11-02T08:49Z,under
 2026-11-02 05:05,22600163,2026-11-02,Total Steals and Blocks,5095151,Caleb Wilson,,2.5,-101.0,2.5,125.0,2026-11-02T08:37Z,over
 2026-11-02 05:05,22600163,2026-11-02,Total Steals and Blocks,5095151,Caleb Wilson,,2.5,-131.0,2.5,-167.0,2026-11-02T08:37Z,under
+2026-11-02 05:15,22600162,2026-11-02,Total Points,4066320,Desmond Bane,,20.5,-115.0,20.5,-115.0,2026-11-02T09:42Z,over
+2026-11-02 05:15,22600162,2026-11-02,Total Points,4066320,Desmond Bane,,20.5,-111.0,20.5,-111.0,2026-11-02T09:42Z,under
+2026-11-02 05:15,22600162,2026-11-02,Total Points,4566434,Franz Wagner,,23.5,-105.0,23.5,-119.0,2026-11-02T13:13Z,over
+2026-11-02 05:15,22600162,2026-11-02,Total Points,4566434,Franz Wagner,,23.5,-122.0,23.5,-107.0,2026-11-02T13:13Z,under
+2026-11-02 05:15,22600162,2026-11-02,Total 3-Point Field Goals,5174563,Kyshawn George,,1.5,-121.0,1.5,-123.0,2026-11-02T09:48Z,over
+2026-11-02 05:15,22600162,2026-11-02,Total 3-Point Field Goals,5174563,Kyshawn George,,1.5,-109.0,1.5,-107.0,2026-11-02T09:48Z,under
+2026-11-02 05:15,22600162,2026-11-02,Total Points and Assists,4566434,Franz Wagner,,29.5,-118.0,29.5,-113.0,2026-11-02T12:08Z,over
+2026-11-02 05:15,22600162,2026-11-02,Total Points and Assists,4566434,Franz Wagner,,29.5,-112.0,29.5,-116.0,2026-11-02T12:08Z,under
+2026-11-02 05:15,22600162,2026-11-02,Total Points and Rebounds,4566434,Franz Wagner,,29.5,-116.0,29.5,-109.0,2026-11-02T12:08Z,over
+2026-11-02 05:15,22600162,2026-11-02,Total Points and Rebounds,4566434,Franz Wagner,,29.5,-114.0,29.5,-120.0,2026-11-02T12:08Z,under
+2026-11-02 05:15,22600162,2026-11-02,Total Assists and Rebounds,4277905,Trae Young,,12.5,-139.0,13.5,106.0,2026-11-02T13:12Z,over
+2026-11-02 05:15,22600162,2026-11-02,Total Assists and Rebounds,4277905,Trae Young,,12.5,106.0,13.5,-140.0,2026-11-02T13:12Z,under
+2026-11-02 05:15,22600162,2026-11-02,"Total Points, Rebounds, and Assists",4277847,Wendell Carter Jr.,,23.5,-119.0,23.5,-123.0,2026-11-02T12:08Z,over
+2026-11-02 05:15,22600162,2026-11-02,"Total Points, Rebounds, and Assists",4277847,Wendell Carter Jr.,,23.5,-110.0,23.5,-107.0,2026-11-02T12:08Z,under
+2026-11-02 05:15,22600162,2026-11-02,"Total Points, Rebounds, and Assists",4566434,Franz Wagner,,36.5,-107.0,35.5,-119.0,2026-11-02T13:13Z,over
+2026-11-02 05:15,22600162,2026-11-02,"Total Points, Rebounds, and Assists",4566434,Franz Wagner,,36.5,-123.0,35.5,-111.0,2026-11-02T13:13Z,under
+2026-11-02 05:15,22600162,2026-11-02,"Total Points, Rebounds, and Assists",5174563,Kyshawn George,,22.5,-104.0,21.5,-125.0,2026-11-02T13:12Z,over
+2026-11-02 05:15,22600162,2026-11-02,"Total Points, Rebounds, and Assists",5174563,Kyshawn George,,22.5,-126.0,21.5,-105.0,2026-11-02T13:12Z,under
+2026-11-02 05:15,22600172,2026-11-02,Total Blocks,4433136,Walker Kessler,,1.5,-195.0,2.5,146.0,2026-11-02T13:05Z,over
+2026-11-02 05:15,22600172,2026-11-02,Total Blocks,4433136,Walker Kessler,,1.5,146.0,2.5,-196.0,2026-11-02T13:05Z,under

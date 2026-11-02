@@ -770,6 +770,7 @@ def main():
             if pd.Timestamp(now_["tip_et"]) <= NOW: continue
             logged = len(MYB) and ((MYB.date.astype(str) == str(r.date)) & (MYB.home == r.home) & (MYB.away == r.away) & (MYB.market == r.market)).any()
             if logged: continue
+            if str(r.get("remind_ok")) in ("False", "0", "0.0"): continue      # bet cashed out / removed by the user: no reminders or DON'T BET
             cur, opn, e_, side_ = now_["cur"], now_["opn"], now_["e"], now_["side"]
             H, Aw = now_["H"], now_["Aw"]
             if isinstance(r.get("stopped_at_et"), str):

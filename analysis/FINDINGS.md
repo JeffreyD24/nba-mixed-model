@@ -209,3 +209,17 @@ November is weakest (52.9%, +2.1u; luck and form aren't active yet), overs Oct-J
 - **Sharp-move model filter:** no help out of sample (2024-25: agrees 56.0%, disagrees 58.6%; 2025-26: 59.6% vs 56.8%). Dropped.
 - **NHL, Pinnacle's first price disagrees with the shot model:** negative all five seasons (-4.1, -16.9, -10.5, -3.6, -6.9;
   405 bets, -42.0u); agrees or same: 1,573 bets +138.1u. Holds up as a warning signal.
+
+## Oct-Jan vs Feb-Apr spreads, and what the sharps know (Nov 2, 2026)
+`analysis/half_compare.py` (output `half_compare_output.txt`). Live spread model (roster + form), DraftKings openers, edge 3+,
+2023-24..2025-26: Oct-Jan 530 bets 55.7% +33.2u; Feb-Apr 514 bets 48.2% -40.5u.
+- **Tanking:** Feb-Apr, betting a team below .400: 236 bets 44.9% -33.6u (negative all three seasons); same teams Oct-Jan
+  56.0% +10.9u. Worst when that bad team has 5+ players out at the open: 182 bets 42.3% -35.0u. Late-season bad teams shut
+  players down and play for the lottery; the model prices the absences by EPM x minutes and still sees value that isn't there.
+- **The sharp move carries the late-season information.** Feb-Apr, Pinnacle moving 1+ pt against our side: 144 bets 36.8%
+  -42.8u (the whole loss). Oct-Jan the same move barely matters (51.2%). Late scratches don't explain it (similar in both halves).
+- **Pinnacle's opener vs DraftKings' (Pinnacle posts ~12 h later):** opened against our side: Oct-Jan 114 bets 45.6% -14.7u,
+  Feb-Apr 151 bets 43.7% -25.0u (5 of 6 season-halves negative); opened toward us Oct-Jan 276 bets 60.5% +42.8u.
+  Same pattern as the NHL Pinnacle rule. (For totals, Pinnacle's opener showed no such signal.)
+- Why sharps beat spreads where we can't: their edge is information about who plays and who's trying (rest, tanking, rotations),
+  priced through the day; ours is team strength at the open. In Oct-Jan strength dominates, late season motivation does.

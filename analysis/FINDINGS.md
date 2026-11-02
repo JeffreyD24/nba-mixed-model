@@ -70,3 +70,22 @@ expected FG points, season to date before each game (5+ games).
 years), well below what the model's EPM ratings carry. Next test: whether RAPM (or a blend with EPM) values missing players
 better than EPM alone, scored against how the line actually moved on each injury decision (`research/injury_decisions.csv`)
 and against game results at the opener.
+
+## Predicting the closing line from what's known at the open (Nov 1, 2026)
+`analysis/predict_close.py` (games in `analysis/predict_close_games.csv`; Model 1 walk-forward with the opening injury report,
+2024-25 and 2025-26, each season's weights fit on the other season). Inputs: Model 1's edge vs the opener, the opener itself,
+injuries out at the open, back-to-backs, season-to-date shooting luck, each team's season-to-date results vs the close.
+- **The model's edge already predicts where the line goes.** Correlation with the open-to-close move: totals +0.39, spreads
+  +0.19 (all inputs: +0.43 and +0.24). Totals bets at the open with a predicted move of 1.5+: line moved our way 71% of the time
+  (against 20-22%), average closing line value +2.3 pts. This is the sharps' money arriving after us.
+- Team "hot/cold vs the spread" inputs flipped sign between seasons: noise, not used.
+- **Shooting luck sharpens NBA totals.** At the opener, totals where the luck signal points the same way as the model won
+  57.5% / 55.1% (edge 1-3, 2025 / 2026) vs 45.0% / 48.3% when it points the other way; at edge 3+, 57.5% / 61.4% vs 52.5% / 56.9%.
+  Built into the model as adjusted total = model total - 0.5 x combined luck, edge 3+ at the open:
+  | c | 2024-25 | 2025-26 |
+  |---|---|---|
+  | 0 (current) | 455 bets, 54.3%, +16.5u | 383 bets, 58.7%, +46.5u |
+  | 0.5 | 599 bets, 55.4%, +34.8u | 524 bets, 57.3%, +48.7u |
+  | 1.0 | 765 bets, 54.1%, +25.4u | 706 bets, 56.5%, +55.7u |
+  0.5 was better than the current model in both seasons (+20u over two seasons, 285 more bets). Spreads: no robust gain
+  (c 0.25 slightly better in both seasons, larger c worse), so spreads stay as they are.

@@ -732,15 +732,37 @@ def main():
         if "stopped_at_et" not in A: A["stopped_at_et"] = np.nan
         A["stopped_at_et"] = A["stopped_at_et"].astype(object)
         if "verdict" not in A: A["verdict"] = np.nan
+        if "resumed_at_et" not in A: A["resumed_at_et"] = np.nan
+        A["resumed_at_et"] = A["resumed_at_et"].astype(object)
         last = A[A.sent.astype(str).isin(["True", "1", "1.0"]) & (A.verdict == "BET")].groupby(["game_id", "market"]).tail(1)
         for i, r in last.iterrows():
             now_ = LINE_NOW.get((r.game_id, r.market))
-            if now_ is None or isinstance(r.get("stopped_at_et"), str): continue
+            if now_ is None: continue
             if pd.Timestamp(now_["tip_et"]) <= NOW: continue
             logged = len(MYB) and ((MYB.date.astype(str) == str(r.date)) & (MYB.home == r.home) & (MYB.away == r.away) & (MYB.market == r.market)).any()
             if logged: continue
             cur, opn, e_, side_ = now_["cur"], now_["opn"], now_["e"], now_["side"]
             H, Aw = now_["H"], now_["Aw"]
+            if isinstance(r.get("stopped_at_et"), str):
+                # BACK IN RANGE (Nov 2, 2026): after a DON'T BET, once per game and market, if it is a BET again: same side, 3+ edge,
+                # the rule says BET, Pinnacle not against, and the line is no worse than at the original alert
+                if isinstance(r.get("resumed_at_et"), str): continue
+                vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
+                mv = float(cur) - float(r.line)
+                worse = (mv > 0 if side_ == "over" else mv < 0 if side_ == "under" else mv < 0 if side_ == "home" else mv > 0)
+                ok = (side_ == r.side and abs(e_) >= THRESHOLD and vd == "BET" and not worse
+                      and not (r.market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((r.home, r.away)), side_, opn)))
+                if not ok: continue
+                if r.market == "spread":
+                    bl = float(cur) if side_ == "home" else -float(cur); what = f"{H if side_ == 'home' else Aw} {bl:+g}"
+                else:
+                    what = f"{str(side_).upper()} {float(cur):g}"
+                body = (f"BET: back in range. The DON'T BET at {pd.Timestamp(r.stopped_at_et):%-I:%M %p} no longer applies: DraftKings is "
+                        f"{what} again, model {now_['model']:.1f} (edge {abs(e_):.1f}), no worse than the original alert ({float(r.line):g}). "
+                        f"{vr}. Bet it now if you still want it; log it after." + now_["hist"])
+                notify(f"BACK IN RANGE - BET {what}: {Aw} @ {H}, {now_['tip']}", body, priority="high", tags="white_check_mark", kind="bet")
+                A.loc[i, "resumed_at_et"] = str(NOW)[:16]; n_rem += 1
+                print("BACK IN RANGE:", what); continue
             if side_ != r.side:
                 why = "the model now likes the OTHER side"
             elif abs(e_) < THRESHOLD:

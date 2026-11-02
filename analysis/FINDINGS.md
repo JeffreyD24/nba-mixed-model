@@ -167,3 +167,19 @@ spreads stay test-only; the adjustment (weight 0.11) is applied to the test-only
 - Not home dogs AND Oct-Jan: 318 bets, 60%, +48.5u (+10.1/+19.2/+19.3). Found on the same seasons, so it needs a fresh test.
 - No pattern: edge size, recent form, back-to-backs, injury news after the open. The line moving against us is the biggest
   single tell (37.7% won), which is what the DON'T BET rule already uses.
+
+## Spread fixes tested (Nov 2, 2026)
+`analysis/spread_fixes.py`, `analysis/roster_strength.py`. Each weight fit only on the other two seasons; edge 3+ at the opener.
+| Fix | 2023-24 | 2024-25 | 2025-26 | Feb-Apr | Total |
+|---|---|---|---|---|---|
+| current model | -42.4 | +3.5 | -1.3 | -76.9 | -40.1u (1,050) |
+| smaller home court | -40.7 | +0.7 | -3.9 | -73.5 | -43.9u |
+| more injury weight | -47.5 | +4.3 | -10.9 | -83.0 | -54.2u |
+| roster strength | -34.3 | +11.5 | +12.9 | -39.6 | -9.8u |
+| roster + last-10 form | -28.4 | +17.5 | +14.3 | -39.3 | +3.5u (1,058, 52.6%) |
+- **Roster strength is the real fix:** rotation value now (minute share x last season's EPM) minus the average the team has played
+  with so far this season. Weight 0.57-0.63 pts per EPM point; best error vs results. Halves the Feb-Apr losses: the model was
+  missing trades/buyouts/returns. Home court (-0.1 pt fitted) and extra injury weight don't help; home dogs improve only via roster.
+- Totals: roster strength doesn't help (+97.9u vs +104.8u); form stays the only totals change.
+- Spreads with roster + form are break-even overall (+3.5u), still -28.4u in 2023-24, so spreads stay test-only. Both are now in
+  the test-only spread tracking (tracker.py exports roster deltas; alert.py ROSTER_W = 0.57 once both teams have 10+ games).

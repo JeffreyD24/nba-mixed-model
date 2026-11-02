@@ -275,12 +275,34 @@ def export_today_model(g, summ, box):
         eo, ed = rating.get(r.playerid, (brf.UNRATED_OFF, brf.UNRATED_DEF))
         k = brf.key(r.player)
         if k and m > 0: players[k] = [round(m / 48 * eo, 4), round(m / 48 * ed, 4)]
+    # roster strength now vs what each team has played with this season (analysis/roster_strength.py, spread_fixes.py;
+    # Nov 2, 2026): rotation = latest appearance for this team within 30 days, 3+ games and 12+ min/game for it;
+    # value = minute-share x 5 x last season's EPM (unrated -1.5); delta = value now - average value at its earlier games
+    roster = {}
+    try:
+        tot = {k: (v[0] + v[1]) for k, v in rating.items()}
+        B = cur.copy(); B["date"] = pd.to_datetime(B.date); B["g"] = B.team.map(brf.ABBR2GAMES).fillna(B.team)
+        def rval(d, t):
+            past = B[(B.date < d) & (B.date >= d - pd.Timedelta(days=60))]
+            last = past.sort_values("date").groupby("playerid").tail(1)
+            ids = last[(last.g == t) & (last.date >= d - pd.Timedelta(days=30))].playerid
+            q = past[(past.g == t) & past.playerid.isin(ids)].groupby("playerid").MIN.agg(["size", "mean"])
+            q = q[(q["size"] >= 3) & (q["mean"] >= 12)]
+            if not len(q): return None
+            return float((q["mean"] / q["mean"].sum() * 5 * q.index.map(lambda i: tot.get(i, -1.5))).sum())
+        for t in set(today.home) | set(today.away):
+            dates = sorted(d for d in B[B.g == t].date.unique() if pd.Timestamp(d) < pd.Timestamp(TARGET))
+            prev = [v for v in (rval(pd.Timestamp(d), t) for d in dates) if v is not None]
+            now = rval(pd.Timestamp(TARGET), t)
+            if now is not None and len(prev) >= 1: roster[t] = dict(value=round(now, 3), delta=round(now - float(np.mean(prev)), 3), games=len(prev))
+    except Exception as e:
+        say(f"Roster strength skipped: {type(e).__name__} {str(e)[:100]}")
     p_miss = pd.read_csv(os.path.join(W, "data", "p_miss.csv"), index_col=0).iloc[:, 0].dropna()
     for f in os.listdir(STATE):                                   # keep only models for today and later
         if f.startswith("model_") and f[6:16] < str(TODAY.date()): os.remove(os.path.join(STATE, f))
     json.dump(dict(date=str(TARGET.date()), made_at_et=str(now_et()), c_off=c_off, c_def=c_def,
                    p_miss={k: float(v) for k, v in p_miss.items() if isinstance(k, str)},
-                   games=games_out, players=players), open(os.path.join(STATE, f"model_{TARGET.date()}.json"), "w"))
+                   games=games_out, players=players, roster=roster), open(os.path.join(STATE, f"model_{TARGET.date()}.json"), "w"))
     say(f"Saved today's model for intraday checks ({len(games_out)} games, {len(players)} players).")
 
 

@@ -52,6 +52,10 @@ def main():
                                          home=ev["home_team"], away=ev["away_team"], book=bk["key"], market=mk["key"],
                                          outcome=o.get("name"), price=o.get("price"), point=o.get("point"),
                                          book_last_update=mk.get("last_update")))
+                        if bk["key"] == "draftkings" and mk["key"] == "h2h":      # DraftKings moneyline (NBA moneyline test tracking)
+                            dkg = latest.setdefault("dk_" + sport, {}).setdefault(ev["id"], dict(home=ev["home_team"], away=ev["away_team"],
+                                                                                         commence_et=str(ct.tz_convert(ET).tz_localize(None))))
+                            dkg.setdefault("first", {}).setdefault(o.get("name"), o.get("price")); dkg.setdefault("now", {})[o.get("name")] = o.get("price")
                         if bk["key"] == "pinnacle":
                             g = latest.setdefault(sport, {}).setdefault(ev["id"], dict(home=ev["home_team"], away=ev["away_team"],
                                                                                   commence_et=str(ct.tz_convert(ET).tz_localize(None))))

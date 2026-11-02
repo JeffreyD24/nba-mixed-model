@@ -3233,3 +3233,33 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-02 03:20,22600166,2026-11-02,Total Points and Rebounds,4433247,Jonathan Kuminga,,21.5,-111.0,21.5,-111.0,2026-11-02T11:16Z,under
 2026-11-02 03:20,22600166,2026-11-02,Total Points and Rebounds,5279133,Joan Beringer,,13.5,-104.0,13.5,-104.0,2026-11-02T11:16Z,over
 2026-11-02 03:20,22600166,2026-11-02,Total Points and Rebounds,5279133,Joan Beringer,,13.5,-127.0,13.5,-127.0,2026-11-02T11:16Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Points,4278073,Shai Gilgeous-Alexander,,29.5,-118.0,29.5,-110.0,2026-11-02T03:54Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Points,4278073,Shai Gilgeous-Alexander,,29.5,-108.0,29.5,-116.0,2026-11-02T03:54Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Assists,4576087,Peyton Watson,,1.5,-154.0,1.5,-151.0,2026-11-02T03:53Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Assists,4576087,Peyton Watson,,1.5,116.0,1.5,114.0,2026-11-02T03:53Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Rebounds,4683778,Jared McCain,,2.5,-170.0,2.5,-163.0,2026-11-02T03:54Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Rebounds,4683778,Jared McCain,,2.5,128.0,2.5,124.0,2026-11-02T03:54Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total 3-Point Field Goals,3908809,Donovan Mitchell,,2.5,-116.0,2.5,-120.0,2026-11-02T03:53Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total 3-Point Field Goals,3908809,Donovan Mitchell,,2.5,-114.0,2.5,-109.0,2026-11-02T03:53Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total 3-Point Field Goals,4432158,Evan Mobley,,1.5,121.0,1.5,125.0,2026-11-02T03:53Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total 3-Point Field Goals,4432158,Evan Mobley,,1.5,-159.0,1.5,-166.0,2026-11-02T03:53Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Steals,4278073,Shai Gilgeous-Alexander,,1.5,158.0,1.5,165.0,2026-11-02T11:16Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Steals,4278073,Shai Gilgeous-Alexander,,1.5,-212.0,1.5,-222.0,2026-11-02T11:16Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Steals,4900671,Ajay Mitchell,,1.5,116.0,1.5,116.0,2026-11-02T11:16Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Steals,4900671,Ajay Mitchell,,1.5,-154.0,1.5,-154.0,2026-11-02T11:16Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Blocks,4222252,Isaiah Hartenstein,,0.5,-146.0,0.5,-146.0,2026-11-02T11:16Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Blocks,4222252,Isaiah Hartenstein,,0.5,110.0,0.5,110.0,2026-11-02T11:16Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Blocks,4278073,Shai Gilgeous-Alexander,,0.5,-194.0,0.5,-194.0,2026-11-02T11:16Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Blocks,4278073,Shai Gilgeous-Alexander,,0.5,145.0,0.5,145.0,2026-11-02T11:16Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Blocks,5174983,Aday Mara,,1.5,104.0,1.5,104.0,2026-11-02T11:16Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Blocks,5174983,Aday Mara,,1.5,-138.0,1.5,-138.0,2026-11-02T11:16Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Points and Assists,4278073,Shai Gilgeous-Alexander,,35.5,-123.0,35.5,-111.0,2026-11-02T03:54Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Points and Assists,4278073,Shai Gilgeous-Alexander,,35.5,-107.0,35.5,-119.0,2026-11-02T03:54Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Points and Rebounds,4278073,Shai Gilgeous-Alexander,,33.5,-120.0,33.5,-111.0,2026-11-02T03:54Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Points and Rebounds,4278073,Shai Gilgeous-Alexander,,33.5,-110.0,33.5,-119.0,2026-11-02T03:54Z,under
+2026-11-02 03:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",3908809,Donovan Mitchell,,32.5,-122.0,33.5,-112.0,2026-11-02T03:53Z,over
+2026-11-02 03:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",3908809,Donovan Mitchell,,32.5,-108.0,33.5,-117.0,2026-11-02T03:53Z,under
+2026-11-02 03:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",4278073,Shai Gilgeous-Alexander,,40.5,-107.0,39.5,-111.0,2026-11-02T11:16Z,over
+2026-11-02 03:25,22600158,2026-11-02,"Total Points, Rebounds, and Assists",4278073,Shai Gilgeous-Alexander,,40.5,-123.0,39.5,-118.0,2026-11-02T11:16Z,under
+2026-11-02 03:25,22600158,2026-11-02,Total Steals and Blocks,4278073,Shai Gilgeous-Alexander,,2.5,135.0,2.5,140.0,2026-11-02T11:16Z,over
+2026-11-02 03:25,22600158,2026-11-02,Total Steals and Blocks,4278073,Shai Gilgeous-Alexander,,2.5,-181.0,2.5,-188.0,2026-11-02T11:16Z,under

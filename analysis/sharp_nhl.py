@@ -8,7 +8,7 @@ W = os.path.abspath(sys.argv[1]); N = os.path.abspath(sys.argv[2])
 dec = lambda o: np.where(o > 0, 1 + o / 100, 1 + 100 / np.abs(o))
 O = pd.read_csv(os.path.join(W, "data", "odds_history", "nhl_snapshots.csv.gz"), parse_dates=["t", "tip"]).dropna(subset=["ml_h", "ml_a"])
 ih, ia = 1 / dec(O.ml_h), 1 / dec(O.ml_a); O["p"] = ih / (ih + ia)
-P = pd.concat([pd.read_csv(os.path.join(N, "_tmp", f"dk_holdout_{s}.csv")) for s in (2022, 2023, 2024)])
+P = pd.concat([pd.read_csv(os.path.join(N, "_tmp", f"dk_holdout_{s}.csv")) for s in (2022, 2023, 2024, 2025, 2026)])
 P = P[["date", "home", "away", "season", "home_goals", "away_goals", "p_home_win_open", "open_home_ml", "open_away_ml", "t0"]].rename(columns={"t0": "open_t"})
 X = O[O.book.isin(["draftkings", "pinnacle"])].pivot_table(index=["date", "home", "away", "t"], columns="book", values="p").reset_index()
 f = O[O.book.isin(["draftkings", "pinnacle"])].groupby(["date", "home", "away", "book"]).t.min().unstack()
@@ -25,7 +25,7 @@ for k in (0.01, 0.02, 0.03, 0.04):
     home = s.gap > 0; d = np.where(home, dec(s.ml_h), dec(s.ml_a)); win = np.where(home, s.home_goals > s.away_goals, s.away_goals > s.home_goals)
     u = np.where(win, d - 1, -1)
     print(f"  {k:.0%}+: {len(s)} bets, won {win.mean():.1%}, {u.sum():+.1f}u ({u.sum() / len(s):+.1%}); by season " +
-          ", ".join(f"{yr}: {u[s.season.values == yr].sum():+.1f}" for yr in (2022, 2023, 2024)))
+          ", ".join(f"{yr}: {u[s.season.values == yr].sum():+.1f}" for yr in (2022, 2023, 2024, 2025, 2026)))
 # C: shot model bets at the DK opener, split by where Pinnacle is at that moment (or its opener if it isn't up yet)
 P["open_t"] = pd.to_datetime(P.open_t, utc=True)
 pin = O[O.book == "pinnacle"][["date", "home", "away", "t", "p"]].merge(P[["date", "home", "away", "open_t"]], on=["date", "home", "away"])
@@ -58,12 +58,12 @@ print("\nWait for Pinnacle, then bet DraftKings' price at that moment (shot mode
 for lab, k in (("all", np.ones(len(Q), bool)), ("Pinnacle agrees or same", diff >= -0.005), ("Pinnacle disagrees", diff < -0.005)):
     s = (ev >= 0.06) & k & Q.w_h.notna()
     print(f"  {lab:26s}: {s.sum():4d} bets, {u[s].sum():+6.1f}u ({u[s].sum() / max(s.sum(), 1):+.1%}); by season " +
-          ", ".join(f"{yr}: {u[s & (Q.season.values == yr)].sum():+.1f}" for yr in (2022, 2023, 2024)))
+          ", ".join(f"{yr}: {u[s & (Q.season.values == yr)].sum():+.1f}" for yr in (2022, 2023, 2024, 2025, 2026)))
 # E: bet at DK's opener as now, but only keep bets Pinnacle's first price doesn't disagree with (needs both prices)
 evh0, eva0 = P.p_home_win_open * dec(P.open_home_ml) - 1, (1 - P.p_home_win_open) * dec(P.open_away_ml) - 1
 home0 = evh0 >= eva0; d0 = np.where(home0, P.pin_p_first - P.dk_p, P.dk_p - P.pin_p_first)
 win0 = np.where(home0, P.home_goals > P.away_goals, P.away_goals > P.home_goals); u0 = np.where(win0, np.where(home0, dec(P.open_home_ml), dec(P.open_away_ml)) - 1, -1)
-for yr in (2022, 2023, 2024):
+for yr in (2022, 2023, 2024, 2025, 2026):
     s = (np.maximum(evh0, eva0) >= 0.06) & (P.season.values == yr)
     print(f"  {yr} at DK open: all {s.sum()} bets {u0[s].sum():+.1f}u | Pinnacle first price disagrees: {(s & (d0 < -0.005)).sum()} bets {u0[s & (d0 < -0.005)].sum():+.1f}u")
 # F: of the bets at DK's opener, how many still had value at DK's price when Pinnacle posted?

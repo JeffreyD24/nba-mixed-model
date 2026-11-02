@@ -185,5 +185,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzege5cxwi2z",
   "text": "Jalen Johnson: Ruled out Monday    https://www.rotowire.com/basketball/player/jalen-johnson-5329",
   "swing": 0.62
+ },
+ "2026-11-02|ind|obi toppin": {
+  "status": "Out",
+  "player": "Obi Toppin",
+  "game_id": 22600160,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-02 18:07:19",
+  "seen_at_et": "2026-11-02 18:07:57",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzeguncuu72r",
+  "text": "Obi Toppin: Dressing but won't play Monday    https://www.rotowire.com/basketball/player/obi-toppin-5109",
+  "swing": 0.88
  }
 }

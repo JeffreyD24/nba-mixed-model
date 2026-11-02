@@ -39,9 +39,12 @@ def lines(day, book=DK):
         ev = ((g.get("markets") or {}).get(str(book)) or {}).get("event") or {}
         side = lambda mk, s: next((o for o in ev.get(mk, []) if o.get("side") == s), {}) or {}
         hs, ov = side("spread", "home"), side("total", "over")
-        tot = _num(ov.get("value"))
+        aws, un = side("spread", "away"), side("total", "under")
+        tot = _num(ov.get("value")); okt = (not np.isnan(tot)) and tot > 150          # full-game total (not a team or half total)
         out.append(dict(home=t.get(g["home_team_id"]), away=t.get(g["away_team_id"]), an_status=g.get("status"),
                         an_spread=_num(hs.get("value")), an_total=tot if (np.isnan(tot) or tot > 150) else np.nan,
+                        an_home_spread_odds=_num(hs.get("odds")), an_away_spread_odds=_num(aws.get("odds")),
+                        an_over_odds=_num(ov.get("odds")) if okt else np.nan, an_under_odds=_num(un.get("odds")) if okt else np.nan,
                         an_game_id=g.get("id")))
     return pd.DataFrame(out)
 
@@ -61,7 +64,9 @@ def merge_current(L, day):
     for mk in ("spread", "total"):
         ok = m[f"an_{mk}"].notna()
         m.loc[ok, f"current_{mk}"] = m.loc[ok, f"an_{mk}"]
+    for c in ("home_spread_odds", "away_spread_odds", "over_odds", "under_odds"):      # DraftKings prices
+        m[f"current_{c}"] = m[f"an_{c}"]
     m.loc[m.an_spread.notna() | m.an_total.notna(), "line_source"] = "actionnetwork"
     started = m.an_status.notna() & ~m.an_status.isin(["scheduled"])
     m.loc[started, "state"] = "in"      # Action Network sees tip-off before ESPN's cached copy does
-    return m.drop(columns=["an_spread", "an_total"])
+    return m.drop(columns=["an_spread", "an_total", "an_home_spread_odds", "an_away_spread_odds", "an_over_odds", "an_under_odds"])

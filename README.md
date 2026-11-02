@@ -195,3 +195,8 @@ luck allowed in `state/nba_luck.json`. Once both teams have 5+ games, the alerts
 model total - 0.5 x (both teams' luck + luck allowed - the league's average so far). Backtest at the opener, edge 3+
 (`analysis/FINDINGS.md`): 2024-25 +23.3u vs +16.5u without it, 2025-26 +50.0u vs +46.5u, about 240 more bets. Totals alerts
 show the adjustment ("shooting-luck adjustment -4.2"), and `research/model/` logs `model_total_before_luck` and `luck_adjustment`.
+- **Prices and bet range in every bet alert (since Nov 1, 2026).** Titles show DraftKings' price, e.g. "Bet MIN -11.5 (-105)".
+  The body starts with the verdict and a BET RANGE: from the opening line to the worst number that still has 3+ pts of edge
+  ("MIN -10.5 down to -12. Skip if it's worse than -12, or if it moves the other way to MIN -10"). The second half is the rule
+  that a 0.5+ move against the model since the open is a PASS. Prices come from Action Network's DraftKings feed
+  (`current_home_spread_odds`, `current_away_spread_odds`, `current_over_odds`, `current_under_odds`).

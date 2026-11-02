@@ -236,6 +236,33 @@ def main():
         return "BET", (f"reporter news {age:.0f} min old and {abs(e):.1f} pts of edge at the current line. Bet now if your app "
                        f"still shows this number; if the line has already jumped toward the model, the edge is gone")
 
+    import math
+    def price_txt(px):
+        try: return f" ({float(px):+.0f})" if not pd.isna(px) else ""
+        except (TypeError, ValueError): return ""
+
+    def bet_range(market, side, margin, total, opn, H, Aw):
+        """the numbers the rule still says BET at: from the opener to the worst line with 3+ pts of edge; and the move
+        the other way (0.5+ against the model since the open) that turns it into a PASS"""
+        if opn is None or pd.isna(opn): return "BET RANGE: opening line unknown; bet only with 3+ pts of edge."
+        o = float(opn)
+        if market == "spread":
+            if side == "home":
+                worst = math.ceil((THRESHOLD - margin) * 2) / 2; t = H
+                lo, stop = o, o + AGAINST_MOVE
+                return (f"BET RANGE: {t} {lo:+g} down to {worst:+g}. Skip if it's worse than {worst:+g}, "
+                        f"or if it moves the other way to {t} {stop:+g} (the market moving against the model).")
+            worst = math.ceil((THRESHOLD + margin) * 2) / 2; t = Aw
+            return (f"BET RANGE: {t} {-o:+g} down to {worst:+g}. Skip if it's worse than {worst:+g}, "
+                    f"or if it moves the other way to {t} {-o + AGAINST_MOVE:+g} (the market moving against the model).")
+        if side == "over":
+            worst = math.floor((total - THRESHOLD) * 2) / 2
+            return (f"BET RANGE: over {o:g} up to {worst:g}. Skip if it's higher than {worst:g}, "
+                    f"or if it drops to {o - AGAINST_MOVE:g} or lower (the market moving against the model).")
+        worst = math.ceil((total + THRESHOLD) * 2) / 2
+        return (f"BET RANGE: under {o:g} down to {worst:g}. Skip if it's lower than {worst:g}, "
+                f"or if it rises to {o + AGAINST_MOVE:g} or higher (the market moving against the model).")
+
     RULE_TXT = ("Rule: BET at the opener, or if the line moved toward the model with 3+ pts of edge left. PASS if it moved "
                 "against the model by 0.5+ since it opened.")
 
@@ -464,11 +491,13 @@ def main():
                 if market == "spread":
                     e = margin + cur; side = "home" if e > 0 else "away"
                     team = H if side == "home" else Aw; bet_line = cur if side == "home" else -cur
-                    title = f"Bet {team} {bet_line:+g}: {Aw} @ {H}, {tip}"
+                    px = ln.get("current_home_spread_odds" if side == "home" else "current_away_spread_odds")
+                    title = f"Bet {team} {bet_line:+g}{price_txt(px)}: {Aw} @ {H}, {tip}"
                     body = f"Model: {H} by {margin:+.1f}. DraftKings: {H} {cur:+g}" + (" (opening line)." if is_open else f" (opened {opn:+g}).")
                 else:
                     e = total - cur; side = "over" if e > 0 else "under"
-                    title = f"Bet {side.upper()} {cur:g}: {Aw} @ {H}, {tip}"
+                    px = ln.get("current_over_odds" if side == "over" else "current_under_odds")
+                    title = f"Bet {side.upper()} {cur:g}{price_txt(px)}: {Aw} @ {H}, {tip}"
                     body = f"Model total {total:.1f}" + (f" (shooting-luck adjustment {luck_adj:+.1f})" if luck_adj else "") + \
                            f". DraftKings {cur:g}" + (" (opening line)." if is_open else f" (opened {opn:g}).")
                 body += f" Edge {abs(e):.1f} pts."
@@ -568,7 +597,7 @@ def main():
                     title = "NEWS - " + title
                     why = ("NEWS: reporter news changed the model before the official report did. Read the post (link below) "
                            "before betting.\n") + why
-                body = f"{vd}: {vr}.\n{RULE_TXT}\n" + why + body
+                body = f"{vd}: {vr}.\n" + bet_range(market, side, margin, total, opn, H, Aw) + f"\n{RULE_TXT}\n" + why + body
                 title = f"[{vd}] " + title; rec_row["verdict"] = vd
                 if vd != "BET":           # not a bet: logged once per verdict and side, not pushed; a later BET can still alert
                     qk = (g["game_id"], market, vd, side)

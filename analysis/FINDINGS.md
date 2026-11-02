@@ -148,3 +148,6 @@ Better all three seasons; error vs the final score lower in two of three. Last 1
 teams have 10+ games (nba_luck.py -> state/nba_luck.json; alert.py "recent-form adjustment").
 Spreads, last-10 margin: better all three seasons (-42.4 -> -38.3, +3.5 -> +6.9, -1.3 -> +16.0) but still -15.4u overall, so
 spreads stay test-only; the adjustment (weight 0.11) is applied to the test-only spread tracking.
+- Window check (same out-of-season method), totals units over three seasons: none +104.8, last 10 +140.6, last 12 +121.1,
+  last 15 +130.7, last 20 +109.7, last 25 +99.8, average of 10 and 15 +142.6, 10 and 15 as two weights +131.4. Every window from
+  8 to 20 beats no form; neighbouring windows differ by 10-20u (noise), so last 10 stays. Spreads: all windows still negative.

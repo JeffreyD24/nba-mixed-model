@@ -42,5 +42,49 @@
   "url": "https://bsky.app/profile/jbeede.bsky.social/post/3mzdsj6tf2c2o",
   "text": "#Magic guard Anthony Black (right ankle injury management) is OUT for tonight\u2019s game vs. the Wizards, the second night of a back-to-back.",
   "swing": 0.89
+ },
+ "2026-11-02|orl|jalen suggs": {
+  "status": "Out",
+  "player": "Jalen Suggs",
+  "game_id": 22600162,
+  "reporter": "Josh Robbins",
+  "posted_at_et": "2026-11-02 13:03:52",
+  "seen_at_et": "2026-11-02 13:04:21",
+  "url": "https://bsky.app/profile/joshrobbins.bsky.social/post/3mzdvvzcevk2o",
+  "text": "The Wizards will face a severely injury-depleted Magic team tonight. In addition to having Paolo Banchero, Jalen Suggs, Jonathan Isaac and Noah Penda out, the Magic have listed Anthony Black as out for tonight's game because of right ankle injury management.",
+  "swing": 1.06
+ },
+ "2026-11-02|orl|paolo banchero": {
+  "status": "Out",
+  "player": "Paolo Banchero",
+  "game_id": 22600162,
+  "reporter": "Josh Robbins",
+  "posted_at_et": "2026-11-02 13:03:52",
+  "seen_at_et": "2026-11-02 13:04:21",
+  "url": "https://bsky.app/profile/joshrobbins.bsky.social/post/3mzdvvzcevk2o",
+  "text": "The Wizards will face a severely injury-depleted Magic team tonight. In addition to having Paolo Banchero, Jalen Suggs, Jonathan Isaac and Noah Penda out, the Magic have listed Anthony Black as out for tonight's game because of right ankle injury management.",
+  "swing": 0.67
+ },
+ "2026-11-02|orl|jonathan isaac": {
+  "status": "Out",
+  "player": "Jonathan Isaac",
+  "game_id": 22600162,
+  "reporter": "Josh Robbins",
+  "posted_at_et": "2026-11-02 13:03:52",
+  "seen_at_et": "2026-11-02 13:04:21",
+  "url": "https://bsky.app/profile/joshrobbins.bsky.social/post/3mzdvvzcevk2o",
+  "text": "The Wizards will face a severely injury-depleted Magic team tonight. In addition to having Paolo Banchero, Jalen Suggs, Jonathan Isaac and Noah Penda out, the Magic have listed Anthony Black as out for tonight's game because of right ankle injury management.",
+  "swing": 0.63
+ },
+ "2026-11-02|orl|noah penda": {
+  "status": "Out",
+  "player": "Noah Penda",
+  "game_id": 22600162,
+  "reporter": "Josh Robbins",
+  "posted_at_et": "2026-11-02 13:03:52",
+  "seen_at_et": "2026-11-02 13:04:21",
+  "url": "https://bsky.app/profile/joshrobbins.bsky.social/post/3mzdvvzcevk2o",
+  "text": "The Wizards will face a severely injury-depleted Magic team tonight. In addition to having Paolo Banchero, Jalen Suggs, Jonathan Isaac and Noah Penda out, the Magic have listed Anthony Black as out for tonight's game because of right ankle injury management.",
+  "swing": 0.58
  }
 }

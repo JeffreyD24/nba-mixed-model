@@ -231,14 +231,25 @@
   "swing": 2.49
  },
  "2026-11-02|tor|scottie barnes": {
-  "status": "Available",
+  "status": "Out",
   "player": "Scottie Barnes",
   "game_id": 22600171,
-  "reporter": "Rotowire NBA (account)",
-  "posted_at_et": "2026-11-02 21:24:45",
-  "seen_at_et": "2026-11-02 21:26:52",
-  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzervo54lt2v",
-  "text": "Scottie Barnes: Officially cleared to play Monday    https://www.rotowire.com/basketball/player/scottie-barnes-5390",
+  "reporter": "Josh Lewenberg",
+  "posted_at_et": "2026-11-02 21:42:09",
+  "seen_at_et": "2026-11-02 21:43:09",
+  "url": "https://bsky.app/profile/jlewenberg.bsky.social/post/3mzesusdnik26",
+  "text": "Barnes is in, Poeltl is out, and CMB will get his first start of the season",
   "swing": 1.32
+ },
+ "2026-11-02|tor|jakob poeltl": {
+  "status": "Out",
+  "player": "Jakob Poeltl",
+  "game_id": 22600171,
+  "reporter": "Josh Lewenberg",
+  "posted_at_et": "2026-11-02 21:42:09",
+  "seen_at_et": "2026-11-02 21:43:09",
+  "url": "https://bsky.app/profile/jlewenberg.bsky.social/post/3mzesusdnik26",
+  "text": "Barnes is in, Poeltl is out, and CMB will get his first start of the season",
+  "swing": 0.18
  }
 }

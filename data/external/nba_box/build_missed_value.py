@@ -8,12 +8,21 @@ shrunk by n/(n+500), n = minutes. No prior-season rating -> 0 (rookies, the firs
 import glob, os, numpy as np, pandas as pd
 P = pd.concat([pd.read_csv(p, dtype={"game_id": str, "player_id": str}) for p in sorted(glob.glob("parts/season_*.csv"))], ignore_index=True)
 P = P.drop_duplicates(["game_id", "player_id", "team"])
+# drop All-Star / Rising Stars / exhibition pseudo-teams (east, west, leb, world, ...): real teams have 20+ games in the table
+_n = P.groupby("team").game_id.nunique(); P = P[P.team.isin(_n[_n >= 20].index)]
+# ESPN can list the same team twice on one date (duplicate/postponed event): keep the game with the most minutes, drop the other game entirely
+_g = P.groupby(["team", "date", "game_id"]).minutes.sum().reset_index().sort_values("minutes", ascending=False)
+_drop = set(_g[_g.duplicated(["team", "date"], keep="first")].game_id); P = P[~P.game_id.isin(_drop)]
+# ESPN returns zero minutes / no stats for every Chicago and New Orleans game 2013-2018 (both sides of those games); empty box scores must not count
+# as "everyone missed", so drop any game whose team minutes sum to < 100 and report how many (see checks.txt; diagnose_empty.py shows the raw response)
+_tm = P.groupby(["game_id", "team"]).minutes.sum(); _empty = set(_tm[_tm < 100].reset_index().game_id); EMPTY_DROPPED = P[P.game_id.isin(_empty)].groupby("season").game_id.nunique().to_dict()
+P = P[~P.game_id.isin(_empty)]
 P["plus_minus"] = pd.to_numeric(P.plus_minus.astype(str).str.replace("+", "", regex=False), errors="coerce")
 P[["season", "date", "game_id", "team", "player_id", "player", "minutes", "played", "plus_minus", "starter", "home"]].to_csv("player_games_2012_2026.csv.gz", index=False)
 # ---- checks
 T = P.groupby(["season", "team", "game_id"]).agg(min=("minutes", "sum")).reset_index()
 n = T.groupby(["season", "team"]).size().unstack(0)
-L = [f"player-game rows {len(P)}", "games per team-season (min/max by season; expect 82, 66 in 2012, ~72 in 2020-21, 64-75 in 2020): "]
+L = [f"player-game rows {len(P)} (after dropping All-Star teams, duplicate events and empty box scores)", f"empty box-score games dropped by season: {EMPTY_DROPPED}", "games per team-season (min/max by season; expect 82, 66 in 2012, ~72 in 2020-21, 64-75 in 2020): "]
 for s, c in n.items(): L.append(f"  {s}: {int(c.min())}-{int(c.max())} games, {c.notna().sum()} teams")
 ot = ((T["min"] - 240) / 25).round(); L.append("team minutes within 3 of 240 + 25 x overtimes: %.1f%%" % (100 * ((T["min"] - 240 - 25 * ot).abs() <= 3).mean()))
 L.append("median team minutes %.0f; share below 235: %.2f%%" % (T["min"].median(), 100 * (T["min"] < 235).mean()))

@@ -30,6 +30,7 @@ jobs:
             git diff --cached --quiet || git commit -q -m "NBA box scores: season $s (job A)"
             for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 10; done
           done
+          python diagnose_empty.py || true
           python build_missed_value.py
           git add .
           git diff --cached --quiet || git commit -q -m "NBA player-game table, missed_value and checks (job A)"

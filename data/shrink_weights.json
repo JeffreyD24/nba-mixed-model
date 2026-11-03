@@ -1,0 +1,25 @@
+{
+ "spread": {
+  "weight": 0.147,
+  "weight_se": 0.072,
+  "resid_sd": 13.9,
+  "shrunk_edge_threshold": 0.83,
+  "raw_edge_equivalent": 5.64,
+  "n_games": 3684
+ },
+ "total": {
+  "weight": 0.318,
+  "weight_se": 0.074,
+  "resid_sd": 18.33,
+  "shrunk_edge_threshold": 1.09,
+  "raw_edge_equivalent": 3.44,
+  "n_games": 3684
+ },
+ "fit": {
+  "seasons": "2023-24, 2024-25, 2025-26",
+  "lines": "DraftKings opener (The Odds API history)",
+  "model": "Model 1 walk-forward with one-day lag (analysis/lag_leak_test.py)",
+  "set_on": "2026-11-03",
+  "z": 0.0597
+ }
+}

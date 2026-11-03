@@ -29,10 +29,10 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [x] NFL: late-season shrink toward the line already tested (analysis/nfl_fixes.py)
 - [x] NBA: tested Nov 3, 2026 (analysis/market_shrink_test.py, results in analysis/FINDINGS.md). Against OPENING lines the model deserves about
       0.25 weight on its disagreement for spreads (+/-0.09) and 0.39 for totals (+/-0.10); against CLOSING lines about 0 (-0.06 and -0.13).
-- [ ] Add "Model 1 shrunk" as a side-by-side record (do NOT change Model 1; new version = new record, per your rule): shrunk number =
+- [x] (Nov 3, 2026: shrunk_record.py, w = 0.147 / 0.318 with the one-day lag; research/SHRINK_WEIGHTS_2026-11-03.md) Add "Model 1 shrunk" as a side-by-side record (do NOT change Model 1; new version = new record, per your rule): shrunk number =
       line + w x (model - line) with w = 0.25 spreads / 0.39 totals, thresholds re-derived by backtest
 - [ ] Same test as a regularized logistic/linear stack that takes model number AND market number as inputs, fitted on earlier seasons and scored on a later one (idea from the r/algobetting LLM thread; see community_notes)
-- [ ] Repeat the weight test for NHL and NFL (needs their walk-forward prediction files lined up with openers) (O: choosing thresholds without overfitting)
+- [x] (Nov 3, 2026: NHL 0.29 ML / 0.40 overs; NFL totals 0.55, spreads 0.06) Repeat the weight test for NHL and NFL (needs their walk-forward prediction files lined up with openers) (O: choosing thresholds without overfitting)
 
 ### C. Keep models simple
 - [x] Three NBA models run side by side; none beat closing lines (research/model_comparison)
@@ -47,12 +47,14 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [ ] Out-of-sample test of the "bet at the opener" rules on 2011-2021 using the SBR openers (old_seasons.py currently grades closes only) (O)
 - [ ] MLB: the SBR MLB file is stored for when the MLB model starts
 - [x] hockeyR xG: code, fitted objects and a 2010-23 team-game xG table stored (data/external/hockeyr). Next: test it against SBR NHL openers (O)
+- [x] NHL out-of-sample test vs SBR openers, 2016-17..2021-22 (Nov 3, 2026, nhl-mixed-model backtests/OOS_SBR_RESULTS.md): moneylines +1%/bet with
+      negative CLV (not confirmed); overs at the opener +16.5%/bet and the total rose on 33.5% of picks vs 10.9% of all games (real signal)
 - [~] BeatTheBookie: code stored; odds data is on Dropbox/Google Drive and needs your browser (data/external/beatthebookie/DOWNLOAD_LINKS.md)
 
 ### F. Audit for the classic failure modes
-- [ ] Independent leakage audit: timestamps of injury reports vs when openers were seen, any feature using information from after the bet time,
+- [x] (Nov 3, 2026: research/LEAKAGE_AUDIT_2026-11-03.md) Independent leakage audit: timestamps of injury reports vs when openers were seen, any feature using information from after the bet time,
       training on closing lines, tuning thresholds on the test season (O: best done by Opus or a fresh pair of eyes)
-- [ ] Place every threshold in one config file with the date and the data it was chosen on, so changes are visible
+- [x] (Nov 3, 2026: config/thresholds.csv + tools/check_thresholds.py) Place every threshold in one config file with the date and the data it was chosen on, so changes are visible
 
 ### G. Execution and limits
 - [ ] Track which book each bet is placed at and the limit you were offered; log limit cuts the day they happen

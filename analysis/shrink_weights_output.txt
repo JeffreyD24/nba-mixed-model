@@ -1,0 +1,22 @@
+
+== SPREAD  (Model 1, live morning lock = results through two nights before)
+  weight vs open : +0.15 (+/- 0.07), n=3684   2024: -0.00 | 2025: +0.27 | 2026: +0.16
+  weight vs close: -0.05 (+/- 0.06), n=3678   2024: -0.07 | 2025: +0.05 | 2026: -0.15
+  Out of season (w and sd fit on the other two seasons), graded at the opener:
+    2024: w=0.22 sd=14.0 -> bet when shrunk edge >= 0.83 (raw edge >= 3.8): 254 bets 46.1% -30.6u   | Model 1 raw edge 3+: 403 bets 47.1% -40.3u
+    2025: w=0.08 sd=14.0 -> bet when shrunk edge >= 0.83 (raw edge >= 10.7): 7 bets 57.1% +0.6u   | Model 1 raw edge 3+: 429 bets 52.4% +0.5u
+    2026: w=0.14 sd=13.8 -> bet when shrunk edge >= 0.82 (raw edge >= 5.8): 85 bets 48.2% -6.7u   | Model 1 raw edge 3+: 394 bets 52.8% +3.1u
+    all three: shrunk rule: 346 bets 46.8% -36.7u
+    all three: Model 1 edge 3+: 1226 bets 50.8% -36.6u
+  LIVE SETTING (fit on 2023-24..2025-26): w = 0.147 (+/- 0.072), sd 13.9, bet when shrunk edge >= 0.83 (= raw edge >= 5.6)
+
+== TOTAL  (Model 1, live morning lock = results through two nights before)
+  weight vs open : +0.32 (+/- 0.07), n=3684   2024: +0.28 | 2025: +0.39 | 2026: +0.28
+  weight vs close: -0.08 (+/- 0.07), n=3678   2024: -0.00 | 2025: -0.20 | 2026: -0.06
+  Out of season (w and sd fit on the other two seasons), graded at the opener:
+    2024: w=0.35 sd=18.4 -> bet when shrunk edge >= 1.10 (raw edge >= 3.2): 618 bets 52.8% +4.4u   | Model 1 raw edge 3+: 644 bets 53.0% +7.0u
+    2025: w=0.28 sd=18.4 -> bet when shrunk edge >= 1.10 (raw edge >= 3.9): 370 bets 52.4% +0.4u   | Model 1 raw edge 3+: 500 bets 50.8% -15.1u
+    2026: w=0.33 sd=18.1 -> bet when shrunk edge >= 1.08 (raw edge >= 3.3): 346 bets 54.6% +14.8u   | Model 1 raw edge 3+: 408 bets 54.4% +15.8u
+    all three: shrunk rule: 1334 bets 53.1% +19.5u
+    all three: Model 1 edge 3+: 1552 bets 52.6% +7.7u
+  LIVE SETTING (fit on 2023-24..2025-26): w = 0.318 (+/- 0.074), sd 18.3, bet when shrunk edge >= 1.09 (= raw edge >= 3.4)

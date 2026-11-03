@@ -1,0 +1,15 @@
+
+== totals v2, game-time weather (leaks): weight vs opener +0.59 (+/- 0.16), n=865
+   by season: 2020: +0.56 | 2021: +0.66 | 2022: -0.04 | 2023: +1.27 | 2024: +0.44 | 2025: +0.69
+   out of season, shrunk, bet when it beats -110: 307-230 (57.2%) +49.1u
+   out of season, live-style raw edge 2+: 219-156 (58.4%) +43.1u
+
+== totals v2, no weather (honest floor): weight vs opener +0.55 (+/- 0.20), n=865
+   by season: 2020: +0.48 | 2021: +0.09 | 2022: +0.17 | 2023: +1.45 | 2024: +0.75 | 2025: +0.44
+   out of season, shrunk, bet when it beats -110: 248-183 (57.5%) +42.5u
+   out of season, live-style raw edge 2+: 162-126 (56.2%) +21.3u
+
+== spreads, team model: weight vs opener +0.06 (+/- 0.11), n=1693
+   by season: 2020: +0.16 | 2021: -0.21 | 2022: +0.33 | 2023: +0.03 | 2024: +0.38 | 2025: -0.39
+   out of season, shrunk, bet when it beats -110: 9-16 (36.0%) -7.8u
+   out of season, live-style raw edge 3+: 230-223 (50.8%) -13.9u

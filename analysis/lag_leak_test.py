@@ -100,3 +100,5 @@ for lag in (0, 1):
         row.append(f"{test}: {n} {wp:.1%} {u:+.1f}u"); tot[0] += n; tot[1] += wp * n; tot[2] += u
     say(f"  lag {lag}: " + " | ".join(row) + f" | all: {tot[0]} {tot[1] / tot[0]:.1%} {tot[2]:+.1f}u")
 open(os.path.join(W, "analysis", "lag_leak_test_output.txt"), "w").write("\n".join(out) + "\n")
+# save the lag-1 (live morning lock) predictions for analysis/shrink_weights.py
+pd.concat([res[(1, s)].assign(season=s) for s in (2024, 2025, 2026)]).to_csv(os.path.join(W, "_tmp", "model1_lag1_dk_open.csv"), index=False)

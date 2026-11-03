@@ -34,10 +34,14 @@ jobs:
         run: python tracker.py . --tomorrow --model-only || echo "Tomorrow's model not saved this time; the evening run will make it."
       - name: Bet record by model version
         run: python bet_record.py . || echo "Bet record not updated; it will run again tomorrow."
+      - name: Model 1 shrunk side-by-side record (Nov 3, 2026; Model 1 unchanged)
+        run: python shrunk_record.py . || echo "Shrunk record not updated; it will run again tomorrow."
       - name: Grade Polymarket paper trades
         run: python polymarket.py . --grade || echo "Polymarket grading failed; it will try again tomorrow."
       - name: Edge statistics (bootstrap ranges, calibration, Pinnacle CLV, books and limits)
         run: python edge_stats.py . || echo "Edge statistics not updated; they will run again tomorrow."
+      - name: Check thresholds against the register (config/thresholds.csv)
+        run: python tools/check_thresholds.py . || true
       - name: Save results
         run: |
           git config user.name "nba-tracker-bot"

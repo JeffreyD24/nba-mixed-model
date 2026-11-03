@@ -56,6 +56,7 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [ ] Plan for limits: decide what you do when DraftKings/FanDuel/Fanatics cap you (prediction markets once outside Connecticut)
 
 ### H. Communities (needs your browser)
+- [x] r/algobetting "Has anyone done it" read from user's paste (research/community_notes). Nothing new beyond a live-line overreaction idea (not built)
 - [~] X public search done (research/community_notes). Reddit/4chan still open: re-do the sweep with the Claude desktop app browser or the Chrome extension (my shell cannot reach those sites)
 
 ## When to switch to Opus

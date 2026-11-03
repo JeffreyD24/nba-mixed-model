@@ -399,3 +399,14 @@ overs on 47.5+ totals 48.4%; both models past the line 67.4%; line moved against
 Stronger signs (both models past the line, or an under in wind 10+ / a close game, with no weaker sign): 141 bets, 66.7%, +38.5u.
 Weaker signs (over outdoors, 40 F or colder, over on 47.5+): 122 bets, 47.5%, -11.3u. In 2026 weeks 5-8 the weaker group went 4-1,
 so it is shown as a note in the alerts, not a rule. Revisit at season end.
+
+## 2026-11-03: how much weight does the model deserve versus the market line? (NBA, 2024-25 + 2025-26, 2,448 games)
+Script `analysis/market_shrink_test.py`, output `analysis/market_shrink_test_output.txt`. Regression of (actual - line-implied) on (model - line-implied):
+the slope is the weight the model's disagreement deserves (1 = trust it fully, 0 = the line already has everything).
+- Against OPENING lines: spreads 0.25 (+/-0.09; 0.29 in 2024-25, 0.20 in 2025-26), totals 0.39 (+/-0.10; 0.36 and 0.44).
+- Against CLOSING lines: spreads -0.06 (+/-0.08), totals -0.13 (+/-0.09): nothing left once the market has finished moving.
+- Takeaway: the model has real but small information at the opener, and an "edge of 3 points" is worth about 0.75 points of true edge on spreads
+  (about 1.2 on totals). That fits the flat win-rate-by-edge result above and the market-moved-against-us result. It is the case for betting only
+  at the opener and for shrinking the number toward the line (NFL's late-season shrink is the same idea). Same weights in both seasons, but it is
+  one fit on two seasons: treat 0.25 / 0.39 as a first estimate, re-test on 2026-27 live data, and add "Model 1 shrunk" as a side-by-side
+  record rather than changing Model 1.

@@ -1,0 +1,22 @@
+[nba] rows 13903; dropped 10 with a non-text team name (scrambled playoff rows)
+[nba] closing spread/total columns were swapped in 933 rows (6.7%); repaired, sign taken from the closing moneyline (else the opening spread)
+[nba] still unusable after repair: open 13, close 0
+[nba] check, mean |close - open spread|: normal rows 1.05, repaired rows 1.96 (should be similar); mean |close - open total|: normal 2.06, repaired 4.22
+[nba] check, share of repaired rows where the repaired spread's sign matches the opening spread's sign: 67.3% (normal rows: 98.1%)
+[nba] trusted for spread backtests: 12949 of 13893; trusted for totals: 13874
+[nba] wrote 13893 games; usable with opening line 13880, with closing line 13893; seasons [np.int64(2011), np.int64(2012), np.int64(2013), np.int64(2014), np.int64(2015), np.int64(2016), np.int64(2017), np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021)]
+[nba] games per season: {2011: 1073, 2012: 1313, 2013: 1318, 2014: 1310, 2015: 1315, 2016: 1308, 2017: 1311, 2018: 1311, 2019: 1142, 2020: 1170, 2021: 1322}
+[nfl] rows 2956; dropped 10 with a non-text team name (scrambled playoff rows)
+[nfl] closing spread/total columns were swapped in 259 rows (8.8%); repaired, sign taken from the closing moneyline (else the opening spread)
+[nfl] still unusable after repair: open 4, close 1
+[nfl] check, mean |close - open spread|: normal rows 1.27, repaired rows 1.75 (should be similar); mean |close - open total|: normal 1.49, repaired 1.97
+[nfl] check, share of repaired rows where the repaired spread's sign matches the opening spread's sign: 63.7% (normal rows: 96.1%)
+[nfl] trusted for spread backtests: 2685 of 2946; trusted for totals: 2941
+[nfl] wrote 2946 games; usable with opening line 2942, with closing line 2945; seasons [np.int64(2011), np.int64(2012), np.int64(2013), np.int64(2014), np.int64(2015), np.int64(2016), np.int64(2017), np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021)]
+[nfl] games per season: {2011: 266, 2012: 266, 2013: 266, 2014: 266, 2015: 266, 2016: 266, 2017: 266, 2018: 266, 2019: 266, 2020: 268, 2021: 284}
+[nhl] rows 13678; dropped 10 with a non-text team name (scrambled playoff rows)
+[nhl] open total unusable 5, close total unusable 1, open ml unusable 2, close ml unusable 1 of 13668
+[nhl] games per season: {2011: 1314, 2012: 805, 2013: 1322, 2014: 1318, 2015: 1320, 2016: 1316, 2017: 1354, 2018: 1357, 2019: 1211, 2020: 951, 2021: 1400}
+[mlb] rows 25597; dropped 10 with a non-text team name (scrambled playoff rows)
+[mlb] open total unusable 3, close total unusable 4, open ml unusable 16, close ml unusable 0 of 25586
+[mlb] games per season: {2011: 2465, 2012: 2466, 2013: 2468, 2014: 2461, 2015: 2464, 2016: 2461, 2017: 2466, 2018: 2463, 2019: 2463, 2020: 948, 2021: 2461}

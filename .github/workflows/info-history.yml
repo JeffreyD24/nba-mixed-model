@@ -1,0 +1,66 @@
+name: Information history download
+# One-time (rerunnable) download of timestamped information data: NHL box scores, NBA player logs, NFL forecast weather.
+# NFL nflverse data is already in the repo (data/external/info_history/nfl). Pick what to run; each job saves its own files.
+on:
+  workflow_dispatch:
+    inputs:
+      what:
+        description: "nhl, nba, weather, or all"
+        default: "all"
+      seasons:
+        description: "Seasons (year it ends), space separated; blank = all (2011-2027). Weather: first season (default 2022)"
+        default: ""
+permissions:
+  contents: write
+jobs:
+  nhl:
+    if: ${{ inputs.what == 'nhl' || inputs.what == 'all' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python3 -I data/external/info_history/fetch_nhl.py ${{ inputs.seasons }}
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add data/external/info_history/nhl
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Info history: NHL box scores"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 10; done
+  nba:
+    if: ${{ inputs.what == 'nba' || inputs.what == 'all' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python3 -I data/external/info_history/fetch_nba.py ${{ inputs.seasons }}
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add data/external/info_history/nba
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Info history: NBA player logs"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 10; done
+  weather:
+    if: ${{ inputs.what == 'weather' || inputs.what == 'all' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas
+      - run: python data/external/info_history/fetch_weather.py ${{ inputs.what == 'weather' && inputs.seasons || '' }}
+      - name: Save
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add data/external/info_history/weather
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Info history: NFL forecast weather"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 10; done

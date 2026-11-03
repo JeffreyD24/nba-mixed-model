@@ -1,0 +1,48 @@
+{
+ "marketData": {
+  "marketSlug": "aec-nba-atl-was-2026-11-04",
+  "currentPx": {
+   "value": "0.4850",
+   "currency": "USD"
+  },
+  "lastTradePx": {
+   "value": "0.4800",
+   "currency": "USD"
+  },
+  "settlementPx": null,
+  "sharesTraded": "3453.8400",
+  "openInterest": "2210.1900",
+  "bestAsk": {
+   "value": "0.4900",
+   "currency": "USD"
+  },
+  "bestBid": {
+   "value": "0.4800",
+   "currency": "USD"
+  },
+  "askDepth": 13,
+  "bidDepth": 13,
+  "lastPriceSample": {
+   "longPx": {
+    "value": "0.4800",
+    "currency": "USD"
+   },
+   "shortPx": {
+    "value": "0.52",
+    "currency": "USD"
+   },
+   "ts": "2026-11-03T05:00:22.127479567Z"
+  },
+  "longQuote": {
+   "value": "0.4900",
+   "currency": "USD"
+  },
+  "shortQuote": {
+   "value": "0.52",
+   "currency": "USD"
+  },
+  "state": "MARKET_STATE_OPEN",
+  "bidShares": "52000",
+  "askShares": "48000"
+ }
+}

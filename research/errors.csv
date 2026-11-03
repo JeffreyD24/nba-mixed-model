@@ -1289,3 +1289,4 @@ at_et,part,error
 2026-11-02 02:15,props 22600172 page 1,HTTPError: HTTP Error 404: Not Found
 2026-11-02 22:10,minutes 401909910,ValueError: could not convert string to float: '-'
 2026-11-02 22:15,minutes 401909910,ValueError: could not convert string to float: '-'
+2026-11-02 22:20,minutes 401909910,ValueError: could not convert string to float: '-'

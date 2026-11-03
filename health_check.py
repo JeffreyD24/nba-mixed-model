@@ -66,7 +66,7 @@ COMMON = {
     "state/record_by_version.csv": (30, "Record by model version"),
     "state/last_run.json": (30, "Last morning/evening run marker", "warn"),
     "state/line_jumps.csv": (72, "Line jumps log", "warn"),
-    "state/market_moves.csv": (72, "Market moves log", "warn"),
+    "state/market_moves.csv": (168, "Market moves log", "warn"),
     "state/poly_paper.csv": (72, "Polymarket paper trades", "warn"),
 }
 STREAMS = dict(COMMON)
@@ -74,17 +74,17 @@ if SPORT == "nhl":
     STREAMS.update({"research/goalies.csv": (30, "Goalie status log"), "research/line_moves": (30, "Line moves (9 books)"),
                     "research/edge": (30, "Edge research files", "warn"), "research/live": (30, "Live line recorder", "warn"),
                     "research/model": (30, "Model output archive", "warn"), "research/nhl_pbp": (48, "Play-by-play", "warn"),
-                    "research/shifts": (48, "Shift charts", "warn"), "research/media": (72, "Media log", "warn"),
+                    "research/shifts": (48, "Shift charts", "warn"), "research/media": (168, "Media log", "warn"),
                     "state/box_2026_27.csv": (30, "Box scores 2026-27", "warn"), "state/shots_2026_27.csv": (30, "Shots 2026-27", "warn"),
                     "state/early": (30, "Early model files", "warn"), "state/picks_log_xg.csv": (30, "xG picks log", "warn"),
                     "state/leaderboard.json": (30, "Leaderboard", "warn"), "state/goalie_news.json": (72, "Goalie news", "warn")})
 if SPORT == "nba":
-    STREAMS.update({"state/injury_reports_2026_27.csv": (30, "Official injury reports"),
+    STREAMS.update({"state/bet_timing.csv": (30, "Bet timing log", "warn"), "state/injury_reports_2026_27.csv": (30, "Official injury reports"),
                     "research/injury_decisions.csv": (72, "Injury decision log"),
                     "research/live": (30, "Live line recorder", "warn"), "research/live_odds": (30, "Live odds", "warn"),
                     "research/model": (30, "Model output archive", "warn"), "research/props": (30, "Player props", "warn"),
                     "research/periods": (48, "Period scores", "warn"), "research/timeline": (48, "Timeline", "warn"),
-                    "research/media": (72, "Media log", "warn"), "research/check_log.csv": (30, "Check log", "warn"),
+                    "research/media": (168, "Media log", "warn"), "research/check_log.csv": (30, "Check log", "warn"),
                     "state/picks_log_models.csv": (30, "Picks log by model", "warn"), "state/picks_log_shrunk.csv": (30, "Shrunk picks log", "warn"),
                     "state/nba_luck.json": (30, "Shooting luck", "warn"), "state/nba_shots_2026_27.csv.gz": (30, "Shots 2026-27", "warn"),
                     "state/early": (30, "Early model files", "warn"), "state/pinnacle_now.json": (72, "Pinnacle now", "warn"),

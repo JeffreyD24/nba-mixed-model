@@ -8,3 +8,8 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-02 08:00,nba-lead-pts-2026-11-02,NBA Nov 2nd Points Leader,2026-11-02 19:00,"bos,cha,cle,dal,den,det,hou,ind,lac,lal,mem,okc,orl,phi,phx,por,sa,sac,tor,wsh",no matching game in the model files
 2026-11-02 08:05,nba-lead-3pm-2026-11-02,NBA Nov 2nd 3-Pointers Made Leader,2026-11-02 19:00,"atl,bkn,bos,cha,chi,cle,den,det,hou,lac,lal,mem,mil,min,ny,okc,orl,phi,phx,por,sa,sac,tor,utah,wsh",no matching game in the model files
 2026-11-02 19:00,nba-okc-cle-2026-11-02,OKC Thunder vs. CLE Cavaliers,2026-11-02 19:00,"cle,okc",no matching game in the model files
+2026-11-02 19:30,nba-chi-phi-2026-11-02,CHI Bulls vs. PHI 76ers,2026-11-02 19:30,"chi,phi",no matching game in the model files
+2026-11-02 19:30,nba-det-cha-2026-11-02,DET Pistons vs. CHA Hornets,2026-11-02 19:30,"cha,det",no matching game in the model files
+2026-11-02 19:30,nba-was-orl-2026-11-02,WAS Wizards vs. ORL Magic,2026-11-02 19:30,"orl,wsh",no matching game in the model files
+2026-11-02 19:30,nba-bkn-ny-2026-11-02,BKN Nets vs. NY Knicks,2026-11-02 19:30,"bkn,ny",no matching game in the model files
+2026-11-02 19:30,nba-atl-ind-2026-11-02,ATL Hawks vs. IND Pacers,2026-11-02 19:30,"atl,ind",no matching game in the model files

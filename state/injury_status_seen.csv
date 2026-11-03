@@ -162,7 +162,6 @@ key,status,snapshot
 2026-11-02|mia|vladislav goldin,Available,2026-11-02_03_00PM
 2026-11-02|mia|tim hardaway,Available,2026-11-02_03_00PM
 2026-11-02|tor|kawhi leonard,Out,2026-11-02_03_15PM
-2026-11-02|tor|jakob poeltl,Questionable,2026-11-02_03_15PM
 2026-11-02|tor|malachi smith,Out,2026-11-02_03_15PM
 2026-11-02|gs|jimmy butler,Out,2026-11-02_04_00PM
 2026-11-02|gs|al horford,Out,2026-11-02_04_00PM
@@ -175,7 +174,6 @@ key,status,snapshot
 2026-11-02|lac|derrick jones,Out,2026-11-02_04_00PM
 2026-11-02|lac|jordan miller,Out,2026-11-02_04_00PM
 2026-11-02|lac|yanic konan niederhauser,Out,2026-11-02_04_00PM
-2026-11-02|tor|scottie barnes,Questionable,2026-11-02_04_00PM
 2026-11-02|lal|walker kessler,Available,2026-11-02_04_00PM
 2026-11-02|lal|adou thiero,Out,2026-11-02_04_00PM
 2026-11-02|atl|keshon gilbert,Out,2026-11-02_04_30PM
@@ -202,3 +200,5 @@ key,status,snapshot
 2026-11-02|min|lamelo ball,Available,2026-11-02_07_30PM
 2026-11-02|phi|joel embiid,Available,2026-11-02_07_30PM
 2026-11-02|gs|brandon williams,Out,2026-11-02_08_30PM
+2026-11-02|tor|scottie barnes,Probable,2026-11-02_09_15PM
+2026-11-02|tor|jakob poeltl,Doubtful,2026-11-02_09_15PM

@@ -1,0 +1,26 @@
+
+== SPREAD: Model 1 (no injuries, one-day lag), edge 3+ at -110
+  all rows:
+    at the opener: 1374-1377 (49.9%) -127.9u   [14:-12 15:-21 16:-14 17:-15 18:+2 19:-15 20:+5 21:-46 22:-12]
+    at the close : 1661-1662 (50.0%) -152.0u   [14:+8 15:-22 16:-21 17:-23 18:-11 19:-23 20:+12 21:-55 22:-17]
+  trusted rows:
+    at the opener: 1222-1234 (49.8%) -123.1u   [14:-5 15:-21 16:-11 17:-18 18:+6 19:-11 20:+7 21:-51 22:-19]
+    at the close : 1503-1499 (50.1%) -132.6u   [14:+20 15:-22 16:-19 17:-21 18:-10 19:-15 20:+7 21:-46 22:-27]
+  weight on Model 1 vs the opener (trusted): +0.13 (+/- 0.04); vs the close +0.06
+    by season: 14:+0.30 15:-0.00 16:+0.32 17:+0.11 18:+0.13 19:+0.17 20:+0.35 21:-0.18 22:+0.07
+  shrunk rule (weight from the other seasons, bet when it beats -110): 270-269 (50.1%) -23.5u
+
+== TOTAL: Model 1 (no injuries, one-day lag), edge 3+ at -110
+  all rows:
+    at the opener: 2289-2035 (52.9%) +45.9u   [14:+8 15:+2 16:-5 17:-13 18:+26 19:-11 20:-2 21:+41 22:+1]
+    at the close : 2449-2499 (49.5%) -272.6u   [14:-30 15:-12 16:-18 17:-41 18:-23 19:-32 20:-12 21:-31 22:-73]
+  trusted rows:
+    at the opener: 2276-2035 (52.8%) +34.1u   [14:+8 15:+1 16:-5 17:-14 18:+26 19:-11 20:-4 21:+37 22:-4]
+    at the close : 2446-2495 (49.5%) -271.4u   [14:-30 15:-12 16:-18 17:-40 18:-23 19:-32 20:-11 21:-31 22:-74]
+  weight on Model 1 vs the opener (trusted): +0.11 (+/- 0.05); vs the close -0.12
+    by season: 14:-0.00 15:+0.03 16:+0.12 17:-0.05 18:+0.27 19:-0.01 20:+0.17 21:+0.39 22:+0.14
+  shrunk rule (weight from the other seasons, bet when it beats -110): 99-78 (55.9%) +12.0u
+
+== Accuracy (mean absolute error, trusted rows)
+  margin: Model 1 9.98 | opener 9.74 | close 9.67
+  total: Model 1 14.49 | opener 14.30 | close 14.04

@@ -218,5 +218,16 @@
   "url": "https://bsky.app/profile/kyleneubeck.bsky.social/post/3mzejtd6qqk2q",
   "text": "Joel Embiid WILL play tonight vs.  Chicago",
   "swing": 2.19
+ },
+ "2026-11-02|min|lamelo ball": {
+  "status": "Available",
+  "player": "Lamelo Ball",
+  "game_id": 22600166,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-02 19:33:24",
+  "seen_at_et": "2026-11-02 19:34:21",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzelol4lbh23",
+  "text": "LaMelo Ball: Cleared to play Monday    https://www.rotowire.com/basketball/player/lamelo-ball-5151",
+  "swing": 2.49
  }
 }

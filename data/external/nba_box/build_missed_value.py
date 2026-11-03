@@ -59,7 +59,15 @@ for season, SP in pg.groupby("season"):
             val = sum(mpg[p] / 48 * rating.get((season, p), 0.0) for p in miss)
             out.append(dict(season=season, date=g.date.strftime("%Y-%m-%d"), team=team, game_id=g.game_id, ref_game_date=prev.iloc[-1].date.strftime("%Y-%m-%d"),
                             n_missed=len(miss), missed_minutes_pg=float(sum(mpg[p] for p in miss)), missed_value=val))
-MV = pd.DataFrame(out); MV.to_csv("missed_value.csv", index=False)
+MV = pd.DataFrame(out)
+# missed_value_z: raw value standardized within season (mean 0, sd 1) so the RAPM era (2023-26) and the plus-minus era (2013-22) are comparable.
+# Raw missed_value is kept unchanged. NOTE: mean/sd use the whole season, which is fine for comparing scales but is not strictly point-in-time;
+# for a strict backtest standardize with the PRIOR season's mean/sd (columns missed_value_z_prior) or fit per era.
+_ss = MV.groupby("season").missed_value.agg(["mean", "std"])
+MV["missed_value_z"] = ((MV.missed_value - MV.season.map(_ss["mean"])) / MV.season.map(_ss["std"]).replace(0, np.nan)).fillna(0.0)
+_prior = _ss.shift(1); _pm, _ps = MV.season.map(_prior["mean"]), MV.season.map(_prior["std"]).replace(0, np.nan)
+MV["missed_value_z_prior"] = ((MV.missed_value - _pm) / _ps).fillna(0.0)   # 2013 (prior season 2012 is all zeros) falls back to 0; 2023 still shows the plus-minus -> RAPM scale jump (mean +0.4), so prefer missed_value_z or per-era fits
+MV.to_csv("missed_value.csv", index=False)
 L += [f"missed_value rows {len(MV)}; mean n_missed {MV.n_missed.mean():.2f}; share with any missed {100 * (MV.n_missed > 0).mean():.0f}%",
       "missed_value mean/sd by season: " + str(MV.groupby("season").missed_value.agg(["mean", "std"]).round(2).to_dict("index")),
       "reference game is always >= 2 days before the game: %s" % bool(((pd.to_datetime(MV.date) - pd.to_datetime(MV.ref_game_date)).dt.days >= 2).all())]

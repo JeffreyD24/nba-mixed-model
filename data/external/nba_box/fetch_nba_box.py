@@ -27,7 +27,9 @@ def box(ev, season):
                 ath = a.get("athlete") or {}; vals = a.get("stats") or []
                 def g(n):
                     return vals[names.index(n)] if n in names and names.index(n) < len(vals) else None
-                m = g("MIN"); m = float(m) if m not in (None, "", "--") else 0.0
+                m = g("MIN")
+                try: m = float(m) if m not in (None, "", "--", "-") else 0.0
+                except (TypeError, ValueError): m = 0.0  # ESPN sometimes returns "-" for minutes (crashed season 2021)
                 rows.append(dict(season=season, date=date, game_id=str(ev["id"]), team=code, home=int(home.get(tb["team"]["id"], False)),
                                  player_id=ath.get("id") or f"name:{ath.get('displayName')}", player=ath.get("displayName"), minutes=m,
                                  played=int(m > 0 and not a.get("didNotPlay")), plus_minus=g("+/-"), starter=int(bool(a.get("starter")))))

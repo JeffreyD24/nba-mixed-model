@@ -1,13 +1,12 @@
 {
  "today": [],
  "log": [
-  "NBA tracker run on 2026-11-02 (ET), predicting games on 2026-11-03.",
+  "NBA tracker run on 2026-11-03 (ET), predicting games on 2026-11-03.",
   "Schedule: 1200 regular-season games; 92 finished, results through 2026-11-01.",
   "No regular-season games on 2026-11-03; grading earlier picks only.",
-  "Injury reports: 7 snapshots requested, 7 new, 111 on file.",
+  "Injury reports: 0 snapshots requested, 0 new, 111 on file.",
   "Saved today's model for intraday checks (0 games, 642 players).",
   "Locked 0 live picks for 2026-11-03 and 0 backfilled.",
-  "Lines: pulled DraftKings lines from ESPN for 4 games.",
   "Model comparison: locked 0 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",

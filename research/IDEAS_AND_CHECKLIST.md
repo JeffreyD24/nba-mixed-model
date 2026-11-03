@@ -43,7 +43,8 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [x] SportsbookReview 2011-2021 openers and closers, all four sports, cleaned and flagged (data/external/sbr, see its README)
 - [ ] Out-of-sample test of the "bet at the opener" rules on 2011-2021 using the SBR openers (old_seasons.py currently grades closes only) (O)
 - [ ] MLB: the SBR MLB file is stored for when the MLB model starts
-- [x] Skipped on purpose: BeatTheBookie data (soccer), hockeyR xG (NHL repo has its own)
+- [x] hockeyR xG: code, fitted objects and a 2010-23 team-game xG table stored (data/external/hockeyr). Next: test it against SBR NHL openers (O)
+- [~] BeatTheBookie: code stored; odds data is on Dropbox/Google Drive and needs your browser (data/external/beatthebookie/DOWNLOAD_LINKS.md)
 
 ### F. Audit for the classic failure modes
 - [ ] Independent leakage audit: timestamps of injury reports vs when openers were seen, any feature using information from after the bet time,
@@ -55,7 +56,7 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [ ] Plan for limits: decide what you do when DraftKings/FanDuel/Fanatics cap you (prediction markets once outside Connecticut)
 
 ### H. Communities (needs your browser)
-- [ ] Re-do the Reddit / X / 4chan sweep with the Claude desktop app browser or the Chrome extension (my shell cannot reach those sites)
+- [~] X public search done (research/community_notes). Reddit/4chan still open: re-do the sweep with the Claude desktop app browser or the Chrome extension (my shell cannot reach those sites)
 
 ## When to switch to Opus
 Switch for: (1) the independent leakage audit, (2) choosing shrink thresholds and bet rules without overfitting, (3) any redesign of how

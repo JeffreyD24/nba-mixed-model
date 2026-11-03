@@ -1,0 +1,72 @@
+games: outdoor home-site REG 2022-25 with forecasts 716, matched to DraftKings opener 716 ({2022: 182, 2023: 186, 2024: 173, 2025: 175})
+opener posted how many days before kickoff: median 11.9, 10th-90th pct 8.3-18.1; forecast lead used: {5: 4, 6: 21, 7: 691}
+mean total 43.9, mean opener 44.3, mean (total - opener) -0.38, mean line move open->close -0.84
+
+1. Slopes (points per mph of forecast wind), pooled 2022-25; t = robust t-stat; [90% bootstrap range]
+predictor                                    y = total - OPENER               y = move open->close                  y = total - CLOSE
+forecast wind, lead matched to opener -0.456 (t -2.5) [-0.76,-0.17] n716 -0.162 (t -4.3) [-0.22,-0.10] n716 -0.295 (t -1.7) [-0.59,-0.00] n716
+forecast gust, lead matched  -0.422 (t -3.7) [-0.62,-0.23] n716 -0.114 (t -4.8) [-0.15,-0.07] n716 -0.308 (t -2.8) [-0.49,-0.12] n716
+forecast wind, 5 d           -0.548 (t -3.7) [-0.78,-0.30] n716 -0.172 (t -5.4) [-0.22,-0.12] n716 -0.376 (t -2.6) [-0.61,-0.14] n716
+forecast wind, 6 d           -0.406 (t -2.5) [-0.69,-0.15] n716 -0.156 (t -4.4) [-0.22,-0.10] n716 -0.250 (t -1.6) [-0.50,+0.00] n716
+forecast wind, 7 d           -0.420 (t -2.3) [-0.72,-0.11] n716 -0.164 (t -4.4) [-0.23,-0.10] n716 -0.256 (t -1.5) [-0.54,+0.04] n716
+forecast wind, 1 d           -0.521 (t -4.7) [-0.71,-0.34] n716 -0.153 (t -6.8) [-0.19,-0.11] n716 -0.368 (t -3.4) [-0.55,-0.19] n716
+recorded game wind           -0.284 (t -2.1) [-0.52,-0.08] n588 -0.116 (t -4.4) [-0.16,-0.08] n588 -0.169 (t -1.4) [-0.39,+0.01] n588
+
+2. By season, forecast wind (lead matched) -> total - opener / move open->close  (slope, t, n)
+  2022: total-opener -0.382 (t -1.0), move -0.202 (t -2.6), n=182
+  2023: total-opener -0.712 (t -2.2), move -0.180 (t -2.5), n=186
+  2024: total-opener +0.062 (t +0.1), move -0.198 (t -2.2), n=173
+  2025: total-opener -0.819 (t -1.9), move -0.056 (t -0.8), n=175
+  2022-23 only: total-opener -0.407 (t -1.8); 2024-25 only: -0.426 (t -1.4)
+
+3. Bins of forecast wind (lead matched): mean total - opener, mean move, over rate vs opener (pushes dropped)
+      <8 mph: n=285  total-opener  +0.46  move -0.45  over 48.2%  mean recorded wind 6.8
+    8-12 mph: n=354  total-opener  -0.31  move -0.87  over 45.3%  mean recorded wind 8.5
+   12-16 mph: n= 63  total-opener  -3.94  move -2.08  over 31.7%  mean recorded wind 10.6
+     16+ mph: n= 14  total-opener  -3.21  move -2.18  over 28.6%  mean recorded wind 13.6
+
+4. Rule test: bet the UNDER at the DraftKings opener (-110) when forecast wind (lead matched) >= X mph. No tuning: X = 10, 12, 15 all shown.
+  wind >= 10: 204 bets 61.8%  +36.5u  ROI +17.9% [90% +6.7, +28.5]  CLV +1.40 pts (positive = total fell after the open)   by season 22:+14.5 23:+22.7 24:-3.5 25:+2.9
+  wind >= 12:  78 bets 69.2%  +25.1u  ROI +32.2% [90% +15.0, +49.3]  CLV +2.08 pts (positive = total fell after the open)   by season 22:+4.2 23:+17.1 24:+2.5 25:+1.4
+  wind >= 15:  24 bets 75.0%  +10.4u  ROI +43.2% [90% +11.4, +67.0]  CLV +2.40 pts (positive = total fell after the open)   by season 22:+0.8 23:+9.6 24:+0.0 25:-0.1
+  same rule with RECORDED game wind (a leak: unknown at the open):
+  recorded wind >= 10: 189 bets 61.9%  +34.4u  ROI +18.2% [90% +6.9, +28.8]  CLV +1.46 pts
+  recorded wind >= 15:  58 bets 60.3%   +8.8u  ROI +15.2% [90% -4.5, +34.4]  CLV +2.16 pts
+
+5. LEAK-SAFE: forecast issued L days ahead vs the DraftKings total posted at that moment (snapshots every ~3 h)
+first DraftKings total snapshot is 11.9 days before kickoff (median; 10th-90th 8.8-13.3); the 'opener' in nfl_open_close.csv is the first snapshot, so it is NOT necessarily the day DraftKings posted it
+games with a DraftKings total posted within 24 h before each lead: 7 d 617, 5 d 715, 3 d 716, 1 d 716
+forecast issued  slope: total - line then (t) [90% boot]      within-stadium slope (t)     move: close - line then (t)   
+7 d              -0.314 (t -1.6) [-0.62,+0.01] n617       -0.266 (t -1.2)          -0.101 (t -2.7)
+5 d              -0.430 (t -2.8) [-0.69,-0.19] n715       -0.390 (t -2.4)          -0.061 (t -2.4)
+3 d              -0.294 (t -2.6) [-0.50,-0.11] n437       -0.328 (t -2.5)          -0.045 (t -4.2)
+1 d              -0.406 (t -3.8) [-0.59,-0.23] n716       -0.387 (t -3.3)          -0.038 (t -4.6)
+
+Rule at each lead, graded at the line posted then (no tuning): UNDER when forecast wind >= X mph, -110. [90% ROI range], CLV = how far the total fell by the close
+  7 d forecast >= 10: 170 bets 59.4%  +22.8u ROI  +13.4% [+2,+24]  CLV +1.12  by season 22:+12.0 23:+14.7 24:-7.0 25:+3.1
+  7 d forecast >= 12:  69 bets 63.8%  +15.0u ROI  +21.7% [+2,+38]  CLV +1.33  by season 22:+2.4 23:+13.5 24:-1.3 25:+0.5
+  7 d forecast >= 15:  19 bets 68.4%   +5.8u ROI  +30.6% [+0,+61]  CLV +2.00  by season 22:-0.1 23:+6.9 24:+0.0 25:-1.0
+  5 d forecast >= 10: 200 bets 61.0%  +32.9u ROI  +16.5% [+5,+27]  CLV +0.65  by season 22:+10.5 23:+23.0 24:-10.3 25:+9.6
+  5 d forecast >= 12: 102 bets 63.7%  +22.1u ROI  +21.7% [+6,+35]  CLV +0.75  by season 22:+4.8 23:+16.0 24:-6.5 25:+7.7
+  5 d forecast >= 15:  27 bets 63.0%   +5.5u ROI  +20.2% [-11,+50]  CLV +0.36  by season 22:+0.7 23:+4.8 24:-1.0 25:+0.9
+  3 d forecast >= 10: 201 bets 56.2%  +14.7u ROI   +7.3% [-4,+18]  CLV +0.15  by season 22:+13.1 23:+2.8 24:-10.1 25:+8.9
+  3 d forecast >= 12: 132 bets 59.8%  +18.8u ROI  +14.3% [+1,+27]  CLV +0.32  by season 22:+8.9 23:+4.5 24:-3.5 25:+8.8
+  3 d forecast >= 15:  84 bets 59.5%  +11.5u ROI  +13.6% [-3,+29]  CLV +0.35  by season 22:+5.6 23:+2.0 24:-0.9 25:+4.7
+  1 d forecast >= 10: 308 bets 60.1%  +45.2u ROI  +14.7% [+6,+23]  CLV +0.10  by season 22:+20.0 23:+22.3 24:-7.4 25:+10.3
+  1 d forecast >= 12: 188 bets 61.7%  +33.5u ROI  +17.8% [+7,+29]  CLV +0.16  by season 22:+12.9 23:+14.1 24:-2.9 25:+9.4
+  1 d forecast >= 15:  89 bets 60.7%  +14.1u ROI  +15.8% [-1,+31]  CLV +0.31  by season 22:+7.5 23:+6.7 24:-3.8 25:+3.6
+
+6. Same rule graded at the CLOSING total (-110): is the wind effect still there when the market has finished moving?
+  7 d forecast >= 10 at the close: 202 bets 54.0%   +6.1u ROI   +3.0% [-8,+14]  by season 22:+6.9 23:+9.4 24:-8.4 25:-1.8
+  7 d forecast >= 12 at the close:  77 bets 61.0%  +12.7u ROI  +16.5% [+0,+33]  by season 22:+6.1 23:+8.5 24:-1.4 25:-0.5
+  7 d forecast >= 15 at the close:  22 bets 63.6%   +4.7u ROI  +21.5% [-12,+50]  by season 22:-0.1 23:+4.9 24:+0.0 25:-0.1
+  5 d forecast >= 10 at the close: 202 bets 58.9%  +25.2u ROI  +12.5% [+2,+23]  by season 22:+12.4 23:+18.2 24:-9.3 25:+3.9
+  5 d forecast >= 12 at the close: 104 bets 60.6%  +16.3u ROI  +15.6% [+1,+31]  by season 22:+6.6 23:+14.1 24:-6.5 25:+2.0
+  5 d forecast >= 15 at the close:  28 bets 64.3%   +6.4u ROI  +22.7% [-4,+49]  by season 22:+3.5 23:+4.8 24:-1.0 25:-1.0
+  3 d forecast >= 10 at the close: 202 bets 55.4%  +11.8u ROI   +5.9% [-5,+17]  by season 22:+12.1 23:+2.8 24:-8.2 25:+5.1
+  3 d forecast >= 12 at the close: 133 bets 58.6%  +15.9u ROI  +12.0% [-2,+25]  by season 22:+7.9 23:+4.5 24:-1.5 25:+5.0
+  3 d forecast >= 15 at the close:  85 bets 57.6%   +8.5u ROI  +10.1% [-8,+26]  by season 22:+4.6 23:+2.0 24:+1.0 25:+0.9
+  1 d forecast >= 10 at the close: 309 bets 59.5%  +42.3u ROI  +13.7% [+5,+22]  by season 22:+20.0 23:+19.4 24:-5.5 25:+8.4
+  1 d forecast >= 12 at the close: 187 bets 61.5%  +32.5u ROI  +17.4% [+6,+28]  by season 22:+14.8 23:+13.2 24:-2.9 25:+7.5
+  1 d forecast >= 15 at the close:  89 bets 59.6%  +12.2u ROI  +13.7% [-2,+29]  by season 22:+7.5 23:+6.7 24:-3.8 25:+1.7
+  slope of (total - closing total) on forecast wind, by season, 1 d forecast: 2022: -0.24 (t -1.2), 2023: -0.75 (t -3.7), 2024: +0.02 (t +0.1), 2025: -0.45 (t -2.0)

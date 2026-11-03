@@ -295,5 +295,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzgxyvi3eb2r",
   "text": "Scotty Pippen: Ruled out for Wednesday    https://www.rotowire.com/basketball/player/scotty-pippen-5685",
   "swing": 0.34
+ },
+ "2026-11-04|ind|pascal siakam": {
+  "status": "Available",
+  "player": "Pascal Siakam",
+  "game_id": 22600178,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-03 18:38:05",
+  "seen_at_et": "2026-11-03 18:38:11",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzgz2krque27",
+  "text": "Pascal Siakam: Available to play Wednesday    https://www.rotowire.com/basketball/player/pascal-siakam-3922",
+  "swing": 1.17
  }
 }

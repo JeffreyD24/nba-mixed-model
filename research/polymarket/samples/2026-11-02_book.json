@@ -1,0 +1,498 @@
+{
+ "marketData": {
+  "marketSlug": "aec-nba-uta-sa-2026-11-02",
+  "bids": [
+   {
+    "px": {
+     "value": "0.1000",
+     "currency": "USD"
+    },
+    "qty": "603619.7700"
+   },
+   {
+    "px": {
+     "value": "0.0900",
+     "currency": "USD"
+    },
+    "qty": "343480.1100"
+   },
+   {
+    "px": {
+     "value": "0.0800",
+     "currency": "USD"
+    },
+    "qty": "143512.4600"
+   },
+   {
+    "px": {
+     "value": "0.0700",
+     "currency": "USD"
+    },
+    "qty": "56.0000"
+   },
+   {
+    "px": {
+     "value": "0.0600",
+     "currency": "USD"
+    },
+    "qty": "200.0000"
+   },
+   {
+    "px": {
+     "value": "0.0500",
+     "currency": "USD"
+    },
+    "qty": "5166.1600"
+   },
+   {
+    "px": {
+     "value": "0.0400",
+     "currency": "USD"
+    },
+    "qty": "5200.0000"
+   },
+   {
+    "px": {
+     "value": "0.0300",
+     "currency": "USD"
+    },
+    "qty": "7466.6700"
+   },
+   {
+    "px": {
+     "value": "0.0200",
+     "currency": "USD"
+    },
+    "qty": "12801.0000"
+   },
+   {
+    "px": {
+     "value": "0.0100",
+     "currency": "USD"
+    },
+    "qty": "22108.0000"
+   }
+  ],
+  "offers": [
+   {
+    "px": {
+     "value": "0.1100",
+     "currency": "USD"
+    },
+    "qty": "602979.0200"
+   },
+   {
+    "px": {
+     "value": "0.1200",
+     "currency": "USD"
+    },
+    "qty": "358771.1500"
+   },
+   {
+    "px": {
+     "value": "0.1300",
+     "currency": "USD"
+    },
+    "qty": "98097.8600"
+   },
+   {
+    "px": {
+     "value": "0.1400",
+     "currency": "USD"
+    },
+    "qty": "9950.2400"
+   },
+   {
+    "px": {
+     "value": "0.1500",
+     "currency": "USD"
+    },
+    "qty": "243.4000"
+   },
+   {
+    "px": {
+     "value": "0.1600",
+     "currency": "USD"
+    },
+    "qty": "5029.6000"
+   },
+   {
+    "px": {
+     "value": "0.1800",
+     "currency": "USD"
+    },
+    "qty": "500.0000"
+   },
+   {
+    "px": {
+     "value": "0.2000",
+     "currency": "USD"
+    },
+    "qty": "128.2000"
+   },
+   {
+    "px": {
+     "value": "0.2100",
+     "currency": "USD"
+    },
+    "qty": "3559.9000"
+   },
+   {
+    "px": {
+     "value": "0.2500",
+     "currency": "USD"
+    },
+    "qty": "21.0000"
+   },
+   {
+    "px": {
+     "value": "0.3000",
+     "currency": "USD"
+    },
+    "qty": "345.5400"
+   },
+   {
+    "px": {
+     "value": "0.3300",
+     "currency": "USD"
+    },
+    "qty": "214.0000"
+   },
+   {
+    "px": {
+     "value": "0.3500",
+     "currency": "USD"
+    },
+    "qty": "85.6200"
+   },
+   {
+    "px": {
+     "value": "0.3600",
+     "currency": "USD"
+    },
+    "qty": "85.6300"
+   },
+   {
+    "px": {
+     "value": "0.4000",
+     "currency": "USD"
+    },
+    "qty": "52.8100"
+   },
+   {
+    "px": {
+     "value": "0.4100",
+     "currency": "USD"
+    },
+    "qty": "498.8000"
+   },
+   {
+    "px": {
+     "value": "0.4700",
+     "currency": "USD"
+    },
+    "qty": "85.6200"
+   },
+   {
+    "px": {
+     "value": "0.4800",
+     "currency": "USD"
+    },
+    "qty": "42.8100"
+   },
+   {
+    "px": {
+     "value": "0.5000",
+     "currency": "USD"
+    },
+    "qty": "2.0000"
+   },
+   {
+    "px": {
+     "value": "0.6000",
+     "currency": "USD"
+    },
+    "qty": "42.8100"
+   },
+   {
+    "px": {
+     "value": "0.6100",
+     "currency": "USD"
+    },
+    "qty": "0.2400"
+   },
+   {
+    "px": {
+     "value": "0.6500",
+     "currency": "USD"
+    },
+    "qty": "8.5400"
+   },
+   {
+    "px": {
+     "value": "0.6900",
+     "currency": "USD"
+    },
+    "qty": "999.0000"
+   },
+   {
+    "px": {
+     "value": "0.7000",
+     "currency": "USD"
+    },
+    "qty": "709.4800"
+   },
+   {
+    "px": {
+     "value": "0.7100",
+     "currency": "USD"
+    },
+    "qty": "689.6600"
+   },
+   {
+    "px": {
+     "value": "0.7200",
+     "currency": "USD"
+    },
+    "qty": "714.2900"
+   },
+   {
+    "px": {
+     "value": "0.7300",
+     "currency": "USD"
+    },
+    "qty": "740.7400"
+   },
+   {
+    "px": {
+     "value": "0.7400",
+     "currency": "USD"
+    },
+    "qty": "769.2300"
+   },
+   {
+    "px": {
+     "value": "0.7500",
+     "currency": "USD"
+    },
+    "qty": "804.9000"
+   },
+   {
+    "px": {
+     "value": "0.7600",
+     "currency": "USD"
+    },
+    "qty": "833.3300"
+   },
+   {
+    "px": {
+     "value": "0.7700",
+     "currency": "USD"
+    },
+    "qty": "869.5700"
+   },
+   {
+    "px": {
+     "value": "0.7800",
+     "currency": "USD"
+    },
+    "qty": "909.0900"
+   },
+   {
+    "px": {
+     "value": "0.7900",
+     "currency": "USD"
+    },
+    "qty": "965.1900"
+   },
+   {
+    "px": {
+     "value": "0.8000",
+     "currency": "USD"
+    },
+    "qty": "1057.3500"
+   },
+   {
+    "px": {
+     "value": "0.8100",
+     "currency": "USD"
+    },
+    "qty": "1052.6300"
+   },
+   {
+    "px": {
+     "value": "0.8200",
+     "currency": "USD"
+    },
+    "qty": "1111.1100"
+   },
+   {
+    "px": {
+     "value": "0.8300",
+     "currency": "USD"
+    },
+    "qty": "1176.4700"
+   },
+   {
+    "px": {
+     "value": "0.8400",
+     "currency": "USD"
+    },
+    "qty": "1250.0000"
+   },
+   {
+    "px": {
+     "value": "0.8500",
+     "currency": "USD"
+    },
+    "qty": "1333.3300"
+   },
+   {
+    "px": {
+     "value": "0.8600",
+     "currency": "USD"
+    },
+    "qty": "1449.9700"
+   },
+   {
+    "px": {
+     "value": "0.8700",
+     "currency": "USD"
+    },
+    "qty": "1538.4600"
+   },
+   {
+    "px": {
+     "value": "0.8800",
+     "currency": "USD"
+    },
+    "qty": "1666.6700"
+   },
+   {
+    "px": {
+     "value": "0.8900",
+     "currency": "USD"
+    },
+    "qty": "1818.1800"
+   },
+   {
+    "px": {
+     "value": "0.9000",
+     "currency": "USD"
+    },
+    "qty": "2000.0000"
+   },
+   {
+    "px": {
+     "value": "0.9100",
+     "currency": "USD"
+    },
+    "qty": "2222.2200"
+   },
+   {
+    "px": {
+     "value": "0.9200",
+     "currency": "USD"
+    },
+    "qty": "2550.0000"
+   },
+   {
+    "px": {
+     "value": "0.9300",
+     "currency": "USD"
+    },
+    "qty": "2857.1400"
+   },
+   {
+    "px": {
+     "value": "0.9400",
+     "currency": "USD"
+    },
+    "qty": "3348.3300"
+   },
+   {
+    "px": {
+     "value": "0.9500",
+     "currency": "USD"
+    },
+    "qty": "4200.0000"
+   },
+   {
+    "px": {
+     "value": "0.9600",
+     "currency": "USD"
+    },
+    "qty": "5200.0000"
+   },
+   {
+    "px": {
+     "value": "0.9700",
+     "currency": "USD"
+    },
+    "qty": "7466.6700"
+   },
+   {
+    "px": {
+     "value": "0.9800",
+     "currency": "USD"
+    },
+    "qty": "12800.0000"
+   },
+   {
+    "px": {
+     "value": "0.9900",
+     "currency": "USD"
+    },
+    "qty": "47140.2700"
+   }
+  ],
+  "state": "MARKET_STATE_OPEN",
+  "stats": {
+   "openPx": {
+    "value": "0.3500",
+    "currency": "USD"
+   },
+   "lowPx": {
+    "value": "0.0900",
+    "currency": "USD"
+   },
+   "highPx": {
+    "value": "0.7700",
+    "currency": "USD"
+   },
+   "lastTradePx": {
+    "value": "0.1000",
+    "currency": "USD"
+   },
+   "sharesTraded": "366621.0800",
+   "notionalTraded": {
+    "value": "39762.7639",
+    "currency": "USD"
+   },
+   "lastTradeQty": "8.8200",
+   "openInterest": "218157.0300",
+   "openSetTime": "2026-10-29T01:57:03.587095751Z",
+   "highSetTime": "2026-10-29T16:41:27.295743783Z",
+   "lowSetTime": "2026-11-02T01:16:24.866086250Z",
+   "lastTradeSetTime": "2026-11-03T01:09:25.343497012Z",
+   "openInterestSetTime": "2026-11-03T01:09:07.447663852Z",
+   "notionalSetTime": "2026-11-03T01:09:25.343497012Z",
+   "currentPx": {
+    "value": "0.1050",
+    "currency": "USD"
+   },
+   "lastPriceSample": {
+    "longPx": {
+     "value": "0.1000",
+     "currency": "USD"
+    },
+    "shortPx": {
+     "value": "0.9",
+     "currency": "USD"
+    },
+    "ts": "2026-11-03T01:10:03.820112729Z"
+   }
+  },
+  "transactTime": "2026-11-03T01:10:03.820112729Z"
+ }
+}

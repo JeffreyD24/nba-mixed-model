@@ -132,3 +132,5 @@ seen_at_et,game_id,date,away,home,market,line_home,long_side,slug,bid,ask,bid_de
 2026-11-03 02:30,22600188,2026-11-05,mia,gs,moneyline,,away,aec-nba-mia-gs-2026-11-05,0.41,0.46,13.0,15.0,0.565,0.41,276.19,211.55,team
 2026-11-03 02:35,22600187,2026-11-05,orl,phx,moneyline,,away,aec-nba-orl-pho-2026-11-05,0.3,0.59,10.0,11.0,0.555,,0.0,,team
 2026-11-03 02:35,22600188,2026-11-05,mia,gs,moneyline,,away,aec-nba-mia-gs-2026-11-05,0.39,0.44,12.0,15.0,0.585,0.41,276.19,211.55,team
+2026-11-03 02:40,22600187,2026-11-05,orl,phx,moneyline,,away,aec-nba-orl-pho-2026-11-05,0.3,0.59,10.0,10.0,0.555,,0.0,,team
+2026-11-03 02:40,22600188,2026-11-05,mia,gs,moneyline,,away,aec-nba-mia-gs-2026-11-05,0.39,0.44,11.0,15.0,0.585,0.41,276.19,211.55,team

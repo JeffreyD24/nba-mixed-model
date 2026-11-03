@@ -9247,3 +9247,880 @@ snapshot,as_of,game_date,game_time_et,matchup,team,player,status
 2026-11-02_11AM,2026-11-02 11:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,,NOT YET SUBMITTED
 2026-11-02_11AM,2026-11-02 11:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,,NOT YET SUBMITTED
 2026-11-02_11AM,2026-11-02 11:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,,NOT YET SUBMITTED
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Caruso, Alex",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Holmgren, Chet",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Sorber, Thomas",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Topic, Nikola",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Wallace, Cason",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Williams, Jalen",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Diop, Khalifa",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tomlin, Nae'Qwan",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tyson, Jaylon",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Jr., Ernest",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Watson, Peyton",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Flemings, Kingston",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gilbert, Keshon",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gueye, Mouhamed",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Johnson, Jalen",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Landale, Jock",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Veesaar, Henri",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Wilson, Jalen",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Furphy, Johnny",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Haliburton, Tyrese",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"McConnell, T.J.",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nance Jr., Larry",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nembhard, Andrew",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nesmith, Aaron",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Sheppard, Ben",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Siakam, Pascal",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Toppin, Obi",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Zubac, Ivica",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Bilodeau, Tyler",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Demin, Egor",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Jefferson, Joshua",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Nelson, Grant",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Saraf, Ben",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,BKN@NYK,New York Knicks,"Alvarado, Jose",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Awaka, Tobe",Probable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Claxton, Nic",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Smith, Jalen",Probable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Barlow, Dominick",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Embiid, Joel",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Hukporti, Ariel",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Duren, Jalen",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Harkless, Elijah",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Joe, Isaiah",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Jones, Isaac",Available
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Onyenso, Ugonna",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Knueppel, Kon",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Williams, Grant",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Beekman, Reece",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Champagnie, Justin",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Gill, Anthony",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Sarr, Alex",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Vukcevic, Tristan",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Watkins, Jamir",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Banchero, Paolo",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Black, Anthony",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Isaac, Jonathan",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Nelson, Izaiyah",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Penda, Noah",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Suggs, Jalen",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"DiVincenzo, Donte",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Edwards, Anthony",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Dia, Malik",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Missi, Yves",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murphy III, Trey",Probable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Pierre Jr., Jaron",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Poole, Jordan",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Reese, Julian",Probable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Pippen Jr., Scotty",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Post, Quinten",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Cardwell, Dylan",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"LaVine, Zach",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Murray, Keegan",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Pedulla, Sean",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Raynaud, Maxime",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Simmons, Ben",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Aldama, Santi",Doubtful
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Biberovic, Tarik",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Larrea, Sergio",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Irving, Kyrie",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Lively II, Dereck",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Martin, Caleb",Available
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,,NOT YET SUBMITTED
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Adams, Steven",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Capela, Clint",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Copeland, Quadir",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Phillips, Julian",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Sheppard, Reed",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Alexander, Trey",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Bufkin, Kobe",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Ingram, Harrison",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Jackson Jr., Jaren",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Nurkic, Jusuf",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Harris, Tobias",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Quaintance, Jayden",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Kent, Jayson",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Morant, Ja",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Sharpe, Shaedon",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Tonje, John",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Diallo, Alpha",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Jones, Spencer",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Strawther, Julian",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Donaldson, Tre",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Goldin, Vladislav",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Hardaway Jr., Tim",Questionable
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,,NOT YET SUBMITTED
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Timme, Drew",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Williams, Mark",Out
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,,NOT YET SUBMITTED
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,,NOT YET SUBMITTED
+2026-11-02_01PM,2026-11-02 13:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,,NOT YET SUBMITTED
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Caruso, Alex",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Holmgren, Chet",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Sorber, Thomas",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Topic, Nikola",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Wallace, Cason",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Williams, Jalen",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Diop, Khalifa",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tomlin, Nae'Qwan",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tyson, Jaylon",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Jr., Ernest",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Watson, Peyton",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Flemings, Kingston",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gilbert, Keshon",Doubtful
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gueye, Mouhamed",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Johnson, Jalen",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Landale, Jock",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Veesaar, Henri",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Wilson, Jalen",Doubtful
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Furphy, Johnny",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Haliburton, Tyrese",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"McConnell, T.J.",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nance Jr., Larry",Doubtful
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nembhard, Andrew",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nesmith, Aaron",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Sheppard, Ben",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Siakam, Pascal",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Toppin, Obi",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Zubac, Ivica",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Bilodeau, Tyler",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Demin, Egor",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Jefferson, Joshua",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Nelson, Grant",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Saraf, Ben",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,BKN@NYK,New York Knicks,"Alvarado, Jose",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Awaka, Tobe",Probable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Claxton, Nic",Doubtful
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Smith, Jalen",Probable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Barlow, Dominick",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Embiid, Joel",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Hukporti, Ariel",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Duren, Jalen",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Harkless, Elijah",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Joe, Isaiah",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Jones, Isaac",Available
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Onyenso, Ugonna",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Knueppel, Kon",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Williams, Grant",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Beekman, Reece",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Champagnie, Justin",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Gill, Anthony",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Sarr, Alex",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Vukcevic, Tristan",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Watkins, Jamir",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Banchero, Paolo",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Black, Anthony",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Isaac, Jonathan",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Nelson, Izaiyah",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Penda, Noah",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Suggs, Jalen",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Ball, LaMelo",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"DiVincenzo, Donte",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Edwards, Anthony",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Shannon Jr, Terrence",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Dia, Malik",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Missi, Yves",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murphy III, Trey",Available
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murray, Dejounte",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Pierre Jr., Jaron",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Poole, Jordan",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Reese, Julian",Available
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Pippen Jr., Scotty",Doubtful
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Post, Quinten",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Cardwell, Dylan",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"LaVine, Zach",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Murray, Keegan",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Pedulla, Sean",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Raynaud, Maxime",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Simmons, Ben",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Aldama, Santi",Doubtful
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Biberovic, Tarik",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Larrea, Sergio",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Irving, Kyrie",Doubtful
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Lively II, Dereck",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Martin, Caleb",Available
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"Carter, Devin",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"George, Paul",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Adams, Steven",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Capela, Clint",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Copeland, Quadir",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Phillips, Julian",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Sheppard, Reed",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Alexander, Trey",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Bufkin, Kobe",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Ingram, Harrison",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Jackson Jr., Jaren",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Nurkic, Jusuf",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Harris, Tobias",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Quaintance, Jayden",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Kent, Jayson",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Morant, Ja",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Sharpe, Shaedon",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Tonje, John",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Diallo, Alpha",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Jones, Spencer",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Strawther, Julian",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Donaldson, Tre",Available
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Goldin, Vladislav",Available
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Hardaway Jr., Tim",Available
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,,NOT YET SUBMITTED
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Timme, Drew",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Williams, Mark",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,,NOT YET SUBMITTED
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Bittle, Nate",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Leonard, Kawhi",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Poeltl, Jakob",Questionable
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Smith, Malachi",Out
+2026-11-02_03PM,2026-11-02 15:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,,NOT YET SUBMITTED
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Caruso, Alex",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Holmgren, Chet",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Sorber, Thomas",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Topic, Nikola",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Wallace, Cason",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Williams, Jalen",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Diop, Khalifa",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tomlin, Nae'Qwan",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tyson, Jaylon",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Jr., Ernest",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Watson, Peyton",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Flemings, Kingston",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gilbert, Keshon",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gueye, Mouhamed",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Johnson, Jalen",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Landale, Jock",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Veesaar, Henri",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Wilson, Jalen",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Furphy, Johnny",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Haliburton, Tyrese",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"McConnell, T.J.",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nance Jr., Larry",Doubtful
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nembhard, Andrew",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nesmith, Aaron",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Sheppard, Ben",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Siakam, Pascal",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Toppin, Obi",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Zubac, Ivica",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Bilodeau, Tyler",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Demin, Egor",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Jefferson, Joshua",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Nelson, Grant",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Saraf, Ben",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,BKN@NYK,New York Knicks,"Alvarado, Jose",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Awaka, Tobe",Probable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Claxton, Nic",Doubtful
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Smith, Jalen",Probable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Barlow, Dominick",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Embiid, Joel",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Hukporti, Ariel",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Duren, Jalen",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Harkless, Elijah",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Joe, Isaiah",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Jones, Isaac",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Onyenso, Ugonna",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Knueppel, Kon",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Williams, Grant",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Beekman, Reece",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Champagnie, Justin",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Gill, Anthony",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Sarr, Alex",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Vukcevic, Tristan",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Watkins, Jamir",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Banchero, Paolo",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Black, Anthony",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Isaac, Jonathan",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Nelson, Izaiyah",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Penda, Noah",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Suggs, Jalen",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Ball, LaMelo",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"DiVincenzo, Donte",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Edwards, Anthony",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Shannon Jr, Terrence",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Dia, Malik",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Missi, Yves",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murphy III, Trey",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murray, Dejounte",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Pierre Jr., Jaron",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Poole, Jordan",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Reese, Julian",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Pippen Jr., Scotty",Doubtful
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Post, Quinten",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Cardwell, Dylan",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"LaVine, Zach",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Murray, Keegan",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Pedulla, Sean",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Raynaud, Maxime",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Simmons, Ben",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Aldama, Santi",Doubtful
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Biberovic, Tarik",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Larrea, Sergio",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Irving, Kyrie",Doubtful
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Lively II, Dereck",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Martin, Caleb",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"Carter, Devin",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"George, Paul",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Adams, Steven",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Capela, Clint",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Copeland, Quadir",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Phillips, Julian",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Sheppard, Reed",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Alexander, Trey",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Bufkin, Kobe",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Ingram, Harrison",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Jackson Jr., Jaren",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Nurkic, Jusuf",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Harris, Tobias",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Quaintance, Jayden",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Kent, Jayson",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Morant, Ja",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Sharpe, Shaedon",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Tonje, John",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Diallo, Alpha",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Jones, Spencer",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Strawther, Julian",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Donaldson, Tre",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Goldin, Vladislav",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Hardaway Jr., Tim",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Kessler, Walker",Available
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Thiero, Adou",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Timme, Drew",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Williams, Mark",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Butler III, Jimmy",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Horford, Al",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Moody, Moses",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Porzingis, Kristaps",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Santos, Gui",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Williams, Brandon",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Barnes, Scottie",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Bittle, Nate",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Leonard, Kawhi",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Poeltl, Jakob",Questionable
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Smith, Malachi",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Beal, Bradley",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Hachimura, Rui",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Ingram, Brandon",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Jones Jr., Derrick",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Miller, Jordan",Out
+2026-11-02_05PM,2026-11-02 17:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Niederhauser, Yanic Konan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Caruso, Alex",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Holmgren, Chet",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Sorber, Thomas",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Topic, Nikola",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Wallace, Cason",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Williams, Jalen",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Diop, Khalifa",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tomlin, Nae'Qwan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tyson, Jaylon",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Jr., Ernest",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Watson, Peyton",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Flemings, Kingston",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gilbert, Keshon",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gueye, Mouhamed",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Johnson, Jalen",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Landale, Jock",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Veesaar, Henri",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Wilson, Jalen",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Furphy, Johnny",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Haliburton, Tyrese",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"McConnell, T.J.",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nance Jr., Larry",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nembhard, Andrew",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nesmith, Aaron",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Sheppard, Ben",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Siakam, Pascal",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Toppin, Obi",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Zubac, Ivica",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Bilodeau, Tyler",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Demin, Egor",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Jefferson, Joshua",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Nelson, Grant",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Saraf, Ben",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,BKN@NYK,New York Knicks,"Alvarado, Jose",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Awaka, Tobe",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Claxton, Nic",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Smith, Jalen",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Barlow, Dominick",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Embiid, Joel",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Hukporti, Ariel",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Duren, Jalen",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Harkless, Elijah",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Joe, Isaiah",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Jones, Isaac",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Onyenso, Ugonna",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Knueppel, Kon",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Williams, Grant",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Beekman, Reece",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Champagnie, Justin",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Gill, Anthony",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Sarr, Alex",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Vukcevic, Tristan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Watkins, Jamir",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Banchero, Paolo",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Black, Anthony",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Isaac, Jonathan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Nelson, Izaiyah",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Penda, Noah",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Suggs, Jalen",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Ball, LaMelo",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"DiVincenzo, Donte",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Edwards, Anthony",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Shannon Jr, Terrence",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Dia, Malik",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Missi, Yves",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murphy III, Trey",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murray, Dejounte",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Pierre Jr., Jaron",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Poole, Jordan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Reese, Julian",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Pippen Jr., Scotty",Doubtful
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Post, Quinten",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Cardwell, Dylan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"LaVine, Zach",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Murray, Keegan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Pedulla, Sean",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Raynaud, Maxime",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Simmons, Ben",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Aldama, Santi",Doubtful
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Biberovic, Tarik",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Larrea, Sergio",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Irving, Kyrie",Doubtful
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Lively II, Dereck",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Martin, Caleb",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"Carter, Devin",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"George, Paul",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Adams, Steven",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Capela, Clint",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Copeland, Quadir",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Phillips, Julian",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Sheppard, Reed",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Alexander, Trey",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Bufkin, Kobe",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Ingram, Harrison",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Jackson Jr., Jaren",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Nurkic, Jusuf",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Harris, Tobias",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Quaintance, Jayden",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Kent, Jayson",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Morant, Ja",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Sharpe, Shaedon",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Tonje, John",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Diallo, Alpha",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Jones, Spencer",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Strawther, Julian",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Donaldson, Tre",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Goldin, Vladislav",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Hardaway Jr., Tim",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Kessler, Walker",Available
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Thiero, Adou",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Timme, Drew",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Williams, Mark",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Butler III, Jimmy",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Horford, Al",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Moody, Moses",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Porzingis, Kristaps",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Santos, Gui",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Williams, Brandon",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Barnes, Scottie",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Bittle, Nate",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Leonard, Kawhi",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Poeltl, Jakob",Questionable
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Smith, Malachi",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Beal, Bradley",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Hachimura, Rui",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Ingram, Brandon",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Jones Jr., Derrick",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Miller, Jordan",Out
+2026-11-02_06PM,2026-11-02 18:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Niederhauser, Yanic Konan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Caruso, Alex",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Holmgren, Chet",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Sorber, Thomas",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Topic, Nikola",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Wallace, Cason",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Williams, Jalen",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Diop, Khalifa",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tomlin, Nae'Qwan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tyson, Jaylon",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Jr., Ernest",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Watson, Peyton",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Flemings, Kingston",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gilbert, Keshon",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gueye, Mouhamed",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Johnson, Jalen",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Landale, Jock",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Veesaar, Henri",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Wilson, Jalen",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Furphy, Johnny",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Haliburton, Tyrese",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"McConnell, T.J.",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nance Jr., Larry",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nembhard, Andrew",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nesmith, Aaron",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Sheppard, Ben",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Siakam, Pascal",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Toppin, Obi",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Zubac, Ivica",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Bilodeau, Tyler",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Demin, Egor",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Jefferson, Joshua",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Nelson, Grant",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Saraf, Ben",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,BKN@NYK,New York Knicks,"Alvarado, Jose",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Awaka, Tobe",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Claxton, Nic",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Smith, Jalen",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Barlow, Dominick",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Embiid, Joel",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Hukporti, Ariel",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Duren, Jalen",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Harkless, Elijah",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Joe, Isaiah",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Jones, Isaac",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Onyenso, Ugonna",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Knueppel, Kon",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Williams, Grant",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Beekman, Reece",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Champagnie, Justin",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Gill, Anthony",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Sarr, Alex",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Vukcevic, Tristan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Watkins, Jamir",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Banchero, Paolo",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Black, Anthony",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Isaac, Jonathan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Nelson, Izaiyah",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Penda, Noah",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Suggs, Jalen",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Ball, LaMelo",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"DiVincenzo, Donte",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Edwards, Anthony",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Shannon Jr, Terrence",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Dia, Malik",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Missi, Yves",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murphy III, Trey",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murray, Dejounte",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Pierre Jr., Jaron",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Poole, Jordan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Reese, Julian",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Pippen Jr., Scotty",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Post, Quinten",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Small, Javon",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Cardwell, Dylan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"LaVine, Zach",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Murray, Keegan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Pedulla, Sean",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Raynaud, Maxime",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Simmons, Ben",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Aldama, Santi",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Biberovic, Tarik",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Larrea, Sergio",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Irving, Kyrie",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Lively II, Dereck",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Martin, Caleb",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"Carter, Devin",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"George, Paul",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Adams, Steven",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Capela, Clint",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Copeland, Quadir",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Phillips, Julian",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Sheppard, Reed",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Alexander, Trey",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Bufkin, Kobe",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Ingram, Harrison",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Jackson Jr., Jaren",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Nurkic, Jusuf",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Harris, Tobias",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Quaintance, Jayden",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Kent, Jayson",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Morant, Ja",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Sharpe, Shaedon",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Tonje, John",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Diallo, Alpha",Questionable
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Jones, Spencer",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Strawther, Julian",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Donaldson, Tre",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Goldin, Vladislav",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Hardaway Jr., Tim",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Kessler, Walker",Available
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Thiero, Adou",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Timme, Drew",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Williams, Mark",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Butler III, Jimmy",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Horford, Al",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Moody, Moses",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Porzingis, Kristaps",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Santos, Gui",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Williams, Brandon",Questionable
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Barnes, Scottie",Questionable
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Bittle, Nate",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Leonard, Kawhi",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Poeltl, Jakob",Questionable
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Smith, Malachi",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Beal, Bradley",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Hachimura, Rui",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Ingram, Brandon",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Jones Jr., Derrick",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Miller, Jordan",Out
+2026-11-02_07PM,2026-11-02 19:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Niederhauser, Yanic Konan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Caruso, Alex",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Holmgren, Chet",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Sorber, Thomas",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Topic, Nikola",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Wallace, Cason",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Williams, Jalen",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Diop, Khalifa",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tomlin, Nae'Qwan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tyson, Jaylon",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Jr., Ernest",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Watson, Peyton",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Flemings, Kingston",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gilbert, Keshon",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gueye, Mouhamed",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Johnson, Jalen",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Landale, Jock",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Veesaar, Henri",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Wilson, Jalen",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Furphy, Johnny",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Haliburton, Tyrese",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"McConnell, T.J.",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nance Jr., Larry",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nembhard, Andrew",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nesmith, Aaron",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Sheppard, Ben",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Siakam, Pascal",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Toppin, Obi",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Zubac, Ivica",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Bilodeau, Tyler",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Demin, Egor",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Jefferson, Joshua",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Nelson, Grant",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Saraf, Ben",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,BKN@NYK,New York Knicks,"Alvarado, Jose",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Awaka, Tobe",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Claxton, Nic",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Smith, Jalen",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Barlow, Dominick",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Embiid, Joel",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Hukporti, Ariel",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Duren, Jalen",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Harkless, Elijah",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Joe, Isaiah",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Jones, Isaac",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Onyenso, Ugonna",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Knueppel, Kon",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Williams, Grant",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Beekman, Reece",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Champagnie, Justin",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Gill, Anthony",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Sarr, Alex",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Vukcevic, Tristan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Watkins, Jamir",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Banchero, Paolo",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Black, Anthony",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Isaac, Jonathan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Nelson, Izaiyah",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Penda, Noah",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Suggs, Jalen",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Ball, LaMelo",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"DiVincenzo, Donte",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Edwards, Anthony",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Shannon Jr, Terrence",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Dia, Malik",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Missi, Yves",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murphy III, Trey",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murray, Dejounte",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Pierre Jr., Jaron",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Poole, Jordan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Reese, Julian",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Pippen Jr., Scotty",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Post, Quinten",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Small, Javon",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Cardwell, Dylan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"LaVine, Zach",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Murray, Keegan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Pedulla, Sean",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Raynaud, Maxime",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Simmons, Ben",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Aldama, Santi",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Biberovic, Tarik",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Larrea, Sergio",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Irving, Kyrie",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Lively II, Dereck",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Martin, Caleb",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"Carter, Devin",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"George, Paul",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Adams, Steven",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Capela, Clint",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Copeland, Quadir",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Phillips, Julian",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Sheppard, Reed",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Alexander, Trey",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Bufkin, Kobe",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Ingram, Harrison",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Jackson Jr., Jaren",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Nurkic, Jusuf",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Harris, Tobias",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Quaintance, Jayden",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Kent, Jayson",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Morant, Ja",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Sharpe, Shaedon",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Tonje, John",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Diallo, Alpha",Questionable
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Jones, Spencer",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Strawther, Julian",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Donaldson, Tre",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Goldin, Vladislav",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Hardaway Jr., Tim",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Kessler, Walker",Available
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Thiero, Adou",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Timme, Drew",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Williams, Mark",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Butler III, Jimmy",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Horford, Al",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Moody, Moses",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Porzingis, Kristaps",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Santos, Gui",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Williams, Brandon",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Barnes, Scottie",Questionable
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Bittle, Nate",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Leonard, Kawhi",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Poeltl, Jakob",Questionable
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Smith, Malachi",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Beal, Bradley",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Hachimura, Rui",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Ingram, Brandon",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Jones Jr., Derrick",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Miller, Jordan",Out
+2026-11-02_08PM,2026-11-02 20:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Niederhauser, Yanic Konan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Caruso, Alex",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Holmgren, Chet",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Sorber, Thomas",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Topic, Nikola",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Wallace, Cason",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Oklahoma City Thunder,"Williams, Jalen",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Diop, Khalifa",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tomlin, Nae'Qwan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Tyson, Jaylon",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Jr., Ernest",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:00,OKC@CLE,Cleveland Cavaliers,"Watson, Peyton",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Flemings, Kingston",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gilbert, Keshon",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Gueye, Mouhamed",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Johnson, Jalen",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Landale, Jock",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Veesaar, Henri",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Atlanta Hawks,"Wilson, Jalen",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Furphy, Johnny",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Haliburton, Tyrese",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"McConnell, T.J.",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nance Jr., Larry",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nembhard, Andrew",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Nesmith, Aaron",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Sheppard, Ben",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Siakam, Pascal",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Toppin, Obi",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,ATL@IND,Indiana Pacers,"Zubac, Ivica",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Bilodeau, Tyler",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Demin, Egor",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Jefferson, Joshua",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Nelson, Grant",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,BKN@NYK,Brooklyn Nets,"Saraf, Ben",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,BKN@NYK,New York Knicks,"Alvarado, Jose",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Awaka, Tobe",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Claxton, Nic",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,CHI@PHI,Chicago Bulls,"Smith, Jalen",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Barlow, Dominick",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Embiid, Joel",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,CHI@PHI,Philadelphia 76ers,"Hukporti, Ariel",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Duren, Jalen",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Harkless, Elijah",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Joe, Isaiah",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Jones, Isaac",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,DET@CHA,Detroit Pistons,"Onyenso, Ugonna",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Knueppel, Kon",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,DET@CHA,Charlotte Hornets,"Williams, Grant",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Beekman, Reece",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Champagnie, Justin",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Gill, Anthony",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Sarr, Alex",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Vukcevic, Tristan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Washington Wizards,"Watkins, Jamir",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Banchero, Paolo",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Black, Anthony",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Isaac, Jonathan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Nelson, Izaiyah",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Penda, Noah",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,07:30,WAS@ORL,Orlando Magic,"Suggs, Jalen",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Ball, LaMelo",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"DiVincenzo, Donte",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Edwards, Anthony",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,MIL@MIN,Minnesota Timberwolves,"Shannon Jr, Terrence",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Dia, Malik",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Missi, Yves",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murphy III, Trey",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Murray, Dejounte",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Pierre Jr., Jaron",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Poole, Jordan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,New Orleans Pelicans,"Reese, Julian",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Pippen Jr., Scotty",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Post, Quinten",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,NOP@MEM,Memphis Grizzlies,"Small, Javon",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Cardwell, Dylan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"LaVine, Zach",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Murray, Keegan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Pedulla, Sean",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Raynaud, Maxime",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Sacramento Kings,"Simmons, Ben",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Aldama, Santi",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Biberovic, Tarik",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Larrea, Sergio",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Irving, Kyrie",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Lively II, Dereck",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:00,SAC@DAL,Dallas Mavericks,"Martin, Caleb",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"Carter, Devin",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,BOS@HOU,Boston Celtics,"George, Paul",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Adams, Steven",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Capela, Clint",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Copeland, Quadir",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Phillips, Julian",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,BOS@HOU,Houston Rockets,"Sheppard, Reed",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Alexander, Trey",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Bufkin, Kobe",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Ingram, Harrison",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Jackson Jr., Jaren",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,UTA@SAS,Utah Jazz,"Nurkic, Jusuf",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Harris, Tobias",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,08:30,UTA@SAS,San Antonio Spurs,"Quaintance, Jayden",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Kent, Jayson",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Morant, Ja",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Sharpe, Shaedon",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,09:00,POR@DEN,Portland Trail Blazers,"Tonje, John",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Diallo, Alpha",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Jones, Spencer",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,09:00,POR@DEN,Denver Nuggets,"Strawther, Julian",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Donaldson, Tre",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Goldin, Vladislav",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,MIA@LAL,Miami Heat,"Hardaway Jr., Tim",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Kessler, Walker",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,MIA@LAL,Los Angeles Lakers,"Thiero, Adou",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Reath, Duop",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Spencer, Pat",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Timme, Drew",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Phoenix Suns,"Williams, Mark",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Butler III, Jimmy",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Horford, Al",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Moody, Moses",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Porzingis, Kristaps",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Santos, Gui",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,PHX@GSW,Golden State Warriors,"Williams, Brandon",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Barnes, Scottie",Available
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Bittle, Nate",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Leonard, Kawhi",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Poeltl, Jakob",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,Toronto Raptors,"Smith, Malachi",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Beal, Bradley",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Hachimura, Rui",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Ingram, Brandon",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Jones Jr., Derrick",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Miller, Jordan",Out
+2026-11-02_09PM,2026-11-02 21:30:00,11/02/2026,10:00,TOR@LAC,LA Clippers,"Niederhauser, Yanic Konan",Out

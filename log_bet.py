@@ -9,6 +9,7 @@ short reply to state/_bet_reply.md for the workflow to post on the issue.
 import os, re, sys, json, datetime as dt
 from zoneinfo import ZoneInfo
 import pandas as pd
+import books
 
 W = os.path.abspath(sys.argv[1]); EVENT = json.load(open(sys.argv[2]))
 STATE = os.path.join(W, "state")
@@ -89,7 +90,7 @@ def main():
         print("already logged:", issue["number"]); return          # a retry after this bet was already saved
     row = dict(logged_at_et=str(dt.datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None, microsecond=0)),
                issue=issue["number"], date=str(date), away=away, home=home, market=market, pick=pick, line=line, odds=odds,
-               stake=stake, book=get("Sportsbook (optional)"), notes=get("Notes (optional)"))
+               stake=stake, book=(books.canon_book(get("Sportsbook (optional)")) if get("Sportsbook (optional)") else ""), notes=get("Notes (optional)"))
     B = pd.concat([B, pd.DataFrame([row])], ignore_index=True)
     B.to_csv(path, index=False)
     desc = (f"{pick.upper()} {line:g}" if market == "total" else f"{pick.upper()} {line:+g}")
@@ -97,7 +98,9 @@ def main():
     open(os.path.join(STATE, "_bet_reply.md"), "w").write(
         f"✅ Logged: **{desc}**, {away.upper()} @ {home.upper()} on {date}, {odds:+g} for {stake:g}u (to win {win:.2f}u).\n\n"
         "It will be graded in the morning run after the game and show up on the **My Bets** sheet of `NBA_Live_Tracker.xlsx`.")
-    book = get("Sportsbook (optional)")
+    book = row["book"]
+    if not book:        # the book matters for limits and per-book results (see research/edge_stats/REPORT.md)
+        open(os.path.join(STATE, "_bet_reply.md"), "a").write("\n\n⚠️ No sportsbook was recorded for this bet. Please fill in the Sportsbook field next time; it feeds the per-book results and limit tracking.")
     open(os.path.join(STATE, "_bet_title.txt"), "w").write(
         f"Bet {date}: {away.upper()} @ {home.upper()} {desc} {odds:+g} {stake:g}u" + (f" ({book})" if book else ""))
     print("logged:", row)

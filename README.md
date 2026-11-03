@@ -200,3 +200,12 @@ show the adjustment ("shooting-luck adjustment -4.2"), and `research/model/` log
   ("MIN -10.5 down to -12. Skip if it's worse than -12, or if it moves the other way to MIN -10"). The second half is the rule
   that a 0.5+ move against the model since the open is a PASS. Prices come from Action Network's DraftKings feed
   (`current_home_spread_odds`, `current_away_spread_odds`, `current_over_odds`, `current_under_odds`).
+
+
+## Edge statistics, sportsbooks and limits
+`edge_stats.py` (same file in the NBA, NHL and NFL repos) runs in the morning run and writes `research/edge_stats/REPORT.md` plus CSVs:
+- **Bootstrap ranges** (`bootstrap.csv`): ROI and closing line value for every logged rule (scorecard rule at the opening line, BET vs caution alerts, and each model version of your logged bets), with 90% ranges from resampling bets and from resampling whole game days. Rows under 30 bets are flagged.
+- **Calibration** (`calibration_*.csv`): predicted probability bins vs what happened, Brier score and log loss. NHL also by price band.
+- **Pinnacle closing price** (`pinnacle_clv_*.csv`): price CLV in no-vig terms against Pinnacle's last price before the game, for games from Nov 2, 2026 (when the live recorder started). NBA/NFL bets at a different line than Pinnacle's close are moved to the bet line with the model's backtest misses; NHL keeps points only.
+- **Sportsbooks and limits** (`by_book.csv`, `book_limits.csv`): results per book from `state/my_bets.csv` (names normalized by `books.py`) and the limit events you report with the **Log a limit** issue form (label `limit`; create it once at Labels, like `bet`). Each limit is listed with the bets placed at that book before it.
+Run by hand with `python edge_stats.py . [--only boot|calib|pinnacle|book]`.

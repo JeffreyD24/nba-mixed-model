@@ -1,0 +1,63 @@
+name: Log a limit
+description: Record a sportsbook cutting your max bet, refusing a bet, removing boosts, or closing you. It goes to state/book_limits.csv.
+title: "Limit: "
+labels: ["limit"]
+body:
+  - type: input
+    id: date
+    attributes:
+      label: Date it happened
+      description: "YYYY-MM-DD (today if you leave it blank)"
+      placeholder: "2026-11-03"
+    validations:
+      required: false
+  - type: input
+    id: book
+    attributes:
+      label: Sportsbook
+      placeholder: "DraftKings"
+    validations:
+      required: true
+  - type: dropdown
+    id: what
+    attributes:
+      label: What happened
+      options:
+        - Lower max bet on some markets
+        - Lower max bet account-wide
+        - Bet refused or reduced at the bet slip
+        - Boosts / promos removed
+        - Account closed or frozen
+        - Other (say what in notes)
+    validations:
+      required: true
+  - type: input
+    id: before
+    attributes:
+      label: Max bet before ($)
+      description: "What you could bet before (leave blank if unknown)"
+    validations:
+      required: false
+  - type: input
+    id: after
+    attributes:
+      label: Max bet after ($)
+      description: "What the slip allows now"
+    validations:
+      required: false
+  - type: input
+    id: tried
+    attributes:
+      label: Stake you tried ($)
+      description: "If a bet was refused or cut, what you tried to bet"
+    validations:
+      required: false
+  - type: input
+    id: market
+    attributes:
+      label: Sport / market affected (optional)
+      description: "e.g. NBA totals, all NHL, everything"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)

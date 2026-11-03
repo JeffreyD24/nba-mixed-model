@@ -1,0 +1,14 @@
+parameter,value,file,set_on,chosen_on,how_chosen,status,evidence,notes
+THRESHOLD,3.0,alert.py,2026-10-29,"NBA 2021-26 closing lines, then 2023-26 DK openers",user rule before backtests,live (totals); test (spreads),analysis/FINDINGS.md 2026-10-31 bet sizing,"Model 1 edge in points; bigger edges do not win more"
+AGAINST_MOVE,0.5,alert.py,2026-10-31,"2024-26 DK openers",in-sample,live,FINDINGS 2026-10-31 how fast the edge disappears,"caution / DON'T BET after a half-point move against"
+MAX_PRICE,-120,alert.py,2026-10-31,"2024-26 DK openers",judgment,live,,"worst price to bet at"
+FRESH_OPEN_MIN,60,alert.py,2026-11-01,"2023-26 DK openers",in-sample,live,FINDINGS totals timing (+60 min still positive),"line counts as the opener for this long"
+LUCK_SHRINK_K,15,alert.py,2026-11-02,"2023-26",in-sample,live (totals v4),FINDINGS recent form / luck,"early-season shrink games/(games+15)"
+form weight (totals),0.20,nba_luck.py / alert.py,2026-11-02,"2023-26 Model 1 predictions",out of season (each season fit on the other two); live weight fit on all three,live (totals),FINDINGS recent-form adjustment,"window (last 10) picked among ~8; lag fix still +129.7u (research/LEAKAGE_AUDIT_2026-11-03.md)"
+luck correction weight,0.5,nba_luck.py,2026-11-01,"2021-26",in-sample,live (totals),FINDINGS shot quality,
+ALT_W,3.8,alert.py,2026-11-02,"2023-26",out of season,live (totals),alert.py comment (+159.5u vs +147.1u),"Denver/Utah altitude"
+ROSTER_W,0.57,alert.py,2026-11-02,"2023-26",out of season,test (spreads),FINDINGS spread fixes,
+SPREAD_LIVE_MONTHS,"Oct-Jan, no home underdogs, both teams 10+ games",alert.py,2026-11-02,"2023-26 DK openers",in-sample,live (spreads),FINDINGS spread autopsy; older seasons confirm home dogs lose,"Feb-Apr traps: tanking confirmed on 12 old seasons, playoff-spot trap not"
+PIN_SPREAD_RULE,on,alert.py,2026-11-02,"2023-26",in-sample; graded at DK opener though Pinnacle posts 5-12 h later,live (spreads),research/LEAKAGE_AUDIT_2026-11-03.md item 4,"re-grade at the price when Pinnacle posts"
+shrink weight spreads (Model 1 shrunk),0.147,data/shrink_weights.json,2026-11-03,"2023-26 DK openers, one-day lag",OLS through origin; rule not tuned (beats -110),side-by-side record,analysis/shrink_weights_output.txt,"= raw edge 5.6+"
+shrink weight totals (Model 1 shrunk),0.318,data/shrink_weights.json,2026-11-03,"2023-26 DK openers, one-day lag",OLS through origin; rule not tuned (beats -110),side-by-side record,analysis/shrink_weights_output.txt,"= raw edge 3.4+"

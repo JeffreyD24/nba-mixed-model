@@ -284,5 +284,16 @@
   "url": "https://bsky.app/profile/paulgarcia.bsky.social/post/3mzgx3ps33k2w",
   "text": "Tobias Harris and Jayden Quaintance are OUT Wednesday vs Dallas.",
   "swing": 0.73
+ },
+ "2026-11-04|mem|scotty pippen": {
+  "status": "Out",
+  "player": "Scotty Pippen Jr.",
+  "game_id": 22600178,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-03 18:19:15",
+  "seen_at_et": "2026-11-03 18:19:28",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzgxyvi3eb2r",
+  "text": "Scotty Pippen: Ruled out for Wednesday    https://www.rotowire.com/basketball/player/scotty-pippen-5685",
+  "swing": 0.34
  }
 }

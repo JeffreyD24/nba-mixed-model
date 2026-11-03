@@ -1,125 +1,20 @@
 {
- "today": [
-  {
-   "home": "cle",
-   "away": "okc",
-   "tip": "2026-11-02 19:00:00",
-   "pred_margin": 2.7,
-   "pred_total": 227.0
-  },
-  {
-   "home": "cha",
-   "away": "det",
-   "tip": "2026-11-02 19:30:00",
-   "pred_margin": -6.5,
-   "pred_total": 209.1
-  },
-  {
-   "home": "ind",
-   "away": "atl",
-   "tip": "2026-11-02 19:30:00",
-   "pred_margin": -6.3,
-   "pred_total": 233.8
-  },
-  {
-   "home": "ny",
-   "away": "bkn",
-   "tip": "2026-11-02 19:30:00",
-   "pred_margin": 9.9,
-   "pred_total": 223.0
-  },
-  {
-   "home": "orl",
-   "away": "wsh",
-   "tip": "2026-11-02 19:30:00",
-   "pred_margin": 4.1,
-   "pred_total": 231.0
-  },
-  {
-   "home": "phi",
-   "away": "chi",
-   "tip": "2026-11-02 19:30:00",
-   "pred_margin": 11.9,
-   "pred_total": 233.5
-  },
-  {
-   "home": "dal",
-   "away": "sac",
-   "tip": "2026-11-02 20:00:00",
-   "pred_margin": 11.8,
-   "pred_total": 234.0
-  },
-  {
-   "home": "mem",
-   "away": "no",
-   "tip": "2026-11-02 20:00:00",
-   "pred_margin": 5.9,
-   "pred_total": 231.9
-  },
-  {
-   "home": "min",
-   "away": "mil",
-   "tip": "2026-11-02 20:00:00",
-   "pred_margin": 15.2,
-   "pred_total": 230.7
-  },
-  {
-   "home": "hou",
-   "away": "bos",
-   "tip": "2026-11-02 20:30:00",
-   "pred_margin": 5.8,
-   "pred_total": 225.0
-  },
-  {
-   "home": "sa",
-   "away": "utah",
-   "tip": "2026-11-02 20:30:00",
-   "pred_margin": 12.8,
-   "pred_total": 232.8
-  },
-  {
-   "home": "den",
-   "away": "por",
-   "tip": "2026-11-02 21:00:00",
-   "pred_margin": 1.0,
-   "pred_total": 231.6
-  },
-  {
-   "home": "gs",
-   "away": "phx",
-   "tip": "2026-11-02 22:00:00",
-   "pred_margin": 3.6,
-   "pred_total": 228.8
-  },
-  {
-   "home": "lac",
-   "away": "tor",
-   "tip": "2026-11-02 22:00:00",
-   "pred_margin": -0.3,
-   "pred_total": 217.6
-  },
-  {
-   "home": "lal",
-   "away": "mia",
-   "tip": "2026-11-02 22:00:00",
-   "pred_margin": 6.5,
-   "pred_total": 239.9
-  }
- ],
+ "today": [],
  "log": [
-  "NBA tracker run on 2026-11-02 (ET), predicting games on 2026-11-02.",
-  "Schedule: 1200 regular-season games; 88 finished, results through 2026-10-31.",
-  "Injury reports: 1 snapshots requested, 1 new, 104 on file.",
-  "Saved today's model for intraday checks (15 games, 641 players).",
-  "Locked 0 live picks for 2026-11-02 and 0 backfilled.",
-  "Lines: pulled DraftKings lines from ESPN for 15 games.",
+  "NBA tracker run on 2026-11-02 (ET), predicting games on 2026-11-03.",
+  "Schedule: 1200 regular-season games; 92 finished, results through 2026-11-01.",
+  "No regular-season games on 2026-11-03; grading earlier picks only.",
+  "Injury reports: 7 snapshots requested, 7 new, 111 on file.",
+  "Saved today's model for intraday checks (0 games, 642 players).",
+  "Locked 0 live picks for 2026-11-03 and 0 backfilled.",
+  "Lines: pulled DraftKings lines from ESPN for 4 games.",
   "Model comparison: locked 0 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 3 - pace x efficiency: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
-  "Alerts graded so far: 11-11 (50.0%), -1.0 units at -110.",
-  "Your logged bets: 4-5, $-10.10 on $31.00 staked.",
-  "Line jumps graded: 21; the final result matched the jump's direction 7 times.",
-  "Bet timing: graded 17 games at up to 11 time points."
+  "Alerts graded so far: 12-13 (48.0%), -2.1 units at -110.",
+  "Your logged bets: 5-6, -1.49u on 11 units staked.",
+  "Line jumps graded: 26; the final result matched the jump's direction 9 times.",
+  "Bet timing: graded 21 games at up to 11 time points."
  ]
 }

@@ -21,6 +21,7 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [x] Pinnacle and 9 other books recorded live (pinnacle_watch.py) and used as a sharp-book check in alerts
 - [ ] CLV in PRICE terms against Pinnacle's de-vigged close (points hide price moves, e.g. -110 to -125 with no point change)
 - [ ] Bootstrap (resample bets within each walk-forward season, ~1,000 draws) to put a confidence interval on ROI and CLV for every rule, and the share of draws that lose (idea from r/algobetting, see community_notes)
+- [ ] Calibration table: group our predicted edges/probabilities into buckets and compare with realized results (the Reddit props author claimed 70%+ confidence and got 60%); choose any cutoff on one season and test it on the next
 - [ ] Report CLV per model version and per bet rule next to the win/loss record, and set a decision rule up front
       (suggestion: judge a rule only after 300+ bets with average CLV; do not drop or promote one on win/loss alone)
 

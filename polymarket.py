@@ -477,7 +477,9 @@ def book(slug):
     try:
         r = get_json(f"/v1/markets/{urllib.parse.quote(slug, safe='')}/book")
         d = r.get("marketData", r) if isinstance(r, dict) else {}
-        return dict(bids=sorted(_levels(d.get("bids")), key=lambda t: -t[0]), offers=sorted(_levels(d.get("offers")), key=lambda t: t[0]), raw=r)
+        st = d.get("stats") or {}
+        return dict(bids=sorted(_levels(d.get("bids")), key=lambda t: -t[0]), offers=sorted(_levels(d.get("offers")), key=lambda t: t[0]), raw=r,
+                    open_px=amount(st.get("openPx")), opened=st.get("openSetTime"))
     except Exception as e:
         return dict(error=f"{type(e).__name__}")
 
@@ -500,7 +502,9 @@ def book_row(bk):
     bids, offers = bk["bids"], bk["offers"]
     short = [(round(1 - px, 4), q) for px, q in bids]            # buying "short" = selling long: you pay 1 - bid
     keep = lambda lv: "|".join([f"{px:g}:{q:.0f}" for px, q in lv if abs(px - lv[0][0]) <= BOOK_RANGE + 1e-9][:BOOK_LEVELS]) if lv else ""
-    row = dict(bids=keep(bids), offers=keep(offers))
+    row = dict(bids=keep(bids), offers=keep(offers), open_px=bk.get("open_px"))
+    try: row["opened_at_et"] = str(to_et(bk.get("opened")))[:16] if bk.get("opened") else ""     # when trading in this contract began
+    except Exception: row["opened_at_et"] = ""
     for tag, lv in (("long", offers), ("short", short)):
         for c in (0.01, 0.03, 0.05): row[f"{tag}_within_{int(c * 100)}c"] = round(within(lv, c))
         for n in (100, 1000, 5000):
@@ -538,7 +542,7 @@ def dk_for(q, market, side, line):
 # ----------------------------------------------------------------------------------------------- one check
 SNAP_COLS = ["seen_at_et", "game_id", "date", "away", "home", "market", "line_home", "long_side", "slug", "bid", "ask",
              "bid_depth", "ask_depth", "mid_home_or_over", "last", "shares_traded", "open_interest", "line_source"]
-BOOK_COLS = ["seen_at_et", "game_id", "date", "away", "home", "market", "line_home", "long_side", "slug", "bid", "ask", "bids", "offers"] + \
+BOOK_COLS = ["seen_at_et", "game_id", "date", "away", "home", "market", "line_home", "long_side", "slug", "bid", "ask", "opened_at_et", "open_px", "bids", "offers"] + \
     [f"{t}_{k}" for t in ("long", "short") for k in ("within_1c", "within_3c", "within_5c", "avg_100", "avg_1000", "avg_5000")]
 PAPER_COLS = ["trade_id", "kind", "status", "logged_at_et", "filled_at_et", "game_id", "date", "tip_et", "away", "home", "model",
               "market", "side", "line", "slug", "pm_side", "price", "fee", "cost", "american", "model_p", "model_push", "ev",

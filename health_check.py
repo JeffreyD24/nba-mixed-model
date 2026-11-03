@@ -39,7 +39,7 @@ WORKFLOWS = {
 }
 if SPORT in ("nba", "nhl"):
     WORKFLOWS["early.yml"] = (16, "Early model run (2-4 days ahead)")
-if SPORT in ("nfl", "nhl"):
+if SPORT in ("nfl", "nhl", "nba"):
     WORKFLOWS["live.yml"] = (30, "Live line recorder")
 if SPORT == "nba":
     WORKFLOWS["econ-gdp.yml"] = (14, "Economics (GDP) recorder")
@@ -54,6 +54,7 @@ COMMON = {
     "state/alerts.csv": (14, "Alert log"),
     "state/line_history.csv": (14, "DraftKings line history"),
     "research/polymarket": (14, "Polymarket prices"),
+    "research/pregame": (14, "Pre-game lines every minute (all books, all periods)"),
     "research/bluesky": (30, "Bluesky reporter posts"),
     "research/odds": (14, "DraftKings odds snapshots"),
     "research/books": (30, "Book odds snapshots", "warn"),
@@ -182,6 +183,9 @@ for rid in alert_run_ids:
         warn(f"alert run {rid}: log not readable ({e})"); continue
     fail = len(re.findall(r"Check failed; trying again next time", out))
     poly = len(re.findall(r"Polymarket check failed", out))
+    pgf = len(re.findall(r"Pregame recorder failed", out)); pgn = len(re.findall(r"pregame: \d+ prices seen", out))
+    if pgf > 5 or (pgn == 0 and checks):
+        warn(f"alert run {rid}: pre-game line recorder failed {pgf} times, ran OK {pgn} times")
     tb = len(re.findall(r"Traceback \(most recent call last\)", out))
     checks = len(re.findall(r"=== check at", out))
     tot_fail += fail; tot_tb += tb; tot_poly += poly

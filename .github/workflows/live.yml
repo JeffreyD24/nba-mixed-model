@@ -1,0 +1,31 @@
+name: Live in-game lines (research)
+
+on:
+  schedule:
+    # Every 30 minutes through NBA game hours (UTC: noon to 3 AM ET). Each run exits right away unless a game is in progress
+    # or starts within 45 minutes; a run in progress keeps polling every minute, and later starts queue behind it.
+    - cron: "*/30 16-23 * * *"   # noon to 7 PM ET (weekend and holiday afternoon games)
+    - cron: "*/30 0-7 * * *"     # 7 PM to 3 AM ET (night games, West Coast late games)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-lines
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tools
+        run: pip install -q pandas numpy
+      - name: Record live lines every minute while games are on
+        run: ./live_loop.sh

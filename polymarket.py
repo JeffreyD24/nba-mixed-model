@@ -43,6 +43,9 @@ PAPER_MARKETS = {"nhl": ("moneyline", "spread"),         # NHL totals had no edg
                  "nfl": ("moneyline", "spread", "total")}
 MAKER = True                 # also simulate resting limit orders
 MIN_DEPTH = 20               # contracts needed at the price (a stray 1-contract offer is not a real price)
+BOOK_EVERY_MIN = 30         # save the full order book at least this often per contract (and whenever the best price or size changes)
+BOOK_RANGE = 0.10           # keep price levels within this many dollars of the best price
+BOOK_LEVELS = 15            # and at most this many per side
 HOURS_BEFORE = 48            # look at games starting within this many hours
 TIMEOUT = 12                 # seconds per request
 WORKERS = 8                  # parallel price requests
@@ -461,6 +464,50 @@ def bbo(slug):
         return dict(error=f"{type(e).__name__}")
 
 
+def _levels(lst):
+    out = []
+    for x in lst or []:
+        px, q = amount(x.get("px")), num(x.get("qty"))
+        if not math.isnan(px) and not math.isnan(q) and q > 0: out.append((px, q))
+    return out
+
+
+def book(slug):
+    """Every price level on both sides: bids (best first) and offers (best first), as (price, contracts)."""
+    try:
+        r = get_json(f"/v1/markets/{urllib.parse.quote(slug, safe='')}/book")
+        d = r.get("marketData", r) if isinstance(r, dict) else {}
+        return dict(bids=sorted(_levels(d.get("bids")), key=lambda t: -t[0]), offers=sorted(_levels(d.get("offers")), key=lambda t: t[0]), raw=r)
+    except Exception as e:
+        return dict(error=f"{type(e).__name__}")
+
+
+def walk(lv, n):
+    """Average price paid to buy n contracts by walking the levels (best first); NaN if the book is not that deep."""
+    got = cost = 0.0
+    for px, q in lv:
+        t = min(q, n - got); got += t; cost += t * px
+        if got >= n - 1e-9: return cost / n
+    return np.nan
+
+
+def within(lv, c):
+    """Contracts available within c dollars of the best price."""
+    return sum(q for px, q in lv if abs(px - lv[0][0]) <= c + 1e-9) if lv else 0.0
+
+
+def book_row(bk):
+    bids, offers = bk["bids"], bk["offers"]
+    short = [(round(1 - px, 4), q) for px, q in bids]            # buying "short" = selling long: you pay 1 - bid
+    keep = lambda lv: "|".join([f"{px:g}:{q:.0f}" for px, q in lv if abs(px - lv[0][0]) <= BOOK_RANGE + 1e-9][:BOOK_LEVELS]) if lv else ""
+    row = dict(bids=keep(bids), offers=keep(offers))
+    for tag, lv in (("long", offers), ("short", short)):
+        for c in (0.01, 0.03, 0.05): row[f"{tag}_within_{int(c * 100)}c"] = round(within(lv, c))
+        for n in (100, 1000, 5000):
+            a = walk(lv, n); row[f"{tag}_avg_{n}"] = round(a, 4) if not math.isnan(a) else np.nan
+    return row
+
+
 # ----------------------------------------------------------------------------------------------- DraftKings at the same moment
 def dk_quotes(day):
     p = os.path.join(RESEARCH, "odds", f"{day}.csv")
@@ -491,6 +538,8 @@ def dk_for(q, market, side, line):
 # ----------------------------------------------------------------------------------------------- one check
 SNAP_COLS = ["seen_at_et", "game_id", "date", "away", "home", "market", "line_home", "long_side", "slug", "bid", "ask",
              "bid_depth", "ask_depth", "mid_home_or_over", "last", "shares_traded", "open_interest", "line_source"]
+BOOK_COLS = ["seen_at_et", "game_id", "date", "away", "home", "market", "line_home", "long_side", "slug", "bid", "ask", "bids", "offers"] + \
+    [f"{t}_{k}" for t in ("long", "short") for k in ("within_1c", "within_3c", "within_5c", "avg_100", "avg_1000", "avg_5000")]
 PAPER_COLS = ["trade_id", "kind", "status", "logged_at_et", "filled_at_et", "game_id", "date", "tip_et", "away", "home", "model",
               "market", "side", "line", "slug", "pm_side", "price", "fee", "cost", "american", "model_p", "model_push", "ev",
               "depth", "bid_at_log", "ask_at_log", "dk_line", "dk_price", "dk_fair_p", "settle", "result", "profit",
@@ -573,15 +622,22 @@ def check():
                                  last=amount(mk.get("lastTradePrice")), traded=num(mk.get("volumeNum")), oi=np.nan)
 
     # ---- snapshots (only rows that changed)
-    snaps = {}
+    snaps, want_book = {}, []
+    bt = last.setdefault("book_t", {})
     for game, mk, P in contracts:
         b = B[mk["slug"]]; side, line = P["long"]
         sig = f"{b.get('bid')}|{b.get('ask')}|{b.get('bid_depth')}|{b.get('ask_depth')}"
-        if last["sig"].get(mk["slug"]) == sig: continue
+        line_home = line if P["market"] == "total" else (line if side == "home" else -line) if P["market"] == "spread" else np.nan
+        try: stale = NOW - pd.Timestamp(bt.get(mk["slug"], "2000-01-01")) >= pd.Timedelta(minutes=BOOK_EVERY_MIN)
+        except Exception: stale = True
+        changed = last["sig"].get(mk["slug"]) != sig
+        if (changed or stale) and "error" not in b:
+            want_book.append(dict(seen_at_et=str(NOW)[:16], game_id=game["game_id"], date=game["date"], away=game["away"], home=game["home"],
+                                  market=P["market"], line_home=line_home, long_side=side, slug=mk["slug"], bid=b.get("bid"), ask=b.get("ask")))
+        if not changed: continue
         last["sig"][mk["slug"]] = sig
         _, _, _, mid = side_quote(b, "long")
         home_or_over = side in ("home", "over")
-        line_home = line if P["market"] == "total" else (line if side == "home" else -line) if P["market"] == "spread" else np.nan
         snaps.setdefault(game["date"], []).append(dict(
             seen_at_et=str(NOW)[:16], game_id=game["game_id"], date=game["date"], away=game["away"], home=game["home"],
             market=P["market"], line_home=line_home, long_side=side, slug=mk["slug"], bid=b.get("bid"), ask=b.get("ask"),
@@ -589,6 +645,17 @@ def check():
             mid_home_or_over=round(mid if home_or_over else 1 - mid, 4) if not math.isnan(mid) else np.nan,
             last=b.get("last"), shares_traded=b.get("traded"), open_interest=b.get("oi"), line_source=P["src"]))
     for day, rows in snaps.items(): append_csv(os.path.join(PM_DIR, f"{day}.csv"), rows, SNAP_COLS)
+    n_book = 0
+    if want_book:                                      # full order books for the contracts that moved (or are due)
+        with ThreadPoolExecutor(WORKERS) as ex: BK = list(ex.map(book, [w["slug"] for w in want_book]))
+        out = {}
+        for w, bk in zip(want_book, BK):
+            if "error" in bk or not (bk["bids"] or bk["offers"]): continue
+            bt[w["slug"]] = str(NOW)
+            out.setdefault(w["date"], []).append(dict(w, **book_row(bk))); n_book += 1
+            if not os.path.exists(os.path.join(PM_DIR, "samples", f"{sample_day}_book.json")):
+                json.dump(bk["raw"], open(os.path.join(PM_DIR, "samples", f"{sample_day}_book.json"), "w"), indent=1, default=str)
+        for day, rows in out.items(): append_csv(os.path.join(PM_DIR, f"book_{day}.csv"), rows, BOOK_COLS)
     append_csv(os.path.join(PM_DIR, "unmatched.csv"), unmatched_new)
 
     # ---- paper trades
@@ -654,7 +721,7 @@ def check():
     json.dump(last, open(LAST, "w"))
     nm_ = MARKET_NAME[SPORT]
     print(f"Polymarket: {len(events)} {SPORT.upper()} events, {len(contracts)} contracts on {len({g['game_id'] for g, _, _ in contracts})} of "
-          f"{len(games)} games, {sum(len(v) for v in snaps.values())} price changes saved, {len(new)} new paper trades, "
+          f"{len(games)} games, {sum(len(v) for v in snaps.values())} price changes saved, {n_book} order books saved, {len(new)} new paper trades, "
           f"{n_fill} limit orders filled, {len(unmatched_new)} new unmatched.")
     for r in new:
         ln = "" if r["market"] == "moneyline" else (f" {r['line']:+g}" if r["market"] == "spread" else f" {r['line']:g}")
@@ -743,6 +810,23 @@ def report(T):
                   f"(average {100 * (dk_cost - tk.cost.astype(float)).mean():+.1f} cents per $1 contract in Polymarket's favor).", ""]
         pend = T[(T.status == "filled") & ~T.result.isin(["W", "L", "P", "partial"])]
         L += [f"Waiting to be graded: {len(pend)}. Open limit orders: {int(((T.kind == 'maker') & (T.status == 'open')).sum())}.", ""]
+    bf = sorted(glob.glob(os.path.join(PM_DIR, "book_20*.csv")))[-3:]
+    if bf:
+        try:
+            Bk = pd.concat([pd.read_csv(x) for x in bf])
+            Bk["ask"] = pd.to_numeric(Bk.ask, errors="coerce")
+            L += ["## Order book depth (last 3 days of saved books)", "",
+                  "Contracts you could buy on the long side at the best offer plus 1 / 3 / 5 cents, and what it would cost to buy 1,000 contracts "
+                  "(about $300-700) by walking the book: average price above the best offer, in cents, and how often the book was deep enough. "
+                  "Full levels are in `research/polymarket/book_YYYY-MM-DD.csv`.", "",
+                  "| market | snapshots | within 1c | within 3c | within 5c | 1,000 contracts: extra cents | deep enough for 1,000 |", "|---|---|---|---|---|---|---|"]
+            for mk, g in Bk.groupby("market"):
+                a1 = pd.to_numeric(g.long_avg_1000, errors="coerce")
+                L.append(f"| {nm_.get(mk, mk)} | {len(g)} | {g.long_within_1c.median():.0f} | {g.long_within_3c.median():.0f} | "
+                         f"{g.long_within_5c.median():.0f} | {(100 * (a1 - g.ask)).median():+.1f} | {a1.notna().mean():.0%} |")
+            L.append("")
+        except Exception as e:
+            L += [f"(order book summary failed: {type(e).__name__})", ""]
     um = os.path.join(PM_DIR, "unmatched.csv")
     if os.path.exists(um):
         U = pd.read_csv(um)

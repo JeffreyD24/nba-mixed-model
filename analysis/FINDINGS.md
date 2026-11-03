@@ -410,3 +410,21 @@ the slope is the weight the model's disagreement deserves (1 = trust it fully, 0
   at the opener and for shrinking the number toward the line (NFL's late-season shrink is the same idea). Same weights in both seasons, but it is
   one fit on two seasons: treat 0.25 / 0.39 as a first estimate, re-test on 2026-27 live data, and add "Model 1 shrunk" as a side-by-side
   record rather than changing Model 1.
+
+## 2026-11-03: Model 1 on nine older seasons at SBR OPENING lines (job 4, research/HANDOFF_TO_OPUS.md)
+`analysis/old_seasons_sbr.py` (output `old_seasons_sbr_output.txt`, bets `old_seasons_sbr_bets.csv`). 2013-14..2021-22, SportsbookReview
+openers and closers (consensus lines, -110 assumed), Model 1 **without injury features** (no reports that far back), one-day lag,
+trained on up to 4 earlier seasons. Data fixes: SBR dates the 2020 bubble games a year early (159 rows); playoffs dropped; checks pass
+(82 games per team; Charlotte 7-59 in 2011-12 confirms the Hornets/Pelicans names).
+| Edge 3+, trusted rows | At the opener | At the close |
+|---|---|---|
+| Spreads | 2,456 bets 49.8% -123.1u (positive 2 of 9 seasons) | 50.1% -132.6u |
+| Totals | 4,311 bets 52.8% **+34.1u** (positive 4 of 9) | 49.5% -271.4u |
+- Weight on Model 1 vs the opener: spreads 0.13 (+/-0.04), totals **0.11** (+/-0.05); vs the close 0.06 / -0.12.
+  Compare 2023-26 at DraftKings openers with injuries: 0.15 / 0.32.
+- Untuned shrunk rule (weight from the other seasons, bet when it beats -110): spreads 50.1% -23.5u; totals 177 bets 55.9% +12.0u.
+- Accuracy (mean absolute error): margin Model 1 9.98 vs opener 9.74 vs close 9.67; total 14.49 vs 14.30 vs 14.04.
+- Takeaway: the team-ratings part of Model 1 has only a thin totals edge at the opener over ten years (+0.8% per bet, a weight of 0.11)
+  and none on spreads. The much stronger 2023-26 totals result comes with things this test lacks: injury reports at the open, the luck
+  and form terms, and DraftKings' own (softer?) openers rather than SBR's consensus. Finding out which of those carries the edge is the
+  first job of the model tournament.

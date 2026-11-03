@@ -1,0 +1,5 @@
+lockbox stack overs: 834-716 53.8% +42.2u CLV +1.27
+lockbox stack unders: 51-46 52.6% +0.4u CLV +3.04
+Diagnostic, not a decision: blind 'every over' at DK openers 2023-26: over rate 0.501, mean result-opener +0.56 pts
+stack WITHOUT its intercept: dMSE +1.95 [+0.96,+2.97], 1086 bets 53.0% +13.6u CLV +1.94
+stack coefficients refit 2014-2022: [ 0.603  0.263 -0.019  0.045  0.425  0.352]

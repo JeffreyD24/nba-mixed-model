@@ -88,7 +88,6 @@ key,status,snapshot
 2026-11-01|ind|obi toppin,Out,2026-11-01_03_30PM
 2026-11-02|hou|steven adams,Out,2026-11-01_03_30PM
 2026-11-02|hou|julian phillips,Out,2026-11-01_03_30PM
-2026-11-02|hou|reed sheppard,Questionable,2026-11-01_03_30PM
 2026-11-01|ind|aaron nesmith,Available,2026-11-01_04_00PM
 2026-11-01|lal|ziaire williams,Out,2026-11-01_04_00PM
 2026-11-02|wsh|justin champagnie,Out,2026-11-01_04_30PM
@@ -102,7 +101,6 @@ key,status,snapshot
 2026-11-02|atl|mouhamed gueye,Out,2026-11-01_05_00PM
 2026-11-02|atl|jock landale,Out,2026-11-01_05_00PM
 2026-11-02|phi|dominick barlow,Out,2026-11-01_05_00PM
-2026-11-02|phi|joel embiid,Questionable,2026-11-01_05_00PM
 2026-11-02|phi|ariel hukporti,Out,2026-11-01_05_00PM
 2026-11-02|okc|alex caruso,Out,2026-11-01_05_15PM
 2026-11-02|okc|chet holmgren,Out,2026-11-01_05_15PM
@@ -161,7 +159,6 @@ key,status,snapshot
 2026-11-02|hou|clint capela,Out,2026-11-02_02_00PM
 2026-11-02|bos|devin carter,Out,2026-11-02_02_00PM
 2026-11-02|bos|paul george,Out,2026-11-02_02_00PM
-2026-11-02|min|lamelo ball,Questionable,2026-11-02_02_00PM
 2026-11-02|mia|vladislav goldin,Available,2026-11-02_03_00PM
 2026-11-02|mia|tim hardaway,Available,2026-11-02_03_00PM
 2026-11-02|tor|kawhi leonard,Out,2026-11-02_03_15PM
@@ -202,3 +199,6 @@ key,status,snapshot
 2026-11-02|mem|scotty pippen,Out,2026-11-02_07_15PM
 2026-11-02|mem|quinten post,Out,2026-11-02_07_15PM
 2026-11-02|mem|javon small,Out,2026-11-02_07_15PM
+2026-11-02|hou|reed sheppard,Available,2026-11-02_07_30PM
+2026-11-02|min|lamelo ball,Available,2026-11-02_07_30PM
+2026-11-02|phi|joel embiid,Available,2026-11-02_07_30PM

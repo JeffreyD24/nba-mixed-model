@@ -165,6 +165,20 @@ for path, (max_h, label) in STREAMS.items():
     else:
         ok(f"{label}: {age:.1f} h old")
 
+# c2) heartbeat: written by alert_loop.sh only after alert.py itself succeeded --------------------------------------------
+MAX_HEARTBEAT_AGE_H = 3
+try:
+    hb = open(os.path.join(WORK, "state", "heartbeat_alert.txt")).read().strip()
+    age = hrs(parse(hb))
+    if age > MAX_HEARTBEAT_AGE_H:
+        bad(f"last SUCCESSFUL alert.py call was {age:.1f} h ago (limit {MAX_HEARTBEAT_AGE_H} h)")
+    else:
+        ok(f"last successful alert.py call {age:.1f} h ago")
+except FileNotFoundError:
+    warn("no state/heartbeat_alert.txt yet (written after the first good alert.py call)")
+except Exception as e:
+    warn(f"heartbeat unreadable ({e})")
+
 # d) recent 'Alerts' commits ----------------------------------------------------------------------------------------
 try:
     since = (NOW - dt.timedelta(hours=MAX_ALERT_COMMIT_AGE_H)).strftime("%Y-%m-%dT%H:%M:%SZ")

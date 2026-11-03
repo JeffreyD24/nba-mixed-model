@@ -1320,3 +1320,5 @@ at_et,part,error
 2026-11-02 23:30,minutes 401909914,ValueError: could not convert string to float: '-'
 2026-11-02 23:35,minutes 401909910,ValueError: could not convert string to float: '-'
 2026-11-02 23:35,minutes 401909914,ValueError: could not convert string to float: '-'
+2026-11-02 23:40,minutes 401909910,ValueError: could not convert string to float: '-'
+2026-11-02 23:40,minutes 401909914,ValueError: could not convert string to float: '-'

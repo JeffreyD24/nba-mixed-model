@@ -273,5 +273,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzguyd6tiu27",
   "text": "Max Christie: Ruled out for Wednesday    https://www.rotowire.com/basketball/player/max-christie-5723",
   "swing": 0.68
+ },
+ "2026-11-04|sa|tobias harris": {
+  "status": "Out",
+  "player": "Tobias Harris",
+  "game_id": 22600184,
+  "reporter": "Paul Garcia",
+  "posted_at_et": "2026-11-03 18:02:56",
+  "seen_at_et": "2026-11-03 18:03:14",
+  "url": "https://bsky.app/profile/paulgarcia.bsky.social/post/3mzgx3ps33k2w",
+  "text": "Tobias Harris and Jayden Quaintance are OUT Wednesday vs Dallas.",
+  "swing": 0.73
  }
 }

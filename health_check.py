@@ -7,7 +7,8 @@ That hid a 19-hour NFL outage on Nov 2-3, 2026. This script looks inside.
 Checks
   a) each scheduled workflow: last completed run succeeded and is recent enough
   b) the last 3 completed alert-loop logs: count 'Check failed' / Traceback lines
-  c) newest commit touching each data stream vs a per-stream maximum age
+  c) newest commit touching each data stream vs a per-stream maximum age (registry STREAMS; unregistered research/state
+     paths and unregistered scheduled workflows are flagged), plus failure messages inside morning/evening/early/live logs
   d) recent 'Alerts' commits exist
   e) sends one ntfy summary EVERY day (silence means the health check itself is broken),
      writes state/health_latest.md and appends state/health_log.csv, exits 1 when something is wrong.
@@ -43,24 +44,72 @@ if SPORT in ("nfl", "nhl"):
 if SPORT == "nba":
     WORKFLOWS["econ-gdp.yml"] = (14, "Economics (GDP) recorder")
 
-# data streams: path in repo -> (max hours since newest commit touching it, label)
+# data streams: path in repo -> (max hours since newest commit touching it, label[, "warn"])
 # Odds files log CHANGES only, so a quiet overnight gap is normal: windows are deliberately wide.
+# A 3rd item "warn" means a stale stream is reported as a WARNING instead of a problem (use while a window is still being tuned).
+# RULE: every data path that gets new rows on a regular basis MUST be listed here. The unregistered-path detector below
+# warns when research/ or state/ contains something that is neither listed nor in IGNORE, and when a scheduled workflow
+# is not in WORKFLOWS. Register new feeds the day they are added.
 COMMON = {
     "state/alerts.csv": (14, "Alert log"),
     "state/line_history.csv": (14, "DraftKings line history"),
     "research/polymarket": (14, "Polymarket prices"),
     "research/bluesky": (30, "Bluesky reporter posts"),
     "research/odds": (14, "DraftKings odds snapshots"),
+    "research/books": (30, "Book odds snapshots", "warn"),
+    "research/news.csv": (30, "ESPN news log", "warn"),
+    "research/espn_predictor.csv": (30, "ESPN predictor log", "warn"),
+    "research/edge_stats": (30, "Edge statistics (daily)"),
+    "research/splits": (30, "Betting splits", "warn"),
+    "state/bet_record.csv": (30, "Bet record (daily grading)"),
+    "state/picks_log.csv": (30, "Picks log"),
+    "state/record_by_version.csv": (30, "Record by model version"),
+    "state/last_run.json": (30, "Last morning/evening run marker", "warn"),
+    "state/line_jumps.csv": (72, "Line jumps log", "warn"),
+    "state/market_moves.csv": (72, "Market moves log", "warn"),
+    "state/poly_paper.csv": (72, "Polymarket paper trades", "warn"),
 }
 STREAMS = dict(COMMON)
 if SPORT == "nhl":
-    STREAMS.update({"research/goalies.csv": (30, "Goalie status log"), "research/line_moves": (30, "Line moves (9 books)")})
+    STREAMS.update({"research/goalies.csv": (30, "Goalie status log"), "research/line_moves": (30, "Line moves (9 books)"),
+                    "research/edge": (30, "Edge research files", "warn"), "research/live": (30, "Live line recorder", "warn"),
+                    "research/model": (30, "Model output archive", "warn"), "research/nhl_pbp": (48, "Play-by-play", "warn"),
+                    "research/shifts": (48, "Shift charts", "warn"), "research/media": (72, "Media log", "warn"),
+                    "state/box_2026_27.csv": (30, "Box scores 2026-27", "warn"), "state/shots_2026_27.csv": (30, "Shots 2026-27", "warn"),
+                    "state/early": (30, "Early model files", "warn"), "state/picks_log_xg.csv": (30, "xG picks log", "warn"),
+                    "state/leaderboard.json": (30, "Leaderboard", "warn"), "state/goalie_news.json": (72, "Goalie news", "warn")})
 if SPORT == "nba":
     STREAMS.update({"state/injury_reports_2026_27.csv": (30, "Official injury reports"),
-                    "research/injury_decisions.csv": (72, "Injury decision log")})
+                    "research/injury_decisions.csv": (72, "Injury decision log"),
+                    "research/live": (30, "Live line recorder", "warn"), "research/live_odds": (30, "Live odds", "warn"),
+                    "research/model": (30, "Model output archive", "warn"), "research/props": (30, "Player props", "warn"),
+                    "research/periods": (48, "Period scores", "warn"), "research/timeline": (48, "Timeline", "warn"),
+                    "research/media": (72, "Media log", "warn"), "research/check_log.csv": (30, "Check log", "warn"),
+                    "state/picks_log_models.csv": (30, "Picks log by model", "warn"), "state/picks_log_shrunk.csv": (30, "Shrunk picks log", "warn"),
+                    "state/nba_luck.json": (30, "Shooting luck", "warn"), "state/nba_shots_2026_27.csv.gz": (30, "Shots 2026-27", "warn"),
+                    "state/early": (30, "Early model files", "warn"), "state/pinnacle_now.json": (72, "Pinnacle now", "warn"),
+                    "state/injury_status_seen.csv": (72, "Injury status seen", "warn")})
 if SPORT == "nfl":
+    # NFL is weekly: windows are 8-9 days for game-driven files (they go stale after the Super Bowl, expected in the off-season)
     STREAMS.update({"research/injury_decisions.csv": (72, "Key-player injury log"),
-                    "research/weather": (6, "Weather forecasts")})
+                    "research/injury_log": (72, "Injury list change log (new Nov 2026)", "warn"),
+                    "research/weather": (6, "Weather forecasts"),
+                    "research/live": (216, "Live line recorder", "warn"), "research/model": (216, "Model output archive", "warn"),
+                    "research/media": (216, "Media log", "warn"),
+                    "state/injury_seen.csv": (72, "Injury seen", "warn"), "state/injury_log_seen.csv": (72, "Injury log memory", "warn"),
+                    "state/practice_now.json": (72, "Practice status now", "warn"), "state/weather_now.json": (6, "Weather now", "warn"),
+                    "state/h2_totals_watch.csv": (216, "2H totals watch", "warn"), "state/half_lines_h2_2026.csv": (216, "2H lines", "warn")})
+
+# paths that exist in research/ or state/ but are not regular data feeds (docs, one-off analyses, memory files)
+IGNORE = {"DATA_DICTIONARY.md", "HANDOFF_TO_OPUS.md", "IDEAS_AND_CHECKLIST.md", "LEAKAGE_AUDIT_2026-11-03.md",
+          "SHRINK_WEIGHTS_2026-11-03.md", "how_sharp_models_work.md", "health_latest.md", "health_log.csv", "test_alert_result.txt",
+          "errors.csv", "community_notes", "linescores.csv", "live_laptop", "minutes", "minutes_history", "model_comparison",
+          "nba_tracking", "props_athletes.csv", "tournament", "cold_stretch", "bet_versions.csv", "my_bets.csv",
+          "bluesky_seen.json", "news_overrides.json", "news_practice.json", "openers_seen.json", "key_player_alerts.csv",
+          "report_snapshots_checked.json", "h2_alerts.csv", "poly_last.json"}
+IGNORE_PREFIX = ("model_20",)   # state/model_YYYY-MM-DD.json files (one per game day)
+
+EVENT_DRIVEN = {"health.yml", "log-bet.yml", "log-limit.yml", "bluesky-check.yml", "pm-check-test.yml", "bluesky-watch-test.yml"}
 
 LOG_RUNS = 3                    # alert-loop runs whose logs are read
 MAX_FAILED_CHECKS = 0           # 'Check failed' lines tolerated per run (the loop prints one per failed alert.py call)
@@ -151,19 +200,68 @@ if not alert_run_ids:
 
 # c) data streams ---------------------------------------------------------------------------------------------------
 newest = {}
-for path, (max_h, label) in STREAMS.items():
+for path, spec in STREAMS.items():
+    max_h, label = spec[0], spec[1]
+    soft = len(spec) > 2 and spec[2] == "warn"
+    flag = warn if soft else bad
     try:
         c = api(f"repos/{REPO}/commits?path={path}&per_page=1")
     except Exception as e:
         warn(f"{label} ({path}): could not read commits ({e})"); continue
     if not c:
-        bad(f"{label} ({path}): no commits touch it"); continue
+        flag(f"{label} ({path}): no commits touch it"); continue
     t = parse(c[0]["commit"]["committer"]["date"]); newest[path] = t
     age = hrs(t)
     if age > max_h:
-        bad(f"{label} ({path}): newest data {age:.1f} h old (limit {max_h} h)")
+        flag(f"{label} ({path}): newest data {age:.1f} h old (limit {max_h} h)")
     else:
         ok(f"{label}: {age:.1f} h old")
+
+# c3) unregistered data paths and unregistered scheduled workflows -------------------------------------------------------
+try:
+    known = {p.split("/", 1)[1].split("/")[0] for p in STREAMS if "/" in p}
+    for top in ("research", "state"):
+        for ent in api(f"repos/{REPO}/contents/{top}"):
+            n = ent["name"]
+            if n in IGNORE or n in known or n.startswith(IGNORE_PREFIX):
+                continue
+            if any(p.startswith(f"{top}/{n}") for p in STREAMS):
+                continue
+            warn(f"UNREGISTERED data path {top}/{n}: add it to STREAMS (or IGNORE) in health_check.py")
+    for wf in api(f"repos/{REPO}/contents/.github/workflows"):
+        fn = wf["name"]
+        if fn in WORKFLOWS or fn in EVENT_DRIVEN:
+            continue
+        rc, txt, _ = gh("api", "-H", "Accept: application/vnd.github.raw", f"repos/{REPO}/contents/.github/workflows/{fn}")
+        if rc == 0 and re.search(r"^\s*-?\s*cron:", txt, re.M):
+            warn(f"UNREGISTERED scheduled workflow {fn}: add it to WORKFLOWS in health_check.py")
+except Exception as e:
+    warn(f"unregistered-path scan failed ({e})")
+
+# c4) failure messages inside the other scheduled runs (their steps end in '|| echo "... failed"' so GitHub shows green) ---
+STEP_FAIL = re.compile(r"[^\n]*(not updated|not saved|failed;|failed\.|will be retried|try again tomorrow|Traceback \(most recent call last\))[^\n]*")
+for wf, (max_h, label) in WORKFLOWS.items():
+    if wf == "alerts.yml":
+        continue
+    try:
+        runs = [r for r in api(f"repos/{REPO}/actions/workflows/{wf}/runs?per_page=5").get("workflow_runs", []) if r["status"] == "completed"]
+        if not runs:
+            continue
+        rc, out, err = gh("run", "view", str(runs[0]["id"]), "-R", REPO, "--log", timeout=180)
+        if rc != 0:
+            warn(f"{label}: log not readable ({err.strip()[:60]})"); continue
+        hits = []
+        for m in STEP_FAIL.finditer(out):
+            s = re.sub(r"^.*?\d{4}-\d\d-\d\dT[\d:.]+Z\s*", "", m.group(0)).strip()
+            if s.startswith("echo ") or "|| echo" in s or s in hits:
+                continue
+            hits.append(s)
+        if hits:
+            warn(f"{label} (run {runs[0]['id']}): " + "; ".join(h[:90] for h in hits[:3]))
+        else:
+            ok(f"{label}: no step failures in last run log")
+    except Exception as e:
+        warn(f"{label}: step-failure scan failed ({e})")
 
 # c2) heartbeat: written by alert_loop.sh only after alert.py itself succeeded --------------------------------------------
 MAX_HEARTBEAT_AGE_H = 3

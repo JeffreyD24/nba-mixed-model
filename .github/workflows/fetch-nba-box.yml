@@ -1,0 +1,36 @@
+name: Fetch NBA player-game history (job A)
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: "Seasons (year each ends), space-separated"
+        default: "2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026"
+permissions:
+  contents: write
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pandas numpy
+      - name: Fetch one season at a time, saving after each
+        working-directory: data/external/nba_box
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          for s in ${{ inputs.seasons }}; do
+            python fetch_nba_box.py "$s" || true
+            git add parts
+            git diff --cached --quiet || git commit -q -m "NBA box scores: season $s (job A)"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 10; done
+          done
+          python build_missed_value.py
+          git add .
+          git diff --cached --quiet || git commit -q -m "NBA player-game table, missed_value and checks (job A)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 10; done

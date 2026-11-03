@@ -4,6 +4,7 @@ root = os.path.dirname(os.path.abspath(__file__))
 LIC = {"sbr": ("sportsbookreview.com odds via FinnedAI scraper", "scraper MIT; odds belong to SBR; private research use", "https://github.com/FinnedAI/sportsbookreview-scraper"),
        "hockeyr": ("hockeyR / hockeyR-data", "code MIT; derived table ours; raw pbp unlicensed, not committed", "https://github.com/danmorse314/hockeyR"),
        "info_history": ("nflverse injuries/snaps/schedules (+ scripts for NHL API, NBA, Open-Meteo)", "nflverse-data license believed CC-BY-4.0 (verify at the repo); our scripts MIT-free own code; NHL, NBA, Open-Meteo fetched by script, see README", "https://github.com/nflverse/nflverse-data"),
+       "nba_box": ("ESPN public site API box scores", "public game facts; private research use", "https://site.api.espn.com/apis/site/v2/sports/basketball/nba"),
        "beatthebookie": ("BeatTheBookie", "code GPL-3.0; data license unstated, not committed", "https://github.com/Lisandro79/BeatTheBookie")}
 rows = []
 for d, (src, lic, url) in LIC.items():

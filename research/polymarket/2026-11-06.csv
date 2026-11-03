@@ -1,0 +1,10 @@
+seen_at_et,game_id,date,away,home,market,line_home,long_side,slug,bid,ask,bid_depth,ask_depth,mid_home_or_over,last,shares_traded,open_interest,line_source
+2026-11-02 20:40,22600026,2026-11-06,bos,cha,moneyline,,away,aec-nba-bos-cha-2026-11-06,0.51,0.87,11.0,9.0,0.31,0.87,374.82,85.93,team
+2026-11-02 20:40,22600025,2026-11-06,wsh,atl,moneyline,,away,aec-nba-was-atl-2026-11-06,0.12,0.45,7.0,7.0,0.715,0.46,34.28,17.28,team
+2026-11-02 20:40,22600027,2026-11-06,phi,cle,moneyline,,away,aec-nba-phi-cle-2026-11-06,0.3,0.8,9.0,9.0,0.45,,0.0,,team
+2026-11-02 20:40,22600028,2026-11-06,utah,dal,moneyline,,away,aec-nba-uta-dal-2026-11-06,0.11,0.86,9.0,9.0,0.515,,0.0,,team
+2026-11-02 20:40,22600030,2026-11-06,tor,mil,moneyline,,away,aec-nba-tor-mil-2026-11-06,0.15,0.88,9.0,9.0,0.485,,0.0,,team
+2026-11-02 20:40,22600031,2026-11-06,min,no,moneyline,,away,aec-nba-min-no-2026-11-06,0.45,0.87,8.0,8.0,0.34,,0.0,,team
+2026-11-02 20:40,22600029,2026-11-06,okc,mem,moneyline,,away,aec-nba-okc-mem-2026-11-06,0.54,0.88,8.0,9.0,0.29,0.54,165.94,34.94,team
+2026-11-02 20:40,22600033,2026-11-06,sa,sac,moneyline,,away,aec-nba-sa-sac-2026-11-06,0.54,0.96,5.0,4.0,0.25,0.8,30.0,5.0,team
+2026-11-02 20:40,22600032,2026-11-06,por,lal,moneyline,,away,aec-nba-por-lal-2026-11-06,0.08,0.91,5.0,6.0,0.505,0.09,480.92,50.22,team

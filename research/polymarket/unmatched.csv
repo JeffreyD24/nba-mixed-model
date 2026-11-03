@@ -7,3 +7,4 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-01 21:00,nba-tor-lal-2026-11-01,TOR Raptors vs. LA Lakers,2026-11-01 21:00,"lal,tor",no matching game in the model files
 2026-11-02 08:00,nba-lead-pts-2026-11-02,NBA Nov 2nd Points Leader,2026-11-02 19:00,"bos,cha,cle,dal,den,det,hou,ind,lac,lal,mem,okc,orl,phi,phx,por,sa,sac,tor,wsh",no matching game in the model files
 2026-11-02 08:05,nba-lead-3pm-2026-11-02,NBA Nov 2nd 3-Pointers Made Leader,2026-11-02 19:00,"atl,bkn,bos,cha,chi,cle,den,det,hou,lac,lal,mem,mil,min,ny,okc,orl,phi,phx,por,sa,sac,tor,utah,wsh",no matching game in the model files
+2026-11-02 19:00,nba-okc-cle-2026-11-02,OKC Thunder vs. CLE Cavaliers,2026-11-02 19:00,"cle,okc",no matching game in the model files

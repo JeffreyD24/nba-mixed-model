@@ -59,7 +59,7 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [ ] Plan for limits: decide what you do when DraftKings/FanDuel/Fanatics cap you (prediction markets once outside Connecticut)
 
 ### H. Communities (needs your browser)
-- [x] Four r/algobetting threads read from user's pastes (props season review, LLM bots, "Has anyone done it", and a deleted-post comment set); notes in research/community_notes. Only "Has anyone done it" is in this line: (research/community_notes). Nothing new beyond a live-line overreaction idea (not built)
+- [x] Four r/algobetting threads read from your pastes ("Has anyone done it", NBA props season review, LLM bots, comments from a deleted post); notes in research/community_notes. Only new ideas: bootstrap intervals, calibration table, stack with the market; live-line overreaction parked
 - [~] X public search done (research/community_notes). Reddit/4chan still open: re-do the sweep with the Claude desktop app browser or the Chrome extension (my shell cannot reach those sites)
 
 ## When to switch to Opus

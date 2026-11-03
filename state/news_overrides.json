@@ -229,5 +229,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzelol4lbh23",
   "text": "LaMelo Ball: Cleared to play Monday    https://www.rotowire.com/basketball/player/lamelo-ball-5151",
   "swing": 2.49
+ },
+ "2026-11-02|tor|scottie barnes": {
+  "status": "Available",
+  "player": "Scottie Barnes",
+  "game_id": 22600171,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-02 21:24:45",
+  "seen_at_et": "2026-11-02 21:26:52",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzervo54lt2v",
+  "text": "Scottie Barnes: Officially cleared to play Monday    https://www.rotowire.com/basketball/player/scottie-barnes-5390",
+  "swing": 1.32
  }
 }

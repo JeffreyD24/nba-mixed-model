@@ -1,0 +1,55 @@
+name: Early NBA model (Polymarket only)
+
+# Runs the normal tracker (model only) in a scratch copy for games 2-4 days ahead and saves only the model files, to state/early/.
+# Nothing here touches the picks logs, bet records or bet alerts; only polymarket.py reads state/early/ (as "@early" paper trades).
+
+on:
+  schedule:
+    - cron: "40 12 * * *"      # 8:40 AM EDT
+    - cron: "40 0 * * *"       # 8:40 PM EDT
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: state-writes
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          pip install -q -r requirements.txt
+      - name: Run the tracker in scratch copies for 2, 3 and 4 days ahead
+        run: |
+          mkdir -p state/early
+          TODAY=$(TZ=America/New_York date +%F)
+          for k in 2 3 4; do
+            D=$(date -d "$TODAY + $k day" +%F)
+            rm -rf /tmp/early && mkdir /tmp/early && cp -r . /tmp/early/ && rm -rf /tmp/early/.git
+            echo "=== early model for $D ==="
+            if (cd /tmp/early && python tracker.py . "$D" --model-only > /tmp/early.log 2>&1); then
+              tail -3 /tmp/early.log
+              [ -f "/tmp/early/state/model_$D.json" ] && cp "/tmp/early/state/model_$D.json" "state/early/model_$D.json" || echo "no games or no model file for $D"
+            else
+              echo "tracker failed for $D:"; tail -15 /tmp/early.log
+            fi
+          done
+          for f in state/early/model_*.json; do [ -e "$f" ] && [ "${f:18:10}" \< "$TODAY" ] && rm "$f"; done; ls -la state/early || true
+      - name: Save
+        run: |
+          git config user.name "nba-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/early
+          git diff --cached --quiet || git commit -q -m "Early NBA model $(TZ=America/New_York date +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 10; done

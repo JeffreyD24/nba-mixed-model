@@ -13,3 +13,6 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-02 19:30,nba-was-orl-2026-11-02,WAS Wizards vs. ORL Magic,2026-11-02 19:30,"orl,wsh",no matching game in the model files
 2026-11-02 19:30,nba-bkn-ny-2026-11-02,BKN Nets vs. NY Knicks,2026-11-02 19:30,"bkn,ny",no matching game in the model files
 2026-11-02 19:30,nba-atl-ind-2026-11-02,ATL Hawks vs. IND Pacers,2026-11-02 19:30,"atl,ind",no matching game in the model files
+2026-11-02 20:00,nba-no-mem-2026-11-02,NO Pelicans vs. MEM Grizzlies,2026-11-02 20:00,"mem,no",no matching game in the model files
+2026-11-02 20:00,nba-mil-min-2026-11-02,MIL Bucks vs. MIN Timberwolves,2026-11-02 20:00,"mil,min",no matching game in the model files
+2026-11-02 20:00,nba-sac-dal-2026-11-02,SAC Kings vs. DAL Mavericks,2026-11-02 20:00,"dal,sac",no matching game in the model files

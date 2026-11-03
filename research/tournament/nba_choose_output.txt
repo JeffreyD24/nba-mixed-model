@@ -1,0 +1,21 @@
+
+== SPREAD  (BUILD 2014-2018 games 4976, CHOOSE 2019-2022 games 3662)
+candidate             weight | BUILD dMSE | CHOOSE dMSE         90% range   P<0 |  bets   win%   units    CLV | pass
+1 opener                0.00 |      +0.00 |       +0.00 [ +0.00, +0.00]  0.00 |     0   0.0%    +0.0   +nan | -
+2 Elo                   0.05 |      +0.02 |       -0.03 [ -0.15, +0.10]  0.63 |     1 100.0%    +0.9  +9.00 | -
+3 simple averages       0.03 |      +0.01 |       +0.01 [ -0.06, +0.08]  0.43 |     0   0.0%    +0.0   +nan | -
+4 Model 1               0.13 |      +0.11 |       +0.12 [ -0.18, +0.41]  0.25 |   233  54.1%    +7.5  +0.57 | -
+5 Model 1 + form        0.13 |      +0.10 |       +0.17 [ -0.13, +0.46]  0.17 |   221  52.9%    +2.4  +0.61 | -
+6 stack                stack |      +0.17 |       +0.24 [ -0.11, +0.59]  0.13 |   408  54.4%   +15.8  +0.54 | -
+PICK for spread: none (nothing beats the opener on CHOOSE)
+
+== TOTAL  (BUILD 2014-2018 games 5345, CHOOSE 2019-2022 games 3961)
+candidate             weight | BUILD dMSE | CHOOSE dMSE         90% range   P<0 |  bets   win%   units    CLV | pass
+1 opener                0.00 |      +0.00 |       +0.00 [ +0.00, +0.00]  0.00 |     0   0.0%    +0.0   +nan | -
+3 simple averages       0.05 |      +0.06 |       -0.06 [ -0.31, +0.17]  0.68 |     0   0.0%    +0.0   +nan | -
+4 Model 1               0.07 |      +0.06 |       +0.23 [ -0.03, +0.49]  0.08 |     6 100.0%    +5.5  +7.33 | -
+5 Model 1 + form        0.09 |      +0.09 |       +0.59 [ +0.25, +0.92]  0.00 |    20  80.0%   +10.5  +5.95 | PASS
+6 stack                stack |      +0.48 |       +1.40 [ +0.74, +2.03]  0.00 |   469  54.8%   +21.6  +1.30 | PASS
+PICK for total: 6 stack
+stack coefficients (spread, BUILD): intercept -0.042, Model1-line +0.262, Elo-line -0.088, simple-line -0.074, form -0.009, rested -0.018
+stack coefficients (total, BUILD): intercept +0.477, Model1-line +0.123, simple-line +0.030, form +0.012, altitude -0.088, rested +0.275

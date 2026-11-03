@@ -31,6 +31,7 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
       0.25 weight on its disagreement for spreads (+/-0.09) and 0.39 for totals (+/-0.10); against CLOSING lines about 0 (-0.06 and -0.13).
 - [ ] Add "Model 1 shrunk" as a side-by-side record (do NOT change Model 1; new version = new record, per your rule): shrunk number =
       line + w x (model - line) with w = 0.25 spreads / 0.39 totals, thresholds re-derived by backtest
+- [ ] Same test as a regularized logistic/linear stack that takes model number AND market number as inputs, fitted on earlier seasons and scored on a later one (idea from the r/algobetting LLM thread; see community_notes)
 - [ ] Repeat the weight test for NHL and NFL (needs their walk-forward prediction files lined up with openers) (O: choosing thresholds without overfitting)
 
 ### C. Keep models simple
@@ -58,7 +59,7 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [ ] Plan for limits: decide what you do when DraftKings/FanDuel/Fanatics cap you (prediction markets once outside Connecticut)
 
 ### H. Communities (needs your browser)
-- [x] r/algobetting "Has anyone done it" read from user's paste (research/community_notes). Nothing new beyond a live-line overreaction idea (not built)
+- [x] Four r/algobetting threads read from user's pastes (props season review, LLM bots, "Has anyone done it", and a deleted-post comment set); notes in research/community_notes. Only "Has anyone done it" is in this line: (research/community_notes). Nothing new beyond a live-line overreaction idea (not built)
 - [~] X public search done (research/community_notes). Reddit/4chan still open: re-do the sweep with the Claude desktop app browser or the Chrome extension (my shell cannot reach those sites)
 
 ## When to switch to Opus

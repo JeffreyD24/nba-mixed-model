@@ -1,0 +1,5 @@
+LOCKBOX total: 6 stack refit on 2014-2022 -> dMSE +2.03 [+0.73,+3.36] P<0 0.01; 1647 bets 53.7% +42.5u CLV +1.38 -> PASS
+   2023: dMSE +1.93, 304 bets 53.6% +7.2u CLV +1.41
+   2024: dMSE +2.91, 497 bets 52.7% +3.2u CLV +1.41
+   2025: dMSE +2.64, 432 bets 54.4% +16.6u CLV +1.58
+   2026: dMSE +0.63, 414 bets 54.3% +15.5u CLV +1.10

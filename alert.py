@@ -84,6 +84,11 @@ TOTALS_AT_OPENER = True             # Nov 4, 2026 (rule audit, approved): totals
                                     # waiting for the 8 PM night-before report. DK openers post 2-7 PM (74% before 8 PM); 2023-26 at the
                                     # opener with the previous game's report +109.3u (1,565 bets, 56.0%) vs the old wait-then-move-toward
                                     # rule ~+17.5u. Spreads keep the gate: without the report they fall to +12.5u; after it, ~9 PM line +44.1u.
+SPREAD_OPENER_EDGE = 5.0            # Nov 4, 2026 (approved; research/spreads/SPREAD_OPENER_TIMING_2026-11-04.md): a spread with this much edge
+                                    # alerts at the opener on the latest injury info instead of waiting for the 8 PM report. 2023-26, live
+                                    # rules, opener with the previous game's report: edge 5+ 152 bets 61.8% +27.5u (+3.9/+12.0/+11.5 by season)
+                                    # vs waiting 92 bets +20.6u; edge 3-4 at the opener -18.8u, so smaller edges still wait. Whole policy
+                                    # +38.5u (307 bets) vs +31.7u (247) waiting for everything; better in all 3 seasons. None = always wait.
 MAX_PRICE = -120                    # worst price to bet at: bets with 3+ pts of edge won about 55% at the opener in the
                                     # backtests (bigger edges no better), and 55% breaks even at about -122
 AGAINST_MOVE = 0.5                  # caution when the line moved this much AGAINST the bet since opening. Backtest (2024-26, lines
@@ -372,7 +377,7 @@ def main():
                 f"or if it rises to {o + AGAINST_MOVE:g} or higher (the market moving against the model). Price {MAX_PRICE} or better.")
 
     RULE_TXT = ("Rule: BET while the line is at the opener or moved toward the model, with 3+ pts of edge left. PASS if it moved "
-                "against the model by 0.5+ since it opened. Totals bet at the opener; spreads wait for the 8 PM injury report.")
+                "against the model by 0.5+ since it opened. Totals bet at the opener; spreads wait for the 8 PM injury report unless the edge is 5+.")
 
     news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
     # ---- key players: undecided injury statuses and status changes
@@ -697,7 +702,8 @@ def main():
                         news_bet = not (abs(eb) >= THRESHOLD and (eb > 0) == (e > 0))
                 moved_against = (opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE and against_us(market, side, cur - opn))
                 prov = PROVISIONAL_NEWS_SPREADS and news_bet and moved_against and not is_news
-                at_open_ok = TOTALS_AT_OPENER and market == "total"      # totals: bet now on the latest info (see TOTALS_AT_OPENER)
+                at_open_ok = ((TOTALS_AT_OPENER and market == "total")        # totals: bet now on the latest info (see TOTALS_AT_OPENER)
+                              or (market == "spread" and SPREAD_OPENER_EDGE is not None and abs(e) >= SPREAD_OPENER_EDGE))   # big spread edges too
                 if not fresh and not at_open_ok: skip = "no current injury report"
                 elif (h is None or a is None) and not at_open_ok: skip = "a team has not filed its injury report"
                 elif (not is_news and not prov and opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE
@@ -750,6 +756,10 @@ def main():
                 if market == "total" and (not fresh or h is None or a is None):
                     body += ("\nBet at the opener: the current injury report isn't in yet for this game. If it moves this bet under 3 pts or flips it "
                              "before you've logged it, you'll get a DON'T BET.")
+                elif market == "spread" and (not fresh or h is None or a is None):
+                    body += (f"\nBet at the opener: the current injury report isn't in yet, but spread edges of {SPREAD_OPENER_EDGE:g}+ pts don't wait "
+                             "for it (2023-26: 61.8%, +27.5u at the opener vs +20.6u waiting). If the report moves this bet under 3 pts or flips it "
+                             "before you've logged it, you'll get a DON'T BET.")
                 body += limbo_text(SW, g, margin, total, market, side, e, always=True) + hist_txt + news_for(g)
                 prio = "high"; why = ""
                 cb = caution_before(g["game_id"], market)
@@ -757,7 +767,8 @@ def main():
                     t0 = pd.Timestamp(cb.alerted_at_et).strftime("%-I:%M %p")
                     reason = str(cb.skipped)
                     rep_now = fresh and h is not None and a is not None
-                    cleared = ("totals now bet at the opener on the latest injury info" if (("filed" in reason or "injury report" in reason)
+                    cleared = ((f"spread edges of {SPREAD_OPENER_EDGE:g}+ pts now bet at the opener on the latest injury info" if market == "spread"
+                                else "totals now bet at the opener on the latest injury info") if (("filed" in reason or "injury report" in reason)
                                                                                                and not rep_now) else
                                "both teams have now filed injury reports" if "filed" in reason else
                                "a current injury report is now out" if "injury report" in reason else

@@ -54,3 +54,10 @@ Pinnacle's first price agreeing.
 ## What happens with the answer
 - Passes: propose as a PROVISIONAL rule (new version row in state/bet_versions.csv), test-tracked first, alerts only after approval.
 - Fails: the moneyline stays test-only (state/ml_test.csv), and anything learned (e.g. star absences) gets tried on spreads/totals.
+
+## Addendum (pushed before the choose-season results were looked at)
+- Code: analysis/ml_v2_data.py (games, prices, schedule), ml_v2_features.py (ratings, Elo, availability), ml_v2_eval.py (everything graded).
+- Lag: every feature uses results through two nights before the game (the repo's one-day lag rule).
+- M0 cannot be rebuilt on 2011-19 (the live spread model only exists for 2023-26), so the old moneyline result is quoted as the reference.
+- Tie-break for the choice: among models passing the gate, the model + EV bar with the best choose-season mean CLV and 100+ bets.
+- M1 decay tau picked from {30, 60, 120} days by leave-one-season-out log loss on the build seasons.

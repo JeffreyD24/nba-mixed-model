@@ -36,6 +36,8 @@ jobs:
         run: python bet_record.py . || echo "Bet record not updated; it will run again tomorrow."
       - name: Provisional bets review (Nov 4, 2026; research/PROVISIONAL_BETS.md stop/promote lines)
         run: python provisional_review.py . || echo "Provisional review not updated; it will run again tomorrow."
+      - name: Shadow record of bets passed for a line move against (Nov 4, 2026; analysis/LINE_MOVE_PREREG.md; not bets)
+        run: python shadow_passed.py . || echo "Shadow record not updated; it will run again tomorrow."
       - name: Model 1 shrunk side-by-side record (Nov 3, 2026; Model 1 unchanged)
         run: python shrunk_record.py . || echo "Shrunk record not updated; it will run again tomorrow."
       - name: NBA totals stack side-by-side record (Nov 3, 2026; v4 unchanged)

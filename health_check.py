@@ -72,6 +72,8 @@ COMMON = {
     "state/poly_paper.csv": (72, "Polymarket paper trades", "warn"),
 }
 STREAMS = dict(COMMON)
+if SPORT == "nba":   # Nov 4, 2026: line-move shadow record (analysis/LINE_MOVE_PREREG.md); NBA only for now
+    STREAMS["state/shadow_passed.md"] = (30, "Shadow record of bets passed for a line move against (daily)")
 if SPORT == "nhl":
     STREAMS.update({"research/goalies.csv": (30, "Goalie status log"), "research/line_moves": (30, "Line moves (9 books)"),
                     "research/edge": (30, "Edge research files", "warn"), "research/live": (30, "Live line recorder", "warn"),

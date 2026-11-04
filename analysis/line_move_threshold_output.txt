@@ -1,0 +1,184 @@
+
+================ NBA TOTALS, DraftKings 2023-26 (in-sample), 1568 opener bets with edge 3+ ================
+snapshot opener matches the recorded opener: 100%; early line (30-90 min after open) found: 96%; median snapshots per game 38
+reference: bet every opener:  1565 bets  56.0%  +109.3u ( +7.0/100)  CLV +1.45  seasons +35.9, +27.9, +45.5
+
+T1 size of the move since the open, betting the line at that time (side fixed at the opener; model edge must still be 3+ same side)
+  early line (30-90 min after open)
+    unmoved           1225 bets  56.1%   +86.5u ( +7.1/100)  CLV +1.29  seasons +50.0, +10.6, +25.9
+    toward 0.5+        125 bets  56.8%   +10.5u ( +8.4/100)  CLV +2.09  seasons -1.4, +3.8, +8.1
+    against 0.5         26 bets  50.0%    -1.2u ( -4.5/100)  CLV +1.60  seasons -3.5, +2.4, +0.0
+    against 1.0         61 bets  50.8%    -1.8u ( -3.0/100)  CLV +0.73  seasons -4.8, +1.3, +1.7
+    against 1.5          6 bets  16.7%    -4.1u (-68.2/100)  CLV +0.25  seasons -2.0, -2.1, +0.0
+    against 2.0-2.5     11 bets  36.4%    -3.4u (-30.6/100)  CLV +0.36  seasons -5.0, -0.1, +1.7
+    against 3+           1 bets   0.0%    -1.0u (-100.0/100)  CLV +2.00  seasons +0.0, +0.0, -1.0
+  9 PM night before
+    unmoved            610 bets  57.2%   +56.3u ( +9.2/100)  CLV +1.19  seasons +38.7, +5.2, +12.4
+    toward 0.5+        259 bets  55.2%   +14.0u ( +5.4/100)  CLV +1.82  seasons +3.8, +3.6, +6.5
+    against 0.5         69 bets  44.9%    -9.8u (-14.2/100)  CLV +0.24  seasons -4.6, -5.2, +0.0
+    against 1.0         78 bets  46.2%    -9.3u (-11.9/100)  CLV +0.82  seasons -12.9, +2.0, +1.6
+    against 1.5         24 bets  58.3%    +2.7u (+11.4/100)  CLV +0.35  seasons +2.2, +0.5, +0.0
+    against 2.0-2.5     35 bets  57.1%    +3.2u ( +9.1/100)  CLV -0.56  seasons +0.4, -0.6, +3.5
+    against 3+          12 bets  33.3%    -4.4u (-36.4/100)  CLV -0.08  seasons -1.3, -4.0, +0.9
+  9 AM game day
+    unmoved            147 bets  55.1%    +7.6u ( +5.2/100)  CLV +0.41  seasons -5.1, +7.0, +5.7
+    toward 0.5+        448 bets  53.6%   +10.2u ( +2.3/100)  CLV +0.54  seasons +22.2, -21.2, +9.2
+    against 0.5         64 bets  64.1%   +14.3u (+22.3/100)  CLV +0.42  seasons +8.7, +5.5, +0.0
+    against 1.0        163 bets  56.4%   +12.6u ( +7.8/100)  CLV +0.09  seasons +0.3, +7.4, +5.0
+    against 1.5         50 bets  62.0%    +9.2u (+18.4/100)  CLV +0.12  seasons +3.5, +5.7, +0.0
+    against 2.0-2.5    117 bets  48.7%    -8.2u ( -7.0/100)  CLV +0.40  seasons -15.2, -1.1, +8.1
+    against 3+          87 bets  50.6%    -3.0u ( -3.4/100)  CLV -0.07  seasons +3.9, -5.2, -1.7
+  closing line
+    unmoved            102 bets  55.9%    +6.8u ( +6.7/100)  seasons +2.2, +2.0, +2.6
+    toward 0.5+        332 bets  49.4%   -18.9u ( -5.7/100)  seasons -7.1, -15.6, +3.8
+    against 0.5         53 bets  41.5%   -11.0u (-20.8/100)  seasons -2.2, -8.8, +0.0
+    against 1.0        107 bets  57.9%   +11.4u (+10.6/100)  seasons +3.2, +5.9, +2.3
+    against 1.5         48 bets  60.4%    +7.4u (+15.3/100)  seasons +5.4, +2.0, +0.0
+    against 2.0-2.5    111 bets  58.6%   +13.1u (+11.8/100)  seasons +9.1, +0.9, +3.1
+    against 3+         188 bets  50.5%    -6.6u ( -3.5/100)  seasons -1.6, -7.4, +2.4
+
+  decision buckets (pre-registered: '0.5 to under X against', bet at the line when FIRST seen at the early, 9 PM or 9 AM check)
+    0.5 to under 1.0 against:   133 bets  53.4%    +2.5u ( +1.9/100)  CLV +0.53  seasons +1.3, +1.3, +0.0
+    0.5 to under 1.5 against:   377 bets  55.4%   +22.0u ( +5.8/100)  CLV +0.49  seasons -4.5, +14.4, +12.1
+    0.5 to under 2.0 against:   432 bets  56.0%   +30.0u ( +6.9/100)  CLV +0.44  seasons -5.0, +22.9, +12.1
+    exactly 1.0 against when first seen (added after review, the live-relevant step):   239 bets  56.9%   +20.6u ( +8.6/100)  CLV +0.53  seasons -7.5, +15.0, +13.2
+    (DraftKings has posted only half-point totals and spreads since Oct 2025, so live moves come in whole points: a 0.5 move
+     cannot happen any more and the smallest real loosening is to allow 1.0-pt moves, i.e. X=1.5.)
+
+T2 timing: when did the line first reach 0.5+ against? (graded at the 9 AM line and at the close; edge 3+ at that line)
+  within 90 min of the open    n= 172 | 9 AM:   145 bets  51.0%    -3.7u ( -2.6/100)  CLV +0.29  seasons -5.6, -0.5, +2.4
+                                      | close:   125 bets  52.0%    -0.9u ( -0.7/100)  seasons -4.5, +1.2, +2.4 | at the opener:   170 bets  48.8%   -11.5u ( -6.8/100)
+  90 min to 6 h                n= 310 | 9 AM:   279 bets  50.5%    -9.8u ( -3.5/100)  CLV +0.34  seasons -6.8, -9.8, +6.8
+                                      | close:   235 bets  48.1%   -19.3u ( -8.2/100)  seasons -8.1, -16.5, +5.4 | at the opener:   310 bets  48.4%   -23.6u ( -7.6/100)
+  6 h+ after the open          n= 416 | 9 AM:   350 bets  57.4%   +33.7u ( +9.6/100)  CLV -0.25  seasons +18.2, +8.5, +7.1
+                                      | close:   346 bets  57.5%   +33.9u ( +9.8/100)  seasons +19.5, +5.8, +8.6 | at the opener:   416 bets  56.5%   +32.6u ( +7.8/100)
+  never moved 0.5 against      n= 670 | 9 AM:   302 bets  56.3%   +22.5u ( +7.5/100)  CLV +1.12  seasons +12.5, +0.0, +10.0
+                                      | close:   235 bets  49.8%   -11.6u ( -5.0/100)  seasons +2.0, -11.5, -2.2 | at the opener:   669 bets  61.1%  +111.8u (+16.7/100)
+
+T3 swing-back: lines 0.5+ against at the early line (30-90 min after open)
+  n=105; by the close: back to the opener or better 46%, partly back 7%, same 9%, further against 39%
+  avg CLV of betting the early moved line: +0.89 pts (positive = the line came back after we bet)
+  bet the early moved line:   105 bets  46.7%   -11.5u (-10.9/100)  CLV +0.89  seasons -15.4, +1.5, +2.5
+  wait and bet the close:      75 bets  52.0%    -0.5u ( -0.7/100)  seasons -4.5, +2.9, +1.0
+  reference, unmoved at the early line (n=1228): close back below the opener 33%, above 59%
+
+T4 news: lines 0.5+ against at 9 AM, split by whether the 8 PM report moved the model 1+ pt the same way as the line
+  news (model also moved against 1+)          83 bets  44.6%   -12.4u (-14.9/100)  CLV -0.34  seasons +0.7, -4.9, -8.2
+  no news (model steady or moved toward)     398 bets  57.3%   +37.3u ( +9.4/100)  CLV +0.29  seasons +0.5, +17.3, +19.5
+  (all 9 AM against-moved lines with edge still 3+ on the 8 PM report:   481 bets  55.1%   +24.9u ( +5.2/100)  CLV +0.18  seasons +1.2, +12.4, +11.4)
+  news share among against-moved: 17%; among unmoved/toward at 9 AM: 13%
+
+================ NBA SPREADS, DraftKings 2023-26 (in-sample), 419 opener bets with edge 3+ ================
+snapshot opener matches the recorded opener: 100%; early line (30-90 min after open) found: 95%; median snapshots per game 38
+reference: bet every opener:   417 bets  54.0%   +12.5u ( +3.0/100)  CLV +0.83  seasons +0.5, +11.5, +0.6
+
+T1 size of the move since the open, betting the line at that time (side fixed at the opener; model edge must still be 3+ same side)
+  early line (30-90 min after open)
+    unmoved            327 bets  53.2%    +5.2u ( +1.6/100)  CLV +0.63  seasons +0.3, +2.8, +2.1
+    toward 0.5+         38 bets  68.4%   +11.6u (+30.6/100)  CLV +0.85  seasons +5.9, +4.9, +0.8
+    against 0.5          8 bets  37.5%    -2.3u (-28.4/100)  CLV +0.75  seasons -3.2, +0.9, +0.0
+    against 1.0          5 bets  80.0%    +2.6u (+52.7/100)  CLV +1.80  seasons +0.9, +0.8, +0.9
+    against 1.5          1 bets 100.0%    +0.9u (+90.9/100)  CLV +1.50  seasons +0.0, +0.9, +0.0
+    against 2.0-2.5      1 bets   0.0%    -1.0u (-100.0/100)  CLV +1.50  seasons -1.0, +0.0, +0.0
+    against 3+           0 bets   0.0%    +0.0u ( +0.0/100)  seasons +0.0, +0.0, +0.0
+  9 PM night before
+    unmoved            160 bets  55.6%    +9.9u ( +6.2/100)  CLV +0.68  seasons -0.3, +7.5, +2.6
+    toward 0.5+         58 bets  60.3%    +8.8u (+15.2/100)  CLV +0.41  seasons +3.6, +1.6, +3.5
+    against 0.5         15 bets  73.3%    +6.0u (+40.0/100)  CLV +0.30  seasons +5.4, +0.6, +0.0
+    against 1.0         12 bets  41.7%    -2.5u (-20.5/100)  CLV +0.83  seasons -3.1, -1.1, +1.7
+    against 1.5          3 bets  66.7%    +0.8u (+27.3/100)  CLV +0.83  seasons +1.8, -1.0, +0.0
+    against 2.0-2.5      5 bets  40.0%    -1.2u (-23.6/100)  CLV +0.60  seasons -2.0, +1.8, -1.0
+    against 3+           0 bets   0.0%    +0.0u ( +0.0/100)  seasons +0.0, +0.0, +0.0
+  9 AM game day
+    unmoved             74 bets  54.1%    +2.4u ( +3.2/100)  CLV +0.24  seasons +0.8, -2.8, +4.4
+    toward 0.5+         95 bets  61.1%   +15.7u (+16.6/100)  CLV +0.05  seasons +6.8, +2.5, +6.5
+    against 0.5         31 bets  51.6%    -0.5u ( -1.5/100)  CLV +0.58  seasons -3.7, +3.3, +0.0
+    against 1.0         32 bets  46.9%    -3.4u (-10.5/100)  CLV +0.72  seasons +1.6, -6.2, +1.2
+    against 1.5          9 bets  44.4%    -1.4u (-15.2/100)  CLV +0.67  seasons -4.1, +2.7, +0.0
+    against 2.0-2.5      9 bets  33.3%    -3.3u (-36.4/100)  CLV +0.28  seasons -3.0, +1.7, -2.0
+    against 3+          10 bets  10.0%    -8.1u (-80.9/100)  CLV +0.10  seasons -3.0, -1.1, -4.0
+  closing line
+    unmoved             52 bets  44.2%    -8.1u (-15.6/100)  seasons -5.5, -2.5, -0.1
+    toward 0.5+         81 bets  55.6%    +4.9u ( +6.1/100)  seasons -4.4, +3.5, +5.8
+    against 0.5         21 bets  42.9%    -3.8u (-18.2/100)  seasons -1.5, -2.4, +0.0
+    against 1.0         39 bets  43.6%    -6.5u (-16.8/100)  seasons -0.5, -4.3, -1.7
+    against 1.5         13 bets  53.8%    +0.4u ( +2.8/100)  seasons +3.5, -3.1, +0.0
+    against 2.0-2.5     13 bets  30.8%    -5.4u (-41.3/100)  seasons -5.0, +0.7, -1.1
+    against 3+          20 bets  50.0%    -0.9u ( -4.5/100)  seasons +0.7, -0.4, -1.3
+
+  decision buckets (pre-registered: '0.5 to under X against', bet at the line when FIRST seen at the early, 9 PM or 9 AM check)
+    0.5 to under 1.0 against:    47 bets  51.1%    -1.2u ( -2.5/100)  CLV +0.56  seasons -5.2, +4.0, +0.0
+    0.5 to under 1.5 against:    85 bets  48.2%    -6.7u ( -7.9/100)  CLV +0.67  seasons -7.5, -1.3, +2.0
+    0.5 to under 2.0 against:    91 bets  48.4%    -7.0u ( -7.7/100)  CLV +0.71  seasons -9.5, +0.5, +2.0
+    exactly 1.0 against when first seen (added after review, the live-relevant step):    38 bets  47.4%    -3.6u ( -9.6/100)  CLV +0.87  seasons -3.2, -2.5, +2.0
+    (DraftKings has posted only half-point totals and spreads since Oct 2025, so live moves come in whole points: a 0.5 move
+     cannot happen any more and the smallest real loosening is to allow 1.0-pt moves, i.e. X=1.5.)
+
+T2 timing: when did the line first reach 0.5+ against? (graded at the 9 AM line and at the close; edge 3+ at that line)
+  within 90 min of the open    n=  34 | 9 AM:    25 bets  48.0%    -2.1u ( -8.4/100)  CLV +0.57  seasons -4.5, +4.4, -2.0
+                                      | close:    21 bets  42.9%    -3.8u (-18.2/100)  seasons -3.4, +1.5, -2.0 | at the opener:    34 bets  50.0%    -1.5u ( -4.5/100)
+  90 min to 6 h                n=  67 | 9 AM:    52 bets  50.0%    -2.4u ( -4.5/100)  CLV +0.39  seasons -2.6, +0.1, +0.2
+                                      | close:    47 bets  44.7%    -6.9u (-14.7/100)  seasons -3.5, -3.8, +0.4 | at the opener:    67 bets  46.3%    -7.8u (-11.7/100)
+  6 h+ after the open          n= 111 | 9 AM:    89 bets  47.2%    -8.8u ( -9.9/100)  CLV -0.22  seasons -1.8, -5.9, -1.1
+                                      | close:    90 bets  45.6%   -11.7u (-13.0/100)  seasons -4.6, -6.9, -0.2 | at the opener:   109 bets  45.0%   -15.5u (-14.2/100)
+  never moved 0.5 against      n= 207 | 9 AM:    94 bets  60.6%   +14.8u (+15.8/100)  CLV +0.61  seasons +4.4, +1.5, +8.9
+                                      | close:    81 bets  54.3%    +3.0u ( +3.7/100)  seasons -1.2, +0.7, +3.5 | at the opener:   207 bets  61.8%   +37.4u (+18.1/100)
+
+T3 swing-back: lines 0.5+ against at the early line (30-90 min after open)
+  n=15; by the close: back to the opener or better 60%, partly back 7%, same 0%, further against 33%
+  avg CLV of betting the early moved line: +1.20 pts (positive = the line came back after we bet)
+  bet the early moved line:    15 bets  53.3%    +0.3u ( +1.8/100)  CLV +1.20  seasons -3.3, +2.6, +0.9
+  wait and bet the close:       7 bets  28.6%    -3.2u (-45.5/100)  seasons -1.2, -1.0, -1.0
+  reference, unmoved at the early line (n=329): close back below the opener 30%, above 54%
+
+T4 news: lines 0.5+ against at 9 AM, split by whether the 8 PM report moved the model 1+ pt the same way as the line
+  news (model also moved against 1+)          25 bets  32.0%    -9.7u (-38.9/100)  CLV +1.12  seasons -9.0, +0.5, -1.3
+  no news (model steady or moved toward)      66 bets  47.0%    -6.8u (-10.3/100)  CLV +0.33  seasons -3.2, -0.1, -3.5
+  (all 9 AM against-moved lines with edge still 3+ on the 8 PM report:    91 bets  42.9%   -16.5u (-18.2/100)  CLV +0.55  seasons -12.2, +0.5, -4.8)
+  news share among against-moved: 28%; among unmoved/toward at 9 AM: 25%
+
+================ OUT OF SAMPLE: SBR 2013-14..2021-22, Model 1 (no injuries), opener edge 3+, move open -> close ================
+  TOTALS, all seasons: 4361 bets; at the opener  4311 bets  52.8%   +34.1u ( +0.8/100)
+    unmoved          bet at the close:   327 bets  55.0%   +16.6u ( +5.1/100)   (same games at the opener:   327 bets  55.0%   +16.6u ( +5.1/100))
+    toward 0.5+      bet at the close:   947 bets  50.1%   -42.1u ( -4.4/100)   (same games at the opener:  2362 bets  58.0%  +253.5u (+10.7/100))
+    against 0.5      bet at the close:   301 bets  54.8%   +14.0u ( +4.7/100)   (same games at the opener:   295 bets  53.6%    +6.6u ( +2.2/100))
+    against 1.0      bet at the close:   266 bets  51.1%    -6.4u ( -2.4/100)   (same games at the opener:   270 bets  49.3%   -16.1u ( -6.0/100))
+    against 1.5      bet at the close:   235 bets  50.6%    -7.8u ( -3.3/100)   (same games at the opener:   237 bets  46.4%   -27.0u (-11.4/100))
+    against 2.0-2.5  bet at the close:   369 bets  47.7%   -33.0u ( -8.9/100)   (same games at the opener:   374 bets  42.2%   -72.4u (-19.3/100))
+    against 3+       bet at the close:   446 bets  46.6%   -48.9u (-11.0/100)   (same games at the opener:   446 bets  37.4%  -127.2u (-28.5/100))
+    decision bucket 0.5 to under 1.0 against, at the close:   301 bets  54.8%   +14.0u ( +4.7/100)
+    decision bucket 0.5 to under 1.5 against, at the close:   567 bets  53.1%    +7.6u ( +1.3/100)
+    decision bucket 0.5 to under 2.0 against, at the close:   802 bets  52.4%    -0.2u ( -0.0/100)
+  TOTALS, without 2019-20 and 2020-21: 3561 bets; at the opener  3514 bets  52.4%    +0.6u ( +0.0/100)
+    unmoved          bet at the close:   283 bets  54.1%    +9.1u ( +3.2/100)   (same games at the opener:   283 bets  54.1%    +9.1u ( +3.2/100))
+    toward 0.5+      bet at the close:   774 bets  49.1%   -48.5u ( -6.3/100)   (same games at the opener:  1873 bets  57.9%  +198.4u (+10.6/100))
+    against 0.5      bet at the close:   249 bets  54.2%    +8.7u ( +3.5/100)   (same games at the opener:   243 bets  52.7%    +1.4u ( +0.6/100))
+    against 1.0      bet at the close:   234 bets  50.0%   -10.6u ( -4.5/100)   (same games at the opener:   238 bets  47.9%   -20.4u ( -8.6/100))
+    against 1.5      bet at the close:   198 bets  49.5%   -10.9u ( -5.5/100)   (same games at the opener:   200 bets  45.0%   -28.2u (-14.1/100))
+    against 2.0-2.5  bet at the close:   309 bets  49.2%   -18.8u ( -6.1/100)   (same games at the opener:   312 bets  42.9%   -56.2u (-18.0/100))
+    against 3+       bet at the close:   367 bets  46.9%   -38.6u (-10.5/100)   (same games at the opener:   365 bets  37.5%  -103.5u (-28.3/100))
+    decision bucket 0.5 to under 1.0 against, at the close:   249 bets  54.2%    +8.7u ( +3.5/100)
+    decision bucket 0.5 to under 1.5 against, at the close:   483 bets  52.2%    -1.9u ( -0.4/100)
+    decision bucket 0.5 to under 2.0 against, at the close:   681 bets  51.4%   -12.8u ( -1.9/100)
+  SPREADS, all seasons: 2501 bets; at the opener  2456 bets  49.8%  -123.1u ( -5.0/100)
+    unmoved          bet at the close:   380 bets  49.7%   -19.2u ( -5.0/100)   (same games at the opener:   380 bets  49.7%   -19.2u ( -5.0/100))
+    toward 0.5+      bet at the close:   552 bets  48.7%   -38.5u ( -7.0/100)   (same games at the opener:  1101 bets  54.6%   +46.4u ( +4.2/100))
+    against 0.5      bet at the close:   337 bets  52.8%    +2.8u ( +0.8/100)   (same games at the opener:   334 bets  50.6%   -11.4u ( -3.4/100))
+    against 1.0      bet at the close:   230 bets  52.2%    -0.9u ( -0.4/100)   (same games at the opener:   234 bets  47.4%   -22.1u ( -9.4/100))
+    against 1.5      bet at the close:   181 bets  46.4%   -20.6u (-11.4/100)   (same games at the opener:   181 bets  41.4%   -37.8u (-20.9/100))
+    against 2.0-2.5  bet at the close:   145 bets  42.8%   -26.6u (-18.4/100)   (same games at the opener:   149 bets  32.2%   -57.4u (-38.5/100))
+    against 3+       bet at the close:    75 bets  49.3%    -4.4u ( -5.8/100)   (same games at the opener:    77 bets  37.7%   -21.6u (-28.1/100))
+    decision bucket 0.5 to under 1.0 against, at the close:   337 bets  52.8%    +2.8u ( +0.8/100)
+    decision bucket 0.5 to under 1.5 against, at the close:   567 bets  52.6%    +1.9u ( +0.3/100)
+    decision bucket 0.5 to under 2.0 against, at the close:   748 bets  51.1%   -18.7u ( -2.5/100)
+  SPREADS, without 2019-20 and 2020-21: 1840 bets; at the opener  1807 bets  50.1%   -79.3u ( -4.4/100)
+    unmoved          bet at the close:   289 bets  49.8%   -14.1u ( -4.9/100)   (same games at the opener:   289 bets  49.8%   -14.1u ( -4.9/100))
+    toward 0.5+      bet at the close:   401 bets  49.4%   -23.0u ( -5.7/100)   (same games at the opener:   811 bets  55.2%   +44.3u ( +5.5/100))
+    against 0.5      bet at the close:   249 bets  53.0%    +3.0u ( +1.2/100)   (same games at the opener:   248 bets  50.4%    -9.4u ( -3.8/100))
+    against 1.0      bet at the close:   166 bets  56.6%   +13.5u ( +8.1/100)   (same games at the opener:   168 bets  51.2%    -3.8u ( -2.3/100))
+    against 1.5      bet at the close:   126 bets  45.2%   -17.2u (-13.6/100)   (same games at the opener:   128 bets  39.1%   -32.5u (-25.4/100))
+    against 2.0-2.5  bet at the close:    97 bets  42.3%   -18.7u (-19.3/100)   (same games at the opener:   101 bets  29.7%   -43.7u (-43.3/100))
+    against 3+       bet at the close:    61 bets  47.5%    -5.6u ( -9.2/100)   (same games at the opener:    62 bets  35.5%   -20.0u (-32.3/100))
+    decision bucket 0.5 to under 1.0 against, at the close:   249 bets  53.0%    +3.0u ( +1.2/100)
+    decision bucket 0.5 to under 1.5 against, at the close:   415 bets  54.5%   +16.5u ( +4.0/100)
+    decision bucket 0.5 to under 2.0 against, at the close:   541 bets  52.3%    -0.7u ( -0.1/100)

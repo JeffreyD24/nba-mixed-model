@@ -1,5 +1,14 @@
 # Research findings log
 
+## 2026-11-04: NBA spreads v2 re-graded with opener-time information (spreads plan step 1)
+Pre-registered (`research/spreads/STEP1_NBA_PREREG.md`, commit 022af82). `analysis/spreads_step1_nba.py` (output
+`spreads_step1_nba_output.txt`); full write-up with takeaways `research/spreads/STEP1_NBA_RESULTS.md`. DK openers 2023-26, edge 3+.
+- Original grading (8 PM report, lag 0) reproduces: v2 443 bets 58.9% +55.3u, CLV +1.16. Honest (previous report, lag 1): **466 bets
+  54.1% +15.1u (+3.2/100, 90% -4.3 to +10.3), CLV +0.85 pts [+0.69, +1.01]** vs break-even +0.77. Oct-Jan part 373 bets +6.9u, CLV +0.82.
+- The leak is the 8 PM injury report; the results lag is worth ~0. Bets only the 8 PM report creates: 88, 69.3%, +28.5u, CLV +1.72.
+- Pre-registered verdict: survives (CLV at break-even, units positive), thin. Home dogs -36.8u honest; Pinnacle-cancelled bets -19.8u.
+- Next: test the after-opener injury news at the line available when the report lands (spreads plan step 3).
+
 ## 2026-10-30: second-half rotations and back-to-backs (2021-22 to 2025-26, 6,148 games)
 Data: `research/minutes_history/` (minutes by quarter, games within 1 minute of the box score), results from `data/training_games.csv`.
 Close games = final margin 10 or less.

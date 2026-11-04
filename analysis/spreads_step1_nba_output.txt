@@ -1,0 +1,40 @@
+NBA spreads v2 at DraftKings openers 2023-24..2025-26 with opener-time information (prereg research/spreads/STEP1_NBA_PREREG.md)
+games graded (B): 3204; opener posted before 8 PM night before: 74%
+break-even CLV: cover rate rises 3.12 win-% pts per point the close moves toward the bet -> break-even = +0.77 pts
+columns: bets, win %, units at -110, units per 100 [90% bootstrap], CLV vs DK close, per-season units
+
+A: lag 0 + 8 PM report (original record)
+  v2 full rule                         443 58.9%   +55.3u  +12.5/100 [ +5.1,+19.6]  CLV +1.16 pts (beat close 61%, worse 23%)  | 2024:+18.5 2025:+21.6 2026:+15.1
+    Oct-Jan part                       357 58.0%   +38.2u  +10.7/100 [ +2.3,+19.0]  CLV +1.10 pts (beat close 61%, worse 24%)  | 2024:+13.4 2025:+19.3 2026:+5.5
+    Feb-Apr part (outside traps)        86 62.8%   +17.1u  +19.9/100 [ +2.1,+37.6]  CLV +1.40 pts (beat close 60%, worse 21%)  | 2024:+5.2 2025:+2.4 2026:+9.5
+  home underdogs (excluded)            334 47.0%   -34.3u  -10.3/100 [-18.9, -1.7]  CLV +0.38 pts (beat close 42%, worse 41%)  | 2024:-19.2 2025:-6.6 2026:-8.5
+  all 3+ edges, no filters            1018 52.4%    -0.5u   -0.0/100 [ -5.3, +4.8]  CLV +0.80 pts (beat close 53%, worse 31%)  | 2024:-25.5 2025:+18.0 2026:+7.0
+
+B: lag 1 + previous report (PRIMARY)
+  v2 full rule                         466 54.1%   +15.1u   +3.2/100 [ -4.3,+10.3]  CLV +0.85 pts (beat close 58%, worse 27%)  | 2024:+8.2 2025:+6.6 2026:+0.3
+    Oct-Jan part                       373 53.4%    +6.9u   +1.9/100 [ -6.0, +9.6]  CLV +0.82 pts (beat close 58%, worse 27%)  | 2024:+5.9 2025:+3.4 2026:-2.4
+    Feb-Apr part (outside traps)        93 57.0%    +8.2u   +8.8/100 [ -7.6,+25.2]  CLV +0.95 pts (beat close 55%, worse 30%)  | 2024:+2.3 2025:+3.3 2026:+2.6
+  home underdogs (excluded)            369 47.2%   -36.8u  -10.0/100 [-17.6, -2.2]  CLV +0.06 pts (beat close 38%, worse 44%)  | 2024:-17.6 2025:-6.2 2026:-13.0
+  all 3+ edges, no filters            1098 49.5%   -59.5u   -5.4/100 [-10.1, -0.7]  CLV +0.47 pts (beat close 49%, worse 35%)  | 2024:-34.3 2025:-9.2 2026:-16.0
+  v2 + Pinnacle cancel (secondary)     366 57.4%   +34.9u   +9.5/100 [ +1.7,+17.3]  CLV +1.22 pts (beat close 66%, worse 18%)  | 2024:+15.6 2025:+15.1 2026:+4.2
+    bets Pinnacle would cancel         100 42.0%   -19.8u  -19.8/100 [-35.0, -4.5]  CLV -0.50 pts (beat close 26%, worse 60%)  | 2024:-7.5 2025:-8.5 2026:-3.9
+
+C: lag 1 + 8 PM report
+  v2 full rule                         438 59.1%   +56.5u  +12.9/100 [ +5.6,+19.9]  CLV +1.08 pts (beat close 61%, worse 24%)  | 2024:+20.5 2025:+20.6 2026:+15.4
+    Oct-Jan part                       354 58.8%   +43.1u  +12.2/100 [ +4.0,+19.8]  CLV +1.04 pts (beat close 61%, worse 24%)  | 2024:+16.2 2025:+17.3 2026:+9.6
+    Feb-Apr part (outside traps)        84 60.7%   +13.4u  +15.9/100 [ -2.3,+31.8]  CLV +1.23 pts (beat close 60%, worse 24%)  | 2024:+4.3 2025:+3.4 2026:+5.7
+  home underdogs (excluded)            339 46.6%   -37.4u  -11.0/100 [-19.0, -2.3]  CLV +0.37 pts (beat close 41%, worse 41%)  | 2024:-21.1 2025:-6.8 2026:-9.5
+  all 3+ edges, no filters            1018 52.0%    -8.1u   -0.8/100 [ -5.6, +4.0]  CLV +0.77 pts (beat close 53%, worse 32%)  | 2024:-27.3 2025:+16.8 2026:+2.4
+
+D: lag 0 + previous report
+  v2 full rule                         474 54.2%   +16.6u   +3.5/100 [ -3.3,+10.3]  CLV +0.85 pts (beat close 57%, worse 28%)  | 2024:+7.0 2025:+6.6 2026:+3.0
+    Oct-Jan part                       373 53.4%    +6.9u   +1.9/100 [ -6.0, +9.4]  CLV +0.84 pts (beat close 58%, worse 27%)  | 2024:+4.9 2025:+4.5 2026:-2.5
+    Feb-Apr part (outside traps)       101 57.4%    +9.7u   +9.6/100 [ -5.5,+24.8]  CLV +0.89 pts (beat close 53%, worse 31%)  | 2024:+2.1 2025:+2.2 2026:+5.5
+  home underdogs (excluded)            368 47.6%   -33.9u   -9.2/100 [-17.1, -1.1]  CLV +0.14 pts (beat close 39%, worse 42%)  | 2024:-16.6 2025:-5.2 2026:-12.1
+  all 3+ edges, no filters            1105 49.9%   -53.1u   -4.8/100 [ -9.3, -0.0]  CLV +0.50 pts (beat close 49%, worse 35%)  | 2024:-31.6 2025:-9.1 2026:-12.4
+
+Accuracy (B games, both teams 10+): model margin MAE 11.20 vs DK opener MAE 10.93 vs DK close MAE 10.77
+  A: model MAE 11.129
+  B: model MAE 11.198
+
+A vs B: v2 bets A 443, B 471, both 360; same side when both 3+: 100%; mean |model change| 0.80 pts

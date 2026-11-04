@@ -448,3 +448,9 @@ Full catalog, scripts and per-game data: [`research/stats_catalog/`](../research
 - April runs over the opener (2023-26 +3.4, 2011-19 +1.45) but only ~51% of April games go over: tail, not a lean. January under didn't replicate.
 - Warning: altitude over (+4.3 vs opener 2023-26; +2.8 vs close 2021-26) was absent 2011-19 (-0.5). Keep v4's +3.8 but watch it first if totals slip.
 - No gain: edge size buckets, over vs under, rest, edge x early-season, polynomial edge terms. v4 is no more accurate than the opener in absolute error; profit is direction at the open.
+
+## Edge relative to noise (Nov 4, 2026, follow-up to the statistics catalog)
+`research/stats_catalog/edge_sd_test.py`, rule written before running. Noise model fit on SBR 2011-19: mean miss 13.8 pts at a 200 total,
+15.0 at 240. Ranking bets by edge / noise instead of raw edge picks 1,440 of the same 1,446 bets in 2023-26 (+119.5u either way; logistic AIC
+4400.2 vs 4400.5) and, on Model 1's 2013-22 SBR bets, the top halves by each measure both win 53.5%. Verdict: keep raw edge; the noise gradient
+is real but too small to matter for bet selection.

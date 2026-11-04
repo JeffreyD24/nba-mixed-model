@@ -7,7 +7,8 @@ openers, 2023-24 to 2025-26 seasons, both teams 10+ games: **3,204 games, 1,446 
 Market-only checks use 18,695 games of closing lines (2011-12 to 2025-26) and, as an out-of-sample test, 9,591 regular-season games with
 SportsbookReview openers 2011-12 to 2018-19 (before any season v4 was built on).
 
-Why NBA totals first: it's the model with real day-ahead openers, the longest odds history, and the clearest record. NHL is next.
+Why NBA totals first: it's the model with real day-ahead openers, the longest odds history, and the clearest record. The NHL version
+(same 98 IDs) is in `nhl-mixed-model/research/stats_catalog/`.
 
 **Read this first.** These 3 seasons were used to build and choose v4, so every in-sample test below is *descriptive*. A trend only counts as
 real if it (a) survives the multiple-testing correction in B65 *and* (b) shows up again in seasons the model never saw.
@@ -39,7 +40,9 @@ the error bars (x1.03).
 
 **5. Two market facts replicate in 2011-19 and are worth building on (B84/B87, B73).**
 - *Noise grows with the total* (Breusch-Pagan p = 0.008 here, p = 0.0005 in 2011-19). A 3-pt edge on a 240 total is worth less than on a 215
-  total. **Idea to test next:** rank bets by edge / expected SD instead of raw points.
+  total. **Tested (Nov 4, `edge_sd_test.py`, rule set in advance): it doesn't help.** The noise only grows from ~13.8 pts at a 200 total to
+  ~15.0 at 240 (fit on 2011-19), too little to reorder bets: ranking by edge/noise picks 1,440 of the same 1,446 bets in 2023-26 (same
+  +119.5u), and on 2013-22 Model 1 bets the top halves by each measure win 53.5% / 53.5%. Keep raw edge.
 - *Totals are right-skewed* (overtime): mean above median in both eras (2011-19 skew +0.30, mean +0.48, median 0.00). Big overs happen more
   than big unders, but the over doesn't win more than half the time. When "average beats the line" and "wins more than half" disagree,
   the win rate is what pays.

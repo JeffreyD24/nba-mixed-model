@@ -6457,3 +6457,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-04 02:15:43,295379,2026-11-04,2026-11-04 20:00,ind,mem,FanDuel,event,team_total,away_under,111.5,-106,normal
 2026-11-04 02:15:43,295379,2026-11-04,2026-11-04 20:00,ind,mem,FanDuel,event,team_total,home_under,118.5,-115,normal
 2026-11-04 02:15:43,295387,2026-11-04,2026-11-04 22:30,mia,lac,Fanatics,event,spread,away,-5.0,-110,normal
+2026-11-04 02:16:59,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,spread,away,-3.5,-115,normal
+2026-11-04 02:16:59,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,spread,home,3.5,-105,normal
+2026-11-04 02:18:11,295375,2026-11-04,2026-11-04 19:00,atl,wsh,BetRivers,event,team_total,away_under,117.5,-120,normal
+2026-11-04 02:18:11,295375,2026-11-04,2026-11-04 19:00,atl,wsh,BetRivers,event,team_total,away_over,117.5,-114,normal
+2026-11-04 02:18:11,295375,2026-11-04,2026-11-04 19:00,atl,wsh,BetRivers,event,team_total,home_under,115.5,-121,normal
+2026-11-04 02:18:11,295375,2026-11-04,2026-11-04 19:00,atl,wsh,BetRivers,event,team_total,home_over,115.5,-113,normal
+2026-11-04 02:18:11,295375,2026-11-04,2026-11-04 19:00,atl,wsh,BetRivers,event,spread,home,2.5,-113,normal
+2026-11-04 02:18:11,295375,2026-11-04,2026-11-04 19:00,atl,wsh,BetRivers,event,spread,away,-2.5,-110,normal
+2026-11-04 02:20:42,295374,2026-11-04,2026-11-04 19:00,phi,det,DraftKings,event,total,under,218.5,-110,normal
+2026-11-04 02:20:42,295374,2026-11-04,2026-11-04 19:00,phi,det,DraftKings,event,total,over,218.5,-110,normal

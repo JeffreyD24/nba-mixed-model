@@ -1,0 +1,185 @@
+
+================ TOTALS v2, weather = none (clean) ================
+games with DK snapshots 2020-25: 1615; Friday snapshot found after the report for 1615; median opener posted 9.0 days before the final report
+R0 reproduction (opener = first DK snapshot, early number, edge 2+, weeks 5-14):
+  opener bet (what the backtest grades)                 289 bets  56.1%   +20.3u  [20:+8.1 21:-3.9 22:+1.1 23:+11.2 24:+2.8 25:+1.0]
+  OPENER TIMING: DK opener first seen before Tue 10 AM of game week (i.e. before the previous week's games and final report that the EARLY number uses) for 98% of games; median 6.7 days earlier
+R1 FINAL-INJURY-REPORT gate (no BET before final_report_due; opener can never be bet):
+  A. opener, early number (blocked live)                289 bets  56.1%   +20.3u  [20:+8.1 21:-3.9 22:+1.1 23:+11.2 24:+2.8 25:+1.0]
+  A2. Tue 10 AM line, early number (first honest early bet)  332 bets  54.2%   +11.6u  [20:+3.6 21:-4.4 22:-1.4 23:+4.0 24:+5.9 25:+3.8]
+  A3. opener bets, graded at the Tue 10 AM line instead  282 bets  52.8%    +2.5u  [20:+5.7 21:-4.9 22:-4.6 23:+7.2 24:-3.8 25:+2.9]
+  B. Wed 4 PM line, early number (also blocked)         347 bets  52.4%    +0.5u  [20:+4.5 21:-0.9 22:-8.4 23:+3.8 24:+5.1 25:-3.7]
+  C. LIVE RULE: first check after report, final number, not vs  132 bets  53.8%    +3.5u  [20:-0.4 21:-3.3 22:-4.8 23:+5.9 24:+0.3 25:+5.8]
+  D. first check after report, final no., no move gate  420 bets  50.5%   -15.3u  [20:-0.5 21:-1.6 22:-10.4 23:-1.4 24:+4.7 25:-6.2]
+  E. Friday line, EARLY number (price effect only)      346 bets  51.2%    -8.1u  [20:-1.3 21:+1.9 22:-9.1 23:-0.1 24:+2.3 25:-1.8]
+  F. opener bets that never become live bets            168 bets  56.0%   +11.5u  [20:+7.5 21:-2.7 22:+5.9 23:+4.2 24:+1.5 25:-5.0]
+  G. live bets that were NOT opener bets                 10 bets  50.0%    -0.5u  [20:+0.0 21:-1.1 22:+0.0 23:-0.1 24:+0.9 25:-0.2]
+  avg CLV of opener bets: +1.32 pts; share of opener bets still a live bet after the report: 42%; same side: 100%
+R2 AGAINST_MOVE 0.5 (PASS if moved 0.5+ against since open). Edge 2+ at that line; mv = move toward our side since open:
+ Tue 10 AM, early number:
+     moved 0.5+ AGAINST (gate blocks)                   227 bets  52.9%    +2.1u  [20:+1.8 21:-1.5 22:-1.5 23:-1.0 24:+1.6 25:+2.5]
+     unmoved (|move| < 0.5)                              48 bets  56.2%    +3.5u  [20:-0.5 21:+0.5 22:-0.3 23:+1.7 24:+3.5 25:-1.4]
+     moved 0.5+ TOWARD                                   57 bets  57.9%    +6.0u  [20:+2.4 21:-3.4 22:+0.4 23:+3.3 24:+0.7 25:+2.6]
+     moved 1.5+ AGAINST                                 136 bets  51.5%    -2.4u  [20:-0.6 21:-3.4 22:-0.8 23:-1.4 24:+1.4 25:+2.5]
+ Wed 4 PM, early number:
+     moved 0.5+ AGAINST (gate blocks)                   248 bets  51.6%    -3.6u  [20:+5.5 21:-2.0 22:-5.6 23:-2.2 24:+9.5 25:-8.8]
+     unmoved (|move| < 0.5)                              40 bets  47.5%    -3.7u  [20:-3.4 21:+2.5 22:-1.2 23:+0.8 24:-4.1 25:+1.5]
+     moved 0.5+ TOWARD                                   59 bets  59.3%    +7.8u  [20:+2.4 21:-1.5 22:-1.5 23:+5.2 24:-0.3 25:+3.5]
+     moved 1.5+ AGAINST                                 169 bets  52.7%    +0.9u  [20:+5.8 21:-3.9 22:-3.2 23:-3.7 24:+7.3 25:-1.4]
+ first check after report, final number:
+     moved 0.5+ AGAINST (gate blocks)                   238 bets  51.7%    -3.2u  [20:+5.3 21:+5.5 22:-2.5 23:-6.0 24:+0.2 25:-5.7]
+     unmoved (|move| < 0.5)                              38 bets  50.0%    -1.7u  [20:-1.4 21:-1.2 22:-1.3 23:+0.8 24:-1.1 25:+2.4]
+     moved 0.5+ TOWARD                                   60 bets  55.0%    +3.0u  [20:-0.6 21:-0.6 22:-3.4 23:+3.5 24:+0.6 25:+3.5]
+     moved 1.5+ AGAINST                                 177 bets  53.7%    +4.4u  [20:+1.0 21:-0.5 22:+1.6 23:-3.8 24:+5.4 25:+0.6]
+ kickoff - 3 h, final number:
+     moved 0.5+ AGAINST (gate blocks)                   240 bets  52.1%    -1.4u  [20:+5.2 21:+2.7 22:-6.2 23:-2.2 24:+4.1 25:-5.0]
+     unmoved (|move| < 0.5)                              32 bets  50.0%    -1.5u  [20:-1.2 21:-1.5 22:-3.2 23:+0.9 24:+1.8 25:+1.6]
+     moved 0.5+ TOWARD                                   60 bets  55.0%    +3.0u  [20:-1.7 21:-0.5 22:+0.5 23:+4.4 24:-2.3 25:+2.5]
+     moved 1.5+ AGAINST                                 177 bets  50.3%    -7.1u  [20:-0.8 21:-2.5 22:-4.1 23:-2.7 24:+4.5 25:-1.5]
+R3 EDGE THRESHOLD (TOTAL_THRESHOLD_BLEND 2.0), weeks 5-14:
+     opener/early edge 1.0-1.5                          152 bets  52.0%    -1.2u  [20:-5.0 21:+1.8 22:-1.0 23:-3.0 24:+2.5 25:+3.5]
+     opener/early edge 1.5-2                            124 bets  58.1%   +13.5u  [20:+3.0 21:+4.5 22:-2.0 23:-3.9 24:+8.8 25:+3.0]
+     opener/early edge 2-2.5                             83 bets  50.6%    -2.8u  [20:+7.0 21:-2.4 22:+0.3 23:-0.4 24:-0.9 25:-6.5]
+     opener/early edge 2.5-3                             61 bets  54.1%    +2.0u  [20:-2.4 21:+0.5 22:+2.3 23:+1.4 24:-0.4 25:+0.5]
+     opener/early edge 3-4                               82 bets  61.0%   +13.5u  [20:+3.2 21:-1.5 22:+0.0 23:+4.9 24:+2.5 25:+4.4]
+     opener/early edge 4-99                              63 bets  58.7%    +7.6u  [20:+0.3 21:-0.6 22:-1.5 23:+5.3 24:+1.6 25:+2.5]
+     Tue 10 AM/early edge 1.0-1.5                       111 bets  45.0%   -15.5u  [20:-0.5 21:-3.1 22:-11.7 23:-1.8 24:+0.5 25:+1.1]
+     Tue 10 AM/early edge 1.5-2                          99 bets  51.5%    -1.6u  [20:+1.2 21:+0.3 22:+0.3 23:+2.2 24:-3.0 25:-2.5]
+     Tue 10 AM/early edge 2-2.5                          94 bets  58.5%   +11.0u  [20:+0.2 21:-1.6 22:+5.3 23:-2.5 24:+6.8 25:+2.9]
+     Tue 10 AM/early edge 2.5-3                          73 bets  53.4%    +1.5u  [20:+0.6 21:-1.6 22:-2.5 23:+2.4 24:+2.2 25:+0.4]
+     Tue 10 AM/early edge 3-4                            94 bets  55.3%    +5.3u  [20:+6.1 21:+0.5 22:+4.0 23:+2.0 24:-3.6 25:-3.7]
+     Tue 10 AM/early edge 4-99                           71 bets  47.9%    -6.1u  [20:-3.3 21:-1.6 22:-8.2 23:+2.2 24:+0.5 25:+4.3]
+     after report/final (no move gate) edge 1.0-1.5     117 bets  44.4%   -17.7u  [20:-2.0 21:-5.7 22:-4.7 23:-4.7 24:+3.0 25:-3.5]
+     after report/final (no move gate) edge 1.5-2       103 bets  46.6%   -11.4u  [20:-5.3 21:-4.5 22:-2.7 23:+3.0 24:-1.2 25:-0.7]
+     after report/final (no move gate) edge 2-2.5        87 bets  50.6%    -3.0u  [20:+2.2 21:-0.9 22:-0.5 23:+2.2 24:-0.5 25:-5.5]
+     after report/final (no move gate) edge 2.5-3        70 bets  61.4%   +12.1u  [20:+0.4 21:+5.3 22:-2.3 23:-1.5 24:+5.1 25:+5.1]
+     after report/final (no move gate) edge 3-4          97 bets  49.5%    -5.4u  [20:+3.2 21:-0.8 22:-2.6 23:-1.7 24:-4.5 25:+1.2]
+     after report/final (no move gate) edge 4-99         82 bets  48.8%    -5.6u  [20:-2.5 21:+0.2 22:-1.7 23:-0.7 24:-0.4 25:-0.5]
+R4 TOTAL_WEEKS 5-14 / LATE_WEEK 15 (weeks 1-4 and 15+ test-only), edge 2+:
+     opener/early  weeks 1-4                            150 bets  46.0%   -18.3u  [20:-2.2 21:-7.0 22:+7.3 23:-2.2 24:-1.8 25:-12.4]
+     Tue 10 AM/early weeks 1-4                          167 bets  47.3%   -16.2u  [20:+1.6 21:-8.3 22:+1.6 23:-1.3 24:-7.0 25:-2.9]
+     live rule     weeks 1-4                             62 bets  43.5%   -10.5u  [20:+1.5 21:-5.5 22:+1.5 23:-3.5 24:+1.5 25:-6.1]
+     opener/early  weeks 5-14                           289 bets  56.1%   +20.3u  [20:+8.1 21:-3.9 22:+1.1 23:+11.2 24:+2.8 25:+1.0]
+     Tue 10 AM/early weeks 5-14                         332 bets  54.2%   +11.6u  [20:+3.6 21:-4.4 22:-1.4 23:+4.0 24:+5.9 25:+3.8]
+     live rule     weeks 5-14                           132 bets  53.8%    +3.5u  [20:-0.4 21:-3.3 22:-4.8 23:+5.9 24:+0.3 25:+5.8]
+     opener/early  weeks 15-18                           77 bets  39.0%   -19.7u  [20:-4.2 21:-5.1 22:-4.4 23:-4.5 24:-0.3 25:-1.4]
+     Tue 10 AM/early weeks 15-18                        130 bets  38.5%   -34.5u  [20:-4.1 21:-7.1 22:-10.7 23:-1.1 24:-1.8 25:-9.7]
+     live rule     weeks 15-18                           28 bets  46.4%    -3.2u  [20:-1.1 21:-4.4 22:+1.8 23:-1.1 24:+1.8 25:-0.3]
+     opener/early  playoffs (19+)                         0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+     Tue 10 AM/early playoffs (19+)                       0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+     live rule     playoffs (19+)                         0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+R5 MAX_PRICE -120 (live rule bets, actual DK price):
+     live bets priced -120 or better (at price)         132 bets  53.8%    +3.5u  [20:-0.4 21:-3.3 22:-4.9 23:+6.0 24:+0.2 25:+5.9]
+     live bets priced worse than -120 (blocked, at price)    0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+     opener bets priced worse than -120 (at price)        0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+R6 DON'T BET follow-up (alerted, not yet bet; at kickoff - 3 h the edge fell under 2, side flipped, or line moved 0.5 against):
+     stopped, graded at the alert line (had you bet at once)   46 bets  52.2%    -0.2u  [20:+1.5 21:+0.5 22:-3.2 23:+0.6 24:+0.7 25:-0.3]
+     stopped, alert side at the kickoff-3h line          47 bets  48.9%    -3.1u  [20:+1.5 21:-1.5 22:-3.2 23:-0.4 24:+0.7 25:-0.3]
+     not stopped, graded at the alert line               86 bets  54.7%    +3.7u  [20:-1.8 21:-3.7 22:-1.6 23:+5.3 24:-0.5 25:+6.1]
+
+================ TOTALS v2, weather = game-time (leaks at the opener; ~forecast on Fri/Sun) ================
+games with DK snapshots 2020-25: 1615; Friday snapshot found after the report for 1615; median opener posted 9.0 days before the final report
+R0 reproduction (opener = first DK snapshot, early number, edge 2+, weeks 5-14):
+  opener bet (what the backtest grades)                 375 bets  58.4%   +43.1u  [20:+13.2 21:+5.7 22:+0.7 23:+7.8 24:+7.8 25:+7.8]
+  OPENER TIMING: DK opener first seen before Tue 10 AM of game week (i.e. before the previous week's games and final report that the EARLY number uses) for 98% of games; median 6.7 days earlier
+R1 FINAL-INJURY-REPORT gate (no BET before final_report_due; opener can never be bet):
+  A. opener, early number (blocked live)                375 bets  58.4%   +43.1u  [20:+13.2 21:+5.7 22:+0.7 23:+7.8 24:+7.8 25:+7.8]
+  A2. Tue 10 AM line, early number (first honest early bet)  376 bets  55.3%   +21.1u  [20:+12.9 21:-3.0 22:-6.5 23:+9.5 24:-1.9 25:+10.2]
+  A3. opener bets, graded at the Tue 10 AM line instead  367 bets  56.4%   +28.2u  [20:+13.7 21:+2.8 22:-4.1 23:+3.8 24:+2.2 25:+9.7]
+  B. Wed 4 PM line, early number (also blocked)         373 bets  53.9%   +10.7u  [20:+8.9 21:-3.9 22:-3.8 23:+7.6 24:-3.5 25:+5.5]
+  C. LIVE RULE: first check after report, final number, not vs  203 bets  55.2%   +10.8u  [20:+3.9 21:-1.0 22:-4.4 23:+8.5 24:-4.1 25:+7.9]
+  D. first check after report, final no., no move gate  456 bets  53.3%    +7.9u  [20:+8.8 21:+1.7 22:-10.2 23:+3.4 24:-3.8 25:+8.0]
+  E. Friday line, EARLY number (price effect only)      379 bets  52.5%    +0.9u  [20:+4.0 21:+3.6 22:-6.8 23:-0.1 24:-5.5 25:+5.7]
+  F. opener bets that never become live bets            190 bets  59.5%   +25.7u  [20:+10.2 21:+3.5 22:+6.0 23:-0.7 24:+7.0 25:-0.3]
+  G. live bets that were NOT opener bets                 17 bets  52.9%    +0.2u  [20:+1.8 21:-2.2 22:+0.9 23:+0.9 24:-1.1 25:-0.2]
+  avg CLV of opener bets: +1.34 pts; share of opener bets still a live bet after the report: 49%; same side: 100%
+R2 AGAINST_MOVE 0.5 (PASS if moved 0.5+ against since open). Edge 2+ at that line; mv = move toward our side since open:
+ Tue 10 AM, early number:
+     moved 0.5+ AGAINST (gate blocks)                   224 bets  53.1%    +3.2u  [20:+2.0 21:-3.5 22:-6.5 23:+4.0 24:-0.3 25:+7.5]
+     unmoved (|move| < 0.5)                              59 bets  57.6%    +5.9u  [20:+5.0 21:-0.5 22:-0.3 23:+0.6 24:-0.3 25:+1.4]
+     moved 0.5+ TOWARD                                   93 bets  59.1%   +12.0u  [20:+5.9 21:+1.1 22:+0.2 23:+4.8 24:-1.4 25:+1.4]
+     moved 1.5+ AGAINST                                 124 bets  50.0%    -5.6u  [20:+0.5 21:-4.5 22:-6.5 23:+3.5 24:+0.5 25:+0.8]
+ Wed 4 PM, early number:
+     moved 0.5+ AGAINST (gate blocks)                   238 bets  51.3%    -5.1u  [20:+5.5 21:-5.8 22:-2.6 23:-1.1 24:+1.9 25:-2.9]
+     unmoved (|move| < 0.5)                              45 bets  57.8%    +4.6u  [20:-1.5 21:+1.5 22:-0.3 23:+0.8 24:-1.2 25:+5.2]
+     moved 0.5+ TOWARD                                   90 bets  58.9%   +11.2u  [20:+4.9 21:+0.4 22:-0.9 23:+7.9 24:-4.3 25:+3.2]
+     moved 1.5+ AGAINST                                 148 bets  52.7%    +0.9u  [20:+4.9 21:-2.8 22:-1.2 23:-3.5 24:+2.8 25:+0.7]
+ first check after report, final number:
+     moved 0.5+ AGAINST (gate blocks)                   233 bets  49.8%   -11.5u  [20:+5.2 21:-0.9 22:-2.7 23:-4.7 24:-3.7 25:-4.6]
+     unmoved (|move| < 0.5)                              48 bets  47.9%    -4.1u  [20:-2.4 21:-0.4 22:-2.2 23:-0.1 24:-1.3 25:+2.2]
+     moved 0.5+ TOWARD                                   87 bets  58.6%   +10.4u  [20:+3.0 21:+2.2 22:-0.9 23:+4.1 24:-4.2 25:+6.2]
+     moved 1.5+ AGAINST                                 157 bets  50.3%    -6.2u  [20:-0.9 21:-6.9 22:+0.5 23:-3.5 24:+2.7 25:+1.8]
+ kickoff - 3 h, final number:
+     moved 0.5+ AGAINST (gate blocks)                   225 bets  52.4%    +0.3u  [20:+6.3 21:+3.7 22:-5.5 23:-3.7 24:+0.4 25:-0.9]
+     unmoved (|move| < 0.5)                              46 bets  47.8%    -4.0u  [20:-0.4 21:-2.5 22:-2.2 23:+0.9 24:+1.7 25:-1.5]
+     moved 0.5+ TOWARD                                   97 bets  51.5%    -1.5u  [20:-5.7 21:-0.6 22:-1.9 23:+3.1 24:-4.4 25:+8.0]
+     moved 1.5+ AGAINST                                 152 bets  52.0%    -1.2u  [20:-1.7 21:+0.5 22:-3.2 23:-2.3 24:+1.8 25:+3.7]
+R3 EDGE THRESHOLD (TOTAL_THRESHOLD_BLEND 2.0), weeks 5-14:
+     opener/early edge 1.0-1.5                          125 bets  56.8%   +10.5u  [20:-1.7 21:+1.2 22:+2.7 23:+2.9 24:+6.6 25:-1.2]
+     opener/early edge 1.5-2                            119 bets  53.8%    +3.2u  [20:-2.5 21:-4.0 22:-2.7 23:+0.2 24:+2.8 25:+9.5]
+     opener/early edge 2-2.5                             88 bets  59.1%   +11.3u  [20:+3.1 21:+0.4 22:+4.0 23:-0.5 24:+2.3 25:+2.1]
+     opener/early edge 2.5-3                             75 bets  54.7%    +3.3u  [20:+4.1 21:-1.5 22:+3.3 23:-5.1 24:+0.3 25:+2.3]
+     opener/early edge 3-4                               99 bets  58.6%   +11.7u  [20:+4.1 21:+3.0 22:-7.5 23:+7.8 24:+6.9 25:-2.5]
+     opener/early edge 4-99                             113 bets  60.2%   +16.8u  [20:+1.9 21:+3.9 22:+1.0 23:+5.6 24:-1.6 25:+6.0]
+     Tue 10 AM/early edge 1.0-1.5                        97 bets  52.6%    +0.4u  [20:-0.7 21:+4.9 22:+4.2 23:-1.7 24:-2.6 25:-3.6]
+     Tue 10 AM/early edge 1.5-2                         104 bets  55.8%    +6.7u  [20:-0.6 21:-3.7 22:+1.1 23:+0.0 24:+9.6 25:+0.4]
+     Tue 10 AM/early edge 2-2.5                          90 bets  58.9%   +11.2u  [20:+7.0 21:-0.8 22:-0.6 23:-1.6 24:+4.3 25:+3.0]
+     Tue 10 AM/early edge 2.5-3                          70 bets  54.3%    +2.5u  [20:+3.5 21:-2.6 22:-2.4 23:+8.2 24:-4.6 25:+0.5]
+     Tue 10 AM/early edge 3-4                           106 bets  50.9%    -2.9u  [20:-3.3 21:-2.5 22:-1.8 23:+0.9 24:-1.8 25:+5.5]
+     Tue 10 AM/early edge 4-99                          110 bets  57.3%   +10.3u  [20:+5.7 21:+2.9 22:-1.7 23:+2.0 24:+0.3 25:+1.1]
+     after report/final (no move gate) edge 1.0-1.5     110 bets  47.3%   -10.7u  [20:-5.9 21:+1.0 22:-3.4 23:-0.7 24:-0.1 25:-1.6]
+     after report/final (no move gate) edge 1.5-2       107 bets  57.9%   +11.4u  [20:+0.4 21:-0.2 22:+3.0 23:+2.9 24:+5.1 25:+0.2]
+     after report/final (no move gate) edge 2-2.5        79 bets  51.9%    -0.7u  [20:+1.0 21:+4.4 22:-0.8 23:-4.3 24:-4.3 25:+3.3]
+     after report/final (no move gate) edge 2.5-3        64 bets  45.3%    -8.6u  [20:-2.1 21:-2.6 22:-0.6 23:+2.5 24:-4.5 25:-1.3]
+     after report/final (no move gate) edge 3-4         120 bets  51.7%    -1.6u  [20:+2.9 21:-3.9 22:-1.5 23:+0.9 24:-1.5 25:+1.5]
+     after report/final (no move gate) edge 4-99        105 bets  55.2%    +5.7u  [20:+4.0 21:+3.1 22:-2.9 23:+0.2 24:+1.1 25:+0.3]
+R4 TOTAL_WEEKS 5-14 / LATE_WEEK 15 (weeks 1-4 and 15+ test-only), edge 2+:
+     opener/early  weeks 1-4                            188 bets  49.5%   -10.5u  [20:+0.6 21:-2.5 22:+9.1 23:-4.4 24:-2.3 25:-11.1]
+     Tue 10 AM/early weeks 1-4                          190 bets  49.5%   -10.5u  [20:-1.2 21:-5.5 22:+5.3 23:-5.3 24:-5.5 25:+1.5]
+     live rule     weeks 1-4                             79 bets  46.8%    -8.4u  [20:+2.4 21:-5.6 22:+9.0 23:-6.4 24:-0.5 25:-7.2]
+     opener/early  weeks 5-14                           375 bets  58.4%   +43.1u  [20:+13.2 21:+5.7 22:+0.7 23:+7.8 24:+7.8 25:+7.8]
+     Tue 10 AM/early weeks 5-14                         376 bets  55.3%   +21.1u  [20:+12.9 21:-3.0 22:-6.5 23:+9.5 24:-1.9 25:+10.2]
+     live rule     weeks 5-14                           203 bets  55.2%   +10.8u  [20:+3.9 21:-1.0 22:-4.4 23:+8.5 24:-4.1 25:+7.9]
+     opener/early  weeks 15-18                          103 bets  54.4%    +3.9u  [20:-0.4 21:+1.7 22:+5.7 23:+5.1 24:-4.5 25:-3.8]
+     Tue 10 AM/early weeks 15-18                        131 bets  48.1%   -10.7u  [20:-2.2 21:+2.6 22:-1.3 23:+0.1 24:-3.9 25:-6.1]
+     live rule     weeks 15-18                           50 bets  48.0%    -4.2u  [20:-1.2 21:-1.6 22:-0.4 23:+1.6 24:-0.1 25:-2.5]
+     opener/early  playoffs (19+)                         0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+     Tue 10 AM/early playoffs (19+)                       0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+     live rule     playoffs (19+)                         0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+R5 MAX_PRICE -120 (live rule bets, actual DK price):
+     live bets priced -120 or better (at price)         203 bets  55.2%   +10.8u  [20:+3.9 21:-1.1 22:-4.4 23:+8.4 24:-4.1 25:+8.0]
+     live bets priced worse than -120 (blocked, at price)    0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+     opener bets priced worse than -120 (at price)        0 bets   0.0%    +0.0u  [20:+0.0 21:+0.0 22:+0.0 23:+0.0 24:+0.0 25:+0.0]
+R6 DON'T BET follow-up (alerted, not yet bet; at kickoff - 3 h the edge fell under 2, side flipped, or line moved 0.5 against):
+     stopped, graded at the alert line (had you bet at once)   66 bets  60.6%   +10.4u  [20:+4.2 21:+2.2 22:-1.3 23:+4.4 24:-0.5 25:+1.5]
+     stopped, alert side at the kickoff-3h line          66 bets  57.6%    +6.5u  [20:+2.3 21:+2.2 22:-1.3 23:+4.4 24:-0.5 25:-0.5]
+     not stopped, graded at the alert line              137 bets  52.6%    +0.5u  [20:-0.3 21:-3.2 22:-3.1 23:+4.1 24:-3.5 25:+6.5]
+
+================ SPREADS (FULL_GAME_TEST_ONLY), edge 3+, all weeks 1-18 ================
+  opener, early number                                  433 bets  52.0%    -3.5u  [20:+7.9 21:-10.7 22:+9.3 23:-2.1 24:-1.5 25:-6.3]
+  Tue 10 AM line, early number                          469 bets  52.0%    -3.2u  [20:+4.3 21:-9.0 22:+0.2 23:+2.6 24:+1.9 25:-3.2]
+  live rule (after report, final number, not moved against)  253 bets  50.2%   -10.5u  [20:+3.6 21:-3.9 22:+3.8 23:-4.5 24:-4.6 25:-5.0]
+  after report, no move gate                            616 bets  51.0%   -16.5u  [20:+0.6 21:-3.3 22:-0.5 23:-10.7 24:+6.0 25:-8.6]
+    Tue 10 AM, early: moved 0.5+ against                274 bets  52.6%    +0.9u  [20:+6.0 21:-5.5 22:-4.0 23:+0.0 24:+0.3 25:+4.2]
+    Tue 10 AM, early: unmoved                            99 bets  50.5%    -3.5u  [20:+3.6 21:-3.5 22:+2.4 23:+0.4 24:-0.5 25:-5.8]
+    Tue 10 AM, early: moved 0.5+ toward                  96 bets  52.1%    -0.5u  [20:-5.4 21:+0.1 22:+1.8 23:+2.3 24:+2.2 25:-1.5]
+    Wed 4 PM, early: moved 0.5+ against                 318 bets  51.6%    -4.9u  [20:+4.5 21:-1.1 22:-1.7 23:-6.2 24:+0.5 25:-0.8]
+    Wed 4 PM, early: unmoved                             76 bets  51.3%    -1.5u  [20:+2.2 21:-0.6 22:+3.5 23:+3.3 24:-0.5 25:-9.4]
+    Wed 4 PM, early: moved 0.5+ toward                   96 bets  45.8%   -12.0u  [20:-2.7 21:-4.6 22:+0.2 23:+0.5 24:-5.6 25:+0.3]
+    after report, final: moved 0.5+ against             314 bets  52.2%    -0.9u  [20:+3.4 21:-1.7 22:-2.2 23:-8.8 24:+7.1 25:+1.4]
+    after report, final: unmoved                         82 bets  50.0%    -3.7u  [20:+3.2 21:+0.4 22:+0.4 23:-1.5 24:-2.5 25:-3.7]
+    after report, final: moved 0.5+ toward              111 bets  49.5%    -6.0u  [20:-3.0 21:-1.7 22:-0.8 23:+0.3 24:-2.7 25:+2.0]
+  weeks 5-14 opener                                     216 bets  55.6%   +13.1u  [20:+1.9 21:-0.3 22:+10.9 23:+0.6 24:-1.1 25:+1.0]
+  weeks 15-18 opener                                     80 bets  42.5%   -15.1u  [20:+3.3 21:-5.5 22:-3.5 23:-3.5 24:-1.5 25:-4.5]
+  weeks 5-14 Tue 10 AM                                  206 bets  54.9%    +9.7u  [20:-3.4 21:+0.7 22:+7.8 23:+3.5 24:-1.7 25:+2.7]
+
+================ LIVE: state/alerts.csv (2026, since Oct 30) ================
+rows 153; unique game-market rows 35 (test-only rows are re-logged every check: 119 rows for 1 game)
+  BET (pushed)                   spread fired   3  graded 3-0
+  BET (pushed)                   total  fired   2  graded 1-1
+  final injury report not out    spread fired  11  graded 1-0
+  final injury report not out    total  fired  11  graded 0-0
+  moved 0.5+ against             spread fired   3  graded 2-1
+  moved 0.5+ against             total  fired   4  graded 1-3
+  test-only                      total  fired   1  graded 0-1
+  of 22 report-gate cautions: later became a BET alert for the same game+market: 1

@@ -428,3 +428,11 @@ trained on up to 4 earlier seasons. Data fixes: SBR dates the 2020 bubble games 
   and none on spreads. The much stronger 2023-26 totals result comes with things this test lacks: injury reports at the open, the luck
   and form terms, and DraftKings' own (softer?) openers rather than SBR's consensus. Finding out which of those carries the edge is the
   first job of the model tournament.
+
+## Rule audit: timing look-ahead and gates (Nov 4, 2026)
+Full write-up: research/RULE_AUDIT_2026-11-04.md (all three repos). NBA totals: 74% of DK openers post before the 8 PM report the
+backtest paired them with; betting the opener with the info already out was +109.3u (1,565 bets, 56.0%) vs +126.7u backtested,
+while the live gate (wait for the report, push only lines moved toward the model) captures ~+17.5u. Unmoved lines with 3+ edge win
+at every check time (9 PM 56.7%, +54.5u), contradicting the "unmoved for hours ~49%" OPTIONAL rule. PASS-on-against holds at night.
+NFL: backtest opener is ~6.7 days before the early number exists; Tuesday 10 AM line +11.6u vs live final-report rule +3.5u.
+NHL: Pinnacle follow-up and moneyline b2b skip are ~break-even under the live blend; puck line 6-9% EV band -11.1u.

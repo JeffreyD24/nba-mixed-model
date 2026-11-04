@@ -1,0 +1,31 @@
+NBA live totals number at DraftKings 2023-26, edge 3+, both teams 10+ games, morning-lock lag 1 (units at -110)
+games: 3204; opener posted before 8 PM night before: 74%; 9 PM line found: 85%; 9 AM line found: 100%
+S1 swap changed the injury inputs in 97% of all games (rest identical: no earlier report)
+
+S0 opener + 8 PM report (backtest)
+  all openers                                                2024: 614 55.7% +38.9u | 2025: 484 56.6% +39.1u | 2026: 461 57.9% +48.7u | ALL: 1559 56.6% +126.7u  (+8.1u/100)
+  openers posted BEFORE 8 PM (report not out yet: not bettable) 2024: 506 56.9% +43.8u | 2025: 402 57.2% +37.1u | 2026: 258 58.9% +32.2u | ALL: 1166 57.5% +113.1u  (+9.7u/100)
+  openers posted after 8 PM (bettable as tested)             2024: 108 50.0% -4.9u | 2025: 82 53.7% +2.0u | 2026: 203 56.7% +16.5u | ALL: 393 54.2% +13.6u  (+3.5u/100)
+
+S1 opener + previous game's report (bettable the moment the opener posts)
+  all openers                                                2024: 617 55.4% +35.9u | 2025: 478 55.4% +27.9u | 2026: 470 57.4% +45.5u | ALL: 1565 56.0% +109.3u  (+7.0u/100)
+  openers posted before 8 PM                                 2024: 509 57.0% +44.6u | 2025: 395 56.5% +30.7u | 2026: 268 59.0% +33.6u | ALL: 1172 57.3% +109.0u  (+9.3u/100)
+
+S2 line at ~9 PM night before + 8 PM report (wait for the report)
+  every 3+ edge                                              2024: 519 54.5% +21.3u | 2025: 397 52.9% +3.9u | 2026: 345 57.1% +31.1u | ALL: 1261 54.7% +56.3u  (+4.5u/100)
+  minus lines moved 0.5+ against since open (PASS rule)      2024: 382 57.9% +39.9u | 2025: 269 54.6% +11.6u | 2026: 283 56.2% +20.5u | ALL: 934 56.4% +72.1u  (+7.7u/100)
+  unmoved since open only (rule calls these OPTIONAL, no push) 2024: 255 59.6% +35.2u | 2025: 177 54.2% +6.3u | 2026: 237 55.3% +13.1u | ALL: 669 56.7% +54.5u  (+8.2u/100)
+  moved 0.5+ toward the model only (= what live pushes now)  2024: 127 54.3% +4.7u | 2025: 92 55.4% +5.4u | 2026: 46 60.9% +7.5u | ALL: 265 55.8% +17.5u  (+6.6u/100)
+
+S3 line at ~9 AM game day + 8 PM report
+  every 3+ edge                                              2024: 610 54.6% +25.7u | 2025: 477 51.8% -5.5u | 2026: 449 54.3% +16.8u | ALL: 1536 53.6% +37.1u  (+2.4u/100)
+  minus lines moved 0.5+ against since open                  2024: 258 55.4% +15.0u | 2025: 174 48.9% -11.7u | 2026: 189 57.1% +17.2u | ALL: 621 54.1% +20.5u  (+3.3u/100)
+  unmoved since open only                                    2024: 50 46.0% -6.1u | 2025: 42 66.7% +11.5u | 2026: 73 58.9% +9.1u | ALL: 165 57.0% +14.5u  (+8.8u/100)
+
+S1+S2 combined: bet the opener on the previous report; skip it if the 8 PM report then puts the edge on the OTHER side
+  opener bets the 8 PM report keeps on the same side (edge any size) 2024: 616 55.4% +35.0u | 2025: 478 55.4% +27.9u | 2026: 468 57.3% +43.6u | ALL: 1562 56.0% +106.5u  (+6.8u/100)
+  opener bets the 8 PM report keeps at 3+ edge               2024: 579 55.4% +33.8u | 2025: 425 56.0% +29.4u | 2026: 402 58.7% +48.5u | ALL: 1406 56.5% +111.7u  (+7.9u/100)
+  opener bets the 8 PM report drops below 3 / flips          2024: 38 55.3% +2.1u | 2025: 53 50.9% -1.5u | 2026: 68 50.0% -3.1u | ALL: 159 51.6% -2.5u  (-1.5u/100)
+
+CLV check, S1 openers: average close move toward the bet (pts)
+  +1.45 pts over 1568 bets

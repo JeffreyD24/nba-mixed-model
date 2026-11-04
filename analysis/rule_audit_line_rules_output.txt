@@ -1,0 +1,53 @@
+(a) Line moved since DraftKings' open, checked at each bet time; edge 3+ at the line then; 8 PM report
+  10 PM night before
+    moved AGAINST 0.5+ :   428 bets  52.6%    +1.5u ( +0.4/100; by season -13.6, +4.4, +10.8)
+    unmoved            :   589 bets  55.7%   +37.2u ( +6.3/100; by season +35.3, -7.2, +9.1)
+    moved TOWARD 0.5+  :   335 bets  56.1%   +23.9u ( +7.1/100; by season +1.8, +11.1, +11.0)
+  9 PM night before
+    moved AGAINST 0.5+ :   327 bets  49.8%   -15.8u ( -4.8/100; by season -18.6, -7.7, +10.5)
+    unmoved            :   669 bets  56.7%   +54.5u ( +8.2/100; by season +35.2, +6.3, +13.1)
+    moved TOWARD 0.5+  :   265 bets  55.8%   +17.5u ( +6.6/100; by season +4.7, +5.4, +7.5)
+  midnight
+    moved AGAINST 0.5+ :   617 bets  51.2%   -13.7u ( -2.2/100; by season -15.8, -5.0, +7.1)
+    unmoved            :   415 bets  56.6%   +33.6u ( +8.1/100; by season +28.6, +0.3, +4.7)
+    moved TOWARD 0.5+  :   428 bets  53.3%    +7.3u ( +1.7/100; by season -2.3, -4.5, +14.1)
+  9 AM game day
+    moved AGAINST 0.5+ :   915 bets  53.3%   +16.6u ( +1.8/100; by season +10.7, +6.3, -0.4)
+    unmoved            :   165 bets  57.0%   +14.5u ( +8.8/100; by season -6.1, +11.5, +9.1)
+    moved TOWARD 0.5+  :   456 bets  53.1%    +6.0u ( +1.3/100; by season +21.1, -23.2, +8.1)
+  noon
+    moved AGAINST 0.5+ :  1014 bets  52.8%    +7.4u ( +0.7/100; by season +3.3, -6.8, +10.9)
+    unmoved            :   137 bets  60.6%   +21.5u (+15.7/100; by season -2.8, +7.2, +17.1)
+    moved TOWARD 0.5+  :   413 bets  50.8%   -12.1u ( -2.9/100; by season +11.9, -26.8, +2.8)
+  3 PM
+    moved AGAINST 0.5+ :  1038 bets  51.8%   -10.9u ( -1.1/100; by season +7.7, -19.5, +0.8)
+    unmoved            :   148 bets  58.1%   +16.2u (+10.9/100; by season +3.0, +5.4, +7.8)
+    moved TOWARD 0.5+  :   376 bets  50.5%   -13.3u ( -3.5/100; by season +2.1, -21.7, +6.4)
+  6 PM (tips 7+ only)
+    moved AGAINST 0.5+ :  1006 bets  51.2%   -22.8u ( -2.3/100; by season +16.0, -27.1, -11.7)
+    unmoved            :    99 bets  53.5%    +2.2u ( +2.2/100; by season -3.2, +1.9, +3.5)
+    moved TOWARD 0.5+  :   322 bets  54.7%   +14.0u ( +4.3/100; by season +4.9, -9.5, +18.5)
+
+(b) size of the move against (9 AM game day line)
+  0.5-1.0 pts:    76 bets  61.8%   +13.7u (+18.1/100; by season +10.5, +3.3, +0.0)
+  1.0-2.0 pts:   293 bets  57.0%   +25.8u ( +8.8/100; by season +4.5, +17.5, +3.8)
+  2.0-3.0 pts:   215 bets  52.1%    -1.2u ( -0.5/100; by season -10.7, -3.5, +13.0)
+  3.0-+ pts:   331 bets  48.9%   -21.7u ( -6.6/100; by season +6.5, -11.1, -17.2)
+
+(c) edge size at the opener
+  8 PM report (backtest)
+    edge 2.0-2.5:   250 bets  53.6%    +5.8u
+    edge 2.5-3.0:   243 bets  53.5%    +5.2u
+    edge 3.0-4.0:   443 bets  56.9%   +38.1u
+    edge 4.0-5.0:   327 bets  56.6%   +26.2u
+    edge 5.0-6.0:   278 bets  54.7%   +12.2u
+    edge 6.0-+:   511 bets  57.5%   +50.3u
+  previous game's report (bettable at the open)
+    edge 2.0-2.5:   282 bets  57.8%   +29.2u
+    edge 2.5-3.0:   238 bets  56.3%   +17.8u
+    edge 3.0-4.0:   417 bets  53.5%    +8.7u
+    edge 4.0-5.0:   332 bets  58.7%   +40.3u
+    edge 5.0-6.0:   285 bets  54.0%    +9.0u
+    edge 6.0-+:   531 bets  57.4%   +51.3u
+
+(d) previous-game report vs 8 PM report: model totals differ by 0.63 pts on average (median 0.42, 90th pct 1.54); corr 0.9919

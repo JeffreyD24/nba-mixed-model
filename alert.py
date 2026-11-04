@@ -22,6 +22,7 @@ import actionnet
 THRESHOLD = 3.0                     # points, for both spreads and totals
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
 LUCK_SHRINK_K = 15                  # see the luck correction below
+TOT_LOGIT_SLOPE = 0.0506             # Nov 4, 2026: log-odds of winning a totals bet per point of edge (research/stats_catalog B98)
 ALT_W = 3.8                         # Nov 2, 2026 (approved): totals at Denver/Utah go over the close by ~3 pts (5 of 5 seasons);
 ALT_HOMES = ("den", "utah")          #   added to the model total, fit leaving each season out: +159.5u vs +147.1u 2023-26
 ML_TEST = (-0.0640, 0.1388)         # NBA moneyline TEST tracking (Nov 2, 2026; analysis/nba_ml_takeaways.py): home win chance =
@@ -654,6 +655,13 @@ def main():
                     body = f"Model total {total:.1f}" + (f" (shooting-luck adjustment {luck_adj:+.1f})" if luck_adj else "") + (f" (recent-form adjustment {form_adj:+.1f})" if form_adj else "") + (f" (altitude {alt_adj:+.1f})" if alt_adj else "") + \
                            f". DraftKings {cur:g}" + (" (opening line)." if is_open else f" (opened {opn:g}).")
                 body += f" Edge {abs(e):.1f} pts."
+                if market == "total":
+                    # honest win chance (statistics catalog B98, logistic fit 2023-26 at DK openers): the model's edges come true only
+                    # about halfway, so a 3-pt edge is ~54%, not the ~57% a normal curve around the model total would say
+                    try: _be = 1 / (1 + (100 / abs(float(px)) if float(px) < 0 else float(px) / 100))
+                    except (TypeError, ValueError, ZeroDivisionError): _be = 110 / 210
+                    if not np.isfinite(_be): _be = 110 / 210
+                    body += f" Realistic win chance ~{100 / (1 + np.exp(-TOT_LOGIT_SLOPE * abs(e))):.0f}% (break-even at this price {100 * _be:.1f}%)."
                 if is_news and (g["game_id"], market) in done:
                     # already alerted on this game: re-alert only if the news flips the side or adds 1+ pt of edge
                     prev = A[(A.game_id == g["game_id"]) & (A.market == market)].tail(1)

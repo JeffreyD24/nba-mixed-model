@@ -90,7 +90,7 @@ if SPORT == "nba":
                     "state/picks_log_models.csv": (30, "Picks log by model", "warn"), "state/picks_log_shrunk.csv": (30, "Shrunk picks log", "warn"), "state/picks_log_stack.csv": (30, "Stack picks log", "warn"),
                     "state/nba_luck.json": (30, "Shooting luck", "warn"), "state/nba_shots_2026_27.csv.gz": (30, "Shots 2026-27", "warn"),
                     "state/early": (30, "Early model files", "warn"), "state/pinnacle_now.json": (72, "Pinnacle now", "warn"),
-                    "state/injury_status_seen.csv": (72, "Injury status seen", "warn")})
+                    "state/injury_status_seen.csv": (72, "Injury status seen", "warn"), "state/altitude_watch.json": (30, "Altitude tripwire watch", "warn")})
 if SPORT == "nfl":
     # NFL is weekly: windows are 8-9 days for game-driven files (they go stale after the Super Bowl, expected in the off-season)
     STREAMS.update({"research/injury_decisions.csv": (72, "Key-player injury log"),

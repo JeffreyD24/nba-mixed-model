@@ -443,6 +443,30 @@ def grade_jumps(games, logdf):
 
 
 # ------------------------------------------------------------------ Models 2 and 3 (tracked beside Model 1)
+ALT_RULE = ("Altitude tripwire (set Nov 4, 2026, research/stats_catalog/ALTITUDE_TRIPWIRE.md): diff = mean(final - DK opener) at Denver/Utah "
+            "home games minus the same for all other games this season. All-Star break: drop the +3.8 to 0 only if diff < -2.0, otherwise no "
+            "change. Season end: diff >= +2.0 keep +3.8; 0 to +2.0 halve to +1.9; below 0 drop to 0.")
+def altitude_watch(logdf):
+    """running check of the +3.8 altitude adjustment (alert.py ALT_W) against this season's results; writes state/altitude_watch.json"""
+    d = logdf[pd.to_datetime(logdf.date) >= SEASON_START].dropna(subset=["home_pts", "away_pts", "open_total"]).drop_duplicates("game_id")
+    if not len(d): return
+    y = d.home_pts + d.away_pts - d.open_total
+    alt = d.home.isin(["den", "utah"])
+    a_, o_ = y[alt], y[~alt]
+    diff = float(a_.mean() - o_.mean()) if len(a_) else float("nan")
+    se = float(np.sqrt(a_.var(ddof=1) / len(a_) + o_.var(ddof=1) / len(o_))) if len(a_) > 1 else float("nan")
+    verdict = "keep +3.8" if diff >= 2.0 else ("halve to +1.9" if diff >= 0 else "drop to 0")          # season-end rule
+    v_asb = "drop to 0" if diff < -2.0 else "no change"                                                  # All-Star break rule
+    if len(a_) < 2 or len(o_) < 2 or not np.isfinite(diff):
+        verdict = v_asb = "no data yet"; diff = se = None
+    out = dict(updated_et=str(now_et())[:16], games_alt=int(len(a_)), games_other=int(len(o_)), alt_mean=round(float(a_.mean()), 2) if len(a_) else None,
+               other_mean=round(float(o_.mean()), 2), diff=None if diff is None else round(diff, 2), se=None if se is None else round(se, 2), if_all_star_break_today=v_asb, if_season_end_today=verdict, rule=ALT_RULE)
+    json.dump(out, open(os.path.join(STATE, "altitude_watch.json"), "w"), indent=1)
+    if diff is None: say(f"Altitude watch: {len(a_)} Denver/Utah home games so far, not enough to compute."); return
+    say(f"Altitude watch: {len(a_)} Denver/Utah home games, {a_.mean():+.1f} vs the opener (other games {o_.mean():+.1f}); difference {diff:+.1f} "
+        f"(+/-{1.96 * se:.1f}). All-Star-break rule today: {v_asb}; season-end rule today: {verdict}.")
+
+
 def run_models_2_and_3(games, reports_path, logdf):
     """Predict with Models 2 and 3, lock, and grade them against the same lines as Model 1.
     Any failure is logged and skipped, so Model 1's picks and alerts are never affected."""
@@ -500,6 +524,10 @@ def main():
         say(f"Moneyline test grading skipped: {type(e).__name__}")
     grade_my_bets(games, logdf)
     grade_jumps(games, logdf)
+    try:
+        altitude_watch(logdf)
+    except Exception as e:
+        say(f"Altitude watch skipped: {type(e).__name__}")
     try:
         import timing
         tt = timing.grade(W, logdf); say(f"Bet timing: graded {tt.game_id.nunique() if len(tt) else 0} games at up to 11 time points.")

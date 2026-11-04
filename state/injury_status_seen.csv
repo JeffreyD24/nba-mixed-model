@@ -151,10 +151,8 @@ key,status,snapshot
 2026-11-02|tor|scottie barnes,Available,2026-11-02_09_30PM
 2026-11-02|tor|jakob poeltl,Out,2026-11-02_09_30PM
 2026-11-04|bos|devin carter,Out,2026-11-03_04_15PM
-2026-11-04|bos|payton pritchard,Questionable,2026-11-03_04_15PM
 2026-11-04|det|jalen duren,Out,2026-11-03_04_15PM
 2026-11-04|det|isaiah joe,Out,2026-11-03_04_15PM
-2026-11-04|bos|amari williams,Questionable,2026-11-03_04_30PM
 2026-11-04|wsh|reece beekman,Out,2026-11-03_04_45PM
 2026-11-04|wsh|justin champagnie,Out,2026-11-03_04_45PM
 2026-11-04|wsh|tristan vukcevic,Out,2026-11-03_04_45PM
@@ -183,7 +181,6 @@ key,status,snapshot
 2026-11-04|okc|nikola topic,Out,2026-11-03_05_30PM
 2026-11-04|okc|cason wallace,Out,2026-11-03_05_30PM
 2026-11-04|okc|jalen williams,Out,2026-11-03_05_30PM
-2026-11-04|okc|jaylin williams,Questionable,2026-11-03_05_30PM
 2026-11-04|no|yves missi,Out,2026-11-03_05_45PM
 2026-11-04|no|jordan poole,Probable,2026-11-03_05_45PM
 2026-11-04|min|donte divincenzo,Out,2026-11-03_06_00PM
@@ -230,7 +227,6 @@ key,status,snapshot
 2026-11-04|mia|dru smith,Available,2026-11-03_08_00PM
 2026-11-04|lal|walker kessler,Available,2026-11-03_08_00PM
 2026-11-04|lal|adou thiero,Out,2026-11-03_08_00PM
-2026-11-04|bos|dillon mitchell,Questionable,2026-11-03_10_15PM
 2026-11-04|det|elijah harkless,Out,2026-11-04_12_30PM
 2026-11-04|det|isaac jones,Available,2026-11-04_12_30PM
 2026-11-04|bos|jayson tatum,Out,2026-11-04_12_45PM
@@ -260,3 +256,7 @@ key,status,snapshot
 2026-11-04|wsh|bilal coulibaly,Available,2026-11-04_06_00PM
 2026-11-04|wsh|alex sarr,Available,2026-11-04_06_00PM
 2026-11-04|atl|jalen johnson,Out,2026-11-04_06_00PM
+2026-11-04|bos|dillon mitchell,Available,2026-11-04_06_15PM
+2026-11-04|bos|payton pritchard,Available,2026-11-04_06_15PM
+2026-11-04|bos|amari williams,Out,2026-11-04_06_15PM
+2026-11-04|okc|jaylin williams,Out,2026-11-04_06_15PM

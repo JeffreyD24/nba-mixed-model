@@ -11,7 +11,7 @@ ll = lambda p, y: -np.mean(y * np.log(p) + (1 - y) * np.log(1 - p))
 
 # market probabilities: build = SBR close (sanity: book margin 0-10%, no price inside +-100); later seasons = DK opener and close
 ok_sbr = (G.sbr_ml_h.abs() >= 100) & (G.sbr_ml_a.abs() >= 100)
-over = 1 / dec(G.sbr_ml_h.fillna(-110)) + 1 / dec(G.sbr_ml_a.fillna(-110)); ok_sbr &= over.between(1.0, 1.10)
+over = 1 / dec(G.sbr_ml_h.fillna(-110)) + 1 / dec(G.sbr_ml_a.fillna(-110)); ok_sbr &= (over >= 1.0) & (over <= 1.10)
 G["mkt_build"] = np.where(ok_sbr, nv(G.sbr_ml_h.fillna(-110), G.sbr_ml_a.fillna(-110)), np.nan)
 G["mkt_open"] = nv(G.dk_o_h, G.dk_o_a); G["mkt_close"] = nv(G.dk_c_h, G.dk_c_a); G["mkt_pin"] = nv(G.pn_o_h, G.pn_o_a)
 G["rest_d"] = G.rest_h - G.rest_a

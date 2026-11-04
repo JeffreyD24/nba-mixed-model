@@ -1,0 +1,36 @@
+Leakage audit of step 3a news bets (prereg research/spreads/STEP3A_LEAK_AUDIT_PREREG.md)
+games: 2634; 8 PM report adjustment |d| mean 0.76 pts, share |d|>=1: 27%; game-day adjustment |d_O| mean 0.89; corr(d, d_O) 0.88
+
+1. Reproduce N (C model, T1) and the no-report twin N_B (B model, T1)
+  N  (C, 8 PM report)                                         43-18   70.5%  +21.1u  CLV +0.52  moved since open -1.09
+  N_B (B, no report)                                          36-19   65.5%  +13.7u  CLV -0.18  moved since open -2.35
+  N bets that are ALSO N_B bets (same side)                   19-7    73.1%  +10.3u  CLV +0.31  moved since open -2.46
+  N bets that exist only because of the report                24-11   68.6%  +10.8u  CLV +0.68  moved since open -0.12
+  N_B bets the report removed                                 17-12   58.6%   +3.5u  CLV -0.62  moved since open -2.26
+  N_B at T0                                                   22-14   61.1%   +6.0u  CLV -0.44  moved since open -2.88
+  N_B at T2                                                   45-35   56.2%   +5.9u  CLV -0.09  moved since open -2.22
+
+2. Placebo: 8 PM adjustment d shuffled across games within each season (1,000 shuffles), N rebuilt at T1
+  observed 43-18 (70.5%); placebo win % median 57.0% [5-95%: 51.0%, 62.6%], bets median 109; placebo p (win % >= observed) = 0.000
+
+3. Where the N wins come from
+  game-day report agreed with 8 PM (|d_O - d| < 0.5)          34-15   69.4%  +15.9u  CLV +0.25  moved since open -0.96
+  game-day report changed it                                   9-3    75.0%   +5.2u  CLV +1.67  moved since open -1.62
+  report pushes toward our side by 1+ pt                      12-3    80.0%   +7.9u  CLV +0.97  moved since open +0.03
+  report small (<1 pt) or against our side                    31-15   67.4%  +13.2u  CLV +0.39  moved since open -1.44
+  CLV <= 0 (close did not move toward us)                     23-9    71.9%  +11.9u  CLV -0.61  moved since open -1.23
+  CLV > 0                                                     20-9    69.0%   +9.2u  CLV +1.69  moved since open -0.94
+  leakage cell (report agreed with game day AND close did not move toward us): 20 of 43 N wins (47%); its record:
+    leakage cell                                              20-8    71.4%  +10.2u  CLV -0.59  moved since open -1.21
+  per season:
+      2024                                                    12-10   54.5%   +0.9u  CLV +0.42  moved since open -0.85
+      2025                                                    17-5    77.3%  +10.5u  CLV +0.55  moved since open -0.86
+      2026                                                    14-3    82.4%   +9.7u  CLV +0.65  moved since open -1.71
+
+4. Oracle: game-day pre-tip report instead of the 8 PM report
+  oracle news bets at T1 (O model, B had no opener bet)       51-20   71.8%  +26.4u  CLV +0.90  moved since open -1.04
+  oracle news bets at T2 (O model, B had no opener bet)       54-37   59.3%  +12.1u  CLV +0.83  moved since open -1.21
+  8 PM news bets at T2 (C model), for comparison              49-26   65.3%  +18.5u  CLV +0.42  moved since open -1.31
+
+  accuracy on all games (MAE vs final margin): B 11.015, C 8 PM 10.949, oracle 10.943; DK close 10.620
+  on the N games: B 8.68, C 8.73, oracle 8.70, DK T1 line 9.76, DK close 9.68

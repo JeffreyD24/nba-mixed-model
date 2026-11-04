@@ -4,6 +4,15 @@ For a new session. Goal set by Jeffrey: evaluate the spread-type models in all t
 Read first: `claude/goals.md` (how we judge a model), `claude/findings_log.md` (newest first), `claude/leakage_audit_2026-11-03.md`,
 `claude/rule_audit_2026-11-04.md`. Same file in all three repos: `research/SPREADS_HANDOFF_2026-11-04.md`.
 
+## Status (updated Nov 4, 2026, afternoon)
+- **NBA step 1 done** (`research/spreads/STEP1_NBA_RESULTS.md`): honest v2 466 bets 54.1% +15.1u, CLV +0.85 vs break-even +0.77
+  (survives by the pre-registered rule, thin). The original record's leak was the 8 PM injury report.
+- **NBA step 3a done** (`research/spreads/STEP3A_NBA_RESULTS.md`): injury-news bets after the report, 61 bets 70.5% +21.1u at 10 PM but
+  CLV +0.52 (below break-even): not passed; proposed as a live TEST bucket.
+- **NOT STARTED: NHL and NFL step 1 (honest baselines for NHL puck line / moneyline v3.1 and NFL spreads at Monday 9 AM).**
+- Open question: the true v2 CLV can't be pinned to +/-0.1 pts on 2023-26 alone (~1,200 bets needed); the way to tighten it is an
+  out-of-sample re-grade on SBR 2014-22.
+
 ## Honest starting point
 Every spread test so far says **team ratings alone do not beat the opening spread**. Tuning a model that has no information the line
 lacks only finds noise that looks good on the tuning seasons. So "fine-tuning" here means: find information the opener does not have yet

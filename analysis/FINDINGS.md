@@ -1,5 +1,14 @@
 # Research findings log
 
+## 2026-11-04: Spreads step 1 for NHL and NFL (honest baselines)
+NHL (pre-registered nhl-mixed-model `research/spreads/STEP1_NHL_PREREG.md`, 1ab00db; results `research/spreads/STEP1_NHL_RESULTS.md`):
+- Timing already honest (91.7% of DK openers post the day before before 7 PM; an extra night of results is worth nothing).
+- v4 moneyline 1,267 bets +147.1u, CLV +0.23% [-0.07, +0.52]; v4 puck line 321 bets +35.6u, CLV +0.65% [+0.11, +1.19]. Keep both.
+- Exploratory: ML CLV only in EV 9%+ (+2.22%; EV 4-9% -0.42% in every season despite +81.7u). Proposed ML bar 9% (not applied).
+- Bug fixed live (NHL v4.1): -2.5 puck lines were priced/graded as -1.5.
+NFL (pre-registered nfl-mixed-model `research/spreads/STEP1_NFL_PREREG.md`, 8eab781; results `research/spreads/STEP1_NFL_RESULTS.md`):
+- Monday 9 AM spreads, weeks 5-14, edge 3+, 2020-25: 211 bets -6.9u, CLV +0.25 vs break-even +0.64. Stays test-only.
+
 ## 2026-11-04: PROVISIONAL bets tier (process) and NBA spreads v3.1
 New standing rule (Jeffrey): ideas that look profitable but aren't proven are bet as PROVISIONAL with their own record and stop lines
 fixed in advance, reviewed weekly (`research/PROVISIONAL_BETS.md`, `provisional_review.py`, daily in the morning run + health check).

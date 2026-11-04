@@ -1,0 +1,38 @@
+name: NBA injury report history (every game-day report)
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: "Seasons (year each ends), space-separated"
+        default: "2022 2023 2024 2025 2026"
+  push:
+    paths:
+      - research/injury_history/REQUEST.txt
+permissions:
+  contents: write
+concurrency:
+  group: injury-history
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
+          pip install -q pandas numpy
+      - name: One season at a time, saving after each
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          SEASONS="${{ inputs.seasons }}"
+          if [ -z "$SEASONS" ]; then SEASONS=$(grep -m1 '^seasons:' research/injury_history/REQUEST.txt | cut -d: -f2); fi
+          for s in $SEASONS; do
+            python research/injury_history/fetch_injury_history.py "$s" 2>&1 | tee -a research/injury_history/run_log.txt || true
+            git add research/injury_history
+            git diff --cached --quiet || git commit -q -m "NBA injury report history: season $s"
+            for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 15; done
+          done

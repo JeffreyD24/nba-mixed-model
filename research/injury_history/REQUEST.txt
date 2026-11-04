@@ -1,0 +1,2 @@
+seasons: 2022 2023 2024 2025 2026
+requested: 2026-11-04 (line-move model, per-report-slot test; see research/spreads/LINE_MOVE_MODEL_RESULTS.md)

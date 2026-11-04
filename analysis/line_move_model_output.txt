@@ -1,0 +1,51 @@
+# NBA line-move model (game-day report -> DraftKings move), results
+
+games with 8/9 PM open report, game-day pretip slot and DK lines at every point: 5106 {2022: 1047, 2023: 1057, 2024: 1020, 2025: 990, 2026: 992}
+minutes from slot to the act line: median 56, 90th pct 56; slot hour counts {18: 1959, 17: 1031, 20: 718, 19: 588, 15: 316, 13: 238, 21: 165, 11: 91}
+
+## SPREADS (home margin)
+build fit: move after act = +0.012 + +0.043 x N (se 0.015) + -0.003 x moved so far (se 0.009)
+build: full open-to-close move per point of news +0.750 (se 0.038)
+break-even CLV (build, win chance 52.38%): +1.28 pts (slope +0.068 logit per pt)
+| Set | Bets | CLV | Units | Win % | By season |
+|---|---|---|---|---|---|
+| build, theta 0.5 | 0 | | | | |
+| build, theta 0.75 | 0 | | | | |
+| build, theta 1.0 | 0 | | | | |
+| **TEST 2023-26, theta 0.5 (chosen on build)** | 0 | | | | |
+verdict: **FAIL** (CLV +nan vs break-even +1.28; units +0.0; CLV positive in 0 of 3 seasons)
+
+Absorption, |N| >= 1.5 (share of the build-fitted full move; descriptive):
+    pre: median 73% (IQR 0% to 147%), n 520
+    act: median 83% (IQR 0% to 173%), n 520
+  close: median 91% (IQR -0% to 185%), n 520
+
+Exploratory, test seasons: news share of R
+| Set | Bets | CLV | Units | Win % | By season |
+|---|---|---|---|---|---|
+| mostly news | 0 | | | | |
+| mostly momentum (moved-so-far term) | 0 | | | | |
+
+## TOTALS
+build fit: move after act = +0.047 + +0.110 x N (se 0.022) + -0.013 x moved so far (se 0.007)
+build: full open-to-close move per point of news +0.881 (se 0.075)
+break-even CLV (build, win chance 52.38%): +0.33 pts (slope +0.215 logit per pt)
+| Set | Bets | CLV | Units | Win % | By season |
+|---|---|---|---|---|---|
+| build, theta 0.5 | 7 | +0.07 | +0.6u (+9.1%) | 57.1% | 22: 3.0 bets +0.8u CLV +0.50 23: 4.0 bets -0.2u CLV -0.25 |
+| build, theta 0.75 | 0 | | | | |
+| build, theta 1.0 | 0 | | | | |
+| **TEST 2023-26, theta 0.5 (chosen on build)** | 1 | +0.00 | -1.0u (-100.0%) | 0.0% | 26: 1.0 bets -1.0u CLV +0.00 |
+verdict: **FAIL** (CLV +0.00 vs break-even +0.33; units -1.0; CLV positive in 0 of 3 seasons)
+
+Absorption, |N| >= 1.5 (share of the build-fitted full move; descriptive):
+    pre: median 76% (IQR -24% to 182%), n 400
+    act: median 97% (IQR -22% to 202%), n 400
+  close: median 100% (IQR 0% to 209%), n 400
+
+Exploratory, test seasons: news share of R
+| Set | Bets | CLV | Units | Win % | By season |
+|---|---|---|---|---|---|
+| mostly news | 1 | +0.00 | -1.0u (-100.0%) | 0.0% | 26: 1.0 bets -1.0u CLV +0.00 |
+| mostly momentum (moved-so-far term) | 0 | | | | |
+

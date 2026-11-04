@@ -40,7 +40,7 @@ say(f"minutes from slot to the act line: median {((G.sp_act_t - G.slot_utc).dt.t
 say()
 
 def ols(y, X):
-    X = np.column_stack([np.ones(len(X))] + [np.asarray(x, float) for x in X]); b, *_ = np.linalg.lstsq(X, np.asarray(y, float), rcond=None)
+    X = np.column_stack([np.ones(len(y))] + [np.asarray(x, float) for x in X]); b, *_ = np.linalg.lstsq(X, np.asarray(y, float), rcond=None)
     r = np.asarray(y) - X @ b; s2 = r @ r / (len(y) - X.shape[1]); se = np.sqrt(np.diag(s2 * np.linalg.inv(X.T @ X))); return b, se
 B = G.split == "build"
 RES = {}

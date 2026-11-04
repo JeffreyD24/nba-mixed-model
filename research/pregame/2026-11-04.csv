@@ -7085,3 +7085,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-04 03:58:07,295378,2026-11-04,2026-11-04 19:30,mil,bos,Fanatics,event,team_total,away_over,105.5,-120,normal
 2026-11-04 03:58:07,295384,2026-11-04,2026-11-04 21:00,tor,den,Fanatics,event,total,under,230.5,-110,normal
 2026-11-04 03:58:07,295384,2026-11-04,2026-11-04 21:00,tor,den,Fanatics,event,total,over,230.5,-110,normal
+2026-11-04 04:01:59,295374,2026-11-04,2026-11-04 19:00,phi,det,Consensus,event,total,under,218.0,-110,normal
+2026-11-04 04:01:59,295374,2026-11-04,2026-11-04 19:00,phi,det,Consensus,event,total,over,218.0,-113,normal
+2026-11-04 04:01:59,295387,2026-11-04,2026-11-04 22:30,mia,lac,Consensus,event,total,over,233.5,-111,normal
+2026-11-04 04:01:59,295387,2026-11-04,2026-11-04 22:30,mia,lac,Consensus,event,total,under,233.5,-110,normal
+2026-11-04 04:04:22,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,away_over,108.5,-120,normal
+2026-11-04 04:04:22,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,home_over,105.5,-120,normal
+2026-11-04 04:04:22,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,home_under,105.5,-110,normal
+2026-11-04 04:04:22,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,away_under,108.5,-110,normal

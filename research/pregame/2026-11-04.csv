@@ -2240,3 +2240,9 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-03 22:25:02,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Fanatics,event,moneyline,away,0.0,-145,normal
 2026-11-03 22:26:00,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Fanatics,event,spread,home,2.5,-115,normal
 2026-11-03 22:26:00,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Fanatics,event,spread,away,-2.5,-105,normal
+2026-11-03 22:28:27,295374,2026-11-04,2026-11-04 19:00,phi,det,DraftKings,event,moneyline,away,0.0,106,normal
+2026-11-03 22:28:27,295374,2026-11-04,2026-11-04 19:00,phi,det,DraftKings,event,moneyline,home,0.0,-125,normal
+2026-11-03 22:28:27,295385,2026-11-04,2026-11-04 21:30,dal,sa,bet365,event,moneyline,home,0.0,-550,normal
+2026-11-03 22:28:27,295385,2026-11-04,2026-11-04 21:30,dal,sa,bet365,event,moneyline,away,0.0,400,normal
+2026-11-03 22:30:59,295374,2026-11-04,2026-11-04 19:00,phi,det,Caesars,event,moneyline,away,0.0,105,normal
+2026-11-03 22:30:59,295374,2026-11-04,2026-11-04 19:00,phi,det,Caesars,event,moneyline,home,0.0,-125,normal

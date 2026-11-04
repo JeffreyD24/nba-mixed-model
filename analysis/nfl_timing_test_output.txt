@@ -1,0 +1,29 @@
+check: player features as of game day vs the player model's rows: n 865, max diff pass_sum 0.00e+00, pace 0.00e+00
+T1: 865 games with a line, median 9.2 days before kickoff, forecast used for 12 outdoor games
+T2: 807 games with a line, median 6.2 days before kickoff, forecast used for 338 outdoor games
+T3: 848 games with a line, median 5.1 days before kickoff, forecast used for 341 outdoor games
+
+FORECAST weather, 2022-25 (what live would do)
+  T1 lines first out (~11 d)                279 bets 51.3%   -6.0u  ROI -2.2%  CLV +0.34 pts   [22:-6.6 23:-3.6 24:+5.2 25:-0.9]
+  T2 Monday 9 AM (~6 d)                     266 bets 54.5%  +10.8u  ROI +4.1%  CLV +0.69 pts   [22:-8.1 23:+8.5 24:+2.8 25:+7.5]
+  T3 Tuesday 11:45 AM (~5 d, live now)      265 bets 53.6%   +6.1u  ROI +2.3%  CLV +0.61 pts   [22:-6.8 23:+7.5 24:+0.8 25:+4.5]
+  combined: first of T1/T2/T3 with edge 2+  404 bets 50.7%  -12.6u  ROI -3.1%  CLV +0.49 pts   [22:-13.5 23:-2.9 24:+3.2 25:+0.5]
+    combined bets placed at: T1 285, T2 93, T3 33
+
+NO weather, 2020-25
+  T1 lines first out (~11 d)                309 bets 51.5%   -5.5u  ROI -1.8%  CLV +0.76 pts   [20:+6.7 21:-9.1 22:-8.4 23:-0.5 24:+4.1 25:+1.7]
+  T2 Monday 9 AM (~6 d)                     294 bets 55.1%  +15.3u  ROI +5.2%  CLV +0.70 pts   [20:+2.1 21:-0.2 22:+6.0 23:+4.4 24:+1.5 25:+1.5]
+  T3 Tuesday 11:45 AM (~5 d, live now)      336 bets 53.6%   +7.6u  ROI +2.3%  CLV +0.54 pts   [20:-1.9 21:-2.3 22:-0.7 23:+4.8 24:+7.0 25:+0.7]
+  combined: first of T1/T2/T3 with edge 2+  482 bets 52.9%   +4.8u  ROI +1.0%  CLV +0.67 pts   [20:+4.0 21:-1.5 22:-3.7 23:-2.1 24:+5.3 25:+2.8]
+    combined bets placed at: T1 314, T2 110, T3 68
+
+Paired vs T3 (the current Tuesday lock), units difference, 90% interval resampling game weeks
+  T1    forecast 2022-25:  -12.1u [-31.5, +8.3]   no weather 2020-25:  -13.1u [-37.4, +11.1]   -> not shown
+  T2    forecast 2022-25:   +4.7u [-9.0, +18.4]   no weather 2020-25:   +7.6u [-11.7, +26.5]   -> consistent, not confirmed
+  comb  forecast 2022-25:  -18.7u [-37.5, +0.1]   no weather 2020-25:   -2.8u [-22.9, +17.7]   -> not shown
+
+Exploratory (not pre-registered): opener first seen after Monday 9 AM in 58 of 865 games; T3 vs T2 by game type
+  fc   Thursday games  T2 minus T3 +1.7u
+  fc   other games     T2 minus T3 +3.0u
+  none Thursday games  T2 minus T3 +1.8u
+  none other games     T2 minus T3 +5.8u

@@ -17,31 +17,45 @@ season = int(sys.argv[1])
 G = pd.read_csv(os.path.join(ROOT, "data", "training_games.csv"))
 days = sorted(set(pd.to_datetime(G[G.season == season].date).dt.date))
 
-def names(day, hour24):
-    h12 = hour24 % 12 or 12; ap = "AM" if hour24 < 12 else "PM"; hh = f"{h12:02d}"
-    return [f"{day}_{hh}{ap}"] + [f"{day}_{hh}_{mm}{ap}" for mm in ("00", "15", "30", "45")]
-jobs = []
-for d in days:
-    prev = (pd.Timestamp(d) - pd.Timedelta(days=1)).date().isoformat()
-    jobs += [n for h in range(17, 23) for n in names(prev, h)]
-    jobs += [n for h in range(10, 23) for n in names(d.isoformat(), h)]
-jobs = sorted(set(jobs))
-tmp = tempfile.mkdtemp()
-
+import time, threading
+CANARY = "2021-10-19_06PM"                  # a report known to exist: if it stops answering 200, the CDN is throttling us
+lock = threading.Lock()
+def get(n, dest):
+    r = subprocess.run(["curl", "-s", "-m", "30", "-o", dest, "-w", "%{http_code}", BASE + n + ".pdf"], capture_output=True, text=True)
+    return r.stdout.strip()
+def wait_if_blocked():
+    with lock:
+        for k in range(20):
+            if get(CANARY, os.path.join(tmp, "_canary.pdf")) == "200": return
+            print(f"  throttled; sleeping {60*(k+1)} s", flush=True); time.sleep(60 * (k + 1))
 def fetch(n):
     dest = os.path.join(tmp, n + ".pdf")
     for attempt in range(3):
-        r = subprocess.run(["curl", "-s", "-m", "30", "-o", dest, "-w", "%{http_code}", BASE + n + ".pdf"], capture_output=True, text=True)
-        code = r.stdout.strip()
+        code = get(n, dest); time.sleep(0.25)
         if code == "200" and os.path.getsize(dest) > 1000: return n, "ok"
-        if code in ("403", "404"): break
+        if code in ("403", "404"):
+            if get(CANARY, os.path.join(tmp, "_c.pdf")) == "200": break   # really missing
+            wait_if_blocked()                                                # blocked: wait, then retry this name
     if os.path.exists(dest): os.remove(dest)
     return n, f"missing:{code}"
-print(f"season {season}: {len(days)} game days, {len(jobs)} names to try", flush=True)
-with ThreadPoolExecutor(12) as ex: res = list(ex.map(fetch, jobs))
+def label(day, hour24, mm=None):
+    h12 = hour24 % 12 or 12; ap = "AM" if hour24 < 12 else "PM"
+    return f"{day}_{h12:02d}{ap}" if mm is None else f"{day}_{h12:02d}_{mm}{ap}"
+tmp = tempfile.mkdtemp()
+res = []
+print(f"season {season}: {len(days)} game days", flush=True)
+for i, d in enumerate(days):
+    prev = (pd.Timestamp(d) - pd.Timedelta(days=1)).date().isoformat(); day = d.isoformat()
+    hours = [(prev, h) for h in range(17, 23)] + [(day, h) for h in range(10, 23)]
+    with ThreadPoolExecutor(3) as ex: r1 = list(ex.map(lambda x: fetch(label(*x)), hours))
+    res += r1
+    if not any(st == "ok" for _, st in r1):          # newer naming: HH_MMPM every 15 or 30 minutes
+        q = [label(dd, h, mm) for dd, h in hours for mm in ("00", "15", "30", "45")]
+        with ThreadPoolExecutor(3) as ex: res += list(ex.map(fetch, q))
+    if i % 20 == 0: print(f"  day {i+1}/{len(days)} {day}: files so far {sum(st == 'ok' for _, st in res)}", flush=True)
 log = pd.DataFrame(res, columns=["name", "status"]); log.to_csv(os.path.join(HERE, f"download_log_{season}.csv"), index=False)
-ok = [n for n, s in res if s == "ok"]
 print("download:", log.status.value_counts().to_dict(), flush=True)
+ok = [n for n, s in res if s == "ok"]
 rows = []
 for n in ok:
     for r in parse(os.path.join(tmp, n + ".pdf")): rows.append(r)

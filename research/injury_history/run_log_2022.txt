@@ -1,0 +1,13 @@
+season 2022: 165 game days
+  day 1/165 2021-10-19: files so far 19
+  day 21/165 2021-11-08: files so far 398
+  day 41/165 2021-11-29: files so far 777
+  day 61/165 2021-12-19: files so far 1157
+  day 81/165 2022-01-09: files so far 1537
+  day 101/165 2022-01-29: files so far 1917
+  day 121/165 2022-02-24: files so far 2297
+  day 141/165 2022-03-16: files so far 2677
+  day 161/165 2022-04-06: files so far 3057
+download: {'ok': 3133, 'missing:403': 2}
+parsed 3133 files -> 355789 rows; files per calendar day median 13; as_of missing 0.0%; rows missing team/date/matchup 0.0%
+{'Out': 264685, 'Questionable': 34145, 'NOT YET SUBMITTED': 25348, 'Available': 18640, 'Probable': 9326, 'Doubtful': 3645}

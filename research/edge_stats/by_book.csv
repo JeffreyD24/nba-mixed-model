@@ -1,3 +1,3 @@
 book,bets,graded,stake_units,units,roi,roi_lo90,roi_hi90,clv_mean,clv_n,first_bet,last_bet,note
-DraftKings,12,8,12.0,-0.4,-0.04999999999999999,-0.5275,0.4325,0.75,8,2026-10-30,2026-11-02,n<30: too few bets to read
+DraftKings,14,12,14.0,1.35,0.1125,-0.3633333333333333,0.5866666666666668,0.16666666666666666,12,2026-10-30,2026-11-04,n<30: too few bets to read
 FanDuel,3,3,3.0,-1.09,-0.3633333333333333,-1.0,0.2733333333333334,1.0,3,2026-10-30,2026-10-30,n<30: too few bets to read

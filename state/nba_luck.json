@@ -1,5 +1,5 @@
 {
- "made_at": "2026-11-03 11:30",
+ "made_at": "2026-11-04 11:28",
  "weight": 0.5,
  "min_games": 5,
  "form_weight_total": 0.2,
@@ -12,7 +12,7 @@
    "luck": -3.789,
    "luck_allowed": -1.704,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -21,7 +21,7 @@
    "luck": -7.468,
    "luck_allowed": -0.687,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -30,7 +30,7 @@
    "luck": -1.548,
    "luck_allowed": -2.031,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -39,7 +39,7 @@
    "luck": -10.946,
    "luck_allowed": 1.934,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -48,7 +48,7 @@
    "luck": -13.933,
    "luck_allowed": 1.589,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -57,7 +57,7 @@
    "luck": 1.754,
    "luck_allowed": -5.231,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -66,7 +66,7 @@
    "luck": 3.111,
    "luck_allowed": -3.275,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -75,7 +75,7 @@
    "luck": 1.136,
    "luck_allowed": -2.118,
    "through": "2026-11-02",
-   "form_games": 5,
+   "form_games": 6,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -84,7 +84,7 @@
    "luck": 0.888,
    "luck_allowed": -10.298,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -93,7 +93,7 @@
    "luck": 0.685,
    "luck_allowed": 2.625,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -102,7 +102,7 @@
    "luck": 3.957,
    "luck_allowed": -5.27,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -111,7 +111,7 @@
    "luck": -1.645,
    "luck_allowed": -2.286,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -120,7 +120,7 @@
    "luck": -2.384,
    "luck_allowed": 3.971,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -129,7 +129,7 @@
    "luck": 10.343,
    "luck_allowed": 0.618,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -138,7 +138,7 @@
    "luck": 5.853,
    "luck_allowed": -6.458,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -147,7 +147,7 @@
    "luck": 0.731,
    "luck_allowed": 9.42,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -156,7 +156,7 @@
    "luck": -7.528,
    "luck_allowed": -1.212,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -165,7 +165,7 @@
    "luck": 1.671,
    "luck_allowed": -7.897,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -174,7 +174,7 @@
    "luck": -3.681,
    "luck_allowed": -0.922,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -183,7 +183,7 @@
    "luck": -7.804,
    "luck_allowed": -2.457,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -192,7 +192,7 @@
    "luck": -7.345,
    "luck_allowed": -4.667,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -201,7 +201,7 @@
    "luck": -0.16,
    "luck_allowed": 0.157,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -210,7 +210,7 @@
    "luck": -2.185,
    "luck_allowed": -7.719,
    "through": "2026-11-02",
-   "form_games": 7,
+   "form_games": 8,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -219,7 +219,7 @@
    "luck": 0.086,
    "luck_allowed": 5.044,
    "through": "2026-11-02",
-   "form_games": 4,
+   "form_games": 5,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -228,7 +228,7 @@
    "luck": 4.665,
    "luck_allowed": -4.948,
    "through": "2026-11-02",
-   "form_games": 5,
+   "form_games": 6,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -237,7 +237,7 @@
    "luck": -5.48,
    "luck_allowed": -5.513,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -246,7 +246,7 @@
    "luck": -3.693,
    "luck_allowed": 4.12,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -255,7 +255,7 @@
    "luck": -4.139,
    "luck_allowed": -2.356,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -264,7 +264,7 @@
    "luck": -8.252,
    "luck_allowed": -1.055,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   },
@@ -273,7 +273,7 @@
    "luck": -2.64,
    "luck_allowed": -11.318,
    "through": "2026-11-02",
-   "form_games": 6,
+   "form_games": 7,
    "form_total": 0.0,
    "form_margin": 0.0
   }

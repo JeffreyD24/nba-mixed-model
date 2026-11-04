@@ -31,8 +31,8 @@ jobs:
           SEASONS="${{ inputs.seasons }}"
           if [ -z "$SEASONS" ]; then SEASONS=$(grep -m1 '^seasons:' research/injury_history/REQUEST.txt | cut -d: -f2); fi
           for s in $SEASONS; do
-            python research/injury_history/fetch_injury_history.py "$s" 2>&1 | tee -a research/injury_history/run_log.txt || true
+            python research/injury_history/fetch_injury_history.py "$s" 2>&1 | tee research/injury_history/run_log_$s.txt || true
             git add research/injury_history
             git diff --cached --quiet || git commit -q -m "NBA injury report history: season $s"
-            for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep 15; done
+            for i in 1 2 3 4 5; do git pull --rebase -q -X theirs && git push -q && break; git rebase --abort 2>/dev/null; sleep 15; done
           done

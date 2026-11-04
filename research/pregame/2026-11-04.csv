@@ -2031,3 +2031,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-03 21:43:20,295386,2026-11-04,2026-11-04 22:00,lal,sac,Caesars,event,total,over,234.5,-110,normal
 2026-11-03 21:44:34,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Caesars,event,spread,away,-2.0,-115,normal
 2026-11-03 21:44:34,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Caesars,event,spread,home,2.0,-105,normal
+2026-11-03 21:47:08,295376,2026-11-04,2026-11-04 19:30,cha,bkn,bet365,event,moneyline,home,0.0,135,normal
+2026-11-03 21:47:08,295376,2026-11-04,2026-11-04 19:30,cha,bkn,bet365,event,moneyline,away,0.0,-160,normal
+2026-11-03 21:47:08,295386,2026-11-04,2026-11-04 22:00,lal,sac,bet365,event,total,over,235.5,-110,normal
+2026-11-03 21:47:08,295386,2026-11-04,2026-11-04 22:00,lal,sac,bet365,event,total,under,235.5,-110,normal
+2026-11-03 21:48:22,295382,2026-11-04,2026-11-04 20:30,min,hou,Consensus,event,total,under,220.5,-111,normal
+2026-11-03 21:48:22,295382,2026-11-04,2026-11-04 20:30,min,hou,Consensus,event,total,over,220.5,-110,normal
+2026-11-03 21:48:22,295386,2026-11-04,2026-11-04 22:00,lal,sac,Consensus,event,total,over,235.5,-107,normal
+2026-11-03 21:48:22,295386,2026-11-04,2026-11-04 22:00,lal,sac,Consensus,event,total,under,235.5,-110,normal

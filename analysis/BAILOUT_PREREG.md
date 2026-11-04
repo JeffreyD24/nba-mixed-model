@@ -33,3 +33,11 @@ For each market and k, with the ride win rate and its 90% interval (bootstrap by
 ## Notes
 - Live bets are often at FanDuel; the alert measures the move with the DraftKings line against his logged bet line.
 - Thresholds are per unit; the alert scales by the stake and price he logged.
+
+## Addendum after results (Nov 4, 2026; written after seeing results, flagged as such)
+- Qualifying by rule 1: totals from k = 3 (45.0%, 308 bets), spreads from k = 1 (45.1%, 166 bets). Live tiers: totals 3 and 4, spreads 1 and 2.
+- Spread tier 2 has 55 bets (rule 1's 60-bet floor is stated for the first tier only). It is used with its own threshold, and its hedge
+  suggestion (35-20, 63.6%; 90% lower bound about 53%) has no sample floor in rule 3. Both are PROVISIONAL and reviewed monthly.
+- Spread tiers 3-4 (24 and 15 bets) are not used.
+- Moves are measured on DraftKings from the line at the time the bet was logged (Fable review): many bets are at FanDuel, and the gap
+  between books is not a move.

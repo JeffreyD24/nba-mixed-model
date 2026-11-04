@@ -306,5 +306,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzgz2krque27",
   "text": "Pascal Siakam: Available to play Wednesday    https://www.rotowire.com/basketball/player/pascal-siakam-3922",
   "swing": 1.17
+ },
+ "2026-11-04|tor|kawhi leonard": {
+  "status": "Out",
+  "player": "Kawhi Leonard",
+  "game_id": 22600182,
+  "reporter": "Law Murray",
+  "posted_at_et": "2026-11-03 19:05:09",
+  "seen_at_et": "2026-11-03 19:06:49",
+  "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzh2kxsp2c2z",
+  "text": "The Toronto Raptors say that Kawhi Leonard is out another week but that he is nearing a return from left knee swelling",
+  "swing": 2.93
  }
 }

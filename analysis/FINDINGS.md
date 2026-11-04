@@ -1,5 +1,13 @@
 # Research findings log
 
+## 2026-11-04: NFL home-pick spread CLV, followed up (pre-registered)
+nfl-mixed-model `research/spreads/HOME_PICKS_PREREG.md` (f3278ee), results `HOME_PICKS_RESULTS.md` (a9aa3d4). Fable: no bugs.
+- **Model information, not market drift:** model home-dog picks CLV +0.48 vs matched unpicked home dogs +0.01 (100th percentile of 5,000 draws). CLV rises with edge toward the home dog (-0.02 / +0.18 / +0.48).
+- **Not a market pattern:** all home dogs 2011-19 (SBR open to close) CLV -0.27 [-0.37, -0.17].
+- **Fresh weeks (2-4, 15-18):** model home-dog picks 96 bets, CLV +0.29 [+0.00, +0.56] vs break-even +0.61-0.64, -9.4u. **Test-only.** Home/away gap held (+0.27 vs +0.05). In-sample +0.44 shrank about a third.
+- Home-dog CLV is mostly non-key-number half points (+0.33 vs +0.06 across 3/7). Use as a feature for the step-3 news model, not a bet.
+- Data bug: SBR 2021-11-14 opening spreads have inverted signs (trusted rows); fix in clean_sbr.py.
+
 ## 2026-11-04: Spreads step 1 for NHL and NFL (honest baselines)
 NHL (pre-registered nhl-mixed-model `research/spreads/STEP1_NHL_PREREG.md`, 1ab00db; results `research/spreads/STEP1_NHL_RESULTS.md`):
 - Timing already honest (91.7% of DK openers post the day before before 7 PM; an extra night of results is worth nothing).

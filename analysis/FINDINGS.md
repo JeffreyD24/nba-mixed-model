@@ -484,3 +484,10 @@ Full catalog, scripts and per-game data: [`research/stats_catalog/`](../research
 15.0 at 240. Ranking bets by edge / noise instead of raw edge picks 1,440 of the same 1,446 bets in 2023-26 (+119.5u either way; logistic AIC
 4400.2 vs 4400.5) and, on Model 1's 2013-22 SBR bets, the top halves by each measure both win 53.5%. Verdict: keep raw edge; the noise gradient
 is real but too small to matter for bet selection.
+
+## Line moved against the model: keep the PASS rule (Nov 4, 2026)
+`analysis/LINE_MOVE_RESULTS.md` (pre-registered in `analysis/LINE_MOVE_PREREG.md`). Out of sample (SBR 2013-22) win rate at the opener falls
+with the size of the move against: totals 53.6% (0.5) -> 49.3% (1) -> 46.4% (1.5) -> 42.2% (2-2.5) -> 37.4% (3+); toward 58.0%. Early moves
+(first 90 min) are no better than later ones; 46% of early against-moves swing back by the close but betting them still lost. DraftKings has
+posted only half-point lines since Oct 2025, so live moves are whole points. Totals "1 pt against" was +20.6u on DK 2023-26 but -6.4u at the
+SBR close: no change, tracked in the new shadow record (`shadow_passed.py`, `state/shadow_passed.md`).

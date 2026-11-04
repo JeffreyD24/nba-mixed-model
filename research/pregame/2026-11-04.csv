@@ -7064,3 +7064,9 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-04 03:51:31,295384,2026-11-04,2026-11-04 21:00,tor,den,Consensus,event,moneyline,home,0.0,-194,normal
 2026-11-04 03:51:31,295384,2026-11-04,2026-11-04 21:00,tor,den,Consensus,event,total,over,230.5,-110,normal
 2026-11-04 03:51:31,295384,2026-11-04,2026-11-04 21:00,tor,den,BetMGM,event,team_total,home_under,117.5,-115,normal
+2026-11-04 03:53:58,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,home_under,105.5,-110,opener
+2026-11-04 03:53:58,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,away_over,108.5,-120,opener
+2026-11-04 03:53:58,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,away_under,108.5,-110,opener
+2026-11-04 03:53:58,295376,2026-11-04,2026-11-04 19:30,cha,bkn,Fanatics,event,team_total,home_over,105.5,-120,opener
+2026-11-04 03:55:10,295381,2026-11-04,2026-11-04 20:00,utah,no,Fanatics,event,spread,home,-5.5,-110,normal
+2026-11-04 03:55:10,295381,2026-11-04,2026-11-04 20:00,utah,no,Fanatics,event,spread,away,5.5,-110,normal

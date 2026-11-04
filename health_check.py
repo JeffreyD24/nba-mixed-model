@@ -86,7 +86,7 @@ if SPORT == "nba":
                     "research/model": (30, "Model output archive", "warn"), "research/props": (30, "Player props", "warn"),
                     "research/periods": (48, "Period scores", "warn"), "research/timeline": (48, "Timeline", "warn"),
                     "research/media": (168, "Media log", "warn"), "research/check_log.csv": (30, "Check log", "warn"),
-                    "state/picks_log_models.csv": (30, "Picks log by model", "warn"), "state/picks_log_shrunk.csv": (30, "Shrunk picks log", "warn"),
+                    "state/picks_log_models.csv": (30, "Picks log by model", "warn"), "state/picks_log_shrunk.csv": (30, "Shrunk picks log", "warn"), "state/picks_log_stack.csv": (30, "Stack picks log", "warn"),
                     "state/nba_luck.json": (30, "Shooting luck", "warn"), "state/nba_shots_2026_27.csv.gz": (30, "Shots 2026-27", "warn"),
                     "state/early": (30, "Early model files", "warn"), "state/pinnacle_now.json": (72, "Pinnacle now", "warn"),
                     "state/injury_status_seen.csv": (72, "Injury status seen", "warn")})

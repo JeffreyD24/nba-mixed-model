@@ -36,6 +36,8 @@ jobs:
         run: python bet_record.py . || echo "Bet record not updated; it will run again tomorrow."
       - name: Model 1 shrunk side-by-side record (Nov 3, 2026; Model 1 unchanged)
         run: python shrunk_record.py . || echo "Shrunk record not updated; it will run again tomorrow."
+      - name: NBA totals stack side-by-side record (Nov 3, 2026; v4 unchanged)
+        run: python stack_record.py . || echo "Stack record not updated; it will run again tomorrow."
       - name: Grade Polymarket paper trades
         run: python polymarket.py . --grade || echo "Polymarket grading failed; it will try again tomorrow."
       - name: Edge statistics (bootstrap ranges, calibration, Pinnacle CLV, books and limits)

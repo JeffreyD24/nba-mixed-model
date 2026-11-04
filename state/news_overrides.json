@@ -317,5 +317,38 @@
   "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzh2kxsp2c2z",
   "text": "The Toronto Raptors say that Kawhi Leonard is out another week but that he is nearing a return from left knee swelling",
   "swing": 2.93
+ },
+ "2026-11-04|lac|rui hachimura": {
+  "status": "Available",
+  "player": "Rui Hachimura",
+  "game_id": 22600186,
+  "reporter": "Law Murray",
+  "posted_at_et": "2026-11-03 19:44:23",
+  "seen_at_et": "2026-11-03 19:44:36",
+  "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzh4r52xlc2m",
+  "text": "The LA Clippers report that Max Strus, Derrick Jones Jr, and Rui Hachimura will be available in the same game for the first time since Honolulu when they host the Miami Heat Wednesday night",
+  "swing": 0.36
+ },
+ "2026-11-04|lac|derrick jones": {
+  "status": "Available",
+  "player": "Derrick Jones Jr.",
+  "game_id": 22600186,
+  "reporter": "Law Murray",
+  "posted_at_et": "2026-11-03 19:44:23",
+  "seen_at_et": "2026-11-03 19:44:36",
+  "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzh4r52xlc2m",
+  "text": "The LA Clippers report that Max Strus, Derrick Jones Jr, and Rui Hachimura will be available in the same game for the first time since Honolulu when they host the Miami Heat Wednesday night",
+  "swing": 0.65
+ },
+ "2026-11-04|lac|max strus": {
+  "status": "Available",
+  "player": "Max Strus",
+  "game_id": 22600186,
+  "reporter": "Law Murray",
+  "posted_at_et": "2026-11-03 19:44:23",
+  "seen_at_et": "2026-11-03 19:44:36",
+  "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzh4r52xlc2m",
+  "text": "The LA Clippers report that Max Strus, Derrick Jones Jr, and Rui Hachimura will be available in the same game for the first time since Honolulu when they host the Miami Heat Wednesday night",
+  "swing": 0.49
  }
 }

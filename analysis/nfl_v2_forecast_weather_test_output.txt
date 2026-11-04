@@ -1,0 +1,28 @@
+NFL totals v2 with forecast weather, DraftKings totals 2022-25, weeks 5-14, edge 2+ (pre-registered: WEATHER_FORECAST_V2_PREREG.md)
+games: 576 (outdoor 387); first DraftKings total snapshot: median 11.9 days before kickoff, 97% posted more than 7 days ahead (before any forecast we hold)
+
+At the opener (no forecast exists yet for most games):
+  no weather                          192 bets 56.8%  +16.1u  CLV +1.30 pts   [22:+1.1 23:+11.2 24:+2.8 25:+1.0]
+  recorded game-time weather (LEAKS)  245 bets 57.6%  +24.2u  CLV +1.30 pts   [22:+0.7 23:+7.8 24:+7.8 25:+7.8]
+
+Line = DraftKings total 7 days before kickoff (525 games have one)
+  forecast weather (7 d)              226 bets 57.1%  +20.3u  CLV +1.05 pts   [22:-2.6 23:+10.9 24:+3.4 25:+8.6]
+  no weather                          174 bets 60.3%  +26.5u  CLV +1.20 pts   [22:+2.5 23:+6.6 24:+6.7 25:+10.6]
+  recorded weather (LEAKS)            233 bets 58.4%  +26.6u  CLV +1.11 pts   [22:+1.1 23:+7.1 24:+4.2 25:+14.3]
+  forecast minus no weather: -6.2u  90% interval -24.8 to +12.7  (game-day bootstrap)
+  bets that differ: forecast-only 95, no-weather-only 44
+
+Line = DraftKings total 5 days  [PRIMARY] before kickoff (574 games have one)
+  forecast weather (5 d)              249 bets 55.8%  +16.4u  CLV +0.60 pts   [22:+2.1 23:+12.6 24:-5.8 25:+7.5]
+  no weather                          236 bets 53.4%   +4.5u  CLV +0.53 pts   [22:-1.4 23:+2.9 24:+2.1 25:+0.9]
+  recorded weather (LEAKS)            250 bets 54.8%  +11.5u  CLV +0.59 pts   [22:+0.1 23:+9.4 24:-6.4 25:+8.5]
+  forecast minus no weather: +11.8u  90% interval -6.0 to +29.3  (game-day bootstrap)
+  bets that differ: forecast-only 73, no-weather-only 60
+  PRIMARY verdict (lead 5 d): consistent, not confirmed
+
+Line = DraftKings total 1 day before kickoff (576 games have one)
+  forecast weather (1 d)              259 bets 54.8%  +12.1u  CLV +0.29 pts   [22:-0.1 23:+6.9 24:-2.2 25:+7.5]
+  no weather                          229 bets 50.2%   -9.5u  CLV +0.28 pts   [22:-11.0 23:-0.1 24:+4.3 25:-2.6]
+  recorded weather (LEAKS)            252 bets 52.0%   -1.9u  CLV +0.30 pts   [22:-5.9 23:+2.8 24:-3.6 25:+4.8]
+  forecast minus no weather: +21.5u  90% interval -0.8 to +43.5  (game-day bootstrap)
+  bets that differ: forecast-only 93, no-weather-only 64

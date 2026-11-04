@@ -350,5 +350,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mziwrxt3jw26",
   "text": "Kon Knueppel: Cleared to play    https://www.rotowire.com/basketball/player/kon-knueppel-6540",
   "swing": 1.29
+ },
+ "2026-11-04|bos|jayson tatum": {
+  "status": "Out",
+  "player": "Jayson Tatum",
+  "game_id": 22600175,
+  "reporter": "John Karalis",
+  "posted_at_et": "2026-11-04 13:35:06",
+  "seen_at_et": "2026-11-04 13:37:17",
+  "url": "https://bsky.app/profile/johnkaralis.com/post/3mziylq57gr2x",
+  "text": "Celtics say Jayson Tatum is OUT tonight, resting vs. the Bucks. Payton Pritchard still listed as questionable",
+  "swing": 2.18
  }
 }

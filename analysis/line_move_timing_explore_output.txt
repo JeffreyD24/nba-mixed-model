@@ -1,0 +1,18 @@
+SP (|news| >= 1.5; share = move from open / (build slope x news)); clock times ET
+  10 PM night before: median    0%  mean    1%  games 396
+                7 AM: median    0%  mean    5%  games 518
+               10 AM: median    0%  mean    7%  games 520
+                noon: median    0%  mean   14%  games 520
+                2 PM: median   33%  mean   31%  games 520
+                4 PM: median   49%  mean   51%  games 520
+                6 PM: median   71%  mean   65%  games 520
+               close: median   91%  mean   88%
+TOT (|news| >= 1.5; share = move from open / (build slope x news)); clock times ET
+  10 PM night before: median    0%  mean   11%  games 266
+                7 AM: median    0%  mean    9%  games 363
+               10 AM: median    0%  mean   11%  games 400
+                noon: median   26%  mean   18%  games 400
+                2 PM: median   36%  mean   35%  games 400
+                4 PM: median   65%  mean   53%  games 400
+                6 PM: median   72%  mean   65%  games 400
+               close: median  100%  mean   87%

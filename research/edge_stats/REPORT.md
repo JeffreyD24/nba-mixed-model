@@ -1,4 +1,4 @@
-# Edge statistics (NBA), made 2026-11-03 11:30 ET
+# Edge statistics (NBA), made 2026-11-04 11:29 ET
 
 ## ROI and closing line value with bootstrap ranges
 
@@ -6,25 +6,27 @@ ROI = units won per bet (each bet 1 unit; scorecard NBA/NFL bets at -110). 90% r
 
 | source | rule | scope | n | W | L | P | units | roi | roi_lo90 | roi_hi90 | roi_lo90_by_day | roi_hi90_by_day | p_roi_above_0 | clv_n | clv_mean | clv_lo90 | clv_hi90 | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| scorecard | Model 1 open spread 3+ pts | all | 39 | 22 | 17 | 0 | 3.000 | 0.077 | -0.168 | 0.322 | -0.246 | 0.358 | 0.688 | 39 | 1.538 | 0.769 | 2.385 |  |
-| scorecard | Model 1 open spread 3+ pts | live only | 8 | 3 | 5 | 0 | -2.270 | -0.284 | -0.761 | 0.193 | -0.364 | -0.045 | 0.140 | 8 | 3.875 | 1.500 | 6.500 | n<30: too few bets to read |
-| scorecard | Model 2 open spread 3+ pts | all | 29 | 18 | 11 | 0 | 5.360 | 0.185 | -0.078 | 0.448 | -0.222 | 0.516 | 0.832 | 29 | 1.966 | 0.931 | 3.069 | n<30: too few bets to read |
-| scorecard | Model 2 open spread 3+ pts | live only | 4 | 3 | 1 | 0 | 1.730 | 0.432 | -0.523 | 0.909 | -1.000 | 0.909 | 0.740 | 4 | -0.500 | -1.500 | 0.500 | n<30: too few bets to read |
-| scorecard | Model 3 open spread 3+ pts | all | 32 | 18 | 14 | 0 | 2.360 | 0.074 | -0.224 | 0.372 | -0.253 | 0.400 | 0.699 | 32 | 1.438 | 0.500 | 2.438 |  |
-| scorecard | Model 3 open spread 3+ pts | live only | 2 | 1 | 1 | 0 | -0.090 | -0.045 | -1.000 | 0.909 |  |  | 0.254 | 2 | 0.000 | -1.000 | 1.000 | n<30: too few bets to read |
-| scorecard | Model 1 open total 3+ pts | all | 38 | 19 | 19 | 0 | -1.730 | -0.045 | -0.297 | 0.206 | -0.270 | 0.167 | 0.435 | 38 | 2.026 | 1.079 | 3.053 |  |
-| scorecard | Model 1 open total 3+ pts | live only | 10 | 5 | 5 | 0 | -0.450 | -0.045 | -0.618 | 0.527 | -0.682 | 0.227 | 0.378 | 10 | 4.400 | 2.100 | 7.100 | n<30: too few bets to read |
-| scorecard | Model 2 open total 3+ pts | all | 47 | 25 | 22 | 0 | 0.730 | 0.015 | -0.228 | 0.259 | -0.146 | 0.230 | 0.551 | 47 | 1.085 | 0.298 | 1.979 |  |
-| scorecard | Model 2 open total 3+ pts | live only | 5 | 1 | 4 | 0 | -3.090 | -0.618 | -1.000 | 0.145 | -1.000 | -0.364 | 0.056 | 5 | 0.000 | -0.400 | 0.400 | n<30: too few bets to read |
-| scorecard | Model 3 open total 3+ pts | all | 33 | 18 | 15 | 0 | 1.360 | 0.041 | -0.248 | 0.273 | -0.182 | 0.209 | 0.567 | 33 | 1.576 | 0.545 | 2.758 |  |
-| scorecard | Model 3 open total 3+ pts | live only | 4 | 1 | 3 | 0 | -2.090 | -0.523 | -1.000 | 0.432 | -1.000 | -0.045 | 0.051 | 4 | -1.000 | -3.000 | 1.000 | n<30: too few bets to read |
-| alerts | alert total caution / DON'T BET | all | 10 | 5 | 5 | 0 | -0.450 | -0.045 | -0.618 | 0.527 | -0.236 | 0.145 | 0.383 | 10 | 1.400 | 0.600 | 2.200 | n<30: too few bets to read |
-| alerts | alert spread caution / DON'T BET | all | 4 | 3 | 1 | 0 | 1.730 | 0.432 | -0.045 | 0.909 | -0.045 | 0.909 | 0.740 | 4 | -0.750 | -1.000 | -0.488 | n<30: too few bets to read |
-| alerts | alert spread BET | all | 4 | 1 | 3 | 0 | -2.090 | -0.523 | -1.000 | -0.045 | -1.000 | -0.045 | 0.049 | 4 | 0.500 | 0.000 | 1.000 | n<30: too few bets to read |
-| alerts | alert total BET | all | 7 | 3 | 4 | 0 | -1.270 | -0.182 | -0.727 | 0.364 | -0.364 | -0.045 | 0.345 | 7 | 1.857 | 1.000 | 2.857 | n<30: too few bets to read |
-| my bets | NBA totals v1 | all | 6 | 3 | 3 | 0 | -0.310 | -0.052 | -0.682 | 0.585 | -0.058 | -0.045 | 0.347 | 5 | 0.800 | -0.200 | 1.800 | n<30: too few bets to read |
-| my bets | NBA spreads v1 | all | 5 | 2 | 3 | 0 | -1.180 | -0.236 | -1.000 | 0.528 | -1.000 | 0.273 | 0.320 | 5 | 0.200 | -0.400 | 0.800 | n<30: too few bets to read |
-| my bets | ALL logged bets | all | 11 | 5 | 6 | 0 | -1.490 | -0.135 | -0.653 | 0.382 | -0.427 | 0.108 | 0.379 | 10 | 0.500 | -0.100 | 1.100 | n<30: too few bets to read |
+| scorecard | Model 1 open spread 3+ pts | all | 44 | 26 | 18 | 0 | 5.640 | 0.128 | -0.089 | 0.345 | -0.170 | 0.388 | 0.776 | 44 | 1.364 | 0.636 | 2.136 |  |
+| scorecard | Model 1 open spread 3+ pts | live only | 13 | 7 | 6 | 0 | 0.360 | 0.028 | -0.413 | 0.469 | -0.318 | 0.432 | 0.606 | 13 | 2.385 | 0.769 | 4.308 | n<30: too few bets to read |
+| scorecard | Model 2 open spread 3+ pts | all | 33 | 21 | 12 | 0 | 7.090 | 0.215 | -0.074 | 0.446 | -0.144 | 0.507 | 0.895 | 33 | 1.727 | 0.818 | 2.697 |  |
+| scorecard | Model 2 open spread 3+ pts | live only | 8 | 6 | 2 | 0 | 3.450 | 0.432 | -0.045 | 0.909 | -0.045 | 0.718 | 0.888 | 8 | -0.250 | -1.000 | 0.375 | n<30: too few bets to read |
+| scorecard | Model 3 open spread 3+ pts | all | 37 | 20 | 17 | 0 | 1.180 | 0.032 | -0.226 | 0.290 | -0.261 | 0.342 | 0.571 | 37 | 1.216 | 0.405 | 2.108 |  |
+| scorecard | Model 3 open spread 3+ pts | live only | 7 | 3 | 4 | 0 | -1.270 | -0.182 | -0.727 | 0.364 | -0.236 | -0.045 | 0.343 | 7 | -0.143 | -0.714 | 0.429 | n<30: too few bets to read |
+| scorecard | Model 1 open total 3+ pts | all | 43 | 20 | 23 | 0 | -4.820 | -0.112 | -0.334 | 0.110 | -0.336 | 0.105 | 0.222 | 43 | 1.674 | 0.767 | 2.674 |  |
+| scorecard | Model 1 open total 3+ pts | live only | 15 | 6 | 9 | 0 | -3.550 | -0.236 | -0.618 | 0.145 | -0.727 | 0.145 | 0.210 | 15 | 2.600 | 0.600 | 4.800 | n<30: too few bets to read |
+| scorecard | Model 2 open total 3+ pts | all | 55 | 30 | 25 | 0 | 2.270 | 0.041 | -0.167 | 0.250 | -0.105 | 0.220 | 0.656 | 55 | 1.091 | 0.345 | 1.891 |  |
+| scorecard | Model 2 open total 3+ pts | live only | 13 | 6 | 7 | 0 | -1.550 | -0.119 | -0.559 | 0.322 | -0.727 | 0.105 | 0.386 | 13 | 0.692 | -0.615 | 2.077 | n<30: too few bets to read |
+| scorecard | Model 3 open total 3+ pts | all | 35 | 18 | 17 | 0 | -0.640 | -0.018 | -0.291 | 0.255 | -0.276 | 0.164 | 0.429 | 35 | 1.343 | 0.286 | 2.514 |  |
+| scorecard | Model 3 open total 3+ pts | live only | 6 | 1 | 5 | 0 | -4.090 | -0.682 | -1.000 | -0.045 | -1.000 | -0.364 | 0.009 | 6 | -1.500 | -3.000 | 0.000 | n<30: too few bets to read |
+| alerts | alert total caution / DON'T BET | all | 23 | 9 | 14 | 0 | -5.820 | -0.253 | -0.585 | 0.079 | -0.393 | 0.091 | 0.069 | 23 | 0.391 | -0.391 | 1.174 | n<30: too few bets to read |
+| alerts | alert spread caution / DON'T BET | all | 11 | 7 | 4 | 0 | 2.360 | 0.215 | -0.306 | 0.562 | 0.041 | 0.591 | 0.829 | 11 | -0.364 | -0.636 | -0.182 | n<30: too few bets to read |
+| alerts | alert spread BET | all | 4 | 1 | 3 | 0 | -2.090 | -0.523 | -1.000 | 0.432 | -1.000 | -0.045 | 0.052 | 4 | 0.500 | 0.000 | 1.000 | n<30: too few bets to read |
+| alerts | alert total BET | all | 7 | 3 | 4 | 0 | -1.270 | -0.182 | -0.727 | 0.364 | -0.364 | -0.045 | 0.343 | 7 | 1.857 | 1.000 | 2.857 | n<30: too few bets to read |
+| my bets | NBA totals v1 | all | 6 | 3 | 3 | 0 | -0.310 | -0.052 | -0.682 | 0.585 | -0.058 | -0.045 | 0.337 | 5 | 0.800 | -0.200 | 1.800 | n<30: too few bets to read |
+| my bets | NBA spreads v1 | all | 5 | 2 | 3 | 0 | -1.180 | -0.236 | -1.000 | 0.528 | -1.000 | 0.273 | 0.312 | 5 | 0.200 | -0.400 | 0.800 | n<30: too few bets to read |
+| my bets | NBA totals v2 | all | 3 | 2 | 1 | 0 | 0.820 | 0.273 | -0.363 | 0.910 |  |  | 0.739 | 3 | -0.667 | -2.667 | 1.333 | n<30: too few bets to read |
+| my bets | NBA totals v4 | all | 1 | 1 | 0 | 0 | 0.930 | 0.930 | 0.930 | 0.930 |  |  | 1.000 | 1 | -2.000 | -2.000 | -2.000 | n<30: too few bets to read |
+| my bets | ALL logged bets | all | 15 | 8 | 7 | 0 | 0.260 | 0.017 | -0.366 | 0.401 | -0.328 | 0.277 | 0.605 | 14 | 0.071 | -0.714 | 0.786 | n<30: too few bets to read |
 
 
 ## Calibration: predicted chance vs what happened
@@ -35,20 +37,20 @@ ROI = units won per bet (each bet 1 unit; scorecard NBA/NFL bets at -110). 90% r
 
 | set | bin | n | predicted | actual | diff | z | brier | logloss |
 |---|---|---|---|---|---|---|---|---|
-| spread_home_cover: all games | (-0.001, 0.4] | 20 | 0.315 | 0.350 | 0.035 | 0.333 |  |  |
-| spread_home_cover: all games | (0.4, 0.45] | 7 | 0.431 | 0.429 | -0.003 | -0.014 |  |  |
-| spread_home_cover: all games | (0.45, 0.5] | 22 | 0.476 | 0.500 | 0.024 | 0.223 |  |  |
-| spread_home_cover: all games | (0.5, 0.55] | 13 | 0.526 | 0.538 | 0.012 | 0.089 |  |  |
-| spread_home_cover: all games | (0.55, 0.6] | 13 | 0.569 | 0.385 | -0.184 | -1.343 |  |  |
-| spread_home_cover: all games | (0.6, 1.0] | 17 | 0.667 | 0.471 | -0.197 | -1.719 |  |  |
-| spread_home_cover: all games | ALL | 92 | 0.493 | 0.446 | -0.048 | -0.914 | 0.256 | 0.708 |
-| spread_home_cover: live only | (-0.001, 0.4] | 3 | 0.269 | 0.667 | 0.397 | 1.552 |  |  |
-| spread_home_cover: live only | (0.4, 0.45] | 2 | 0.423 | 0.500 | 0.077 | 0.220 |  |  |
-| spread_home_cover: live only | (0.45, 0.5] | 4 | 0.477 | 0.750 | 0.273 | 1.092 |  |  |
-| spread_home_cover: live only | (0.5, 0.55] | 5 | 0.526 | 0.400 | -0.126 | -0.566 |  |  |
-| spread_home_cover: live only | (0.55, 0.6] | 3 | 0.569 | 0.667 | 0.098 | 0.341 |  |  |
-| spread_home_cover: live only | (0.6, 1.0] | 4 | 0.648 | 0.500 | -0.148 | -0.620 |  |  |
-| spread_home_cover: live only | ALL | 21 | 0.500 | 0.571 | 0.072 | 0.657 | 0.270 | 0.737 |
+| spread_home_cover: all games | (-0.001, 0.4] | 21 | 0.318 | 0.333 | 0.016 | 0.154 |  |  |
+| spread_home_cover: all games | (0.4, 0.45] | 9 | 0.428 | 0.444 | 0.017 | 0.100 |  |  |
+| spread_home_cover: all games | (0.45, 0.5] | 25 | 0.476 | 0.440 | -0.036 | -0.359 |  |  |
+| spread_home_cover: all games | (0.5, 0.55] | 16 | 0.525 | 0.562 | 0.037 | 0.299 |  |  |
+| spread_home_cover: all games | (0.55, 0.6] | 16 | 0.570 | 0.375 | -0.195 | -1.573 |  |  |
+| spread_home_cover: all games | (0.6, 1.0] | 20 | 0.666 | 0.500 | -0.166 | -1.571 |  |  |
+| spread_home_cover: all games | ALL | 107 | 0.498 | 0.439 | -0.058 | -1.209 | 0.253 | 0.702 |
+| spread_home_cover: live only | (-0.001, 0.4] | 4 | 0.293 | 0.500 | 0.207 | 0.910 |  |  |
+| spread_home_cover: live only | (0.4, 0.45] | 4 | 0.420 | 0.500 | 0.080 | 0.324 |  |  |
+| spread_home_cover: live only | (0.45, 0.5] | 7 | 0.475 | 0.429 | -0.047 | -0.247 |  |  |
+| spread_home_cover: live only | (0.5, 0.55] | 8 | 0.524 | 0.500 | -0.024 | -0.137 |  |  |
+| spread_home_cover: live only | (0.55, 0.6] | 6 | 0.571 | 0.500 | -0.071 | -0.351 |  |  |
+| spread_home_cover: live only | (0.6, 1.0] | 7 | 0.652 | 0.571 | -0.081 | -0.450 |  |  |
+| spread_home_cover: live only | ALL | 36 | 0.510 | 0.500 | -0.010 | -0.121 | 0.256 | 0.707 |
 
 
 ### total_over
@@ -57,20 +59,20 @@ ROI = units won per bet (each bet 1 unit; scorecard NBA/NFL bets at -110). 90% r
 
 | set | bin | n | predicted | actual | diff | z | brier | logloss |
 |---|---|---|---|---|---|---|---|---|
-| total_over: all games | (-0.001, 0.4] | 21 | 0.351 | 0.476 | 0.125 | 1.203 |  |  |
-| total_over: all games | (0.4, 0.45] | 20 | 0.429 | 0.450 | 0.021 | 0.186 |  |  |
-| total_over: all games | (0.45, 0.5] | 28 | 0.472 | 0.393 | -0.080 | -0.844 |  |  |
-| total_over: all games | (0.5, 0.55] | 14 | 0.528 | 0.571 | 0.044 | 0.328 |  |  |
-| total_over: all games | (0.55, 0.6] | 8 | 0.569 | 0.500 | -0.069 | -0.394 |  |  |
-| total_over: all games | (0.6, 1.0] | 1 | 0.625 | 0.000 | -0.625 | -1.290 |  |  |
-| total_over: all games | ALL | 92 | 0.454 | 0.457 | 0.003 | 0.052 | 0.251 | 0.693 |
-| total_over: live only | (-0.001, 0.4] | 4 | 0.297 | 0.250 | -0.047 | -0.207 |  |  |
-| total_over: live only | (0.4, 0.45] | 5 | 0.427 | 0.800 | 0.373 | 1.688 |  |  |
-| total_over: live only | (0.45, 0.5] | 5 | 0.470 | 0.400 | -0.070 | -0.312 |  |  |
-| total_over: live only | (0.5, 0.55] | 3 | 0.537 | 0.333 | -0.204 | -0.708 |  |  |
-| total_over: live only | (0.55, 0.6] | 3 | 0.576 | 0.667 | 0.090 | 0.317 |  |  |
-| total_over: live only | (0.6, 1.0] | 1 | 0.625 | 0.000 | -0.625 | -1.290 |  |  |
-| total_over: live only | ALL | 21 | 0.459 | 0.476 | 0.017 | 0.160 | 0.257 | 0.704 |
+| total_over: all games | (-0.001, 0.4] | 22 | 0.351 | 0.455 | 0.103 | 1.014 |  |  |
+| total_over: all games | (0.4, 0.45] | 23 | 0.429 | 0.478 | 0.050 | 0.481 |  |  |
+| total_over: all games | (0.45, 0.5] | 31 | 0.474 | 0.355 | -0.119 | -1.328 |  |  |
+| total_over: all games | (0.5, 0.55] | 19 | 0.523 | 0.632 | 0.109 | 0.952 |  |  |
+| total_over: all games | (0.55, 0.6] | 10 | 0.570 | 0.400 | -0.170 | -1.088 |  |  |
+| total_over: all games | (0.6, 1.0] | 2 | 0.625 | 0.000 | -0.625 | -1.824 |  |  |
+| total_over: all games | ALL | 107 | 0.459 | 0.449 | -0.011 | -0.225 | 0.253 | 0.698 |
+| total_over: live only | (-0.001, 0.4] | 5 | 0.310 | 0.200 | -0.110 | -0.531 |  |  |
+| total_over: live only | (0.4, 0.45] | 8 | 0.425 | 0.750 | 0.325 | 1.857 |  |  |
+| total_over: live only | (0.45, 0.5] | 8 | 0.476 | 0.250 | -0.226 | -1.281 |  |  |
+| total_over: live only | (0.5, 0.55] | 8 | 0.519 | 0.625 | 0.106 | 0.600 |  |  |
+| total_over: live only | (0.55, 0.6] | 5 | 0.576 | 0.400 | -0.176 | -0.796 |  |  |
+| total_over: live only | (0.6, 1.0] | 2 | 0.625 | 0.000 | -0.625 | -1.824 |  |  |
+| total_over: live only | ALL | 36 | 0.473 | 0.444 | -0.029 | -0.348 | 0.260 | 0.712 |
 
 
 ## CLV against Pinnacle's closing price (games from Nov 2, 2026; live recorder only)
@@ -98,7 +100,7 @@ Book names are normalized (dk / DraftKings are one book). `(not recorded)` means
 
 | book | bets | graded | stake_units | units | roi | roi_lo90 | roi_hi90 | clv_mean | clv_n | first_bet | last_bet | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| DraftKings | 12 | 8 | 12.0 | -0.400 | -0.050 | -0.527 | 0.432 | 0.750 | 8 | 2026-10-30 | 2026-11-02 | n<30: too few bets to read |
+| DraftKings | 14 | 12 | 14.0 | 1.350 | 0.113 | -0.363 | 0.587 | 0.167 | 12 | 2026-10-30 | 2026-11-04 | n<30: too few bets to read |
 | FanDuel | 3 | 3 | 3.000 | -1.090 | -0.363 | -1.000 | 0.273 | 1.000 | 3 | 2026-10-30 | 2026-10-30 | n<30: too few bets to read |
 
 

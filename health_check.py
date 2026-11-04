@@ -102,7 +102,7 @@ if SPORT == "nfl":
                     "research/media": (216, "Media log", "warn"),
                     "state/injury_seen.csv": (72, "Injury seen", "warn"), "state/injury_log_seen.csv": (72, "Injury log memory", "warn"),
                     "state/practice_now.json": (72, "Practice status now", "warn"), "state/weather_now.json": (6, "Weather now", "warn"),
-                    "state/h2_totals_watch.csv": (216, "2H totals watch", "warn"), "state/half_lines_h2_2026.csv": (216, "2H lines", "warn")})
+                    "state/h2_totals_watch.csv": (216, "2H totals watch", "warn"), "state/homedog_test.csv": (216, "Home-dog lean test log (test-only)", "warn"), "state/half_lines_h2_2026.csv": (216, "2H lines", "warn")})
 
 # paths that exist in research/ or state/ but are not regular data feeds (docs, one-off analyses, memory files)
 IGNORE = {"DATA_DICTIONARY.md", "HANDOFF_TO_OPUS.md", "IDEAS_AND_CHECKLIST.md", "LEAKAGE_AUDIT_2026-11-03.md",

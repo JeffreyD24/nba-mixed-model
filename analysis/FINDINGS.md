@@ -1,5 +1,9 @@
 # Research findings log
 
+## 2026-11-04: Home-dog lean + injury news stack; live test-only log
+- **Stack check (pre-registered, nfl-mixed-model research/spreads/STACK_HOMEDOG_NEWS_PREREG.md 4941760; results 503f5e2): stop.** At the DK line right after the final report: model home-dog picks 182 bets CLV +0.12; news toward the home dog 84 bets +0.26; both 20 bets **CLV +0.42, -4.7u** (break-even +0.64). The signals add roughly one for one but stay below break-even. Most of the home-dog CLV is gone by Friday (Monday-line +0.29 to +0.48 vs report-time +0.12); news against the model's home dog erases it (CLV -0.19).
+- **Live (approved, Fable-checked, commit bab0dbd):** `homedog_test.py` in the morning run records the DK spread minutes after each Monday lock and tags home dogs with model edge 3+; grades CLV to the DK close. TEST-only: no alerts, not in any bet record. File state/homedog_test.csv; registered in the health check (216 h) and config/thresholds.csv. First tagged week: week 10 (locks Mon Nov 9).
+
 ## 2026-11-04: Spreads step 3 for NHL and NFL; NHL moneyline split into EV buckets
 - NHL moneyline: Jeffrey kept EV 4-9% bets; they are now recorded and graded separately from 9%+ (`ML_EV_SPLIT`, `state/ml_ev_buckets.csv`).
 - NHL step 3 (nhl-mixed-model `research/spreads/STEP3_NHL_GOALIE_RESULTS.md`, prereg 1fc0e04): game-day model with actual starters adds to the DK price

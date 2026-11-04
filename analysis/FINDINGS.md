@@ -1,5 +1,11 @@
 # Research findings log
 
+## 2026-11-04: PROVISIONAL bets tier (process) and NBA spreads v3.1
+New standing rule (Jeffrey): ideas that look profitable but aren't proven are bet as PROVISIONAL with their own record and stop lines
+fixed in advance, reviewed weekly (`research/PROVISIONAL_BETS.md`, `provisional_review.py`, daily in the morning run + health check).
+First one: NBA spread injury-news bets (`PROVISIONAL_NEWS_SPREADS`, v3.1). Also corrected the spread record quoted in alert.py to the
+honest step-1 numbers.
+
 ## 2026-11-04: NBA spreads, injury news after the opener (spreads plan step 3a)
 Pre-registered (`research/spreads/STEP3A_NBA_INJURY_NEWS_PREREG.md`, d2813dc); results `research/spreads/STEP3A_NBA_RESULTS.md`.
 - News bets (8 PM report creates a 3+ edge the opener model did not have): 10 PM line 61 bets 70.5% +21.1u, CLV +0.52 [+0.21, +0.85];

@@ -65,6 +65,7 @@ COMMON = {
     "state/bet_record.csv": (30, "Bet record (daily grading)"),
     "state/picks_log.csv": (30, "Picks log"),
     "state/record_by_version.csv": (30, "Record by model version"),
+    "state/provisional_review.md": (30, "Provisional bets review (daily; stop lines in research/PROVISIONAL_BETS.md)"),
     "state/last_run.json": (30, "Last morning/evening run marker", "warn"),
     "state/line_jumps.csv": (72, "Line jumps log", "warn"),
     "state/market_moves.csv": (168, "Market moves log", "warn"),
@@ -293,8 +294,17 @@ try:
 except Exception as e:
     warn(f"could not read recent commits ({e})")
 
+# e) provisional bets: a stop or promote line crossed needs a decision (research/PROVISIONAL_BETS.md) -------------------
+try:
+    pr = open(os.path.join(WORK, "state", "provisional_review.md")).read()
+    flagged = [l for l in pr.splitlines() if "Decision: **STOP" in l or "Decision: **PROMOTE" in l]
+    for l in flagged: warn("provisional bet needs a decision: " + l.split("**")[1] + " -> " + l.split("Decision: **")[1].rstrip("*"))
+    if not flagged: ok("provisional bets: no stop/promote line crossed")
+except Exception as e:
+    warn(f"could not read state/provisional_review.md ({type(e).__name__})")
+
 # summary -----------------------------------------------------------------------------------------------------------
-status = "PROBLEMS" if problems else ("WARNINGS" if warnings else "ALL OK")
+status ="PROBLEMS" if problems else ("WARNINGS" if warnings else "ALL OK")
 stamp = NOW.strftime("%Y-%m-%d %H:%M UTC")
 title = f"[{SPORT.upper()} health] {status}"
 body = (f"{len(problems)} problem(s), {len(warnings)} warning(s). " if (problems or warnings) else "All pipelines healthy. ")

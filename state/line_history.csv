@@ -656,3 +656,8 @@ game_id,market,seen_at_et,line,open_line,source
 22600178,spread,2026-11-04 07:50,-6.5,-6.5,actionnetwork
 22600173,total,2026-11-04 07:55,218.5,219.5,actionnetwork
 22600179,total,2026-11-04 08:05,233.5,235.5,actionnetwork
+22600176,total,2026-11-04 08:45,213.5,214.5,actionnetwork
+22600177,total,2026-11-04 08:45,233.5,232.5,actionnetwork
+22600180,spread,2026-11-04 08:45,-3.5,-2.5,actionnetwork
+22600183,spread,2026-11-04 08:45,3.5,3.5,actionnetwork
+22600174,total,2026-11-04 08:45,233.5,234.5,actionnetwork

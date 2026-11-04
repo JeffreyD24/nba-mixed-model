@@ -82,3 +82,4 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600179,total,2026-11-03 23:25:23.335192,2026-11-04,no,utah,2026-11-04 20:00:00,over,234.5,235.5,239.67,5.17,2026-11-03_11_15PM,False,"line moved 1.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,,,,,
 22600182,spread,2026-11-04 00:50:29.295310,2026-11-04,den,tor,2026-11-04 21:00:00,away,-4.5,-5.5,1.38,3.12,as of 2026-11-03 22:21,False,no current injury report,,,,,,BET,,Kawhi Leonard|Out,,,,
 22600176,total,2026-11-04 03:35:24.661808,2026-11-04,bkn,cha,2026-11-04 19:30:00,over,214.5,214.5,217.57,3.07,2026-11-04_03_30AM,False,,,,,,,OPTIONAL,,,,,,
+22600174,total,2026-11-04 08:45:24.968270,2026-11-04,wsh,atl,2026-11-04 19:00:00,under,233.5,234.5,230.23,3.27,2026-11-04_08_45AM,True,,,,,,,BET,,,,,,

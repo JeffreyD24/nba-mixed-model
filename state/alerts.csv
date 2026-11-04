@@ -68,3 +68,5 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600176,spread,2026-11-03 17:10:24.633868,2026-11-04,bkn,cha,2026-11-04 19:30:00,home,3.5,2.5,0.04,3.54,as of 2026-11-03 11:30,False,no current injury report,,,,,,PASS,,,,,,
 22600178,spread,2026-11-03 19:19:29.063347,2026-11-04,mem,ind,2026-11-04 20:00:00,home,-6.5,-6.5,12.39,5.89,as of 2026-11-03 11:30,False,no current injury report,,,,,,BET,,,,,,
 22600178,total,2026-11-03 19:19:29.063347,2026-11-04,mem,ind,2026-11-04 20:00:00,under,230.5,230.5,226.31,4.19,as of 2026-11-03 11:30,False,no current injury report,,,,,,BET,,,,,,
+22600186,spread,2026-11-03 19:26:33.767103,2026-11-04,lac,mia,2026-11-04 22:30:00,home,4.5,,1.98,6.48,as of 2026-11-03 11:30,False,no current injury report,,,,,,CHECK,,,,,,
+22600186,total,2026-11-03 19:26:33.767103,2026-11-04,lac,mia,2026-11-04 22:30:00,under,233.5,,230.48,3.02,as of 2026-11-03 11:30,False,no current injury report,,,,,,CHECK,,,,,,

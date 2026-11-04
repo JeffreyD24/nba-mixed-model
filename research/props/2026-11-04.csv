@@ -144,3 +144,7 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-03 19:00,22600173,2026-11-04,Total Points,4684742,Ausar Thompson,,10.5,-111.0,10.5,-111.0,2026-11-04T02:47Z,under
 2026-11-03 19:00,22600173,2026-11-04,Total Rebounds,1966,LeBron James,,5.5,-153.0,6.5,116.0,2026-11-04T02:47Z,over
 2026-11-03 19:00,22600173,2026-11-04,Total Rebounds,1966,LeBron James,,5.5,116.0,6.5,-153.0,2026-11-04T02:47Z,under
+2026-11-03 19:15,22600173,2026-11-04,Total Points and Rebounds,3908845,John Collins,,18.5,-105.0,18.5,-108.0,2026-11-04T02:44Z,over
+2026-11-03 19:15,22600173,2026-11-04,Total Points and Rebounds,3908845,John Collins,,18.5,-125.0,18.5,-121.0,2026-11-04T02:44Z,under
+2026-11-03 19:15,22600173,2026-11-04,Total Assists and Rebounds,4278562,Paul Reed,,9.5,-139.0,10.5,105.0,2026-11-04T03:09Z,over
+2026-11-03 19:15,22600173,2026-11-04,Total Assists and Rebounds,4278562,Paul Reed,,9.5,105.0,10.5,-138.0,2026-11-04T03:09Z,under

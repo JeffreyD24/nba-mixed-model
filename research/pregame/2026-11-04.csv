@@ -2023,3 +2023,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-03 21:39:31,295382,2026-11-04,2026-11-04 20:30,min,hou,BetMGM,event,total,under,221.5,-118,normal
 2026-11-03 21:39:31,295387,2026-11-04,2026-11-04 22:30,mia,lac,BetMGM,event,total,over,114.5,-118,normal
 2026-11-03 21:39:31,295387,2026-11-04,2026-11-04 22:30,mia,lac,BetMGM,event,total,under,114.5,-110,normal
+2026-11-03 21:43:20,295386,2026-11-04,2026-11-04 22:00,lal,sac,BetRivers,event,spread,home,11.5,-114,normal
+2026-11-03 21:43:20,295386,2026-11-04,2026-11-04 22:00,lal,sac,BetRivers,event,spread,away,-11.5,-108,normal
+2026-11-03 21:43:20,295386,2026-11-04,2026-11-04 22:00,lal,sac,BetRivers,event,total,under,237.5,-134,normal
+2026-11-03 21:43:20,295386,2026-11-04,2026-11-04 22:00,lal,sac,BetRivers,event,total,over,237.5,110,normal
+2026-11-03 21:43:20,295386,2026-11-04,2026-11-04 22:00,lal,sac,Caesars,event,total,under,234.5,-110,normal
+2026-11-03 21:43:20,295386,2026-11-04,2026-11-04 22:00,lal,sac,Caesars,event,total,over,234.5,-110,normal
+2026-11-03 21:44:34,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Caesars,event,spread,away,-2.0,-115,normal
+2026-11-03 21:44:34,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Caesars,event,spread,home,2.0,-105,normal

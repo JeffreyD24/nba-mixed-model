@@ -1,5 +1,11 @@
 # Research findings log
 
+## 2026-11-04: NBA spreads, injury news after the opener (spreads plan step 3a)
+Pre-registered (`research/spreads/STEP3A_NBA_INJURY_NEWS_PREREG.md`, d2813dc); results `research/spreads/STEP3A_NBA_RESULTS.md`.
+- News bets (8 PM report creates a 3+ edge the opener model did not have): 10 PM line 61 bets 70.5% +21.1u, CLV +0.52 [+0.21, +0.85];
+  7 AM line 75 bets 65.3% +18.5u, CLV +0.42. Below break-even CLV (+0.77): NOT passed. The same bets appear at 8 PM before the report.
+- Waiting and betting all v2 at 10 PM: 304 bets +30.1u CLV +0.55 vs opener +3.8u CLV +0.84 on the same games: units and CLV disagree.
+
 ## 2026-11-04: NBA spreads v2 re-graded with opener-time information (spreads plan step 1)
 Pre-registered (`research/spreads/STEP1_NBA_PREREG.md`, commit 022af82). `analysis/spreads_step1_nba.py` (output
 `spreads_step1_nba_output.txt`); full write-up with takeaways `research/spreads/STEP1_NBA_RESULTS.md`. DK openers 2023-26, edge 3+.

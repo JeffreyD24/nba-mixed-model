@@ -130,6 +130,23 @@ def log_link(date, away, home, market, pick, line):
     return f"https://github.com/{repo}/issues/new?" + urllib.parse.urlencode(q)
 
 
+def dk_link(ln, market, side, line):
+    """'Bet on DraftKings' link for this bet: the bet-slip link from ESPN's odds feed (puts the bet on your slip). The link has
+    the line built in (P750 = +7.5, O23350 = 233.5); ESPN's copy can lag, so if it isn't the line given use the game page instead.
+    line = the line for the side bet (a spread: that team's own line)."""
+    import re as _re
+    key = {"home": "dk_link_home_spread", "away": "dk_link_away_spread", "over": "dk_link_over", "under": "dk_link_under"}[side]
+    v = ln.get(key) or ln.get("dk_link_game")
+    dk = v if isinstance(v, str) and v.startswith("http") else None
+    if dk and "outcomes=" in dk:
+        m_ = _re.search(r"(?:HC\d+([PN])(\d+)|OU\d+[OU](\d+))_", dk)
+        if m_:
+            lv = (int(m_.group(2)) / 100 * (1 if m_.group(1) == "P" else -1)) if m_.group(2) else int(m_.group(3)) / 100
+            if abs(lv - float(line)) > 0.01:
+                gl = ln.get("dk_link_game"); dk = gl if isinstance(gl, str) and gl.startswith("http") else None
+    return dk
+
+
 def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info"):
     """kind: 'bet' (a BET verdict), 'stop' (DON'T BET follow-up), 'test', or 'info' (not pushed while BET_ONLY)"""
     if BET_ONLY and kind not in ("bet", "stop", "test"):
@@ -581,6 +598,9 @@ def main():
                                                         tip_et=g["tip_et"], date=M["date"], home=g["home"], away=g["away"],
                                                         model=margin if market == "spread" else total, hist=hist_txt,
                                                         margin=margin, total=total,
+                                                        dk=({"home": dk_link(ln, "spread", "home", cur), "away": dk_link(ln, "spread", "away", -cur)}
+                                                            if market == "spread" else
+                                                            {"over": dk_link(ln, "total", "over", cur), "under": dk_link(ln, "total", "under", cur)}),
                                                         px={"home": ln.get("current_home_spread_odds"), "away": ln.get("current_away_spread_odds"),
                                                             "over": ln.get("current_over_odds"), "under": ln.get("current_under_odds")})
                 is_news = bool(NK) and (g["game_id"], market, NK) not in news_done
@@ -761,7 +781,12 @@ def main():
             body = (bet_range(r.market, side_, now_["margin"], now_["total"], opn, now_["H"], now_["Aw"]) + "\n"
                     f"REMINDER: still a BET and not logged yet. Alerted {pd.Timestamp(r.alerted_at_et):%a %-I:%M %p}; DraftKings now {what}, "
                     f"model {now_['model']:.1f} (edge {abs(e_):.1f}). Tip {now_['tip']}. If you already bet it, log it to stop these." + now_["hist"])
-            notify(f"REMINDER - BET {what}: {now_['Aw']} @ {now_['H']}, {now_['tip']}", body, priority="default", tags="alarm_clock", kind="bet")
+            if r.market == "spread":
+                rlink = log_link(now_["date"], now_["away"], now_["home"], "spread", now_["H"] if side_ == "home" else now_["Aw"], f"{bl:+g}")
+            else:
+                rlink = log_link(now_["date"], now_["away"], now_["home"], "total", side_, f"{float(cur):g}")
+            notify(f"REMINDER - BET {what}: {now_['Aw']} @ {now_['H']}, {now_['tip']}", body, priority="default", tags="alarm_clock",
+                   link=rlink, dk=(now_.get("dk") or {}).get(side_), kind="bet")
             A.loc[i, "last_reminder_at_et"] = str(NOW)[:16]; print("REMINDER:", what); return 1
         last = A[A.sent.astype(str).isin(["True", "1", "1.0"]) & (A.verdict == "BET")].groupby(["game_id", "market"]).tail(1)
         for i, r in last.iterrows():

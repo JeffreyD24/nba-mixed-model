@@ -9,3 +9,4 @@ NBA totals v4,total,2026-11-02 12:46,"+ early-season shrink of the shooting-luck
 NBA totals v5,total,2026-11-04 12:47,"v4 model; bet at the opener with the latest injury info (no wait for the 8 PM report); unmoved lines with 3+ edge are BETs at any time (rule audit Nov 4, 2026)"
 NBA spreads v3,spread,2026-11-04 12:47,"v2 model and windows; still waits for the 8 PM report; unmoved lines with 3+ edge are BETs at any time (rule audit Nov 4, 2026)"
 NBA spreads v3.1,spread,2026-11-04 14:15,"v3 + PROVISIONAL injury-news bets (BET even when the line moved 0.5+ against since the open, if the edge comes from the 8 PM report; logged bets get their own PROVISIONAL record; research/PROVISIONAL_BETS.md)"
+NBA spreads v3.2,spread,2026-11-04 15:07,"v3.1 + spread edges of 5+ pts bet at the opener on the latest injury info (no wait for the 8 PM report); 3-5 still wait (research/spreads/SPREAD_OPENER_TIMING_2026-11-04.md)"

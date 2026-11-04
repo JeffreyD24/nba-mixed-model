@@ -68,5 +68,25 @@ try:
     both = M.side_stack.notna() & M.side_v4.notna()
     print(f"same-game view: stack picks {int(M.side_stack.notna().sum())}, v4 alerts {int(M.side_v4.notna().sum())}, both {int(both.sum())} "
           f"(same side {int((both & (M.side_stack == M.side_v4)).sum())})")
+    # checkpoint scoreboard (research/tournament/STACK_VS_V4_CHECKPOINT.md): stack-eligible games only, CLV in points
+    elig = S[S.stack_edge.notna()][["game_id", "date", "side", "clv_points"]]
+    V = A[A.game_id.isin(elig.game_id)][["game_id", "side", "clv_points"]].rename(columns={"side": "side_v4", "clv_points": "clv_v4"})
+    C = elig.merge(V, on="game_id", how="left")
+    so = C[(C.side != "") & C.side_v4.isna()].dropna(subset=["clv_points"])
+    vo = C[(C.side == "") & C.side_v4.notna()].dropna(subset=["clv_v4"])
+    st = C[C.side != ""].dropna(subset=["clv_points"]); v4 = C[C.side_v4.notna()].dropna(subset=["clv_v4"])
+    print(f"checkpoint scoreboard: stack-only {len(so)} bets CLV {so.clv_points.mean():+.2f}, v4-only {len(vo)} bets CLV {vo.clv_v4.mean():+.2f}; "
+          f"overall stack {len(st)} CLV {st.clv_points.mean():+.2f}, v4 {len(v4)} CLV {v4.clv_v4.mean():+.2f}")
+    if len(so) >= 2 and len(vo) >= 2:
+        rng = np.random.default_rng(7); days = np.union1d(so.date.unique(), vo.date.unique())
+        a = so.groupby("date").clv_points.agg(["sum", "count"]).reindex(days, fill_value=0).values
+        c = vo.groupby("date").clv_v4.agg(["sum", "count"]).reindex(days, fill_value=0).values
+        diff = []
+        for _ in range(4000):
+            k = rng.integers(0, len(days), len(days))
+            diff.append(a[k, 0].sum() / max(a[k, 1].sum(), 1) - c[k, 0].sum() / max(c[k, 1].sum(), 1))
+        lo, hi = np.percentile(diff, [5, 95]); enough = len(so) >= 100 and len(vo) >= 100
+        call = ("SWITCH to the stack (needs user approval)" if lo > 0 and st.clv_points.mean() >= v4.clv_v4.mean() else "keep v4") if enough else "not enough bets yet (100 each)"
+        print(f"  stack-only minus v4-only CLV {so.clv_points.mean() - vo.clv_v4.mean():+.2f} [90% {lo:+.2f},{hi:+.2f}] -> {call}")
 except Exception as e:
     print("v4 comparison skipped:", e)

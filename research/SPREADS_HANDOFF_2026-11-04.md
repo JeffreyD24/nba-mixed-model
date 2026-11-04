@@ -9,7 +9,7 @@ Read first: `claude/goals.md` (how we judge a model), `claude/findings_log.md` (
   (survives by the pre-registered rule, thin). The original record's leak was the 8 PM injury report.
 - **NBA step 3a done** (`research/spreads/STEP3A_NBA_RESULTS.md`): injury-news bets after the report, 61 bets 70.5% +21.1u at 10 PM but
   CLV +0.52 (below break-even): not passed. Approved as a PROVISIONAL live bet (v3.1, research/PROVISIONAL_BETS.md) with fixed stop lines.
-- **NOT STARTED: NHL and NFL step 1 (honest baselines for NHL puck line / moneyline v3.1 and NFL spreads at Monday 9 AM).**
+- **NHL and NFL step 1 done (Nov 4, afternoon).** NHL (`nhl-mixed-model research/spreads/STEP1_NHL_RESULTS.md`): timing already honest; v4 moneyline +147.1u, CLV +0.23% [-0.07, +0.52]; v4 puck line +35.6u, CLV +0.65% [+0.11, +1.19]; keep both; ML CLV only at EV 9%+ (proposal: ML bar 9%, not applied); -2.5 puck line bug fixed live (NHL v4.1). NFL (`nfl-mixed-model research/spreads/STEP1_NFL_RESULTS.md`): Monday 9 AM spreads 211 bets -6.9u, CLV +0.25 vs break-even +0.64: stays test-only. **Next: step 2 (shrink-to-line) / step 3 (news the line lacks).**
 - Open question: the true v2 CLV can't be pinned to +/-0.1 pts on 2023-26 alone (~1,200 bets needed); the way to tighten it is an
   out-of-sample re-grade on SBR 2014-22.
 

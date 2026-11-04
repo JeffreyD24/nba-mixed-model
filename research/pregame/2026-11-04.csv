@@ -7106,3 +7106,12 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-04 04:13:09,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,total,over,223.5,-107,normal
 2026-11-04 04:13:09,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,total,under,223.5,-114,normal
 2026-11-04 04:15:43,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,spread,away,11.5,-107,normal
+2026-11-04 04:16:58,295378,2026-11-04,2026-11-04 19:30,mil,bos,Consensus,event,team_total,away_over,106.5,-110,normal
+2026-11-04 04:16:58,295378,2026-11-04,2026-11-04 19:30,mil,bos,Consensus,event,team_total,home_over,118.5,-113,normal
+2026-11-04 04:16:58,295378,2026-11-04,2026-11-04 19:30,mil,bos,Consensus,event,team_total,away_under,106.5,-113,normal
+2026-11-04 04:18:10,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,moneyline,home,0.0,-560,normal
+2026-11-04 04:18:10,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,moneyline,away,0.0,390,normal
+2026-11-04 04:18:10,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,spread,away,11.5,-113,normal
+2026-11-04 04:18:10,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,spread,home,-11.5,-110,normal
+2026-11-04 04:18:10,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,total,over,225.5,-107,normal
+2026-11-04 04:18:10,295378,2026-11-04,2026-11-04 19:30,mil,bos,BetRivers,event,total,under,225.5,-114,normal

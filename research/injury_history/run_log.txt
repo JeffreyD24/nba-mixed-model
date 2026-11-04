@@ -34,3 +34,16 @@ season 2025: 163 game days
 download: {'ok': 3095, 'missing:403': 2}
 parsed 3095 files -> 389630 rows; files per calendar day median 13; as_of missing 0.0%; rows missing team/date/matchup 0.0%
 {'Out': 271930, 'Questionable': 40735, 'Available': 29444, 'NOT YET SUBMITTED': 26219, 'Probable': 15640, 'Doubtful': 5662}
+season 2026: 161 game days
+  day 1/161 2025-10-21: files so far 19
+  day 21/161 2025-11-10: files so far 399
+  day 41/161 2025-12-01: files so far 779
+  day 61/161 2025-12-26: files so far 1317
+  day 81/161 2026-01-15: files so far 2837
+  day 101/161 2026-02-04: files so far 4357
+  day 121/161 2026-03-02: files so far 5877
+  day 141/161 2026-03-22: files so far 7397
+  day 161/161 2026-04-12: files so far 8917
+download: {'ok': 8917, 'missing:403': 1970}
+parsed 8917 files -> 1161797 rows; files per calendar day median 52; as_of missing 0.0%; rows missing team/date/matchup 0.0%
+{'Out': 790963, 'Questionable': 121732, 'Available': 104100, 'NOT YET SUBMITTED': 77026, 'Probable': 37108, 'Doubtful': 30868}

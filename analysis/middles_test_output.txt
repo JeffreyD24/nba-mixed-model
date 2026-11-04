@@ -1,0 +1,49 @@
+A. BOOK-GAP MIDDLES (first pre-tip snapshot with a gap of g+ pts; 1 unit each leg at real prices)
+  CT (DraftKings + FanDuel) - totals
+    gap 1+:  5083 games | middle hit  1.8% | a leg pushed 1.5% | pair units  -231.1 ( -4.5 per 100 pairs) | seasons positive 0/5 | 22:-48.7(903) 23:-28.5(734) 24:-41.4(1078) 25:-35.8(1146) 26:-76.8(1222)
+    gap 1.5+:  1823 games | middle hit  3.1% | a leg pushed 2.1% | pair units   -25.7 ( -1.4 per 100 pairs) | seasons positive 1/5 | 22:-4.4(311) 23:-4.3(181) 24:+3.7(505) 25:-7.7(570) 26:-13.0(256)
+    gap 2+:   787 games | middle hit  3.4% | a leg pushed 1.7% | pair units   -11.4 ( -1.4 per 100 pairs) | seasons positive 2/5 | 22:-0.9(79) 23:+3.8(43) 24:+2.9(188) 25:-4.9(229) 26:-12.3(248)
+    gap 2.5+:   174 games | middle hit  3.4% | a leg pushed 2.3% | pair units    -1.0 ( -0.6 per 100 pairs) | seasons positive 2/5 | 22:-1.0(20) 23:-0.1(12) 24:+1.4(58) 25:+0.5(67) 26:-1.8(17)
+    gap 3+:    83 games | middle hit  3.6% | a leg pushed 1.2% | pair units    -1.3 ( -1.6 per 100 pairs) | seasons positive 1/5 | 22:-0.4(3) 23:-0.5(5) 24:-1.4(26) 25:+2.8(32) 26:-1.8(17)
+  CT (DraftKings + FanDuel) - spreads
+    gap 1+:  2790 games | middle hit  2.6% | a leg pushed 3.0% | pair units   -69.0 ( -2.5 per 100 pairs) | seasons positive 0/5 | 22:-8.9(507) 23:-5.1(392) 24:-9.6(494) 25:-5.6(499) 26:-39.8(898)
+    gap 1.5+:   669 games | middle hit  1.5% | a leg pushed 4.8% | pair units   -19.5 ( -2.9 per 100 pairs) | seasons positive 0/5 | 22:-0.7(146) 23:-4.1(110) 24:-1.8(140) 25:-3.2(126) 26:-9.8(147)
+    gap 2+:   454 games | middle hit  1.5% | a leg pushed 4.2% | pair units   -16.5 ( -3.6 per 100 pairs) | seasons positive 0/5 | 22:-1.9(97) 23:-3.5(73) 24:-3.4(99) 25:-2.1(94) 26:-5.5(91)
+    gap 2.5+:   181 games | middle hit  2.8% | a leg pushed 1.7% | pair units    -7.8 ( -4.3 per 100 pairs) | seasons positive 1/5 | 22:-0.8(29) 23:-0.6(17) 24:-1.7(33) 25:+1.5(22) 26:-6.1(80)
+    gap 3+:    54 games | middle hit  3.7% | a leg pushed 0.0% | pair units    -2.2 ( -4.1 per 100 pairs) | seasons positive 1/5 | 22:-0.9(10) 23:-0.3(3) 24:-0.0(17) 25:+1.0(9) 26:-2.0(15)
+  US regulated (DK, FD, BetMGM, Caesars, BetRivers) - totals
+    gap 1+:  6124 games | middle hit  2.0% | a leg pushed 1.3% | pair units  -268.8 ( -4.4 per 100 pairs) | seasons positive 0/5 | 22:-58.5(1225) 23:-56.7(1218) 24:-53.9(1229) 25:-27.4(1229) 26:-72.4(1223)
+    gap 1.5+:  4892 games | middle hit  3.0% | a leg pushed 1.8% | pair units  -117.3 ( -2.4 per 100 pairs) | seasons positive 0/5 | 22:-23.8(925) 23:-25.4(808) 24:-21.8(1092) 25:-11.7(1117) 26:-34.7(950)
+    gap 2+:  2507 games | middle hit  4.2% | a leg pushed 1.1% | pair units   -23.0 ( -0.9 per 100 pairs) | seasons positive 1/5 | 22:-1.1(433) 23:-7.6(254) 24:+0.7(578) 25:-5.8(654) 26:-9.2(588)
+    gap 2.5+:   756 games | middle hit  4.9% | a leg pushed 2.0% | pair units    +8.6 ( +1.1 per 100 pairs) | seasons positive 4/5 | 22:-1.7(176) 23:+0.6(74) 24:+2.0(177) 25:+6.7(205) 26:+1.0(124)
+    gap 3+:   337 games | middle hit  5.0% | a leg pushed 0.9% | pair units    +0.0 ( +0.0 per 100 pairs) | seasons positive 3/5 | 22:-0.4(86) 23:+0.7(32) 24:+0.9(62) 25:+3.5(96) 26:-4.7(61)
+  US regulated (DK, FD, BetMGM, Caesars, BetRivers) - spreads
+    gap 1+:  5517 games | middle hit  2.9% | a leg pushed 2.0% | pair units  -151.5 ( -2.7 per 100 pairs) | seasons positive 0/5 | 22:-24.4(1057) 23:-20.5(1052) 24:-23.6(1110) 25:-30.6(1129) 26:-52.3(1169)
+    gap 1.5+:  1730 games | middle hit  3.9% | a leg pushed 3.6% | pair units    +4.9 ( +0.3 per 100 pairs) | seasons positive 3/5 | 22:+13.5(363) 23:-2.2(306) 24:+4.2(348) 25:+5.0(360) 26:-15.5(353)
+    gap 2+:   811 games | middle hit  4.1% | a leg pushed 2.6% | pair units    -7.1 ( -0.9 per 100 pairs) | seasons positive 2/5 | 22:+4.7(179) 23:-4.3(163) 24:-0.5(162) 25:+0.4(158) 26:-7.5(149)
+    gap 2.5+:   618 games | middle hit  3.1% | a leg pushed 1.9% | pair units   -24.4 ( -3.9 per 100 pairs) | seasons positive 0/5 | 22:-2.2(138) 23:-7.8(114) 24:-0.7(120) 25:-2.8(129) 26:-10.9(117)
+    gap 3+:   268 games | middle hit  4.1% | a leg pushed 0.7% | pair units    -9.3 ( -3.5 per 100 pairs) | seasons positive 2/5 | 22:+0.2(61) 23:-2.3(22) 24:+7.6(43) 25:-1.9(48) 26:-13.0(94)
+  all 10 books incl. offshore - totals
+    gap 1+:  6146 games | middle hit  2.1% | a leg pushed 1.5% | pair units  -176.3 ( -2.9 per 100 pairs) | seasons positive 0/5 | 22:-41.6(1234) 23:-19.1(1229) 24:-41.9(1230) 25:-16.5(1230) 26:-57.2(1223)
+    gap 1.5+:  5899 games | middle hit  3.1% | a leg pushed 1.9% | pair units   -58.0 ( -1.0 per 100 pairs) | seasons positive 1/5 | 22:-12.0(1168) 23:+3.5(1120) 24:-16.1(1195) 25:-6.5(1213) 26:-26.8(1203)
+    gap 2+:  4298 games | middle hit  4.4% | a leg pushed 1.6% | pair units   +46.8 ( +1.1 per 100 pairs) | seasons positive 3/5 | 22:+11.4(876) 23:+12.3(659) 24:+26.2(831) 25:-1.5(956) 26:-1.7(976)
+    gap 2.5+:  2282 games | middle hit  5.5% | a leg pushed 2.0% | pair units   +80.8 ( +3.5 per 100 pairs) | seasons positive 5/5 | 22:+12.9(547) 23:+19.6(319) 24:+8.2(355) 25:+17.0(505) 26:+23.1(556)
+    gap 3+:  1201 games | middle hit  6.9% | a leg pushed 1.6% | pair units   +67.9 ( +5.7 per 100 pairs) | seasons positive 4/5 | 22:+12.3(325) 23:+15.7(151) 24:-0.3(143) 25:+16.1(250) 26:+24.0(332)
+  all 10 books incl. offshore - spreads
+    gap 1+:  5964 games | middle hit  2.8% | a leg pushed 2.7% | pair units   -63.4 ( -1.1 per 100 pairs) | seasons positive 0/5 | 22:-18.0(1179) 23:-4.1(1186) 24:-6.0(1189) 25:-4.6(1199) 26:-30.7(1211)
+    gap 1.5+:  3004 games | middle hit  4.6% | a leg pushed 3.3% | pair units   +86.5 ( +2.9 per 100 pairs) | seasons positive 4/5 | 22:+29.5(662) 23:+32.4(594) 24:+9.0(515) 25:+23.9(574) 26:-8.2(659)
+    gap 2+:  1509 games | middle hit  5.8% | a leg pushed 2.5% | pair units   +63.7 ( +4.2 per 100 pairs) | seasons positive 4/5 | 22:+24.1(362) 23:+22.5(314) 24:+1.2(238) 25:+18.6(255) 26:-2.8(340)
+    gap 2.5+:  1030 games | middle hit  4.8% | a leg pushed 2.4% | pair units   +16.4 ( +1.6 per 100 pairs) | seasons positive 4/5 | 22:+9.5(247) 23:+6.9(207) 24:+2.3(166) 25:+5.2(183) 26:-7.5(227)
+    gap 3+:   587 games | middle hit  6.0% | a leg pushed 1.5% | pair units   +16.8 ( +2.9 per 100 pairs) | seasons positive 4/5 | 22:+4.5(156) 23:+6.0(102) 24:+8.5(78) 25:+3.0(95) 26:-5.1(156)
+
+B. MIDDLING OUR OWN BETS (DraftKings opener bet, edge 3+, 2023-26; other side added at the best CT line once g+ pts better)
+  totals
+    1+ pts better: 1280 hedges | hedge leg 594-684 (46.5%) -145.7u (24:-50.5 25:-34.7 26:-60.4) | middle hit  3.1% | ride alone +108.0u vs ride + hedge  -37.7u
+    2+ pts better: 1013 hedges | hedge leg 463-547 (45.8%) -128.1u (24:-51.1 25:-38.4 26:-38.6) | middle hit  4.8% | ride alone +132.5u vs ride + hedge   +4.5u
+    3+ pts better:  756 hedges | hedge leg 349-404 (46.3%)  -88.3u (24:-40.4 25:-14.0 26:-33.9) | middle hit  6.7% | ride alone +119.4u vs ride + hedge  +31.0u
+    4+ pts better:  561 hedges | hedge leg 271-289 (48.4%)  -43.5u (24:-13.2 25:-8.7 26:-21.6) | middle hit  9.1% | ride alone  +91.0u vs ride + hedge  +47.5u
+  spreads
+    1+ pts better:  312 hedges | hedge leg 144-164 (46.8%)  -34.3u (24:-11.8 25:-16.4 26:-6.1) | middle hit  3.2% | ride alone  +27.8u vs ride + hedge   -6.5u
+    2+ pts better:  192 hedges | hedge leg 87-102 (46.0%)  -23.7u (24:-7.4 25:-13.0 26:-3.3) | middle hit  5.7% | ride alone  +29.5u vs ride + hedge   +5.8u
+    3+ pts better:  113 hedges | hedge leg 50-63 (44.2%)  -18.1u (24:-5.3 25:-9.9 26:-2.9) | middle hit  8.0% | ride alone  +24.5u vs ride + hedge   +6.4u
+    4+ pts better:   61 hedges | hedge leg 23-38 (37.7%)  -17.3u (24:-5.7 25:-8.8 26:-2.8) | middle hit 11.5% | ride alone  +24.9u vs ride + hedge   +7.6u

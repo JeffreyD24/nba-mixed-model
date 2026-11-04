@@ -150,8 +150,6 @@ key,status,snapshot
 2026-11-02|phx|pat spencer,Out,2026-11-02_09_30PM
 2026-11-02|tor|scottie barnes,Available,2026-11-02_09_30PM
 2026-11-02|tor|jakob poeltl,Out,2026-11-02_09_30PM
-2026-11-04|chi|nic claxton,Questionable,2026-11-03_04_00PM
-2026-11-04|chi|jalen smith,Probable,2026-11-03_04_00PM
 2026-11-04|bos|devin carter,Out,2026-11-03_04_15PM
 2026-11-04|bos|payton pritchard,Questionable,2026-11-03_04_15PM
 2026-11-04|det|jalen duren,Out,2026-11-03_04_15PM
@@ -260,3 +258,5 @@ key,status,snapshot
 2026-11-04|sac|precious achiuwa,Available,2026-11-04_04_00PM
 2026-11-04|sac|daeqwon plowden,Out,2026-11-04_04_00PM
 2026-11-04|wsh|anthony gill,Available,2026-11-04_04_30PM
+2026-11-04|chi|nic claxton,Out,2026-11-04_05_30PM
+2026-11-04|chi|jalen smith,Available,2026-11-04_05_30PM

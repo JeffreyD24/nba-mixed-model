@@ -1,0 +1,200 @@
+bets 1446 wins 820 0.5670816044260027 119.45454545454545
+market games 18695 2012 2026
+
+[A01] Population = every NBA game the market prices; our 'sample' = 18,695 games 2011-12..2025-26. Mean (final total - closing total) = +0.48 pts (t=3.72, p=0.000); by season ranges -0.08 to +1.24. Seasons with the biggest misses: 2013-14 +1.2, 2019-20 +1.1, 2022-23 +1.0. The closing line is close to unbiased over the long run, but a single season can run 1+ pt high (league scoring rising faster than the market adjusts). Overs have a tiny long-run tailwind, far below the vig.
+
+[A02] Everything here is observational (no one randomizes which games get a model edge). Example: bets whose line later moved our way (CLV>0) won 61.2% (n=919), moved against us 48.1% (n=418). Line movement doesn't CAUSE wins: both come from the same underlying information (injuries, sharp money). It's a marker, not a lever: we can't make the line move.
+
+[A03] Denver/Utah home games: raw totals +8.6 pts vs other games (p=0.000); vs the opener +4.30 (p=0.001); vs v4 (which adds +3.8) -0.37 (p=0.775). The raw gap is confounded by who those teams are (pace, roster); the market already prices most of it, so the useful number is the residual after the line.
+
+[A04] Selection on past success: team-seasons in the top 20% for over% in their first 41 games (avg 59.2%) went over 49.8% the rest of the way; bottom 20% (41.0%) went 51.2%. First-half vs second-half correlation r=-0.07 (p=0.37, 150 team-seasons, 2021-26). 'Over teams' are the survivors of a noisy filter: almost all of it disappears. Same trap as only studying the systems that made money.
+
+[A05] ROI per bet +8.26%. Standard error if every bet were a simple random sample: 2.49%; cluster bootstrap by game night (bets on one night share news/refs/league scoring): 2.57%; stratified by season: 2.47%. Ratio cluster/SRS = 1.03. If >1, same-night bets are correlated and naive confidence intervals are too narrow.
+
+[A06] Of 3684 DraftKings-priced games 2023-26, 480 (13%) aren't in our test set (mostly the first ~10 games of each team's season). The opener misses those dropped games by 14.30 pts on average vs 14.69 in kept games, and their totals average +1.53 vs the opener (+0.42 kept). Like the Literary Digest poll, our results describe only the games we kept. The dropped early-season games weren't harder for the book, but they did run over the opener by ~1 pt more: a possible early-season over lean that our test set never sees.
+
+[A07] Randomization test: kept the same 3+ edge games but picked over/under by coin flip 5,000 times. Random sides averaged -4.54% ROI (the vig), 99th percentile +1.26%; v4's actual +8.26%. p = 0.0002. The model's side choice beats random far more than chance would.
+
+[A08] Edge bucket as the 'treatment', points beaten the opener by as the response. CRD (no blocks): F=1.15, p=0.330. Blocking on season: bucket F=1.15, p=0.331; season block F=0.20, p=0.815. Mean points beaten by bucket: 3-4 +1.86, 4-5 +2.86, 5-6 +3.71, 6-8 +2.27, 8+ +5.03. Bigger edges don't beat the line by much more.
+
+[A09] Two blocking factors at once (season rows x weekday columns, the Latin-square idea; our data isn't a square so it's an additive two-block model). Over vs under bets after removing season and weekday: F=0.31, p=0.579; weekday p=0.668; season p=0.949. Weekday explains nothing about how well we beat the line.
+
+[A10] 2x2 factorial: bet direction (over/under) x both teams rested. Win %: over b2b 59.2% (n=294); over rested 56.0% (n=498); under b2b 56.6% (n=175); under rested 55.9% (n=479). Interaction p=0.303. A factorial look tests both factors and whether they combine, from one set of games.
+
+[A11] ANCOVA: over vs under bets adjusted for how high the opener was. Unadjusted under-minus-over gap -0.53 pts (p=0.583); adjusted -0.06 (p=0.957); opener slope -0.047/pt (p=0.425). The covariate barely moves the comparison: opener height isn't hiding a direction effect.
+
+[A12] The experimental unit is the game; the two team scores are measurement units inside it. Within a game the two teams' scores (each vs half the model total) correlate r=+0.13 (shared pace, refs, overtime). Treating 6,408 team scores as independent would double the sample and shrink standard errors falsely (pseudoreplication). SD of game total vs model 18.4 is larger than sqrt(2)x team SD would give if they were independent (17.3).
+
+[A13] Bar chart counts, all 3,204 games: no bet 1756, win 820, loss 626, push 2. Pushes are 0.1% of edge-3+ games (NBA totals land on a half-point line rarely, unlike NFL key numbers).
+
+[A14] Pie-chart shares of bets: overs 55%, unders 45%; by season overs 2024: 58%, 2025: 50%, 2026: 55%. A part-of-whole view shows v4 is not just an 'always over' model (the old stack bet overs 95% of the time).
+
+[A15] Histogram of (final total - opener): unimodal, mean +0.42, skewness +0.15, excess kurtosis +0.03. Roughly symmetric and close to bell-shaped; slight heavy right tail from overtime games (OT adds ~20 pts).
+
+[A16] Relative frequencies of |final - closing total|: under 5 pts 21.4%, 5-10 19.5%, 10-20 32.6%, 20+ 26.5%. Same for v4 vs actual: under 5 21.9%, 20+ 26.7%. Even the best line misses by 10+ about half the time: single-game noise is huge.
+
+[A17] Time series by month (Nov->Apr; October drops out because both teams need 10+ games), final minus opener: Nov +0.41, Dec +1.42, Jan -1.63, Feb -0.35, Mar +0.82, Apr +3.42. Cumulative units for v4 bets rose fairly steadily (min -22.4u, max +120.8u, final +119.5u); worst drawdown 21.4u.
+
+[A18] Center of (final - opener): mean +0.42, median +0.50, 10% trimmed mean +0.16, mode (rounded) -4. For v4 bets' points beaten: mean +2.89, median +3.00, trimmed +2.92. Mean and trimmed agree, so the edge isn't a few blowouts.
+
+[A19] Quantiles of (final - v4): 5th -29.1, 25th -12.8, median -0.4, 75th +12.3, 95th +31.3. A 90% range for a game total is about v4 -29 to +31 pts. Edge percentiles: 3 pts is the 55th percentile of |edge|.
+
+[A20] Q-Q of v4 errors vs normal: Q-Q correlation 0.9992; Shapiro-Wilk (2,000-game sample) W=0.9979, p=0.0116. Close to normal in the middle, tails slightly heavier (overtime, blowouts). Normal-based win probabilities are fine for typical edges, a bit off in the extremes.
+
+[A21] Boxplot of (final - v4): IQR 25.1, fences -50.5 / +50.0; 24 outlier games (0.7%), 79% of them high (overtime-type). v4 bets in outlier games: 13. Outliers aren't removable (they're real games), but they're why an over bet carries extra right-tail chance.
+
+[A22] SD of (final - v4) 18.40, vs opener 18.45, vs close 17.94. By season (v4): 2024 18.34, 2025 18.08, 2026 18.78. Our model is about as noisy as the opener; the edge is in a slightly different center, not a smaller spread.
+
+[A23] Empirical rule on (final - v4): within 1 SD 69.2% (rule 68%), 2 SD 95.3% (95%), 3 SD 99.59% (99.7%). Very close to a bell curve; 1 SD of a game total is about 18 pts.
+
+[A24] Coefficient of variation: game total 8.8%, single team score 11.2%, opener 3.8%, v4 3.4%. Totals are relatively stable (8%) but a 3-pt edge is only 1.3% of a total: tiny compared with the game-to-game spread.
+
+[A25] Side-by-side boxplots of (final - opener) by month: medians Nov +0.0, Dec +1.5, Jan -2.5, Feb +0.5, Mar -0.5, Apr +3.0. Boxes overlap heavily; no month is obviously different by eye (tested formally in B59).
+
+[A26] Contingency table, v4 bets, wins/losses by season and direction: 2024: over 186-148, under 133-107; 2025: over 128-94, under 117-101; 2026: over 139-97, under 117-79
+
+[A27] Scatter of v4 edge vs (final - opener): r=+0.125 (p=1.3e-12, n=3204). Plain Model 1 edge: r=+0.083. Small r but real: a few % of the noise is predictable, which is all a bettor needs at -110.
+
+[A28] Zero (or small) r doesn't mean no relationship: mean (final - opener) by edge decile: -7.0->-3.6, -3.9->-1.6, -2.5->-1.9, -1.3->+0.8, -0.3->-0.2, +0.8->+0.2, +1.8->+1.5, +3.0->+1.9, +4.6->+3.9, +7.8->+3.3. Quadratic term p=0.510; |edge| vs |v4 error| r=+0.016 (p=0.360). The relationship is roughly linear in the middle and flattens at extremes.
+
+[A29] Break-even win probability at -110 = 110/210 = 52.38%. Complement: P(lose) = 1 - P(win). v4 bets won 56.7%, so P(lose) 43.3%. P(at least one loss in a 5-bet night) = 1 - 0.567^5 = 94.1%: losing nights are normal even with an edge.
+
+[A30] Head-to-head 'which forecast is closer to the final' (share of games the first wins): M1 vs v4 48.3%, M1 vs simple 56.1%, M1 vs open 49.8%, simple vs v4 44.3%, open vs v4 48.5%, open vs simple 54.2%. Check for a cycle (A>B, B>C, C>A): none here, so the ranking is transitive. With nontransitive dice it wouldn't be, which is why 'beats X head-to-head' isn't the same as 'best'.
+
+[A31] Simpson's paradox check. Pooled: overs 57.2% vs unders 56.1%. By season over-under: 2024 +0.3%, 2025 +4.0%, 2026 -0.8%. Seasons that reverse the pooled direction: [2026]. v4 vs plain Model 1 win rate by season: 2024 55.6% vs 53.5%, 2025 55.7% vs 50.8%, 2026 59.3% vs 56.1%. v4 leads in every season and pooled, so no paradox there.
+
+[A32] Conditional probability: P(win | line moved toward us) = 61.2%, P(win | no move) = 52.3%, P(win | moved against) = 48.1%; P(line moves toward us | v4 bet) = 63.6%. The live rule (pass after a 0.5+ move against) is a conditional-probability rule.
+
+[A33] Independence: correlation between results of two bets on the same night r=+0.015 (2535 pairs). Runs test on the bet sequence: 710 runs vs 711 expected, z=-0.05, p=0.958. No hot or cold streaks beyond chance: a losing week says nothing about the next bet.
+
+[A34] Multiplication law: if independent, P(two bets same night both win) = 0.567^2 = 32.2%; observed 32.2%. A 2-leg parlay pays +264 (needs 27.5%); at our win rate P(both)=32.2%, EV per unit +0.171 vs two straight bets +0.165.
+
+[A35] Sensitivity/specificity, treating 'v4 above the opener' as a test for 'game goes over': sensitivity 57.4%, specificity 52.7%. With the 3-pt threshold sensitivity drops to 28.2% (we flag only a fraction of overs) but precision rises. Same trade-off as a medical screen: a stricter cutoff catches fewer, but surer, cases.
+
+[A36] Bayes: prior P(over) = 50.2%; P(edge>=3 | over) and P(edge>=3 | under) give posterior P(over | v4 says over by 3+) = 57.1%. Bayesian view of the whole record: flat prior + 820-626 gives posterior mean win rate 56.7%, 95% credible interval 54.1%-59.2%, P(true rate > break-even) = 0.9995.
+
+[A37] Profit per 1-unit bet X = +0.909 or -1. At p=0.567: E[X] = +0.0826u, Var = 0.895, SD = 0.946u. The SD is ~11x the mean, so you need hundreds of bets to see the edge. Full Kelly stake would be 9.1% of bankroll; the project's 1% flat unit is ~0.11 Kelly, which is conservative.
+
+[A38] Binomial: wins ~ Binomial(n=1446, p). Under break-even p=0.5238, expected 757 wins (SD 19.0); observed 820. P(X >= 820) = 0.00053. At p=0.50 it's 1.9e-07.
+
+[A39] Poisson: v4 bets per game night mean 3.39, variance 3.80 (dispersion 1.12; Poisson = 1). P(0 bets on a night) Poisson 3.4% vs actual 4.4%. Team points: mean 114.5, variance 168 (ratio 1.47). Points are made in 1-3 pt chunks, so a team score isn't Poisson; a possessions model is the better building block.
+
+[A40] Poisson approximation to the binomial for rare events: pushes happen in 0.14% of edge-3+ games (whole-number openers only). For a 100-bet stretch, pushes ~ Binomial(100, 0.0014) ~ Poisson(0.14): P(0 pushes) binomial 0.871 vs Poisson 0.871. Near-identical: the shortcut works when p is small.
+
+[A41] Probability as area under a density: with a normal curve centered on v4 (SD 18.4), P(over) = area above the opener. For our bets the curve says average P(win) = 61.8%; actual 56.7%. A 3-pt edge = 6.5% of extra area, a 6-pt edge 12.8%. The curve is too confident: it treats v4 as the truth, but the opener also knows things v4 doesn't. Real win probability sits between the curve and 50%, the same shrinkage the regression slope shows (B76).
+
+[A42] z-scores: the record is z = (wins - n*0.5238)/sqrt(n*0.5238*0.4762) = +3.29. For games: z of each final vs v4 = (final - v4)/18.4; 4.6% of games are beyond |z|=2 (normal 4.6%).
+
+[A43] Normal quantiles: with v4 as the mean and SD 18.4, the total exceeded only 5% of the time is v4 + z0.95*SD = v4 + 30.3. Observed share of games above that: 5.7%. For a 60% over chance the line would need to be -4.7 pts from v4; our 3-pt bar is only ~56% by the curve.
+
+[A44] Random samples of 500 bets (drawn without replacement, 4,000 times): ROI ranged +1.6% to +15.3% (95%); 0.9% of 500-bet samples lost money. Resampling from our own 1,446 bets understates the risk (it assumes the true rate IS 56.7%); B45 shows the more honest view: one season is only ~1.9 SEs from zero.
+
+[A45] Sampling distribution of the mean profit: SE = SD/sqrt(n) = 0.946/sqrt(1446) = 0.0249u. Per season (~482 bets) SE = 0.043u, vs the edge +0.083u: one season's ROI is within ~1.9 SEs of zero.
+
+[A46] CLT: units won per 50-bet block (28 blocks) have mean +4.14, SD 8.17 (theory 6.69); skewness -0.63, Shapiro p=0.22. The observed SD is larger than theory, a hint the win rate isn't constant over time (hot and cold model stretches, not streaky bets). Even though each bet is a two-valued +0.91/-1, sums of 50 are already close to normal: CLT lets us use normal math for season totals.
+
+[A47] Normal approximation with continuity correction: P(X >= 820) ~ P(Z >= (820-0.5-757.4)/18.99) = 0.00054; exact binomial 0.00053. np and n(1-p) are both > 10, so the approximation is valid.
+
+[B48] Point estimates: win rate p-hat = 820/1446 = 0.5671; ROI = +0.0826u/bet; v4 bias (mean final - v4) = +0.12 pts; opener bias +0.42.
+
+[B49] 95% t confidence interval for ROI per bet: +3.38% to +13.14%. For v4's bias (final - v4): +0.12 +/- 0.64 pts (t=0.36, p=0.72). Interpretation: we're 95% confident the long-run ROI of this rule is in that range (if the future looks like 2023-26).
+
+[B50] Sample size for a margin of error: to estimate ROI to +/-2% (95%), n = (1.96*0.946/0.02)^2 = 8,599 bets; +/-1% needs 34,396. At ~482 bets a season that's 17.8 / 71.4 seasons.
+
+[B51] The five parts: (1) H0: mu_ROI <= 0, (2) Ha: mu_ROI > 0 (one-sided, decided before looking), (3) t = xbar/(s/sqrt n) = 3.32, (4) reject if t >= t(0.95, 1445) = 1.646, (5) p = 0.00046: reject H0. Caution: these seasons helped choose v4, so it's a descriptive test, not a clean out-of-sample one.
+
+[B52] Type I error = calling a losing system a winner (alpha 5%); Type II = missing a real edge. Power to detect a true 55% win rate (vs 52.4%) with 300 bets: 23%; 500: 31%; 1446: 62%. Bets needed for 80% power: ~2,300. A one-season test of a new filter (~100-300 bets) is badly underpowered: most real 2-3% edges would 'fail'.
+
+[B53] p-values: P(results at least this good | no edge). Binomial vs break-even p = 0.00053; t-test on ROI p = 0.00046. It is NOT the probability v4 has no edge, and it's computed on seasons that helped build v4. See B64 for how many p-values this catalog produced.
+
+[B54] t distribution: with df=1445 the t critical value 1.962 is essentially z (1.960). For a 30-bet sample (df 29) it's 2.045: small samples need wider intervals. One-sample t on points beaten: t=5.99, mean +2.89 pts/bet.
+
+[B55] Pooled two-sample t: points beaten, over bets (+3.13, n=792) vs under bets (+2.59, n=654): t=+0.55, p=0.583.
+
+[B56] Welch t (unequal variances): same over/under comparison t=+0.55, df~1444, p=0.584. Also (final - opener) in games where both teams were rested (+0.30) vs a back-to-back involved (+0.68): t=-0.53, p=0.597. The market prices rest fine on average.
+
+[B57] Paired t (same game, two forecasts): |opener error| - |v4 error| = +0.052 pts, t=+0.73, p=0.465; vs the CLOSE: -0.320, t=-4.30, p=0.000. Pairing removes game-to-game noise (the 18-pt SD) so small accuracy gaps become testable. v4 is roughly as accurate as the opener in absolute error and worse than the close.
+
+[B58] F test for two variances: opener error variance Nov-Dec (18.83^2) vs Feb-Apr (18.12^2): F=1.080, p=0.183. (F is sensitive to non-normal tails; Levene in B60 is the robust check.)
+
+[B59] One-way ANOVA: (final - opener) across 6 months: SSB=6770, SSE=1083220, F(5,3198)=4.00, p=0.001. Same for v4 bets' points beaten across months: p=0.173.
+
+[B60] ANOVA assumptions for the month model: Brown-Forsythe/Levene p=0.604, Bartlett p=0.549 (equal variance), residual skew +0.15. Assumptions look fine, so the ANOVA result can be trusted.
+
+[B61] Transformations: total points skew +0.192; log -0.085; sqrt +0.054. Residual spread vs line height: see B84/B87. Totals are already near-symmetric; transforming adds little here (it matters more for team props / low counts).
+
+[B62] Contrast: early (Nov-Jan) minus late (Feb-Apr) mean of (final - opener) = -1.23 pts, SE 0.68, t=-1.82, p=0.070. Planned question: does the book lag the scoring level early in the season?
+
+[B63] Orthogonal contrasts (dot products (np.int64(0), np.int64(0), np.int64(0)), all 0 with ~equal month sizes): SS early-vs-late 1116, Jan-vs-Nov/Dec 2578, Apr-vs-Feb/Mar 2533 out of SSB 6770. With these 3 of the 5 possible orthogonal pieces we see where the month-to-month variation sits: late-season April (playoff-push / tank games) and the January dip carry most of it.
+
+[B67] Tukey HSD on all 15 month pairs: 3 significant at familywise 5%; smallest adjusted p=0.001 (Apr vs Jan).
+
+[B66] Fisher's LSD (unadjusted pairwise t after the F test): 6 of 15 month pairs 'significant' at 5% (smallest p=0.000, Jan vs Apr). The overall F was significant (p=0.001), so LSD is allowed, but it doesn't adjust for 15 comparisons, so it flags more pairs than Tukey.
+
+[B68] Scheffe for an unplanned contrast (picked after looking, e.g. the best month vs the worst): needs t^2 >= (k-1)F = 11.1 (t >= 3.33) vs 1.96 for a planned one. Best-minus-worst month t = 4.04: it clears Scheffe, so the April-vs-January gap survives even the strictest after-the-fact correction (and B65 Bonferroni). Any trend found by scanning the data must clear this much higher bar.
+
+[B69] One proportion: v4 win rate 56.7%, 95% Wilson CI 54.1%-59.2% (break-even 52.4% is below the interval). z test vs 52.38%: z=3.32, p=0.00045. Games going over the opener: 50.2% (CI 48.4%-51.9%); the opener is balanced.
+
+[B70] Sample size for a proportion: to pin the win rate to +/-2% with 95% confidence, n = 1.96^2*0.55*0.45/0.02^2 = 2,377 bets; +/-1%: 9,508.
+
+[B71] Two proportions: win rate 2023-24 55.6% vs 2025-26 59.3%: z=-1.17, p=0.242. Overs 57.2% vs unders 56.1%: z=+0.41, p=0.680.
+
+[B72] Fisher's exact (small table, edge 8+ only, 184 bets): over 60-43; under 47-34. Odds ratio 0.99, exact p=1.000. Too few big-edge bets to say anything about direction there.
+
+[B73] Chi-square goodness of fit: v4 errors in 8 bins vs a normal curve: chi2=13.8, df=5, p=0.017 (observed [147, 281, 537, 679, 637, 493, 244, 186], expected [165, 279, 496, 662, 662, 496, 279, 165]). Left tail lighter, right tail heavier than normal: big overs (overtime) happen more than big unders, so the mean sits above the median. Last digit of final totals uniform? chi2=14.9, df=9, p=0.094.
+
+[B74] Chi-square independence: season x win chi2=1.63, df=2, p=0.442; direction x win chi2=0.13, p=0.719. Win rate doesn't depend on season or direction: the edge is consistent.
+
+[B75] Odds: win odds when the line moved toward us 1.57 (= 61.2%); when it moved against 0.93. Odds ratio 1.70 (95% CI 1.37-2.11). Break-even odds are 1.05 (52.4%); our overall odds 1.31.
+
+[B76] Least squares: (final - opener) = +0.25 + 0.549 x edge. Slope SE 0.077, p=1.3e-12. A slope of 1 would mean v4's edges are fully right; 0.55 means only ~55% of each edge shows up in results: shrink v4 toward the opener by ~45% when converting edge to win probability. Efficiency test on the market itself (final on close, 2011-26): slope 0.991 (SE 0.008), intercept +2.3.
+
+[B77] R^2 of (final - opener) on edge: 0.0156: v4 explains 1.56% of the variation of totals around the opener. R^2 of final total on v4 alone: 0.172, on the opener: 0.167, close: 0.212. Tiny R^2 is normal and still profitable in betting.
+
+[B78] Regression F test: F(1,3202) = 50.67, p=1.3e-12 (= t^2 for one predictor).
+
+[B79] Prediction vs extrapolation: at edge 3 the expected (final - opener) is +1.90 (95% CI of the mean +1.15 to +2.65), but a single game's 95% prediction interval is -34 to +38. Only 2.1% of games have edge 10+, so predicting at edge 12 (+6.84) is extrapolation: huge edges usually mean bad inputs (missed injury), not huge value.
+
+[B80] Cook's distance: 160 games above 4/n; max D=0.0109 (far below 1). Refit without them: slope 0.523 vs 0.549. No single game drives the result.
+
+[B81] Multiple regression of (final - opener) on Model 1 edge and v4's add-ons: e_m1 +0.496 (p=0.000), Lc -0.183 (p=0.004), form +0.129 (p=0.001), alt +3.818 (p=0.004), rested +0.006 (p=0.993). R^2 0.0158. Each coefficient = effect holding the others fixed. Lc (shooting luck) is negative: lucky-shooting teams' games go under the opener.
+
+[B82] Studentized residuals: 4.4% beyond |2| (normal 4.6%), 14 beyond |3|; largest |t|=3.44, Bonferroni outlier p=1.000. No game is an impossible outlier once you account for 3,204 chances.
+
+[B83] Residual Q-Q plot for the multiple regression: correlation 0.9992; tails: 0.81% above z=2.576 vs 0.5% expected, 0.37% below. Right tail a little heavy (overtime). Coefficient tests are robust to this at n=3,204.
+
+[B84] Homoscedasticity: Breusch-Pagan on the model's predictors p=0.486; does error spread grow with the opener level? p=0.008. Durbin-Watson in date order 1.994 (2 = no autocorrelation).  Errors are independent, but their spread DOES grow with the opener: a 240 total is noisier than a 215 total (heteroscedastic).
+
+[B85] Component + residual (partial residual) check for the edge term: binned partial residuals -11.5->-3.34, -3.3->-1.74, -1.8->-1.11, -0.5->-0.10, +0.7->+1.10, +2.0->+2.86, +3.7->+0.91, +11.6->+2.27. Roughly a straight line: linear in edge is a reasonable form.
+
+[B86] Added-variable plot for shooting luck: after removing everything else from both, slope -0.183 (= its multiple-regression coefficient), r=-0.050. Shows luck's unique contribution: small but separate from the model edge and form.
+
+[B87] Spread-level plot: log(spread of errors) vs log(line level) slope +1.33; suggested power transform 1 - slope = -0.33 (1 = leave it alone). Spread by opener octile: 216:11.3, 222:12.8, 225:12.1, 228:12.1, 230:12.7, 234:13.4, 236:13.0, 242:13.3. The spread of misses grows faster than the line itself (~18% wider from the lowest to highest octile for a 12% higher line). Practical meaning: the same 3-pt edge is worth less win probability in a 240 game than a 215 game; edge measured in SDs (edge / expected noise) may rank bets better than raw points.
+
+[B88] Multicollinearity, VIF when raw levels are used as predictors: pred_total 10.8, simple 8.3, open_total 5.5, Lc 1.3, form 1.4. Model 1, the simple average and the opener are all versions of 'how high is this total' (VIF >5-10), so their separate coefficients are unstable. That's why the model works in differences from the line (edge), which cuts the VIFs to e_m1 1.2, Lc 1.0, form 1.2.
+
+[B89] Box-Cox on final totals: best lambda = 0.31 (1 = no transform, 0 = log). Suggests a transform of raw totals (between log and square root), consistent with the spread growing with the level in B84/B87; but bets are judged against the line, and the residuals vs the line are near-normal (A20), so it changes little for over/under decisions.
+
+[B90] Box-Tidwell for the opener as a predictor of the final: x*log(x) term p=0.242, estimated power 2.77 (1 = keep it linear). The final total is linear in the line.
+
+[B91] Deleting observations: dropping the most extreme 1% of bets (|points beaten| >= 50) changes ROI from +8.26% to +8.40% and win rate 56.7% -> 56.8%. Dropping Cook's-flagged games (B80) barely changes the slope either. Results don't hinge on oddball games, and we keep them because they're real.
+
+[B92] Interaction: does the edge work better early in the season (either team under 25 games)? edge slope late 0.573, early adds -0.126 (p=0.530). Edge x direction (overs vs unders): -0.149 (p=0.552).
+
+[B93] Polynomial: y ~ e + e^2 + e^3: e^2 p=0.283, e^3 p=0.150. Cubic coefficient +0.0020: no flattening.
+
+[B94] Nested models (partial F): adding luck + form + altitude to the Model 1 edge: F=9.69, df=(3,3199), p=2.29e-06. This is the formal test that v4's add-ons beat plain Model 1 on these seasons.
+
+[B95] AIC / BIC (lower is better): open only (y~1) AIC 27772.4 BIC 27778.4; M1 edge AIC 27752.3 BIC 27764.4; v4 edge AIC 27724.0 BIC 27736.2; M1 edge + add-ons AIC 27729.3 BIC 27759.6; + rested AIC 27731.3 BIC 27767.7. BIC penalizes extra terms more; the single combined v4 edge has the lowest AIC and BIC, and 'rested' makes both worse: it doesn't earn a place.
+
+[B96] Standardized coefficients (SD change in y per SD of input): e_m1 +0.110, form +0.067, alt +0.051, Lc -0.050, rested +0.000. Ranking: e_m1 > form > alt > Lc > rested. Model 1's edge matters most, then form, altitude and shooting luck about equally; rest adds nothing.
+
+[B97] Adjusted R^2: one-predictor v4 edge 0.0153; Model 1 edge + 4 add-ons 0.0143 (raw 0.0158). Adjusted R^2 only rises if a term earns its keep.
+
+[B98] Logistic regression: log-odds(over) = -0.004 + 0.0506 x edge (p=3.8e-09). A 3-pt edge -> P(over) 53.7%, 6-pt 57.4%. Calibration by quintile (pred/obs): 43.0%/44.1%, 47.5%/45.7%, 50.2%/49.9%, 52.9%/54.0%, 57.7%/57.6%. This is the honest edge->probability map to use for EV and Kelly instead of the normal curve in A41.
+
+[B64] This catalog ran 40 hypothesis tests. Raw p<0.05: 19 (A01, A03, A07, A20, A27, A38, B51, B54, B59, B69, B73, B75, B76, B78, B81, B84, B86, B94, B98). With 0 real effects we'd expect ~2.0 by luck. After Benjamini-Hochberg (false discovery rate 5%): A01, A03, A07, A20, A27, A38, B51, B54, B59, B69, B73, B75, B76, B78, B81, B84, B86, B94, B98. This is the familywise trap of testing many trends on one data set.
+
+[B65] Bonferroni: each test must hit p < 0.05/40 = 0.0013. Survivors: A01, A03, A07, A27, A38, B51, B54, B69, B75, B76, B78, B94, B98. Those are the only findings here strong enough to take forward as candidate 'real' trends; everything else is exploratory.
+
+DONE 98

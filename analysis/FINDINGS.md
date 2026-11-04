@@ -436,3 +436,15 @@ while the live gate (wait for the report, push only lines moved toward the model
 at every check time (9 PM 56.7%, +54.5u), contradicting the "unmoved for hours ~49%" OPTIONAL rule. PASS-on-against holds at night.
 NFL: backtest opener is ~6.7 days before the early number exists; Tuesday 10 AM line +11.6u vs live final-report rule +3.5u.
 NHL: Pinnacle follow-up and moneyline b2b skip are ~break-even under the live blend; puck line 6-9% EV band -11.1u.
+
+## Statistics concept catalog: 98 course methods applied to NBA totals v4 (Nov 4, 2026)
+Full catalog, scripts and per-game data: [`research/stats_catalog/`](../research/stats_catalog/README.md). v4 at DraftKings openers 2023-26,
+1,446 bets at edge 3+ (56.7%, +119.5u); out-of-sample checks on 9,591 SBR-opener games 2011-19.
+- v4 edges are ~55% real: (final - opener) on edge slope 0.55. Logistic map edge -> P(win): 3 pts 53.7%, 6 pts 57.4% (calibrated). Use it for EV/Kelly.
+- Line moving our way by close: win 61.2% vs 48.1% when it moves against (odds ratio 1.70, CI 1.37-2.11).
+- Random-side permutation test p = 0.0002; same-night results independent; no streaks (runs p = 0.96).
+- Power: ~2,300 bets for 80% power to detect a true 55%; one season's ROI is ~1.9 SE from zero.
+- Replicates 2011-19: miss size grows with the total (rank by edge/SD to test next); totals right-skewed (mean > median); "over teams" regress to 50%.
+- April runs over the opener (2023-26 +3.4, 2011-19 +1.45) but only ~51% of April games go over: tail, not a lean. January under didn't replicate.
+- Warning: altitude over (+4.3 vs opener 2023-26; +2.8 vs close 2021-26) was absent 2011-19 (-0.5). Keep v4's +3.8 but watch it first if totals slip.
+- No gain: edge size buckets, over vs under, rest, edge x early-season, polynomial edge terms. v4 is no more accurate than the opener in absolute error; profit is direction at the open.

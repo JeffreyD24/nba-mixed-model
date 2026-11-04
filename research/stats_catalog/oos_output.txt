@@ -1,0 +1,8 @@
+n 9591 regular-season games with trusted openers, 2011-12 to 2018-19 (8 seasons)
+month (final - opener) by month: Oct +1.07 (n=354), Nov -0.16 (n=1553), Dec +1.03 (n=1638), Jan +0.42 (n=1834), Feb +1.28 (n=1380), Mar -0.62 (n=1886), Apr +1.45 (n=946). Month ANOVA p=0.010. April vs rest +1.08, Welch p=0.074; April over the opener 50.8% (n=946). January vs rest -0.06, p=0.892.
+april_by_season April by season: 2011-12 +0.4, 2012-13 -0.5, 2013-14 +4.2, 2014-15 +2.3, 2015-16 +1.0, 2016-17 +0.6, 2017-18 +0.2, 2018-19 +4.7
+altitude Denver/Utah home games vs opener: -0.47 pts (SE 0.73, p=0.518); over rate 47.2% (n=638). By season: 2011-12 +1.4, 2012-13 -0.5, 2013-14 +1.4, 2014-15 -1.3, 2015-16 +0.5, 2016-17 +1.5, 2017-18 -1.6, 2018-19 -0.8
+early Games where a team is in its first 10: -0.60 pts vs opener relative to later games (p=0.266); mean -0.05 (n=1255) vs +0.55. Opener MAE early 14.42 vs later 13.91.
+spread Error spread grows with the opener: Breusch-Pagan p=0.00046; SD by opener quintile 184:17.6, 198:16.8, 205:17.8, 212:18.2, 230:18.6.
+skew (final - opener) skewness +0.295, mean +0.48, median +0.00; share beyond +30 5.33% vs below -30 3.36%.
+over_teams Team over% first 41 vs rest (vs opener): r=-0.05 (p=0.45, 240 team-seasons); top-20% teams 59.3% -> 48.8%.

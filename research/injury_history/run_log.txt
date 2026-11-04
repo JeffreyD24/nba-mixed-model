@@ -6,3 +6,18 @@ season 2023: 164 game days, 10840 names to try
 download: {'missing:403': 10840}
 parsed 0 files -> 0 rows; files per calendar day median nan; as_of missing nan%; rows missing team/date/matchup nan%
 {}
+season 2024: 160 game days
+  throttled; sleeping 60 s
+  throttled; sleeping 120 s
+  throttled; sleeping 180 s
+  day 1/160 2023-10-24: files so far 6
+  day 21/160 2023-11-14: files so far 386
+  day 41/160 2023-12-06: files so far 766
+  day 61/160 2023-12-29: files so far 1146
+  day 81/160 2024-01-18: files so far 1526
+  day 101/160 2024-02-07: files so far 1906
+  day 121/160 2024-03-04: files so far 2286
+  day 141/160 2024-03-24: files so far 2666
+download: {'ok': 3027, 'missing:403': 13}
+parsed 3027 files -> 356970 rows; files per calendar day median 13; as_of missing 0.0%; rows missing team/date/matchup 0.0%
+{'Out': 245456, 'Questionable': 41545, 'Available': 27551, 'NOT YET SUBMITTED': 24504, 'Probable': 12978, 'Doubtful': 4936}

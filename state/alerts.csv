@@ -77,3 +77,5 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600186,spread,2026-11-03 20:32:42.422990,2026-11-04,lac,mia,2026-11-04 22:30:00,home,4.5,4.5,2.01,6.51,2026-11-03_08_30PM,False,,,,,,,OPTIONAL,,,,,,
 22600178,spread,2026-11-03 20:32:42.422990,2026-11-04,mem,ind,2026-11-04 20:00:00,home,-6.5,-6.5,10.34,3.84,2026-11-03_08_30PM,False,,,,,,,OPTIONAL,,,,,,
 22600184,total,2026-11-03 20:32:42.422990,2026-11-04,sa,dal,2026-11-04 21:30:00,over,226.5,229.5,229.57,3.07,2026-11-03_08_30PM,False,"line moved 3.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,,,,,
+22600182,spread,2026-11-03 22:25:24.285530,2026-11-04,den,tor,2026-11-04 21:00:00,away,-4.5,-5.5,1.38,3.12,2026-11-03_10_15PM,False,,,,,,,TEST,,,,,,
+22600179,total,2026-11-03 22:25:24.285530,2026-11-04,no,utah,2026-11-04 20:00:00,over,235.5,235.5,239.67,4.17,2026-11-03_10_15PM,False,,,,,,,OPTIONAL,,,,,,

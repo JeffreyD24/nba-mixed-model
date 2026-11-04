@@ -2311,3 +2311,10 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-03 22:50:59,295381,2026-11-04,2026-11-04 20:00,utah,no,Consensus,event,team_total,away_over,114.5,-118,normal
 2026-11-03 22:50:59,295381,2026-11-04,2026-11-04 20:00,utah,no,Consensus,event,team_total,home_under,120.5,-118,normal
 2026-11-03 22:50:59,295387,2026-11-04,2026-11-04 22:30,mia,lac,Consensus,event,total,over,233.5,-110,normal
+2026-11-03 22:54:40,295377,2026-11-04,2026-11-04 19:30,chi,ny,BetMGM,event,team_total,home_over,123.5,-110,normal
+2026-11-03 22:54:40,295377,2026-11-04,2026-11-04 19:30,chi,ny,BetMGM,event,team_total,away_under,110.5,-115,normal
+2026-11-03 22:54:40,295377,2026-11-04,2026-11-04 19:30,chi,ny,BetMGM,event,team_total,home_under,123.5,-115,normal
+2026-11-03 22:54:40,295377,2026-11-04,2026-11-04 19:30,chi,ny,BetMGM,event,moneyline,home,0.0,-600,normal
+2026-11-03 22:54:40,295377,2026-11-04,2026-11-04 19:30,chi,ny,BetMGM,event,moneyline,away,0.0,425,normal
+2026-11-03 22:54:40,295377,2026-11-04,2026-11-04 19:30,chi,ny,BetMGM,event,spread,home,-11.5,-115,normal
+2026-11-03 22:54:40,295377,2026-11-04,2026-11-04 19:30,chi,ny,BetMGM,event,spread,away,11.5,-105,normal

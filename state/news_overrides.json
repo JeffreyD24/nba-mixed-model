@@ -372,5 +372,16 @@
   "url": "https://bsky.app/profile/fredkatz.bsky.social/post/3mzj3pmz3qs2x",
   "text": "Josh Hart is now listed as out for tonight's game against the Bulls.",
   "swing": 0.4
+ },
+ "2026-11-04|chi|jalen smith": {
+  "status": "Available",
+  "player": "Jalen Smith",
+  "game_id": 22600177,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-04 17:36:00",
+  "seen_at_et": "2026-11-04 17:38:37",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzjg2houu72c",
+  "text": "Jalen Smith: Upgraded to available    https://www.rotowire.com/basketball/player/jalen-smith-5169",
+  "swing": 0.37
  }
 }

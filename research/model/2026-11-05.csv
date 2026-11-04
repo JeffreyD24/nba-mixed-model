@@ -1,0 +1,3 @@
+seen_at_et,game_id,date,away,home,model_margin,model_total,injury_report,model_total_before_luck,luck_adjustment,form_adjustment_total,altitude_adjustment,form_adjustment_margin,roster_adjustment_margin,limbo_players,limbo_margin_lo,limbo_margin_hi,limbo_total_lo,limbo_total_hi
+2026-11-04 11:32,22600188,2026-11-05,mia,gs,5.48,234.26,as of 2026-11-04 11:29,237.71,-3.45,0.0,0.0,0.0,0.0,0,5.48,5.48,234.26,234.26
+2026-11-04 11:32,22600187,2026-11-05,orl,phx,1.28,227.84,as of 2026-11-04 11:29,229.51,-1.67,0.0,0.0,0.0,0.0,0,1.28,1.28,227.84,227.84

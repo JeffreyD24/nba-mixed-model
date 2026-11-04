@@ -39,8 +39,15 @@ def remind_gap_min(tip, now):
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
-                                     #   at DraftKings openers 2023-26 +16.1/+19.3/+6.7u (355 bets, 58%). Feb-Apr only outside three traps (tanking team,
-                                     #   against a playoff-spot team, our team added a player in 30 days): 87 bets 63% +18.0u 2023-26 (approved Nov 2, 2026)
+                                     #   Feb-Apr only outside three traps (tanking team, against a playoff-spot team, our team added a player in
+                                     #   30 days) (approved Nov 2, 2026). Honest record (Nov 4, 2026; research/spreads/STEP1_NBA_RESULTS.md: DK openers
+                                     #   2023-26 with only what was known when the opener posted): Oct-Jan 373 bets 53.4% +6.9u, Feb-Apr 93 bets 57.0%
+                                     #   +8.2u; CLV +0.85 pts vs break-even ~+0.77. The +42u / +18u first quoted here used the 8 PM report at the opener.
+PROVISIONAL_NEWS_SPREADS = True      # Nov 4, 2026 (approved; PROVISIONAL tier, research/PROVISIONAL_BETS.md): an NBA spread "news bet" is a
+                                     #   3+ edge after the 8 PM report on a side the pre-report model did NOT have at the opener (3+ edge, same side).
+                                     #   Those are BETs even when the line moved 0.5+ against since the open (the usual PASS). 2023-26, v2 filters,
+                                     #   7 AM line: 51 such bets 60.8% +8.2u but CLV only +0.19 (all news bets 75, 65.3%, +18.5u, CLV +0.42;
+                                     #   research/spreads/STEP3A_NBA_RESULTS.md). Not proven: weekly review, fixed stop rule in PROVISIONAL_BETS.md.
 PIN_SPREAD_RULE = True               # Nov 2, 2026: no spread bet when Pinnacle's first spread is on the other side of DraftKings'
                                      #   opener (2023-26: 265 bets, 44.5%, -39.7u; negative in 5 of 6 season-halves)
 PIN_NBA = {"Atlanta Hawks": "atl", "Brooklyn Nets": "bkn", "Boston Celtics": "bos", "Charlotte Hornets": "cha", "Chicago Bulls": "chi",
@@ -288,6 +295,20 @@ def main():
                           pd.DataFrame([r for r in hist_new if r["game_id"] == gid and r["market"] == market])], ignore_index=True)
         if not len(rows) or opn is None or pd.isna(opn) or float(rows.line.iloc[0]) != float(opn): return None
         return pd.Timestamp(rows.seen_at_et.iloc[0])
+
+    PRE_MARGIN = {}
+    def pre_report_margin(date, gid):
+        """the last spread model margin logged BEFORE the night-before injury report counted for this game (research/model/<date>.csv
+        rows whose injury_report is 'as of ...', i.e. the morning/early model): what the model said around the opener"""
+        if date not in PRE_MARGIN:
+            try:
+                R = pd.read_csv(os.path.join(W, "research", "model", f"{date}.csv"))
+                cut = pd.Timestamp(date) - pd.Timedelta(hours=4)      # 8 PM the night before: later rows may carry that report
+                R = R[R.injury_report.astype(str).str.startswith("as of") & (pd.to_datetime(R.seen_at_et) < cut)]
+                PRE_MARGIN[date] = {str(k): float(v.model_margin.iloc[-1]) for k, v in R.groupby(R.game_id.astype(str))}
+            except Exception as ex:
+                print("pre-report model unavailable:", type(ex).__name__, str(ex)[:80]); PRE_MARGIN[date] = {}
+        return PRE_MARGIN[date].get(str(gid))
 
     def verdict(gid, market, side, cur, opn, e):
         """(BET / PASS / OPTIONAL / CHECK, reason) from the betting rule (backtests 2024-26, edge 3+):
@@ -659,10 +680,19 @@ def main():
                 if abs(e) < THRESHOLD: continue
                 if pd.Timestamp(g["tip_et"]) <= NOW: continue        # Nov 4, 2026 review: never a bet alert after tip
                 skip = None
+                # PROVISIONAL news bet (see PROVISIONAL_NEWS_SPREADS): after the report, a side the pre-report model did not have at the opener
+                news_bet, prov, mb = False, False, None
+                if market == "spread" and fresh and h is not None and a is not None and opn is not None and not pd.isna(opn):
+                    mb = pre_report_margin(M["date"], g["game_id"])
+                    if mb is not None:
+                        eb = mb + float(opn)
+                        news_bet = not (abs(eb) >= THRESHOLD and (eb > 0) == (e > 0))
+                moved_against = (opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE and against_us(market, side, cur - opn))
+                prov = PROVISIONAL_NEWS_SPREADS and news_bet and moved_against and not is_news
                 at_open_ok = TOTALS_AT_OPENER and market == "total"      # totals: bet now on the latest info (see TOTALS_AT_OPENER)
                 if not fresh and not at_open_ok: skip = "no current injury report"
                 elif (h is None or a is None) and not at_open_ok: skip = "a team has not filed its injury report"
-                elif (not is_news and opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE
+                elif (not is_news and not prov and opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE
                       and against_us(market, side, cur - opn)):
                     skip = (f"line moved {abs(cur - opn):.1f} pts against this bet since open (in backtests, bets after the line "
                             f"moved against the model won only about 43%)")
@@ -684,7 +714,9 @@ def main():
                 rec_row = dict(alerted_at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                tip_et=g["tip_et"], market=market, side=side, line=cur, open_line=opn,
                                model=round(margin if market == "spread" else total, 2), edge=round(abs(e), 2),
-                               injury_report=used, sent=False, skipped=skip, news_key=NK if is_news else np.nan)
+                               injury_report=used, sent=False, skipped=skip, news_key=NK if is_news else np.nan,
+                               pre_report_model=(round(mb, 2) if mb is not None else np.nan), news_bet=news_bet,
+                               tier=("provisional" if prov else np.nan))
                 if skip:
                     # caution alert: still sent, once per game and market, flagged with the reason
                     if (g["game_id"], market) not in skipped:
@@ -733,6 +765,11 @@ def main():
                     body += f"\nYour other bet on this game: {other}."
                 if "OTHER SIDE" in other: title = "YOU BET THE OTHER SIDE - " + title
                 vd, vr = news_verdict(g, market, side, cur, opn, e) if is_news else verdict(g["game_id"], market, side, cur, opn, e)
+                if prov and vd == "PASS" and "AGAINST" in vr:
+                    vd, vr = "BET", (f"PROVISIONAL injury-news bet: the line moved {abs(cur - opn):.1f} pts against this side since it opened at "
+                                     f"{float(opn):+g}, but the edge comes from tonight's injury report (before it the model had {H} by {mb:+.1f}). "
+                                     "Not proven yet (2023-26: 60.8%, +8.2u on 51 bets, but weak line movement); reviewed weekly, stops if it fails")
+                    title = "PROVISIONAL - " + title
                 if vd == "BET" and px is not None and not pd.isna(px) and float(px) < MAX_PRICE:
                     vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
                 if vd == "BET" and market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((g["home"], g["away"])), side, opn):
@@ -824,8 +861,9 @@ def main():
                 # BACK IN RANGE (Nov 2, 2026): after a DON'T BET, once per game and market, if it is a BET again: same side, 3+ edge,
                 # the rule says BET, Pinnacle not against, and the line is no worse than at the original alert
                 vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
+                if str(r.get("tier")) == "provisional" and vd == "PASS" and "AGAINST" in vr: vd = "BET"
                 mv = float(cur) - float(r.line)
-                worse = (mv > 0 if side_ == "over" else mv < 0 if side_ == "under" else mv < 0 if side_ == "home" else mv > 0)
+                worse =(mv > 0 if side_ == "over" else mv < 0 if side_ == "under" else mv < 0 if side_ == "home" else mv > 0)
                 ok = (side_ == r.side and abs(e_) >= THRESHOLD and vd == "BET" and not worse
                       and not (r.market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((r.home, r.away)), side_, opn)))
                 px_now = (now_.get("px") or {}).get(side_)
@@ -855,6 +893,7 @@ def main():
                 # 0.5+ against this bet since the alert. An opener that just got older is not a reason.
                 vd, vr = verdict(r.game_id, r.market, side_, cur, opn, e_)
                 mv = float(cur) - float(r.line)
+                if str(r.get("tier")) == "provisional" and vd == "PASS" and "AGAINST" in vr: vd = "BET"   # provisional bets start moved-against
                 if vd == "PASS": why = vr
                 elif r.market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((r.home, r.away)), side_, opn):
                     why = (f"Pinnacle (the sharp book) has now opened {str(r.home).upper()} {PINS[(r.home, r.away)]:+g} vs DraftKings' opener "

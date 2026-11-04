@@ -34,6 +34,17 @@ def main():
         return v.iloc[-1].version if len(v) else "before tracking"
     B["version"] = [version(r) for r in B.itertuples()]
     B.loc[B.notes.astype(str).str.contains("OFF-MODEL"), "version"] = "off-model (no alert)"      # bets the model did not call for
+    # PROVISIONAL tier (Nov 4, 2026; research/PROVISIONAL_BETS.md): bets that match a provisional BET alert get their own record
+    try:
+        A = pd.read_csv(os.path.join(STATE, "alerts.csv"))
+        if "tier" in A:
+            P = A[(A.tier.astype(str) == "provisional") & (A.verdict.astype(str) == "BET")]
+            pk = {(str(r.date), r.home, r.away, r.market, (r.home if r.side == "home" else r.away) if r.market == "spread" else r.side)
+                  for r in P.itertuples()}
+            prov = [(str(r.date), r.home, r.away, r.market, str(r.pick).lower()) in pk for r in B.itertuples()]
+            B.loc[prov, "version"] = "PROVISIONAL: NBA spread injury-news bets"
+    except Exception as ex:
+        print("provisional tagging skipped:", type(ex).__name__, str(ex)[:100])
     B["status"] = np.where(B.result.isin(["W", "L", "P"]), B.result, "pending")
     B["units"] = np.where(B.status == "pending", np.nan, B.profit / B.stake)
     keep = ["placed_et", "issue", "date", "away", "home", "market", "pick", "line", "odds", "stake", "version", "status", "profit", "units"]

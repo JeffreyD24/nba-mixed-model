@@ -1,3 +1,4 @@
-seasons: 2022 2023 2024 2025 2026
+seasons: 2022 2023
 requested: 2026-11-04 (line-move model, per-report-slot test; see research/spreads/LINE_MOVE_MODEL_RESULTS.md)
 attempt 2: 2026-11-04T22:19:20Z throttled downloader with canary
+attempt 3: 2026-11-04T22:42:43Z 2024-26 done by the first run (it pulled the fixed downloader mid-run); redo 2022, 2023 only

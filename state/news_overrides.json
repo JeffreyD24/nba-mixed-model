@@ -383,5 +383,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzjg2houu72c",
   "text": "Jalen Smith: Upgraded to available    https://www.rotowire.com/basketball/player/jalen-smith-5169",
   "swing": 0.37
+ },
+ "2026-11-04|wsh|alex sarr": {
+  "status": "Available",
+  "player": "Alex Sarr",
+  "game_id": 22600174,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-04 18:03:49",
+  "seen_at_et": "2026-11-04 18:04:36",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzjhm7v3dq27",
+  "text": "Alex Sarr: Upgraded to available    https://www.rotowire.com/basketball/player/alex-sarr-6240",
+  "swing": 0.21
  }
 }

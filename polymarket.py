@@ -16,8 +16,10 @@ Each check:
      research/polymarket/YYYY-MM-DD.csv (a row only when something changed),
   4. turns the model's number into a probability for each contract and logs paper trades to state/poly_paper.csv:
        taker: buy at the best offer (plus Polymarket's taker fee) the first time expected value >= THRESHOLD
-       maker: post a limit bid at the highest price that still has THRESHOLD expected value; it counts as filled
-              if the best offer later drops to that price before the game starts (approximate: ignores queue position)
+       maker: post a limit bid at the highest price that still has THRESHOLD expected value. Two fill rules (Nov 4, 2026):
+              strict ("through"): the best offer drops BELOW our price before the game, so a seller would have had to hit us;
+              loose ("touch"): the best offer only reached our price. Touch fills are graded too but reported separately,
+              because a touch does not mean we were filled (sellers at that price may trade with bids queued ahead of us)
      each with DraftKings' price on the same bet at that moment, from research/odds/.
 
 Probabilities:
@@ -553,11 +555,11 @@ BOOK_COLS = ["seen_at_et", "game_id", "date", "away", "home", "market", "line_ho
 PAPER_COLS = ["trade_id", "kind", "status", "logged_at_et", "filled_at_et", "game_id", "date", "tip_et", "away", "home", "model",
               "market", "side", "line", "slug", "pm_side", "price", "fee", "cost", "american", "model_p", "model_push", "ev",
               "depth", "bid_at_log", "ask_at_log", "dk_line", "dk_price", "dk_fair_p", "settle", "result", "profit",
-              "close_mid", "clv"]
+              "close_mid", "clv", "fill_type", "touched_at_et"]
 
 
 TEXT_COLS = {c: object for c in ("trade_id", "kind", "status", "logged_at_et", "filled_at_et", "game_id", "date", "tip_et", "away", "home",
-                                  "model", "market", "side", "slug", "pm_side", "result")}
+                                  "model", "market", "side", "slug", "pm_side", "result", "fill_type", "touched_at_et")}
 
 
 def read_paper():
@@ -674,17 +676,29 @@ def check():
     thr = THRESHOLD[SPORT]; new, n_fill = [], 0
     DK = {d: dk_quotes(d) for d in {g["date"] for g in games.values()}}
 
-    # fill resting maker orders whose price was reached
+    # fill resting maker orders: "through" (strict) when the best offer drops below our price, "touch" (loose) when it only
+    # reaches it. Touch fills keep being watched until the game starts and are upgraded to "through" if the offer later drops below.
     if len(T):
-        for i, r in T[(T.kind == "maker") & (T.status == "open")].iterrows():
+        for c in ("fill_type", "touched_at_et"):
+            if c not in T: T[c] = ""
+        T["fill_type"] = T.fill_type.fillna("").astype(object); T["touched_at_et"] = T.touched_at_et.fillna("").astype(object)
+        watch = (T.kind == "maker") & ((T.status == "open") | ((T.status == "filled") & (T.fill_type == "touch")))
+        for i, r in T[watch].iterrows():
             tip = pd.Timestamp(r.tip_et)
             if NOW >= tip:
-                T.loc[i, ["status", "result", "profit"]] = ["unfilled", "unfilled", 0.0]; continue
+                if r.status == "open": T.loc[i, ["status", "result", "profit"]] = ["unfilled", "unfilled", 0.0]
+                continue
             b = B.get(r.slug)
             if not b: continue
             buy, _, _, _ = side_quote(b, r.pm_side)
-            if not math.isnan(buy) and buy <= float(r.price) + 1e-9:
-                T.loc[i, ["status", "filled_at_et"]] = ["filled", str(NOW)[:16]]; n_fill += 1
+            if math.isnan(buy): continue
+            lim = float(r.price)
+            if buy < lim - 1e-9:
+                if r.status == "open": n_fill += 1
+                T.loc[i, ["status", "fill_type"]] = ["filled", "through"]
+                T.loc[i, "filled_at_et"] = str(NOW)[:16]
+            elif buy <= lim + 1e-9 and r.status == "open":
+                T.loc[i, ["status", "fill_type", "filled_at_et", "touched_at_et"]] = ["filled", "touch", str(NOW)[:16], str(NOW)[:16]]; n_fill += 1
 
     for game in games.values():
         mine = [(mk, P) for g2, mk, P in contracts if g2 is game]
@@ -795,12 +809,17 @@ def report(T):
     L = [f"# Polymarket US paper trades ({SPORT.upper()})", "",
          f"Updated {NOW:%Y-%m-%d %H:%M} ET by `polymarket.py --grade`. Nothing here was actually bet: these are the trades the model "
          f"would have made on Polymarket US. 1 unit = $1 spent (price plus fee). Taker = bought at the best offer; maker = a limit bid at the "
-         f"highest price with {THRESHOLD[SPORT]:.0%}+ expected value, counted as filled if the best offer later fell to it before the game "
-         f"(approximate). CLV = the side's last mid price before the start minus the price paid, in cents (positive = the market moved toward us).", ""]
+         f"highest price with {THRESHOLD[SPORT]:.0%}+ expected value. maker (strict) = the best offer later dropped below our price "
+         f"before the game, so we would have been filled; maker (touch only) = the offer only reached our price, so a fill is not certain "
+         f"(sellers may have traded with bids ahead of us); maker (old rule) = logged before Nov 4, 2026, when any touch counted. "
+         f"Judge limit orders on the strict rows. CLV = the side's last mid price before the start minus the price paid, in cents (positive = the market moved toward us).", ""]
     G = T[T.result.isin(["W", "L", "P", "partial"])] if len(T) else T
     if len(G):
         G = G.assign(profit=G.profit.astype(float), clv=pd.to_numeric(G.clv, errors="coerce"), ev=G.ev.astype(float))
         L += ["| model | market | kind | trades | W-L | units | ROI | avg EV at entry | avg CLV (cents) |", "|---|---|---|---|---|---|---|---|---|"]
+        ft = G.fill_type.fillna("") if "fill_type" in G else pd.Series("", index=G.index)
+        G = G.assign(kind=np.where(G.kind == "taker", "taker", np.where(ft == "through", "maker (strict)",
+                                   np.where(ft == "touch", "maker (touch only)", "maker (old rule)"))))
         for (m, mk, k), g in G.groupby(["model", "market", "kind"]):
             L.append(f"| {m} | {nm_.get(mk, mk)} | {k} | {len(g)} | {(g.result == 'W').sum()}-{(g.result == 'L').sum()} | {g.profit.sum():+.2f} | "
                      f"{g.profit.sum() / len(g):+.1%} | {g.ev.mean():+.1%} | {g.clv.mean():+.2f} |")
@@ -811,7 +830,13 @@ def report(T):
         mk_ = T[T.kind == "maker"]
         if len(mk_):
             done = mk_[mk_.status.isin(["filled", "unfilled"])]
-            if len(done): L += [f"Limit orders: {(done.status == 'filled').sum()} of {len(done)} filled before the game.", ""]
+            if len(done):
+                ft = done.fill_type.fillna("") if "fill_type" in done else pd.Series("", index=done.index)
+                new = done[done.logged_at_et.astype(str) >= "2026-11-04 18"]
+                nf = new.fill_type.fillna("") if "fill_type" in new else pd.Series("", index=new.index)
+                L += [f"Limit orders: {(done.status == 'filled').sum()} of {len(done)} reached our price before the game. Since the stricter "
+                      f"rule (Nov 4, 2026): {(nf == 'through').sum()} of {len(new)} filled for certain (offer dropped below our price), "
+                      f"{(nf == 'touch').sum()} only touched it.", ""]
         tk = T[(T.kind == "taker") & T.dk_price.notna()]
         if len(tk):
             dk_cost = tk.dk_price.map(lambda o: 1 / dec(o))
@@ -820,20 +845,30 @@ def report(T):
                   f"(average {100 * (dk_cost - tk.cost.astype(float)).mean():+.1f} cents per $1 contract in Polymarket's favor).", ""]
         pend = T[(T.status == "filled") & ~T.result.isin(["W", "L", "P", "partial"])]
         L += [f"Waiting to be graded: {len(pend)}. Open limit orders: {int(((T.kind == 'maker') & (T.status == 'open')).sum())}.", ""]
-    bf = sorted(glob.glob(os.path.join(PM_DIR, "book_20*.csv")))[-3:]
+    bf = sorted(glob.glob(os.path.join(PM_DIR, "book_20*.csv")))
     if bf:
         try:
-            Bk = pd.concat([pd.read_csv(x) for x in bf])
-            Bk["ask"] = pd.to_numeric(Bk.ask, errors="coerce")
-            L += ["## Order book depth (last 3 days of saved books)", "",
-                  "Contracts you could buy on the long side at the best offer plus 1 / 3 / 5 cents, and what it would cost to buy 1,000 contracts "
-                  "(about $300-700) by walking the book: average price above the best offer, in cents, and how often the book was deep enough. "
-                  "Full levels are in `research/polymarket/book_YYYY-MM-DD.csv`.", "",
-                  "| market | snapshots | within 1c | within 3c | within 5c | 1,000 contracts: extra cents | deep enough for 1,000 |", "|---|---|---|---|---|---|---|"]
-            for mk, g in Bk.groupby("market"):
-                a1 = pd.to_numeric(g.long_avg_1000, errors="coerce")
-                L.append(f"| {nm_.get(mk, mk)} | {len(g)} | {g.long_within_1c.median():.0f} | {g.long_within_3c.median():.0f} | "
-                         f"{g.long_within_5c.median():.0f} | {(100 * (a1 - g.ask)).median():+.1f} | {a1.notna().mean():.0%} |")
+            import csv as _csv
+            rows = []
+            for x in bf:                                # older files have a few rows with extra columns: keep only rows that match the header
+                with open(x, newline="") as fh:
+                    rd = _csv.reader(fh); h = next(rd, None)
+                    if h: rows += [dict(zip(h, r)) for r in rd if len(r) == len(h)]
+            Bk = pd.DataFrame(rows)
+            for c in ("ask", "long_within_1c", "long_within_3c", "long_within_5c", "long_avg_1000", "long_avg_5000"):
+                Bk[c] = pd.to_numeric(Bk.get(c), errors="coerce")
+            Bk = Bk[Bk.seen_at_et >= (NOW - pd.Timedelta(days=7)).strftime("%Y-%m-%d")]
+            Bk["when"] = np.where(Bk.seen_at_et.str[:10] >= Bk.date.astype(str), "game day", "days ahead")
+            L += ["## Order book depth (books saved in the last 7 days)", "",
+                  "Contracts you could buy on the long side within 1 / 3 / 5 cents of the best offer, and the extra cost of buying 1,000 and "
+                  "5,000 contracts by walking the book (median cents above the best offer). Split by when the book was seen: on the game's own "
+                  "date versus days ahead, since the early books are much thinner. Full levels are in `research/polymarket/book_YYYY-MM-DD.csv`.", "",
+                  "| market | when | snapshots | within 1c | within 3c | within 5c | 1,000: extra cents | 5,000: extra cents | deep enough for 5,000 |",
+                  "|---|---|---|---|---|---|---|---|---|"]
+            for (mk, wh), g in Bk.groupby(["market", "when"]):
+                a1, a5 = 100 * (g.long_avg_1000 - g.ask), 100 * (g.long_avg_5000 - g.ask)
+                L.append(f"| {nm_.get(mk, mk)} | {wh} | {len(g)} | {g.long_within_1c.median():.0f} | {g.long_within_3c.median():.0f} | "
+                         f"{g.long_within_5c.median():.0f} | {a1.median():+.1f} | {a5.median():+.1f} | {g.long_avg_5000.notna().mean():.0%} |")
             L.append("")
         except Exception as e:
             L += [f"(order book summary failed: {type(e).__name__})", ""]

@@ -516,3 +516,8 @@ SBR close: no change, tracked in the new shadow record (`shadow_passed.py`, `sta
 `analysis/BAILOUT_RESULTS.md`. DK 2023-26 opener bets: totals still win ~50% after a 1-2 pt move against but 45% at 3+ and 39.5% at 4+;
 spreads drop to 45% after 1 pt and 33% after 2. Live as a PROVISIONAL alert (`bailout.py`): cash out only above the break-even
 (totals 3+: 86% of stake; 4+: 76%; spreads 1+: 86%; 2+: 64%), otherwise ride.
+
+## Hedges and middles: no system (Nov 4, 2026)
+`analysis/MIDDLES_RESULTS.md`. Middling our own bets after a move toward the model loses (other side wins 44-48%, every season). Book-gap
+middles at DK + FD lose at every gap after removing bad quotes; across 5 US books totals 2.5+ gaps made a thin +1.1u per 100 pairs; only
+offshore books show real middle value. Revisit after moving out of CT.

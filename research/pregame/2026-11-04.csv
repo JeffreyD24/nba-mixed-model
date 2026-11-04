@@ -28313,3 +28313,17 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-04 11:33:43,295387,2026-11-04,2026-11-04 22:30,mia,lac,Fanatics,secondhalf,moneyline,away,0.0,-150,normal
 2026-11-04 11:33:43,295387,2026-11-04,2026-11-04 22:30,mia,lac,Fanatics,secondhalf,total,under,113.5,105,normal
 2026-11-04 11:33:43,295387,2026-11-04,2026-11-04 22:30,mia,lac,Fanatics,secondhalf,total,over,113.5,-140,normal
+2026-11-04 11:35:02,295374,2026-11-04,2026-11-04 19:00,phi,det,Consensus,thirdquarter,moneyline,home,0.0,-125,normal
+2026-11-04 11:35:02,295374,2026-11-04,2026-11-04 19:00,phi,det,Consensus,thirdquarter,moneyline,away,0.0,105,normal
+2026-11-04 11:36:07,295374,2026-11-04,2026-11-04 19:00,phi,det,Consensus,thirdquarter,spread,home,-0.5,-111,normal
+2026-11-04 11:36:07,295374,2026-11-04,2026-11-04 19:00,phi,det,Consensus,thirdquarter,spread,away,0.5,-115,normal
+2026-11-04 11:36:07,295374,2026-11-04,2026-11-04 19:00,phi,det,Consensus,secondquarter,moneyline,away,0.0,-105,normal
+2026-11-04 11:36:07,295374,2026-11-04,2026-11-04 19:00,phi,det,BetMGM,event,team_total,home_over,110.5,-115,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetRivers,firstquarter,moneyline,home,0.0,107,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetRivers,firstquarter,spread,away,-0.5,-129,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetRivers,firstquarter,spread,home,0.5,-106,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetRivers,event,team_total,home_over,105.5,-109,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetRivers,event,spread,away,-3.5,-112,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetRivers,event,total,under,213.5,-113,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetMGM,event,total,under,212.5,-105,normal
+2026-11-04 11:36:07,295376,2026-11-04,2026-11-04 19:30,cha,bkn,BetMGM,event,total,over,212.5,-115,normal

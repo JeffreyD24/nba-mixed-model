@@ -1991,3 +1991,7 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-03 21:28:21,295386,2026-11-04,2026-11-04 22:00,lal,sac,Fanatics,event,total,under,235.0,-110,normal
 2026-11-03 21:29:33,295377,2026-11-04,2026-11-04 19:30,chi,ny,Consensus,event,total,over,233.5,-115,normal
 2026-11-03 21:29:33,295377,2026-11-04,2026-11-04 19:30,chi,ny,Consensus,event,total,under,233.5,-108,normal
+2026-11-03 21:33:23,295376,2026-11-04,2026-11-04 19:30,cha,bkn,FanDuel,event,moneyline,home,0.0,134,normal
+2026-11-03 21:33:23,295376,2026-11-04,2026-11-04 19:30,cha,bkn,FanDuel,event,moneyline,away,0.0,-158,normal
+2026-11-03 21:35:50,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Caesars,event,spread,away,-1.5,-105,normal
+2026-11-03 21:35:50,295375,2026-11-04,2026-11-04 19:00,atl,wsh,Caesars,event,spread,home,1.5,-115,normal

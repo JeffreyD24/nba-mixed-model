@@ -44,16 +44,17 @@ for side in ("home", "away"):
 chg = (TS[[f"{s}_{c}_open" for s in ("home", "away") for c in INJ]].values != T[[f"{s}_{c}_open" for s in ("home", "away") for c in INJ]].values).any(1)
 
 # ---- DraftKings line at 20:55 the night before and 08:55 game day
-S = pd.read_csv(os.path.join(W, "data", "odds_history", "nba_snapshots.csv.gz"), usecols=["home", "away", "t", "book", "tot", "date"])
+S = pd.read_csv(os.path.join(W, "data", "odds_history", "nba_snapshots.csv.gz"), usecols=["home", "away", "t", "book", "tot", "sp", "date"])
 S = S[(S.book == "draftkings") & S.tot.notna()].copy()
 TIP = pd.read_csv(os.path.join(W, "data", "odds_history", "nba_snapshots.csv.gz"), usecols=["home", "away", "tip", "date"]).drop_duplicates(["date", "home", "away"])
 S["t"] = pd.to_datetime(S.t, utc=True).dt.tz_convert("America/New_York").dt.tz_localize(None)
 S["gd"] = pd.to_datetime(S.date)
-def line_at(hours_from_gameday_midnight):
-    x = S[S.t <= S.gd + pd.Timedelta(hours=hours_from_gameday_midnight)].sort_values("t").groupby(["date", "home", "away"]).tail(1)
-    return x.set_index(["date", "home", "away"]).tot
+def line_at(hours_from_gameday_midnight, col="tot"):
+    x = S[S[col].notna() & (S.t <= S.gd + pd.Timedelta(hours=hours_from_gameday_midnight))].sort_values("t").groupby(["date", "home", "away"]).tail(1)
+    return x.set_index(["date", "home", "away"])[col]
 L9pm, L9am = line_at(-3.0), line_at(9.0)
-LATER = {f"l{h}": line_at(h) for h in (-2.0, 0.0, 12.0, 15.0, 18.0)}       # 21:00 night before (20:55 snapshot); 09:00 game day (08:55 snapshot)
+LATER = {f"l{h}": line_at(h) for h in (-2.0, 0.0, 12.0, 15.0, 18.0)}
+LATER.update({f"sp{h}": line_at(h, "sp") for h in (-3.0, 0.0, 9.0, 12.0, 15.0)})       # 21:00 night before (20:55 snapshot); 09:00 game day (08:55 snapshot)
 
 out = []
 def say(*a): out.append(" ".join(str(x) for x in a)); print(*a, flush=True)
@@ -98,7 +99,7 @@ R8["open_before_8pm"] = (ot < pd.to_datetime(R8.date) - pd.Timedelta(hours=4)).v
 idx = pd.MultiIndex.from_frame(R8[key])
 R8["l9pm"] = L9pm.reindex(idx).values; R8["l9am"] = L9am.reindex(idx).values
 for k_, v_ in LATER.items(): R8[k_] = v_.reindex(idx).values
-R8 = R8.merge(RS[key + ["tot_model"]].rename(columns={"tot_model": "tot_stale"}), on=key, how="left")
+R8 = R8.merge(RS[key + ["tot_model", "pred_margin"]].rename(columns={"tot_model": "tot_stale", "pred_margin": "pm_stale"}), on=key, how="left")
 
 def grade(model, line, actual, mask=None):
     e = model - line; m = (e.abs() >= 3) & line.notna() & model.notna()

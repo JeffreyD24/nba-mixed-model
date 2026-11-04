@@ -6,3 +6,5 @@ NBA spreads v1,spread,2026-10-30 10:45,Model 1; bet when the opener is 3+ pts of
 NBA spreads (test-only),spread,2026-11-02 04:55,spreads test-only: no model bets (anything bet here was off-model)
 NBA spreads v2,spread,2026-11-02 09:54,roster strength + recent form; Oct-Jan both teams 10+ games; no home dogs; Feb-Apr outside traps; Pinnacle rule
 NBA totals v4,total,2026-11-02 12:46,"+ early-season shrink of the shooting-luck correction: x games/(games+15)"
+NBA totals v5,total,2026-11-04 13:30,"v4 model; bet at the opener with the latest injury info (no wait for the 8 PM report); unmoved lines with 3+ edge are BETs at any time (rule audit Nov 4, 2026)"
+NBA spreads v3,spread,2026-11-04 13:30,"v2 model and windows; still waits for the 8 PM report; unmoved lines with 3+ edge are BETs at any time (rule audit Nov 4, 2026)"

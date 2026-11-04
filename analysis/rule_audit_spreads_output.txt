@@ -1,0 +1,52 @@
+NBA live spread number at DraftKings 2023-24..2025-26, edge 3+, morning-lock lag 1, units at -110 (by season 24, 25, 26)
+
+S0 opener + 8 PM report (as documented)
+  Oct-Jan live rules                                             296 bets  58.4%   +34.3u (+11.6/100; +10.6, +15.5, +8.2)
+  Feb-Apr outside traps                                          106 bets  61.3%   +18.1u (+17.1/100; +3.0, +4.0, +11.1)
+  all live-rule bets                                             402 bets  59.2%   +52.4u (+13.0/100; +13.6, +19.5, +19.3)
+    of which opener posted before 8 PM (not bettable)            292 bets  58.6%   +34.5u (+11.8/100; +9.3, +16.8, +8.4)
+
+S1 opener + previous game's report (bettable as the opener posts)
+  Oct-Jan live rules                                             304 bets  53.0%    +3.4u ( +1.1/100; +0.4, +7.5, -4.5)
+  Feb-Apr outside traps                                          113 bets  56.6%    +9.2u ( +8.1/100; +0.1, +3.9, +5.2)
+  all live-rule bets                                             417 bets  54.0%   +12.5u ( +3.0/100; +0.5, +11.5, +0.6)
+  no month / home-dog / trap rules (both teams 10+)              944 bets  49.9%   -44.8u ( -4.7/100; -32.5, -7.8, -4.5)
+
+S2 ~9 PM night before, 8 PM report, live rules
+  every 3+ edge                                                  311 bets  59.8%   +44.1u (+14.2/100; +6.6, +18.9, +18.5)
+  moved AGAINST 0.5+                                              64 bets  62.5%   +12.4u (+19.3/100; +3.5, +2.6, +6.2)
+  unmoved                                                        185 bets  58.9%   +23.1u (+12.5/100; +1.5, +13.7, +7.9)
+  moved TOWARD 0.5+                                               62 bets  59.7%    +8.6u (+13.9/100; +1.6, +2.5, +4.5)
+
+midnight, 8 PM report, live rules
+  every 3+ edge                                                  348 bets  57.5%   +33.8u ( +9.7/100; +2.2, +9.8, +21.8)
+  moved AGAINST 0.5+                                             117 bets  55.6%    +7.1u ( +6.1/100; -1.9, +0.6, +8.4)
+  unmoved                                                        136 bets  55.9%    +9.1u ( +6.7/100; +0.7, -0.2, +8.5)
+  moved TOWARD 0.5+                                               95 bets  62.1%   +17.6u (+18.6/100; +3.4, +9.4, +4.9)
+
+S3 ~9 AM game day, 8 PM report, live rules
+  every 3+ edge                                                  349 bets  57.0%   +30.9u ( +8.9/100; +3.5, +10.8, +16.6)
+  moved AGAINST 0.5+                                             152 bets  51.3%    -3.1u ( -2.0/100; -7.5, +3.0, +1.5)
+  unmoved                                                         93 bets  60.2%   +13.9u (+15.0/100; +5.3, +0.8, +7.8)
+  moved TOWARD 0.5+                                              104 bets  62.5%   +20.1u (+19.3/100; +5.7, +7.0, +7.4)
+
+noon, 8 PM report, live rules
+  every 3+ edge                                                  353 bets  55.8%   +23.1u ( +6.5/100; +2.5, +5.6, +15.0)
+  moved AGAINST 0.5+                                             181 bets  52.5%    +0.4u ( +0.2/100; +1.5, +0.5, -1.6)
+  unmoved                                                         65 bets  56.9%    +5.6u ( +8.7/100; -1.7, -0.8, +8.2)
+  moved TOWARD 0.5+                                              107 bets  60.7%   +17.1u (+16.0/100; +2.7, +5.9, +8.5)
+
+3 PM, 8 PM report, live rules
+  every 3+ edge                                                  346 bets  54.3%   +12.9u ( +3.7/100; -4.8, +5.6, +12.1)
+  moved AGAINST 0.5+                                             187 bets  50.8%    -5.6u ( -3.0/100; +1.4, -4.3, -2.7)
+  unmoved                                                         59 bets  59.3%    +7.8u (+13.3/100; -3.5, +3.0, +8.4)
+  moved TOWARD 0.5+                                              100 bets  58.0%   +10.7u (+10.7/100; -2.6, +6.9, +6.5)
+
+edge size at the opener, previous-game report, live rules
+  edge 3.0-4.0                                                   162 bets  46.3%   -18.8u (-11.6/100; -1.3, -1.9, -15.6)
+  edge 4.0-5.0                                                   103 bets  54.4%    +3.9u ( +3.8/100; -2.2, +1.4, +4.7)
+  edge 5.0-+                                                     152 bets  61.8%   +27.5u (+18.1/100; +3.9, +12.0, +11.5)
+  edge 2-3 (below the bar)                                       219 bets  54.3%    +8.2u
+
+CLV, S1 live-rule opener bets: avg move toward the bet by the 3 PM line (pts)
+  +0.87 over 419 bets

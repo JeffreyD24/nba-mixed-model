@@ -1,0 +1,20 @@
+{
+ "source": "research/tournament/nba_tournament.py fit(..., 'STACK') on 2014-2022 SBR trusted totals, same fit as the lockbox (NBA_RESULTS.md)",
+ "fitted_on": "2014-2022",
+ "coef": {
+  "intercept": 0.60348,
+  "model1_minus_line": 0.26273,
+  "simple_minus_line": -0.01917,
+  "form": 0.04528,
+  "altitude": 0.42487,
+  "rested": 0.35221
+ },
+ "resid_sd": 18.0361,
+ "edge_threshold": 1.0771,
+ "threshold_rule": "|edge| >= 0.0597 x resid_sd (beats -110), untuned",
+ "min_games_each": 10,
+ "altitude_homes": [
+  "den",
+  "utah"
+ ]
+}

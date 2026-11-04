@@ -43,7 +43,7 @@ The totals stack (refit on 2014-2022): `result - opener = 0.60 + 0.26 x (Model 1
    rest decisions), not better ratings.
 
 ## Next (in order)
-1. Track "NBA totals stack" as a side-by-side record from today (new version = new record). Needs your OK.
+1. ~~Track "NBA totals stack" as a side-by-side record~~ **Started Nov 3, 2026 (user approved):** `stack_record.py` (morning run) -> `state/picks_log_stack.csv`, coefficients frozen in `data/stack_totals.json`; reproduces the 2025-26 lockbox exactly. v4 unchanged. Bets start once both teams have 10+ games (mid-November).
 2. Tier B on 2022-26: does adding the night-before injury report and the shooting-luck term to the stack help? (already-seen seasons, labeled)
 3. Data job (Sonnet + GitHub Actions): box-score "missed the last game" history back to 2012 from the NBA stats API, so injuries can be tested
    on ten seasons the same way.

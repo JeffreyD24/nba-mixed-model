@@ -507,3 +507,8 @@ with the size of the move against: totals 53.6% (0.5) -> 49.3% (1) -> 46.4% (1.5
 (first 90 min) are no better than later ones; 46% of early against-moves swing back by the close but betting them still lost. DraftKings has
 posted only half-point lines since Oct 2025, so live moves are whole points. Totals "1 pt against" was +20.6u on DK 2023-26 but -6.4u at the
 SBR close: no change, tracked in the new shadow record (`shadow_passed.py`, `state/shadow_passed.md`).
+
+## Bail-out after the line moves against a placed bet (Nov 4, 2026)
+`analysis/BAILOUT_RESULTS.md`. DK 2023-26 opener bets: totals still win ~50% after a 1-2 pt move against but 45% at 3+ and 39.5% at 4+;
+spreads drop to 45% after 1 pt and 33% after 2. Live as a PROVISIONAL alert (`bailout.py`): cash out only above the break-even
+(totals 3+: 86% of stake; 4+: 76%; spreads 1+: 86%; 2+: 64%), otherwise ride.

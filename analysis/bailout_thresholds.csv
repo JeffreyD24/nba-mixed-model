@@ -1,0 +1,9 @@
+market,k,n,p_win,p_push,ride_win,ci_lo,ci_hi,breakeven_per_unit,hedge_win,qualifies,hedge_ok,seasons_below,alert
+total,1,780,0.5103,0.0026,0.5116,0.482,0.5411,0.9767,0.4573,False,False,2,False
+total,2,494,0.4899,0.002,0.4909,0.4544,0.5294,0.9372,0.4521,False,False,2,False
+total,3,308,0.4481,0.0032,0.4495,0.4039,0.4951,0.8586,0.4721,True,False,3,True
+total,4,163,0.3926,0.0061,0.3951,0.3272,0.463,0.7557,0.5217,True,False,3,True
+spread,1,166,0.4458,0.012,0.4512,0.3841,0.5122,0.8631,0.5241,True,False,3,True
+spread,2,55,0.3273,0.0182,0.3333,0.2222,0.4444,0.643,0.6364,False,True,2,True
+spread,3,24,0.3333,0.0417,0.3478,0.1739,0.5217,0.678,0.625,False,True,3,False
+spread,4,15,0.2667,0.0667,0.2857,0.0714,0.5,0.5758,0.6667,False,True,3,False

@@ -174,7 +174,7 @@ def dk_link(ln, market, side, line):
 
 def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info"):
     """kind: 'bet' (a BET verdict), 'stop' (DON'T BET follow-up), 'test', or 'info' (not pushed while BET_ONLY)"""
-    if BET_ONLY and kind not in ("bet", "stop", "test"):
+    if BET_ONLY and kind not in ("bet", "stop", "test", "bailout"):   # bailout: asked for Nov 4, 2026 (bailout.py)
         print("Logged only (not pushed):", title); return False
     topic = os.environ.get("NTFY_TOPIC")
     if not topic:
@@ -990,6 +990,13 @@ def main():
                 print("LINE JUMP:", title, "|", body)
     if jumps_new:
         pd.concat([J, pd.DataFrame(jumps_new)], ignore_index=True).to_csv(jpath, index=False)
+    # ---- bail-out check for logged bets whose line moved against them (Nov 4, 2026; PROVISIONAL; never breaks alerts)
+    try:
+        import bailout
+        n_bo = bailout.check(W, NOW, LINE_NOW, MYB, notify)
+        if n_bo: print(f"Bail-out checks sent: {n_bo}")
+    except Exception as e:
+        print("Bail-out check skipped:", type(e).__name__, str(e)[:120])
 
     if seen_new:
         S2 = pd.concat([SEEN[~SEEN.key.isin(seen_new)], pd.DataFrame([dict(key=k, status=v[0], snapshot=v[1]) for k, v in seen_new.items()])])

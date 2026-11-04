@@ -1,0 +1,21 @@
+
+==== NBA TOTALS: opener bets (edge 3+) whose DraftKings line later moved k+ pts against, DK 2023-26 ====
+opener bets: 1568
+  k  trig |  ride W-L   win%       90% int |  cash-out break-even | hedge bet W-L   win% | by season (ride win%, n)
+  1   780 |  398-380   51.2%  48.2%-54.1% |    0.977 per unit       |    353-419     45.7% | 24: 49% (301), 25: 50% (216), 26: 56% (261)
+  2   494 |  242-251   49.1%  45.4%-52.9% |    0.937 per unit       |    222-269     45.2% | 24: 47% (199), 25: 46% (132), 26: 54% (162)
+  3   308 |  138-169   45.0%  40.4%-49.5% |    0.859 per unit       |    144-161     47.2% | 24: 45% (128), 25: 43% (81), 26: 46% (98)
+  4   163 |   64-98    39.5%  32.7%-46.3% |    0.756 per unit       |     84-77      52.2% | 24: 39% (66), 25: 37% (51), 26: 42% (45)
+  -> pre-registered rule: alert from k = 3 pts
+
+==== NBA SPREADS: opener bets (edge 3+) whose DraftKings line later moved k+ pts against, DK 2023-26 ====
+opener bets: 419
+  k  trig |  ride W-L   win%       90% int |  cash-out break-even | hedge bet W-L   win% | by season (ride win%, n)
+  1   166 |   74-90    45.1%  38.4%-51.2% |    0.863 per unit       |     87-79      52.4% | 24: 42% (53), 25: 45% (53), 26: 48% (58)
+  2    55 |   18-36    33.3%  22.2%-44.4% |    0.643 per unit       |     35-20      63.6% | 24: 18% (17), 25: 53% (19), 26: 28% (18)
+  3    24 |    8-15    34.8%  17.4%-52.2% |    0.678 per unit       |     15-9       62.5% | 24: 29% (7), 25: 43% (7), 26: 33% (9)
+  4    15 |    4-10    28.6%   7.1%-50.0% |    0.576 per unit       |     10-5       66.7% | 24: 20% (5), 25: 40% (5), 26: 25% (4)
+  -> pre-registered rule: alert from k = 1 pts
+
+Reading the break-even: 1.909 per unit = a sure win, 1.0 = getting the stake back. For a $2.50 bet at -110, cash out only if offered
+at least 2.50 x break-even; below that, riding has been worth more on average.

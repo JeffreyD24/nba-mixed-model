@@ -361,5 +361,16 @@
   "url": "https://bsky.app/profile/johnkaralis.com/post/3mziylq57gr2x",
   "text": "Celtics say Jayson Tatum is OUT tonight, resting vs. the Bucks. Payton Pritchard still listed as questionable",
   "swing": 2.18
+ },
+ "2026-11-04|ny|josh hart": {
+  "status": "Out",
+  "player": "Josh Hart",
+  "game_id": 22600177,
+  "reporter": "Fred Katz",
+  "posted_at_et": "2026-11-04 14:30:59",
+  "seen_at_et": "2026-11-04 14:31:58",
+  "url": "https://bsky.app/profile/fredkatz.bsky.social/post/3mzj3pmz3qs2x",
+  "text": "Josh Hart is now listed as out for tonight's game against the Bulls.",
+  "swing": 0.4
  }
 }

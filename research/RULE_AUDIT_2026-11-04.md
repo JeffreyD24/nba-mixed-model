@@ -62,15 +62,21 @@ Positive at night (9-10 PM +17.5u / +23.9u), mixed during the day. Fine as is.
 Edges 2-3 at the opener were +11u (8 PM report) or +47u (previous report) on ~500 bets; inconsistent, so not a basis to lower it.
 Worth tracking 2.5-3 as a test bucket.
 
-### Not re-tested here (same look-ahead applies)
-- **Spreads Oct-Jan record** (+42u, 355 bets) and Feb-Apr traps were graded at the opener with the 8 PM report too. Expect a
-  smaller honest number; should be re-run with the opener-time report before trusting the record.
-- MAX_PRICE -120 (logic, costs little), Pinnacle spread rule (already documented as timing-limited).
+### 6. Spreads re-test (analysis/rule_audit_spreads.py): the injury report DOES matter for spreads
+Live spread number (Model 1 + 0.11 x last-10 margin form + 0.57 x roster delta), live windows (Oct-Jan no home dogs; Feb-Apr outside traps):
+| Bet timing | Bets | Win % | Units |
+|---|---|---|---|
+| Opener + 8 PM report (as documented; 73% not bettable) | 402 | 59.2% | +52.4u |
+| Opener + previous game's report | 417 | 54.0% | **+12.5u** |
+| ~9 PM line + 8 PM report | 311 | 59.8% | **+44.1u** (+36.5u excluding games whose "8 PM" report was really a game-day report) |
+| ~9 AM game-day line + 8 PM report | 349 | 57.0% | +30.9u |
+After the report: unmoved 9 PM 58.9% +23.1u; moved toward +8.6u; moved against fine at 9 PM but negative by 9 AM-3 PM. Who plays matters
+far more for a margin than a total, so **spreads keep the report gate**; unmoved lines become BETs like totals.
 
 ## NFL (full table: analysis/rule_audit_nfl_output.txt)
 | Rule | Verdict | Key numbers |
 |---|---|---|
-| No BET before Friday's final injury report | **CHANGE**: allow BET from Tue morning on the locked early number | Tue 10 AM +11.6u (332) vs live rule +3.5u (132). The edge leaves with the price during the week; the report adds nothing |
+| No BET before Friday's final injury report | **CHANGE**: allow BET early in the week on the locked early number | Tue 10 AM +11.6u (332) vs live rule +3.5u (132); Fable's review: the early number in that test still knew the same week's Thursday game, the honest cut is **+7.6u** (no weather) / +6.1u (forecast weather). Still better than waiting |
 | PASS on 0.5+ against | KEEP | weak, right direction (Tue: against +2.1u, toward +6.0u); NBA "unmoved best" pattern does not repeat |
 | Totals edge 2.0 | KEEP | below 2 loses at Tue (-17.1u) |
 | Weeks 1-4 and 15+ test-only | KEEP | -16.2u and -34.5u at Tue |
@@ -104,3 +110,16 @@ Worth tracking 2.5-3 as a test bucket.
 - Every record reported so far was a little optimistic. Plan bankroll and expectations on the honest numbers (NBA totals
   ~+7u/100 at the opener; NFL totals ~+3.5u/100 at Tuesday; NHL moneyline ~+12%).
 - Small-sample changes (NHL moved-price ML, puck line 9%, NBA 2.5-3 bucket) should start as tracked tests, not live bets.
+
+## Changes made (Nov 4, 2026, approved by the user; independently reviewed by Fable before/after going live)
+| Sport | Change | Version record |
+|---|---|---|
+| NBA | Totals alert at the opener on the latest injury info (no 8 PM wait); spreads keep the wait | NBA totals v5 (12:47 ET) |
+| NBA | Unmoved line with 3+ edge = BET at any time (was OPTIONAL, not pushed); no bet alert after tip | NBA totals v5 / NBA spreads v3 |
+| NFL | BET from early in game week on the locked early number (Tue 10 AM; another session then moved it to Mon 10 AM, NFL totals v4); test-only logging deduped; 2H total display fix; honest numbers in alert text | NFL totals v3 -> v4 |
+| NHL | Puck line EV 9% (6-9% logged as TEST); prefer moneyline when both qualify; ML b2b skip removed (puck line keeps it); Pinnacle post-alert DON'T BET dropped; no ML DON'T BET for price-only dips within 1.5 pts while EV >= 0 and the model's win chance is unchanged | NHL v4 |
+
+Fable review notes kept for later: ~10% of NBA openers post before the 11:40 AM run saves tomorrow's model (caught later by the unmoved
+rule); the audit replays a v3-like totals number (no shrink/altitude); roster strength and late-season standings use data through the
+night before (lag 0) while the model is lag 1 (small); an unlogged NBA alert sent mid-afternoon the day before can produce ~25
+reminders before tip at the 30-min cadence.

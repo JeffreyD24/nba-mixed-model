@@ -169,7 +169,6 @@ key,status,snapshot
 2026-11-04|phi|dominick barlow,Out,2026-11-03_05_00PM
 2026-11-04|phi|ariel hukporti,Out,2026-11-03_05_00PM
 2026-11-04|hou|steven adams,Out,2026-11-03_05_00PM
-2026-11-04|hou|clint capela,Questionable,2026-11-03_05_00PM
 2026-11-04|hou|julian phillips,Out,2026-11-03_05_00PM
 2026-11-04|cle|nae qwan tomlin,Out,2026-11-03_05_00PM
 2026-11-04|cle|jaylon tyson,Out,2026-11-03_05_00PM
@@ -194,9 +193,7 @@ key,status,snapshot
 2026-11-04|okc|jalen williams,Out,2026-11-03_05_30PM
 2026-11-04|okc|jaylin williams,Questionable,2026-11-03_05_30PM
 2026-11-04|no|yves missi,Out,2026-11-03_05_45PM
-2026-11-04|no|trey murphy,Probable,2026-11-03_05_45PM
 2026-11-04|no|jordan poole,Probable,2026-11-03_05_45PM
-2026-11-04|no|julian reese,Probable,2026-11-03_05_45PM
 2026-11-04|min|donte divincenzo,Out,2026-11-03_06_00PM
 2026-11-04|min|anthony edwards,Out,2026-11-03_06_00PM
 2026-11-04|utah|trey alexander,Out,2026-11-03_06_00PM
@@ -254,3 +251,6 @@ key,status,snapshot
 2026-11-04|cha|kon knueppel,Available,2026-11-04_01_00PM
 2026-11-04|ny|josh hart,Out,2026-11-04_01_00PM
 2026-11-04|min|terrence shannon,Out,2026-11-04_01_15PM
+2026-11-04|hou|clint capela,Out,2026-11-04_01_30PM
+2026-11-04|no|trey murphy,Questionable,2026-11-04_01_30PM
+2026-11-04|no|julian reese,Available,2026-11-04_01_30PM

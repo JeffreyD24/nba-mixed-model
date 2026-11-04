@@ -249,3 +249,17 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-03 19:40,22600174,2026-11-04,Total 3-Point Field Goals,5160992,Alex Sarr,,0.5,133.0,0.5,133.0,2026-11-04T03:35Z,under
 2026-11-03 19:40,22600174,2026-11-04,Total 3-Point Field Goals,5174563,Kyshawn George,,1.5,-143.0,1.5,-143.0,2026-11-04T03:35Z,over
 2026-11-03 19:40,22600174,2026-11-04,Total 3-Point Field Goals,5174563,Kyshawn George,,1.5,109.0,1.5,109.0,2026-11-04T03:35Z,under
+2026-11-03 19:50,22600173,2026-11-04,Total Points,1966,LeBron James,,14.5,-125.0,15.5,-104.0,2026-11-04T03:32Z,over
+2026-11-03 19:50,22600173,2026-11-04,Total Points,1966,LeBron James,,14.5,-102.0,15.5,-122.0,2026-11-04T03:32Z,under
+2026-11-03 19:50,22600173,2026-11-04,Total Points,4431678,Tyrese Maxey,,23.5,-105.0,22.5,-117.0,2026-11-04T03:32Z,over
+2026-11-03 19:50,22600173,2026-11-04,Total Points,4431678,Tyrese Maxey,,23.5,-122.0,22.5,-109.0,2026-11-04T03:32Z,under
+2026-11-03 19:50,22600173,2026-11-04,Total Points and Assists,4431678,Tyrese Maxey,,27.5,-120.0,27.5,-113.0,2026-11-04T02:44Z,over
+2026-11-03 19:50,22600173,2026-11-04,Total Points and Assists,4431678,Tyrese Maxey,,27.5,-110.0,27.5,-116.0,2026-11-04T02:44Z,under
+2026-11-03 19:50,22600173,2026-11-04,Total Points and Rebounds,4431678,Tyrese Maxey,,26.5,-123.0,26.5,-115.0,2026-11-04T02:44Z,over
+2026-11-03 19:50,22600173,2026-11-04,Total Points and Rebounds,4431678,Tyrese Maxey,,26.5,-107.0,26.5,-115.0,2026-11-04T02:44Z,under
+2026-11-03 19:50,22600173,2026-11-04,Total Points and Rebounds,5124612,VJ Edgecombe,,16.5,-104.0,16.5,-108.0,2026-11-04T02:44Z,over
+2026-11-03 19:50,22600173,2026-11-04,Total Points and Rebounds,5124612,VJ Edgecombe,,16.5,-126.0,16.5,-121.0,2026-11-04T02:44Z,under
+2026-11-03 19:50,22600173,2026-11-04,"Total Points, Rebounds, and Assists",1966,LeBron James,,27.5,-117.0,27.5,-121.0,2026-11-04T02:44Z,over
+2026-11-03 19:50,22600173,2026-11-04,"Total Points, Rebounds, and Assists",1966,LeBron James,,27.5,-112.0,27.5,-109.0,2026-11-04T02:44Z,under
+2026-11-03 19:50,22600173,2026-11-04,"Total Points, Rebounds, and Assists",4431678,Tyrese Maxey,,31.5,-116.0,31.5,-109.0,2026-11-04T02:44Z,over
+2026-11-03 19:50,22600173,2026-11-04,"Total Points, Rebounds, and Assists",4431678,Tyrese Maxey,,31.5,-113.0,31.5,-120.0,2026-11-04T02:44Z,under

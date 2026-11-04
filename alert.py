@@ -63,7 +63,12 @@ def pin_against(pin, side, opn):
     return (float(opn) - pin) < 0 if side == "home" else (float(opn) - pin) > 0
 BET_ONLY = True                     # phone alerts only for BET verdicts and the DON'T BET follow-up (Nov 1, 2026);
                                     # everything else is still logged, just not pushed. False = the old behaviour.
-FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen
+FRESH_OPEN_MIN = 60                 # an unmoved line counts as "the opener" for this long after it was first seen (label only since
+                                    # Nov 4, 2026: an unmoved line with 3+ edge is a BET at any time; research/RULE_AUDIT_2026-11-04.md)
+TOTALS_AT_OPENER = True             # Nov 4, 2026 (rule audit, approved): totals alert at the opener with the latest injury info instead of
+                                    # waiting for the 8 PM night-before report. DK openers post 2-7 PM (74% before 8 PM); 2023-26 at the
+                                    # opener with the previous game's report +109.3u (1,565 bets, 56.0%) vs the old wait-then-move-toward
+                                    # rule ~+17.5u. Spreads keep the gate: without the report they fall to +12.5u; after it, ~9 PM line +44.1u.
 MAX_PRICE = -120                    # worst price to bet at: bets with 3+ pts of edge won about 55% at the opener in the
                                     # backtests (bigger edges no better), and 55% breaks even at about -122
 AGAINST_MOVE = 0.5                  # caution when the line moved this much AGAINST the bet since opening. Backtest (2024-26, lines
@@ -291,10 +296,12 @@ def main():
         fs = first_seen(gid, market, opn)
         if fs is not None and (NOW - fs) <= pd.Timedelta(minutes=FRESH_OPEN_MIN):
             return "BET", f"still at the opening line, posted about {max(1, int((NOW - fs).total_seconds() // 60))} min ago"
+        # Nov 4, 2026 (rule audit): an unmoved line is a BET at any time. 2023-26, edge 3+ at the line then, unmoved lines won at every
+        # check time (totals 9 PM 56.7% +54.5u, 9 AM 57.0%, noon 60.6%; spreads after the report 9 PM 58.9% +23.1u). Was OPTIONAL (not pushed).
         if fs is not None:
             h_ = (NOW - fs).total_seconds() / 3600
-            return "OPTIONAL", f"still at the opening line {h_:.0f}+ hours after it posted (about break-even in backtests once a line sits)"
-        return "OPTIONAL", "still at the opening line, but it posted before tracking began (time unknown)"
+            return "BET", f"still at the opening line {h_:.0f}+ hours after it posted (unmoved lines with 3+ edge won 55-61% in 2023-26 tests)"
+        return "BET", "still at the opening line (posted before tracking began; unmoved lines with 3+ edge won 55-61% in 2023-26 tests)"
 
     def news_verdict(g, market, side, cur, opn, e):
         """verdict for an alert caused by reporter news: what matters is whether the line has reacted yet"""
@@ -335,8 +342,8 @@ def main():
         return (f"BET RANGE: under {o:g} down to {worst:g}. Skip if it's lower than {worst:g}, "
                 f"or if it rises to {o + AGAINST_MOVE:g} or higher (the market moving against the model). Price {MAX_PRICE} or better.")
 
-    RULE_TXT = ("Rule: BET at the opener, or if the line moved toward the model with 3+ pts of edge left. PASS if it moved "
-                "against the model by 0.5+ since it opened.")
+    RULE_TXT = ("Rule: BET while the line is at the opener or moved toward the model, with 3+ pts of edge left. PASS if it moved "
+                "against the model by 0.5+ since it opened. Totals bet at the opener; spreads wait for the 8 PM injury report.")
 
     news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
     # ---- key players: undecided injury statuses and status changes
@@ -643,9 +650,11 @@ def main():
                                           model=round(margin if market == "spread" else total, 2), edge_left=round(abs(e), 2)))
                     moved_done.add((g["game_id"], market)); print("MARKET AGREES:", mtitle, "|", mbody)
                 if abs(e) < THRESHOLD: continue
+                if pd.Timestamp(g["tip_et"]) <= NOW: continue        # Nov 4, 2026 review: never a bet alert after tip
                 skip = None
-                if not fresh: skip = "no current injury report"
-                elif h is None or a is None: skip = "a team has not filed its injury report"
+                at_open_ok = TOTALS_AT_OPENER and market == "total"      # totals: bet now on the latest info (see TOTALS_AT_OPENER)
+                if not fresh and not at_open_ok: skip = "no current injury report"
+                elif (h is None or a is None) and not at_open_ok: skip = "a team has not filed its injury report"
                 elif (not is_news and opn is not None and not pd.isna(opn) and abs(cur - opn) >= AGAINST_MOVE
                       and against_us(market, side, cur - opn)):
                     skip = (f"line moved {abs(cur - opn):.1f} pts against this bet since open (in backtests, bets after the line "
@@ -691,13 +700,19 @@ def main():
                     body += f" Market agrees: the line has moved {abs(move):.1f} pts toward the model since open."
                     moved_done.add((g["game_id"], market))
                 body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + news_text(g) + pending_text(SW, g)
+                if market == "total" and (not fresh or h is None or a is None):
+                    body += ("\nBet at the opener: the current injury report isn't in yet for this game. If it moves this bet under 3 pts or flips it "
+                             "before you've logged it, you'll get a DON'T BET.")
                 body += limbo_text(SW, g, margin, total, market, side, e, always=True) + hist_txt + news_for(g)
                 prio = "high"; why = ""
                 cb = caution_before(g["game_id"], market)
                 if cb is not None:      # a caution went out earlier: say why this one follows it
                     t0 = pd.Timestamp(cb.alerted_at_et).strftime("%-I:%M %p")
                     reason = str(cb.skipped)
-                    cleared = ("both teams have now filed injury reports" if "filed" in reason else
+                    rep_now = fresh and h is not None and a is not None
+                    cleared = ("totals now bet at the opener on the latest injury info" if (("filed" in reason or "injury report" in reason)
+                                                                                               and not rep_now) else
+                               "both teams have now filed injury reports" if "filed" in reason else
                                "a current injury report is now out" if "injury report" in reason else
                                "the line is no longer 3+ pts against this bet" if "against" in reason else "the caution no longer applies")
                     why = (f"UPDATE to the CAUTION alert at {t0}: {cleared} ({used}). Edge now {abs(e):.1f} pts "

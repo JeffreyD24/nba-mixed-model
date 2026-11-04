@@ -29,6 +29,13 @@ ML_TEST = (-0.0640, 0.1388)         # NBA moneyline TEST tracking (Nov 2, 2026; 
                                     #   spread rules (10+ games, Feb-Apr traps) -> state/ml_test.csv. Recorded only, never pushed.
 REMIND_EVERY_MIN = 30               # Nov 2, 2026: an alerted BET still not logged and still a bet -> REMINDER push every 30 min,
 REMIND_HOURS = (6, 20)              #   only 6 AM - 8 PM ET (user asleep 8 PM - 4 AM)
+REMIND_GAPS = ((24, 240), (6, 120), (2, 60))   # Nov 4, 2026: reminders spaced by time to start: 24h+ every 4 h, 6-24 h every 2 h,
+                                              #   2-6 h hourly, under 2 h every REMIND_EVERY_MIN (an opener alerted the day before
+                                              #   no longer sends ~25 reminders)
+def remind_gap_min(tip, now):
+    try: h = (pd.Timestamp(tip) - now).total_seconds() / 3600
+    except Exception: return REMIND_EVERY_MIN
+    return next((m for hh, m in REMIND_GAPS if h > hh), REMIND_EVERY_MIN)
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
@@ -785,7 +792,7 @@ def main():
             """REMINDER push for a bet that is still a BET and not logged: every REMIND_EVERY_MIN minutes, REMIND_HOURS only"""
             if not (REMIND_HOURS[0] <= NOW.hour < REMIND_HOURS[1]): return 0
             ref = next((x for x in (r.get("last_reminder_at_et"), r.get("resumed_at_et"), r.alerted_at_et) if isinstance(x, str)), None)
-            if ref is None or NOW - pd.Timestamp(ref) < pd.Timedelta(minutes=REMIND_EVERY_MIN): return 0
+            if ref is None or NOW - pd.Timestamp(ref) < pd.Timedelta(minutes=remind_gap_min(r.tip_et, NOW)): return 0
             px_now = (now_.get("px") or {}).get(side_)
             if px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE: return 0
             if r.market == "spread":

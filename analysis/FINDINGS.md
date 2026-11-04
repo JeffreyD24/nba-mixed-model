@@ -1,5 +1,13 @@
 # Research findings log
 
+## 2026-11-04: Spreads step 3 for NHL and NFL; NHL moneyline split into EV buckets
+- NHL moneyline: Jeffrey kept EV 4-9% bets; they are now recorded and graded separately from 9%+ (`ML_EV_SPLIT`, `state/ml_ev_buckets.csv`).
+- NHL step 3 (nhl-mixed-model `research/spreads/STEP3_NHL_GOALIE_RESULTS.md`, prereg 1fc0e04): game-day model with actual starters adds to the DK price
+  1 h before puck drop (w +0.45 [+0.30, +0.59]), but CLV can't be positive that late and the model's skater lineup has look-ahead. No tier, no DON'T BET.
+  Opener ML bets whose own goalie was a surprise: CLV -0.98% (vs +1.02%). Proposed: a TEST-only live re-check at goalie confirmation.
+- NFL step 3 (nfl-mixed-model `research/spreads/STEP3_NFL_FINAL_REPORT_RESULTS.md`, prereg 66aaaaa): non-QB final-report news vs the close, slope +0.37
+  [-0.19, +0.89]: dropped as a bet trigger; bets at the post-report line CLV +0.16 vs break-even +0.64. Weak support (2018-19 data quality).
+
 ## 2026-11-04: NFL home-pick spread CLV, followed up (pre-registered)
 nfl-mixed-model `research/spreads/HOME_PICKS_PREREG.md` (f3278ee), results `HOME_PICKS_RESULTS.md` (a9aa3d4). Fable: no bugs.
 - **Model information, not market drift:** model home-dog picks CLV +0.48 vs matched unpicked home dogs +0.01 (100th percentile of 5,000 draws). CLV rises with edge toward the home dog (-0.02 / +0.18 / +0.48).

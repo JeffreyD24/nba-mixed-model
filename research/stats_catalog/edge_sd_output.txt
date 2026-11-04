@@ -1,0 +1,13 @@
+Noise model (SBR 2011-19, 10251 games): mean |miss| = 7.48 + 0.0315 x opener (slope p=0.00028); at 200: 13.8, 220: 14.4, 240: 15.0
+  2023-26 live rule |edge|>=3    1446 bets 56.7% +119.5u CLV +1.82
+  2023-26 top 1448 by |z-edge|   1446 bets 56.7% +119.5u CLV +1.82
+  2023-26 bets only z-edge makes 6 bets 83.3% +3.5u CLV +0.00
+  2023-26 bets only raw edge makes 6 bets 83.3% +3.5u CLV -0.42
+  2023-26 logistic AIC: raw edge 4400.52, z-edge 4400.24 (lower is better; difference -0.28)
+
+Older seasons (Model 1 at SBR openers, totals, |edge|>=3): 4265 bets with an opener matched, win 52.8%
+  top half by |edge|: 53.5%; top half by |z-edge|: 53.5% (2132 bets each, 2076 shared)
+  logistic win ~ size: AIC |edge| 5901.91 (slope p=0.20), |z-edge| 5902.01 (p=0.21)
+  z-half minus edge-half win % by season: 2014: -0.5%, 2015: +0.5%, 2016: +0.0%, 2017: +0.0%, 2018: -0.4%, 2019: -0.3%, 2020: -0.6%, 2021: +0.0%, 2022: +0.7%
+
+Verdict (rule set in advance): test 1 units raw, test 1 AIC z, test 2 AIC raw -> keep raw edge.

@@ -1208,3 +1208,4 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 02:03:16,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,firsthalf,team_total,home_over,62.5,-110,normal
 2026-11-05 02:03:16,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,firsthalf,team_total,home_under,62.5,-110,normal
 2026-11-05 02:03:16,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,firsthalf,team_total,away_under,58.5,-110,normal
+2026-11-05 02:08:16,295389,2026-11-05,2026-11-05 22:00,mia,gs,Consensus,event,total,under,235.5,-110,normal

@@ -92,7 +92,9 @@ if SPORT == "nba":
                     "state/picks_log_models.csv": (30, "Picks log by model", "warn"), "state/picks_log_shrunk.csv": (30, "Shrunk picks log", "warn"), "state/picks_log_stack.csv": (30, "Stack picks log", "warn"),
                     "state/nba_luck.json": (30, "Shooting luck", "warn"), "state/nba_shots_2026_27.csv.gz": (30, "Shots 2026-27", "warn"),
                     "state/early": (30, "Early model files", "warn"), "state/pinnacle_now.json": (72, "Pinnacle now", "warn"),
-                    "state/injury_status_seen.csv": (72, "Injury status seen", "warn"), "state/altitude_watch.json": (30, "Altitude tripwire watch", "warn")})
+                    "state/injury_status_seen.csv": (72, "Injury status seen", "warn"),
+                    "research/report_watch": (72, "Report watcher log (TEST, Nov 4 2026)", "warn"), "state/report_watch.md": (30, "Report watcher grades (daily)", "warn"),
+                    "state/report_watch_seen.json": (30, "Report watcher memory", "warn"), "state/altitude_watch.json": (30, "Altitude tripwire watch", "warn")})
 if SPORT == "nfl":
     # NFL is weekly: windows are 8-9 days for game-driven files (they go stale after the Super Bowl, expected in the off-season)
     STREAMS.update({"research/injury_decisions.csv": (72, "Key-player injury log"),
@@ -105,7 +107,7 @@ if SPORT == "nfl":
                     "state/h2_totals_watch.csv": (216, "2H totals watch", "warn"), "state/homedog_test.csv": (216, "Home-dog lean test log (test-only)", "warn"), "state/half_lines_h2_2026.csv": (216, "2H lines", "warn")})
 
 # paths that exist in research/ or state/ but are not regular data feeds (docs, one-off analyses, memory files)
-IGNORE = {"DATA_DICTIONARY.md", "HANDOFF_TO_OPUS.md", "IDEAS_AND_CHECKLIST.md", "LEAKAGE_AUDIT_2026-11-03.md",
+IGNORE = {"report_watch_record.csv", "report_watch_last.csv", "DATA_DICTIONARY.md", "HANDOFF_TO_OPUS.md", "IDEAS_AND_CHECKLIST.md", "LEAKAGE_AUDIT_2026-11-03.md",
           "SHRINK_WEIGHTS_2026-11-03.md", "how_sharp_models_work.md", "health_latest.md", "health_log.csv", "test_alert_result.txt",
           "errors.csv", "community_notes", "linescores.csv", "live_laptop", "minutes", "minutes_history", "model_comparison",
           "nba_tracking", "props_athletes.csv", "tournament", "cold_stretch", "bet_versions.csv", "my_bets.csv",

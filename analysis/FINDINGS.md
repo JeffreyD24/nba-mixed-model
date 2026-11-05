@@ -46,6 +46,21 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
   research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
 
+## 2026-11-05: Kalshi and Polymarket history: how far back, with sizes and wallets (all sports) [TEST] [DECISION]
+- Question (Jeffrey): look everywhere for more Kalshi / Polymarket history; can we see bet sizes and who bet, to track real sharps?
+- Data / method: API probes from a GitHub runner (`.github/workflows/probe-free-sharp.yml`); web search running in parallel.
+- Result, Kalshi (free, no key): settled markets before 2026-09-06 live in a separate historical tier (`/historical/cutoff`, `/historical/markets`,
+  `/historical/trades?ticker=`); every trade has size (contracts), price and time, no identity. Settled game events: NBA 1,636 (from Apr 15, 2025),
+  NHL 1,847 (Apr 19, 2025), NFL 502 (Aug 7, 2025), NCAAM 5,445 (Dec 1, 2025), college football 2,095 (Aug 23, 2025), NBA spreads 1,512 and
+  totals 1,512 (Dec 1, 2025). Candlesticks need start_ts (endpoint path still to confirm).
+- Result, Polymarket (free): trades by market need `condition_id=` (not `market=`); each trade has wallet, size, price, time, outcome. Game
+  markets from Oct 2025 for NBA (series 10345), NHL (10346), NCAAM (10470); an older NCAA series (39) has March Madness games from 2022;
+  NFL series 12185 starts Jul 2026 (2025 NFL games are under another series: to find). CLOB prices-history returned empty for an old market.
+- Read: two full seasons (2025-26) of game-level trades on both exchanges, with sizes; Polymarket adds who. Enough for a past-season test of
+  "follow the sharp wallets" (rank on early 2025-26, test on later 2025-26 and on 2024-25 college / NFL where available).
+- Decision: build the history downloads (Kalshi historical trades for game, spread and total markets; Polymarket trades per sports game
+  market) as GitHub jobs; save under nba-mixed-model `sharp/data/` with a derived/ MANIFEST row (RULE 4).
+
 ## 2026-11-05: What the NHL Pinnacle veto actually did; correction (NHL) [OBSERVATION] [DECISION]
 - Question (Jeffrey): were we waiting for Pinnacle? He bets as soon as an alert arrives, which would make Pinnacle a non-factor.
 - Result: the veto (nhl alert.py USE_PINNACLE_RULE, PIN_DISAGREE 0.005) never waited: it only applied when Pinnacle had ALREADY posted at alert

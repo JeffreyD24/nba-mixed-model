@@ -7,18 +7,22 @@ jobs:
     timeout-minutes: 8
     steps:
       - name: Kalshi historical endpoints
+        continue-on-error: true
         run: |
           K=https://api.elections.kalshi.com/trade-api/v2
-          for u in "$K/historical/cutoff" "$K/historical/markets?series_ticker=KXNBAGAME&limit=5" "$K/historical/markets?limit=3" "$K/series/KXNBAGAME" "$K/events?series_ticker=KXNBAGAME&status=settled&limit=200"; do echo "KALSHI $u"; curl -sS -m 30 "$u" | head -c 700; echo; done
+          HT=$(curl -sS -m 30 "$K/historical/markets?series_ticker=KXNBAGAME&limit=1" | python3 -c "import json,sys; print(json.load(sys.stdin)['markets'][0]['ticker'])"); echo "KALSHI hist market $HT"
+          for u in "$K/historical/trades?ticker=$HT&limit=3" "$K/historical/markets/$HT/candlesticks?period_interval=60" "$K/series/KXNBAGAME/markets/$HT/candlesticks?start_ts=1749000000&end_ts=1750000000&period_interval=60"; do echo "KALSHI $u"; curl -sS -m 30 "$u" | head -c 500; echo; done
           echo "KALSHI oldest settled NBA via events pages:"; python3 - <<'PY'
           import json, urllib.request
           K = "https://api.elections.kalshi.com/trade-api/v2"
           def g(u):
               return json.loads(urllib.request.urlopen(u, timeout=30).read())
-          for ser in ("KXNBAGAME", "KXNHLGAME", "KXNFLGAME", "KXNCAAMBGAME", "KXNCAAFGAME"):
+          import time
+          for ser in ("KXNHLGAME", "KXNFLGAME", "KXNCAAMBGAME", "KXNCAAFGAME", "KXNBASPREAD", "KXNBATOTAL"):
+              time.sleep(2)
               cur, n, oldest = "", 0, None
               for _ in range(40):
-                  d = g(f"{K}/events?series_ticker={ser}&status=settled&limit=200" + (f"&cursor={cur}" if cur else ""))
+                  time.sleep(0.5); d = g(f"{K}/events?series_ticker={ser}&status=settled&limit=200" + (f"&cursor={cur}" if cur else ""))
                   ev = d.get("events", []); n += len(ev)
                   for e in ev:
                       t = e.get("strike_date") or e.get("event_ticker")
@@ -28,6 +32,7 @@ jobs:
               print("KALSHI", ser, "settled events", n, "oldest", oldest)
           PY
       - name: Polymarket price history and trades by market
+        continue-on-error: true
         run: |
           P=https://gamma-api.polymarket.com
           EV=$(curl -sS -m 30 "$P/events?series_id=10345&closed=true&limit=1&order=startDate&ascending=true")

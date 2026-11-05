@@ -2623,3 +2623,15 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 09:43:09,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,firstquarter,spread,away,2.0,-115,normal
 2026-11-05 09:43:09,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondhalf,spread,home,-2.5,-110,normal
 2026-11-05 09:43:09,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondhalf,spread,away,2.5,-120,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,event,team_total,home_under,111.5,-110,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,event,team_total,home_over,111.5,-120,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,event,spread,home,-1.0,-105,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,event,spread,away,1.0,-115,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,spread,home,1.5,-140,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,spread,away,-1.5,110,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,fourthquarter,spread,away,-1.5,120,normal
+2026-11-05 09:45:47,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,fourthquarter,spread,home,1.5,-150,normal
+2026-11-05 09:45:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,event,team_total,away_under,114.5,-115,normal
+2026-11-05 09:45:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,event,team_total,away_over,114.5,-115,normal
+2026-11-05 09:45:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,firsthalf,moneyline,away,0.0,170,normal
+2026-11-05 09:45:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,firsthalf,moneyline,home,0.0,-205,normal

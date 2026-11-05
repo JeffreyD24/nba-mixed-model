@@ -40,3 +40,13 @@ A pass goes live only as PROVISIONAL (own record), after a Fable check. A fail i
 - By stat, by book (DK vs FD), by side (overs vs unders), by player tier (minutes 30+, 20-30, under 20), by whether the line moved
   toward us, and Pinnacle-close CLV where Pinnacle has the line.
 - CLV comparisons across timings favor earlier bets (more time for the line to move); noted, not corrected.
+
+## Amendment (Nov 5, 2026, ~07:00 ET) — written BEFORE any prop result was computed
+A box-score-only check on 2023-24 (no prop lines) shows the single-dispersion negative binomial is badly mis-sized for points:
+for players projected 16+ points it implies sd 13.9 when the real spread around the projection is 8.1 (rebounds, assists, threes
+are close). That would squash every points probability toward 50%. So:
+- **v1 (as registered above) still runs and is reported as written.**
+- **v1b** is added, identical except the spread: variance = a·μ + b·μ² per stat, a and b fit by least squares on 2023-24 box-score
+  squared errors (no prop data), plugged into a negative binomial with r(μ) = μ² / ((a − 1)·μ + b·μ²) (Poisson if that is ≤ 0).
+  Its blend weight is fit on 2024-25 the same way. v1b has the same pass rule. If both pass, v1b is preferred (better-specified);
+  if only one passes, that one. Reporting both is the price of having caught this after writing the plan.

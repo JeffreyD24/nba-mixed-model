@@ -3,3 +3,6 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-05 18:40,297403,Virginia Cavaliers,Northeastern Huskies,-33.5,28.03,25.88,23.7,32.54,-0.96,PASS,a team has under 3 games
 2026-11-05 18:40,302490,Oregon Ducks,Eastern Washington Eagles,-15.5,15.89,19.18,17.18,15.89,0.39,PASS,edge 0.39 < 0.5
 2026-11-05 18:40,297388,Ohio State Buckeyes,Youngstown State Penguins,-25.5,18.93,22.27,20.53,25.07,-0.43,PASS,edge 0.43 < 0.5
+2026-11-05 18:45,297395,Purdue Boilermakers,Valparaiso Beacons,-19.5,26.61,29.4,21.52,20.2,0.7,PASS,a team has under 3 games
+2026-11-05 18:45,297393,Ball State Cardinals,Indiana State Sycamores,-2.5,8.32,9.22,8.93,3.36,0.86,PASS,a team has under 3 games
+2026-11-05 18:45,297402,Elon Phoenix,UNC Greensboro Spartans,-7.5,12.77,9.84,12.58,8.16,0.66,PASS,a team has under 3 games

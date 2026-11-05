@@ -66,10 +66,11 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 
 ## Open prop ideas (Nov 5, 2026)
 - [ ] Props v2.1: minutes rescaled to 240/team, only new absences redistributed, each bet vs its own book, synchronized snapshots, 11 AM test.
-- [ ] v1b live paper record at FanDuel 11 AM: decide at ~500 graded picks (mid-December).
+- [ ] v1b at the OPENER on past seasons (BettingPros open_line/open_price, 2022-25; pre-register first): the past-season test of the
+      morning edge (RULE 2: not the current season). The 11 AM FanDuel paper record is a pipeline check only.
 - [ ] Model-selected unders (v2 unders +2.4/+7.9/+10.5/+8.1% in 2022-26; found after the fact): pre-register and test on 2021-22
-      (DraftKings only) and live 2026-27 before trusting it.
-- [ ] Earlier prop snapshots (opening lines in BettingPros `open_*` columns): does the model beat the opener → close move (true CLV)?
+      (DraftKings only) and leave-one-season-out, not on 2026-27.
+- [ ] Same opener data: does the model predict the opener → close move (true CLV for props)?
 
 ## When to switch to Opus
 Switch for: (1) the independent leakage audit, (2) choosing shrink thresholds and bet rules without overfitting, (3) any redesign of how

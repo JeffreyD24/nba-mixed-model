@@ -22,6 +22,21 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
   each kind of record goes, the entry template and TYPE labels ([TEST] [OBSERVATION] [CORRELATION] [CAUSAL] [LEAD] [IDEA] [DECISION]).
   This file stays the master log; open ideas also go in each repo's `research/IDEAS_AND_CHECKLIST.md`.
 
+## 2026-11-05: Separate EV bars for -1.5 and +1.5 puck lines, tested on past seasons (NHL) [TEST] [LEAD] [CORRELATION]
+- Question: should +1.5 puck lines get a lower EV bar than -1.5 (lead from the 1-point band test)? Tested now on past seasons (RULE 2).
+- Data / method: pre-registered (nhl-mixed-model research/spreads/PL_SIDE_BARS_PREREG.md, 87f5e0b). T1 leave-one-season-out on DK
+  openers 2021-26; T2 shot model with goalies on 2014-15..2020-21 at SBR closing puck lines; T3 same seasons at an APPROXIMATE
+  opening puck line rebuilt from SBR's opening moneyline (SBR stores no opening puck line).
+- Result: T1 picked a 4% +1.5 bar in all 5 folds; per-side bars +98.5u vs shared +66.2u, better in 4/5 folds. T2: everything loses at
+  the close. T3: +1.5 at 6-9% 884 bets +21.2u (+2.4%, 5/7 seasons), +1.5 at 9%+ 1,293 bets +5.5%; -1.5 at 6-9% 87 bets +4.1%,
+  -1.5 at 9%+ 139 bets -12.2%.
+- Read: verdict by the written rule **NOT SUPPORTED** (criterion 2 failed: +1.5 6-9% ROI did not beat -1.5's, on 87 bets). The rebuilt
+  price is off by ~3.2 implied-prob points per game with a home/away bias, so T3 is direction only.
+- [CORRELATION] +1.5 bets were profitable at every band 6%+ in both data sets; -1.5 only at 9%+ on DK and not on older seasons.
+- [LEAD] -1.5 at 9%+ may be weaker than the DK record says. Next: fix the rebuilt-price bias (per home/away mapping), re-run, new prereg.
+- Decision: nothing changes; puck line bar stays 9% for both sides. Do not re-suggest per-side bars without new evidence.
+- Files: nhl-mixed-model analysis/pl_side_bars.py, analysis/pl_side_bars_output.txt, research/spreads/PL_SIDE_BARS_RESULTS.md.
+
 ## 2026-11-05: The current season is not a test season (all sports) [DECISION]
 - Jeffrey: stop suggesting "re-test on this season" when past seasons can answer it. Added as RULE 2 in CLAUDE.md (all three repos):
   test now on older seasons, leave-one-season-out, or reconstructed inputs; the live season only when none of those is possible,

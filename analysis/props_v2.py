@@ -5,7 +5,10 @@ Needs _tmp/props_features.csv.gz (analysis/props_v1.py features), research/injur
 import os, sys, re, glob, json
 import numpy as np, pandas as pd
 from scipy import stats, optimize
-W = os.path.abspath(sys.argv[1]); sys.path.insert(0, os.path.join(W, "analysis"))
+W = os.path.abspath(sys.argv[1]); sys.path.insert(0, os.path.join(W, "analysis")); sys.path.insert(0, W)
+import derived  # RULE 4: saved features in derived/ (restored to _tmp/props_features.csv if _tmp lacks the .gz)
+FEAT = os.path.join(W, "_tmp", "props_features.csv.gz")
+if not os.path.exists(FEAT): derived.ensure(W, ["props_features.csv"]); FEAT = os.path.join(W, "_tmp", "props_features.csv")
 from props_unders import load_bp, norm, dec
 out = []
 def say(*a): out.append(" ".join(str(x) for x in a)); print(*a, flush=True)
@@ -41,7 +44,7 @@ def status_at(date, team, cut):
 
 
 # ---------------- features + v2 minutes
-F = pd.read_csv(os.path.join(W, "_tmp", "props_features.csv.gz"), dtype={"player_id": str, "game_id": str})
+F = pd.read_csv(FEAT, dtype={"player_id": str, "game_id": str})
 F = F[F.n_prev >= 3].copy(); F["d"] = pd.to_datetime(F.date)
 for s in STATS: F[f"rhat_{s}"] = F[f"rate_{s}"] * F[f"allow_{s}"].fillna(1.0) * (F.pace if PACE[s] else 1.0)
 F["home_c"] = np.where(F.home == 1, F.team, F.opp); F["away_c"] = np.where(F.home == 1, F.opp, F.team)

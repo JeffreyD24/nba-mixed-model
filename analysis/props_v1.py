@@ -26,7 +26,7 @@ def norm(n):
 # ------------------------------------------------------------------ features (box only)
 def features():
     B = pd.concat([pd.read_csv(f, dtype={"game_id": str, "player_id": str}) for f in sorted(glob.glob(os.path.join(W, "data", "player_stats", "season_20*.csv.gz")))
-                   if int(re.search(r"(\d{4})", os.path.basename(f)).group(1)) in (2023, 2024, 2025, 2026)], ignore_index=True)
+                   if int(re.search(r"(\d{4})", os.path.basename(f)).group(1)) in (2022, 2023, 2024, 2025, 2026)], ignore_index=True)
     B = B[B["min"] > 0].copy(); B["d"] = pd.to_datetime(B.date)
     B = B.sort_values(["player_id", "season", "d"]).reset_index(drop=True)
     # last-season priors
@@ -82,6 +82,7 @@ def features():
     B["name"] = B.player.map(norm)
     keep = ["season", "date", "game_id", "team", "opp", "home", "player_id", "player", "name", "starter", "min", "n_prev", "min_proj", "pace"] + \
            list(STATS.values()) + [f"mu_{s}" for s in STATS.values()] + [f"rate_{s}" for s in STATS.values()] + [f"allow_{s}" for s in STATS.values()]
+    B = B[B.season >= 2023]   # 2021-22 is loaded only as the prior for 2022-23 (fix Nov 5, 2026: before this, 2022-23 had no prior season)
     B[keep].to_csv(os.path.join(W, "_tmp", "props_features.csv.gz"), index=False)
     say(f"features: {len(B)} player-games, seasons {B.season.value_counts().sort_index().to_dict()}")
     for s in STATS.values():

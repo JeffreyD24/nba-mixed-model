@@ -94,3 +94,11 @@ Every bet alert, reminder, bail-out and DON'T BET follow-up is sent the moment i
 batched or skipped because Jeffrey might be asleep. No alert-hour or "awake" windows in any code (`REMIND_HOURS = (0, 24)`,
 `bailout.AWAKE = (0, 24)`, props `alert_hours_et = [0, 24]`). PROVISIONAL bets are real bets: alerted and bet like any other,
 only recorded on their own record. Audit Nov 5, 2026: see the FINDINGS.md entry of that date.
+
+
+## RULE 6: Need to push and have no access? ASK FOR IT (Jeffrey, Nov 5, 2026)
+
+Whenever you want to push something to GitHub and this session does not have write access to that repo, **ask Jeffrey for access
+right then, in plain words, and wait**. He will give it. Do not leave the work unpushed, do not quietly keep it in a local clone or
+only in the Project docs, and do not tell him "please push this from a session that can". Name the repo and what you want to push.
+Re-read this rule at the start of every session, together with RULE 1 (everything is pushed the same session it happens).

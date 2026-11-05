@@ -3,6 +3,20 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Props v1b at FanDuel openers goes PROVISIONAL from Nov 6 (NBA) [DECISION]
+- Question: Jeffrey (Nov 5): "Find the exploits, and make money" after the clean opener re-test passed.
+- Data / method: rule and evidence in the research/PROVISIONAL_BETS.md registry row; params data/props_v1b_open_params.json; code
+  props_shadow.py `live` (FanDuel lines every 30 min, today + tomorrow; alerts 6 AM-8 PM ET).
+- Rule: FanDuel, still at FanDuel's opener (line unchanged, price within 5 cents), opener first seen 4h+ before tip and within the last
+  40 min by a run that had a run <= 45 min before it, line >= 0.5, EV >= 5% at both the opening and current price, no April, no result
+  from the opener's own day in the features, prices 100-1000.
+- Fable code review (research/props/reviews/FABLE_REVIEW_PROPS_LIVE_CODE_2026-11-05.md): 5 must-fix items (log_bet prop columns saved
+  after the write; NaN prices could alert; first row in a file isn't proof of an opener; "still unmoved at 6 AM" isn't the tested bet;
+  missing timing guard). All fixed before the first alert. Consequence of fix 4: openers FanDuel posts overnight (8 PM-6 AM) are not alerted.
+- Read: expected ~+4% ROI on the 4h+ FanDuel slice (~2 bets/day); out-of-sample but concentrated at FanDuel.
+- Decision: live from Nov 6 as PROVISIONAL (Jeffrey). Pending his answer: add FanDuel openers posted <4h before tip as a separate
+  PROVISIONAL tier (test seasons 241 bets +53.7u, CLV ~0, 55% of it one 2023-24 slice).
+
 ## 2026-11-05: Market models step 4, blend of v4 + market + expected move (NBA totals) [TEST] [DECISION]
 - Question: does a blend of our live totals model (v4) with DK's line plus its expected move beat v4 alone on CLV per bet?
 - Data / method: pre-registered (research/market_models/STEP4_BLEND_PREREG.md, c0f08c4). v4 walk-forward preds 2023-26

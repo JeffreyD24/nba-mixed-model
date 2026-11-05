@@ -1,0 +1,5 @@
+1657 of 1657 NBA v4 bets (edge 3+, 2023-26) matched to multi-book snapshots at DK's opener (+60 min for other books)
+  DK only             +112.7u  ROI +6.8%  better than DK on 0% of bets   24:+32.6 25:+30.1 26:+50.0
+  CT: DK + FanDuel    +122.7u  ROI +7.4%  better than DK on 25% of bets   24:+40.3 25:+32.0 26:+50.4
+  5 US books          +126.8u  ROI +7.7%  better than DK on 34% of bets   24:+44.0 25:+32.2 26:+50.6
+  gain per season from DK+FD shopping: +3.3u; 5 books: +4.7u

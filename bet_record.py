@@ -38,11 +38,13 @@ def main():
     try:
         A = pd.read_csv(os.path.join(STATE, "alerts.csv"))
         if "tier" in A:
-            P = A[(A.tier.astype(str) == "provisional") & (A.verdict.astype(str) == "BET")]
-            pk = {(str(r.date), r.home, r.away, r.market, (r.home if r.side == "home" else r.away) if r.market == "spread" else r.side)
-                  for r in P.itertuples()}
-            prov = [(str(r.date), r.home, r.away, r.market, str(r.pick).lower()) in pk for r in B.itertuples()]
-            B.loc[prov, "version"] = "PROVISIONAL: NBA spread injury-news bets"
+            for tier_, vname in (("provisional", "PROVISIONAL: NBA spread injury-news bets"),
+                                 ("provisional_totals", "PROVISIONAL: NBA totals 2.5-3 pt edges")):
+                P = A[(A.tier.astype(str) == tier_) & (A.verdict.astype(str) == "BET")]
+                pk = {(str(r.date), r.home, r.away, r.market, (r.home if r.side == "home" else r.away) if r.market == "spread" else r.side)
+                      for r in P.itertuples()}
+                prov = [(str(r.date), r.home, r.away, r.market, str(r.pick).lower()) in pk for r in B.itertuples()]
+                B.loc[prov, "version"] = vname
     except Exception as ex:
         print("provisional tagging skipped:", type(ex).__name__, str(ex)[:100])
     B["status"] = np.where(B.result.isin(["W", "L", "P"]), B.result, "pending")

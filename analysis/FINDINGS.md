@@ -3,6 +3,23 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Props v1b at the OPENING line, past seasons (NBA) [TEST] [LEAD]
+- Question: v1b's 11 AM profit was model-driven but vanished at the close. Is it an early-market edge? Test at the opener on past
+  seasons (RULE 2), pre-registered: research/props/PROPS_V1B_OPENER_PREREG_2026-11-05.md (commit a3da8f3).
+- Data / method: BettingPros openers (each prop's first line + price + book + time, both sides), DK/FD openers only, posted 1h+ before
+  tip, player's previous game on an earlier day than the opener. Blend weight w fit on 2022-23; TEST 2023-24, 2024-25. EV >= 5% at
+  the opening price. analysis/props_v1b_opener.py, output analysis/props_v1b_opener_output.txt, bets props_v1b_opener_bets.csv.gz.
+- Run 1 (kept: props_v1b_opener_output_run1_buggy.txt) was degenerate: 2022-23 features had no prior season (features() never loaded
+  2021-22), so the fit season's model was poor (w 0.09, 79 bets); and a few placeholder opener prices (e.g. -10000) existed. Fixed both
+  (load 2021-22 as prior only; drop |price| < 100 or > 1000). The 2023-24+ features are unchanged by the fix.
+- Result (run 2): w 0.202. 2022-23 fit 1,048 bets +19.1u (+1.8%); TEST 2023-24 1,147 bets +67.2u (+5.9% [+1.1, +10.7]);
+  TEST 2024-25 506 bets +18.5u (+3.7%); pooled test 1,653 bets +85.7u, ROI +5.2% [+1.2, +9.4]; 2025-26 (descr.) +36.5u (+4.0%).
+  Closing-line EV raw −1.96%, lean-adjusted (leave-one-season-out over-lean) +0.41%. No-model rule: 0 bets; all unders at openers
+  −4.64%. All three pre-registered checks pass. FanDuel openers +78.5u (+9.3%) vs DraftKings +7.2u (+0.9%); 95% unders.
+- Read: out-of-sample, two unseen seasons positive, consistent with the 11 AM result: an early-market edge, mostly FanDuel unders.
+  Caveat: two bug fixes made after run 1 (documented above); CLV only clears 0 after the over-lean adjustment.
+- Decision: pending the Fable review; then Jeffrey decides on a PROVISIONAL record. Nothing live yet.
+
 ## 2026-11-05: NBA props — past prop lines found; unders rule; props v2; v1b timing [TEST] [DATA] [DECISION]
 - Data: free past prop lines from BettingPros' public web API, Dec 2021 – Nov 2026 (closes per book + opener; 2.6M book-lines),
   `data/props_history/bettingpros/`; sources searched and ruled out: research in claude/prop_history_sources_2026-11-05.md (Project).

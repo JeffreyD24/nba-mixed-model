@@ -1093,3 +1093,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 01:50:51,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,event,moneyline,away,0.0,225,normal
 2026-11-05 01:50:51,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,event,spread,home,-7.5,-110,normal
 2026-11-05 01:50:51,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,event,spread,away,7.5,-110,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Consensus,event,total,under,235.5,-111,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,event,moneyline,away,0.0,220,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,event,moneyline,away,0.0,228,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondhalf,spread,home,-2.5,-110,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondhalf,spread,away,2.5,-120,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,thirdquarter,spread,home,-1.5,-115,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,thirdquarter,spread,away,1.5,-115,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondquarter,total,under,61.5,-125,normal
+2026-11-05 01:52:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondquarter,total,over,61.5,-105,normal
+2026-11-05 01:55:51,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,event,moneyline,home,0.0,-285,normal

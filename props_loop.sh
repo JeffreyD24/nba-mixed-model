@@ -5,7 +5,7 @@ set -u
 git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
 START=$(date +%s); LIMIT=${LOOP_SECONDS:-3000}; EVERY=${PROPS_EVERY:-120}
 save() {
-  git add research/props_fd state/props_live.csv state/props_fd_runs.csv 2>/dev/null || true
+  for f in research/props_fd state/props_live.csv state/props_fd_runs.csv; do if [ -e "$f" ]; then git add "$f"; fi; done   # one missing path made 'git add' add nothing
   git diff --cached --quiet && return 0
   git commit -q -m "Props lines $(TZ=America/New_York date '+%F %H:%M')"
   for i in 1 2 3 4; do

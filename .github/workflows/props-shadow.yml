@@ -42,7 +42,7 @@ jobs:
             python props_shadow.py . grade || echo "grade failed"
             python props_shadow.py . pick || echo "pick failed"
           fi
-          git add state/props_shadow.csv state/props_live.csv state/props_daily_done.txt state/my_bets.csv data/player_stats 2>/dev/null || true
+          for f in state/props_shadow.csv state/props_live.csv state/props_daily_done.txt state/my_bets.csv data/player_stats; do if [ -e "$f" ]; then git add "$f"; fi; done
           if git diff --cached --quiet; then exit 0; fi
           git commit -q -m "Props $(TZ=America/New_York date '+%Y-%m-%d %H:%M')"
           for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push -q origin main && break; sleep 8; done

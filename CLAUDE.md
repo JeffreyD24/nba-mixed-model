@@ -55,4 +55,16 @@ entry for every test/finding/idea from the session, and everything is pushed. Te
 ## Other standing rules
 - Only bets at (or near) the opening price are real bets; the backtests only made money there.
 - A new rule or model version starts a new record; old versions are never re-graded under new rules.
-- Thresholds chosen on the same seasons they're reported on are in-sample: say so, and re-test on the next season.
+- Thresholds chosen on the same seasons they're reported on are in-sample: say so, and test them right away on seasons they
+  were NOT chosen on (see RULE 2).
+
+## RULE 2: The current season is NOT a test season (Jeffrey, Nov 5, 2026)
+
+Never answer "can we test this?" with "wait for this season's results". Every idea is tested **now, on past seasons**, using
+whatever honest out-of-sample design the data allows, before anyone suggests waiting:
+1. Older seasons the rule was not chosen on (SportsbookReview 2011-2021 in `nhl-mixed-model/data/external/sbr` and the other
+   repos' `data/external`; hockeyR xG and goalies for the NHL).
+2. Leave-one-season-out: choose the rule on the other seasons, grade the held-out one, repeat for every season.
+3. Reconstructed or approximate inputs (e.g. a price rebuilt from another market), clearly labeled as approximate.
+Only if NONE of these is possible may the current season be used, and then say exactly why past seasons can't answer it and
+record that reason in FINDINGS.md. The live season's own TEST rows are a running check, not the test.

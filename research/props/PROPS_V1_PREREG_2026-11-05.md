@@ -50,3 +50,11 @@ are close). That would squash every points probability toward 50%. So:
   squared errors (no prop data), plugged into a negative binomial with r(μ) = μ² / ((a − 1)·μ + b·μ²) (Poisson if that is ≤ 0).
   Its blend weight is fit on 2024-25 the same way. v1b has the same pass rule. If both pass, v1b is preferred (better-specified);
   if only one passes, that one. Reporting both is the price of having caught this after writing the plan.
+
+## Amendment 2 (Nov 5, 2026, ~07:45 ET) — written BEFORE any prop result was computed
+The 2024-25 prop download was lost: a queued workflow run started from a stale commit, re-downloaded 2025-26 dates, hit merge
+conflicts and could not push its 2024-25 files (fixed in the workflows: each run now starts from the newest main). The credits are
+spent (about 9k left), so there is no 2024-25 season of lines. The split becomes:
+- **FIT (blend weight w only): 2025-10-21 .. 2026-01-15. TEST: 2026-01-16 .. 2026-04-12.** Everything else unchanged.
+- Within-season split is weaker than a season split (same players, same book behavior); results get a matching caveat, and anything
+  that passes still goes live only as PROVISIONAL.

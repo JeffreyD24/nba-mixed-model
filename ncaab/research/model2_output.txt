@@ -1,0 +1,20 @@
+tuning-season error (2009-11): M1 margin MSE 117.4 total MSE 295.3, M2 margin MSE 117.4 total MSE 295.4, M4 margin MSE 117.6 total MSE 296.2, M8 margin MSE 116.4 total MSE 295.7, M10 margin MSE 116.4 total MSE 299.4 -> stack base M8
+stack spread coefficients (all, x conf game, x both power, x Nov-Dec non-conf) by season fitted: [0.035, 0.073, -0.036, -0.039] (for 2016), [0.221, 0.298, -0.219, 0.008] (for 2022)
+stack total coefficients (all, x conf game, x both power, x Nov-Dec non-conf) by season fitted: [0.407, 0.541, -0.443, 0.051] (for 2016), [0.488, 0.417, -0.475, -0.087] (for 2022)
+
+===== SPREAD  break-even CLV 0.63  | books' numbers as predictors, test 2016-21: opener RMSE 11.45, close RMSE 11.33
+  M1     no threshold reached break-even CLV in 2012-15 -> FAIL
+  M2     no threshold reached break-even CLV in 2012-15 -> FAIL
+  M4     no threshold reached break-even CLV in 2012-15 -> FAIL
+  M8     no threshold reached break-even CLV in 2012-15 -> FAIL
+  M10    no threshold reached break-even CLV in 2012-15 -> FAIL
+  STACK  no threshold reached break-even CLV in 2012-15 -> FAIL
+
+===== TOTAL  break-even CLV 1.02  | books' numbers as predictors, test 2016-21: opener RMSE 17.30, close RMSE 17.10
+  M1     no threshold reached break-even CLV in 2012-15 -> FAIL
+  M2     thr 6    TEST  1439 bets 57.9% open  +149.0u CLV +1.77 [+1.59] close   +42.2u (+2.9%) | RMSE 17.38 beat-close slope +0.120 (t +3.6) capture 23% | seasons 16:+29 17:+20 18:+53 19:+29 20:+32 21:-13 || DK-own-opener 2024-26: 1047 bets 52.8% +7.9u CLV +1.25
+  M4     no threshold reached break-even CLV in 2012-15 -> FAIL
+  M8     thr 6    TEST  2653 bets 56.7% open  +214.9u CLV +1.64 [+1.51] close   +64.3u (+2.4%) | RMSE 17.38 beat-close slope +0.137 (t +4.4) capture 20% | seasons 16:+27 17:+57 18:+30 19:+58 20:+50 21:-6 || DK-own-opener 2024-26: 1725 bets 53.5% +35.4u CLV +1.02
+  M10    no threshold reached break-even CLV in 2012-15 -> FAIL
+  STACK  no threshold reached break-even CLV in 2012-15 -> FAIL
+  WINNER M2 -> PASS -> PROVISIONAL after Fable review (CLV +1.77 vs 1.02, low +1.59, open +149.0u, close ROI +2.9%, DK opener +7.9u CLV +1.25)

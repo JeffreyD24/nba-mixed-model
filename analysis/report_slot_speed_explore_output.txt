@@ -1,0 +1,12 @@
+|N|>=1.0 at just before report: 1818 bets, CLV +0.58, -35.4u (-1.9%), win 51.3% | by season {2022: -19.5, 2023: -21.8, 2024: -3.2, 2025: 5.1, 2026: 4.1}
+|N|>=1.0 at ~26 min after  : 1818 bets, CLV +0.10, -87.9u (-4.8%), win 49.8% | by season {2022: -23.6, 2023: -43.9, 2024: -13.6, 2025: -5.1, 2026: -1.6}
+    daytime reports (before 6 PM), before the report: 1007 bets, CLV +0.66, +2.9u (+0.3%)
+    evening (6 PM+), before the report: 811 bets, CLV +0.48, -38.3u (-4.7%)
+|N|>=1.5 at just before report: 1090 bets, CLV +0.86, +2.1u (+0.2%), win 52.5% | by season {2022: -5.5, 2023: -11.9, 2024: -13.6, 2025: 15.7, 2026: 17.5}
+|N|>=1.5 at ~26 min after  : 1090 bets, CLV +0.19, -41.0u (-3.8%), win 50.4% | by season {2022: -5.7, 2023: -29.2, 2024: -22.3, 2025: 0.6, 2026: 15.5}
+    daytime reports (before 6 PM), before the report: 607 bets, CLV +1.00, +8.5u (+1.4%)
+    evening (6 PM+), before the report: 483 bets, CLV +0.68, -6.4u (-1.3%)
+|N|>=2.0 at just before report: 688 bets, CLV +1.00, +12.4u (+1.8%), win 53.3% | by season {2022: -3.5, 2023: -17.8, 2024: -1.3, 2025: 23.4, 2026: 11.6}
+|N|>=2.0 at ~26 min after  : 688 bets, CLV +0.21, -18.2u (-2.6%), win 51.0% | by season {2022: -5.5, 2023: -30.3, 2024: -5.1, 2025: 14.9, 2026: 7.8}
+    daytime reports (before 6 PM), before the report: 382 bets, CLV +1.17, +27.0u (+7.1%)
+    evening (6 PM+), before the report: 306 bets, CLV +0.79, -14.6u (-4.8%)

@@ -9,8 +9,12 @@
 - **How to re-run:** edit `REQUEST.txt` (seasons line) and push, or dispatch `injury-history.yml`.
 - **Parser:** `parse_injury_reports.py` (same one the live tracker uses).
 
-## Quality problems (filled in after the run)
-_pending_
+## Quality problems
+- The NBA CDN throttles fast scrapers with 403s (the first attempt got 26 files for 2021-22). The downloader now uses 3 threads, a short
+  pause, and a "canary" file to tell throttling from missing files.
+- File names: `HHPM` hourly 2021-25 (report stamped HH:30); 2025-26 also `HH_MMPM` every 15 min. ~2 missing names a season.
+- Files per season: 3,133 / 3,114 / 3,027 / 3,095 / 8,917 (2021-22 .. 2025-26); `as_of` parsed for 100%; player-name match to box scores 98.8%.
 
 ## Personal note and takeaways
-_pending (written once the run is checked)_
+- First use: `research/spreads/REPORT_SLOT_RESULTS.md`. DraftKings prices a daytime report's news mostly within ~26 minutes.
+- Every report since 2021-22 now sits in the repo, so injury questions no longer need the live season to fill up first.

@@ -20,6 +20,22 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
   research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
 
+## 2026-11-05: Free replacements for the paid Pinnacle feed; Polymarket wallet data confirmed (all sports) [TEST] [DECISION] [IDEA]
+- Question (Jeffrey): stop paying for The Odds API (pinnacle_watch.py, ~2,600 credits a day) and track sharp prices another way.
+- Data / method: probes from this workspace and a GitHub runner (`.github/workflows/probe-free-sharp.yml`).
+- Result: (1) Action Network v1 scoreboard returns LIVE BetOnline and Bovada lines (with timestamps) for NCAA basketball; NBA/NHL only retail
+  books; no Pinnacle or Circa anywhere on Action Network. (2) Kalshi public API (no key): game markets for NBA, NHL, NFL, NCAAM, NCAAF and NBA
+  spread / total ladders, live bid / ask, every trade timestamped (no identities). (3) Polymarket data API v2 (`/v2/trades`): every trade with
+  proxy_wallet, size, price, time, market title; `/sports` lists each league's game-market series. v1 is retired. (4) Pinnacle's own website
+  feed is not used: automated access to it is likely against Pinnacle's terms.
+- Read: Kalshi (prices) and Polymarket (prices + wallets) are free, legal-to-read markets set by traders, including sharp ones. Whether they are as
+  sharp as Pinnacle is untested.
+- Decision: build free recorders (Kalshi + Polymarket + BetOnline for college); test Kalshi/Polymarket vs Pinnacle on past seasons using the
+  Pinnacle history already downloaded (no new spend); then move the live Pinnacle uses (NHL "Pinnacle disagrees" rule, NBA notes) over and
+  stop paying. Timing of the cutover: Jeffrey.
+- [IDEA] Polymarket whale tracking: rank wallets by profit and by beating Polymarket's own closing price in past sports markets; follow the
+  consistently sharp ones live. End goal per Jeffrey: profit on Polymarket.
+
 ## 2026-11-05: Sharp money: where it goes, does it beat the close, and does it disagree with our models (all sports) [TEST] [CORRELATION] [LEAD] [DECISION]
 - Question (Jeffrey): track where and when the money is bet, follow the sharps, and see what their models pick up that ours don't.
 - Data / method: Action Network archive splits (% bets, % money, bet counts) for 61,980 games 2019-26, five leagues; signals fixed in advance

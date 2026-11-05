@@ -90,3 +90,5 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - [ ] Early-money warning: once the live tracker has history, does a money gap >= 10 against our bet seen BEFORE the line moves predict our losers? (Lead: NBA totals v4 sharp-disagree 197 bets 49.7%.)
 - [ ] Steam and reverse line moves from live data: which books move first, and how much of DK's move follows.
 - [ ] Polymarket: follow large, historically profitable wallets in sports markets (public trade history with wallet ids).
+- [ ] Replace the paid Pinnacle feed: record Kalshi + Polymarket + BetOnline (college) free; test their accuracy vs Pinnacle on past seasons with the saved Pinnacle history; then cut over the live Pinnacle uses.
+- [ ] Polymarket wallets (data API v2): pull past sports trades, rank wallets by profit and closing-price edge, test following them out of sample.

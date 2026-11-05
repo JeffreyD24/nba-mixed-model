@@ -3,6 +3,19 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Can a results-only model ever beat the closing line's accuracy? (NCAAM, all sports) [OBSERVATION] [DECISION]
+- Question (Jeffrey): if we keep building models with new weights, will we get more accurate than DraftKings at the close?
+- Evidence: 10+ NCAAM model variants (Model 1, M2, M4, M8, M10, MKT, ENS, stacks) across 2007-26: the closing line is the most accurate
+  predictor in every season. TEST 2025-26 spread RMSE: best model ENS 11.47, DK opener 11.27, DK close 11.22 (totals 17.24 / 17.18 / 16.96).
+- Read: a model built only from past scores uses a subset of the information already in the close (scores, form) and lacks the rest
+  (injury and lineup news, sharp money). Better weights approach the close, never pass it. Both errors are mostly irreducible game noise
+  (~11 pts on a college spread), so the real gap is small and the target is the "excess error" above that noise.
+- Decision (Jeffrey + Claude): (1) build the best possible base model, which must include the market (our ratings blended with opener /
+  Pinnacle / line movement); (2) add information the close lacks or gets late: player lineups and minutes (from ESPN box scores), inferred
+  injuries (college has no official reports: absences show in minutes), travel and rest; (3) measure every step on accuracy vs the close
+  and the beat-the-close slope. Box score backfill 2007-27 started (`ncaab/espn_boxscores.py`, workflow `ncaab-box.yml`).
+- [IDEA] Inferred injuries: a player whose minutes drop to 0 without news is information books react to late; test once the box data lands.
+
 ## 2026-11-05: Record-everything rule (all sports) [DECISION]
 - Jeffrey: every test and every inference, lead, association, correlation, causal claim and idea gets saved in an organized way.
 - Decision: `CLAUDE.md` added to nba/nhl/nfl-mixed-model (loaded at the start of every session in those repos) with the rule, where

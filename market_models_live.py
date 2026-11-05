@@ -255,6 +255,22 @@ def fd_extra(r, side, dk_line):
         return {}
 
 
+def dk_confirmed(date, home, away, line):
+    """True when ESPN's DraftKings feed shows the same total Action Network's DraftKings quote does. Nov 5, 2026: Action Network's
+    DraftKings line for POR @ LAL (238.5, unchanged since Nov 3) and PHI @ CLE (234.5, 4 pts above every other book) was not on DraftKings'
+    app; ESPN's DraftKings feed had nothing for either game. Such a line is not a bet, so no alert or reminder until ESPN agrees."""
+    try:
+        import espn
+        if date not in _DK: _DK[date] = espn.lines([date], when=("current",))
+        L = _DK[date]
+        row = L[(L.home == home) & (L.away == away)] if len(L) and "home" in L else L.iloc[0:0]
+        if not len(row): return False
+        r = row.iloc[0]
+        return "draftkings" in str(r.get("book", "")).lower() and abs(float(r.get("current_total")) - float(line)) < 0.01
+    except Exception as ex:
+        print("[market models] DraftKings confirmation failed:", type(ex).__name__, str(ex)[:80]); return False
+
+
 def check():
     up = os.path.join(SD, "upcoming.csv")
     om_path = os.path.join(SD, "opener_model.json")
@@ -308,7 +324,7 @@ def check():
     import alert as AL                                             # notify(), reminder spacing, price cap, FanDuel compare
     fanduel = AL.fanduel
     for r in P.itertuples():
-        if r.key in set(A.key): continue
+        if r.key in set(A[~A.skip_reason.astype(str).str.startswith('DraftKings line not confirmed')].key): continue   # unconfirmed ones retry
         if abs(r.pred) < BET_MOVE: continue
         side = "over" if r.pred > 0 else "under"
         px = r.price_o if side == "over" else r.price_u
@@ -318,6 +334,7 @@ def check():
         v4 = v4_alert(r.date, r.home, r.away)
         if v4 and v4[0] != side: skip = f"conflict: main totals model has a BET on {v4[0].upper()} {v4[1]:g}"
         elif v4: skip = f"same side as the main totals model's BET ({v4[0].upper()} {v4[1]:g}); not sent twice"
+        elif not dk_confirmed(r.date, r.home, r.away, r.dk_now): skip = "DraftKings line not confirmed bettable (ESPN's DraftKings feed has no matching total)"
         fdt, fdl, best = None, None, None
         try:
             fdt, fdl, best = fanduel.compare("nba", r.date, r.home, r.away, "total", side, float(r.dk_now), px, label=side,
@@ -352,6 +369,7 @@ def check():
                    snap_et=str(r.snap)[:19], lead_h=round(r.lead_now, 2), side=side, line=r.dk_now, price=px, pred_move=round(r.pred, 2),
                    dk_first_seen=r.dk_open_point, opener_pred=round(r.dk_opred, 2), pin_now=np.nan, fd_now=r.pt_fanduel,
                    fd_line_txt=(fdt or "")[:200], pushed=bool(sent), skip_reason=skip, tier=TIER)
+        A = A[~((A.key == r.key) & A.skip_reason.astype(str).str.startswith('DraftKings line not confirmed'))]   # replace the earlier unconfirmed row
         A = pd.concat([A, pd.DataFrame([row])], ignore_index=True); changed = True
         p(("SENT " if sent else "RECORDED ") + f"{what} {Aw} @ {H} | predicted move {r.pred:+.2f}" + (f" | {skip}" if skip else ""))
 
@@ -367,6 +385,7 @@ def check():
             if NOW < pd.Timestamp(r.date) - pd.Timedelta(hours=3): continue          # before 9 PM ET the night before
             v4 = v4_now(r.date, r.home, r.away)
             if v4 is None: continue                                                 # wait for the live model's number
+            if not dk_confirmed(r.date, r.home, r.away, r.dk_now): continue         # Nov 5, 2026: not bettable at DraftKings yet; decide when it is
             fair = bw["a"] + bw["w_v4"] * v4 + bw["w_mkt_exp_close"] * (r.dk_now + r.pred)
             edge = fair - r.dk_now; side = "over" if edge > 0 else "under"
             px = r.price_o if side == "over" else r.price_u
@@ -431,6 +450,7 @@ def check():
                 B.loc[i, "stopped_at_et"] = str(NOW)[:16]; bchanged = True; continue
             # reminder while the edge AT TODAY'S LINE is still 2+ (a 9 PM alert slept through still gets a 6 AM reminder, at the new line)
             if e_side < 2.0 or not (AL.REMIND_HOURS[0] <= NOW.hour < AL.REMIND_HOURS[1]): continue
+            if not dk_confirmed(r.date, r.home, r.away, q.dk_now): continue
             lastr = r.reminded_at_et if isinstance(r.reminded_at_et, str) else r.alerted_at_et
             if (NOW - pd.Timestamp(lastr)).total_seconds() / 60 < AL.remind_gap_min(r.tip_et, NOW): continue
             AL.notify(f"REMINDER - BET {str(r.side).upper()} {q.dk_now:g} (PROVISIONAL blend): {Aw} @ {H}",
@@ -461,6 +481,7 @@ def check():
             A.loc[i, "stopped_at_et"] = str(NOW)[:16]; changed = True; p("DON'T BET:", what, Aw, "@", H); continue
         worse = (cur > float(r.line)) if r.side == "over" else (cur < float(r.line))
         if mv < REMIND_MOVE or worse: continue
+        if not dk_confirmed(r.date, r.home, r.away, cur): continue                 # Nov 5, 2026: no reminder for a line DraftKings doesn't offer
         if not (AL.REMIND_HOURS[0] <= NOW.hour < AL.REMIND_HOURS[1]): continue
         lastr = r.reminded_at_et if isinstance(r.reminded_at_et, str) else r.alerted_at_et
         if (NOW - pd.Timestamp(lastr)).total_seconds() / 60 < AL.remind_gap_min(r.tip_et, NOW): continue

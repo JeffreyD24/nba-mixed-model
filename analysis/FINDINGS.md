@@ -3,6 +3,21 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Movement / blend alerts fired on DraftKings lines that were not bettable (NBA) [OBSERVATION] [DECISION]
+- Question: Jeffrey got PROVISIONAL movement BETs for POR @ LAL (UNDER 238.5) and PHI @ CLE (UNDER 234.5) but DraftKings did not offer either game.
+- Data: Action Network feed at 5:31 PM Nov 5. LAL-POR: only DraftKings + "Open" quoted 238.5, no other book; DraftKings first seen Nov 3
+  7:30 PM at 238.5, unchanged for ~46 h. CLE-PHI: DraftKings 234.5 (first seen Nov 3 7:30 PM, unchanged) vs FanDuel 230.5, BetRivers 230.5,
+  Caesars 229.5; Jeffrey confirmed FanDuel's 76ers total is 230.5 and DraftKings has neither game. ESPN's DraftKings feed had no line for either.
+- Read: the feed's DraftKings number is a stale / not-offered quote. The movement model reads the 4-pt gap to the other books (cons_gap -4) as
+  "DraftKings will move down", which is a real signal only if the line can be bet. Evidence is these two games plus the three that were
+  bettable (NO-MIN, SAC-SA, MIL-TOR: ESPN confirms DraftKings); not tested on past seasons (no history of whether a quote was offered).
+  Also: the 4 AM-8 PM 5-minute reminders added earlier today would have repeated these two unbettable alerts.
+- Decision (Jeffrey's report, Nov 5): `dk_confirmed()` in market_models_live.py: movement and blend BETs and all their reminders require
+  ESPN's DraftKings total to equal Action Network's DraftKings total. Unconfirmed movement alerts are recorded with a skip reason and retried each
+  check (replaced when confirmed); unconfirmed blend decisions are deferred. The two alerts already sent stay in the file; their reminders pause
+  until DraftKings confirms. Idea (not done): same check on the main model's alerts; ESPN can lag DraftKings, so a real line may alert late.
+- Files: market_models_live.py.
+
 ## 2026-11-05: Fast reminders 4 AM-8 PM; DraftKings / FanDuel buttons fixed on movement + blend alerts (NBA) [DECISION] [OBSERVATION]
 - Question: Jeffrey missed two PROVISIONAL movement BETs (UNDER 238.5 POR @ LAL, UNDER 234.5 PHI @ CLE, alerted 4:52 PM Thu for Fri games),
   could not find the Portland game at FanDuel, saw no DraftKings button, and asked for reminders every 5 minutes 4 AM-8 PM until the line

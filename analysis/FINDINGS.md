@@ -3,6 +3,16 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Polymarket and Kalshi history: where it is and what we can get (all sports) [TEST] [LEAD] [DECISION]
+- Question: can we get past Polymarket/Kalshi data, including bet sizes and who bet, to track sharps (Jeffrey's end goal: make money on Polymarket)?
+- Data / method: research agent (docs and repos) plus GitHub-runner probes (`.github/workflows/probe-poly.yml`) and a 3-4-game-per-league test pull with `sharp/exchange_history.py`.
+- Result: Polymarket data-api v2 `/v2/trades?condition=<id>&taker_only=false` returns every fill with wallet, side, size, price, time (both sides of each fill), paged by `pagination.next_cursor`; market-scoped history reaches back about 3 years (2022 college tournament markets return 0 fills). Listings: NBA 2025-26 = series 10345, NHL 10346, NCAAM 10470, NFL 2025 = 10187 (separate "nfl-2025" listing; 12185 is NFL 2026 from preseason), CFB 12756. One NFL game is about 5,000 fills. Kalshi: settled markets before a moving cutoff move to `/historical/*`; candles, trades with sizes (no identities) are free. Free bulk sets: Hugging Face SII-WANGZJ/Polymarket_data (every Polymarket fill with wallets Nov 2022-Oct 4 2026, 37 GB, query remotely) and jon-becker/prediction-market-analysis (Kalshi trades, 36 GB). Old Polymarket subgraphs are unreliable since the Apr 28, 2026 contract change; data-api v1 retired Oct 24, 2026.
+- Read: wallet-level Polymarket history for the full 2025-26 NBA/NHL/NCAAM seasons and the 2025 NFL season is available for free, enough for an honest rank-then-follow test. Kalshi's Developer Agreement (sec. 3.1) only allows storing data for your own Kalshi trading and bars sharing it, so Kalshi data must not sit in a public repo.
+- Decision: Kalshi test files removed from the public nba repo (Claude, Nov 5); all three model repos are public, so the full Polymarket + Kalshi download waits for a private repo (Jeffrey to create; he asked for private storage). Wallet rankings (profit, ROI, accuracy, CLV) built in `sharp/wallet_rankings.py`; follow test pre-registered in `sharp/POLY_WALLETS_PREREG_2026-11-05.md` before the full download.
+- Files: sharp/exchange_history.py, .github/workflows/exchange-history.yml, .github/workflows/probe-poly.yml, sharp/wallet_rankings.py, sharp/POLY_WALLETS_PREREG_2026-11-05.md.
+
+## 2026-11-05: [LEAD] Polymarket sharp-wallet follow test is pre-registered; run once the full trade history is downloaded (rank before Jan 15 2026, follow after; NFL split Nov 15 2025).
+
 ## 2026-11-05: Props v1b at FanDuel openers goes PROVISIONAL from Nov 6 (NBA) [DECISION]
 - Question: Jeffrey (Nov 5): "Find the exploits, and make money" after the clean opener re-test passed.
 - Data / method: rule and evidence in the research/PROVISIONAL_BETS.md registry row; params data/props_v1b_open_params.json; code

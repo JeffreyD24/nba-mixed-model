@@ -230,3 +230,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 17:40:59,295190,2026-11-06,2026-11-06 19:30,phi,cle,DraftKings,event,total,over,230.5,-110,normal
 2026-11-05 17:45:53,295190,2026-11-06,2026-11-06 19:30,phi,cle,Caesars,event,moneyline,away,0.0,-135,normal
 2026-11-05 17:45:53,295190,2026-11-06,2026-11-06 19:30,phi,cle,Caesars,event,moneyline,home,0.0,115,normal
+2026-11-05 17:49:48,295190,2026-11-06,2026-11-06 19:30,phi,cle,Consensus,event,moneyline,home,0.0,111,normal
+2026-11-05 17:49:48,295190,2026-11-06,2026-11-06 19:30,phi,cle,Consensus,event,moneyline,away,0.0,-131,normal
+2026-11-05 17:49:48,295190,2026-11-06,2026-11-06 19:30,phi,cle,Consensus,event,spread,home,1.5,-110,normal
+2026-11-05 17:49:48,295190,2026-11-06,2026-11-06 19:30,phi,cle,Consensus,event,spread,away,-1.5,-110,normal
+2026-11-05 17:49:48,295190,2026-11-06,2026-11-06 19:30,phi,cle,Consensus,event,total,under,230.5,-110,normal
+2026-11-05 17:49:48,295190,2026-11-06,2026-11-06 19:30,phi,cle,Consensus,event,total,over,230.5,-110,normal
+2026-11-05 17:49:48,295191,2026-11-06,2026-11-06 20:00,tor,mil,Consensus,event,moneyline,home,0.0,190,normal
+2026-11-05 17:49:48,295191,2026-11-06,2026-11-06 20:00,tor,mil,Consensus,event,moneyline,away,0.0,-230,normal
+2026-11-05 17:49:48,295191,2026-11-06,2026-11-06 20:00,tor,mil,Consensus,event,spread,home,7.0,-111,normal
+2026-11-05 17:49:48,295191,2026-11-06,2026-11-06 20:00,tor,mil,Consensus,event,spread,away,-7.0,-109,normal

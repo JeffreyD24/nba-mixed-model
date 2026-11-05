@@ -10131,3 +10131,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 17:45:53,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,thirdquarter,spread,home,-1.5,120,normal
 2026-11-05 17:45:53,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,spread,home,-1.5,105,normal
 2026-11-05 17:45:53,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,spread,away,1.5,-135,normal
+2026-11-05 17:47:19,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,total,over,108.5,-110,normal
+2026-11-05 17:47:19,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,total,under,108.5,-120,normal
+2026-11-05 17:48:33,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,total,over,107.5,-120,normal
+2026-11-05 17:48:33,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondhalf,total,under,107.5,-110,normal
+2026-11-05 17:49:48,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,secondquarter,spread,home,-0.5,-106,normal
+2026-11-05 17:49:48,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,total,under,222.5,-106,normal
+2026-11-05 17:49:48,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,fourthquarter,moneyline,home,0.0,-115,normal
+2026-11-05 17:49:48,295389,2026-11-05,2026-11-05 22:00,mia,gs,Consensus,event,moneyline,home,0.0,-160,normal

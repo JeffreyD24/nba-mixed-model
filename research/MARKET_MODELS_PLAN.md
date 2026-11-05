@@ -27,7 +27,7 @@ us, wait (bail-out and timing logic already exist to reuse).
 
 ## Step plan
 1. ~~Data audit: which books and seasons have opening and closing totals~~ (done Nov 5, below)
-2. Opener model for DraftKings and Pinnacle totals (features: prior totals, team pace and efficiency, rest, travel, injuries known at open, previous opener errors)
+2. ~~Opener model for DraftKings and Pinnacle totals~~ (done Nov 5: residual predicts movement, not results; pre-registered bet failed, see `research/market_models/STEP2_OPENER_RESULTS.md`). Was: (features: prior totals, team pace and efficiency, rest, travel, injuries known at open, previous opener errors)
 3. Movement model (features: line gap between books at that moment, time to tip, betting splits, injury news since open, our model's edge)
 4. Blend on 2021-22 to 2024-25, tested on 2025-26
 5. Pre-register the combined bet rule, backtest, then run it as a side-by-side record next to v4 in 2026-27
@@ -60,3 +60,4 @@ us, wait (bail-out and timing logic already exist to reuse).
 
 ## Status log
 - 2026-11-05: plan written; step 1 data audit done (see above). Next: step 2, opener models.
+- 2026-11-05: step 2 done. Mixed opener model predicts DK/Pinnacle/FanDuel first-seen totals within 2.4-2.5 pts (2025-26). Pre-registered residual bet failed (2025-26: 381 bets, CLV +1.00 vs break-even +1.07, -18.5u; 2024-25 was +2.12 CLV, +33u). Residual predicts line movement in both seasons, so it becomes a step-3 input. Next: step 3, movement model, same-moment book comparisons.

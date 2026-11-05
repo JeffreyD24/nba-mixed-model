@@ -32,3 +32,9 @@ T5 neither team power conference · T6 conference game.
 - **Holdout: 2018-19..2025-26.** PASS = same direction, cover rate betting that direction >= 52.4% (pays -110), one-sided z >= 1.65,
   and the 2023-26 DraftKings seasons not below 50%. PASS -> a PROVISIONAL candidate (Fable review first); FAIL -> recorded, dropped.
 - Descriptive only (decides nothing): Model 1's error vs the close by group (2022-26), and Model 1 bets at DraftKings' own opener by group.
+
+## Addendum (Nov 5, written after the 12 cells, before this test): an honest, no-hindsight version of "teams the market underrates"
+The elite-coach cell passed, but its coach list was written in 2026 (hindsight). Fair version, defined only from information before each season:
+- For season s, rank teams (ESPN location name) by their cover rate vs the close over seasons s-2 and s-1 (min 40 decided games).
+  **U25** = top 25 (market underrated them lately), **O25** = bottom 25 (overrated). Cells: back U25 vs a non-U25 opponent; fade O25 vs a non-O25 opponent.
+- Discovery 2009-10..2017-18; holdout 2018-19..2025-26. Two cells: qualify at |z| >= 2.24 (0.05 split across 2); holdout rule as above.

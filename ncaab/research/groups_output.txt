@@ -1,0 +1,17 @@
+SBR matched to ESPN: 50452 of 51856 unambiguous games (97%)
+games with groups and a close: 75900 spreads, 75999 totals; by season {2008: 3249, 2009: 3196, 2010: 3413, 2011: 3449, 2012: 3330, 2013: 1701, 2014: 3606, 2015: 3642, 2016: 3724, 2017: 3699, 2018: 3782, 2019: 5098, 2020: 4887, 2021: 3676, 2022: 5540, 2023: 5749, 2024: 5763, 2025: 5864, 2026: 5864, 2027: 163}
+
+DISCOVERY 2007-08..2017-18 (|z| >= 2.64 to qualify) -> HOLDOUT 2018-19..2025-26 (same direction, >= 52.4%, z >= 1.65, DK 2023-26 >= 50%)
+cell                                      disc n   rate      z | hold n   rate | DK 23-26 | decision
+S1 ranked vs unranked                       4596  50.9%  +1.27 |   3922  49.2% |  48.4% (1758) | not qualified
+S2 ranked favored by 10+ vs unranked        2413  51.8%  +1.81 |   2078  49.6% |  49.9% (936) | not qualified
+S3 power-conference vs non-power            4753  52.7%  +3.76 |   4721  50.5% |  51.0% (1961) | back: holdout 50.5% z +0.68, DK 51.0% -> FAIL
+S4 powerhouse vs non-powerhouse             3787  53.2%  +3.98 |   3093  50.8% |  51.9% (1216) | back: holdout 50.8% z +0.88, DK 51.9% -> FAIL
+S5 elite-coach team vs others               3268  53.7%  +4.20 |   2676  53.4% |  53.3% (911) | back: holdout 53.4% z +3.48, DK 53.3% -> PASS
+S6 both ranked: home team                    809  51.7%  +0.95 |    535  52.0% |  48.1% (206) | not qualified
+T1 both power conference                    8190  49.3%  -1.28 |   7319  50.4% |  50.4% (3025) | not qualified
+T2 any ranked team                          6157  49.0%  -1.54 |   5077  48.7% |  48.1% (2284) | not qualified
+T3 any powerhouse                           4113  49.7%  -0.36 |   3361  48.8% |  47.4% (1337) | not qualified
+T4 any elite-coach team                     3554  49.0%  -1.14 |   2905  48.7% |  46.2% (988) | not qualified
+T5 neither team power conference           20623  49.8%  -0.61 |  29572  50.3% |  49.8% (12103) | not qualified
+T6 conference game                         22038  50.0%  -0.15 |  26527  50.4% |  49.7% (10754) | not qualified

@@ -35,7 +35,7 @@ jobs:
           git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
           git fetch -q origin main && git checkout -q -B main origin/main
           H=$(TZ=America/New_York date +%H); M=$(TZ=America/New_York date +%M)
-          DONE=$(cat state/props_daily_done.txt 2>/dev/null); D=$(TZ=America/New_York date +%Y-%m-%d)
+          DONE=$(cat state/props_daily_done.txt 2>/dev/null || true); D=$(TZ=America/New_York date +%Y-%m-%d)
           if { [ "$H" -ge "11" ] && [ "$DONE" != "$D" ]; } || [ "${{ github.event_name }}" != "schedule" ]; then
             echo "$D" > state/props_daily_done.txt
             python player_stats_backfill.py . 2027 || echo "box update failed"

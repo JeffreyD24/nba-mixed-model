@@ -98,6 +98,35 @@ def total(sport, date, home, away):
     return float(ov.points.iloc[0]), float(ov.price.iloc[0]), float(un.price.iloc[0])
 
 
+def merge_current(L, sport="nba"):
+    """Replace the current spread / total / prices in a lines frame (ESPN + Action Network merge in alert.py) with DraftKings' own.
+    A game DraftKings has not posted gets NaN current lines (so no alert), line_source 'dkdirect_unposted'. If the direct fetch fails,
+    L comes back unchanged. Spread columns are the HOME spread, as in the ESPN frame."""
+    D = now(sport)
+    if not len(D) or not len(L): return L
+    L = L.copy(); L["line_source"] = L.get("line_source", "espn")
+    cols = ["current_spread", "current_total", "current_home_spread_odds", "current_away_spread_odds", "current_over_odds", "current_under_odds"]
+    for c in cols:
+        if c not in L: L[c] = float("nan")
+        L[c] = L[c].astype(float)
+    for i, r in L.iterrows():
+        g = D[(D.date == str(pd.Timestamp(r["date"]).date())) & (D.home == r["home"]) & (D.away == r["away"])]
+        if not len(g):
+            for c in cols: L.at[i, c] = float("nan")
+            L.at[i, "line_source"] = "dkdirect_unposted"; continue
+        sp, tt = g[g.market == "Spread"], g[g.market == "Total"]
+        h, a = sp[sp.outcome == "Home"], sp[sp.outcome == "Away"]
+        ov, un = tt[tt.outcome == "Over"], tt[tt.outcome == "Under"]
+        L.at[i, "current_spread"] = float(h.points.iloc[0]) if len(h) else float("nan")
+        L.at[i, "current_home_spread_odds"] = float(h.price.iloc[0]) if len(h) else float("nan")
+        L.at[i, "current_away_spread_odds"] = float(a.price.iloc[0]) if len(a) else float("nan")
+        L.at[i, "current_total"] = float(ov.points.iloc[0]) if len(ov) else float("nan")
+        L.at[i, "current_over_odds"] = float(ov.price.iloc[0]) if len(ov) else float("nan")
+        L.at[i, "current_under_odds"] = float(un.price.iloc[0]) if len(un) else float("nan")
+        L.at[i, "line_source"] = "dkdirect"
+    return L
+
+
 def slip_link(sport, date, home, away, side):
     """DraftKings bet-slip link for the full-game Over / Under from the live feed (event id + selection id, the same layout ESPN's links use,
     but never an hour behind). None if DraftKings has not posted the game. Not yet tested by tapping one."""

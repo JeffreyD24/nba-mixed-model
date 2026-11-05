@@ -534,6 +534,10 @@ def main():
 
         L = espn.lines([day], when=("open", "current"))      # DraftKings opening line (and backup current line) from ESPN
         L = actionnet.merge_current(L, day)                     # fresher current DraftKings line from Action Network
+        try:                                                    # Nov 5, 2026: DraftKings' own feed overrides both (Action Network showed lines DraftKings had not posted)
+            import dk_direct
+            L = dk_direct.merge_current(L, "nba")
+        except Exception as e: print("DraftKings direct merge failed:", type(e).__name__, str(e)[:80])
         for g in M["games"]:
             line = L[(L.home == g["home"]) & (L.away == g["away"])] if len(L) else L
             if len(line): SRC[g["game_id"]] = line.iloc[0].get("line_source")

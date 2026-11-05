@@ -90,9 +90,10 @@ Files over ~50 MB compressed: ask Jeffrey before committing (GitHub's limit is 1
 
 ## RULE 5: Alerts go out 24 hours a day, for every model (Jeffrey, Nov 5, 2026)
 
-Every bet alert, reminder, bail-out and DON'T BET follow-up is sent the moment it is due, at any hour. Nothing is ever held,
-batched or skipped because Jeffrey might be asleep. No alert-hour or "awake" windows in any code (`REMIND_HOURS = (0, 24)`,
-`bailout.AWAKE = (0, 24)`, props `alert_hours_et = [0, 24]`). PROVISIONAL bets are real bets: alerted and bet like any other,
+Every first-time bet alert, bail-out and DON'T BET follow-up is sent the moment it is due, at any hour. Nothing is ever held,
+batched or skipped because Jeffrey might be asleep (`bailout.AWAKE = (0, 24)`, props `alert_hours_et = [0, 24]`). The one
+exception (Jeffrey, Nov 5, 18:16): REMINDERS about an alerted bet not yet logged go out 6 AM - 8 PM ET only (`REMIND_HOURS = (6, 20)`).
+Alerts should arrive as fast as possible after a line posts (see the latency notes in alert_loop.sh). PROVISIONAL bets are real bets: alerted and bet like any other,
 only recorded on their own record. Audit Nov 5, 2026: see the FINDINGS.md entry of that date.
 
 

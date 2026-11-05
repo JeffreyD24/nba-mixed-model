@@ -1,4 +1,4 @@
-name: Props (FanDuel lines, PROVISIONAL alerts, paper record)
+name: Props daily (box stats, grading, v1b paper picks)
 
 # Nov 5, 2026: every 30 minutes, all day: FanDuel prop lines for today's AND tomorrow's games (so each prop's opener is caught
 # when FanDuel posts it). Each run also sends PROVISIONAL prop alerts (props v1b at FanDuel openers; 24 hours a day, tiers early/late/stale;
@@ -6,7 +6,7 @@ name: Props (FanDuel lines, PROVISIONAL alerts, paper record)
 # and log the v1b paper picks.
 on:
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "7 * * * *"        # hourly; the daily step runs once at/after 11 AM ET. Lines + alerts moved to props-loop.yml (Nov 5, 2026)
   push:
     branches: [main]
     paths: [".github/workflows/props-shadow.yml", "props_shadow.py"]
@@ -34,7 +34,6 @@ jobs:
         run: |
           git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
           git fetch -q origin main && git checkout -q -B main origin/main
-          python props_shadow.py . snapshot || echo "snapshot failed"
           H=$(TZ=America/New_York date +%H); M=$(TZ=America/New_York date +%M)
           DONE=$(cat state/props_daily_done.txt 2>/dev/null); D=$(TZ=America/New_York date +%Y-%m-%d)
           if { [ "$H" -ge "11" ] && [ "$DONE" != "$D" ]; } || [ "${{ github.event_name }}" != "schedule" ]; then
@@ -43,8 +42,7 @@ jobs:
             python props_shadow.py . grade || echo "grade failed"
             python props_shadow.py . pick || echo "pick failed"
           fi
-          python props_shadow.py . live || echo "live alerts failed"
-          git add research/props_fd state/props_shadow.csv state/props_live.csv state/props_fd_runs.csv state/props_daily_done.txt state/my_bets.csv data/player_stats 2>/dev/null || true
+          git add state/props_shadow.csv state/props_live.csv state/props_daily_done.txt state/my_bets.csv data/player_stats 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
           git commit -q -m "Props $(TZ=America/New_York date '+%Y-%m-%d %H:%M')"
           for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push -q origin main && break; sleep 8; done

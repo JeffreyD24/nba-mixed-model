@@ -1,0 +1,295 @@
+{
+ "marketData": {
+  "marketSlug": "aec-nba-orl-pho-2026-11-05",
+  "bids": [
+   {
+    "px": {
+     "value": "0.4700",
+     "currency": "USD"
+    },
+    "qty": "729.2700"
+   },
+   {
+    "px": {
+     "value": "0.4600",
+     "currency": "USD"
+    },
+    "qty": "66.0000"
+   },
+   {
+    "px": {
+     "value": "0.4500",
+     "currency": "USD"
+    },
+    "qty": "13255.0000"
+   },
+   {
+    "px": {
+     "value": "0.4300",
+     "currency": "USD"
+    },
+    "qty": "238.2200"
+   },
+   {
+    "px": {
+     "value": "0.4200",
+     "currency": "USD"
+    },
+    "qty": "4824.0800"
+   },
+   {
+    "px": {
+     "value": "0.3900",
+     "currency": "USD"
+    },
+    "qty": "1.0000"
+   },
+   {
+    "px": {
+     "value": "0.3400",
+     "currency": "USD"
+    },
+    "qty": "1.9000"
+   },
+   {
+    "px": {
+     "value": "0.2000",
+     "currency": "USD"
+    },
+    "qty": "7.7400"
+   },
+   {
+    "px": {
+     "value": "0.1000",
+     "currency": "USD"
+    },
+    "qty": "50.0000"
+   },
+   {
+    "px": {
+     "value": "0.0700",
+     "currency": "USD"
+    },
+    "qty": "20.0000"
+   },
+   {
+    "px": {
+     "value": "0.0600",
+     "currency": "USD"
+    },
+    "qty": "88.0000"
+   },
+   {
+    "px": {
+     "value": "0.0500",
+     "currency": "USD"
+    },
+    "qty": "2000.0000"
+   },
+   {
+    "px": {
+     "value": "0.0400",
+     "currency": "USD"
+    },
+    "qty": "2026.0000"
+   },
+   {
+    "px": {
+     "value": "0.0300",
+     "currency": "USD"
+    },
+    "qty": "6200.0000"
+   },
+   {
+    "px": {
+     "value": "0.0200",
+     "currency": "USD"
+    },
+    "qty": "8201.0000"
+   },
+   {
+    "px": {
+     "value": "0.0100",
+     "currency": "USD"
+    },
+    "qty": "11005.0000"
+   }
+  ],
+  "offers": [
+   {
+    "px": {
+     "value": "0.4800",
+     "currency": "USD"
+    },
+    "qty": "519.0100"
+   },
+   {
+    "px": {
+     "value": "0.5000",
+     "currency": "USD"
+    },
+    "qty": "11699.2500"
+   },
+   {
+    "px": {
+     "value": "0.5100",
+     "currency": "USD"
+    },
+    "qty": "1476.4900"
+   },
+   {
+    "px": {
+     "value": "0.5200",
+     "currency": "USD"
+    },
+    "qty": "1200.0000"
+   },
+   {
+    "px": {
+     "value": "0.5300",
+     "currency": "USD"
+    },
+    "qty": "4980.6500"
+   },
+   {
+    "px": {
+     "value": "0.5500",
+     "currency": "USD"
+    },
+    "qty": "45.0000"
+   },
+   {
+    "px": {
+     "value": "0.5600",
+     "currency": "USD"
+    },
+    "qty": "45.0000"
+   },
+   {
+    "px": {
+     "value": "0.6300",
+     "currency": "USD"
+    },
+    "qty": "24.1200"
+   },
+   {
+    "px": {
+     "value": "0.7400",
+     "currency": "USD"
+    },
+    "qty": "9.6600"
+   },
+   {
+    "px": {
+     "value": "0.8200",
+     "currency": "USD"
+    },
+    "qty": "9.8500"
+   },
+   {
+    "px": {
+     "value": "0.9000",
+     "currency": "USD"
+    },
+    "qty": "70.1000"
+   },
+   {
+    "px": {
+     "value": "0.9300",
+     "currency": "USD"
+    },
+    "qty": "22.0000"
+   },
+   {
+    "px": {
+     "value": "0.9400",
+     "currency": "USD"
+    },
+    "qty": "85.0000"
+   },
+   {
+    "px": {
+     "value": "0.9500",
+     "currency": "USD"
+    },
+    "qty": "2000.0000"
+   },
+   {
+    "px": {
+     "value": "0.9600",
+     "currency": "USD"
+    },
+    "qty": "2026.0000"
+   },
+   {
+    "px": {
+     "value": "0.9700",
+     "currency": "USD"
+    },
+    "qty": "6200.0000"
+   },
+   {
+    "px": {
+     "value": "0.9800",
+     "currency": "USD"
+    },
+    "qty": "8200.0000"
+   },
+   {
+    "px": {
+     "value": "0.9900",
+     "currency": "USD"
+    },
+    "qty": "11021.1700"
+   }
+  ],
+  "state": "MARKET_STATE_OPEN",
+  "stats": {
+   "openPx": {
+    "value": "0.5900",
+    "currency": "USD"
+   },
+   "lowPx": {
+    "value": "0.3700",
+    "currency": "USD"
+   },
+   "highPx": {
+    "value": "0.5900",
+    "currency": "USD"
+   },
+   "lastTradePx": {
+    "value": "0.4700",
+    "currency": "USD"
+   },
+   "sharesTraded": "7838.2300",
+   "notionalTraded": {
+    "value": "3746.4231",
+    "currency": "USD"
+   },
+   "lastTradeQty": "46.8800",
+   "openInterest": "3365.2400",
+   "openSetTime": "2026-11-03T17:17:31.444745724Z",
+   "highSetTime": "2026-11-03T17:17:31.444745724Z",
+   "lowSetTime": "2026-11-03T17:54:19.738285123Z",
+   "lastTradeSetTime": "2026-11-05T04:56:10.673756277Z",
+   "openInterestSetTime": "2026-11-05T04:56:10.721388932Z",
+   "notionalSetTime": "2026-11-05T04:56:10.673756277Z",
+   "currentPx": {
+    "value": "0.4750",
+    "currency": "USD"
+   },
+   "lastPriceSample": {
+    "longPx": {
+     "value": "0.4700",
+     "currency": "USD"
+    },
+    "shortPx": {
+     "value": "0.53",
+     "currency": "USD"
+    },
+    "ts": "2026-11-05T05:00:24.161209082Z"
+   }
+  },
+  "transactTime": "2026-11-05T05:00:24.161209082Z"
+ }
+}

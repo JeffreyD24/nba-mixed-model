@@ -1,0 +1,48 @@
+games with quarter scores: 6144; with v4 total: 3204; with spread model: 3204
+league shares (fit 2023-24): h1_m 0.5339, q1_m 0.2732, h1_t 0.5002, q1_t 0.2499
+h1 team adjustments: margin range -1.26..+2.12, total range -2.84..+2.49
+q1 team adjustments: margin range -1.48..+1.72, total range -1.23..+1.93
+
+== TEST seasons 2024-25 + 2025-26 (pre-registered thresholds) ==
+1H spread  :  1001 bets | CLV +0.07 [+0.02, +0.12] | at DK close:  52.1%    -5.9u (-0.6% [-5.4, +4.0]) | at Open:  51.9%    -5.4u -> fail
+      2025: 513 bets, CLV +0.06, DK close -18.6u, Open -11.7u
+      2026: 488 bets, CLV +0.08, DK close +12.6u, Open +6.3u
+1H total   :  1235 bets | CLV +0.20 [+0.10, +0.29] | at DK close:  52.9%   +10.4u (+0.8% [-3.8, +5.4]) | at Open:  53.5%   +34.2u -> PASS
+      2025: 595 bets, CLV -0.09, DK close -36.4u, Open -26.3u
+      2026: 640 bets, CLV +0.47, DK close +46.8u, Open +60.5u
+1Q spread  :  1002 bets | CLV +0.04 [+0.01, +0.08] | at DK close:  52.8%    +7.2u (+0.7% [-4.0, +5.5]) | at Open:  53.0%    +2.5u -> PASS
+      2025: 526 bets, CLV +0.05, DK close -6.5u, Open +0.7u
+      2026: 476 bets, CLV +0.03, DK close +13.7u, Open +1.8u
+1Q total   :  1305 bets | CLV +0.14 [+0.10, +0.19] | at DK close:  52.6%    +7.7u (+0.6% [-3.9, +5.0]) | at Open:  52.6%   -13.2u -> PASS
+      2025: 640 bets, CLV +0.12, DK close -14.9u, Open -23.8u
+      2026: 665 bets, CLV +0.16, DK close +22.6u, Open +10.5u
+Team total :  1628 bets | CLV +0.64 [+0.52, +0.78] | at DK close:  51.2%   -36.7u (-2.3% [-6.1, +1.8]) | at Open:  54.7%   +51.2u -> fail
+      2025: 883 bets, CLV +0.67, DK close -27.6u, Open +16.6u
+      2026: 745 bets, CLV +0.61, DK close -9.1u, Open +34.6u
+
+== FIT season 2023-24 (in-sample, for reference only) ==
+1H spread  :   514 bets | CLV +0.45 [+0.36, +0.54] | at DK close:  53.6%   +12.3u (+2.4% [-4.3, +9.1]) | at Open:  56.2%   +27.3u
+1H total   :   612 bets | CLV +1.58 [+1.35, +1.80] | at DK close:  49.9%   -29.0u (-4.7% [-10.8, +1.6]) | at Open:  55.0%   +18.8u
+1Q spread  :   552 bets | CLV +0.32 [+0.26, +0.38] | at DK close:  55.5%   +31.1u (+5.6% [-1.3, +12.3]) | at Open:  57.4%   +37.9u
+1Q total   :   671 bets | CLV +0.90 [+0.78, +1.02] | at DK close:  53.9%   +21.3u (+3.2% [-2.9, +9.0]) | at Open:  58.3%   +52.5u
+Team total :  1089 bets | CLV +0.73 [+0.61, +0.86] | at DK close:  51.3%   -42.0u (-3.9% [-8.6, +1.0]) | at Open:  54.2%    +9.7u
+
+== Direction check (test seasons): overs/home vs unders/away ==
+1H total   : over 543 bets CLV +0.26 +0.3u; under 692 bets CLV +0.15 +10.1u
+1Q total   : over 490 bets CLV +0.44 +20.6u; under 815 bets CLV -0.04 -12.9u
+Team total : away 810 bets CLV +0.68 -18.2u; home 818 bets CLV +0.61 -18.5u
+1H spread  : away 520 bets CLV +0.12 +10.8u; home 481 bets CLV +0.01 -16.7u
+1Q spread  : away 543 bets CLV +0.05 +27.2u; home 459 bets CLV +0.03 -20.0u
+
+== How mechanical are DraftKings' derived lines? (all seasons with DK) ==
+1H spread: DK 1H line = 0.576 x full line -0.04; R² 0.990; leftover sd 0.46 pts; corr(leftover, result vs 1H line) +0.009 (n 3556)
+1H total: DK 1H line = 0.492 x full line +2.15; R² 0.695; leftover sd 2.95 pts; corr(leftover, result vs 1H line) -0.030 (n 3556)
+1Q spread: DK 1Q line = 0.316 x full line -0.04; R² 0.978; leftover sd 0.37 pts; corr(leftover, result vs 1Q line) -0.004 (n 3554)
+1Q total: DK 1Q line = 0.250 x full line +0.50; R² 0.690; leftover sd 1.51 pts; corr(leftover, result vs 1Q line) -0.029 (n 3554)
+
+== Verdict ==
+1H spread: did not pass
+1H total: PASS -> PROVISIONAL live after the Fable check
+1Q spread: PASS -> PROVISIONAL live after the Fable check
+1Q total: PASS -> PROVISIONAL live after the Fable check
+Team total: did not pass

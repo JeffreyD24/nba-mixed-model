@@ -4609,3 +4609,37 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4066320,Desmond Bane,,28.5,-124.0,28.5,-112.0,2026-11-06T02:19Z,over
 2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4066320,Desmond Bane,,28.5,-106.0,28.5,-117.0,2026-11-06T02:19Z,under
 2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4601023,Oso Ighodaro,,14.5,-109.0,14.5,-120.0,2026-11-06T00:56Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points,3975,Stephen Curry,,27.5,-113.0,26.5,-117.0,2026-11-05T23:46Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points,3975,Stephen Curry,,27.5,-112.0,26.5,-109.0,2026-11-05T23:46Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points,6475,Klay Thompson,,11.5,-126.0,12.5,-125.0,2026-11-05T23:50Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points,6475,Klay Thompson,,11.5,-101.0,12.5,-102.0,2026-11-05T23:50Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points,3032977,Giannis Antetokounmpo,,28.5,-115.0,29.5,-119.0,2026-11-05T23:53Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points,3032977,Giannis Antetokounmpo,,28.5,-111.0,29.5,-107.0,2026-11-05T23:53Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points,4066261,Bam Adebayo,,18.5,-108.0,21.5,-118.0,2026-11-05T23:51Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points,4066261,Bam Adebayo,,18.5,-118.0,21.5,-108.0,2026-11-05T23:51Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points,4709138,Brandin Podziemski,,16.5,-118.0,15.5,-124.0,2026-11-05T23:46Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points,4709138,Brandin Podziemski,,16.5,-108.0,15.5,-102.0,2026-11-05T23:46Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points,5175737,Yaxel Lendeborg,,19.5,-104.0,19.5,-117.0,2026-11-06T02:25Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points,5175737,Yaxel Lendeborg,,19.5,-123.0,19.5,-109.0,2026-11-06T02:25Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Rebounds,4601025,Pelle Larsson,,3.5,-111.0,3.5,-129.0,2026-11-05T23:46Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Rebounds,4601025,Pelle Larsson,,3.5,-118.0,3.5,-102.0,2026-11-05T23:46Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total 3-Point Field Goals,3975,Stephen Curry,,4.5,112.0,4.5,122.0,2026-11-05T23:46Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total 3-Point Field Goals,3975,Stephen Curry,,4.5,-147.0,4.5,-161.0,2026-11-05T23:46Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total 3-Point Field Goals,6475,Klay Thompson,,2.5,-173.0,2.5,-166.0,2026-11-05T23:46Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total 3-Point Field Goals,6475,Klay Thompson,,2.5,131.0,2.5,126.0,2026-11-05T23:46Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Assists,4066261,Bam Adebayo,,21.5,-120.0,25.5,-126.0,2026-11-06T00:13Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Assists,4066261,Bam Adebayo,,21.5,-110.0,25.5,-105.0,2026-11-06T00:13Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Assists,4709138,Brandin Podziemski,,21.5,-103.0,19.5,-113.0,2026-11-06T02:25Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Assists,4709138,Brandin Podziemski,,21.5,-128.0,19.5,-116.0,2026-11-06T02:25Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Assists,5175737,Yaxel Lendeborg,,23.5,-104.0,23.5,-126.0,2026-11-06T02:25Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Assists,5175737,Yaxel Lendeborg,,23.5,-127.0,23.5,-105.0,2026-11-06T02:25Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Rebounds,3975,Stephen Curry,,31.5,-110.0,30.5,-113.0,2026-11-06T01:12Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Rebounds,3975,Stephen Curry,,31.5,-120.0,30.5,-116.0,2026-11-06T01:12Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Rebounds,6589,Draymond Green,,10.5,-133.0,10.5,-117.0,2026-11-06T02:25Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Rebounds,6589,Draymond Green,,10.5,101.0,10.5,-112.0,2026-11-06T02:25Z,under
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Rebounds,3059319,Andrew Wiggins,,14.5,-129.0,16.5,-109.0,2026-11-06T02:25Z,over
+2026-11-05 18:35,22600188,2026-11-05,Total Points and Rebounds,3059319,Andrew Wiggins,,14.5,-102.0,16.5,-121.0,2026-11-06T02:25Z,under
+2026-11-05 18:35,22600188,2026-11-05,"Total Points, Rebounds, and Assists",6475,Klay Thompson,,16.5,-103.0,17.5,-114.0,2026-11-06T02:25Z,over
+2026-11-05 18:35,22600188,2026-11-05,"Total Points, Rebounds, and Assists",6475,Klay Thompson,,16.5,-128.0,17.5,-115.0,2026-11-06T02:25Z,under
+2026-11-05 18:35,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4709138,Brandin Podziemski,,26.5,-118.0,24.5,-122.0,2026-11-05T23:56Z,over
+2026-11-05 18:35,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4709138,Brandin Podziemski,,26.5,-111.0,24.5,-108.0,2026-11-05T23:56Z,under

@@ -28,7 +28,7 @@ jobs:
           git fetch -q origin main && git checkout -q -B main origin/main
           START=$(date +%s)
           while [ $(( $(date +%s) - START )) -lt 19800 ]; do
-            OUT=$(python props_bettingpros.py . --newest-first --max-dates 12 2>&1); RC=$?
+            OUT=$(python props_bettingpros.py . --newest-first --max-dates 12 2>&1) && RC=0 || RC=$?
             echo "$OUT" | tail -3
             git add data/props_history/bettingpros
             if ! git diff --cached --quiet; then

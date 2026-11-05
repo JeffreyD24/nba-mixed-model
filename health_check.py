@@ -44,6 +44,7 @@ if SPORT in ("nfl", "nhl", "nba"):
 if SPORT == "nba":
     WORKFLOWS["econ-gdp.yml"] = (14, "Economics (GDP) recorder")
     WORKFLOWS["ncaab.yml"] = (30, "NCAAM daily (test-only)")        # Nov 5, 2026
+    WORKFLOWS["archive-kaggle.yml"] = (30, "Kaggle tables archive (data-source audit, Nov 5 2026)")
 
 # data streams: path in repo -> (max hours since newest commit touching it, label[, "warn"])
 # Odds files log CHANGES only, so a quiet overnight gap is normal: windows are deliberately wide.
@@ -81,6 +82,8 @@ if SPORT == "nba":   # Nov 5, 2026: player props shadow (paper) record, props_sh
     STREAMS.update({"research/props_fd": (30, "FanDuel player props (hourly)"), "state/props_shadow.csv": (48, "Props shadow record (paper, daily)", "warn"),
                     "data/player_stats": (48, "Player box stats 2026-27 (daily)")})
     WORKFLOWS["props-shadow.yml"] = (3, "Props shadow (FanDuel hourly)")
+if SPORT == "nba":   # Nov 5, 2026 data-source audit: daily copy of the Kaggle box-score tables (no commit when unchanged)
+    STREAMS["data/external/kaggle"] = (72, "Kaggle tables archive (box scores, schedule)", "warn")
 if SPORT == "nhl":
     STREAMS.update({"research/goalies.csv": (30, "Goalie status log"), "research/line_moves": (30, "Line moves (9 books)"),
                     "research/edge": (30, "Edge research files", "warn"), "research/live": (30, "Live line recorder", "warn"),

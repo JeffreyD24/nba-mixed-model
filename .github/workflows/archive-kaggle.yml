@@ -1,0 +1,41 @@
+name: Archive Kaggle tables in git (data-source audit)
+# Keeps a copy of every Kaggle table the NBA models use in data/external/kaggle/ (see tools/archive_kaggle.py).
+# The box-score dataset changes daily during the season, so it is re-saved every morning; the betting-lines
+# and EPM datasets change rarely and are re-saved on Mondays. Files are byte-identical when nothing changed,
+# so quiet days make no commit.
+on:
+  schedule:
+    - cron: "23 13 * * *"      # 8:23 AM EST / 9:23 AM EDT, after Kaggle's overnight update
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "eoin, betting, epm, or blank for all three"
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: archive-kaggle
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pandas
+      - name: Save the Kaggle tables
+        run: |
+          ONLY="${{ inputs.only }}"
+          if [ -z "$ONLY" ] && [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%u)" != "1" ]; then ONLY=eoin; fi
+          if [ -n "$ONLY" ]; then python tools/archive_kaggle.py . --only "$ONLY"; else python tools/archive_kaggle.py .; fi
+      - name: Commit
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add data/external/kaggle
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -q -m "Kaggle archive $(TZ=America/New_York date '+%F')"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 10; done
+          exit 1

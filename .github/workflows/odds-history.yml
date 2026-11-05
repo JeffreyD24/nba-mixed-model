@@ -29,7 +29,7 @@ jobs:
           git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
           START=$(date +%s)
           while [ $(( $(date +%s) - START )) -lt 18000 ]; do
-            OUT=$(python odds_history.py . --sport "${{ inputs.sport }}" --from "${{ inputs.from }}" --to "${{ inputs.to }}" --max-dates 15 2>&1); RC=$?
+            OUT=$(python odds_history.py . --sport "${{ inputs.sport }}" --from "${{ inputs.from }}" --to "${{ inputs.to }}" --max-dates 15 2>&1) && RC=0 || RC=$?
             echo "$OUT" | tail -3
             git add data/odds_history
             if ! git diff --cached --quiet; then

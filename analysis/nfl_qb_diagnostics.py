@@ -9,7 +9,7 @@ import numpy as np, pandas as pd
 W = os.path.abspath(sys.argv[1]); N = os.path.abspath(sys.argv[2])
 cols = ["game_id", "season", "week", "season_type", "game_date", "home_team", "away_team", "posteam", "defteam", "play_type",
         "epa", "qb_dropback", "rush", "passer_player_id", "passer_player_name", "cpoe", "special_teams_play", "home_score", "away_score"]
-P = pd.concat([pd.read_csv(f, usecols=lambda c: c in cols, low_memory=False) for f in sorted(glob.glob("/home/claude/data/nflverse_pbp/pbp_*.csv.gz"))])
+P = pd.concat([pd.read_csv(f, usecols=lambda c: c in cols, low_memory=False) for f in sorted(glob.glob(os.path.join(N, "data", "external", "nflverse", "play_by_play_*_cols.csv.gz")))])
 CANON = {"LA": "lar", "WAS": "wsh", "OAK": "lv", "SD": "lac", "STL": "lar"}; code = lambda t: CANON.get(t, str(t).lower())
 P = P[P.posteam.notna() & P.epa.notna()].copy()
 for c in ("home_team", "away_team", "posteam", "defteam"): P[c] = P[c].map(code)

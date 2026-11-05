@@ -439,3 +439,41 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-05 03:55,22600188,2026-11-05,Total Assists and Rebounds,4709138,Brandin Podziemski,,9.5,-127.0,9.5,-134.0,2026-11-05T11:24Z,under
 2026-11-05 03:55,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4066436,De'Anthony Melton,,16.5,-108.0,16.5,-104.0,2026-11-05T11:24Z,over
 2026-11-05 03:55,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4066436,De'Anthony Melton,,16.5,-121.0,16.5,-126.0,2026-11-05T11:24Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points,3136193,Devin Booker,,25.5,-104.0,24.5,-118.0,2026-11-05T12:21Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points,3136193,Devin Booker,,25.5,-123.0,24.5,-108.0,2026-11-05T12:21Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points,3155526,Dillon Brooks,,16.5,-119.0,16.5,-111.0,2026-11-05T09:44Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points,3155526,Dillon Brooks,,16.5,-107.0,16.5,-114.0,2026-11-05T09:44Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points,4437244,Jalen Green,,16.5,-104.0,16.5,-109.0,2026-11-05T09:44Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points,4437244,Jalen Green,,16.5,-123.0,16.5,-117.0,2026-11-05T09:44Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Rebounds,4066383,Miles Bridges,,6.5,-101.0,6.5,-114.0,2026-11-05T10:43Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Rebounds,4066383,Miles Bridges,,6.5,-131.0,6.5,-115.0,2026-11-05T10:43Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Rebounds,5203685,Khaman Maluach,,5.5,-119.0,5.5,-113.0,2026-11-05T10:43Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Rebounds,5203685,Khaman Maluach,,5.5,-111.0,5.5,-117.0,2026-11-05T10:43Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total 3-Point Field Goals,3155526,Dillon Brooks,,1.5,-163.0,1.5,-156.0,2026-11-05T09:32Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total 3-Point Field Goals,3155526,Dillon Brooks,,1.5,124.0,1.5,118.0,2026-11-05T09:32Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total 3-Point Field Goals,4437244,Jalen Green,,1.5,-154.0,1.5,-161.0,2026-11-05T09:32Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total 3-Point Field Goals,4437244,Jalen Green,,1.5,116.0,1.5,122.0,2026-11-05T09:32Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Assists,3136193,Devin Booker,,30.5,-106.0,29.5,-121.0,2026-11-05T12:21Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Assists,3136193,Devin Booker,,30.5,-124.0,29.5,-109.0,2026-11-05T12:21Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Assists,3155526,Dillon Brooks,,19.5,-108.0,19.5,-104.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Assists,3155526,Dillon Brooks,,19.5,-121.0,19.5,-127.0,2026-11-05T11:17Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Assists,4437244,Jalen Green,,19.5,-112.0,20.5,-107.0,2026-11-05T12:20Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Assists,4437244,Jalen Green,,19.5,-117.0,20.5,-123.0,2026-11-05T12:20Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,3136193,Devin Booker,,29.5,-112.0,29.5,-107.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,3136193,Devin Booker,,29.5,-117.0,29.5,-122.0,2026-11-05T11:17Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,3155526,Dillon Brooks,,21.5,-106.0,20.5,-125.0,2026-11-05T12:20Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,3155526,Dillon Brooks,,21.5,-124.0,20.5,-105.0,2026-11-05T12:20Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,4066383,Miles Bridges,,23.5,-108.0,23.5,-113.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,4066383,Miles Bridges,,23.5,-122.0,23.5,-116.0,2026-11-05T11:17Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,4437244,Jalen Green,,19.5,-122.0,20.5,-115.0,2026-11-05T12:21Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Points and Rebounds,4437244,Jalen Green,,19.5,-108.0,20.5,-114.0,2026-11-05T12:21Z,under
+2026-11-05 04:25,22600187,2026-11-05,Total Assists and Rebounds,4066383,Miles Bridges,,9.5,-102.0,9.5,-115.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,Total Assists and Rebounds,4066383,Miles Bridges,,9.5,-129.0,9.5,-115.0,2026-11-05T11:17Z,under
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3136193,Devin Booker,,34.5,-109.0,34.5,-105.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3136193,Devin Booker,,34.5,-120.0,34.5,-125.0,2026-11-05T11:17Z,under
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3155526,Dillon Brooks,,23.5,-120.0,23.5,-113.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3155526,Dillon Brooks,,23.5,-110.0,23.5,-116.0,2026-11-05T11:17Z,under
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4066383,Miles Bridges,,26.5,-107.0,26.5,-113.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4066383,Miles Bridges,,26.5,-123.0,26.5,-116.0,2026-11-05T11:17Z,under
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4437244,Jalen Green,,23.5,-104.0,23.5,-121.0,2026-11-05T11:17Z,over
+2026-11-05 04:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4437244,Jalen Green,,23.5,-126.0,23.5,-109.0,2026-11-05T11:17Z,under

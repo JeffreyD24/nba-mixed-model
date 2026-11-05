@@ -7,14 +7,14 @@ the NBA, NHL and NFL repos (and ncaab/), with the evidence each one has. CLV fir
 ## Going live today (NBA, PROVISIONAL)
 | Rule | Evidence | Why |
 |---|---|---|
-| NBA totals line-movement (market models v1-an) | 2025-26 test 505 bets, CLV +1.41 (break-even +1.07), +5.4u | Pre-registered; passes on Action Network books |
-| NBA totals blend v4 + market (market models blend v1) | 2025-26 test 314 bets, CLV +1.79, +23.3u; beats v4's CLV per bet | Pre-registered step 4; passes outright |
+| NBA totals line-movement (market models v1-an) | 2025-26, honest timing (Fable): 385 bets, CLV +1.31 (break-even +1.07), -10.8u | Pre-registered addendum; live on CLV |
+| NBA totals blend v4 + market (market models blend v1) | 2025-26, honest timing: 257 bets, CLV +1.44, +1.8u; beats v4's CLV per bet (+0.79) | Pre-registered step 4; passes, units thin |
 
 ## Recommended next (needs work in the NHL / NFL repos)
 | Idea | Evidence | Recommendation |
 |---|---|---|
 | **NHL: back the rested team vs a team on a back-to-back** (opening moneyline, no model) | 2024-26 DK: 538 bets, +41.9u (+7.8%); 2016-22 holdout: 1,832 bets, +2.0%. Price CLV vs the no-vig close is about zero (+0.3% at DK 2024-26; -1.6% on 2016-22 consensus prices). **But the close itself underprices rested teams:** they won 57.7% vs 55.3% the no-vig close implied (2016-22, ~2 se) and 59.7% vs 55.8% (2024-26, ~1.9 se). Exploratory, not pre-registered. | This is a closing-line blind spot, not a CLV edge, so it fails the CLV-first rule but has two independent periods behind it. Bet as PROVISIONAL in the NHL repo with a pre-registered stop rule, graded on units **and** "won vs no-vig close". Needs NHL code + Fable check. |
-| **NFL second-half totals** (TESTED Nov 5: FAILED, alerts stopped; nfl-mixed-model research/halves/H2_TOTALS_RESULTS.md) | Already being bet with money (3 bets in state/my_bets.csv) though alerts are labeled TEST. Backtest 52-35, best of ~100 slices; CLV not measured. | Either give it a PROVISIONAL registry row with stop lines (so it has its own record) or stop betting it. My lean: stop until a pre-registered test exists; the slice-picking makes 52-35 weak evidence. |
+| **NFL second-half totals** (TESTED Nov 5: FAILED, alerts stopped; nfl-mixed-model research/halves/H2_TOTALS_RESULTS.md) | Already being bet with money (3 bets in state/my_bets.csv) though alerts are labeled TEST. Backtest 52-35, best of ~100 slices; CLV not measured. | Tested and stopped Nov 5: 2023 (unseen) 66 bets, 26-39, -15.4u; no beat-the-close in 2023 or 2018-21. Alerts TEST-only. |
 
 ## Not promoted (and why)
 | Idea | Evidence | Why not |

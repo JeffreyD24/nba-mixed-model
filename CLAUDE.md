@@ -52,6 +52,11 @@ the win rate" is not something a backtest shows.
 Before finishing any session: `git status` in every repo touched. Every new script and output is committed, FINDINGS.md has an
 entry for every test/finding/idea from the session, and everything is pushed. Tell Jeffrey in one line what was recorded and where.
 
+## RULE 3: Read the model playbook before building any model
+Before building or changing any model, read `MODEL_PLAYBOOK.md` in the JeffreyD24/betting-goals repo (how to build the best model:
+the market as part of the base model, then lineups / injuries / travel / sharp money, scored against the close) and `SHARP_MONEY.md`
+there for the money-tracking system. Say which playbook steps the new work covers. Set Nov 5, 2026.
+
 ## Other standing rules
 - Only bets at (or near) the opening price are real bets; the backtests only made money there.
 - A new rule or model version starts a new record; old versions are never re-graded under new rules.

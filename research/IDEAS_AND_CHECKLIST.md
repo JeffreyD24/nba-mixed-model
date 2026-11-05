@@ -102,3 +102,4 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - [ ] (Nov 5, 2026) Kalshi history (candles + trades with sizes) into the private repo; test Kalshi/Polymarket close vs DK close and vs saved Pinnacle history (NHL veto replacement).
 - [ ] (Nov 5, 2026) Pre-Nov 2023 Polymarket fills from the Hugging Face bulk set (DuckDB remote query), if older seasons are needed.
 
+- [ ] (Nov 5, 2026) DraftKings direct feed (CT) every 30-60 s from Jeffrey's home connection: run live_capture/Probe_DraftKings.bat, then build the poller + switch alert source (cloud/GitHub is 403)

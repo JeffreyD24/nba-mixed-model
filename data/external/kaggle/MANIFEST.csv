@@ -7,11 +7,11 @@ eoin,eoinamoore/historical-nba-data-and-player-box-scores,LeagueSchedule26_27.cs
 eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2021_22),games 2021-08-01 to 2022-07-31,2026-11-04,36363,4718500dd5ff42dc
 eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2022_23),games 2022-08-01 to 2023-07-31,2026-11-04,36512,1c739c506e5fcd66
 eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2023_24),games 2023-08-01 to 2024-07-31,2026-11-04,37300,f83994f9c3903fbf
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2024_25),games 2024-08-01 to 2025-07-31,2026-11-04,37806,451479f57477a165
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2025_26),games 2025-08-01 to 2026-07-31,2026-11-04,37576,d5c259911d70d19c
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2026_27),games 2026-08-01 to 2027-07-31,2026-11-04,5976,710565b9929f3f6f
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2024_25),games 2024-08-01 to 2025-07-31,2026-11-04,37806,04e414b525899266
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2025_26),games 2025-08-01 to 2026-07-31,2026-11-04,37576,b9074cbfcfba19b7
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2026_27),games 2026-08-01 to 2027-07-31,2026-11-04,5976,65466709d34dccf5
 eoin,eoinamoore/historical-nba-data-and-player-box-scores,Players.csv,all rows,2026-11-04,6820,74c6f054b1dc86f4
 eoin,eoinamoore/historical-nba-data-and-player-box-scores,TeamHistories.csv,all rows,2026-11-04,140,8e16158a963e6d66
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,TeamStatistics.csv,all rows,2026-11-04,146910,ddd6c30d4ca5c9c3
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,TeamStatistics.csv,all rows,2026-11-04,146910,9c5a8d1e8baf4176
 epm,deocheng/nba-data-1946-2026,csv/public.player_epm.csv,all rows,2026-08-18,13255,e66bfc251b44e5a5
 epm,deocheng/nba-data-1946-2026,csv/public.player_epm_actual.csv,all rows,2026-08-18,602,ba86ace319ead604

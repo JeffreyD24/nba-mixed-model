@@ -129,3 +129,4 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-05 16:59:00,293551,2026-11-06T00:00:00.000Z,New York Islanders,Carolina Hurricanes,3367,cons,1.5,-157.0,6.0,-110.0,164.0,-199.0,0.0,0.0,68.0,77.0,5.0,3.0
 2026-11-05 16:59:00,293551,2026-11-06T00:00:00.000Z,New York Islanders,Carolina Hurricanes,3367,dk,1.5,-155.0,6.5,114.0,164.0,-198.0,,,,,,
 2026-11-05 17:00:00,293558,2026-11-06T00:00:00.000Z,Winnipeg Jets,Vancouver Canucks,2842,cons,-1.5,119.0,6.5,-104.0,-214.0,180.0,0.0,0.0,63.0,83.0,93.0,90.0
+2026-11-05 17:02:00,293550,2026-11-06T00:00:00.000Z,Tampa Bay Lightning,Chicago Blackhawks,4094,dk,-1.5,-170.0,6.5,-108.0,-470.0,360.0,,,,,,

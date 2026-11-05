@@ -1,0 +1,32 @@
+name: Exchange history (Kalshi candles, Polymarket trades; one-off)
+on:
+  workflow_dispatch:
+    inputs:
+      max_events: { description: "Events per series (small number = test)", default: "100000" }
+permissions:
+  contents: write
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        job: ["kalshi KXNBAGAME", "kalshi KXNHLGAME", "kalshi KXNFLGAME", "kalshi KXNCAAMBGAME", "kalshi KXNCAAFGAME", "kalshi KXNBASPREAD", "kalshi KXNBATOTAL",
+              "poly 10345", "poly 10346", "poly 10470", "poly 39", "poly 12185", "poly 12756"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas
+      - name: Download ${{ matrix.job }}
+        run: |
+          set -- ${{ matrix.job }}
+          python sharp/exchange_history.py . $1 --series $2 --max-events ${{ github.event.inputs.max_events }}
+      - name: Save
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add sharp/data
+          git diff --cached --quiet || git commit -q -m "Exchange history: ${{ matrix.job }}"
+          for i in 1 2 3 4 5 6 7 8; do git pull --rebase -q && git push -q && break; sleep $((RANDOM % 20 + 5)); done

@@ -1,0 +1,17 @@
+  ridge cridge   mse_m   mse_t
+0     5      1  129.82  308.41
+1     5      3  129.37  307.32
+2     5     10  128.87  305.95
+3    10      1  129.83  307.29
+4    10      3  129.39  306.21
+5    10     10  128.87  304.76
+6    20      1  132.42  310.73
+7    20      3  131.98  309.65
+8    20     10  131.45  308.14
+9    M1      -  129.68  304.19
+M8 chosen: team ridge 10, conference ridge 10
+M1 tuning-season MSE margin 129.68 total 304.19
+M2 tuning-season MSE margin 129.68 total 304.14
+M4 tuning-season MSE margin 129.96 total 305.67
+M8 tuning-season MSE margin 128.87 total 304.76
+M10 tuning-season MSE margin 129.03 total 308.67

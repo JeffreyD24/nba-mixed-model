@@ -1,0 +1,72 @@
+DIAGNOSTICS (after the result; descriptive). Totals 6+ vs the opener; graded at the opener and at the close.
+
+M2:
+  2016   212 bets overs 62%  at line 59.5%  +28.6u  at close 56.1%  +15.2u
+  2017   227 bets overs 51%  at line 57.1%  +20.3u  at close 53.5%   +5.0u
+  2018   222 bets overs 58%  at line 64.9%  +52.9u  at close 58.4%  +25.4u
+  2019   297 bets overs 47%  at line 57.5%  +28.6u  at close 53.6%   +6.6u
+  2020   319 bets overs 47%  at line 57.7%  +31.6u  at close 54.0%   +9.6u
+  2021   162 bets overs 52%  at line 48.1%  -13.1u  at close 45.9%  -19.6u
+  2022 (vs close)  454 bets overs 47%  at line 57.2%  +41.6u  at close 57.2%  +41.6u
+  2023 (vs close)  445 bets overs 54%  at line 55.0%  +21.9u  at close 55.0%  +21.9u
+  2024   278 bets overs 71%  at line 54.5%  +11.4u  at close 50.7%   -8.7u
+  2025   357 bets overs 50%  at line 53.2%   +5.7u  at close 51.1%   -8.5u
+  2026   412 bets overs 55%  at line 51.2%   -9.2u  at close 49.5%  -22.5u
+  TEST overs    750 bets at open 57.8% at close 54.4%
+  TEST unders   689 bets at open 57.9% at close 53.5%
+
+M8:
+  2016   419 bets overs 74%  at line 55.8%  +26.9u  at close 52.4%   +0.2u
+  2017   416 bets overs 72%  at line 59.6%  +56.6u  at close 56.1%  +29.2u
+  2018   457 bets overs 86%  at line 55.9%  +30.1u  at close 52.7%   +2.5u
+  2019   570 bets overs 90%  at line 57.8%  +57.5u  at close 55.0%  +27.8u
+  2020   500 bets overs 73%  at line 57.7%  +50.2u  at close 54.7%  +21.5u
+  2021   291 bets overs 85%  at line 51.2%   -6.5u  at close 49.3%  -17.0u
+  2022 (vs close)  465 bets overs 75%  at line 57.0%  +40.2u  at close 57.0%  +40.2u
+  2023 (vs close)  472 bets overs 72%  at line 56.3%  +35.0u  at close 56.3%  +35.0u
+  2024   403 bets overs 79%  at line 56.1%  +28.6u  at close 51.1%   -9.5u
+  2025   552 bets overs 84%  at line 50.0%  -25.1u  at close 48.1%  -44.9u
+  2026   770 bets overs 84%  at line 54.5%  +31.8u  at close 52.7%   +5.1u
+  TEST overs   2131 bets at open 56.3% at close 53.9%
+  TEST unders   522 bets at open 58.4% at close 52.8%
+
+League scoring level vs the books (all D-I games): mean total, mean close, close minus result
+  2010 avg total 137.5  close 137.1  close-result -0.34
+  2011 avg total 136.6  close 136.0  close-result -0.61
+  2012 avg total 134.0  close 134.2  close-result +0.12
+  2013 avg total 133.4  close 134.1  close-result +0.73
+  2014 avg total 140.2  close 140.6  close-result +0.42
+  2015 avg total 134.0  close 133.3  close-result -0.71
+  2016 avg total 144.7  close 143.9  close-result -0.80
+  2017 avg total 145.6  close 145.0  close-result -0.62
+  2018 avg total 146.0  close 145.0  close-result -1.01
+  2019 avg total 143.8  close 143.7  close-result -0.03
+  2020 avg total 140.5  close 139.8  close-result -0.73
+  2021 avg total 141.6  close 141.1  close-result -0.54
+  2022 avg total 140.1  close 139.2  close-result -0.86
+  2023 avg total 141.5  close 140.3  close-result -1.23
+  2024 avg total 145.3  close 144.4  close-result -0.88
+  2025 avg total 145.7  close 145.0  close-result -0.72
+  2026 avg total 149.4  close 148.9  close-result -0.55
+
+BEAT THE CLOSE directly: bets where the model is 6+ from the CLOSING total, graded at the close (-110). Blind overs = every game over the close.
+season | M2 bets    win   units | M8 bets    win   units | blind overs win
+  2010 |     183  44.8%   -26.4 |     230  49.8%   -11.4 | 48.8%
+  2011 |     157  49.7%    -8.0 |     235  43.7%   -38.1 | 49.6%
+  2012 |     159  50.6%    -5.2 |     237  51.5%    -3.9 | 48.6%
+  2013 |      78  58.1%    +8.1 |     104  59.4%   +13.5 | 47.3%
+  2014 |     186  56.5%   +14.5 |     420  48.7%   -29.5 | 47.0%
+  2015 |     246  59.3%   +32.0 |     298  54.6%   +12.4 | 50.1%
+  2016 |     243  52.7%    +1.4 |     374  51.2%    -8.4 | 50.6%
+  2017 |     293  52.6%    +1.2 |     397  49.7%   -19.7 | 50.9%
+  2018 |     349  53.3%    +6.3 |     506  51.7%    -6.5 | 49.5%
+  2019 |     421  54.4%   +16.4 |     604  52.4%    +0.5 | 47.6%
+  2020 |     305  53.5%    +6.5 |     437  52.5%    +1.4 | 51.3%
+  2021 |     269  47.3%   -25.4 |     354  50.7%   -11.2 | 50.5%
+  2022 |     454  57.2%   +41.6 |     465  57.0%   +40.2 | 50.8%
+  2023 |     445  55.0%   +21.9 |     472  56.3%   +35.0 | 52.0%
+  2024 |     491  52.7%    +2.7 |     542  51.6%    -8.3 | 50.4%
+  2025 |     545  49.2%   -33.2 |     673  49.9%   -31.4 | 50.3%
+  2026 |     718  52.6%    +3.6 |     952  52.1%    -5.1 | 48.9%
+  M2 2016-26 total vs close: 4493 bets 52.9% +43.0u
+  M8 2016-26 total vs close: 5733 bets 52.3% -13.4u

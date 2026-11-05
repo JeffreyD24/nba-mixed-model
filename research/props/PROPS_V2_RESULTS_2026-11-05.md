@@ -38,8 +38,9 @@ its own book; require both books updated within 15 min before bet time and befor
 - Reading: the model knows things the **morning** market hasn't priced yet (mostly unders), and by tip the market has caught up.
   That is the kind of edge that only works if you bet early — which the live FanDuel paper record (11 AM picks) tests directly.
 - Against the extra checks for negative-CLV ideas (research/PROVISIONAL_BETS.md): unseen-season units at the real bet time can't be
-  checked (no 11 AM lines before 2025-26), and at the close 2022-23 is clearly negative. **So v1b doesn't qualify yet; recommendation:
-  keep the 11 AM FanDuel paper record running (≈10–15 picks/day, ~500 by mid-December) and decide then.**
+  checked (no 11 AM lines before 2025-26), and at the close 2022-23 is clearly negative. **So v1b doesn't qualify yet. Next test (past
+  seasons, not this one): v1b at BettingPros' opening lines 2022-25, pre-registered. The FanDuel paper record keeps running as a
+  pipeline check only.**
 
 ## Takeaways
 1. Cross-book "edges" at the close are mostly stale prices. Any book-vs-book rule needs synchronized snapshots, not last-update data.

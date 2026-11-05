@@ -14,8 +14,9 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - Props v1b timing: at 11 AM (synchronized Odds API snapshot, 2025-26) the profit is model-driven (model-needed bets +54.8u / +110.3u,
   market-only ≈0u); at the close over 4 seasons the same model nets ≈0. Morning edge, priced out by tip. Model information beyond the
   close is real but small (coef ≈ +0.1, every season).
-- Decision: nothing new goes live. v1b stays on the 11 AM FanDuel paper record (~500 picks by mid-December) and is decided then
-  under the negative-CLV extra checks (research/PROVISIONAL_BETS.md, added today).
+- Decision: nothing new goes live. Per RULE 2 the current season is not the test: the next v1b test uses PAST seasons at an early
+  price — BettingPros' opening lines (`open_line`/`open_price`/`open_time`, 2022-25) — under the negative-CLV extra checks
+  (research/PROVISIONAL_BETS.md, added today). The 11 AM FanDuel paper record keeps running only as a pipeline/record check.
 - research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
   research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
 

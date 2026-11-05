@@ -114,7 +114,7 @@ if SPORT == "nfl":
                     "state/h2_totals_watch.csv": (216, "2H totals watch", "warn"), "state/homedog_test.csv": (216, "Home-dog lean test log (test-only)", "warn"), "state/half_lines_h2_2026.csv": (216, "2H lines", "warn")})
 
 # paths that exist in research/ or state/ but are not regular data feeds (docs, one-off analyses, memory files)
-IGNORE = {"report_watch_record.csv", "report_watch_last.csv", "DATA_DICTIONARY.md", "HANDOFF_TO_OPUS.md", "IDEAS_AND_CHECKLIST.md", "LEAKAGE_AUDIT_2026-11-03.md",
+IGNORE = {"MONEYLINE_V2_PREREG_2026-11-04.md", "MONEYLINE_V2_RESULTS_2026-11-04.md", "MARKET_EXPANSION_PLAYBOOK_2026-11-04.md", "MARKET_MODELS_PLAN.md", "PROVISIONAL_BETS.md", "RULE_AUDIT_2026-11-04.md", "SPREADS_HANDOFF_2026-11-04.md", "injury_history", "spreads", "derivatives", "market_models", "probes", "report_watch_record.csv", "report_watch_last.csv", "DATA_DICTIONARY.md", "HANDOFF_TO_OPUS.md", "IDEAS_AND_CHECKLIST.md", "LEAKAGE_AUDIT_2026-11-03.md",
           "SHRINK_WEIGHTS_2026-11-03.md", "how_sharp_models_work.md", "health_latest.md", "health_log.csv", "test_alert_result.txt",
           "errors.csv", "community_notes", "linescores.csv", "live_laptop", "minutes", "minutes_history", "model_comparison",
           "nba_tracking", "props_athletes.csv", "tournament", "cold_stretch", "bet_versions.csv", "my_bets.csv",

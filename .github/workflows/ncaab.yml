@@ -28,6 +28,10 @@ jobs:
         run: python ncaab/daily.py .
       - name: NCAAM M2 totals TEST record (Nov 5, 2026; Fable-blocked for live, tracked at DraftKings' own opener)
         run: python ncaab/m2_daily.py . || echo "M2 test record not updated; it will run again tomorrow."
+      - name: NCAAM live ratings for the PROVISIONAL stale-line spreads (Nov 5, 2026)
+        run: python ncaab/live_ratings.py . || echo "live ratings not updated; alerts use yesterday's file"
+      - name: Grade NCAAM PROVISIONAL alerts
+        run: python ncaab/live_grade.py . || echo "live grading failed; it will run again tomorrow"
       - name: Save results
         run: |
           git config user.name "nba-tracker-bot"

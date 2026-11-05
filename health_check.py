@@ -75,7 +75,7 @@ COMMON = {
 }
 STREAMS = dict(COMMON)
 if SPORT == "nba":   # Nov 5, 2026: NCAA men's basketball (test-only): ncaab/daily.py
-    STREAMS.update({"ncaab/data/games.csv": (30, "NCAAM scores and lines"), "ncaab/state/test_record.md": (30, "NCAAM test record (daily)"), "ncaab/state/m2_totals_test.md": (30, "NCAAM M2 totals test record (daily)")})
+    STREAMS.update({"ncaab/data/games.csv": (30, "NCAAM scores and lines"), "ncaab/state/test_record.md": (30, "NCAAM test record (daily)"), "ncaab/state/m2_totals_test.md": (30, "NCAAM M2 totals test record (daily)"), "ncaab/state/live_ratings.json": (30, "NCAAM live ratings (daily)"), "ncaab/state/dk_lines.csv": (24, "NCAAM DraftKings first-seen lines (alert loop)", "warn"), "ncaab/state/live_record.md": (30, "NCAAM PROVISIONAL record (daily)")})
 if SPORT == "nba":   # Nov 4, 2026: line-move shadow record (analysis/LINE_MOVE_PREREG.md); NBA only for now
     STREAMS["state/shadow_passed.md"] = (30, "Shadow record of bets passed for a line move against (daily)")
 if SPORT == "nba":   # Nov 5, 2026: player props shadow (paper) record, props_shadow.py; FanDuel lines + daily picks/grading + box stats

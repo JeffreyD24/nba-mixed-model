@@ -1,0 +1,388 @@
+an_id,espn_team,n,an_name
+818,248,185,Houston Cougars
+927,150,184,Duke Blue Devils
+1003,2509,184,Purdue Boilermakers
+986,2633,179,Tennessee Volunteers
+826,41,178,Connecticut Huskies
+754,12,177,Arizona Wildcats
+1014,275,177,Wisconsin Badgers
+990,245,175,Texas A&M Aggies
+987,333,175,Alabama Crimson Tide
+926,153,175,North Carolina Tar Heels
+1011,130,175,Michigan Wolverines
+1004,356,174,Illinois Fighting Illini
+783,251,174,Texas Longhorns
+1083,2670,174,VCU Rams
+1009,127,173,Michigan State Spartans
+749,2483,173,Oregon Ducks
+1068,156,173,Creighton Bluejays
+860,5,173,UAB Blazers
+984,57,172,Florida Gators
+988,8,172,Arkansas Razorbacks
+791,2305,172,Kansas Jayhawks
+1066,222,172,Villanova Wildcats
+977,2,171,Auburn Tigers
+979,96,170,Kentucky Wildcats
+790,2641,170,Texas Tech Red Raiders
+824,2132,170,Cincinnati Bearcats
+750,265,170,Washington State Cougars
+1077,2168,170,Dayton Flyers
+1012,2294,170,Iowa Hawkeyes
+967,167,170,New Mexico Lobos
+982,238,170,Vanderbilt Commodores
+971,328,169,Utah State Aggies
+785,201,169,Oklahoma Sooners
+1065,2752,169,Xavier Musketeers
+918,152,169,North Carolina State Wolfpack
+919,258,169,Virginia Cavaliers
+1015,158,168,Nebraska Cornhuskers
+755,38,168,Colorado Buffaloes
+782,66,168,Iowa State Cyclones
+925,228,167,Clemson Tigers
+1086,2603,167,Saint Joseph's (PA) Hawks
+1008,194,167,Ohio State Buckeyes
+915,259,167,Virginia Tech Hokies
+759,26,167,UCLA Bruins
+920,2390,167,Miami (FL) Hurricanes
+1061,252,167,BYU Cougars
+966,36,167,Colorado State Rams
+789,2628,166,TCU Horned Frogs
+1072,2599,166,St. John's Red Storm
+917,154,166,Wake Forest Demon Deacons
+1064,269,166,Marquette Golden Eagles
+786,2306,166,Kansas State Wildcats
+751,30,165,USC Trojans
+989,145,165,Ole Miss Rebels
+1005,120,165,Maryland Terrapins
+974,68,165,Boise State Broncos
+777,2181,164,Drake Bulldogs
+969,2440,164,Nevada Wolf Pack
+787,239,164,Baylor Bears
+985,344,164,Mississippi State Bulldogs
+817,235,164,Memphis Tigers
+976,21,164,San Diego State Aztecs
+788,277,164,West Virginia Mountaineers
+1057,2250,164,Gonzaga Bulldogs
+856,249,164,North Texas Mean Green
+943,2142,164,Colgate Raiders
+1060,2608,164,Saint Mary's Gaels
+995,2649,163,Toledo Rockets
+748,254,163,Utah Utes
+756,25,163,California Bears
+753,24,163,Stanford Cardinal
+1013,84,163,Indiana Hoosiers
+772,282,163,Indiana State Sycamores
+999,2006,163,Akron Zips
+784,197,163,Oklahoma State Cowboys
+914,221,163,Pittsburgh Panthers
+923,97,163,Louisville Cardinals
+980,61,163,Georgia Bulldogs
+1056,2541,162,Santa Clara Broncos
+970,2439,162,UNLV Rebels
+873,2547,162,Seattle Redhawks
+916,103,162,Boston College Eagles
+775,2350,162,Loyola (IL) Ramblers
+1091,314,162,Iona Gaels
+816,2116,162,UCF Knights
+1007,77,162,Northwestern Wildcats
+876,2253,162,Grand Canyon Antelopes
+867,2226,161,Florida Atlantic Owls
+891,2016,161,Alcorn State Braves
+960,94,161,Northern Kentucky Norse
+1063,2539,161,San Francisco Dons
+1070,2550,161,Seton Hall Pirates
+1075,179,161,St. Bonaventure Bonnies
+1074,139,161,Saint Louis Billikens
+1095,2217,161,Fairfield Stags
+778,71,161,Bradley Braves
+968,23,161,San Jose State Spartans
+1092,2405,161,Monmouth Hawks
+1047,119,161,Towson Tigers
+773,2460,160,Northern Iowa Panthers
+1054,2492,160,Pepperdine Waves
+1073,305,160,DePaul Blue Demons
+1081,257,160,Richmond Spiders
+996,2309,160,Kent State Golden Flashes
+1067,2507,160,Providence Friars
+846,299,160,Long Beach State 49ers
+944,2083,160,Bucknell Bison
+821,2567,160,Southern Methodist Mustangs
+1028,116,160,Mount St. Mary's Mountaineers
+1006,213,160,Penn State Nittany Lions
+757,9,159,Arizona State Sun Devils
+807,331,159,Eastern Washington Eagles
+1695,2856,159,California Baptist Lancers
+994,195,159,Ohio Bobcats
+965,325,159,Cleveland State Vikings
+975,278,159,Fresno State Bulldogs
+922,183,159,Syracuse Orange
+898,2296,159,Jackson State Tigers
+829,236,159,Chattanooga Mocs
+1010,164,159,Rutgers Scarlet Knights
+822,58,159,South Florida Bulls
+781,2724,158,Wichita State Shockers
+752,204,158,Oregon State Beavers
+862,2429,158,Charlotte 49ers
+896,2010,158,Alabama A&M Bulldogs
+924,52,158,Florida State Seminoles
+954,2737,158,Winthrop Eagles
+774,2287,158,Illinois State Redbirds
+1018,261,158,Vermont Catamounts
+768,2413,158,Morehead State Eagles
+811,147,158,Montana State Bobcats
+804,2464,158,Northern Arizona Lumberjacks
+1087,2184,158,Duquesne Dukes
+1600,2771,158,Merrimack Warriors
+1076,2166,157,Davidson Wildcats
+758,264,157,Washington Huskies
+1071,2086,157,Butler Bulldogs
+1069,46,157,Georgetown Hoyas
+798,309,157,Louisiana Ragin' Cajuns
+983,142,157,Missouri Tigers
+779,2623,157,Missouri State Bears
+959,2750,157,Wright State Raiders
+885,2377,157,McNeese State Cowboys
+894,2755,157,Grambling State Tigers
+1085,2244,157,George Mason Patriots
+1096,2561,157,Siena Saints
+1044,48,157,Delaware Fightin Blue Hens
+823,218,157,Temple Owls
+803,2032,156,Arkansas State Red Wolves
+810,2458,156,Northern Colorado Bears
+981,99,156,LSU Tigers
+853,2463,156,Cal State Northridge Matadors
+937,44,156,American Eagles
+1048,232,156,Charleston Cougars
+933,526,156,Florida Gulf Coast Eagles
+957,270,156,Milwaukee Panthers
+857,2393,156,Middle Tennessee Blue Raiders
+780,339,156,Evansville Purple Aces
+946,2335,156,Liberty Flames
+835,231,156,Furman Paladins
+899,2640,155,Texas Southern Tigers
+1052,350,155,UNC Wilmington Seahawks
+941,322,155,Lafayette Leopards
+1045,2275,155,Hofstra Pride
+1031,2523,155,Robert Morris Colonials
+945,104,155,Boston University Terriers
+978,2579,155,South Carolina Gamecocks
+1016,135,155,Minnesota Golden Gophers
+1084,45,155,George Washington Colonials
+859,2572,155,Southern Miss Golden Eagles
+871,3084,155,Utah Valley Wolverines
+838,2870,155,Purdue Fort Wayne Mastodons
+763,93,155,Murray State Racers
+840,2571,155,South Dakota State Jackrabbits
+850,27,155,UC Riverside Highlanders
+847,300,155,UC Irvine Anteaters
+956,2174,154,Detroit Mercy Titans
+963,2674,154,Valparaiso Beacons
+1080,113,154,Massachusetts Minutemen
+950,2272,154,High Point Panthers
+849,13,154,Cal Poly Mustangs
+1055,2501,154,Portland Pilots
+939,2426,154,Navy Midshipmen
+900,2065,154,Bethune-Cookman Wildcats
+825,151,154,East Carolina Pirates
+852,2239,154,Cal State Fullerton Titans
+1093,2514,154,Quinnipiac Bobcats
+868,295,154,Old Dominion Monarchs
+806,2692,154,Weber State Wildcats
+799,290,154,Georgia Southern Eagles
+861,98,154,Western Kentucky Hilltoppers
+1079,227,154,Rhode Island Rams
+819,202,154,Tulsa Golden Hurricane
+913,59,154,Georgia Tech Yellow Jackets
+892,2011,154,Alabama State Hornets
+921,87,154,Notre Dame Fighting Irish
+836,2193,153,East Tennessee State Buccaneers
+1059,301,153,San Diego Toreros
+1026,2529,153,Sacred Heart Pioneers
+973,2005,153,Air Force Falcons
+766,2057,153,Belmont Bruins
+952,2427,153,UNC Asheville Bulldogs
+962,2754,153,Youngstown State Penguins
+1019,2619,153,Stony Brook Seawolves
+1082,2325,153,La Salle Explorers
+776,79,153,Southern Illinois Salukis
+832,2747,152,Wofford Terriers
+814,149,152,Montana Grizzlies
+972,2751,152,Wyoming Cowboys
+870,2130,152,Chicago State Cougars
+1078,2230,152,Fordham Rams
+958,2739,152,Green Bay Phoenix
+961,2473,152,Oakland Golden Grizzlies
+762,2546,152,Southeast Missouri State Redhawks
+855,2638,152,UTEP Miners
+1058,2351,152,Loyola Marymount Lions
+1053,2182,152,Drexel Dragons
+1000,189,152,Bowling Green Falcons
+893,2400,151,Mississippi Valley State Delta Devils
+1046,256,151,James Madison Dukes
+797,2653,151,Troy Trojans
+813,155,151,North Dakota Fighting Hawks
+1062,279,151,Pacific Tigers
+815,70,151,Idaho Vandals
+1090,2368,151,Marist Red Foxes
+1098,315,151,Niagara Purple Eagles
+1097,2612,151,St. Peter's Peacocks
+1089,2520,151,Rider Broncs
+848,2540,151,UC Santa Barbara Gauchos
+1088,2099,151,Canisius Golden Griffins
+858,276,151,Marshall Thundering Herd
+854,62,151,Hawaii Warriors
+793,6,150,South Alabama Jaguars
+992,2199,150,Eastern Michigan Eagles
+770,2198,150,Eastern Kentucky Colonels
+834,2535,150,Samford Bulldogs
+830,2430,150,UNC Greensboro Spartans
+906,2154,150,Coppin State Eagles
+1050,111,150,Northeastern Huskies
+812,253,150,Southern Utah Thunderbirds
+1427,28,150,UC San Diego Tritons
+820,2655,150,Tulane Green Wave
+833,2382,150,Mercer Bears
+897,2582,150,Southern University Jaguars
+863,2348,149,Louisiana Tech Bulldogs
+1827,2900,149,St. Thomas Tommies
+866,242,149,Rice Owls
+955,2515,149,Radford Highlanders
+792,2031,149,Little Rock Trojans
+877,2545,149,Southeastern Louisiana Lions
+1001,2084,149,Buffalo Bulls
+942,349,149,Army Black Knights
+1033,2115,149,Central Connecticut State Blue Devils
+934,288,149,Lipscomb Bisons
+1051,2729,149,William & Mary Tribe
+1034,161,149,Fairleigh Dickinson Knights
+843,2449,148,North Dakota State Bison
+930,338,148,Kennesaw State Owls
+1049,2210,148,Elon Phoenix
+839,2437,148,Omaha Mavericks
+841,2172,148,Denver Pioneers
+881,2916,148,Incarnate Word Cardinals
+1021,2378,148,UMBC Retrievers
+886,2110,148,Central Arkansas Bears
+889,357,148,Texas A&M-CC Islanders
+769,2565,148,SIU-Edwardsville Cougars
+764,2634,148,Tennessee State Tigers
+991,193,148,Miami (OH) RedHawks
+884,2447,147,Nicholls State Colonels
+948,2097,147,Campbell Fighting Camels
+938,107,147,Holy Cross Crusaders
+908,2450,147,Norfolk State Spartans
+887,2443,147,LSU New Orleans Privateers
+1398,2453,147,North Alabama Lions
+1698,3101,147,Utah Tech Trailblazers
+771,2635,147,Tennessee Tech Golden Eagles
+880,2466,147,Northwestern State Demons
+801,2026,147,Appalachian State Mountaineers
+888,2320,147,Lamar Cardinals
+765,2630,147,Tennessee-Martin Skyhawks
+964,82,147,UIC Flames
+864,2636,147,UTSA Roadrunners
+1020,399,147,Albany Great Danes
+808,304,147,Idaho State Bengals
+998,2117,147,Central Michigan Chippewas
+878,2617,147,Stephen F. Austin Lumberjacks
+1002,2711,146,Western Michigan Broncos
+879,2534,146,Sam Houston Bearkats
+895,2504,146,Prairie View A&M Panthers
+907,2569,146,South Carolina State Bulldogs
+904,2448,146,North Carolina A&T Aggies
+931,56,146,Stetson Hatters
+936,2352,146,Loyola (MD) Greyhounds
+795,326,146,Texas State Bobcats
+828,2643,146,The Citadel Bulldogs
+890,2029,146,Arkansas-Pine Bluff Golden Lions
+869,2934,146,Cal State Bakersfield Roadrunners
+883,2000,146,Abilene Christian Wildcats
+831,2717,146,Western Carolina Catamounts
+865,2229,146,Florida International Golden Panthers
+1094,2363,145,Manhattan Jaspers
+760,55,145,Jacksonville State Gamecocks
+1029,2803,145,Bryant Bulldogs
+993,2050,145,Ball State Cardinals
+901,2261,145,Hampton Pirates
+902,47,145,Howard Bison
+809,2502,145,Portland State Vikings
+805,16,145,Sacramento State Hornets
+851,302,145,UC Davis Aggies
+767,2046,144,Austin Peay Governors
+997,2459,144,Northern Illinois Huskies
+951,2127,144,Charleston Southern Buccaneers
+953,2506,144,Presbyterian Blue Hose
+947,2344,144,Longwood Lancers
+928,2454,144,North Florida Ospreys
+940,2329,144,Lehigh Mountain Hawks
+794,2433,144,Louisiana-Monroe Warhawks
+844,233,144,South Dakota Coyotes
+949,2241,143,Gardner-Webb Runnin' Bulldogs
+929,2908,143,USC Upstate Spartans
+827,2678,143,VMI Keydets
+1450,91,143,Bellarmine Knights
+1572,2627,143,Tarleton State Texans
+837,198,143,Oral Roberts Golden Eagles
+1017,311,143,Maine Black Bears
+842,85,143,IU Indianapolis Jaguars
+802,2247,143,Georgia State Panthers
+874,140,143,Kansas City Roos
+932,2885,143,N.J.I.T. Highlanders
+1032,112358,142,LIU Sharks
+1030,2598,142,St. Francis (PA) Red Flash
+875,292,142,Texas Rio Grande Valley Vaqueros
+800,250,142,Texas-Arlington Mavericks
+872,166,141,New Mexico State Aggies
+1022,2349,141,UMass Lowell River Hawks
+1039,43,141,Yale Bulldogs
+796,324,141,Coastal Carolina Chanticleers
+935,294,140,Jacksonville Dolphins
+761,2197,140,Eastern Illinois Panthers
+845,2710,139,Western Illinois Leathernecks
+1023,160,139,New Hampshire Wildcats
+912,2169,138,Delaware State Hornets
+909,50,138,Florida A&M Rattlers
+882,2277,137,Houston Christian Huskies
+1025,2066,136,Binghamton Bearcats
+905,2415,135,Morgan State Bears
+1043,163,135,Princeton Tigers
+1042,219,134,Pennsylvania Quakers
+1036,225,133,Brown Bears
+911,2428,133,North Carolina Central Eagles
+1470,2511,130,Queens Royals
+1027,2681,130,Wagner Seahawks
+910,2379,130,Maryland-Eastern Shore Hawks
+1038,172,130,Cornell Big Red
+1037,108,129,Harvard Crimson
+1575,2837,124,East Texas A&M Lions
+1040,171,124,Columbia Lions
+1041,159,122,Dartmouth Big Green
+1604,284,119,Stonehill Skyhawks
+1477,2815,118,Lindenwood Lions
+1455,88,114,Southern Indiana Screaming Eagles
+1606,2330,89,Le Moyne Dolphins
+1672,2385,58,Mercyhurst Lakers
+1405,2698,58,West Georgia Wolves
+1035,2597,56,St. Francis (BKN) Terriers
+1024,42,55,Hartford Hawks
+1601,2441,29,New Haven Chargers
+2505,2648,19,Toccoa Falls Eagles
+2504,3117,18,Carver Cougars
+2672,2027,12,Arkansas Baptist Buffaloes
+4381,3134,12,Champion Christian College
+3265,484,10,Alice Lloyd Eagles
+1700,2124,10,Chaminade Silverswords
+2508,3158,9,Our Lady of the Lake Saints
+4366,109670,8,Life Pacific College
+4355,124946,8,Lincoln (CA) Oaklanders
+4370,3167,8,La Sierra University
+4382,3077,8,Kentucky Christian
+1473,2913,8,Brevard College Tornadoes
+1588,53,7,Florida Tech Panthers
+2679,124942,7,Mary Baldwin Fighting Squirrels
+1706,3164,6,Central Penn College Knights
+2677,124809,6,Miami-Hamilton Harriers
+3926,2062,6,Bethany (WV) Bison
+1716,3083,6,Oakwood University Ambassadors
+1830,101,5,Eureka Red Devils
+3659,2562,5,Siena Heights Saints

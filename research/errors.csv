@@ -2624,3 +2624,6 @@ at_et,part,error
 2026-11-05 00:40,minutes 401909934,ValueError: could not convert string to float: '-'
 2026-11-05 00:40,props 22600187 page 1,HTTPError: HTTP Error 404: Not Found
 2026-11-05 00:40,props 22600188 page 1,HTTPError: HTTP Error 404: Not Found
+2026-11-05 00:45,minutes 401909934,ValueError: could not convert string to float: '-'
+2026-11-05 00:45,props 22600187 page 1,HTTPError: HTTP Error 404: Not Found
+2026-11-05 00:45,props 22600188 page 1,HTTPError: HTTP Error 404: Not Found

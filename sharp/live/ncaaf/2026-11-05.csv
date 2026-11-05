@@ -498,3 +498,6 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-05 18:43:00,289896,2026-11-08T03:30:00.000Z,Oregon State Beavers,Texas State Bobcats,5679,cons,-6.5,-110.0,70.5,-112.0,-235.0,190.0,0.0,0.0,29.0,64.0,93.0,95.0
 2026-11-05 18:47:00,289826,2026-11-06T01:00:00.000Z,Southern Miss Golden Eagles,James Madison Dukes,11925,fd,13.5,-110.0,57.5,-112.0,420.0,-550.0,,,,,,
 2026-11-05 18:47:00,289843,2026-11-07T20:30:00.000Z,LSU Tigers,Alabama Crimson Tide,13298,cons,-6.5,-112.0,52.5,-111.0,-235.0,190.0,15.0,14.0,10.0,16.0,58.0,22.0
+2026-11-05 18:48:00,289825,2026-11-06T00:30:00.000Z,Florida Atlantic Owls,UTSA Roadrunners,24683,cons,7.0,-110.0,71.5,-118.0,225.0,-275.0,54.0,64.0,16.0,46.0,11.0,5.0
+2026-11-05 18:48:00,289826,2026-11-06T01:00:00.000Z,Southern Miss Golden Eagles,James Madison Dukes,11925,cons,13.5,-111.0,57.5,-118.0,425.0,-575.0,36.0,45.0,12.0,17.0,4.0,8.0
+2026-11-05 18:48:00,289845,2026-11-07T18:00:00.000Z,Coastal Carolina Chanticleers,Old Dominion Monarchs,1433,cons,-6.5,-110.0,44.5,-108.0,-245.0,200.0,0.0,0.0,82.0,82.0,99.0,60.0

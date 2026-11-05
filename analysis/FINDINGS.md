@@ -1,5 +1,42 @@
 # Research findings log
 
+Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
+every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
+
+## 2026-11-05: Record-everything rule (all sports) [DECISION]
+- Jeffrey: every test and every inference, lead, association, correlation, causal claim and idea gets saved in an organized way.
+- Decision: `CLAUDE.md` added to nba/nhl/nfl-mixed-model (loaded at the start of every session in those repos) with the rule, where
+  each kind of record goes, the entry template and TYPE labels ([TEST] [OBSERVATION] [CORRELATION] [CAUSAL] [LEAD] [IDEA] [DECISION]).
+  This file stays the master log; open ideas also go in each repo's `research/IDEAS_AND_CHECKLIST.md`.
+
+## 2026-11-05: NHL puck line EV in 1-point bands at the DK opener (NHL) [TEST] [LEAD]
+- Question: the Nov 4 audit lumped puck lines at EV 6-9% (514 bets, -11.1u) and moved the bar to 9%. Is 8-9% any better than 6-8%?
+- Data / method: shot model walk-forward predictions at DK's opening puck line (+/-1.5), 2021-22..2025-26, one-day info lag, better
+  EV side per game, 2nd night of a back-to-back removed. Same predictions as `rule_audit_nhl.py` (reproduces it: 6-9% 513 bets -12.1u).
+- Result (all puck lines): 6-7% 203 bets -1.7%; 7-8% 165 -3.0%; **8-9% 145 bets 49.0%, -3.8u (-2.6%), negative 3 of 5 seasons**;
+  9-10% 98 +33.6%; 10-12% 193 +20.8%; 12-15% 165 -5.8%; 15%+ 280 +8.6%. EV 8%+ 881 bets +84.0u (+9.5%) vs 9%+ 736 bets +87.8u (+11.9%).
+- By side: -1.5 bets at 8-9% 80 bets +2.4% (6-8%: clearly negative); +1.5 bets at 8-9% 65 bets -8.9% (but +1.5 at 6-7% was +9.3%).
+- Read: 8-9% looks like the rest of 6-9%, not like 9%+. Lowering the bar to 8% adds 145 bets and loses units. The bands above 9% are
+  not monotone (12-15% loses), so differences between single 1-point bands are mostly noise: a 145-bet band at these prices has a
+  standard error of about +/-10% ROI. The 9% cutoff itself was chosen on these same seasons (in-sample).
+- [CORRELATION] Within 9%+, ROI does not rise with EV; higher model EV is not reliably more profit at the top end.
+- [LEAD] The -1.5 and +1.5 sides may need different bars (+1.5 at 6-8% was mildly positive, -1.5 at 6-8% clearly negative).
+  In-sample and small; re-test on 2026-27 using the TEST rows the live code already logs for puck lines at EV 6-9%.
+- Decision: nothing changes; puck line bar stays 9%.
+- Files: nhl-mixed-model `analysis/pl_ev_bands.py`, `analysis/pl_ev_bands_output.txt`.
+
+## 2026-11-05: Goalie announcements flipping NHL bet alerts; alerts now show EV by starter (NHL) [OBSERVATION] [DECISION]
+- Observation: UTA -1.5 (+210) alerted 12:27 PM at EV +10.2% with Vejmelka expected (model's goalie mix: Vejmelka 60%, Cossa 40%).
+  Cossa was confirmed 13 min later; EV fell to +8.9%, under the 9% bar (DON'T BET 12:40 PM). Jeffrey had already bet it at +205.
+- Observation: SJ @ MIN, MIN -1.5 (-108), alerted at EV +12.8% with Wallstedt expected; with Pickard it would be +3.3% (not a bet).
+  ANA @ CGY over 6.5 (+100), EV +6.4% with Wolf: Cooley +3.1% (not a bet), Sergeev +6.7%; ANA Brossoit vs Husso and SJ
+  Nedeljkovic vs Askarov moved EV under 1 point. Some backup starts swing a bet more than any other input; most don't.
+- Decision (Jeffrey): bet alerts show "EV by starter" for every goalie not yet confirmed (each likely starter with 10%+ share,
+  ✅ if still a bet at the alert's price). Removed from bet alerts: line history, injury news, missing skaters, schedule note,
+  running record, record bucket and projected score (all still used by the model and logged). nhl-mixed-model `alert.py`, commit 5a5dc96.
+- [IDEA] Bets whose EV clears the bar under only one possible starter could wait for confirmation, or be graded as their own
+  group. Test: in the backtests, split opener bets by whether the bet survives every likely goalie, and compare records.
+
 ## 2026-11-05: Market models step 3, movement model for DK NBA totals (pre-registered, fd8a220)
 - Boosted model of DK close - DK now from same-snapshot inputs removes 6.7% of the error vs "no move" on 2025-26.
 - Bet the first time the predicted move is 1.5+: 2025-26 573 bets, **CLV +1.52 ± 0.13 (break-even +1.07), -8.7u, 51.8%**

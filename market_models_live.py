@@ -103,9 +103,32 @@ def an_now():
     x["home"] = x.home.map(inv); x["away"] = x.away.map(inv)
     x = x.dropna(subset=["home", "away", "value"])
     stamp = pd.Timestamp(NOW).tz_localize(ET).tz_convert("UTC").strftime("%Y-%m-%dT%H:%M:%SZ")
-    return pd.DataFrame(dict(snapshot_utc=stamp, event_id="an" + x.an_game_id.astype(str), commence_et=x.start_et.astype(str),
-                             home=x.home, away=x.away, book=x.book.map(C.AN_NAME), market="totals",
-                             outcome=x.side.str.capitalize(), price=x.odds, point=x.value))[C.COLS]
+    out = pd.DataFrame(dict(snapshot_utc=stamp, event_id="an" + x.an_game_id.astype(str), commence_et=x.start_et.astype(str),
+                            home=x.home, away=x.away, book=x.book.map(C.AN_NAME), market="totals",
+                            outcome=x.side.str.capitalize(), price=x.odds, point=x.value))[C.COLS]
+    return with_direct_dk(out, inv, stamp)
+
+
+def with_direct_dk(out, inv, stamp):
+    """Nov 5, 2026: the DraftKings rows come from DraftKings' own feed, not Action Network (stale / unposted lines). Games DraftKings has
+    not posted get no DraftKings row, so the panel drops them. Other books (FanDuel, Pinnacle, consensus) stay Action Network's.
+    If the direct fetch fails the Action Network rows are kept."""
+    try:
+        import dk_direct
+        D = dk_direct.now("nba")
+        if not len(D): return out
+        T = D[(D.market == "Total") & D.outcome.isin(["Over", "Under"])]
+        dkb = C.AN_NAME.get("DraftKings", "draftkings")
+        tipmap = {(h, a): c for h, a, c in zip(out.home, out.away, out.commence_et)}          # keep Action Network's tip time where it has the game
+        rows = [dict(snapshot_utc=stamp, event_id="dk" + str(r.event_id), commence_et=tipmap.get((inv.get(r.home), inv.get(r.away)), r.start_et),
+                     home=inv.get(r.home), away=inv.get(r.away),
+                     book=dkb, market="totals", outcome=r.outcome, price=r.price, point=r.points) for r in T.itertuples()]
+        out = out[out.book != dkb]
+        if rows: out = pd.concat([out, pd.DataFrame(rows).dropna(subset=["home", "away"])[C.COLS]], ignore_index=True)
+        p(f"DraftKings rows from the direct feed: {len(T) // 2} games")
+    except Exception as ex:
+        p("direct DraftKings rows failed, keeping Action Network's:", type(ex).__name__, str(ex)[:80])
+    return out
 
 
 # ------------------------------------------------------------------ fit (morning)
@@ -170,6 +193,17 @@ def update_first_seen(an):
     x["point"] = x.value
     x["lead_h"] = (x.tip - x.snap).dt.total_seconds() / 3600
     new = x[~x.key.isin(set(FS.key))]
+    try:                                    # Nov 5, 2026: a new game's first line is the first one DraftKings' own feed shows (Action Network's "opener"
+        import dk_direct                    #   was a stale number for CLE-PHI / LAL-POR); games not on the direct feed wait. Fetch fails -> unchanged.
+        D = dk_direct.now("nba")
+        if len(D):
+            T = D[(D.market == "Total") & (D.outcome == "Over")]
+            dmap = {f"{r.date}|{r.home}|{r.away}": r.points for r in T.itertuples()}
+            new = new[new.key.isin(dmap)].copy()
+            new["point"] = new.key.map(dmap); new["snap"] = pd.Timestamp(NOW)
+            new["lead_h"] = (new.tip - pd.Timestamp(NOW)).dt.total_seconds() / 3600
+    except Exception as ex:
+        p("direct first-seen failed, using Action Network's:", type(ex).__name__, str(ex)[:80])
     if len(new):
         FS = pd.concat([FS, new.assign(snap_et=new.snap.astype(str).str[:19], tip=new.tip.astype(str))[FS.columns]], ignore_index=True)
         save_csv(FS, path)

@@ -793,3 +793,4 @@ game_id,market,seen_at_et,line,open_line,source
 22600027,total,2026-11-05 17:40,230.5,233.5,actionnetwork
 22600030,spread,2026-11-05 18:00,7.5,7.5,actionnetwork
 22600027,total,2026-11-05 18:45,229.5,233.5,dkdirect
+22600031,total,2026-11-05 18:50,228.5,229.5,dkdirect

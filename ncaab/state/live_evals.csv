@@ -6,3 +6,12 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-05 18:45,297395,Purdue Boilermakers,Valparaiso Beacons,-19.5,26.61,29.4,21.52,20.2,0.7,PASS,a team has under 3 games
 2026-11-05 18:45,297393,Ball State Cardinals,Indiana State Sycamores,-2.5,8.32,9.22,8.93,3.36,0.86,PASS,a team has under 3 games
 2026-11-05 18:45,297402,Elon Phoenix,UNC Greensboro Spartans,-7.5,12.77,9.84,12.58,8.16,0.66,PASS,a team has under 3 games
+2026-11-05 18:50,297387,Xavier Musketeers,Eastern Michigan Eagles,-20.5,20.22,17.61,18.86,20.41,-0.09,PASS,edge 0.09 < 0.5
+2026-11-05 18:50,297396,North Carolina State Wolfpack,East Tennessee State Buccaneers,-16.5,18.12,16.31,23.01,17.32,0.82,PASS,a team has under 3 games
+2026-11-05 18:50,297401,Kentucky Wildcats,James Madison Dukes,-25.5,26.4,28.62,25.07,25.78,0.28,PASS,edge 0.28 < 0.5
+2026-11-05 18:50,297408,Georgia Tech Yellow Jackets,Georgia Southern Eagles,-16.5,14.74,13.96,13.92,16.27,-0.23,PASS,edge 0.23 < 0.5
+2026-11-05 18:50,297412,UCF Knights,Yale Bulldogs,-8.5,9.92,14.6,16.66,9.57,1.07,PASS,a team has under 3 games
+2026-11-05 18:50,297611,Florida State Seminoles,Troy Trojans,-20.5,21.87,17.67,16.81,20.21,-0.29,PASS,edge 0.29 < 0.5
+2026-11-05 18:50,297618,North Carolina Tar Heels,Wofford Terriers,-22.5,22.92,21.11,22.11,22.62,0.12,PASS,edge 0.12 < 0.5
+2026-11-05 18:50,301288,Kennesaw State Owls,Austin Peay Governors,-6.5,12.58,8.73,8.58,6.83,0.33,PASS,edge 0.33 < 0.5
+2026-11-05 18:50,297405,Alabama Crimson Tide,Arkansas State Red Wolves,-25.5,25.85,28.55,25.18,25.79,0.29,PASS,edge 0.29 < 0.5

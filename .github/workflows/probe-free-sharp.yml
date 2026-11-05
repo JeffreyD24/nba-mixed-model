@@ -4,12 +4,17 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
     steps:
-      - name: Kalshi fields, Polymarket v2 trades and game markets
+      - name: History depth and bet sizes (Kalshi, Polymarket)
         run: |
-          curl -sS -m 20 "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBATOTAL&status=open&limit=1" | python3 -c "import json,sys; m=json.load(sys.stdin)['markets'][0]; print('KALSHI', {k: v for k, v in m.items() if not isinstance(v, (list, dict))})"
-          curl -sS -m 20 "https://api.elections.kalshi.com/trade-api/v2/markets/trades?ticker=$(curl -sS -m 20 'https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBAGAME&status=open&limit=1' | python3 -c "import json,sys; print(json.load(sys.stdin)['markets'][0]['ticker'])")&limit=2" | head -c 500; echo
-          for u in "https://data-api.polymarket.com/v2/trades?limit=2" "https://data-api.polymarket.com/v2/trades?limit=2&takerOnly=true" "https://data-api.polymarket.com/trades/v2?limit=2"; do echo "POLY $u"; curl -sS -m 20 "$u" | head -c 700; echo; done
-          echo "POLY games"; curl -sS -m 20 "https://gamma-api.polymarket.com/events?tag_slug=games&closed=false&limit=200" | python3 -c "import json,sys; d=json.load(sys.stdin); print(len(d)); [print(' ', e.get('title'), round(e.get('volume') or 0), e.get('slug')) for e in d[:12]]"
-          curl -sS -m 20 "https://gamma-api.polymarket.com/sports" | head -c 800; echo
+          K=https://api.elections.kalshi.com/trade-api/v2
+          echo "KALSHI settled NBA game markets (oldest page):"; curl -sS -m 30 "$K/markets?series_ticker=KXNBAGAME&status=settled&limit=1000" | python3 -c "import json,sys; d=json.load(sys.stdin); m=d.get('markets',[]); t=sorted(x.get('close_time','') for x in m); print(len(m), 'cursor' if d.get('cursor') else 'no-more', t[:1], t[-1:])"
+          T=$(curl -sS -m 30 "$K/markets?series_ticker=KXNBAGAME&status=settled&limit=1" | python3 -c "import json,sys; print(json.load(sys.stdin)['markets'][0]['ticker'])"); echo "KALSHI trades for settled $T:"; curl -sS -m 30 "$K/markets/trades?ticker=$T&limit=1000" | python3 -c "import json,sys; d=json.load(sys.stdin)['trades']; import statistics as s; c=[float(x['count_fp']) for x in d]; print(len(d), 'trades; contracts per trade median', s.median(c) if c else None, 'max', max(c) if c else None)"
+          for s in KXNHLGAME KXNFLGAME KXNCAAMBGAME KXNCAAFGAME; do printf "KALSHI $s settled: "; curl -sS -m 30 "$K/markets?series_ticker=$s&status=settled&limit=1000" | python3 -c "import json,sys; m=json.load(sys.stdin).get('markets',[]); t=sorted(x.get('close_time','') for x in m); print(len(m), t[:1])"; done
+          P=https://gamma-api.polymarket.com
+          curl -sS -m 30 "$P/sports" | python3 -c "import json,sys; d=json.load(sys.stdin); [print('POLY sport', x['sport'], 'series', x.get('series'), 'tags', x.get('tags')) for x in d if x['sport'] in ('nba','nhl','nfl','cbb','ncaab','cfb','ncaaf')]"
+          SER=$(curl -sS -m 30 "$P/sports" | python3 -c "import json,sys; print([x for x in json.load(sys.stdin) if x['sport']=='nba'][0]['series'])")
+          curl -sS -m 30 "$P/events?series_id=$SER&closed=true&limit=500&order=startDate&ascending=true" | python3 -c "import json,sys; d=json.load(sys.stdin); print('POLY closed NBA events', len(d), 'oldest', [(e.get('title'), e.get('startDate'), round(e.get('volume') or 0)) for e in d[:2]])"
+          CID=$(curl -sS -m 30 "$P/events?series_id=$SER&closed=true&limit=50&order=volume&ascending=false" | python3 -c "import json,sys; d=json.load(sys.stdin); e=d[0]; print(e['markets'][0]['conditionId'])")
+          curl -sS -m 30 "https://data-api.polymarket.com/v2/trades?market=$CID&limit=500" | python3 -c "import json,sys; d=json.load(sys.stdin).get('data',[]); import collections; w=collections.Counter(x['proxy_wallet'] for x in d); sz=sorted(x['size']*x['price'] for x in d); print('POLY trades in a big closed NBA market', len(d), 'distinct wallets', len(w), 'largest \$ trades', [round(v) for v in sz[-3:]], 'title', d[0]['title'] if d else '')"

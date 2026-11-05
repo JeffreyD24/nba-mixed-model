@@ -18,7 +18,16 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
   −4.64%. All three pre-registered checks pass. FanDuel openers +78.5u (+9.3%) vs DraftKings +7.2u (+0.9%); 95% unders.
 - Read: out-of-sample, two unseen seasons positive, consistent with the 11 AM result: an early-market edge, mostly FanDuel unders.
   Caveat: two bug fixes made after run 1 (documented above); CLV only clears 0 after the over-lean adjustment.
-- Decision: pending the Fable review; then Jeffrey decides on a PROVISIONAL record. Nothing live yet.
+- Fable review (research/props/reviews/FABLE_REVIEW_PROPS_V1B_OPENER_2026-11-05.md): no look-ahead; both fixes legitimate (filter drops
+  5 + 49 test rows). But the evidence is thinner than the checks suggest: 55% of test profit is one slice (FanDuel openers posted <4h
+  before tip, 2023-24: 132 bets +47u, CLV ~0); check 2 is a coin flip (lean-adj close-EV +0.41% [-0.70, +1.53]); 2023-24 is
+  semi-in-sample (var_ab fit on its box scores), so the only clean season is 2024-25 (+18.5u on 506, CI [-3.9, +12.2]); the bet set is
+  a knife-edge in w; 6 bets on a 0.0 line (data bug). Test-season slices: FD openers 4h+ before tip 604 bets +25.1u, lean-adj CLV +4.7%,
+  line moves our way +0.29 (the most credible slice, chosen after the fact); DK 4h+ 688 bets +37.8u, CLV -2.3%; DK late -30.6u.
+- [LEAD] April loses in 3 of 4 seasons (-16.7, -17.2, -23.7, +4.2u; Oct-Mar positive every season); possible mechanism: minutes
+  projections lag end-of-season role changes. Post-hoc; must be declared before any first bet if used as a rule.
+- Decision: not live. Offered to Jeffrey: a FanDuel-only PROVISIONAL (opener posted 4h+ before tip, line >= 0.5, standard stop lines,
+  own record) or keep it on paper. Awaiting his choice.
 
 ## 2026-11-05: NBA props — past prop lines found; unders rule; props v2; v1b timing [TEST] [DATA] [DECISION]
 - Data: free past prop lines from BettingPros' public web API, Dec 2021 – Nov 2026 (closes per book + opener; 2.6M book-lines),

@@ -71,6 +71,8 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [ ] Model-selected unders (v2 unders +2.4/+7.9/+10.5/+8.1% in 2022-26; found after the fact): pre-register and test on 2021-22
       (DraftKings only) and leave-one-season-out, not on 2026-27.
 - [ ] Same opener data: does the model predict the opener → close move (true CLV for props)?
+- [ ] [LEAD] Props in April lose 3 of 4 seasons (−53u on 486 bets): test an end-of-season minutes fix (role changes, rest) on 2021-25.
+- [ ] Re-fit var_ab on 2021-22 box scores only so 2023-24 becomes a clean test season for v1b at the opener.
 
 ## When to switch to Opus
 Switch for: (1) the independent leakage audit, (2) choosing shrink thresholds and bet rules without overfitting, (3) any redesign of how

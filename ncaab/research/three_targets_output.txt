@@ -1,0 +1,37 @@
+games: fit DK 2023-24 4659, TEST DK 2025-26 4472, ESPN BET 2024-25 4952
+
+=================== SPREAD ===================
+A. RESULTS (RMSE vs actual, lower = better). ENS weights (const, M2, M8, MKT) fit 2023-24: [-1.306, 0.597, -0.019, 0.545]
+  TEST DK 2025-26: M1 11.60  M2 11.60  M8 11.55  MKT 11.67  ENS 11.47  | DK opener 11.27  close 11.22
+  ESPN BET 2024-25: M1 11.56  M2 11.56  M8 11.48  MKT 11.69  ENS 11.46  | DK opener 11.24  close 11.16
+B. DRAFTKINGS' OPENER (RMSE vs the opener). Blend (const, MKT, M2, M8) fit 2023-24: [-0.811, 0.425, 0.561, 0.032]
+  TEST DK 2025-26: M1 2.72  M2 2.72  M8 2.55  MKT 3.32  BLEND 2.36
+  ESPN BET 2024-25 opener: M1 2.82  M2 2.82  M8 2.67  MKT 3.34  BLEND 2.46
+C. THE CLOSE (from DK's opener). 2023-24 cross-validated RMSE of close: C0 1.541  C1 1.527  C2 1.502  C3 1.498  C4 1.497 -> chosen C4
+  C4 coefficients: [0.131, 0.051, 0.096, -0.065, -0.156, 0.216, -0.113, -0.05, 0.108, -0.03, 0.207, -0.273, 0.199]
+  TEST DK 2025-26 RMSE vs close: C0 1.532  C1 1.523 (corr +0.16)  C2 1.488 (corr +0.27)  C3 1.487 (corr +0.26)  C4 1.485 (corr +0.26)
+  ESPN BET 2024-25 RMSE vs close: C0 1.523  C1 1.511 (corr +0.13)  C2 1.498 (corr +0.18)  C3 1.494 (corr +0.19)  C4 1.504 (corr +0.17)
+  fit 2023-24 |pred move| >= 0.5: 847 bets, CLV +0.75, open +18.7u, close -18.9u, win 53.6%
+  fit 2023-24 |pred move| >= 1: 93 bets, CLV +0.98, open +9.3u, close -2.3u, win 57.8%
+  fit 2023-24 |pred move| >= 1.5: 5 bets, CLV +1.70, open +0.7u, close +0.7u, win 60.0%
+  fit 2023-24 |pred move| >= 2: 0 bets, CLV +nan, open +0.0u, close +0.0u, win nan%
+  TEST 2025-26 at k 0.5: 797 bets 52.6%, CLV +0.65 [low +0.53] vs 0.63, open +2.9u, close -18.1u -> PASS -> PROVISIONAL candidate (Fable first)
+  (ESPN BET 2024-25, decides nothing): 910 bets 53.1%, CLV +0.42, open +12.1u, close -9.1u
+
+=================== TOTAL ===================
+A. RESULTS (RMSE vs actual, lower = better). ENS weights (const, M2, M8, MKT) fit 2023-24: [4.643, 0.572, 0.08, 0.321]
+  TEST DK 2025-26: M1 17.33  M2 17.30  M8 17.35  MKT 17.57  ENS 17.24  | DK opener 17.18  close 16.96
+  ESPN BET 2024-25: M1 16.75  M2 16.77  M8 16.78  MKT 16.99  ENS 16.69  | DK opener 16.45  close 16.26
+B. DRAFTKINGS' OPENER (RMSE vs the opener). Blend (const, MKT, M2, M8) fit 2023-24: [9.062, 0.138, 0.839, -0.04]
+  TEST DK 2025-26: M1 3.87  M2 3.28  M8 4.10  MKT 5.07  BLEND 3.10
+  ESPN BET 2024-25 opener: M1 3.62  M2 3.30  M8 3.75  MKT 4.54  BLEND 3.06
+C. THE CLOSE (from DK's opener). 2023-24 cross-validated RMSE of close: C0 2.449  C1 2.399  C2 2.279  C3 2.280  C4 2.264 -> chosen C4
+  C4 coefficients: [-0.096, -0.395, 0.114, 0.691, 0.369, 0.03, 0.518, 0.017, 0.067, 0.088, -0.615, -0.079, -0.73]
+  TEST DK 2025-26 RMSE vs close: C0 2.670  C1 2.651 (corr +0.15)  C2 2.490 (corr +0.36)  C3 2.492 (corr +0.36)  C4 2.517 (corr +0.34)
+  ESPN BET 2024-25 RMSE vs close: C0 2.183  C1 2.188 (corr +0.14)  C2 2.168 (corr +0.21)  C3 2.169 (corr +0.21)  C4 2.146 (corr +0.24)
+  fit 2023-24 |pred move| >= 0.5: 2524 bets, CLV +1.11, open -58.9u, close -194.5u, win 51.1%
+  fit 2023-24 |pred move| >= 1: 1135 bets, CLV +1.56, open +24.4u, close -68.2u, win 53.5%
+  fit 2023-24 |pred move| >= 1.5: 486 bets, CLV +2.04, open -11.4u, close -62.8u, win 51.1%
+  fit 2023-24 |pred move| >= 2: 202 bets, CLV +2.54, open +15.6u, close -16.8u, win 56.4%
+  TEST 2025-26 at k 0.5: 2633 bets 51.7%, CLV +1.10 [low +0.99] vs 1.02, open -34.7u, close -149.3u -> FAIL -> TEST record
+  (ESPN BET 2024-25, decides nothing): 2708 bets 51.3%, CLV +0.57, open -58.2u, close -161.2u

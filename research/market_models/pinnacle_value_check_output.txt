@@ -1,0 +1,12 @@
+Pinnacle's value in the NBA totals movement model (Nov 5, 2026; Jeffrey asked how much we lose without Pinnacle)
+Both versions: same rule (first 1.5+ predicted move), honest timing (--reach: only snapshots after both teams' box scores, <= 48 h),
+trained 2022-23..2024-25, tested 2025-26. Script: research/market_models/export_movement_model.py [--an] --reach
+
+                                  2025-26 test                          2024-25 (fit season)
+With Pinnacle (10 books)          433 bets  CLV +1.43 (se 0.14)  -20.2u  50.1%    520 bets  CLV +1.81  +26.0u
+Without (Action Network, 5 books) 385 bets  CLV +1.31 (se 0.16)  -10.8u  51.2%    519 bets  CLV +1.59  +19.4u
+Difference                        +48 bets  CLV +0.12                              +1 bet   CLV +0.22
+
+Read: Pinnacle adds about 0.1-0.2 pts of CLV per bet (worth roughly +0.3-0.5% ROI at 2.2% win rate per point) and ~10% more bets.
+Units moved the other way in 2025-26 (noise at this sample size). Expected value of restoring Pinnacle for the NBA movement rule:
+on the order of +1-3 units a season. Small; the NFL movement model is where Pinnacle matters (its no-Pinnacle version failed).

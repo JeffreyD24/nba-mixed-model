@@ -200,7 +200,6 @@ key,status,snapshot
 2026-11-04|den|cameron johnson,Probable,2026-11-03_06_45PM
 2026-11-04|den|spencer jones,Out,2026-11-03_06_45PM
 2026-11-04|den|julian strawther,Out,2026-11-03_06_45PM
-2026-11-04|phx|jordan goodwin,Questionable,2026-11-03_07_00PM
 2026-11-04|phx|mark williams,Out,2026-11-03_07_00PM
 2026-11-04|por|jayson kent,Out,2026-11-03_07_15PM
 2026-11-04|por|ja morant,Out,2026-11-03_07_15PM
@@ -225,7 +224,6 @@ key,status,snapshot
 2026-11-04|min|terrence shannon,Out,2026-11-04_01_15PM
 2026-11-04|hou|clint capela,Out,2026-11-04_01_30PM
 2026-11-04|no|julian reese,Available,2026-11-04_01_30PM
-2026-11-04|dal|santi aldama,Doubtful,2026-11-04_02_00PM
 2026-11-05|orl|paolo banchero,Out,2026-11-04_02_00PM
 2026-11-05|orl|jonathan isaac,Out,2026-11-04_02_00PM
 2026-11-05|orl|noah penda,Out,2026-11-04_02_00PM
@@ -266,3 +264,6 @@ key,status,snapshot
 2026-11-05|gs|moses moody,Out,2026-11-04_07_30PM
 2026-11-05|gs|kristaps porzingis,Out,2026-11-04_07_30PM
 2026-11-05|gs|gui santos,Out,2026-11-04_07_30PM
+2026-11-04|phx|jordan goodwin,Out,2026-11-04_08_00PM
+2026-11-04|phx|drew timme,Out,2026-11-04_08_00PM
+2026-11-04|dal|santi aldama,Out,2026-11-04_08_00PM

@@ -1,0 +1,48 @@
+name: Past player props backfill by season (BettingPros, parallel)
+
+# One job per past season, so the backfill finishes in hours instead of a day. The original props-bettingpros.yml run works
+# newest-first through 2026-27 and 2025-26; these jobs cover 2021-22 .. 2024-25 (no date overlap, so no file conflicts).
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/props-bettingpros-seasons.yml"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  season:
+    strategy:
+      fail-fast: false
+      matrix:
+        range:
+          - "--from 2024-10-22 --to 2025-04-13"
+          - "--from 2023-10-24 --to 2024-04-14"
+          - "--from 2022-10-18 --to 2023-04-09"
+          - "--from 2021-12-01 --to 2022-04-10"
+    concurrency:
+      group: props-bp-${{ strategy.job-index }}
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas
+      - name: Download this season, saving after each batch
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git fetch -q origin main && git checkout -q -B main origin/main
+          START=$(date +%s)
+          while [ $(( $(date +%s) - START )) -lt 19800 ]; do
+            OUT=$(python props_bettingpros.py . ${{ matrix.range }} --max-dates 8 2>&1); RC=$?
+            echo "$OUT" | tail -3
+            git add data/props_history/bettingpros
+            if ! git diff --cached --quiet; then
+              git commit -q -m "BettingPros props: $(echo "$OUT" | grep -o '^[0-9-]*' | tail -1)"
+              for i in 1 2 3 4 5 6 7 8; do git pull --rebase --autostash -q origin main && git push -q origin main && break; sleep $((5 + RANDOM % 20)); done
+            fi
+            if [ $RC -ne 0 ] || echo "$OUT" | grep -q "already saved"; then break; fi
+          done

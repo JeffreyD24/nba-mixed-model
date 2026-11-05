@@ -37,6 +37,13 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
   research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
 
+## 2026-11-05: Sharp money tracker moved to about once a minute; OPEN_LEADS register + weekly recap (all sports) [DECISION]
+- Jeffrey: track closer to every minute; keep one place with every working lead and test, checked weekly.
+- Decision: `sharp/live_loop.sh` captures every 60 s for ~28 min per run, two runs an hour (`sharp-live.yml`, cron :01 and :31), commits every
+  ~5 min; signals recomputed every 5 min. GitHub's scheduler can't go below 5 minutes, hence the loop; gaps of a few minutes happen when
+  GitHub starts a run late. Register: betting-goals `OPEN_LEADS.md` (hand-kept active table + auto list from every IDEAS file and FINDINGS
+  [LEAD]/[IDEA] entries via `ops/build_open_leads.py`); scheduled task "Weekly recap: open leads", Sundays 6:41 PM ET.
+
 ## 2026-11-05: Paid Pinnacle feed stopped (credits ran out); Pinnacle API status; what Kalshi / Polymarket history holds (all sports) [OBSERVATION] [TEST] [LEAD]
 - Observation: The Odds API credits ran out, so `pinnacle_watch.py` stopped on Nov 5. Effect in nhl-mixed-model alert.py: the "Pinnacle
   disagrees" veto (line ~645, PIN_DISAGREE) only applies to games in state/pinnacle_now.json, so new games now get NHL moneyline BET alerts

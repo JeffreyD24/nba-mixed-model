@@ -1,7 +1,7 @@
-name: Sharp money tracker (all leagues, every 10 min)
+name: Sharp money tracker (all leagues, about every minute)
 on:
   schedule:
-    - cron: "3,13,23,33,43,53 * * * *"
+    - cron: "1,31 * * * *"      # each run loops ~28 min capturing once a minute (sharp/live_loop.sh)
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -11,17 +11,11 @@ concurrency:
 jobs:
   capture:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 33
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q pandas numpy
-      - name: Capture splits and lines, update signals
-        run: python sharp/live_capture.py .
-      - name: Save
-        run: |
-          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
-          git add sharp/live
-          git diff --cached --quiet || git commit -q -m "Sharp money live $(TZ=America/New_York date '+%F %H:%M')"
-          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break; sleep $((RANDOM % 15 + 5)); done
+      - name: Capture about once a minute for ~28 minutes
+        run: bash sharp/live_loop.sh

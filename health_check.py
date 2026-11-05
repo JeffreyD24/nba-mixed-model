@@ -42,7 +42,7 @@ if SPORT in ("nba", "nhl"):
 if SPORT in ("nfl", "nhl", "nba"):
     WORKFLOWS["live.yml"] = (30, "Live line recorder")
 if SPORT == "nba":   # Nov 5, 2026: live sharp-money tracker, all five leagues
-    WORKFLOWS["sharp-live.yml"] = (2, "Sharp money tracker (every 10 min)")
+    WORKFLOWS["sharp-live.yml"] = (2, "Sharp money tracker (about every minute)")
     STREAMS.update({"sharp/live/nba": (24, "Sharp money live captures", "warn")})
 if SPORT == "nba":
     WORKFLOWS["econ-gdp.yml"] = (14, "Economics (GDP) recorder")

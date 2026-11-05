@@ -6,9 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Kalshi and Polymarket public market data (no key)
+      - name: Kalshi fields, Polymarket v2 trades and game markets
         run: |
-          echo "== Kalshi series"; for s in KXNBAGAME KXNHLGAME KXNFLGAME KXNCAAMBGAME KXNCAAFGAME KXNBASPREAD KXNBATOTAL; do
-            printf "%s: " $s; curl -sS -m 20 "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=$s&status=open&limit=200" | python3 -c "import json,sys; d=json.load(sys.stdin); m=d.get('markets',[]); print(len(m), [(x.get('ticker'), x.get('yes_bid'), x.get('yes_ask'), x.get('volume')) for x in m[:2]])" || echo fail; done
-          echo "== Polymarket"; for t in nba nhl nfl ncaab cfb; do printf "%s: " $t; curl -sS -m 20 "https://gamma-api.polymarket.com/events?tag_slug=$t&closed=false&limit=100" | python3 -c "import json,sys; d=json.load(sys.stdin); print(len(d), [ (e.get('title'), e.get('volume')) for e in d[:2]])" || echo fail; done
-          echo "== Polymarket public trades sample (wallets visible)"; curl -sS -m 20 "https://data-api.polymarket.com/trades?limit=3" | head -c 600; echo
+          curl -sS -m 20 "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBATOTAL&status=open&limit=1" | python3 -c "import json,sys; m=json.load(sys.stdin)['markets'][0]; print('KALSHI', {k: v for k, v in m.items() if not isinstance(v, (list, dict))})"
+          curl -sS -m 20 "https://api.elections.kalshi.com/trade-api/v2/markets/trades?ticker=$(curl -sS -m 20 'https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBAGAME&status=open&limit=1' | python3 -c "import json,sys; print(json.load(sys.stdin)['markets'][0]['ticker'])")&limit=2" | head -c 500; echo
+          for u in "https://data-api.polymarket.com/v2/trades?limit=2" "https://data-api.polymarket.com/v2/trades?limit=2&takerOnly=true" "https://data-api.polymarket.com/trades/v2?limit=2"; do echo "POLY $u"; curl -sS -m 20 "$u" | head -c 700; echo; done
+          echo "POLY games"; curl -sS -m 20 "https://gamma-api.polymarket.com/events?tag_slug=games&closed=false&limit=200" | python3 -c "import json,sys; d=json.load(sys.stdin); print(len(d)); [print(' ', e.get('title'), round(e.get('volume') or 0), e.get('slug')) for e in d[:12]]"
+          curl -sS -m 20 "https://gamma-api.polymarket.com/sports" | head -c 800; echo

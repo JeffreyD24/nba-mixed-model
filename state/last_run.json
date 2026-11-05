@@ -1,117 +1,35 @@
 {
  "today": [
   {
-   "home": "det",
-   "away": "phi",
-   "tip": "2026-11-04 19:00:00",
-   "pred_margin": 5.3,
-   "pred_total": 217.7
-  },
-  {
-   "home": "wsh",
-   "away": "atl",
-   "tip": "2026-11-04 19:00:00",
-   "pred_margin": -3.6,
-   "pred_total": 228.4
-  },
-  {
-   "home": "bkn",
-   "away": "cha",
-   "tip": "2026-11-04 19:30:00",
-   "pred_margin": 0.9,
-   "pred_total": 216.1
-  },
-  {
-   "home": "bos",
-   "away": "mil",
-   "tip": "2026-11-04 19:30:00",
-   "pred_margin": 13.3,
-   "pred_total": 225.5
-  },
-  {
-   "home": "ny",
-   "away": "chi",
-   "tip": "2026-11-04 19:30:00",
-   "pred_margin": 13.4,
-   "pred_total": 230.4
-  },
-  {
-   "home": "mem",
-   "away": "ind",
-   "tip": "2026-11-04 20:00:00",
-   "pred_margin": 9.3,
-   "pred_total": 230.7
-  },
-  {
-   "home": "no",
-   "away": "utah",
-   "tip": "2026-11-04 20:00:00",
-   "pred_margin": 7.5,
-   "pred_total": 238.9
-  },
-  {
-   "home": "okc",
-   "away": "cle",
-   "tip": "2026-11-04 20:00:00",
-   "pred_margin": 2.5,
-   "pred_total": 227.2
-  },
-  {
-   "home": "hou",
-   "away": "min",
-   "tip": "2026-11-04 20:30:00",
-   "pred_margin": 5.5,
-   "pred_total": 223.0
-  },
-  {
-   "home": "den",
-   "away": "tor",
-   "tip": "2026-11-04 21:00:00",
-   "pred_margin": 1.4,
-   "pred_total": 229.7
+   "home": "gs",
+   "away": "mia",
+   "tip": "2026-11-05 22:00:00",
+   "pred_margin": 5.8,
+   "pred_total": 237.5
   },
   {
    "home": "phx",
-   "away": "por",
-   "tip": "2026-11-04 21:00:00",
-   "pred_margin": -4.5,
-   "pred_total": 229.3
-  },
-  {
-   "home": "sa",
-   "away": "dal",
-   "tip": "2026-11-04 21:30:00",
-   "pred_margin": 6.7,
-   "pred_total": 227.4
-  },
-  {
-   "home": "sac",
-   "away": "lal",
-   "tip": "2026-11-04 22:00:00",
-   "pred_margin": -9.8,
-   "pred_total": 236.3
-  },
-  {
-   "home": "lac",
-   "away": "mia",
-   "tip": "2026-11-04 22:30:00",
-   "pred_margin": 3.0,
-   "pred_total": 235.4
+   "away": "orl",
+   "tip": "2026-11-05 21:00:00",
+   "pred_margin": 2.0,
+   "pred_total": 228.7
   }
  ],
  "log": [
-  "NBA tracker run on 2026-11-04 (ET), predicting games on 2026-11-04.",
+  "NBA tracker run on 2026-11-04 (ET), predicting games on 2026-11-05.",
   "Schedule: 1200 regular-season games; 107 finished, results through 2026-11-02.",
-  "Injury reports: 0 snapshots requested, 0 new, 113 on file.",
-  "Saved today's model for intraday checks (14 games, 643 players).",
-  "Locked 0 live picks for 2026-11-04 and 0 backfilled.",
-  "Model comparison: locked 0 live and 0 backfilled Model 2/3 predictions.",
+  "Injury reports: 8 snapshots requested, 8 new, 121 on file.",
+  "Saved today's model for intraday checks (2 games, 643 players).",
+  "Locked 2 live picks for 2026-11-05 and 0 backfilled.",
+  "Lines: ESPN returned no odds.",
+  "Model comparison: locked 4 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 3 - pace x efficiency: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "Alerts graded so far: 26-31 (45.6%), -7.4 units at -110.",
   "Your logged bets: 8-7, +0.26u on 15 units staked.",
   "Line jumps graded: 51; the final result matched the jump's direction 26 times.",
+  "Altitude watch: 8 Denver/Utah home games, +0.5 vs the opener (other games -4.7); difference +5.2 (+/-15.9). All-Star-break rule today: no change; season-end rule today: keep +3.8.",
   "Bet timing: graded 36 games at up to 11 time points."
  ]
 }

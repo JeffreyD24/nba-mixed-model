@@ -3,6 +3,14 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: NCAAM box score backfill complete, 2007-08 to 2026-27 (NCAAM) [TEST]
+- Question: did the ESPN box score backfill (ncaab-box.yml, run 42100153853) land every season, so lineup, inferred-injury and travel models can be built?
+- Data / method: `ncaab/espn_boxscores.py` output in `ncaab/data/box/` (players: starter, minutes, points; teams: shooting/turnover totals, city, state, venue, attendance), compared with `ncaab/data/all_games.csv`.
+- Result: all 20 seasons present (20/20 jobs succeeded). Player box on 99-100% of games every season except 2011-12 (89%) and 2012-13 (87%); team box (with venue city/state for travel) on 100%. Minutes filled on 100% of player rows. Per-season counts in `ncaab/box_coverage_output.txt`.
+- Read: inputs are in place for the playbook step 2 models (lineups/minutes, injuries inferred from minutes dropping to 0, travel from venue location and rest). 2012-13 also has few closing lines (922), so it is a weak test season.
+- Decision: nothing changes; next build is the lineup / inferred-injury / travel model on top of the market base model, pre-registered first.
+- Files: ncaab/data/box/, ncaab/box_coverage_output.txt.
+
 ## 2026-11-05: Polymarket and Kalshi history: where it is and what we can get (all sports) [TEST] [LEAD] [DECISION]
 - Question: can we get past Polymarket/Kalshi data, including bet sizes and who bet, to track sharps (Jeffrey's end goal: make money on Polymarket)?
 - Data / method: research agent (docs and repos) plus GitHub-runner probes (`.github/workflows/probe-poly.yml`) and a 3-4-game-per-league test pull with `sharp/exchange_history.py`.

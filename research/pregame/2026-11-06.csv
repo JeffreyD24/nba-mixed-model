@@ -257,3 +257,7 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 18:10:49,295191,2026-11-06,2026-11-06 20:00,tor,mil,DraftKings,event,spread,away,-7.5,-104,normal
 2026-11-05 18:15:50,295191,2026-11-06,2026-11-06 20:00,tor,mil,Caesars,event,moneyline,away,0.0,-225,normal
 2026-11-05 18:15:50,295191,2026-11-06,2026-11-06 20:00,tor,mil,Caesars,event,moneyline,home,0.0,185,normal
+2026-11-05 18:19:37,295190,2026-11-06,2026-11-06 19:30,phi,cle,FanDuel,event,moneyline,away,0.0,-142,normal
+2026-11-05 18:19:37,295190,2026-11-06,2026-11-06 19:30,phi,cle,FanDuel,event,moneyline,home,0.0,120,normal
+2026-11-05 18:19:37,295190,2026-11-06,2026-11-06 19:30,phi,cle,FanDuel,event,total,under,229.5,-110,normal
+2026-11-05 18:19:37,295190,2026-11-06,2026-11-06 19:30,phi,cle,FanDuel,event,total,over,229.5,-110,normal

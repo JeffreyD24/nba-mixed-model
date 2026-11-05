@@ -3,6 +3,25 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Fast reminders 4 AM-8 PM; DraftKings / FanDuel buttons fixed on movement + blend alerts (NBA) [DECISION] [OBSERVATION]
+- Question: Jeffrey missed two PROVISIONAL movement BETs (UNDER 238.5 POR @ LAL, UNDER 234.5 PHI @ CLE, alerted 4:52 PM Thu for Fri games),
+  could not find the Portland game at FanDuel, saw no DraftKings button, and asked for reminders every 5 minutes 4 AM-8 PM until the line
+  moves out of range.
+- What we saw: (1) both alerts said "FanDuel: no line posted yet" yet still carried a "Bet on FanDuel" button, which was only FanDuel's generic
+  NBA page (`FD_PAGE`), so there was no game to find. (2) The DraftKings button was missing because movement/blend alerts passed `dk=None`,
+  and ESPN's odds feed (source of the bet-slip links) had no DraftKings line yet for either game (checked 5:3x PM: LAL-POR and CLE-PHI blank,
+  other Fri games filled): ESPN lags Action Network on a new line. (3) No reminders reached him because, 24+ hours before tip,
+  `remind_gap_min` spaces reminders 4 hours apart.
+- Changes: `alert.py` `remind_gap_min` returns 4 min (checks run ~5 min) from 4 AM to 8 PM (`FAST_REMIND`), unchanged spacing outside those
+  hours (RULE 5: nothing held). All reminder paths use it (main alerts, movement, blend). `fanduel.compare` no longer returns a FanDuel link
+  when FanDuel has no line. `market_models_live.py`: first alerts and reminders now get a DraftKings button (ESPN bet-slip link, else DraftKings'
+  NBA page) and reminders get the FanDuel button only when FanDuel has the line.
+- Read: operational fix, no model change. Stop rules unchanged: logged bet, tip time, or a DON'T BET (main alerts: line moved 0.5+ against or
+  edge under the bar; movement: predicted move gone; blend: edge under break-even). Movement alerts do not send a DON'T BET for a line that
+  moved against without the predicted move shrinking; reminders just stop (idea: add one, not done).
+- Decision: approved by Jeffrey Nov 5, 2026 (request in chat). NHL and NFL alert.py not changed in this entry.
+- Files: alert.py, fanduel.py, market_models_live.py.
+
 ## 2026-11-05: Alerts 24 hours a day for every model; prop tiers late + stale added (all sports) [DECISION]
 - Question: Jeffrey: "I never want you to stop sending alerts just because I'm not awake... Alerts 24 hours a day, for every model,
   no matter what. Make sure we have that rule across the board, do an audit." Also: run the late (1-4h) and stale-opener props as

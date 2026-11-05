@@ -111,7 +111,7 @@ def compare(sport, day, home, away, market, side, dk_line, dk_px, label=None, ed
         dk_ok = dk_px is not None and not pd.isna(dk_px)
         dk_txt = "DraftKings: " + (fmt(dk_line, dk_px) if dk_ok or dk_line is not None else "no line")
         if fp is None:
-            return f"LINES: {dk_txt} | FanDuel: no line posted yet", FD_PAGE[sport], "DraftKings"
+            return f"LINES: {dk_txt} | FanDuel: no line posted yet", None, "DraftKings"     # Nov 5, 2026: no FanDuel button when FanDuel has no line
         fd_txt = "FanDuel: " + fmt(fl, fp)
         if not dk_ok and dk_line is None:
             return f"LINES: {fd_txt} | DraftKings: no line", FD_PAGE[sport], "FanDuel"

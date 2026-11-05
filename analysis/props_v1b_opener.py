@@ -1,5 +1,6 @@
 """Props v1b at the OPENING line on past seasons — as pre-registered in research/props/PROPS_V1B_OPENER_PREREG_2026-11-05.md.
-  python analysis/props_v1b_opener.py WORKDIR -> analysis/props_v1b_opener_output.txt, analysis/props_v1b_opener_bets.csv.gz
+  python analysis/props_v1b_opener.py WORKDIR [--clean] -> analysis/props_v1b_opener[_clean]_output.txt, ..._bets.csv.gz
+--clean (research/props/PROPS_V1B_OPENER_CLEAN_PREREG_2026-11-05.md): var_ab refit on 2022-23 box scores; lines < 0.5 dropped.
 Needs _tmp/props_features.csv.gz (python analysis/props_v1.py WORKDIR features)."""
 import os, sys, json
 import numpy as np, pandas as pd
@@ -44,6 +45,14 @@ X = O.merge(FL, on=key, how="inner")
 say(f"openers matched to a played game: {len(X)}")
 X = X[(X.n_prev >= 3) & (X.lead_h >= 1) & (X.prev_date.isna() | (X.prev_date < X.open_date_et))].copy()
 say(f"after timing guard (prev game on an earlier day than the opener; opener 1h+ before tip; 3+ games): {len(X)}")
+CLEAN = "--clean" in sys.argv; SUF = "_clean" if CLEAN else ""
+if CLEAN:
+    X = X[X.line >= 0.5].copy()
+    Fb = F[(F.season == 2023) & (F.n_prev >= 3)]
+    for s in STATS:
+        mu_ = Fb[f"mu_{s}"].clip(lower=0.05).values; e2 = (Fb[s].values - mu_) ** 2
+        P1["var_ab"][s] = [float(v) for v in np.linalg.lstsq(np.column_stack([mu_, mu_ ** 2]), e2, rcond=None)[0]]
+    say("CLEAN: var_ab refit on 2022-23 box: " + ", ".join(f"{k} a {v[0]:.2f} b {v[1]:.4f}" for k, v in P1["var_ab"].items()) + "; lines < 0.5 dropped")
 for s in STATS:
     m = X.stat == s; a, b = P1["var_ab"][s]; mu = X.loc[m, "mu"].clip(lower=0.05)
     ex = (a - 1) * mu + b * mu ** 2; r = np.where(ex > 1e-6, mu ** 2 / ex.clip(lower=1e-6), 1e6)
@@ -121,7 +130,14 @@ for thr in (0.03, 0.08, 0.12):
     b = bets(X, w, thr); say(f"  EV >= {int(thr*100)}%: {line_(b[b.season.isin(TEST)])}")
 for col in ("stat", "side", "open_book"):
     for k, g in T.groupby(col): say(f"  {col}={k}: {line_(g)}")
+lo2, hi2 = boot(T[T.clev_adj.notna()], "clev_adj"); say(f"  lean-adjusted close-EV 90% CI: [{lo2*100:+.2f}, {hi2*100:+.2f}]")
+S2 = Bm[Bm.season.isin(TEST) & (Bm.open_book == "fanduel") & (Bm.lead_h >= 4)]
+say(f"  SECONDARY (descriptive, chosen after the fact): FanDuel openers 4h+ before tip: {line_(S2)}")
+for s_ in TEST: say(f"     {s_}: {line_(S2[S2.season == s_])}")
+Bm["april"] = pd.to_datetime(Bm.date).dt.month == 4
+for s_ in sorted(Bm.season.unique()):
+    g = Bm[Bm.season == s_]; say(f"  April lead {s_}: April {g[g.april].u.sum():+.1f}u on {g.april.sum()} | Oct-Mar {g[~g.april].u.sum():+.1f}u on {(~g.april).sum()}")
 T = T.assign(lead=pd.cut(T.lead_h, [1, 4, 12, 24, 48]))
 for k, g in T.groupby("lead", observed=True): say(f"  opener posted {k} h before tip: {line_(g)}")
-pd.concat([Bm.assign(rule="model"), B0.assign(rule="no_model")]).to_csv(os.path.join(W, "analysis", "props_v1b_opener_bets.csv.gz"), index=False)
-open(os.path.join(W, "analysis", "props_v1b_opener_output.txt"), "w").write("\n".join(out) + "\n")
+pd.concat([Bm.assign(rule="model"), B0.assign(rule="no_model")]).to_csv(os.path.join(W, "analysis", f"props_v1b_opener{SUF}_bets.csv.gz"), index=False)
+open(os.path.join(W, "analysis", f"props_v1b_opener{SUF}_output.txt"), "w").write("\n".join(out) + "\n")

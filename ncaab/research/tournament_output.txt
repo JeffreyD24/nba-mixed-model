@@ -1,0 +1,23 @@
+TOURNAMENT NCAAM - knobs chosen on 2023 results only
+  M2 level half-life: knob grid [[14.0, 133.29, 278.33, 2.0], [30.0, 133.29, 278.57, 2.0], [60.0, 133.29, 278.72, 2.0]] -> chosen 14.0
+  M4 log ridge: knob grid [[2.0, 134.77, 289.03, 2.04], [5.0, 133.5, 282.22, 2.0], [10.0, 136.57, 281.28, 2.02], [20.0, 144.2, 285.45, 2.09]] -> chosen 5.0
+
+SPREAD (threshold 5+, break-even CLV 0.67); seasons [2024, 2025, 2026]
+  M1    646 bets  CLV +0.89 [+0.68]  win 52.1%  Open    -3.3u  DK close   -38.8u (-6.0%)  RMSE 11.56  by season 24:-1.1 25:+4.4 26:-6.5
+  M2    646 bets  CLV +0.89 [+0.69]  win 52.1%  Open    -3.3u  DK close   -38.8u (-6.0%)  RMSE 11.56  by season 24:-1.1 25:+4.4 26:-6.5
+  M4    705 bets  CLV +0.92 [+0.73]  win 52.6%  Open    +3.5u  DK close   -25.7u (-3.6%)  RMSE 11.56  by season 24:+3.9 25:+7.4 26:-7.8
+  M3    649 bets  CLV +0.88 [+0.69]  win 52.0%  Open    -4.4u  DK close   -38.1u (-5.9%)  RMSE 11.56  by season 24:-1.1 25:+4.3 26:-7.5
+  M5    667 bets  CLV +0.92 [+0.71]  win 53.1%  Open    +9.0u  DK close   -19.8u (-3.0%)  RMSE 11.56  by season 24:+5.3 25:+8.2 26:-4.5
+  M6    627 bets  CLV +0.94 [+0.73]  win 52.2%  Open    -2.5u  DK close   -35.1u (-5.6%)  RMSE 11.56  by season 24:+2.7 25:+4.5 26:-9.7
+
+TOTAL (threshold 6+, break-even CLV 0.99); seasons [2024, 2025, 2026]
+  M1   1155 bets  CLV +1.11 [+0.95]  win 52.0%  Open    -9.4u  DK close   -62.4u (-5.4%)  RMSE 17.12  by season 24:-4.1 25:-17.2 26:+11.9
+  M2    793 bets  CLV +1.23 [+1.04]  win 52.0%  Open    -6.3u  DK close   -39.3u (-5.0%)  RMSE 17.11  by season 24:-8.3 25:+7.9 26:-5.9
+  M4    813 bets  CLV +1.38 [+1.18]  win 52.6%  Open    +3.4u  DK close   -38.6u (-4.8%)  RMSE 17.12  by season 24:+2.3 25:-13.0 26:+14.1
+  M3    843 bets  CLV +1.24 [+1.04]  win 51.5%  Open   -14.4u  DK close   -63.0u (-7.5%)  RMSE 17.07  by season 24:-4.6 25:-9.4 26:-0.4
+  M5    619 bets  CLV +1.44 [+1.19]  win 52.5%  Open    +1.5u  DK close   -36.4u (-5.9%)  RMSE 17.13  by season 24:-1.9 25:-8.8 26:+12.3
+  M6    731 bets  CLV +1.42 [+1.20]  win 51.1%  Open   -17.8u  DK close   -57.4u (-7.8%)  RMSE 17.07  by season 24:-20.4 25:-12.9 26:+15.5
+
+WINNERS (highest CLV; within 0.10 -> more units at the DK close) and the pass rule:
+  spread: winner M5 (CLV +0.92, Open +9.0u, DK close -3.0%, every season positive at the Open: False) -> FAIL -> TEST record
+  total: winner M5 (CLV +1.44, Open +1.5u, DK close -5.9%, every season positive at the Open: False) -> FAIL -> TEST record

@@ -1,0 +1,28 @@
+name: Probe Polymarket trades and NFL 2025 listing (one-off)
+on:
+  workflow_dispatch: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import json, urllib.request
+          def g(u):
+              try: return json.loads(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent":"research-script"}), timeout=30).read())
+              except Exception as e: return {"_err": str(e)}
+          C = "0x332ccf6a70732b039b3bc872c59d622050838086c3b288590362bbb2584728e7"
+          for u in [f"https://data-api.polymarket.com/v2/trades?condition={C}&limit=3&taker_only=false",
+                    f"https://data-api.polymarket.com/v2/trades?market={C}&limit=3&taker_only=false",
+                    f"https://data-api.polymarket.com/trades?market={C}&limit=3&takerOnly=false"]:
+              print("URL", u); print(json.dumps(g(u))[:1500])
+          s = g("https://gamma-api.polymarket.com/sports")
+          print("SPORTS", json.dumps([x for x in s if isinstance(x, dict) and any(k in str(x.get("sport","")).lower() for k in ("nfl","cfb","nba","nhl","cbb","ncaa"))])[:3000] if isinstance(s, list) else s)
+          for slug in ["nfl-dal-phi-2025-09-04", "nfl-phi-dal-2025-09-04", "nfl-kc-phi-2025-09-14"]:
+              e = g(f"https://gamma-api.polymarket.com/events?slug={slug}")
+              print("SLUG", slug, json.dumps([{k: x.get(k) for k in ("id","title","seriesSlug")} | {"series": [(z.get("id"), z.get("slug")) for z in x.get("series") or []], "tags": [(t.get("id"), t.get("slug")) for t in x.get("tags") or []]} for x in e])[:800] if isinstance(e, list) else e)
+          for q in ["tag_slug=nfl&closed=true&start_date_min=2025-09-01&start_date_max=2025-09-10&limit=5"]:
+              e = g(f"https://gamma-api.polymarket.com/events?{q}")
+              print("TAGQ", json.dumps([{k: x.get(k) for k in ("id","title","slug")} | {"series": [(z.get("id"), z.get("slug")) for z in x.get("series") or []]} for x in e])[:1500] if isinstance(e, list) else e)
+          PY

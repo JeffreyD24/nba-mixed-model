@@ -28,3 +28,15 @@ seasons graded the same way. Decided by Claude under the standing permission; no
 - Non-conference Nov-Dec 6+ totals lose in every view (-23.5u 2021-23): never bet early-season non-conference totals off this model.
 
 The 2026-27 TEST record (`ncaab/state/test_record.md`) now also grades "conference total (vs DK close)" daily.
+
+## Why it faded (descriptive, D-I games, vs consensus close)
+| Season | Line minus result, Jan-Apr | Model minus line, Jan-Apr | Model minus result, Jan-Apr | Avg total |
+|---|---|---|---|---|
+| 2021-22 | -1.22 | +0.93 | -0.29 | 140.1 |
+| 2022-23 | -1.73 | +0.58 | -1.15 | 141.5 |
+| 2023-24 | -0.68 | +0.85 | +0.17 | 145.3 |
+| 2024-25 | -0.84 | +1.24 | +0.40 | 145.7 |
+| 2025-26 | -0.57 | +1.95 | +1.38 | 149.4 |
+In 2021-23 the closing totals in conference play ran 1.2-1.7 pts too low and the model's overs caught it. The market has mostly
+fixed that, while the model drifted above actual results as scoring rose ~9 pts in five years (rule/pace changes). Model 2 idea:
+let the scoring level move within the season (recency weight on mu only), pre-registered for 2026-27 data.

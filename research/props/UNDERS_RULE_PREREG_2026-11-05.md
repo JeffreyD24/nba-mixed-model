@@ -26,3 +26,9 @@ A pass goes live only as PROVISIONAL (own record), after a Fable check.
 ## Descriptive
 By stat, by line size, by book chosen, single-book versions (DK only, FD only), favourite vs underdog game, how often the best
 under is a higher line vs only a better price, and the over-lean (no-vig consensus vs actual) by season.
+
+## Amendment (Nov 5, 2026, ~12:15 ET) — before any PRIMARY-season result
+Plumbing check on the non-primary 2025-26 tail / 2026-27 files: BettingPros stamps its final pre-game capture at or just after the
+scheduled tip (89% of lines are stamped 0–14 minutes after tip; none later than 14 minutes). The "within 6 hours before tip" filter
+would have thrown nearly all closes away. Fixed rule: a line counts if stamped **between 6 hours before and 15 minutes after** the
+scheduled tip. (Only the two descriptive seasons had been computed when this was found; they're re-run under the same fix.)

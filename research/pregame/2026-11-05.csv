@@ -1,0 +1,9 @@
+seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds,line_status
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,spread,home,-2.5,-105,opener
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,spread,away,2.5,-116,opener
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,total,over,224.5,-111,opener
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,total,under,224.5,-116,opener
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Open,event,spread,away,2.5,-116,
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Open,event,spread,home,-2.5,-105,
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Open,event,total,under,224.5,-116,
+2026-11-05 00:02:15,295388,2026-11-05,2026-11-05 21:00,orl,phx,Open,event,total,over,224.5,-111,

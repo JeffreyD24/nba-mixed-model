@@ -3,6 +3,20 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Where our "DraftKings" lines come from, and why the direct feed is blocked (all sports) [OBSERVATION] [IDEA]
+- Question: Jeffrey, after the POR / PHI alerts: "we are relying on ESPN to get DraftKings lines? ... find a site that allows us to see every single
+  line every minute."
+- What we use: Action Network (all alerts, movement model, FanDuel; refreshes ~30 s) for the DraftKings number; ESPN's odds feed only for the
+  DraftKings bet-slip links and, as of today, as a second opinion that a line is really on DraftKings (`dk_confirmed`). The laptop capture
+  (`live_capture/`) also reads Action Network. Nothing reads DraftKings itself.
+- DraftKings direct: `tools/probe_markets.py` (Nov 5, 00:45 UTC, GitHub runner) got HTTP 403 "Access Denied" on every sportsbook-nash endpoint
+  (dkusct and dkusnj). That is a block on cloud / datacenter addresses, so a cloud server would likely be blocked too; a home connection is the likely fix.
+- Unknown: whether Action Network's DraftKings number is Connecticut's (POR @ LAL / PHI @ CLE were on it, not on his Connecticut app).
+- Next step (written, not yet run): `live_capture/Probe_DraftKings.bat` (dk_probe.ps1) on Jeffrey's laptop: reads DraftKings' own CT and NJ
+  feeds for NBA / NHL / NFL, saves the raw replies and prints each game's total. If it works: poll it every 30-60 s with the existing nightly capture and
+  use it as the DraftKings source for alerts (Action Network stays as the cross-check). Always-on later = a Raspberry Pi at home (a cloud server is likely blocked).
+- Files: live_capture/dk_probe.ps1, live_capture/Probe_DraftKings.bat.
+
 ## 2026-11-05: Movement / blend alerts fired on DraftKings lines that were not bettable (NBA) [OBSERVATION] [DECISION]
 - Question: Jeffrey got PROVISIONAL movement BETs for POR @ LAL (UNDER 238.5) and PHI @ CLE (UNDER 234.5) but DraftKings did not offer either game.
 - Data: Action Network feed at 5:31 PM Nov 5. LAL-POR: only DraftKings + "Open" quoted 238.5, no other book; DraftKings first seen Nov 3

@@ -18,8 +18,13 @@ from parse_injury_reports import parse as parse_pdf      # noqa: E402
 import build_report_features as brf                      # noqa: E402
 import espn                                              # noqa: E402
 import actionnet
+import fanduel
 
-THRESHOLD = 3.0                     # points, for both spreads and totals
+THRESHOLD = 3.0                     # points, for spreads (and the proven totals rule)
+TOTAL_THRESHOLD = 2.5               # Nov 4, 2026 (approved; PROVISIONAL tier, research/PROVISIONAL_BETS.md): totals bet from 2.5 pts of edge.
+                                    #   2.5-3.0 band 2023-26 at DK openers (v4 model): 309 bets 55.3% +17.5u CLV +1.10 (in-sample weights);
+                                    #   those alerts are tier=provisional_totals with their own record and stop rule. 3+ stays the proven rule.
+thr = lambda market: TOTAL_THRESHOLD if market == "total" else THRESHOLD
 MAX_LINE_MOVE = 3.0                 # "market agrees" heads-up when the line moved this much TOWARD the model since opening
 LUCK_SHRINK_K = 15                  # see the luck correction below
 TOT_LOGIT_SLOPE = 0.0506             # Nov 4, 2026: log-odds of winning a totals bet per point of edge (research/stats_catalog B98)
@@ -172,14 +177,16 @@ def dk_link(ln, market, side, line):
     return dk
 
 
-def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info"):
-    """kind: 'bet' (a BET verdict), 'stop' (DON'T BET follow-up), 'test', or 'info' (not pushed while BET_ONLY)"""
+def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info", fd=None, best=None):
+    """kind: 'bet' (a BET verdict), 'stop' (DON'T BET follow-up), 'test', or 'info' (not pushed while BET_ONLY).
+    dk / fd: DraftKings / FanDuel links (better book first, from fanduel.compare). link: unused since Nov 4, 2026 (Log button removed)."""
     if BET_ONLY and kind not in ("bet", "stop", "test", "bailout"):   # bailout: asked for Nov 4, 2026 (bailout.py)
         print("Logged only (not pushed):", title); return False
     topic = os.environ.get("NTFY_TOPIC")
     if not topic:
-        print("NTFY_TOPIC not set; would have sent:", title, "|", body, "| DK:", dk or "-"); return False
-    actions = "; ".join(a for a in (f"view, Bet on DraftKings, {dk}" if dk else "", f"view, Log this bet, {link}" if link else "") if a)
+        print("NTFY_TOPIC not set; would have sent:", title, "|", body, "| DK:", dk or "-", "| FD:", fd or "-"); return False
+    actions = fanduel.actions(dk, fd, best)
+    if best == "FanDuel" and "BEST AT FANDUEL" not in title: title += " | BEST AT FANDUEL"     # every alert type (Fable review)
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
                                  headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": priority, "Tags": tags,
                                           **({"Actions": actions} if actions else {})})
@@ -324,7 +331,7 @@ def main():
         if abs(mv) >= AGAINST_MOVE and against_us(market, side, mv):
             return "PASS", f"the line moved {abs(mv):.1f} pts AGAINST the model since it opened at {opn:g}"
         if abs(mv) >= AGAINST_MOVE:
-            if abs(e) >= THRESHOLD:
+            if abs(e) >= thr(market):
                 return "BET", f"the line moved {abs(mv):.1f} pts toward the model and {abs(e):.1f} pts of edge are left"
             return "PASS", f"the line moved toward the model and only {abs(e):.1f} pts of edge are left"
         fs = first_seen(gid, market, opn)
@@ -357,7 +364,7 @@ def main():
     def bet_range(market, side, margin, total, opn, H, Aw):
         """the numbers the rule still says BET at: from the opener to the worst line with 3+ pts of edge; and the move
         the other way (0.5+ against the model since the open) that turns it into a PASS"""
-        if opn is None or pd.isna(opn): return f"BET RANGE: opening line unknown; bet only with 3+ pts of edge, at {MAX_PRICE} or better."
+        if opn is None or pd.isna(opn): return f"BET RANGE: opening line unknown; bet only with {thr(market):g}+ pts of edge, at {MAX_PRICE} or better."
         o = float(opn)
         if market == "spread":
             if side == "home":
@@ -369,14 +376,14 @@ def main():
             return (f"BET RANGE: {t} {-o:+g} down to {worst:+g}. Skip if it's worse than {worst:+g}, "
                     f"or if it moves the other way to {t} {-o + AGAINST_MOVE:+g} (the market moving against the model). Price {MAX_PRICE} or better.")
         if side == "over":
-            worst = math.floor((total - THRESHOLD) * 2) / 2
+            worst = math.floor((total - TOTAL_THRESHOLD) * 2) / 2
             return (f"BET RANGE: over {o:g} up to {worst:g}. Skip if it's higher than {worst:g}, "
                     f"or if it drops to {o - AGAINST_MOVE:g} or lower (the market moving against the model). Price {MAX_PRICE} or better.")
-        worst = math.ceil((total + THRESHOLD) * 2) / 2
+        worst = math.ceil((total + TOTAL_THRESHOLD) * 2) / 2
         return (f"BET RANGE: under {o:g} down to {worst:g}. Skip if it's lower than {worst:g}, "
                 f"or if it rises to {o + AGAINST_MOVE:g} or higher (the market moving against the model). Price {MAX_PRICE} or better.")
 
-    RULE_TXT = ("Rule: BET while the line is at the opener or moved toward the model, with 3+ pts of edge left. PASS if it moved "
+    RULE_TXT = ("Rule: BET while the line is at the opener or moved toward the model, with 3+ pts of edge left (totals 2.5+; 2.5-3 is PROVISIONAL). PASS if it moved "
                 "against the model by 0.5+ since it opened. Totals bet at the opener; spreads wait for the 8 PM injury report unless the edge is 5+.")
 
     news_for = lambda g: ("\n" + espn.news_text(NEWS, [g["away"], g["home"]])) if NEWS is not None else ""
@@ -678,19 +685,20 @@ def main():
                 # ---- market moving toward the model by 3+ since open: one info alert per game and market
                 move = (cur - opn) if (opn is not None and not pd.isna(opn)) else 0.0
                 toward = abs(move) >= MAX_LINE_MOVE and not against_us(market, side, move)
-                if toward and (g["game_id"], market) not in moved_done and abs(e) < THRESHOLD:
+                if toward and (g["game_id"], market) not in moved_done and abs(e) < thr(market):
                     mtitle = f"Market agrees: {Aw} @ {H} {market}, {tip}"
                     if market == "spread":
                         mbody = f"Line moved {abs(move):.1f} pts toward the model: {H} opened {opn:+g}, now {cur:+g}. Model: {H} by {margin:+.1f}."
                     else:
                         mbody = f"Total moved {abs(move):.1f} pts toward the model ({side}): opened {opn:g}, now {cur:g}. Model {total:.1f}."
-                    mbody += f" Edge left: {abs(e):.1f} pts (under {THRESHOLD:g}, so no bet). Info only." + hist_txt + news_for(g)
+                    mbody += f" Edge left: {abs(e):.1f} pts (under {thr(market):g}, so no bet). Info only." + hist_txt + news_for(g)
                     notify(mtitle, mbody, priority="low", tags="chart_with_upwards_trend")
                     moves_new.append(dict(at_et=str(NOW), game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                           market=market, model_side=side, open_line=opn, line=cur, move=round(move, 1),
                                           model=round(margin if market == "spread" else total, 2), edge_left=round(abs(e), 2)))
                     moved_done.add((g["game_id"], market)); print("MARKET AGREES:", mtitle, "|", mbody)
-                if abs(e) < THRESHOLD: continue
+                if abs(e) < thr(market): continue
+                prov_tot = market == "total" and abs(e) < THRESHOLD    # 2.5-3 pt totals: PROVISIONAL (see TOTAL_THRESHOLD)
                 if pd.Timestamp(g["tip_et"]) <= NOW: continue        # Nov 4, 2026 review: never a bet alert after tip
                 skip = None
                 # PROVISIONAL news bet (see PROVISIONAL_NEWS_SPREADS): after the report, a side the pre-report model did not have at the opener
@@ -730,7 +738,13 @@ def main():
                                model=round(margin if market == "spread" else total, 2), edge=round(abs(e), 2),
                                injury_report=used, sent=False, skipped=skip, news_key=NK if is_news else np.nan,
                                pre_report_model=(round(mb, 2) if mb is not None else np.nan), news_bet=news_bet,
-                               tier=("provisional" if prov else np.nan))
+                               tier=("provisional" if prov else "provisional_totals" if prov_tot else np.nan))
+                # FanDuel next to DraftKings (Nov 4, 2026): both books' lines in the alert, the better one first and marked
+                dk_bet_line = bet_line if market == "spread" else cur
+                fd_txt, fd_link, best_book = fanduel.compare("nba", M["date"], g["home"], g["away"], market, side, dk_bet_line, px,
+                                                             label=(team if market == "spread" else side), edge=abs(e), need=(THRESHOLD if market == "total" and abs(e) >= THRESHOLD else thr(market)))
+                rec_row["best_book"] = best_book
+                fd_top = (fd_txt + "\n") if fd_txt else ""          # placed right under the verdict line
                 if skip:
                     # caution alert: still sent, once per game and market, flagged with the reason
                     if (g["game_id"], market) not in skipped:
@@ -738,14 +752,14 @@ def main():
                                  f"\nInjury report: {used}. Caution alerts so far: {crec}." + news_text(g) + pending_text(SW, g)
                                  + limbo_text(SW, g, margin, total, market, side, e, always=True) + hist_txt + news_for(g))
                         vd, vr = verdict(g["game_id"], market, side, cur, opn, e)
-                        cbody = f"{vd}: {vr}.\n{RULE_TXT}\n" + cbody
+                        cbody = f"{vd}: {vr}.\n" + fd_top + f"{RULE_TXT}\n" + cbody
                         same, other = bets_note(M["date"], g["home"], g["away"], market, (g[side] if market == "spread" else side))
                         ctitle = f"[{vd}] CAUTION - " + title
                         rec_row["verdict"] = vd
                         if same: cbody = f"ALREADY BET: you logged {same}.\n" + cbody; ctitle = "ALREADY BET - " + ctitle
                         if other: cbody += f"\nYour other bet on this game: {other}."
                         if "OTHER SIDE" in other: ctitle = "YOU BET THE OTHER SIDE - " + ctitle
-                        rec_row["sent"] = notify(ctitle, cbody, priority="default", tags="warning,basketball", link=link, dk=dk)
+                        rec_row["sent"] = notify(ctitle, cbody, priority="default", tags="warning,basketball", link=link, dk=dk, fd=fd_link, best=best_book)
                         new.append(rec_row); skipped.add((g["game_id"], market))
                         print("CAUTION ALERT:", title, "|", skip)
                     continue
@@ -754,7 +768,7 @@ def main():
                     moved_done.add((g["game_id"], market))
                 body += f"\nInjury report: {used}. Alerts so far: {rec}. Tracking test: the model has not yet proven an edge live." + news_text(g) + pending_text(SW, g)
                 if market == "total" and (not fresh or h is None or a is None):
-                    body += ("\nBet at the opener: the current injury report isn't in yet for this game. If it moves this bet under 3 pts or flips it "
+                    body += ("\nBet at the opener: the current injury report isn't in yet for this game. If it moves this bet under 2.5 pts or flips it "
                              "before you've logged it, you'll get a DON'T BET.")
                 elif market == "spread" and (not fresh or h is None or a is None):
                     body += (f"\nBet at the opener: the current injury report isn't in yet, but spread edges of {SPREAD_OPENER_EDGE:g}+ pts don't wait "
@@ -789,8 +803,20 @@ def main():
                                      f"{float(opn):+g}, but the edge comes from tonight's injury report (before it the model had {H} by {mb:+.1f}). "
                                      "Not proven yet (2023-26: 60.8%, +8.2u on 51 bets, but weak line movement); reviewed weekly, stops if it fails")
                     title = "PROVISIONAL - " + title
+                if prov_tot and vd == "BET":
+                    vr += (f". PROVISIONAL total ({abs(e):.1f} pts of edge, in the new 2.5-3 band; 2023-26: 55.3%, +17.5u on 309 bets, "
+                           "CLV +1.10). Own record, reviewed weekly, stops by the fixed rule if it fails")
+                    title = "PROVISIONAL - " + title
                 if vd == "BET" and px is not None and not pd.isna(px) and float(px) < MAX_PRICE:
-                    vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
+                    fl_, fp_ = fanduel.quote("nba", M["date"], g["home"], g["away"], market, side)
+                    fd_ok = (fp_ is not None and float(fp_) >= MAX_PRICE and fl_ is not None and
+                             (float(fl_) >= float(dk_bet_line) if market == "spread" else
+                              float(fl_) <= float(cur) if side == "over" else float(fl_) >= float(cur)))
+                    if fd_ok:
+                        vr += f". DraftKings' price is {float(px):+.0f} (worse than {MAX_PRICE}): bet it at FanDuel ({float(fp_):+.0f}, same or better line)"
+                        best_book = "FanDuel"; fd_link = fd_link or fanduel.FD_PAGE["nba"]; rec_row["best_book"] = best_book
+                    else:
+                        vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
                 if vd == "BET" and market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((g["home"], g["away"])), side, opn):
                     vd, vr = "PASS", (f"Pinnacle (the sharp book) opened {g['home'].upper()} {PINS[(g['home'], g['away'])]:+g} vs DraftKings' "
                                       f"{float(opn):+g}, the other side of this bet; those lost in 5 of 6 season-halves 2023-26")
@@ -815,14 +841,14 @@ def main():
                     title = "NEWS - " + title
                     why = ("NEWS: reporter news changed the model before the official report did. Read the post (link below) "
                            "before betting.\n") + why
-                body = f"{vd}: {vr}.\n" + bet_range(market, side, margin, total, opn, H, Aw) + f"\n{RULE_TXT}\n" + why + body
-                title = f"[{vd}] " + title; rec_row["verdict"] = vd
+                body = f"{vd}: {vr}.\n" + fd_top + bet_range(market, side, margin, total, opn, H, Aw) + f"\n{RULE_TXT}\n" + why + body
+                title = f"[{vd}] " + title + (" | BEST AT FANDUEL" if best_book == "FanDuel" else ""); rec_row["verdict"] = vd
                 if vd != "BET":           # not a bet: logged once per verdict and side, not pushed; a later BET can still alert
                     qk = (g["game_id"], market, vd, side)
                     if qk in quiet: continue
                     quiet.add(qk); rec_row["sent"] = False; new.append(rec_row)
                     print("LOGGED ONLY (not a bet):", title, "|", vr); continue
-                rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk, kind="bet")
+                rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk, kind="bet", fd=fd_link, best=best_book)
                 new.append(rec_row); done.add((g["game_id"], market))
                 if is_news: news_done.add((g["game_id"], market, NK))
                 print("ALERT:", title, "|", body)
@@ -850,7 +876,9 @@ def main():
             ref = next((x for x in (r.get("last_reminder_at_et"), r.get("resumed_at_et"), r.alerted_at_et) if isinstance(x, str)), None)
             if ref is None or NOW - pd.Timestamp(ref) < pd.Timedelta(minutes=remind_gap_min(r.tip_et, NOW)): return 0
             px_now = (now_.get("px") or {}).get(side_)
-            if px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE: return 0
+            if px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE:     # over the cap at DraftKings: FanDuel same/better line?
+                dl_ = (float(cur) if side_ == "home" else -float(cur)) if r.market == "spread" else float(cur)
+                if fanduel.same_or_better("nba", now_["date"], now_["home"], now_["away"], r.market, side_, dl_, MAX_PRICE) is None: return 0
             if r.market == "spread":
                 bl = float(cur) if side_ == "home" else -float(cur); what = f"{now_['H'] if side_ == 'home' else now_['Aw']} {bl:+g}"
             else:
@@ -863,8 +891,13 @@ def main():
                 rlink = log_link(now_["date"], now_["away"], now_["home"], "spread", now_["H"] if side_ == "home" else now_["Aw"], f"{bl:+g}")
             else:
                 rlink = log_link(now_["date"], now_["away"], now_["home"], "total", side_, f"{float(cur):g}")
+            fdt, fdl, bb = fanduel.compare("nba", now_["date"], now_["home"], now_["away"], r.market, side_,
+                                           (bl if r.market == "spread" else float(cur)), px_now,
+                                           label=((now_["H"] if side_ == "home" else now_["Aw"]) if r.market == "spread" else side_),
+                                           edge=abs(e_), need=thr(r.market))
+            if fdt: body = fdt + "\n" + body
             notify(f"REMINDER - BET {what}: {now_['Aw']} @ {now_['H']}, {now_['tip']}", body, priority="default", tags="alarm_clock",
-                   link=rlink, dk=(now_.get("dk") or {}).get(side_), kind="bet")
+                   link=rlink, dk=(now_.get("dk") or {}).get(side_), kind="bet", fd=fdl, best=bb)
             A.loc[i, "last_reminder_at_et"] = str(NOW)[:16]; print("REMINDER:", what); return 1
         last = A[A.sent.astype(str).isin(["True", "1", "1.0"]) & (A.verdict == "BET")].groupby(["game_id", "market"]).tail(1)
         for i, r in last.iterrows():
@@ -883,10 +916,12 @@ def main():
                 if str(r.get("tier")) == "provisional" and vd == "PASS" and "AGAINST" in vr: vd = "BET"
                 mv = float(cur) - float(r.line)
                 worse =(mv > 0 if side_ == "over" else mv < 0 if side_ == "under" else mv < 0 if side_ == "home" else mv > 0)
-                ok = (side_ == r.side and abs(e_) >= THRESHOLD and vd == "BET" and not worse
+                ok = (side_ == r.side and abs(e_) >= thr(r.market) and vd == "BET" and not worse
                       and not (r.market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((r.home, r.away)), side_, opn)))
                 px_now = (now_.get("px") or {}).get(side_)
-                if ok and px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE: ok = False     # price too expensive
+                if ok and px_now is not None and not pd.isna(px_now) and float(px_now) < MAX_PRICE:     # too expensive unless FanDuel has it
+                    dl_ = (float(cur) if side_ == "home" else -float(cur)) if r.market == "spread" else float(cur)
+                    ok = fanduel.same_or_better("nba", now_["date"], now_["home"], now_["away"], r.market, side_, dl_, MAX_PRICE) is not None
                 if not ok: continue
                 if isinstance(r.get("resumed_at_et"), str):          # already back in range once: reminders only
                     n_rem += remind(i, r, side_, cur, opn, e_, now_); continue
@@ -900,13 +935,19 @@ def main():
                         f"BET: back in range. The DON'T BET at {pd.Timestamp(r.stopped_at_et):%a %-I:%M %p} no longer applies: DraftKings is "
                         f"{what} again, model {now_['model']:.1f} (edge {abs(e_):.1f}), no worse than the original alert ({float(r.line):g}). "
                         f"{vr}. Bet it now if you still want it; log it after." + now_["hist"])
-                notify(f"BACK IN RANGE - BET {what}: {Aw} @ {H}, {now_['tip']}", body, priority="high", tags="white_check_mark", kind="bet")
+                fdt, fdl, bb = fanduel.compare("nba", now_["date"], now_["home"], now_["away"], r.market, side_,
+                                               (bl if r.market == "spread" else float(cur)), px_now,
+                                               label=((H if side_ == "home" else Aw) if r.market == "spread" else side_),
+                                               edge=abs(e_), need=thr(r.market))
+                if fdt: body = fdt + "\n" + body
+                notify(f"BACK IN RANGE - BET {what}: {Aw} @ {H}, {now_['tip']}", body, priority="high", tags="white_check_mark", kind="bet",
+                       dk=(now_.get("dk") or {}).get(side_), fd=fdl, best=bb)
                 A.loc[i, "resumed_at_et"] = str(NOW)[:16]; n_rem += 1
                 print("BACK IN RANGE:", what); continue
             if side_ != r.side:
                 why = "the model now likes the OTHER side"
-            elif abs(e_) < THRESHOLD:
-                why = f"the edge is down to {abs(e_):.1f} pts (under {THRESHOLD:g})"
+            elif abs(e_) < thr(r.market):
+                why = f"the edge is down to {abs(e_):.1f} pts (under {thr(r.market):g})"
             else:
                 # only a real change stops a bet: the rule now says PASS (moved 0.5+ against since the open), or the line moved
                 # 0.5+ against this bet since the alert. An opener that just got older is not a reason.

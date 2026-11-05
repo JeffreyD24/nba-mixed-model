@@ -4,7 +4,8 @@ crossed. Graded on every BET alert the rule made (first BET per game and market)
 import os, sys
 import numpy as np, pandas as pd
 W = os.path.abspath(sys.argv[1]); STATE = os.path.join(W, "state")
-BREAK_EVEN = {"spread": 0.77}          # CLV in points needed to pay -110 (research/spreads/STEP1_NBA_RESULTS.md)
+BREAK_EVEN = {"spread": 0.77,          # CLV in points needed to pay -110 (research/spreads/STEP1_NBA_RESULTS.md)
+              "total": 0.33}           # totals (research/spreads/LINE_MOVE_MODEL_RESULTS.md)
 STOP_ANY, STOP_25, PROMOTE_N, GIVE_UP_N = -10.0, -5.0, 100, 150
 
 
@@ -37,14 +38,16 @@ def main():
     first = bet.sort_values("alerted_at_et").groupby(["game_id", "market"]).head(1)
     rules = {"NBA spread injury-news bets (PROVISIONAL)": first[first.tier.astype(str) == "provisional"],
              "  all NBA spread news bets (tracking: provisional + v3 bets on unmoved/toward lines)":
-                 first[(first.market == "spread") & first.news_bet.astype(str).isin(["True", "1", "1.0"])]}
+                 first[(first.market == "spread") & first.news_bet.astype(str).isin(["True", "1", "1.0"])],
+             "NBA totals 2.5-3 pt edges (PROVISIONAL)": first[first.tier.astype(str) == "provisional_totals"]}
     out.append(f"# Provisional bets review, {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d %H:%M} ET\n")
     out.append("Rules and stop lines: research/PROVISIONAL_BETS.md. Units at -110, 1 unit per alert; CLV in points vs the DraftKings close.\n")
     for name, R in rules.items():
         s = score(R)
+        be = BREAK_EVEN["total" if "totals" in name else "spread"]
         line = (f"- **{name.strip()}**: {s['alerts']} BET alerts, graded {s['w']}-{s['l']}-{s['p']}, {s['units']:+.2f}u, "
-                f"CLV {s['clv']:+.2f} (break-even {BREAK_EVEN['spread']:+.2f}), {s['pending']} pending")
-        if not name.startswith("  "): line += f". Decision: **{decision(s, BREAK_EVEN['spread'])}**"
+                f"CLV {s['clv']:+.2f} (break-even {be:+.2f}), {s['pending']} pending")
+        if not name.startswith("  "): line += f". Decision: **{decision(s, be)}**"
         out.append(line)
     try:
         BR = pd.read_csv(os.path.join(STATE, "bet_record.csv"))

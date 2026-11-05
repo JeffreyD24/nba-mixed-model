@@ -1,0 +1,31 @@
+BettingPros lines: 2627104 rows, dates 2021-12-01..2026-11-04, seasons {2022: 259698, 2023: 504308, 2024: 560148, 2025: 596637, 2026: 657603, 2027: 48710}
+under bets: 311185; matched to a box score: 97.8%
+
+== By season (season = end year; primary = 2023, 2024, 2025) ==
+  2022  :  38261 bets | win  52.5% |   -757.9u | ROI -1.98% [-2.78, -1.19] | consensus over-lean: priced 49.6% vs hit 48.0% (n 44286)
+  2023 *:  54852 bets | win  53.0% |   -687.1u | ROI -1.25% [-2.01, -0.50] | consensus over-lean: priced 49.5% vs hit 48.0% (n 56638)
+  2024 *:  62823 bets | win  52.7% |  -1119.7u | ROI -1.78% [-2.51, -1.06] | consensus over-lean: priced 49.6% vs hit 48.4% (n 64742)
+  2025 *:  68764 bets | win  53.1% |  -1314.3u | ROI -1.91% [-2.59, -1.26] | consensus over-lean: priced 49.5% vs hit 48.6% (n 72155)
+  2026  :  69308 bets | win  53.5% |   -656.9u | ROI -0.95% [-1.57, -0.33] | consensus over-lean: priced 49.4% vs hit 48.1% (n 74401)
+  2027  :   5847 bets | win  54.2% |    -49.9u | ROI -0.85% [-4.04, +1.77] | consensus over-lean: priced 49.1% vs hit 47.4% (n 6694)
+
+PRIMARY pooled: 186439 bets | win  52.9% |  -3121.1u | ROI -1.67% [-2.08, -1.25]; seasons positive 0/3 -> did not pass
+
+== Descriptive (primary seasons) ==
+  stat=ast:  46239 bets | win  51.4% |  -2198.1u | ROI -4.75% [-5.41, -4.11]
+  stat=fg3m:  43444 bets | win  54.0% |   -666.2u | ROI -1.53% [-2.33, -0.74]
+  stat=pts:  48579 bets | win  52.6% |   -491.3u | ROI -1.01% [-1.62, -0.42]
+  stat=reb:  48177 bets | win  53.7% |   +234.6u | ROI +0.49% [-0.22, +1.20]
+  book=betmgm:  47333 bets | win  52.8% |   -888.7u | ROI -1.88% [-2.61, -1.13]
+  book=caesars:  20902 bets | win  53.5% |   -564.6u | ROI -2.70% [-3.84, -1.55]
+  book=draftkings:  59678 bets | win  53.6% |   -532.7u | ROI -0.89% [-1.56, -0.21]
+  book=fanduel:  58526 bets | win  52.2% |  -1135.1u | ROI -1.94% [-2.62, -1.24]
+  line (0, 2]:  49296 bets | win  51.2% |  -2433.4u | ROI -4.94% [-5.73, -4.18]
+  line (2, 5]:  61334 bets | win  53.7% |   -553.1u | ROI -0.90% [-1.49, -0.33]
+  line (5, 10]:  39188 bets | win  53.6% |    -60.6u | ROI -0.15% [-0.94, +0.63]
+  line (10, 20]:  26689 bets | win  52.9% |   -207.4u | ROI -0.78% [-1.73, +0.18]
+  line (20, 60]:   9920 bets | win  53.9% |   +138.4u | ROI +1.39% [-0.18, +2.95]
+  single book draftkings: 136605 unders, ROI -3.30%
+  single book fanduel: 131669 unders, ROI -2.96%
+  single book betmgm: 153411 unders, ROI -4.47%
+  single book caesars: 105960 unders, ROI -4.96%

@@ -49,29 +49,40 @@ if SRC == "kalshi":
         if i % 100 == 0: print(SER, i, len(evs), "candles", len(cd), flush=True)
     save(pd.DataFrame(mk), f"{SER}_markets.csv.gz"); save(pd.DataFrame(cd), f"{SER}_candles.csv.gz")
 elif SRC == "poly":
+    # Fixed Nov 5, 2026 (probe-poly.yml): v2 trades take condition=, cursor paging, taker_only=false returns both sides of every fill.
+    # One trades file per month of game start, so files stay small and a timed-out job resumes where it stopped.
     G, D = "https://gamma-api.polymarket.com", "https://data-api.polymarket.com/v2"
+    T0, BUDGET = time.time(), float(ARG("--minutes", "320")) * 60
     evs, off = [], 0
     while len(evs) < MAXE:
         d = get(f"{G}/events?series_id={SER}&closed=true&limit=100&offset={off}&order=startDate&ascending=true"); time.sleep(0.2)
         if not isinstance(d, list) or not d: break
         evs += d; off += 100
-    evs = evs[:MAXE]; mk, tr = [], []
-    for i, e in enumerate(evs):
+    evs = evs[:MAXE]; mk = []
+    for e in evs:
         for m in e.get("markets") or []:
             try: outs, prices = json.loads(m.get("outcomes") or "[]"), json.loads(m.get("outcomePrices") or "[]")
             except Exception: outs, prices = [], []
             mk.append(dict(event_id=e.get("id"), event=e.get("title"), slug=e.get("slug"), start=e.get("startDate"), game_start=m.get("gameStartTime") or e.get("endDate"),
                            condition_id=m.get("conditionId"), question=m.get("question"), market_type=m.get("sportsMarketType") or m.get("groupItemTitle"),
                            line=m.get("line"), outcomes="|".join(outs), final_prices="|".join(map(str, prices)), volume=m.get("volumeNum") or m.get("volume")))
-            cid, offset, cursor, seen = m.get("conditionId"), 0, None, 0
-            while cid:
-                q = f"{D}/trades?condition_id={cid}&limit=500" + (f"&cursor={cursor}" if cursor else f"&offset={offset}")
-                t = get(q); time.sleep(0.15); rows = t.get("data", []) if isinstance(t, dict) else []
+    mk = pd.DataFrame(mk); save(mk, f"{SER}_markets.csv.gz")
+    mk["month"] = pd.to_datetime(mk.game_start, utc=True, errors="coerce", format="mixed").dt.strftime("%Y-%m").fillna("unknown")
+    outdir = os.path.join(W, "sharp", "data", SRC)
+    for mon, grp in mk.groupby("month"):
+        name = f"{SER}_trades_{mon}.csv.gz"
+        if os.path.exists(os.path.join(outdir, name)) and MAXE >= 100000: print("have", name); continue
+        if time.time() - T0 > BUDGET: print("TIME BUDGET reached before", mon, "- rerun to resume"); break
+        tr, first = [], True
+        for cid in grp.condition_id.dropna().unique():
+            cursor, seen = None, 0
+            while True:
+                t = get(f"{D}/trades?condition={cid}&limit=1000&taker_only=false" + (f"&cursor={cursor}" if cursor else "")); time.sleep(0.05)
+                if first and isinstance(t, dict): print("response keys", [k for k in t if k != "data"], flush=True); first = False
+                rows = t.get("data", []) if isinstance(t, dict) else []
                 for x in rows:
-                    tr.append(dict(condition_id=cid, wallet=x.get("proxy_wallet"), side=x.get("side"), outcome=x.get("outcome"), outcome_index=x.get("outcome_index"),
-                                   size=x.get("size"), price=x.get("price"), ts=x.get("timestamp"), tx=x.get("transaction_hash")))
-                seen += len(rows); cursor = t.get("next_cursor") or t.get("cursor") if isinstance(t, dict) else None
-                if not rows or len(rows) < 500 or seen >= 200000: break
-                if not cursor: offset += 500
-        if i % 50 == 0: print("poly", SER, i, len(evs), "trades", len(tr), flush=True)
-    save(pd.DataFrame(mk), f"{SER}_markets.csv.gz"); save(pd.DataFrame(tr).drop_duplicates(), f"{SER}_trades.csv.gz")
+                    tr.append((cid, x.get("proxy_wallet"), x.get("side"), x.get("outcome_index"), x.get("size"), x.get("price"), x.get("timestamp"), x.get("transaction_hash")))
+                seen += len(rows); cursor = (t.get("next_cursor") or t.get("cursor")) if isinstance(t, dict) else None
+                if not rows or not cursor or cursor in ("LTE=", "") or seen >= 500000: break
+        df = pd.DataFrame(tr, columns=["condition_id", "wallet", "side", "outcome_index", "size", "price", "ts", "tx"]).drop_duplicates()
+        save(df.drop(columns="tx"), name); print(SER, mon, "markets", grp.condition_id.nunique(), "fills", len(df), "minutes", round((time.time() - T0) / 60), flush=True)

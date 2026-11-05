@@ -5,7 +5,10 @@ set -euo pipefail
 cd "$(dirname "$0")"; mkdir -p raw_pbp
 # Pinned (Nov 5, 2026 data-source audit) to the upstream commit our derived tables were built from; UPSTREAM_PIN.csv lists
 # each file's git blob hash so a re-download can be checked byte-for-byte (git hash-object <file>).
+# Backup: a private mirror of these exact files is at github.com/JeffreyD24/hockey-private (Nov 5, 2026). If the upstream
+# repo disappears, run with MIRROR=1 to clone that instead (needs access to the private repo).
 PIN=333b1ee2d30c35652ae08fddc3502f14d1068ec0
+if [ "${MIRROR:-0}" = "1" ]; then git clone https://github.com/JeffreyD24/hockey-private raw_pbp/_repo; echo "Files are in raw_pbp/_repo/data"; exit 0; fi
 git clone --filter=blob:none --sparse https://github.com/danmorse314/hockeyR-data raw_pbp/_repo
 cd raw_pbp/_repo; git sparse-checkout set data; git checkout -q "$PIN"
 echo "Files are in raw_pbp/_repo/data (use the *_lite.csv.gz files; read with encoding latin-1)."

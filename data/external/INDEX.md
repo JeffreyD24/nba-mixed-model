@@ -28,4 +28,4 @@ MANIFEST.csv lists every file with size and checksum.** Re-run `python3 -I make_
 | Folder | What | Status |
 |---|---|---|
 | `kaggle/` | the three Kaggle datasets the models use (eoinamoore box scores/schedule/referees, NBA betting lines 2008-2026, EPM); CC0 / Apache 2.0 | in repo; refreshed daily by `archive-kaggle.yml` |
-| `hockeyr/` | fetch script now pinned to upstream commit 333b1ee; `UPSTREAM_PIN.csv` has each raw file's git hash | raw still not stored (no license) |
+| `hockeyr/` | fetch script now pinned to upstream commit 333b1ee; `UPSTREAM_PIN.csv` has each raw file's git hash | raw backed up in the PRIVATE repo JeffreyD24/hockey-private (no license, so not here) |

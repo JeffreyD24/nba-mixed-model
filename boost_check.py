@@ -131,7 +131,10 @@ def suggest(W, book, boost, sports=("nba", "nhl", "nfl"), legs=1, min_odds=None,
             picks.append(dict(bet=" + ".join(f"{r.sport.upper()} {r.lbl}" for r in g.itertuples()), price=fmt(amer(d)),
                               boosted=fmt(amer(boosted_dec(d, boost))), fair=fmt(amer(1 / p)), ev=e, ev_plain=ev(p, d),
                               start=str(g.commence_et.min())[:16]))
-    return f"Odds snapshot {snap} UTC; fair price = Pinnacle no-vig.", picks
+    age_h = (pd.Timestamp.now(tz="UTC") - pd.Timestamp(snap)).total_seconds() / 3600
+    stale = (f" ⚠️ This snapshot is {age_h:.0f} hours old (the paid odds feed is out of credits), so these prices may have moved: "
+             "check the line in the app first, or use 'check a bet' with both sides' prices.") if age_h > 2 else ""
+    return f"Odds snapshot {snap} UTC; fair price = Pinnacle no-vig.{stale}", picks
 
 
 # ---------------- check a ticket the user typed in ----------------

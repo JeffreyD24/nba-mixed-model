@@ -61,7 +61,9 @@ def snapshot():
             try: p = get(f"{BASE}/event-page?_ak={AK}&eventId={e['eventId']}&tab={tab}&timezone=America%2FNew_York")
             except Exception as ex: print(f"{e['name']} {tab}: {ex}"); continue
             for m in p.get("attachments", {}).get("markets", {}).values():
-                if not FD_TYPE.match(m.get("marketType", "")) or len(m.get("runners", [])) != 2: continue
+                mt = m.get("marketType", "")
+                ok = FD_TYPE.match(mt) or (stat == "fg3m" and mt.startswith("PLAYER_") and "THREE" in mt and "QUARTER" not in mt)
+                if not ok or len(m.get("runners", [])) != 2: continue
                 r = {x.get("result", {}).get("type"): x for x in m["runners"]}
                 if "OVER" not in r or "UNDER" not in r: continue
                 o, u = r["OVER"], r["UNDER"]

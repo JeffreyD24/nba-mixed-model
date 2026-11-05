@@ -1,0 +1,49 @@
+name: Check a boost
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: check-boost-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    # only boost checks opened by the repo owner, with the form's "boost" label
+    if: github.event.issue.user.login == github.repository_owner && (contains(github.event.issue.labels.*.name, 'boost') || startsWith(github.event.issue.title, 'Boost:'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tools
+        run: pip install -q pandas numpy
+      - name: Work out the EV and save the check
+        run: |
+          git config user.name "nba-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          for i in 1 2 3 4 5 6; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python boost_check.py . issue "$GITHUB_EVENT_PATH"
+            git add state/boost_checks.csv
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -q -m "Boost check from issue #${{ github.event.issue.number }}"
+            if git push -q; then exit 0; fi
+            echo "Push failed (another save got there first); retrying."; sleep $((4 * i))
+          done
+          exit 1
+      - name: Reply and close
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f state/_boost_title.txt ]; then gh issue edit ${{ github.event.issue.number }} -R ${{ github.repository }} --title "$(cat state/_boost_title.txt)"; fi
+          gh issue comment ${{ github.event.issue.number }} -R ${{ github.repository }} --body-file state/_boost_reply.md
+          gh issue close ${{ github.event.issue.number }} -R ${{ github.repository }}

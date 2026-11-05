@@ -1,0 +1,92 @@
+name: Check a boost
+description: Got a profit boost token or an odds boost? Get the EV, or the best bet to use it on. Reply comes back on this issue in about a minute.
+title: "Boost: "
+labels: ["boost"]
+body:
+  - type: dropdown
+    id: book
+    attributes:
+      label: Sportsbook
+      options:
+        - FanDuel
+        - DraftKings
+        - BetMGM
+        - Caesars
+        - BetRivers
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of boost
+      options:
+        - Profit boost token - find me the best bet
+        - Profit boost token - check a bet I picked
+        - Odds boost special (book shows a boosted price)
+        - No boost - just check a parlay / SGP
+    validations:
+      required: true
+  - type: input
+    id: pct
+    attributes:
+      label: Boost %
+      description: "For profit boost tokens, e.g. 25, 30, 50, 100. Leave blank for odds boosts."
+    validations:
+      required: false
+  - type: input
+    id: boosted
+    attributes:
+      label: Boosted price (odds boosts only)
+      description: "The new price the book shows, e.g. +300"
+    validations:
+      required: false
+  - type: input
+    id: legs_needed
+    attributes:
+      label: Legs the boost requires
+      description: "1 for a straight bet; 2 or 3 if the token only works on parlays (used when you want me to find the bet)"
+      placeholder: "1"
+    validations:
+      required: false
+  - type: input
+    id: sports
+    attributes:
+      label: Sports
+      placeholder: "NBA, NHL, NFL"
+    validations:
+      required: false
+  - type: input
+    id: min
+    attributes:
+      label: Lowest odds allowed (optional)
+      description: "If the token says something like 'odds of -200 or longer', enter -200"
+    validations:
+      required: false
+  - type: input
+    id: maxstake
+    attributes:
+      label: Max stake ($, optional)
+    validations:
+      required: false
+  - type: textarea
+    id: legs
+    attributes:
+      label: Bet(s) to check
+      description: |
+        One leg per line: description, its normal price at the book, and the other side's price if you can see it.
+        For an odds boost, enter each leg's normal (unboosted) price. Leave blank if you want me to find the best bet.
+      placeholder: |
+        LeBron over 24.5 pts, -115, -105
+        Lakers ML, +120, -140
+        Tatum 30+ pts, +250
+    validations:
+      required: false
+  - type: dropdown
+    id: same
+    attributes:
+      label: Are the legs from the same game?
+      options:
+        - Different games (or one leg)
+        - Same game (SGP)
+    validations:
+      required: false

@@ -28,7 +28,7 @@ us, wait (bail-out and timing logic already exist to reuse).
 ## Step plan
 1. ~~Data audit: which books and seasons have opening and closing totals~~ (done Nov 5, below)
 2. ~~Opener model for DraftKings and Pinnacle totals~~ (done Nov 5: residual predicts movement, not results; pre-registered bet failed, see `research/market_models/STEP2_OPENER_RESULTS.md`). Was: (features: prior totals, team pace and efficiency, rest, travel, injuries known at open, previous opener errors)
-3. Movement model (features: line gap between books at that moment, time to tip, betting splits, injury news since open, our model's edge)
+3. ~~Movement model~~ (done Nov 5: CLV +1.52 vs break-even +1.07 on 2025-26 but -8.7u, so fails the written rule; shadow record proposed; see `research/market_models/STEP3_MOVEMENT_RESULTS.md`). Was: (features: line gap between books at that moment, time to tip, betting splits, injury news since open, our model's edge)
 4. Blend on 2021-22 to 2024-25, tested on 2025-26
 5. Pre-register the combined bet rule, backtest, then run it as a side-by-side record next to v4 in 2026-27
 6. If it beats v4 on CLV: copy the setup to NBA spreads, then NHL and NFL
@@ -61,3 +61,4 @@ us, wait (bail-out and timing logic already exist to reuse).
 ## Status log
 - 2026-11-05: plan written; step 1 data audit done (see above). Next: step 2, opener models.
 - 2026-11-05: step 2 done. Mixed opener model predicts DK/Pinnacle/FanDuel first-seen totals within 2.4-2.5 pts (2025-26). Pre-registered residual bet failed (2025-26: 381 bets, CLV +1.00 vs break-even +1.07, -18.5u; 2024-25 was +2.12 CLV, +33u). Residual predicts line movement in both seasons, so it becomes a step-3 input. Next: step 3, movement model, same-moment book comparisons.
+- 2026-11-05: step 3 done. Boosted movement model (same-snapshot book gaps, price leans, move so far, step-2 opener residual) on 2025-26: 573 bets, CLV +1.52 (break-even +1.07), -8.7u, 51.8% (expected 53.3%). Fails the rule on units; CLV check shows 1 pt CLV = +2.2% wins in NBA totals, close is fair. Next: step 4, blend; shadow record for the movement rule.

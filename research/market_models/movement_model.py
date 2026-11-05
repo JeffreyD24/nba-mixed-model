@@ -12,8 +12,13 @@ BE_CLV = 1.07
 
 # ---------- 0. walk-forward DK opener predictions for 2022-23..2025-26 (step 2 mixed model, lam 20) ----------
 src = open(OUT + "opener_models.py").read().split("# ---------- 1. validation")[0]
+import sys
+NOINJ = "--no-injury" in sys.argv   # honest variant: opener model without the night-before injury report (it was not
+SUF = "_noinj" if NOINJ else ""     #   out yet for about half the bets that fired before 8:30 PM the day before)
 ns = {}
 exec(src, ns)
+if NOINJ:
+    ns["BASE"] = [c for c in ns["BASE"] if c not in ns["INJ"]]
 G0 = ns["G"]
 opener_pred = pd.concat([ns["walk"]("mixed", s, "dk", 20) for s in (2023, 2024, 2025, 2026)])
 G0["dk_opred"] = opener_pred
@@ -151,7 +156,7 @@ for season, S in ((2025, va), (2026, te)):
         rep["bets"][f"{season}_thr{thr}"] = {**r, "status": tag}
         if tag == "PREREG":
             b[["date", "home", "away", "snap", "lead_h", "side", "dk_now", "dk_close_point", "final_total", "pred",
-               "clv", "units"]].to_csv(OUT + "movement_bets_2025_26.csv", index=False)
+               "clv", "units"]].to_csv(OUT + f"movement_bets_2025_26{SUF}.csv", index=False)
             rep["prereg_by_lead"] = {lab: bets_s for lab, bets_s in (
                 (lab, {"n": int(len(x)), "clv": round(float(x.clv.mean()), 2), "units": round(float(x.units.sum()), 1)})
                 for lab, x in ((f"{lo}-{hi}h", b[(b.lead_h >= lo) & (b.lead_h < hi)]) for lo, hi in
@@ -181,5 +186,5 @@ rep["exploratory_our_edge"] = {
 b2, r2 = bets(bb.assign(pred=rm.predict((dX(bb) - mu) / sd)), 1.5)
 rep["exploratory_our_edge"]["bets_2026_thr1.5"] = r2
 
-json.dump(rep, open(OUT + "movement_results.json", "w"), indent=1)
+json.dump(rep, open(OUT + f"movement_results{SUF}.json", "w"), indent=1)
 print(json.dumps(rep, indent=1))

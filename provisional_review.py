@@ -5,7 +5,9 @@ import os, sys
 import numpy as np, pandas as pd
 W = os.path.abspath(sys.argv[1]); STATE = os.path.join(W, "state")
 BREAK_EVEN = {"spread": 0.77,          # CLV in points needed to pay -110 (research/spreads/STEP1_NBA_RESULTS.md)
-              "total": 0.33}           # totals (research/spreads/LINE_MOVE_MODEL_RESULTS.md)
+              "total": 1.07}           # full-game totals. Corrected Nov 5, 2026 from 0.33 (an "at the act line" number from
+                                       #   research/spreads/LINE_MOVE_MODEL_RESULTS.md): 1 pt of CLV = +2.2% wins in NBA totals,
+                                       #   every season 2021-26 (research/market_models/STEP3_MOVEMENT_RESULTS.md), so -110 needs ~1.07
 STOP_ANY, STOP_25, PROMOTE_N, GIVE_UP_N = -10.0, -5.0, 100, 150
 
 
@@ -40,6 +42,23 @@ def main():
              "  all NBA spread news bets (tracking: provisional + v3 bets on unmoved/toward lines)":
                  first[(first.market == "spread") & first.news_bet.astype(str).isin(["True", "1", "1.0"])],
              "NBA totals 2.5-3 pt edges (PROVISIONAL)": first[first.tier.astype(str) == "provisional_totals"]}
+    # market models line-movement bets (Nov 5, 2026): own file; graded on every BET the rule made, and on the ones pushed
+    try:
+        M = pd.read_csv(os.path.join(STATE, "market_models", "movement_alerts.csv"))
+        M = M.assign(clv_points=M.clv_points)
+        rules["NBA totals line-movement bets, market models v1-an (PROVISIONAL; every trigger)"] = M
+        rules["  pushed to the phone (not same-side/conflict with the main totals model, price OK)"] = M[M.pushed.astype(str).isin(["True", "1", "1.0"])]
+    except FileNotFoundError:
+        pass
+    try:
+        Bl = pd.read_csv(os.path.join(STATE, "market_models", "blend_alerts.csv"))
+        Bl = Bl[Bl.tier.astype(str) == "provisional_blend"]
+        rules["NBA totals blend v4 + market, market models blend v1 (PROVISIONAL; every BET decision)"] = Bl
+        rules["  blend totals pushed to the phone"] = Bl[Bl.pushed.astype(str).isin(["True", "1", "1.0"])]
+        rules["  blend totals, overs only"] = Bl[Bl.side.astype(str) == "over"]
+        rules["  blend totals, unders only"] = Bl[Bl.side.astype(str) == "under"]
+    except FileNotFoundError:
+        pass
     out.append(f"# Provisional bets review, {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d %H:%M} ET\n")
     out.append("Rules and stop lines: research/PROVISIONAL_BETS.md. Units at -110, 1 unit per alert; CLV in points vs the DraftKings close.\n")
     for name, R in rules.items():

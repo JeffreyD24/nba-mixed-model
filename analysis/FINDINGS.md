@@ -3,6 +3,52 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Market models step 4, blend of v4 + market + expected move (NBA totals) [TEST] [DECISION]
+- Question: does a blend of our live totals model (v4) with DK's line plus its expected move beat v4 alone on CLV per bet?
+- Data / method: pre-registered (research/market_models/STEP4_BLEND_PREREG.md, c0f08c4). v4 walk-forward preds 2023-26
+  (analysis/threshold_sweep_2026-11-04/nba_v4_preds.csv), DK totals from The Odds API snapshots (Action Network books), movement model
+  refit season by season. Fair = a + w*v4 + w'*(DK now + expected move), OLS on 2023-25, test 2025-26 once. Decision = first DK snapshot
+  at/after 9 PM the night before; bet |fair - DK| >= 2. Script research/market_models/blend_model.py.
+- Result: first run 314 bets, CLV +1.79, +23.3u. Fable found a box-score look-ahead (team features keyed by game date, so a 9 PM snapshot
+  before a back-to-back team's game still saw that game). **Honest timing (after both teams' box scores, `--reach`): 257 bets, CLV +1.44
+  ± 0.18 (break-even +1.07), +1.8u, 52.9%; v4 alone at the same moment 598 bets, CLV +0.79, +18.4u.** Weights 0.31 v4 / 0.77 market.
+  89% overs. 2024-25 (fit season): 231 bets, CLV +1.39, +17.1u.
+- Read: passes all three pre-registered conditions, but units are thin and it is one test season; v4 is partly in-sample on 2023-26.
+  The market carries most of the weight; v4's information is about 0.3 pt per point of disagreement once the market is in.
+- Decision: live as PROVISIONAL with money (Jeffrey, Nov 5: provisional ideas go live labeled, own record, stop lines). Fable-checked.
+- Files: research/market_models/STEP4_BLEND_RESULTS.md, blend_results_reach.json, blend_bets_2025_26_reach.csv, data/blend_v1_reach.json.
+
+## 2026-11-05: Movement model goes live without Pinnacle ("v1-an"), honest timing (NBA totals) [TEST] [DECISION]
+- Question: can the step-3 movement rule run live now that The Odds API feed (Pinnacle + 9 books) paused for credits?
+- Data / method: pre-registered addendum (STEP3_MOVEMENT_PREREG.md, 7f40f5e): same model with only the five books Action Network carries
+  (DK, FanDuel, Caesars, BetMGM, BetRivers), no Pinnacle inputs, no injury inputs. research/market_models/export_movement_model.py --an.
+- Result: 2025-26 505 bets, CLV +1.41, +5.4u. Fable: 144 of them fired before a team's previous game was in the box scores. **Reachable
+  snapshots only (--reach): 385 bets, CLV +1.31 ± 0.16 (break-even +1.07), -10.8u, 51.2%**; 2024-25 519 bets, CLV +1.59, +19.4u.
+- Read: CLV above break-even by ~1.5 se, units negative: the weakest live provisional rule, worth about +0.5% per bet if the CLV holds.
+- Decision: live as PROVISIONAL with money on CLV (the addendum's live bar; Jeffrey asked for alerts with money). market_models_live.py
+  in the 5-minute loop, quotes fetched fresh from Action Network. Fable-checked.
+- Files: STEP3_MOVEMENT_RESULTS.md (addendum + correction), movement_bets_2025_26_an_reach.csv, data/movement_model_v1an_reach.json.
+
+## 2026-11-05: Box-score look-ahead in date-keyed team features (all sports) [OBSERVATION] [DECISION]
+- Question: why did the Fable check cut the market-model results?
+- Result: team features (pace, efficiency, rest) were joined by game date, so a line snapshot taken before a team's previous game was
+  played still used that game's box score. 144 of 505 movement bets and the blend's 9 PM decisions were affected.
+- Decision: market_models_core.ready_time() gives each game the earliest moment the live code can price it (morning run after both
+  teams' previous games); every market-model backtest now filters to it. Check other date-keyed features against bet timestamps the same way.
+
+## 2026-11-05: Sweep of tracked-but-not-bet ideas for PROVISIONAL promotion (all sports) [TEST] [LEAD] [CORRELATION]
+- Question: which shadow/test records are worth betting with money as PROVISIONAL (Jeffrey: widen the bets)?
+- Data / method: inventory of all three repos + ncaab; NHL rest check recomputed from nhl-mixed-model research/stats_catalog/nhl_games.csv
+  (trusted rows): CLV = EV of the opening price at the no-vig close.
+- Result: nothing else passes CLV-first on an honest test. Stack-only bets (what promotion would add) CLV +0.43 to +0.85, -23.5u to
+  -5.5u (analysis/nba_v4_vs_stack_output.txt). **NHL rested team vs back-to-back team: CLV ~0 (+0.3% DK 2024-26, -1.6% SBR 2016-22),
+  but rested teams won 57.7% vs 55.3% the no-vig close implied (2016-22, 1,832 games, ~2 se) and 59.7% vs 55.8% (2024-26, 538, ~1.9 se).**
+  NFL 2H totals are being bet with money (3 logged) with no provisional row and no CLV evidence.
+- Read: the NHL rest result is a closing-line blind spot, not a CLV edge; exploratory (the rule came from a catalog of many checks), so
+  it needs a pre-registered test before money. [CORRELATION] rest vs result beyond the close; no causal claim.
+- Decision: none applied yet. Proposed: NHL rest rule as PROVISIONAL after a pre-registered test; NFL 2H totals: stop or give it a
+  provisional row. research/PROVISIONAL_CANDIDATES_2026-11-05.md
+
 ## 2026-11-05: Props v1b at the OPENING line, past seasons (NBA) [TEST] [LEAD]
 - Question: v1b's 11 AM profit was model-driven but vanished at the close. Is it an early-market edge? Test at the opener on past
   seasons (RULE 2), pre-registered: research/props/PROPS_V1B_OPENER_PREREG_2026-11-05.md (commit a3da8f3).

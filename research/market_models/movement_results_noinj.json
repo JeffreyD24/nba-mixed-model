@@ -1,0 +1,154 @@
+{
+ "validation_2024_25": {
+  "no_move": 8.333,
+  "ridge": 7.814,
+  "boost": 7.682
+ },
+ "test_2025_26": {
+  "no_move": 6.265,
+  "ridge": 5.925,
+  "boost": 5.942
+ },
+ "chosen": "boost",
+ "ridge_weights_std": {
+  "log_lead": 0.01,
+  "move_so_far": 0.215,
+  "pin_gap": 0.074,
+  "fd_gap": 0.257,
+  "cons_gap": 0.218,
+  "n_books": 0.046,
+  "lean_draftkings": 0.026,
+  "lean_pinnacle": 0.162,
+  "dk_oresid": -0.28,
+  "opener_view": 0.133,
+  "pin_present": -0.014
+ },
+ "test_error_removed_vs_no_move": 0.052,
+ "bets": {
+  "2025_thr1.0": {
+   "n": 1058,
+   "overs": 651,
+   "clv_pts": 1.42,
+   "clv_se": 0.12,
+   "units": 42.0,
+   "roi": 0.04,
+   "win_rate": 0.545,
+   "median_lead_h": 24.4,
+   "status": "exploratory"
+  },
+  "2025_thr1.5": {
+   "n": 691,
+   "overs": 456,
+   "clv_pts": 1.96,
+   "clv_se": 0.15,
+   "units": 59.8,
+   "roi": 0.086,
+   "win_rate": 0.57,
+   "median_lead_h": 24.7,
+   "status": "exploratory"
+  },
+  "2025_thr2.0": {
+   "n": 426,
+   "overs": 297,
+   "clv_pts": 2.49,
+   "clv_se": 0.19,
+   "units": 54.1,
+   "roi": 0.127,
+   "win_rate": 0.591,
+   "median_lead_h": 24.8,
+   "status": "exploratory"
+  },
+  "2025_thr1.5_3h_plus": {
+   "n": 686,
+   "overs": 453,
+   "clv_pts": 1.96,
+   "clv_se": 0.15,
+   "units": 61.0,
+   "roi": 0.089,
+   "win_rate": 0.571,
+   "median_lead_h": 24.7,
+   "status": "exploratory"
+  },
+  "2026_thr1.0": {
+   "n": 994,
+   "overs": 534,
+   "clv_pts": 1.1,
+   "clv_se": 0.1,
+   "units": -6.3,
+   "roi": -0.006,
+   "win_rate": 0.523,
+   "median_lead_h": 23.2,
+   "status": "exploratory"
+  },
+  "2026_thr1.5": {
+   "n": 593,
+   "overs": 340,
+   "clv_pts": 1.47,
+   "clv_se": 0.13,
+   "units": -8.0,
+   "roi": -0.013,
+   "win_rate": 0.519,
+   "median_lead_h": 23.3,
+   "status": "PREREG"
+  },
+  "2026_thr2.0": {
+   "n": 310,
+   "overs": 179,
+   "clv_pts": 1.72,
+   "clv_se": 0.2,
+   "units": 20.9,
+   "roi": 0.068,
+   "win_rate": 0.561,
+   "median_lead_h": 24.1,
+   "status": "exploratory"
+  },
+  "2026_thr1.5_3h_plus": {
+   "n": 586,
+   "overs": 336,
+   "clv_pts": 1.47,
+   "clv_se": 0.13,
+   "units": -8.5,
+   "roi": -0.014,
+   "win_rate": 0.519,
+   "median_lead_h": 23.4,
+   "status": "exploratory"
+  }
+ },
+ "prereg_by_lead": {
+  "0.5-3h": {
+   "n": 7,
+   "clv": 1.57,
+   "units": 0.5
+  },
+  "3-12h": {
+   "n": 29,
+   "clv": 1.28,
+   "units": 3.1
+  },
+  "12-24h": {
+   "n": 297,
+   "clv": 1.6,
+   "units": -21.7
+  },
+  "24-999h": {
+   "n": 260,
+   "clv": 1.34,
+   "units": 10.2
+  }
+ },
+ "exploratory_our_edge": {
+  "fit_2024_25_test_2025_26_mse_with": 5.967,
+  "mse_without": 5.999,
+  "our_edge_weight_std": 0.893,
+  "bets_2026_thr1.5": {
+   "n": 486,
+   "overs": 204,
+   "clv_pts": 1.8,
+   "clv_se": 0.14,
+   "units": 17.5,
+   "roi": 0.036,
+   "win_rate": 0.545,
+   "median_lead_h": 22.2
+  }
+ }
+}

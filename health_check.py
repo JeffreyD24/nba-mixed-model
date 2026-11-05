@@ -45,6 +45,8 @@ if SPORT == "nba":   # Nov 5, 2026: live sharp-money tracker, all five leagues
     WORKFLOWS["sharp-live.yml"] = (2, "Sharp money tracker (about every minute)")
     STREAMS.update({"sharp/live/nba": (24, "Sharp money live captures", "warn")})
 if SPORT == "nba":
+    WORKFLOWS["watchdog.yml"] = (1, "Pipeline watchdog (every 10 min; pushes when anything breaks)")   # Nov 5, 2026
+    WORKFLOWS["props-loop.yml"] = (2, "Props loop (FanDuel lines + prop alerts every ~2 min)")       # Nov 5, 2026
     WORKFLOWS["econ-gdp.yml"] = (14, "Economics (GDP) recorder")
     WORKFLOWS["ncaab.yml"] = (30, "NCAAM daily (test-only)")        # Nov 5, 2026
     WORKFLOWS["archive-kaggle.yml"] = (30, "Kaggle tables archive (data-source audit, Nov 5 2026)")

@@ -1,0 +1,8 @@
+DIAGNOSTICS (after the pass; descriptive). Spreads, |BLEND-C - DK opener| >= 0.5, DraftKings 2023-24 + 2025-26.
+  as graded (close-based filters)                               837 bets 56.0%  +57.0u CLV +1.27  |open-close| median 1.0, >=6: 15
+  raw DK opener, no filter                                      883 bets 57.5%  +85.5u CLV +1.73  |open-close| median 1.5, >=6: 47
+  raw DK opener, drop if 3+ pts from AN Open (pre-game check)   804 bets 56.3%  +59.5u CLV +1.25  |open-close| median 1.0, >=6: 10
+  raw DK opener, drop if 1.5+ pts from AN Open                  753 bets 56.7%  +60.8u CLV +1.24  |open-close| median 1.0, >=6: 10
+  by season: {2024: '289 bets 58.1% +31.0u', 2026: '420 bets 56.2% +30.5u'}
+  by month: {1: '185:55%', 2: '148:55%', 3: '128:52%', 4: '7:57%', 11: '76:61%', 12: '165:62%'}
+  edge size (pts) quartiles: {0.25: 0.54, 0.5: 0.6, 0.75: 0.69}

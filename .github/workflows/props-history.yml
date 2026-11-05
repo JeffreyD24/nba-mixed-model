@@ -1,4 +1,4 @@
-name: Past player-prop lines (The Odds API, 2025-26)
+name: Past player-prop lines (The Odds API, 2025-26 then 2024-25)
 
 on:
   push:
@@ -27,13 +27,15 @@ jobs:
       - name: Download in batches, saving after each
         run: |
           git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
-          for b in $(seq 1 12); do
-            OUT=$(python props_history.py . --max-dates 15 2>&1); RC=$?
+          for b in $(seq 1 26); do
+            if [ $b -le 13 ]; then RANGE="--from 2025-10-21 --to 2026-04-12"; else RANGE="--from 2024-10-22 --to 2025-04-13"; fi
+            OUT=$(python props_history.py . $RANGE --max-dates 15 2>&1); RC=$?
             echo "$OUT" | tail -3
             git add data/props_history
             if ! git diff --cached --quiet; then
               git commit -q -m "Prop history: $(echo "$OUT" | grep -o '^[0-9-]*' | tail -1)"
               for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && break; sleep 10; done
             fi
-            if [ $RC -ne 0 ] || echo "$OUT" | grep -q "already saved"; then break; fi
+            if [ $RC -ne 0 ]; then break; fi
+            if echo "$OUT" | grep -q "already saved" && [ $b -gt 13 ]; then break; fi
           done

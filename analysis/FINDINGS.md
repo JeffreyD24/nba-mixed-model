@@ -3,6 +3,22 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: NBA props — past prop lines found; unders rule; props v2; v1b timing [TEST] [DATA] [DECISION]
+- Data: free past prop lines from BettingPros' public web API, Dec 2021 – Nov 2026 (closes per book + opener; 2.6M book-lines),
+  `data/props_history/bettingpros/`; sources searched and ruled out: research in claude/prop_history_sources_2026-11-05.md (Project).
+- Unders at the best of DK/FD/MGM/Caesars close (pre-registered): 2022-25 pooled −1.67% [−2.08, −1.25], 0/3 seasons positive → fail.
+  The close over-lean is steady every season (no-vig over 49.4–49.6% vs hit 48.0–48.6%) but smaller than the vig.
+- Props v2 (injury-aware minutes, pre-registered): letter-pass on Test A 2024-25 (info coef +0.103 [+0.073, +0.133], +8.7u), but
+  the Fable review found the bets were FanDuel-vs-DraftKings closing gaps (often stale lines; no-model rule +61u, model-needed bets
+  −50u) and minutes double-counted absences. Not live; v2.1 fix list in research/props/PROPS_V2_RESULTS_2026-11-05.md.
+- Props v1b timing: at 11 AM (synchronized Odds API snapshot, 2025-26) the profit is model-driven (model-needed bets +54.8u / +110.3u,
+  market-only ≈0u); at the close over 4 seasons the same model nets ≈0. Morning edge, priced out by tip. Model information beyond the
+  close is real but small (coef ≈ +0.1, every season).
+- Decision: nothing new goes live. v1b stays on the 11 AM FanDuel paper record (~500 picks by mid-December) and is decided then
+  under the negative-CLV extra checks (research/PROVISIONAL_BETS.md, added today).
+- research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
+  research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
+
 ## 2026-11-05: Can a results-only model ever beat the closing line's accuracy? (NCAAM, all sports) [OBSERVATION] [DECISION]
 - Question (Jeffrey): if we keep building models with new weights, will we get more accurate than DraftKings at the close?
 - Evidence: 10+ NCAAM model variants (Model 1, M2, M4, M8, M10, MKT, ENS, stacks) across 2007-26: the closing line is the most accurate

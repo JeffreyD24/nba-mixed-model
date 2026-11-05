@@ -64,6 +64,13 @@ Legend: [x] already in place  [~] partly  [ ] open  (O) = good job for Opus
 - [x] Four r/algobetting threads read from your pastes ("Has anyone done it", NBA props season review, LLM bots, comments from a deleted post); notes in research/community_notes. Only new ideas: bootstrap intervals, calibration table, stack with the market; live-line overreaction parked
 - [~] X public search done (research/community_notes). Reddit/4chan still open: re-do the sweep with the Claude desktop app browser or the Chrome extension (my shell cannot reach those sites)
 
+## Open prop ideas (Nov 5, 2026)
+- [ ] Props v2.1: minutes rescaled to 240/team, only new absences redistributed, each bet vs its own book, synchronized snapshots, 11 AM test.
+- [ ] v1b live paper record at FanDuel 11 AM: decide at ~500 graded picks (mid-December).
+- [ ] Model-selected unders (v2 unders +2.4/+7.9/+10.5/+8.1% in 2022-26; found after the fact): pre-register and test on 2021-22
+      (DraftKings only) and live 2026-27 before trusting it.
+- [ ] Earlier prop snapshots (opening lines in BettingPros `open_*` columns): does the model beat the opener → close move (true CLV)?
+
 ## When to switch to Opus
 Switch for: (1) the independent leakage audit, (2) choosing shrink thresholds and bet rules without overfitting, (3) any redesign of how
 the three models are combined. Stay on Sonnet for: data downloads, cleaning, running backtests, logging, wiring alerts, reports.

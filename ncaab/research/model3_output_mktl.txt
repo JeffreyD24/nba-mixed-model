@@ -1,0 +1,40 @@
+spread BLEND-A coefficients for 2026 (const, M2, M8, MKTL): [-0.603  0.304  0.434  0.312]
+spread BLEND-B coefficients for 2026 (const, M2, M8, MKTL): [-0.231  0.518  0.034  0.448]
+spread BLEND-C coefficients for 2026 (const, M2, M8, MKTL, OPEN): [-0.075  0.004  0.028  0.098  0.88 ]
+
+===== SPREAD (decision rows: DraftKings 2023-24 + 2025-26; ESPN BET 2024-25 shown separately)
+  [DK 2024+2026] n=9163
+    A result RMSE : M2 11.53  M8 11.50  MKTL 11.44  BLEND-A 11.37  BLEND-B 11.35  BLEND-C 11.24  | opener 11.25  close 11.19
+    B opener RMSE : M2 2.78  M8 2.60  MKTL 2.68  BLEND-A 2.19  BLEND-B 2.07  BLEND-C 0.28
+    C close RMSE  : M2 2.99  M8 2.76  MKTL 2.66  BLEND-A 2.33  BLEND-B 2.23  BLEND-C 1.48  | opener 1.55   move R2: M2 -2.723  M8 -2.172  MKTL -1.941  BLEND-A -1.266  BLEND-B -1.065  BLEND-C +0.084
+  [ESPN BET 2025] n=4966
+    A result RMSE : M2 11.56  M8 11.48  MKTL 11.47  BLEND-A 11.38  BLEND-B 11.39  BLEND-C 11.23  | opener 11.24  close 11.15
+    B opener RMSE : M2 2.82  M8 2.68  MKTL 2.67  BLEND-A 2.19  BLEND-B 2.15  BLEND-C 0.27
+    C close RMSE  : M2 3.02  M8 2.84  MKTL 2.76  BLEND-A 2.38  BLEND-B 2.34  BLEND-C 1.49  | opener 1.53   move R2: M2 -2.870  M8 -2.420  MKTL -2.236  BLEND-A -1.406  BLEND-B -1.334  BLEND-C +0.057
+  [SBR 2016-21] n=22252
+    A result RMSE : M2 11.47  M8 11.45  MKTL 11.45  BLEND-A 11.38  BLEND-B 11.35  BLEND-C 11.36  | opener 11.40  close 11.33
+    B opener RMSE : M2 2.90  M8 2.87  MKTL 2.99  BLEND-A 2.64  BLEND-B 2.45  BLEND-C 0.33
+    C close RMSE  : M2 3.10  M8 3.02  MKTL 3.00  BLEND-A 2.76  BLEND-B 2.59  BLEND-C 1.28  | opener 1.30   move R2: M2 -4.678  M8 -4.388  MKTL -4.309  BLEND-A -3.500  BLEND-B -2.949  BLEND-C +0.037
+  BET RULE: threshold chosen on SBR 2016-21 = None
+  -> no threshold reached break-even CLV on SBR 2016-21: FAIL
+total BLEND-A coefficients for 2026 (const, M2, M8, MKTL): [8.216 0.658 0.116 0.17 ]
+total BLEND-B coefficients for 2026 (const, M2, M8, MKTL): [ 5.382  0.866 -0.113  0.209]
+total BLEND-C coefficients for 2026 (const, M2, M8, MKTL, OPEN): [2.43  0.082 0.027 0.1   0.774]
+
+===== TOTAL (decision rows: DraftKings 2023-24 + 2025-26; ESPN BET 2024-25 shown separately)
+  [DK 2024+2026] n=9283
+    A result RMSE : M2 17.15  M8 17.17  MKTL 17.27  BLEND-A 17.07  BLEND-B 17.09  BLEND-C 16.92  | opener 16.94  close 16.77
+    B opener RMSE : M2 3.22  M8 3.80  MKTL 4.46  BLEND-A 3.01  BLEND-B 2.98  BLEND-C 0.74
+    C close RMSE  : M2 3.81  M8 4.13  MKTL 4.25  BLEND-A 3.42  BLEND-B 3.43  BLEND-C 2.47  | opener 2.63   move R2: M2 -1.091  M8 -1.462  MKTL -1.605  BLEND-A -0.691  BLEND-B -0.697  BLEND-C +0.117
+  [ESPN BET 2025] n=5056
+    A result RMSE : M2 16.76  M8 16.76  MKTL 16.84  BLEND-A 16.67  BLEND-B 16.69  BLEND-C 16.44  | opener 16.43  close 16.23
+    B opener RMSE : M2 3.32  M8 3.77  MKTL 4.10  BLEND-A 3.01  BLEND-B 2.99  BLEND-C 0.72
+    C close RMSE  : M2 3.79  M8 4.07  MKTL 4.25  BLEND-A 3.43  BLEND-B 3.45  BLEND-C 2.25  | opener 2.29   move R2: M2 -1.729  M8 -2.157  MKTL -2.431  BLEND-A -1.241  BLEND-B -1.271  BLEND-C +0.035
+  [SBR 2016-21] n=21739
+    A result RMSE : M2 17.36  M8 17.36  MKTL 17.53  BLEND-A 17.29  BLEND-B 17.31  BLEND-C 17.22  | opener 17.26  close 17.09
+    B opener RMSE : M2 3.20  M8 3.86  MKTL 4.69  BLEND-A 3.04  BLEND-B 3.00  BLEND-C 0.74
+    C close RMSE  : M2 3.39  M8 3.78  MKTL 4.40  BLEND-A 3.07  BLEND-B 3.10  BLEND-C 1.99  | opener 2.14   move R2: M2 -1.508  M8 -2.120  MKTL -3.229  BLEND-A -1.055  BLEND-B -1.091  BLEND-C +0.139
+  BET RULE: threshold chosen on SBR 2016-21 = 0.5
+  SBR 2016-21 (fit)        10441 bets 54.2%  +354.6u CLV +1.05 [low +1.00] (b/e 1.02)
+  DK 2024+2026 (DECIDES)    4596 bets 51.8%   -54.0u CLV +1.16 [low +1.09] (b/e 1.02) -> FAIL -> TEST record
+  ESPN BET 2025             2381 bets 50.1%  -105.4u CLV +0.58 [low +0.51] (b/e 1.02)

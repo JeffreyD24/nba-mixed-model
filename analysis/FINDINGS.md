@@ -22,6 +22,11 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
   each kind of record goes, the entry template and TYPE labels ([TEST] [OBSERVATION] [CORRELATION] [CAUSAL] [LEAD] [IDEA] [DECISION]).
   This file stays the master log; open ideas also go in each repo's `research/IDEAS_AND_CHECKLIST.md`.
 
+## 2026-11-05: The current season is not a test season (all sports) [DECISION]
+- Jeffrey: stop suggesting "re-test on this season" when past seasons can answer it. Added as RULE 2 in CLAUDE.md (all three repos):
+  test now on older seasons, leave-one-season-out, or reconstructed inputs; the live season only when none of those is possible,
+  with the reason recorded here.
+
 ## 2026-11-05: NHL puck line EV in 1-point bands at the DK opener (NHL) [TEST] [LEAD]
 - Question: the Nov 4 audit lumped puck lines at EV 6-9% (514 bets, -11.1u) and moved the bar to 9%. Is 8-9% any better than 6-8%?
 - Data / method: shot model walk-forward predictions at DK's opening puck line (+/-1.5), 2021-22..2025-26, one-day info lag, better
@@ -34,7 +39,8 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
   standard error of about +/-10% ROI. The 9% cutoff itself was chosen on these same seasons (in-sample).
 - [CORRELATION] Within 9%+, ROI does not rise with EV; higher model EV is not reliably more profit at the top end.
 - [LEAD] The -1.5 and +1.5 sides may need different bars (+1.5 at 6-8% was mildly positive, -1.5 at 6-8% clearly negative).
-  In-sample and small; re-test on 2026-27 using the TEST rows the live code already logs for puck lines at EV 6-9%.
+  In-sample and small. Corrected the same day: per RULE 2 (CLAUDE.md) it is tested now on past seasons, not on 2026-27
+  (nhl-mixed-model research/spreads/PL_SIDE_BARS_PREREG.md).
 - Decision: nothing changes; puck line bar stays 9%.
 - Files: nhl-mixed-model `analysis/pl_ev_bands.py`, `analysis/pl_ev_bands_output.txt`.
 

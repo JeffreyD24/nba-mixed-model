@@ -1,28 +1,28 @@
 {
  "today": [
   {
-   "home": "gs",
-   "away": "mia",
-   "tip": "2026-11-05 22:00:00",
-   "pred_margin": 5.8,
-   "pred_total": 237.5
-  },
-  {
    "home": "phx",
    "away": "orl",
    "tip": "2026-11-05 21:00:00",
    "pred_margin": 2.0,
    "pred_total": 228.7
+  },
+  {
+   "home": "gs",
+   "away": "mia",
+   "tip": "2026-11-05 22:00:00",
+   "pred_margin": 5.8,
+   "pred_total": 237.5
   }
  ],
  "log": [
-  "NBA tracker run on 2026-11-04 (ET), predicting games on 2026-11-05.",
+  "NBA tracker run on 2026-11-05 (ET), predicting games on 2026-11-05.",
   "Schedule: 1200 regular-season games; 107 finished, results through 2026-11-02.",
-  "Injury reports: 8 snapshots requested, 8 new, 121 on file.",
+  "Injury reports: 1 snapshots requested, 1 new, 122 on file.",
   "Saved today's model for intraday checks (2 games, 643 players).",
-  "Locked 2 live picks for 2026-11-05 and 0 backfilled.",
-  "Lines: ESPN returned no odds.",
-  "Model comparison: locked 4 live and 0 backfilled Model 2/3 predictions.",
+  "Locked 0 live picks for 2026-11-05 and 0 backfilled.",
+  "Lines: pulled DraftKings lines from ESPN for 2 games.",
+  "Model comparison: locked 0 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 3 - pace x efficiency: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",

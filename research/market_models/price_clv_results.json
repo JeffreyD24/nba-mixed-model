@@ -1,0 +1,167 @@
+{
+ "k_totals": {
+  "k_points_per_prob": 40.5,
+  "win_pct_per_point": 2.47,
+  "n": 3684
+ },
+ "k_spreads": {
+  "k_points_per_prob": 29.1,
+  "win_pct_per_point": 3.44,
+  "n": 3688
+ },
+ "T1": [
+  {
+   "book": "draftkings",
+   "market": "spreads",
+   "season": 2025,
+   "n": 1205,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.24979,
+   "gain_x1000": 0.213,
+   "mean_abs_skew_pts": 0.146,
+   "gain_x1000_90ci": [
+    -0.093,
+    0.494
+   ]
+  },
+  {
+   "book": "draftkings",
+   "market": "spreads",
+   "season": 2026,
+   "n": 1224,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.25007,
+   "gain_x1000": -0.071,
+   "mean_abs_skew_pts": 0.254,
+   "gain_x1000_90ci": [
+    -0.593,
+    0.402
+   ]
+  },
+  {
+   "book": "draftkings",
+   "market": "totals",
+   "season": 2025,
+   "n": 1220,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.25012,
+   "gain_x1000": -0.118,
+   "mean_abs_skew_pts": 0.135,
+   "gain_x1000_90ci": [
+    -0.339,
+    0.107
+   ]
+  },
+  {
+   "book": "draftkings",
+   "market": "totals",
+   "season": 2026,
+   "n": 1224,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.24961,
+   "gain_x1000": 0.389,
+   "mean_abs_skew_pts": 0.213,
+   "gain_x1000_90ci": [
+    0.067,
+    0.733
+   ]
+  },
+  {
+   "book": "pinnacle",
+   "market": "spreads",
+   "season": 2025,
+   "n": 1209,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.24956,
+   "gain_x1000": 0.437,
+   "mean_abs_skew_pts": 0.194,
+   "gain_x1000_90ci": [
+    0.016,
+    0.839
+   ]
+  },
+  {
+   "book": "pinnacle",
+   "market": "spreads",
+   "season": 2026,
+   "n": 1212,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.24964,
+   "gain_x1000": 0.359,
+   "mean_abs_skew_pts": 0.226,
+   "gain_x1000_90ci": [
+    -0.097,
+    0.812
+   ]
+  },
+  {
+   "book": "pinnacle",
+   "market": "totals",
+   "season": 2025,
+   "n": 1218,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.24943,
+   "gain_x1000": 0.575,
+   "mean_abs_skew_pts": 0.264,
+   "gain_x1000_90ci": [
+    0.149,
+    0.967
+   ]
+  },
+  {
+   "book": "pinnacle",
+   "market": "totals",
+   "season": 2026,
+   "n": 1211,
+   "brier_point_only": 0.25,
+   "brier_with_price": 0.24965,
+   "gain_x1000": 0.351,
+   "mean_abs_skew_pts": 0.323,
+   "gain_x1000_90ci": [
+    -0.12,
+    0.789
+   ]
+  }
+ ],
+ "T2": [
+  {
+   "market": "totals",
+   "n": 1224,
+   "slope_move_on_skew": 2.245,
+   "sd_skew_pts": 0.144,
+   "corr": 0.098
+  },
+  {
+   "market": "spreads",
+   "n": 1224,
+   "slope_move_on_skew": 1.914,
+   "sd_skew_pts": 0.216,
+   "corr": 0.189
+  }
+ ],
+ "T3_movement_bets_2025_26": {
+  "bets": 573,
+  "priced": 573,
+  "avg_price": -111.3,
+  "point_clv": 1.517,
+  "ev_point_only_pct": 2.61,
+  "ev_vs_dk_close_pct": 2.06,
+  "se_dk": 0.62,
+  "ev_vs_pin_close_pct": 1.9,
+  "se_pin": 0.62,
+  "units": -8.7
+ },
+ "T3_step2_residual_bets_2025_26": {
+  "bets": 381,
+  "priced": 381,
+  "avg_price": -110.2,
+  "point_clv": 1.0,
+  "ev_point_only_pct": 0.17,
+  "ev_vs_dk_close_pct": 0.02,
+  "se_dk": 0.81,
+  "ev_vs_pin_close_pct": -0.06,
+  "se_pin": 0.81,
+  "units": -18.5
+ },
+ "T3_live_2026_27": "no picks inside live_odds coverage"
+}

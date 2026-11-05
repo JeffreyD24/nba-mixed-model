@@ -39,3 +39,16 @@ seen_at_et,espn_event_id,date,away,home,state,detail,period,clock,away_score,hom
 2026-11-04 19:35:05,401909923,2026-11-04,atl,wsh,in,1:25 - 1st,1,1:25,32,30,0.414,Trae Young makes free throw 1 of 2
 2026-11-04 19:36:05,401909922,2026-11-04,phi,det,in,2:07 - 1st,1,2:07,21,20,0.344,Tyrese Maxey enters the game for VJ Edgecombe
 2026-11-04 19:36:05,401909923,2026-11-04,atl,wsh,in,1:02 - 1st,1,1:02,35,30,0.317,Dyson Daniels kicked ball violation
+2026-11-04 19:37:05,401909922,2026-11-04,phi,det,in,1:50 - 1st,1,1:50,24,20,0.37,Jaylen Brown makes free throw 1 of 1
+2026-11-04 19:37:05,401909923,2026-11-04,atl,wsh,in,0.0 - 1st,1,0.0,35,32,0.371,Alex Sarr makes layup (Bilal Coulibaly assists)
+2026-11-04 19:38:06,401909922,2026-11-04,phi,det,in,49.7 - 1st,1,49.7,24,20,0.343,Anfernee Simons defensive rebound
+2026-11-04 19:38:06,401909923,2026-11-04,atl,wsh,in,End of 1st,1,0.0,37,32,0.327,End of the 1st Quarter
+2026-11-04 19:39:06,401909922,2026-11-04,phi,det,in,6.9 - 1st,1,6.9,26,20,0.353,Anfernee Simons shooting foul
+2026-11-04 19:40:06,401909923,2026-11-04,atl,wsh,in,End of 1st,1,0.0,37,32,0.327,Deandre Ayton enters the game for Tre Johnson
+2026-11-04 19:41:05,401909922,2026-11-04,phi,det,in,6.9 - 1st,1,6.9,26,20,0.317,Pistons offensive team rebound
+2026-11-04 19:41:05,401909923,2026-11-04,atl,wsh,in,10:59 - 2nd,2,10:59,41,32,0.237,Wizards Full timeout
+2026-11-04 19:41:05,401909924,2026-11-04,mil,bos,in,11:55 - 1st,1,11:55,0,0,0.86,Myles Turner vs. Neemias Queta (Brayden Burries gains possession)
+2026-11-04 19:42:05,401909922,2026-11-04,phi,det,in,End of 1st,1,0.0,29,21,0.254,End of the 1st Quarter
+2026-11-04 19:42:05,401909924,2026-11-04,mil,bos,in,10:50 - 1st,1,10:50,0,3,0.89,Kyle Kuzma offensive rebound
+2026-11-04 19:42:05,401909925,2026-11-04,cha,bkn,in,11:18 - 1st,1,11:18,0,0,0.422,Naz Reid defensive rebound
+2026-11-04 19:42:05,401909926,2026-11-04,chi,ny,in,11:55 - 1st,1,11:55,0,0,0.85,Jalen Smith vs. Karl-Anthony Towns (Jalen Brunson gains possession)

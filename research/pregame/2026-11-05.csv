@@ -1394,3 +1394,4 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 04:03:21,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,event,total,under,235.5,-110,normal
 2026-11-05 04:03:21,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondhalf,total,under,113.5,-115,normal
 2026-11-05 04:03:21,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,secondhalf,total,over,113.5,-115,normal
+2026-11-05 04:12:07,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,event,moneyline,home,0.0,-275,normal

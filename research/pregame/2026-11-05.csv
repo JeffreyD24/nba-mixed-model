@@ -5487,3 +5487,6 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 13:25:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,firsthalf,team_total,home_over,61.5,-120,normal
 2026-11-05 13:25:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,firsthalf,team_total,home_under,61.5,-105,normal
 2026-11-05 13:25:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,firsthalf,team_total,away_over,58.5,-105,normal
+2026-11-05 13:27:03,295389,2026-11-05,2026-11-05 22:00,mia,gs,Consensus,thirdquarter,moneyline,home,0.0,-180,normal
+2026-11-05 13:30:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,bet365,event,moneyline,home,0.0,-275,normal
+2026-11-05 13:30:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,bet365,event,moneyline,away,0.0,225,normal

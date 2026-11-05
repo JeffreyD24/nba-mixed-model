@@ -1,0 +1,23 @@
+# Every game-day injury report vs DraftKings spread (results)
+
+player name match rate 98.8%; events (|news| >= 0.5) 4253 {2022: 766, 2023: 876, 2024: 818, 2025: 925, 2026: 868}
+minutes from report to the act line: median 26, 10th-90th 25-26; report hour counts {10: 115, 11: 193, 12: 289, 13: 345, 14: 315, 15: 183, 16: 207, 17: 437, 18: 942, 19: 598, 20: 294, 21: 331, 22: 4}
+
+build fit: move after act = +0.017 + +0.051 x N (se 0.014) + +0.083 x moved (se 0.024)
+build: move from just before the report to the close per point of news +0.336 (se 0.018)
+break-even CLV at the act line (build): +4.49 pts
+
+| Set | Bets | CLV | Units | Win % | By season |
+|---|---|---|---|---|---|
+| build, theta 0.5 | 16 | +0.53 | +1.2u (+7.4%) | 56.2% | 22: 9.0 bets +2.5u CLV +0.78 23: 7.0 bets -1.3u CLV +0.21 |
+| build, theta 0.75 | 3 | +0.17 | -1.1u (-36.4%) | 33.3% | 22: 2.0 bets -0.1u CLV +0.00 23: 1.0 bets -1.0u CLV +0.50 |
+| build, theta 1.0 | 0 | | | | |
+| **TEST 2023-26, theta 0.5 (chosen on build)** | 20 | +0.23 | -3.7u (-18.6%) | 42.1% | 24: 7.0 bets -1.3u CLV -0.14 25: 11.0 bets -2.4u CLV +0.32 26: 2.0 bets -0.1u CLV +1.00 |
+verdict: **PARTIAL** (CLV +0.23 vs break-even +4.49; units -3.7; CLV positive in 2 of 3 seasons)
+
+Absorption by window, |N| >= 1.0: line move per point of news in each window, and its share of the open-to-close move (all seasons; descriptive)
+           all (n 2223): open->report +0.15 (33%), report->act +0.25 (55%), act->close +0.05 (12%); open->close +0.46 per pt
+   before noon (n 163): open->report +0.03 (8%), report->act +0.22 (57%), act->close +0.13 (34%); open->close +0.38 per pt
+     noon-3 PM (n 527): open->report +0.08 (16%), report->act +0.29 (64%), act->close +0.09 (20%); open->close +0.46 per pt
+        3-6 PM (n 419): open->report +0.08 (23%), report->act +0.26 (71%), act->close +0.02 (7%); open->close +0.37 per pt
+    after 6 PM (n 1114): open->report +0.24 (48%), report->act +0.23 (47%), act->close +0.03 (5%); open->close +0.50 per pt

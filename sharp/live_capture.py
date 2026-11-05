@@ -86,10 +86,12 @@ if __name__ == "__main__":
         old = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=S.columns)
         last = old.sort_values("seen_at").drop_duplicates(["an_id", "book"], keep="last").set_index(["an_id", "book"]) if len(old) else None
         def changed(r):
-            if last is None or (r.an_id, r.book) not in last.index: return True
-            p = last.loc[(r.an_id, r.book)]
+            key = (int(r["an_id"]), str(r["book"]))
+            if last is None or key not in last.index: return True
+            p = last.loc[key]
             return any(not (pd.isna(r.get(k)) and pd.isna(p.get(k))) and r.get(k) != p.get(k) for k in KEYS if k in S.columns)
-        new = S[[changed(r) for r in S.itertuples(index=False)]] if len(S) else S
+        if last is not None: last.index = pd.MultiIndex.from_arrays([last.index.get_level_values(0).astype(int), last.index.get_level_values(1).astype(str)])
+        new = S[[changed(r) for _, r in S.iterrows()]] if len(S) else S
         H = pd.concat([old, new], ignore_index=True); H.to_csv(f, index=False)
         # signals over the last 3 capture days (games can be seen days ahead)
         files = sorted(x for x in os.listdir(d) if x[:4].isdigit())[-3:]

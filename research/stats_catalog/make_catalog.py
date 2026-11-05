@@ -254,7 +254,7 @@ L.append("""## Adding a new concept (do this every time)
 3. Add a block to `run_all.py` that applies it to the same v4 data (`build.py` output), calling `rec(ID, text, p)` with a p-value if it's a test.
 4. Rerun. The multiple-testing count in B64/B65 updates automatically: a new trend has to clear the new, stricter bar.
 5. Anything that passes: add it to `oos.py` and check it on 2011-19 (and NHL / other markets) before calling it real. Mark ⇄ if it should carry over.
-6. Update the status, the summary above, and `analysis/FINDINGS.md`.
+6. Update the status, the summary above, and `betting-goals/FINDINGS.md`.
 """)
 txt = "\n".join(L).replace("{NT}", str(NT)).replace("{NR}", str(NR)).replace("{NB}", str(NB))
 open("README.md", "w").write(txt)

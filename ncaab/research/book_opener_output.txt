@@ -1,0 +1,10 @@
+14497 eligible games with a book opener; book by season: {(2024, 'DraftKings'): 4530, (2024, 'ESPN BET'): 244, (2025, 'ESPN BET'): 4839, (2026, 'DraftKings'): 4528, (2026, 'ESPN BET'): 356}
+(descriptive) |book opener - AN Open|: spreads 0.64 pts, totals 0.56 pts
+  spread M1 AN Open (as before)   629 bets 320-302 51.4%  -11.1u  CLV +0.84 (b/e 0.67)  by season 24:-3.7 25:+4.5 26:-11.8
+  spread M1 book's own opener     712 bets 383-322 54.3%  +26.2u  CLV +1.48 (b/e 0.67)  by season 24:+1.2 25:+24.6 26:+0.4  -> PASS
+  spread M5 AN Open (as before)   649 bets 339-306 52.6%   +2.2u  CLV +0.88 (b/e 0.67)  by season 24:+1.6 25:+8.4 26:-7.8
+  spread M5 book's own opener     734 bets 387-343 53.0%   +8.8u  CLV +1.44 (b/e 0.67)  by season 24:+10.1 25:+15.5 26:-16.8  -> FAIL
+  total  M1 AN Open (as before)  1148 bets 596-548 52.1%   -6.2u  CLV +1.10 (b/e 0.99)  by season 24:-4.1 25:-14.2 26:+12.1
+  total  M1 book's own opener    1127 bets 587-533 52.4%   +0.6u  CLV +0.91 (b/e 0.99)  by season 24:-7.9 25:-2.4 26:+10.9  -> FAIL
+  total  M5 AN Open (as before)   612 bets 320-290 52.5%   +0.9u  CLV +1.41 (b/e 0.99)  by season 24:-1.9 25:-9.6 26:+12.5
+  total  M5 book's own opener     648 bets 330-317 51.0%  -17.0u  CLV +1.26 (b/e 0.99)  by season 24:-0.6 25:-6.7 26:-9.6  -> FAIL

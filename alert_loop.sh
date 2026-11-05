@@ -19,7 +19,7 @@ busy() {   # 0 if another state-writing workflow is running
 }
 
 save() {
-  for f in state/heartbeat_alert.txt state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json state/bluesky_seen.json state/news_overrides.json state/poly_paper.csv state/poly_last.json state/pinnacle_now.json state/pinnacle_off state/ml_test.csv state/report_watch_seen.json state/report_watch_last.csv state/bailout_alerts.csv ncaab/state/dk_lines.csv ncaab/state/live_evals.csv ncaab/state/live_bets.csv ncaab/state/live_poll.json ncaab/state/live_stop.txt; do
+  for f in state/heartbeat_alert.txt state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json state/bluesky_seen.json state/news_overrides.json state/poly_paper.csv state/poly_last.json state/pinnacle_now.json state/pinnacle_off state/ml_test.csv state/report_watch_seen.json state/report_watch_last.csv state/bailout_alerts.csv state/dk_direct_now.json state/dk_direct_last.json ncaab/state/dk_lines.csv ncaab/state/live_evals.csv ncaab/state/live_bets.csv ncaab/state/live_poll.json ncaab/state/live_stop.txt; do
     if [ -f "$f" ]; then git add "$f"; fi
   done
   if [ -d state/market_models ]; then git add state/market_models; fi
@@ -41,6 +41,7 @@ while :; do
   echo "=== check at $(TZ=America/New_York date '+%F %H:%M:%S') ET ==="
   if python alert.py .; then date -u +%Y-%m-%dT%H:%M:%SZ > state/heartbeat_alert.txt; else echo "Check failed; trying again next time."; fi
   timeout 120 python ncaab/live_alert.py . || echo "NCAAM line check failed; trying again next time."     # Nov 5, 2026: PROVISIONAL stale-line spreads
+  timeout 60 python dk_direct.py . || echo "DraftKings direct feed failed; trying again next time."   # Nov 5, 2026: every NBA/NHL/NFL game line, as DraftKings shows it
   python polymarket.py . || echo "Polymarket check failed; trying again next time."
   python pinnacle_watch.py . || echo "Live odds recorder failed; trying again next time."
   timeout 150 python market_models_live.py . check || echo "Market models check failed; continuing."   # Nov 5, 2026: PROVISIONAL movement bets
@@ -61,6 +62,7 @@ while :; do
     [ "$RC" -ne 0 ] && echo "Bluesky watch failed; continuing."
     timeout 90 python pregame.py . || echo "Pregame recorder failed; continuing."
     timeout 60 python report_watch.py . || echo "Report watch failed; continuing."   # Nov 4, 2026: TEST, logged only
+    timeout 60 python dk_direct.py . || echo "DraftKings direct feed failed; continuing."
     python opener_watch.py .; RC=$?
     if [ "$RC" -eq 10 ]; then echo "New DraftKings line: checking now."; break; fi
   done

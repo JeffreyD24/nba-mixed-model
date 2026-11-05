@@ -231,6 +231,11 @@ def dk_total_link(date, home, away, side, line):
     """DraftKings bet-slip link for a total (ESPN's odds feed; falls back to the game page). None if ESPN has no DraftKings link.
     Nov 5, 2026: movement / blend alerts had dk=None, so no DraftKings button."""
     try:
+        import dk_direct
+        lk = dk_direct.slip_link("nba", date, home, away, side)
+        if lk: return lk
+    except Exception: pass
+    try:
         import espn
         if date not in _DK:
             _DK[date] = espn.lines([date], when=("current",))
@@ -259,6 +264,13 @@ def dk_confirmed(date, home, away, line):
     """True when ESPN's DraftKings feed shows the same total Action Network's DraftKings quote does. Nov 5, 2026: Action Network's
     DraftKings line for POR @ LAL (238.5, unchanged since Nov 3) and PHI @ CLE (234.5, 4 pts above every other book) was not on DraftKings'
     app; ESPN's DraftKings feed had nothing for either game. Such a line is not a bet, so no alert or reminder until ESPN agrees."""
+    try:
+        import dk_direct                                           # DraftKings' own feed first (Nov 5, 2026); ESPN only if that fetch fails
+        if len(dk_direct.now("nba")):
+            t = dk_direct.total("nba", date, home, away)
+            return t is not None and abs(t[0] - float(line)) < 0.01
+    except Exception as ex:
+        print("[market models] direct DraftKings check failed:", type(ex).__name__, str(ex)[:80])
     try:
         import espn
         if date not in _DK: _DK[date] = espn.lines([date], when=("current",))

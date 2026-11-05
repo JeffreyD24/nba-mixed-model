@@ -3,6 +3,14 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Exchange history stored in the private repo; full download started (all sports) [DECISION] [TEST]
+- Question: where to keep Kalshi/Polymarket history so Kalshi's no-sharing term is respected (all three model repos are public).
+- Data / method: Jeffrey's private repo `JeffreyD24/private`, folder `exchange/` (README there). Downloader `exchange/exchange_history.py` + `.github/workflows/exchange-history.yml` (copy of sharp/exchange_history.py, plus Kalshi trades and Kalshi's historical tier). 2-game test run 42124943284 passed for all 13 series; full run 42125372646 started 5:50 PM ET.
+- Result (test): Kalshi historical cutoff 2026-09-06; Kalshi game markets back to Aug 2025 (NFL), 2025-26 NBA/NHL/NCAAM in the historical tier. One Kalshi NBA game market has ~15,000 trades (sizes, taker side, no identities), so files are split into parts under 50 MB. Polymarket test fills as before.
+- Read: storage is settled; Kalshi data stays only in the private repo. The earlier 3-game Kalshi test files remain in nba-mixed-model's old commits (7 commits, 16:17 Nov 5) unless history is rewritten (Jeffrey to decide).
+- Decision: Jeffrey said put it in the repo named private (Nov 5). Analysis code stays in nba-mixed-model/sharp and reads from the private clone; findings are recorded here.
+- Files: JeffreyD24/private exchange/, this repo sharp/wallet_rankings.py, sharp/POLY_WALLETS_PREREG_2026-11-05.md.
+
 ## 2026-11-05: NFL second-half totals rule, honest test: fails; alerts stopped (NFL) [TEST] [DECISION]
 - Question: the 2H totals alerts (edge 3+, 52-35 best of ~100 slices) were being bet with money with no provisional row or CLV evidence. Bet or stop?
 - Data / method: pre-registered (nfl-mixed-model research/halves/H2_TOTALS_PREREG.md, 02d06b7). A: 2023 real Action Network closing 2H totals (the

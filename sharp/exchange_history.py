@@ -6,7 +6,7 @@
               -> sharp/data/poly/{series}_markets.csv.gz (closed game events and their markets, outcomes, winner)
                  sharp/data/poly/{series}_trades.csv.gz (every trade: wallet, side, outcome, size, price, time)
 Settled Kalshi markets before /historical/cutoff are read from the historical tier."""
-import os, sys, json, time, urllib.request, urllib.error
+import os, sys, json, time, urllib.request, urllib.error, urllib.parse
 import pandas as pd
 W = os.path.abspath(sys.argv[1]); SRC = sys.argv[2]; ARG = lambda k, d=None: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
 SER = ARG("--series"); MAXE = int(ARG("--max-events", "100000"))
@@ -77,12 +77,11 @@ elif SRC == "poly":
         for cid in grp.condition_id.dropna().unique():
             cursor, seen = None, 0
             while True:
-                t = get(f"{D}/trades?condition={cid}&limit=1000&taker_only=false" + (f"&cursor={cursor}" if cursor else "")); time.sleep(0.05)
-                if first and isinstance(t, dict): print("response keys", [k for k in t if k != "data"], flush=True); first = False
+                t = get(f"{D}/trades?condition={cid}&limit=1000&taker_only=false" + (f"&cursor={urllib.parse.quote(cursor)}" if cursor else "")); time.sleep(0.05)
                 rows = t.get("data", []) if isinstance(t, dict) else []
                 for x in rows:
                     tr.append((cid, x.get("proxy_wallet"), x.get("side"), x.get("outcome_index"), x.get("size"), x.get("price"), x.get("timestamp"), x.get("transaction_hash")))
-                seen += len(rows); cursor = (t.get("next_cursor") or t.get("cursor")) if isinstance(t, dict) else None
+                seen += len(rows); pg = (t.get("pagination") or {}) if isinstance(t, dict) else {}; cursor = pg.get("next_cursor") if pg.get("has_more") else None
                 if not rows or not cursor or cursor in ("LTE=", "") or seen >= 500000: break
         df = pd.DataFrame(tr, columns=["condition_id", "wallet", "side", "outcome_index", "size", "price", "ts", "tx"]).drop_duplicates()
         save(df.drop(columns="tx"), name); print(SER, mon, "markets", grp.condition_id.nunique(), "fills", len(df), "minutes", round((time.time() - T0) / 60), flush=True)

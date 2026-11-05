@@ -22,3 +22,7 @@ Everything else (rates, opponent, pace, mean-dependent spread, negative binomial
 2. Second: bets (EV ≥ 5% vs the best of DK/FD close price) make units > 0 in Test A.
 3. Reported alongside: Test B closing-line EV and units, log loss vs the market, v2 vs v1b side by side on the same rows.
 Pass = 1 and 2. A pass goes live only as PROVISIONAL after a Fable check; until then it joins the paper record next to v1b.
+
+## Implementation note (Nov 5, 2026, before any prop result)
+The α regression weighted by minutes gave α = +314 for threes (players who almost never shoot threes make actual ÷ projected explode).
+It is now weighted by the expected count (minutes × projected rate): α = Σ x·(actual − expected) / Σ expected·x². Box scores only, as before.

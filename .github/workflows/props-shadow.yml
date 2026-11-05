@@ -1,7 +1,7 @@
 name: Props (FanDuel lines, PROVISIONAL alerts, paper record)
 
 # Nov 5, 2026: every 30 minutes, all day: FanDuel prop lines for today's AND tomorrow's games (so each prop's opener is caught
-# when FanDuel posts it). Each run also sends PROVISIONAL prop alerts (props v1b at FanDuel openers; 6 AM - 8 PM ET only;
+# when FanDuel posts it). Each run also sends PROVISIONAL prop alerts (props v1b at FanDuel openers; 24 hours a day, tiers early/late/stale;
 # research/PROVISIONAL_BETS.md). At the 11 AM ET run: refresh box stats, grade yesterday (alerts, paper record, logged props),
 # and log the v1b paper picks.
 on:

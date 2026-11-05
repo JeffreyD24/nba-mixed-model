@@ -231,16 +231,17 @@ def live():
     first = A.drop_duplicates(["event_id", "stat", "name"], keep="first"); last = A.drop_duplicates(["event_id", "stat", "name"], keep="last")
     J = last.merge(first[["event_id", "stat", "name", "line", "over", "under", "seen_at_et"]], on=["event_id", "stat", "name"], suffixes=("", "_open"))
     tip = pd.to_datetime(J.tip_et); first_seen = pd.to_datetime(J.seen_at_et_open)
-    J = J[(J.line == J.line_open) & (J.line >= PO["min_line"]) & ((tip - first_seen).dt.total_seconds() >= PO["min_lead_hours"] * 3600)
-          & ((tip - pd.Timestamp(NOW.replace(tzinfo=None))).dt.total_seconds() > 0)]
+    now_n = pd.Timestamp(NOW.replace(tzinfo=None))
+    J = J[(J.line == J.line_open) & (J.line >= PO["min_line"]) & ((tip - now_n).dt.total_seconds() >= PO["min_lead_hours_any"] * 3600)].copy()
     rp = os.path.join(W, "state", "props_fd_runs.csv")
     runs = pd.to_datetime(pd.read_csv(rp).run_et).sort_values().tolist() if os.path.exists(rp) else []
-    def prior_run_ok(t):      # Fable fix 3: trust an "opener" only if a snapshot ran 1-45 min before it and did not have the line
+    def prior_run_ok(t):      # Fable fix 3: a real opener = a snapshot ran 1-45 min before it and did not have the line
         before = [x for x in runs if x < t - pd.Timedelta(minutes=1)]
         return bool(before) and (t - before[-1]) <= pd.Timedelta(minutes=45)
-    now_n = pd.Timestamp(NOW.replace(tzinfo=None)); fs = pd.to_datetime(J.seen_at_et_open)
-    # Fable fix 4: the backtest bets AT the opener, so alert only openers first seen in the last 40 minutes
-    J = J[((now_n - fs) <= pd.Timedelta(minutes=40)).values & np.array([prior_run_ok(t) for t in fs], dtype=bool)]
+    fs = pd.to_datetime(J.seen_at_et_open); lead = (pd.to_datetime(J.tip_et) - fs).dt.total_seconds() / 3600
+    fresh = ((now_n - fs) <= pd.Timedelta(minutes=40)).values & np.array([prior_run_ok(t) for t in fs], dtype=bool)
+    # three PROVISIONAL tiers, each its own record (Jeffrey, Nov 5, 2026): early = the backtested slice; late and stale added by him
+    J["tier"] = np.where(fresh & (lead >= PO["min_lead_hours"]).values, "early", np.where(fresh, "late", "stale"))
     S, allow = player_state()
     try: an = actionnet.lines(TODAY)
     except Exception as e:
@@ -269,22 +270,23 @@ def live():
             ev_now = ps * float(dec(price)) - 1                 # Fable: EV must also clear 5% at the price Jeffrey actually gets
             key = f"{TODAY}|{r.event_id}|{r.stat}|{r.name}"
             if not np.isfinite(ev) or ev < PO["ev_min"] or ev_now < PO["ev_min"] or key in done: continue
+            tier_lab = {"early": "PROVISIONAL PROP", "late": "PROVISIONAL PROP (LATE)", "stale": "PROVISIONAL PROP (STALE OPENER)"}[r.tier]
             done.add(key)
             sname = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes"}[r.stat]
-            title = f"PROVISIONAL PROP - {r.player} {side.upper()} {r.line:g} {sname} {int(price):+d} (FanDuel)"
+            title = f"{tier_lab} - {r.player} {side.upper()} {r.line:g} {sname} {int(price):+d} (FanDuel)"
             body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. Model projects {mu:.1f} {sname}; chance {ps*100:.0f}% vs FanDuel's {((pk if side == 'over' else 1-pk))*100:.0f}%, "
-                    f"EV {ev*100:+.1f}%. Still at FanDuel's opening line. PROVISIONAL (props v1b at FanDuel openers): 1 unit, own record, "
-                    f"stop rules in research/PROVISIONAL_BETS.md. Backtest 2023-25: +5.1% ROI; FanDuel openers 4h+ before tip +3.9%. "
+                    f"EV {ev*100:+.1f}%. Still at FanDuel's opening line. {tier_lab} (props v1b at FanDuel openers, tier '{r.tier}'): 1 unit, own record, "
+                    f"stop rules in research/PROVISIONAL_BETS.md. Backtest 2023-25 at FanDuel openers: 4h+ before tip +3.9% ROI; 1-4h +22%; stale not tested. "
                     f"If the line has moved, skip it. Log it with 'Log a bet' (market: prop) if you place it.")
             try: sent = push(title, body)
             except Exception as e: sent = False; print("push failed:", e)
-            rows.append(dict(key=key, date=TODAY, logged_at_et=NOW.strftime("%Y-%m-%d %H:%M"), model_version=PO["version"], tier="provisional",
+            rows.append(dict(key=key, date=TODAY, logged_at_et=NOW.strftime("%Y-%m-%d %H:%M"), model_version=PO["version"], tier=f"provisional_{r.tier}",
                              book="FanDuel", game=r.game, tip_et=r.tip_et, player=r.player, name=r.name, team=r.team, stat=r.stat, side=side,
                              line=r.line, price=int(price), open_seen_et=r.seen_at_et_open, mu=round(mu, 2), p_model=round(pm, 4), p_market=round(pk, 4),
                              p=round(ps, 4), ev=round(ev, 4), units=1, pushed=sent, result="", actual="", u="", close_line="", close_price="",
                              close_other="", close_ev=""))
     if rows: pd.DataFrame(rows).to_csv(LIVE, mode="a", header=not os.path.exists(LIVE), index=False)
-    print(f"props live: {len(rows)} PROVISIONAL prop alerts ({sum(r['pushed'] for r in rows)} pushed) from {len(LS)} FanDuel lines at their opener")
+    print(f"props live: {len(rows)} PROVISIONAL prop alerts {pd.Series([x['tier'] for x in rows]).value_counts().to_dict() if rows else ''} ({sum(r['pushed'] for r in rows)} pushed) from {len(LS)} FanDuel lines at their opener")
 
 
 def grade_my_props():

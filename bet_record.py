@@ -34,7 +34,20 @@ def main():
         return v.iloc[-1].version if len(v) else "before tracking"
     B["version"] = [version(r) for r in B.itertuples()]
     B.loc[B.notes.astype(str).str.contains("OFF-MODEL"), "version"] = "off-model (no alert)"      # bets the model did not call for
-    B.loc[B.market.astype(str) == "prop", "version"] = "PROVISIONAL: NBA props v1b at FanDuel openers"   # Nov 5, 2026 (props_shadow.py live)
+    # Nov 5, 2026 (props_shadow.py live): logged props get their alert's tier (early / late / stale), each its own PROVISIONAL record
+    try:
+        isp = B.market.astype(str) == "prop"
+        if isp.any():
+            import unicodedata, re as _re
+            nm = lambda n: _re.sub(r"\s+", " ", _re.sub(r"\b(jr|sr|ii|iii|iv|v)\b", "", _re.sub(r"[.'`]", "", unicodedata.normalize("NFKD", str(n)).encode("ascii", "ignore").decode().lower()).replace("-", " "))).strip()
+            lp = os.path.join(STATE, "props_live.csv")
+            T = pd.read_csv(lp) if os.path.exists(lp) else pd.DataFrame(columns=["date", "name", "stat", "tier"])
+            tmap = {(str(r.date), r.name, r.stat): str(r.tier).replace("provisional_", "") for r in T.itertuples()}
+            lab = {"early": "PROVISIONAL: NBA props at FanDuel openers (4h+ before tip)", "late": "PROVISIONAL: NBA props at FanDuel openers (LATE, 1-4h)",
+                   "stale": "PROVISIONAL: NBA props at FanDuel openers (STALE opener)"}
+            B.loc[isp, "version"] = [lab.get(tmap.get((str(r.date), nm(r.player), r.stat)), "PROVISIONAL: NBA props (no matching alert)") for r in B[isp].itertuples()]
+    except Exception as ex:
+        print("prop tagging skipped:", type(ex).__name__, str(ex)[:100])
     # PROVISIONAL tier (Nov 4, 2026; research/PROVISIONAL_BETS.md): bets that match a provisional BET alert get their own record
     try:
         A = pd.read_csv(os.path.join(STATE, "alerts.csv"))

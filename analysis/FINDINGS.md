@@ -3,6 +3,18 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: Alerts 24 hours a day for every model; prop tiers late + stale added (all sports) [DECISION]
+- Question: Jeffrey: "I never want you to stop sending alerts just because I'm not awake... Alerts 24 hours a day, for every model,
+  no matter what. Make sure we have that rule across the board, do an audit." Also: run the late (1-4h) and stale-opener props as
+  their own PROVISIONAL records, alerted and actively bet like every provisional.
+- Audit (nba/nhl/nfl-mixed-model, hockey-private, mlb-mixed-model): main alert loops already ran 24/7 (`WINDOW = None`, alerts.yml every
+  10 min). Gated by hour and now changed: `REMIND_HOURS` (6, 20) -> (0, 24) in all three alert.py (also used by market_models_live.py
+  reminders); nba `bailout.AWAKE` (4, 20) -> (0, 24); nba `report_watch.py` 9-23 -> all hours; props `alert_hours_et` [6, 20] -> [0, 24].
+  hockey-private and mlb-mixed-model have no alert code. RULE 5 added to CLAUDE.md in nba/nhl/nfl.
+- Props: tiers early (backtested, 4h+), late (1-4h: 241 test bets +53.7u, CLV ~0, concentrated in one 2023-24 stretch), stale (still at
+  the opener but not a verified fresh opener; untested). Each its own record and stop lines (research/PROVISIONAL_BETS.md).
+- Decision: Jeffrey, Nov 5. Files: alert.py x3, bailout.py, report_watch.py, props_shadow.py, data/props_v1b_open_params.json, bet_record.py.
+
 ## 2026-11-05: NCAAM box score backfill complete, 2007-08 to 2026-27 (NCAAM) [TEST]
 - Question: did the ESPN box score backfill (ncaab-box.yml, run 42100153853) land every season, so lineup, inferred-injury and travel models can be built?
 - Data / method: `ncaab/espn_boxscores.py` output in `ncaab/data/box/` (players: starter, minutes, points; teams: shooting/turnover totals, city, state, venue, attendance), compared with `ncaab/data/all_games.csv`.

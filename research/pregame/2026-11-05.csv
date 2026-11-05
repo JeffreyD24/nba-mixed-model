@@ -1485,3 +1485,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 06:18:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,event,team_total,home_under,121.5,-115,opener
 2026-11-05 06:18:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,event,team_total,home_over,121.5,-115,opener
 2026-11-05 06:18:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,event,team_total,away_over,114.5,-115,opener
+2026-11-05 06:23:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,Consensus,event,moneyline,home,0.0,-285,normal
+2026-11-05 06:25:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,DraftKings,event,team_total,away_under,113.5,-108,normal
+2026-11-05 06:25:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,DraftKings,event,team_total,away_over,113.5,-112,normal
+2026-11-05 06:25:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,DraftKings,event,total,over,235.5,-110,normal
+2026-11-05 06:25:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,DraftKings,event,total,under,235.5,-110,normal
+2026-11-05 06:25:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetRivers,event,spread,home,-4.5,-182,normal
+2026-11-05 06:25:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,event,moneyline,away,0.0,225,normal
+2026-11-05 06:25:49,295389,2026-11-05,2026-11-05 22:00,mia,gs,BetMGM,event,moneyline,home,0.0,-275,normal

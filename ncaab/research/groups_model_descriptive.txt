@@ -1,0 +1,29 @@
+DESCRIPTIVE ONLY (chosen after seeing the group tests; decides nothing). NCAAM Model 1 at the book's own opener (DK else ESPN BET), 2023-26.
+
+SPREAD 5+
+  all                     881 bets 61.6% +153.1u  CLV +4.61
+  both power conf         121 bets 68.3%  +36.5u  CLV +6.53
+  one power conf          199 bets 55.6%  +12.0u  CLV +4.53
+  no power conf           561 bets 62.2% +104.5u  CLV +4.22
+  ranked team in game     152 bets 65.8%  +38.9u  CLV +7.26
+  no ranked team          729 bets 60.7% +114.2u  CLV +4.05
+  conference game         177 bets 54.8%   +8.2u  CLV +1.94
+  non-conference          704 bets 63.3% +144.9u  CLV +5.28
+  Nov-Dec                 735 bets 61.8% +131.1u  CLV +4.82
+  Jan-Apr                 146 bets 60.3%  +22.0u  CLV +3.52
+  spread under 10         611 bets 64.1% +134.8u  CLV +4.28
+  spread 10+              270 bets 55.9%  +18.3u  CLV +5.34
+
+TOTAL 6+
+  all                    1131 bets 52.4%   +0.5u  CLV +0.97
+  both power conf         179 bets 58.7%  +21.5u  CLV +0.94
+  one power conf          116 bets 52.6%   +0.5u  CLV +1.89
+  no power conf           836 bets 51.0%  -21.5u  CLV +0.84
+  ranked team in game     136 bets 54.4%   +5.3u  CLV +1.84
+  no ranked team          995 bets 52.1%   -4.8u  CLV +0.85
+  conference game         698 bets 54.2%  +23.9u  CLV +0.69
+  non-conference          433 bets 49.5%  -23.5u  CLV +1.41
+  Nov-Dec                 426 bets 49.4%  -24.1u  CLV +1.25
+  Jan-Apr                 705 bets 54.2%  +24.5u  CLV +0.80
+  spread under 10         871 bets 51.2%  -20.2u  CLV +0.82
+  spread 10+              255 bets 56.1%  +18.0u  CLV +1.39

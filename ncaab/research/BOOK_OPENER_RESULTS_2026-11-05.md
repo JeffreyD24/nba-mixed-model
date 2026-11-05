@@ -1,5 +1,11 @@
 # NCAAM at real sportsbooks' own openers: results (Nov 5, 2026)
 
+> **CORRECTION (Nov 5, afternoon): the spreads PASS below was caused by bad data.** 375 ESPN openers (2.6%) have the sign flipped
+> (e.g. -4 stored as +4: opposite sign to both DraftKings' close and Action Network's Open). A flipped quote makes a fake ~8-pt edge
+> that "wins"; 92 of the 712 bets were on them. Excluding them: **all books 620 bets 51.6%, -8.8u, CLV +0.65 (break-even 0.67);
+> DraftKings only 313 bets 50.8%, -9.2u, CLV +0.62. FAIL.** NCAAM has no edge at a bettable line. The daily TEST record now drops
+> flipped quotes. (College football at book openers already failed; flips would only have flattered it.)
+
 Pre-registration `ncaab/research/BOOK_OPENER_PREREG_2026-11-05.md`; code `ncaab/book_opener_test.py`; output `ncaab/research/book_opener_output.txt`.
 Openers from ESPN's free odds feed (`ncaab/espn_openers.py`): DraftKings 2023-24 and 2025-26, ESPN BET 2024-25 (and gaps). 14,497 eligible games.
 Unlike college football, the books' own openers sit close to Action Network's "Open" here (0.64 pts spreads, 0.56 totals on average).

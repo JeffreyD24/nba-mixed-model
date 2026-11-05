@@ -7,6 +7,18 @@ schedule, and **stop them by a rule written before the first bet**. A provisiona
 ## Rules for every provisional bet
 1. **Entry:** past seasons show positive units with an honest test (only information known at bet time), but it fails or is short of
    the pre-registered bar. Jeffrey approves it. It gets a row in the registry below with its backtest numbers.
+   **If its backtest CLV is at or below 0** (added Nov 5, 2026, Jeffrey): it isn't ruled out, but it must pass ALL of these extra
+   checks before entry, each written down before it is run:
+   - **Unseen seasons:** units > 0 in every season not used to build or choose it (at least two such seasons), and the pooled
+     ROI's 90% CI above 0.
+   - **Explain the negative CLV, and test the explanation on separate data:** e.g. if the close itself is biased (prop closes lean
+     to overs), measure that bias out of sample and show CLV adjusted for it is ≥ 0; or show the model predicts the result beyond
+     the close in a held-out season.
+   - **Beats the simple version:** it must beat the simplest rule that could explain its profit (e.g. blind unders at the best book)
+     on the same games, otherwise the simple rule is what goes in instead.
+   - **Fable review** of the evidence, as for every live change.
+   Once live, CLV can't be its stop signal, so the units stop lines in rule 3 apply with one addition: after 50 graded bets, units
+   below 0 stops it even if CLV has improved.
 2. **Labeled everywhere:** alerts say PROVISIONAL, alert rows carry `tier=provisional`, and `bet_record.py` gives logged bets their
    own version line ("PROVISIONAL: ..."), so they never mix with a proven record. 1 unit per bet, same as everything else.
 3. **Stop rule (any one, checked at every review; fixed in advance, not adjusted after seeing results):**

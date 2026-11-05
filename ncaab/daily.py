@@ -62,6 +62,8 @@ try:
     for i in S.index[ok & S.espn_id.notna()]:
         b = bo.get(int(S.espn_id[i]))
         if not b or pd.isna(b[0]) or pd.isna(S.dk_spread[i]) or abs(b[0] - S.dk_spread[i]) > 10: continue
+        if (np.sign(b[0]) != np.sign(S.dk_spread[i]) and abs(b[0] + S.dk_spread[i]) < abs(b[0] - S.dk_spread[i]) and abs(S.dk_spread[i]) >= 1.5
+                and np.sign(b[0]) != np.sign(S.open_spread[i])): continue     # Nov 5: ESPN opener with a flipped sign (data error)
         ln = -b[0]; e_ = S.pred_margin[i] - ln
         if abs(e_) < 5: continue
         sg = np.sign(e_); r = sg * (S.home_pts[i] - S.away_pts[i] - ln)

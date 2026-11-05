@@ -93,3 +93,4 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600031,total,2026-11-05 16:25:23.654034,2026-11-06,no,min,2026-11-06 20:00:00,over,229.5,229.5,232.09,2.59,as of 2026-11-05 11:40,True,,,,,,,BET,,,,,,,,False,provisional_totals,DraftKings
 22600033,spread,2026-11-05 16:25:23.654034,2026-11-06,sac,sa,2026-11-06 22:00:00,home,15.5,,-10.76,4.74,as of 2026-11-05 11:40,False,no current injury report,,,,,,CHECK,,,,,,,,False,,DraftKings
 22600033,total,2026-11-05 16:25:23.654034,2026-11-06,sac,sa,2026-11-06 22:00:00,over,228.5,,231.82,3.32,as of 2026-11-05 11:40,False,,,,,,,CHECK,,,,,,,,False,,DraftKings
+22600033,total,2026-11-05 16:30:23.207745,2026-11-06,sac,sa,2026-11-06 22:00:00,over,228.5,228.5,231.82,3.32,as of 2026-11-05 11:40,True,,,,,,,BET,,,,,,,,False,,DraftKings

@@ -106,6 +106,15 @@ Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDO
 - **Bet on DraftKings button:** alerts carry a button that opens DraftKings with that bet on your slip (the link from ESPN).
   If ESPN's copy of the line is behind DraftKings' current line, the button opens the game page instead. You still confirm the bet.
 
+## Checking boosts (since Nov 4, 2026)
+Open a new issue with the **Check a boost** form (Issues -> New issue). Two ways to use it:
+- **Find me the best bet:** pick the book, enter the boost % (and how many legs the token needs, the lowest odds it allows). The reply ranks every
+  moneyline, spread and total at that book against Pinnacle's no-vig fair price, with a second table of lower-variance picks at +150 or shorter.
+- **Check a bet I picked / an odds boost / an SGP:** type each leg as `description, price, other side's price` (other side optional). The reply
+  gives the fair price, the EV, and BET IT / SKIP. Same-game legs get a warning, since the fair price treats them as independent.
+The reply arrives as a comment in about a minute and the issue closes itself. Every check is saved to `state/boost_checks.csv`.
+Math and the full market plan: `research/MARKET_EXPANSION_PLAYBOOK_2026-11-04.md`. Code: `boost_check.py` (also runs from the command line).
+
 ## Logging the bets you actually place
 
 - **From an alert:** tap **Log this bet** on the notification. It opens the form with the game, pick, and line filled in. Fix the line if yours was different, add your odds and stake, and submit.

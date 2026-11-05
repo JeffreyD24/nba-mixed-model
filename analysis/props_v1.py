@@ -10,7 +10,7 @@ W = os.path.abspath(sys.argv[1]); MODE = sys.argv[2]; sys.path.insert(0, W)
 STATS = {"player_points": "pts", "player_rebounds": "reb", "player_assists": "ast", "player_threes": "fg3m"}
 PACE = {"pts": True, "ast": True, "fg3m": True, "reb": False}
 HL_MIN, HL_RATE, PRIOR_GAMES, PRIOR_MIN, K_OPP = 5, 20, 5, 150, 15
-FIT, TEST = 2025, 2026
+FIT, TEST = 2025, 2026          # season labels; amendment 2: FIT = 2025-10-21..2026-01-15, TEST = 2026-01-16..2026-04-12
 out = []
 def say(*a): out.append(" ".join(str(x) for x in a)); print(*a, flush=True)
 rng = np.random.default_rng(1105)
@@ -165,7 +165,7 @@ def backtest():
     # market prob at THIS row's line (books can differ by a half point): normal shift with the model's sd
     m_imp = A.mkt_line + A.sd * stats.norm.ppf(A.p_mkt.clip(0.01, 0.99))
     A["p_mkt_here"] = 1 - stats.norm.cdf((A.line - m_imp) / A.sd)
-    A["season_l"] = np.where(A.date < "2025-08-01", 2025, 2026)
+    A["season_l"] = np.where(A.date <= "2026-01-15", 2025, 2026)          # amendment 2: within-season split
     A = A[A.book.isin(["draftkings", "fanduel"]) & A.p_mkt_here.notna()].copy()
     A["over_hit"] = (A.actual > A.line).astype(float); A.loc[A.actual == A.line, "over_hit"] = np.nan
     # FIT: blend weight on 2024-25 by log loss
@@ -208,7 +208,7 @@ def backtest():
         d = df[df.clev.notna()]; lo, hi = boot(d, "clev"); ulo, uhi = boot(df, "u")
         return (f"{len(df):5d} bets | closing-line EV {d.clev.mean()*100:+.2f}% [{lo*100:+.2f}, {hi*100:+.2f}] (n {len(d)}) | "
                 f"win {df.won.mean()*100:.1f}% | {df.u.sum():+.1f}u ({df.u.mean()*100:+.1f}% [{ulo*100:+.1f}, {uhi*100:+.1f}])")
-    for season, lab in ((FIT, "FIT 2024-25 (in-sample for w only)"), (TEST, "TEST 2025-26")):
+    for season, lab in ((FIT, "FIT Oct 21 - Jan 15 (in-sample for w only)"), (TEST, "TEST Jan 16 - Apr 12")):
         S = Cand[Cand.season_l == season]
         say(f"\n== {lab} ==")
         for thr in (0.03, 0.05, 0.08, 0.12):

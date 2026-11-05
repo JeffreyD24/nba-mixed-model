@@ -25,11 +25,13 @@ jobs:
       - name: Fetch season by season, saving after each
         run: |
           git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          # start from the newest main, not the commit that triggered the run (a queued run otherwise re-downloads saved dates)
+          git fetch -q origin main && git checkout -q -B main origin/main
           for s in 2027 2026 2025 2024 2023 2022; do
             python player_stats_backfill.py . $s
             git add data/player_stats
             if ! git diff --cached --quiet; then
               git commit -q -m "Player box stats: season $s"
-              for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && break; sleep 10; done
+              for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push -q origin main && break; sleep 10; done
             fi
           done

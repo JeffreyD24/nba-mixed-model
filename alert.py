@@ -34,7 +34,7 @@ ML_TEST = (-0.0640, 0.1388)         # NBA moneyline TEST tracking (Nov 2, 2026; 
                                     #   logistic(a + b x live model margin); AWAY moneylines +150 or shorter, EV 6%+, near DK's opener,
                                     #   spread rules (10+ games, Feb-Apr traps) -> state/ml_test.csv. Recorded only, never pushed.
 REMIND_EVERY_MIN = 30               # Nov 2, 2026: an alerted BET still not logged and still a bet -> REMINDER push every 30 min,
-REMIND_HOURS = (0, 24)              #   24 hours a day (Jeffrey, Nov 5, 2026: alerts and reminders are never held for sleep hours; was 6 AM - 8 PM)
+REMIND_HOURS = (6, 20)              #   reminders 6 AM - 8 PM ET only (Jeffrey, Nov 5, 2026 18:16); first-time BET alerts, bail-outs and DON'T BETs go out 24 hours a day
 REMIND_GAPS = ((24, 240), (6, 120), (2, 60))   # Nov 4, 2026: reminders spaced by time to start: 24h+ every 4 h, 6-24 h every 2 h,
                                               #   2-6 h hourly, under 2 h every REMIND_EVERY_MIN (an opener alerted the day before
                                               #   no longer sends ~25 reminders)

@@ -63,9 +63,17 @@ def main():
         market = get("Market").lower().strip()
         if market.startswith("s"): market = "spread"
         elif market.startswith("t") or market.startswith("o") or market.startswith("u"): market = "total"
-        else: raise ValueError("Market must be 'spread' or 'total'")
+        elif market.startswith("p"): market = "prop"     # Nov 5, 2026: player props (PROVISIONAL props v1b at FanDuel openers)
+        else: raise ValueError("Market must be 'spread', 'total' or 'prop'")
         pick = get("Pick").lower().strip()
-        if market == "total":
+        if market == "prop":
+            import re as _re
+            m = _re.match(r"^(.*?)[ ,]+(over|under|o|u)[ ,]+(points|pts|rebounds|reb|assists|ast|threes|3s|3pm|3pt)\b", pick)
+            if not m: raise ValueError("For a prop, Pick must look like: Desmond Bane under points")
+            prop_player = m.group(1).strip(" ,").title(); prop_side = "over" if m.group(2).startswith("o") else "under"
+            prop_stat = {"p": "pts", "r": "reb", "a": "ast", "t": "fg3m", "3": "fg3m"}[m.group(3)[0]]
+            pick = f"{prop_player} {prop_side} {prop_stat}"
+        elif market == "total":
             if pick.startswith("o"): pick = "over"
             elif pick.startswith("u"): pick = "under"
             else: raise ValueError("For a total, Pick must be 'over' or 'under'")
@@ -93,7 +101,9 @@ def main():
                stake=stake, book=(books.canon_book(get("Sportsbook (optional)")) if get("Sportsbook (optional)") else ""), notes=get("Notes (optional)"))
     B = pd.concat([B, pd.DataFrame([row])], ignore_index=True)
     B.to_csv(path, index=False)
-    desc = (f"{pick.upper()} {line:g}" if market == "total" else f"{pick.upper()} {line:+g}")
+    if market == "prop":
+        row.update(player=prop_player, side=prop_side, stat=prop_stat)
+    desc = (f"{pick.upper()} {line:g}" if market in ("total", "prop") else f"{pick.upper()} {line:+g}")
     win = stake * (100 / abs(odds) if odds < 0 else odds / 100)
     open(os.path.join(STATE, "_bet_reply.md"), "w").write(
         f"✅ Logged: **{desc}**, {away.upper()} @ {home.upper()} on {date}, {odds:+g} for {stake:g}u (to win {win:.2f}u).\n\n"

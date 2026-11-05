@@ -29,14 +29,14 @@ body:
     id: market
     attributes:
       label: Market
-      description: "spread or total"
+      description: "spread, total, or prop"
     validations:
       required: true
   - type: input
     id: pick
     attributes:
       label: Pick
-      description: "For a total: over or under. For a spread: the team you bet, e.g. HOU"
+      description: "For a total: over or under. For a spread: the team you bet, e.g. HOU. For a prop: player, over/under, stat, e.g. Desmond Bane under points"
     validations:
       required: true
   - type: input

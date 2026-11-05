@@ -23,7 +23,7 @@ FD_TYPE = re.compile(r"^PLAYER_[A-Z]+_(TOTAL_POINTS|TOTAL_REBOUNDS|TOTAL_ASSISTS
 AK, BASE = "FhMFpcPWXMeyZxOx", "https://sbapi.ct.sportsbook.fanduel.com/api"
 HDR = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130 Safari/537.36", "Accept": "application/json"}
 SHADOW = os.path.join(W, "state", "props_shadow.csv")
-NOW = dt.datetime.now(ET); TODAY = NOW.strftime("%Y-%m-%d")
+NOW = dt.datetime.now(ET); TODAY = NOW.strftime("%Y-%m-%d"); TOMORROW = (NOW + dt.timedelta(days=1)).strftime("%Y-%m-%d")
 
 
 FULL = {"Atlanta Hawks": "atl", "Boston Celtics": "bos", "Brooklyn Nets": "bkn", "Charlotte Hornets": "cha", "Chicago Bulls": "chi",
@@ -55,7 +55,8 @@ def snapshot():
     rows = []
     for e in evs:
         tip = pd.Timestamp(e["openDate"]).tz_convert(ET)
-        if tip.strftime("%Y-%m-%d") != TODAY or tip < pd.Timestamp(NOW): continue
+        gdate = tip.strftime("%Y-%m-%d")
+        if gdate not in (TODAY, TOMORROW) or tip < pd.Timestamp(NOW): continue   # Nov 5, 2026: tomorrow too, to catch openers early
         away, home = [FULL.get(x.strip()) for x in e["name"].split(" @ ")]
         for tab, stat in FD_TABS.items():
             try: p = get(f"{BASE}/event-page?_ak={AK}&eventId={e['eventId']}&tab={tab}&timezone=America%2FNew_York")
@@ -68,19 +69,21 @@ def snapshot():
                 if "OVER" not in r or "UNDER" not in r: continue
                 o, u = r["OVER"], r["UNDER"]
                 odds = lambda x: (x.get("winRunnerOdds") or {}).get("americanDisplayOdds", {}).get("americanOdds")
-                rows.append(dict(seen_at_et=NOW.strftime("%Y-%m-%d %H:%M"), date=TODAY, event_id=e["eventId"], tip_et=tip.strftime("%Y-%m-%d %H:%M"),
+                rows.append(dict(seen_at_et=NOW.strftime("%Y-%m-%d %H:%M"), date=gdate, event_id=e["eventId"], tip_et=tip.strftime("%Y-%m-%d %H:%M"),
                                  game=e["name"], home=home, away=away, stat=stat, player=m["marketName"].split(" - ")[0], name=norm(m["marketName"].split(" - ")[0]),
                                  line=o.get("handicap"), over=odds(o), under=odds(u), team_abbr=o.get("teamAbbr")))
-    path = os.path.join(W, "research", "props_fd", f"{TODAY}.csv"); os.makedirs(os.path.dirname(path), exist_ok=True)
-    new = pd.DataFrame(rows)
-    if new.empty: print("no FanDuel prop lines right now"); return
-    if os.path.exists(path):
-        old = pd.read_csv(path); last = old.sort_values("seen_at_et").drop_duplicates(["event_id", "stat", "name"], keep="last")
-        m = new.merge(last[["event_id", "stat", "name", "line", "over", "under"]], on=["event_id", "stat", "name"], how="left", suffixes=("", "_old"))
-        new = new[~((m.line == m.line_old) & (m.over == m.over_old) & (m.under == m.under_old)).values]
-        pd.concat([old, new], ignore_index=True).to_csv(path, index=False)
-    else:
-        new.to_csv(path, index=False)
+    allnew = pd.DataFrame(rows)
+    if allnew.empty: print("no FanDuel prop lines right now"); return
+    for gdate, new in allnew.groupby("date"):
+        path = os.path.join(W, "research", "props_fd", f"{gdate}.csv"); os.makedirs(os.path.dirname(path), exist_ok=True)
+        if os.path.exists(path):
+            old = pd.read_csv(path); last = old.sort_values("seen_at_et").drop_duplicates(["event_id", "stat", "name"], keep="last")
+            m = new.merge(last[["event_id", "stat", "name", "line", "over", "under"]], on=["event_id", "stat", "name"], how="left", suffixes=("", "_old"))
+            new = new[~((m.line == m.line_old) & (m.over == m.over_old) & (m.under == m.under_old)).values]
+            pd.concat([old, new], ignore_index=True).to_csv(path, index=False)
+        else:
+            new.to_csv(path, index=False)
+    new = allnew
     print(f"FanDuel props: {len(rows)} lines now ({new.stat.value_counts().to_dict() if len(new) else 'no changes'})")
 
 
@@ -116,8 +119,8 @@ def player_state():
     return S, allow
 
 
-def p_over(mu, stat, line):
-    a, b = P["var_ab"][stat]; ex = (a - 1) * mu + b * mu ** 2
+def p_over(mu, stat, line, params=None):
+    a, b = (params or P)["var_ab"][stat]; ex = (a - 1) * mu + b * mu ** 2
     r = mu ** 2 / ex if ex > 1e-6 else 1e6
     return float(1 - stats.nbinom.cdf(np.floor(line), r, r / (r + mu)))
 
@@ -160,9 +163,10 @@ def pick():
     print(f"props shadow: {len(new)} paper bets logged for {TODAY} (from {len(LS)} FanDuel lines matched to players)")
 
 
-def grade():
-    if not os.path.exists(SHADOW): print("no shadow record yet"); return
-    D = pd.read_csv(SHADOW, dtype=str)
+def grade(path=None, params=None):
+    path = path or SHADOW; params = params or P
+    if not os.path.exists(path): print(f"nothing to grade in {os.path.basename(path)}"); return
+    D = pd.read_csv(path, dtype=str)
     files = sorted(glob.glob(os.path.join(W, "data", "player_stats", "season_*.csv.gz")))
     B = pd.read_csv(files[-1], dtype={"player_id": str}); B["name"] = B.player.map(norm)
     n = 0
@@ -184,19 +188,112 @@ def grade():
             if len(L):
                 c = L.iloc[-1]; qo, qu = 1 / dec(c.over), 1 / dec(c.under); fo = float(qo / (qo + qu))
                 if float(c.line) != line:     # move the close to our line with a normal shift (sd from the model's spread)
-                    a_, b_ = P["var_ab"][r.stat]; mu = float(r.mu); sd = np.sqrt(max(a_ * mu + b_ * mu ** 2, mu))
+                    a_, b_ = params["var_ab"][r.stat]; mu = float(r.mu); sd = np.sqrt(max(a_ * mu + b_ * mu ** 2, mu))
                     m = float(c.line) + sd * stats.norm.ppf(min(max(fo, 0.01), 0.99)); fo = float(1 - stats.norm.cdf((line - m) / sd))
                 side_p = fo if r.side == "over" else 1 - fo
                 D.loc[i, ["close_line", "close_price", "close_other"]] = [c.line, c.over if r.side == "over" else c.under, c.under if r.side == "over" else c.over]
                 D.loc[i, "close_ev"] = round(side_p * float(dec(price)) - 1, 4)
         n += 1
-    D.to_csv(SHADOW, index=False)
+    D.to_csv(path, index=False)
     g = D[D.result.isin(["win", "loss", "push"])]
     if len(g):
         u = g.u.astype(float); ce = pd.to_numeric(g.close_ev, errors="coerce")
-        print(f"props shadow graded {n}; record {(g.result == 'win').sum()}-{(g.result == 'loss').sum()}-{(g.result == 'push').sum()}, "
+        print(f"{os.path.basename(path)} graded {n}; record {(g.result == 'win').sum()}-{(g.result == 'loss').sum()}-{(g.result == 'push').sum()}, "
               f"{u.sum():+.1f}u, closing-line EV {ce.mean()*100:+.2f}% (n {ce.notna().sum()})")
 
 
+# ---------------- PROVISIONAL real-money alerts (Nov 5, 2026; research/PROVISIONAL_BETS.md registry row "NBA props v1b at FanDuel openers")
+LIVE = os.path.join(W, "state", "props_live.csv")
+PO_PATH = os.path.join(W, "data", "props_v1b_open_params.json")
+
+
+def push(title, body):
+    topic = os.environ.get("NTFY_TOPIC")
+    if not topic: print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
+    req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
+                                 headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": "high", "Tags": "basketball"})
+    urllib.request.urlopen(req, timeout=20); return True
+
+
+def live():
+    """bet FanDuel props still at their FanDuel opener (first line we saw), opener 4h+ before tip, EV >= 5% (v1b, clean params)"""
+    import actionnet
+    PO = json.load(open(PO_PATH))
+    h0, h1 = PO["alert_hours_et"]
+    if not (h0 <= NOW.hour < h1): print(f"props live: {NOW:%H:%M} ET is outside {h0}:00-{h1}:00; nothing sent"); return
+    if NOW.month in PO["skip_months"]: print("props live: April, no provisional prop bets (declared Nov 5, 2026)"); return
+    if TODAY < PO["live_from"]: print(f"props live: starts {PO['live_from']} (the first day FanDuel openers are captured from the night before)"); return
+    path = os.path.join(W, "research", "props_fd", f"{TODAY}.csv")
+    if not os.path.exists(path): print("props live: no FanDuel lines for today yet"); return
+    A = pd.read_csv(path).sort_values("seen_at_et")
+    first = A.drop_duplicates(["event_id", "stat", "name"], keep="first"); last = A.drop_duplicates(["event_id", "stat", "name"], keep="last")
+    J = last.merge(first[["event_id", "stat", "name", "line", "over", "under", "seen_at_et"]], on=["event_id", "stat", "name"], suffixes=("", "_open"))
+    tip = pd.to_datetime(J.tip_et); first_seen = pd.to_datetime(J.seen_at_et_open)
+    J = J[(J.line == J.line_open) & (J.line >= PO["min_line"]) & ((tip - first_seen).dt.total_seconds() >= PO["min_lead_hours"] * 3600)
+          & ((tip - pd.Timestamp(NOW.replace(tzinfo=None))).dt.total_seconds() > 0)]
+    S, allow = player_state()
+    an = actionnet.lines(TODAY)
+    O = pd.read_csv(os.path.join(W, "data", "odds_history", "nba_open_close.csv")); avg = O[O.book == "draftkings"].open_total.tail(1230).mean()
+    teams = {}
+    for r in an.itertuples(): teams[r.home] = (r.away, r.an_total); teams[r.away] = (r.home, r.an_total)
+    LS = J.merge(S, on="name", how="inner", suffixes=("", "_s"))
+    done = set(pd.read_csv(LIVE).key) if os.path.exists(LIVE) else set()
+    rows = []
+    for r in LS.itertuples():
+        if r.n_prev < 3: continue
+        opp, tot = teams.get(r.team, (None, np.nan))
+        pace = (tot / avg) if (tot == tot and r.stat != "reb") else 1.0
+        mu = r.min_proj * getattr(r, f"rate_{r.stat}") * allow.get(opp, {}).get(r.stat, 1.0) * pace
+        pm = p_over(max(mu, 0.05), r.stat, r.line, PO)
+        qo, qu = 1 / dec(r.over_open), 1 / dec(r.under_open); pk = float(qo / (qo + qu))     # the opener's own prices, as in the backtest
+        p = PO["w_model"] * pm + (1 - PO["w_model"]) * pk
+        for side, ps, price, popen in (("over", p, r.over, r.over_open), ("under", 1 - p, r.under, r.under_open)):
+            # backtest = bet AT the opener: line unchanged AND this side's price within 5 cents of its opening price; EV at the opening price
+            if abs(float(dec(price)) - float(dec(popen))) > 0.05: continue
+            ev = ps * float(dec(popen)) - 1
+            key = f"{TODAY}|{r.event_id}|{r.stat}|{r.name}"
+            if ev < PO["ev_min"] or key in done: continue
+            done.add(key)
+            sname = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes"}[r.stat]
+            title = f"PROVISIONAL PROP - {r.player} {side.upper()} {r.line:g} {sname} {int(price):+d} (FanDuel)"
+            body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. Model projects {mu:.1f} {sname}; chance {ps*100:.0f}% vs FanDuel's {((pk if side == 'over' else 1-pk))*100:.0f}%, "
+                    f"EV {ev*100:+.1f}%. Still at FanDuel's opening line. PROVISIONAL (props v1b at FanDuel openers): 1 unit, own record, "
+                    f"stop rules in research/PROVISIONAL_BETS.md. Backtest 2023-25: +5.1% ROI; FanDuel openers 4h+ before tip +3.9%. "
+                    f"If the line has moved, skip it. Log it with 'Log a bet' (market: prop) if you place it.")
+            try: sent = push(title, body)
+            except Exception as e: sent = False; print("push failed:", e)
+            rows.append(dict(key=key, date=TODAY, logged_at_et=NOW.strftime("%Y-%m-%d %H:%M"), model_version=PO["version"], tier="provisional",
+                             book="FanDuel", game=r.game, tip_et=r.tip_et, player=r.player, name=r.name, team=r.team, stat=r.stat, side=side,
+                             line=r.line, price=int(price), open_seen_et=r.seen_at_et_open, mu=round(mu, 2), p_model=round(pm, 4), p_market=round(pk, 4),
+                             p=round(ps, 4), ev=round(ev, 4), units=1, pushed=sent, result="", actual="", u="", close_line="", close_price="",
+                             close_other="", close_ev=""))
+    if rows: pd.DataFrame(rows).to_csv(LIVE, mode="a", header=not os.path.exists(LIVE), index=False)
+    print(f"props live: {len(rows)} PROVISIONAL prop alerts ({sum(r['pushed'] for r in rows)} pushed) from {len(LS)} FanDuel lines at their opener")
+
+
+def grade_my_props():
+    """grade the props Jeffrey logged with 'Log a bet' (market: prop) from the box scores, at his own line, odds and stake"""
+    path = os.path.join(W, "state", "my_bets.csv")
+    if not os.path.exists(path): return
+    B = pd.read_csv(path)
+    if "market" not in B or not (B.market == "prop").any(): return
+    files = sorted(glob.glob(os.path.join(W, "data", "player_stats", "season_*.csv.gz")))
+    X = pd.read_csv(files[-1], dtype={"player_id": str}); X["name"] = X.player.map(norm)
+    for c in ("result", "profit"):
+        if c not in B: B[c] = np.nan
+    B["result"] = B["result"].astype(object)
+    for i, r in B[(B.market == "prop") & B.result.isna()].iterrows():
+        b = X[(X.date == r.date) & (X.name == norm(r.player))]
+        if b.empty: continue
+        if float(b["min"].iloc[0]) <= 0: B.loc[i, ["result", "profit"]] = ["void", 0.0]; continue
+        a = float(b[r.stat].iloc[0]); v = (a - r.line) * (1 if r.side == "over" else -1)
+        B.loc[i, "result"] = "W" if v > 0 else ("L" if v < 0 else "P")
+        B.loc[i, "profit"] = round(r.stake * (100 / abs(r.odds) if r.odds < 0 else r.odds / 100), 2) if v > 0 else (-r.stake if v < 0 else 0.0)
+    B.to_csv(path, index=False)
+
+
 if __name__ == "__main__":
-    {"snapshot": snapshot, "pick": pick, "grade": grade}[MODE]()
+    if MODE == "grade":
+        grade(); grade(LIVE, json.load(open(PO_PATH))); grade_my_props()
+    else:
+        {"snapshot": snapshot, "pick": pick, "live": live}[MODE]()

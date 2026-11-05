@@ -1,0 +1,40 @@
+{
+ "version": "props_v1b_open_fd",
+ "w_model": 0.203,
+ "var_ab": {
+  "pts": [
+   4.07,
+   -0.0462
+  ],
+  "reb": [
+   1.7,
+   -0.0215
+  ],
+  "ast": [
+   1.47,
+   -0.0347
+  ],
+  "fg3m": [
+   1.42,
+   -0.0767
+  ]
+ },
+ "ev_min": 0.05,
+ "hl_min": 5,
+ "hl_rate": 20,
+ "prior_games": 5,
+ "prior_min": 150,
+ "k_opp": 15,
+ "source": "research/props/PROPS_V1B_OPENER_CLEAN_PREREG_2026-11-05.md; analysis/props_v1b_opener_clean_output.txt (var_ab printed there, w fit on 2022-23 openers); Fable review research/props/reviews/FABLE_REVIEW_PROPS_V1B_OPENER_2026-11-05.md; PROVISIONAL from Nov 5, 2026",
+ "min_lead_hours": 4,
+ "min_line": 0.5,
+ "skip_months": [
+  4
+ ],
+ "book": "FanDuel",
+ "alert_hours_et": [
+  6,
+  20
+ ],
+ "live_from": "2026-11-06"
+}

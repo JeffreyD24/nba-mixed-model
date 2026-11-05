@@ -1,0 +1,32 @@
+name: NCAAF DraftKings first lines (The Odds API, one-off)
+on:
+  workflow_dispatch:
+    inputs:
+      max_weeks: { description: "Weeks to fetch this run", default: "30" }
+permissions:
+  contents: write
+concurrency:
+  group: ncaaf-openers
+  cancel-in-progress: false
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas
+      - name: Check the key (free)
+        run: python ncaaf_openers.py . --check
+      - name: Download, saving after every 4 weeks
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          for i in 1 2 3 4 5 6 7 8; do
+            OUT=$(python ncaaf_openers.py . --max-weeks 4 2>&1); RC=$?; echo "$OUT" | tail -6
+            git add data/odds_history/ncaaf
+            if ! git diff --cached --quiet; then git commit -q -m "NCAAF DraftKings first lines: batch $i"; for j in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && break; sleep 10; done; fi
+            if [ $RC -ne 0 ] || echo "$OUT" | grep -q "^done"; then break; fi
+          done

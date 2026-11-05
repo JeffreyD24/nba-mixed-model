@@ -4572,3 +4572,40 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-05 18:20,22600188,2026-11-05,Total Points and Rebounds,4897262,Will Richard,,8.5,-125.0,9.5,-110.0,2026-11-05T23:46Z,under
 2026-11-05 18:20,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4066261,Bam Adebayo,,30.5,-125.0,36.5,-112.0,2026-11-06T02:09Z,over
 2026-11-05 18:20,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4066261,Bam Adebayo,,30.5,-105.0,36.5,-117.0,2026-11-06T02:09Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points,4278572,Jamal Cain,,6.5,-101.0,6.5,-102.0,2026-11-05T23:59Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points,4278572,Jamal Cain,,6.5,-127.0,6.5,-125.0,2026-11-05T23:59Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points,4601023,Oso Ighodaro,,6.5,100.0,6.5,-124.0,2026-11-05T23:15Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points,4601023,Oso Ighodaro,,6.5,-127.0,6.5,-103.0,2026-11-05T23:15Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Rebounds,4601023,Oso Ighodaro,,5.5,-101.0,4.5,-153.0,2026-11-05T23:15Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Rebounds,4601023,Oso Ighodaro,,5.5,-130.0,4.5,116.0,2026-11-05T23:15Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total 3-Point Field Goals,4066320,Desmond Bane,,2.5,-167.0,2.5,-173.0,2026-11-05T20:28Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total 3-Point Field Goals,4066320,Desmond Bane,,2.5,127.0,2.5,130.0,2026-11-05T20:28Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total 3-Point Field Goals,4278572,Jamal Cain,,0.5,-162.0,0.5,-163.0,2026-11-05T22:18Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total 3-Point Field Goals,4278572,Jamal Cain,,0.5,123.0,0.5,124.0,2026-11-05T22:18Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total 3-Point Field Goals,4278585,Collin Gillespie,,1.5,-193.0,1.5,-190.0,2026-11-06T01:34Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total 3-Point Field Goals,4278585,Collin Gillespie,,1.5,145.0,1.5,143.0,2026-11-06T01:34Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4066320,Desmond Bane,,24.5,-113.0,24.5,-104.0,2026-11-06T00:02Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4066320,Desmond Bane,,24.5,-117.0,24.5,-127.0,2026-11-06T00:02Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4566434,Franz Wagner,,29.5,-126.0,29.5,-120.0,2026-11-06T01:34Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4566434,Franz Wagner,,29.5,-105.0,29.5,-110.0,2026-11-06T01:34Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4601023,Oso Ighodaro,,9.5,-104.0,9.5,-101.0,2026-11-06T00:57Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4601023,Oso Ighodaro,,9.5,-127.0,9.5,-130.0,2026-11-06T00:57Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4702382,Tristan da Silva,,13.5,-129.0,14.5,-107.0,2026-11-06T02:19Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Assists,4702382,Tristan da Silva,,13.5,-102.0,14.5,-123.0,2026-11-06T02:19Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,3136193,Devin Booker,,29.5,-105.0,29.5,-107.0,2026-11-06T02:19Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,3136193,Devin Booker,,29.5,-125.0,29.5,-122.0,2026-11-06T02:19Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,4066320,Desmond Bane,,25.5,-111.0,24.5,-124.0,2026-11-06T00:02Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,4066320,Desmond Bane,,25.5,-118.0,24.5,-106.0,2026-11-06T00:02Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,4712849,Anthony Black,,20.5,-104.0,18.5,-119.0,2026-11-06T02:19Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,4712849,Anthony Black,,20.5,-126.0,18.5,-111.0,2026-11-06T02:19Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,5239561,Jase Richardson,,10.5,-133.0,11.5,-110.0,2026-11-06T02:19Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Points and Rebounds,5239561,Jase Richardson,,10.5,101.0,11.5,-119.0,2026-11-06T02:19Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Assists and Rebounds,4437244,Jalen Green,,6.5,-130.0,6.5,-125.0,2026-11-06T00:09Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Assists and Rebounds,4437244,Jalen Green,,6.5,-101.0,6.5,-105.0,2026-11-06T00:09Z,under
+2026-11-05 18:25,22600187,2026-11-05,Total Assists and Rebounds,4601023,Oso Ighodaro,,8.5,106.0,7.5,103.0,2026-11-06T01:06Z,over
+2026-11-05 18:25,22600187,2026-11-05,Total Assists and Rebounds,4601023,Oso Ighodaro,,8.5,-139.0,7.5,-136.0,2026-11-06T01:06Z,under
+2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3155526,Dillon Brooks,,23.5,-104.0,23.5,-113.0,2026-11-06T02:19Z,over
+2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3155526,Dillon Brooks,,23.5,-127.0,23.5,-116.0,2026-11-06T02:19Z,under
+2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4066320,Desmond Bane,,28.5,-124.0,28.5,-112.0,2026-11-06T02:19Z,over
+2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4066320,Desmond Bane,,28.5,-106.0,28.5,-117.0,2026-11-06T02:19Z,under
+2026-11-05 18:25,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4601023,Oso Ighodaro,,14.5,-109.0,14.5,-120.0,2026-11-06T00:56Z,under

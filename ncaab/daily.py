@@ -33,6 +33,13 @@ for mk, thr, line, close, model, res in (("spread", 5, -S.open_spread, -S.dk_spr
                          open_line=S.open_spread[i] if mk == "spread" else line[i], model=round(model[i], 1), edge=round(abs(e[i]), 1),
                          dk_close=S.dk_spread[i] if mk == "spread" else close[i], clv=round(sg * (close[i] - line[i]), 2) if pd.notna(close[i]) else np.nan,
                          result="W" if r > 0 else "L" if r < 0 else "P", units=100 / 110 if r > 0 else -1.0 if r < 0 else 0.0))
+# conference-game totals TEST (Nov 5, 2026; ncaab/research/CONF_TOTALS_RESULTS_2026-11-05.md): 6+ vs the DraftKings close, conference games
+conf = S.conf_game.astype(str) == "True"; ec = S.pred_total - S.dk_total
+for i in S.index[ok & conf & S.dk_total.notna() & (ec.abs() >= 6)]:
+    sg = np.sign(ec[i]); r = sg * (S.home_pts[i] + S.away_pts[i] - S.dk_total[i])
+    rows.append(dict(date=str(S.date[i].date()), home=S.home[i], away=S.away[i], market="conference total (vs DK close)",
+                     side="over" if sg > 0 else "under", open_line=S.open_total[i], model=round(S.pred_total[i], 1), edge=round(abs(ec[i]), 1),
+                     dk_close=S.dk_total[i], clv=np.nan, result="W" if r > 0 else "L" if r < 0 else "P", units=100 / 110 if r > 0 else -1.0 if r < 0 else 0.0))
 B = pd.DataFrame(rows, columns=["date", "home", "away", "market", "side", "open_line", "model", "edge", "dk_close", "clv", "result", "units"])
 B.to_csv(os.path.join(ST, "test_bets.csv"), index=False)
 L = [f"# NCAAM 2026-27 TEST record (not bets), updated {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d %H:%M} ET", "",

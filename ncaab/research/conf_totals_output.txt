@@ -1,0 +1,17 @@
+PRE-REGISTERED TEST: conference games, total edge 6+ vs the consensus close, 2021-22 + 2022-23 (unseen), -110
+  conference totals 6+ (THE TEST)                  370 bets 209-161 56.5% (90% low 53.2%)   +29.0u  by season 22:+12.7 23:+16.3
+  DECISION: PASS (units +29.0 > 0: True; win% 56.5% > 52.4%: True; worst season +12.7u >= -5: True)
+
+Descriptive only (decides nothing):
+  conference totals 4+ 2021-23                    1198 bets 631-567 52.7% (90% low 50.8%)    +6.6u  by season 22:-1.3 23:+7.9
+  conference totals 5+ 2021-23                     665 bets 367-298 55.2% (90% low 52.7%)   +35.6u  by season 22:+12.2 23:+23.5
+    overs only                                     280 bets 166-114 59.3% (90% low 55.5%)   +36.9u  by season 22:+19.3 23:+17.6
+    unders only                                     90 bets 43-47 47.8% (90% low 41.0%)    -7.9u  by season 22:-6.5 23:-1.4
+  NON-conference Jan-Apr 6+ 2021-23                 27 bets 13-14 48.1% (90% low 35.8%)    -2.2u  by season 22:-1.4 23:-0.8
+  NON-conference Nov-Dec 6+ 2021-23                369 bets 181-188 49.1% (90% low 45.7%)   -23.5u  by season 22:+2.5 23:-26.0
+  conference tournaments 6+ 2021-23                 25 bets 12-13 48.0% (90% low 35.2%)    -2.1u  by season 22:-2.1
+  conference regular season 6+ 2021-23             345 bets 197-148 57.1% (90% low 53.7%)   +31.1u  by season 22:+14.8 23:+16.3
+
+Same grading (consensus close) on the seasons where the idea was found, for comparison:
+  conference totals 6+ 2023-26 (seen)             1033 bets 506-527 49.0% (90% low 47.0%)   -67.0u  by season 24:-29.4 25:-13.5 26:-24.1
+  NON-conference Jan-Apr 6+ 2023-26 (seen)          53 bets 23-30 43.4% (90% low 34.7%)    -9.1u  by season 24:-5.4 25:+1.1 26:-4.8

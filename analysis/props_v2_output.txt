@@ -1,0 +1,21 @@
+injury report rows 2413908, team-dates 12253
+BettingPros DK/FD close rows 882116, seasons {2022: 81197, 2023: 154498, 2024: 192520, 2025: 207521, 2026: 232756, 2027: 13624}
+v2 minutes rows 98520; with a report 99.2%; mean minutes moved per team-game 39.0
+usage bump alpha (2023-24 box only): pts +0.070, reb -0.024, ast +0.089, fg3m +0.012
+test rows (player-stat-games with DK/FD close at the same line): {2023: 47520, 2024: 51963, 2025: 53066, 2026: 57296}
+
+== v2 == FIT 2023-24 blend weight w 0.067 (log loss close 0.6847, model 0.7095, blend 0.6845, n 51963)
+  fit 2023-24: model-beyond-close coef +0.101 (se 0.019, 90% [+0.071, +0.132]), close over-lean -0.080, n 51916 | bets 646, win 47.5%, +8.1u, ROI +1.3% [-6.3, +8.8]
+  TEST A 2024-25: model-beyond-close coef +0.103 (se 0.018, 90% [+0.073, +0.133]), close over-lean -0.058, n 53066 | bets 1299, win 47.1%, +8.7u, ROI +0.7% [-3.9, +5.4]
+  2025-26 (descriptive): model-beyond-close coef +0.093 (se 0.016, 90% [+0.066, +0.120]), close over-lean -0.077, n 57296 | bets 1645, win 47.8%, +80.2u, ROI +4.9% [+0.4, +9.2]
+  2022-23 (descriptive): model-beyond-close coef +0.037 (se 0.017, 90% [+0.009, +0.065]), close over-lean -0.056, n 47520 | bets 505, win 42.2%, -35.0u, ROI -6.9% [-15.9, +2.0]
+
+== v1b == FIT 2023-24 blend weight w 0.164 (log loss close 0.6847, model 0.7082, blend 0.6839, n 51963)
+  fit 2023-24: model-beyond-close coef +0.114 (se 0.018, 90% [+0.085, +0.143]), close over-lean -0.043, n 51916 | bets 2014, win 50.0%, +49.4u, ROI +2.5% [-1.2, +6.3]
+  TEST A 2024-25: model-beyond-close coef +0.062 (se 0.018, 90% [+0.032, +0.092]), close over-lean -0.024, n 53066 | bets 2506, win 50.2%, +62.1u, ROI +2.5% [-0.9, +5.8]
+  2025-26 (descriptive): model-beyond-close coef +0.084 (se 0.017, 90% [+0.057, +0.112]), close over-lean -0.040, n 57296 | bets 3065, win 50.2%, +139.0u, ROI +4.5% [+1.5, +7.6]
+  2022-23 (descriptive): model-beyond-close coef +0.042 (se 0.016, 90% [+0.015, +0.069]), close over-lean -0.040, n 47520 | bets 5791, win 48.5%, -133.3u, ROI -2.3% [-4.4, -0.1]
+
+== Verdict (Test A, pre-registered: v2 only) ==
+v2: PASS -> PROVISIONAL after Fable check
+v1b on the same rows is shown for comparison only.

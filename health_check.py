@@ -77,6 +77,10 @@ if SPORT == "nba":   # Nov 5, 2026: NCAA men's basketball (test-only): ncaab/dai
     STREAMS.update({"ncaab/data/games.csv": (30, "NCAAM scores and lines"), "ncaab/state/test_record.md": (30, "NCAAM test record (daily)")})
 if SPORT == "nba":   # Nov 4, 2026: line-move shadow record (analysis/LINE_MOVE_PREREG.md); NBA only for now
     STREAMS["state/shadow_passed.md"] = (30, "Shadow record of bets passed for a line move against (daily)")
+if SPORT == "nba":   # Nov 5, 2026: player props shadow (paper) record, props_shadow.py; FanDuel lines + daily picks/grading + box stats
+    STREAMS.update({"research/props_fd": (30, "FanDuel player props (hourly)"), "state/props_shadow.csv": (48, "Props shadow record (paper, daily)", "warn"),
+                    "data/player_stats": (48, "Player box stats 2026-27 (daily)")})
+    WORKFLOWS["props-shadow.yml"] = (3, "Props shadow (FanDuel hourly)")
 if SPORT == "nhl":
     STREAMS.update({"research/goalies.csv": (30, "Goalie status log"), "research/line_moves": (30, "Line moves (9 books)"),
                     "research/edge": (30, "Edge research files", "warn"), "research/live": (30, "Live line recorder", "warn"),

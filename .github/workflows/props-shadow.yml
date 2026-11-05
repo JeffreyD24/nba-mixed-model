@@ -1,0 +1,41 @@
+name: Props shadow record (paper, FanDuel)
+
+# Hourly 11 AM - 11 PM ET: FanDuel prop lines for today's games. At the 11 AM ET run also: refresh 2026-27 box stats, grade
+# yesterday's paper bets, and log today's paper bets (props v1b, EV >= 5%). Paper only: no phone alerts, no real bets.
+on:
+  schedule:
+    - cron: "7 15-23 * * *"
+    - cron: "7 0-4 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: props-shadow
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -q pandas numpy scipy
+      - name: Snapshot, and once a day grade + pick
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git fetch -q origin main && git checkout -q -B main origin/main
+          python props_shadow.py . snapshot || echo "snapshot failed"
+          H=$(TZ=America/New_York date +%H)
+          if [ "$H" = "11" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python player_stats_backfill.py . 2027 || echo "box update failed"
+            python props_shadow.py . grade || echo "grade failed"
+            python props_shadow.py . pick || echo "pick failed"
+          fi
+          git add research/props_fd state/props_shadow.csv data/player_stats 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Props shadow $(TZ=America/New_York date '+%Y-%m-%d %H:%M')"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push -q origin main && break; sleep 8; done

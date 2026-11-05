@@ -1,4 +1,4 @@
-"""Live sharp-money tracker, all five leagues (Nov 5, 2026; betting-goals SHARP_MONEY.md). Every 10 minutes (workflow sharp-live.yml):
+"""Live sharp-money tracker, all five leagues (Nov 5, 2026; betting-goals SHARP_MONEY.md). About every minute (sharp/live_loop.sh inside workflow sharp-live.yml, Nov 5: was every 10 min):
 1. Action Network: consensus betting splits (% of bets, % of money, number of bets) and lines at the Open book, Consensus, DraftKings, FanDuel
    (plus sharp books whenever Action Network returns them) for today's and tomorrow's games -> sharp/live/{sport}/{date}.csv, a row only when
    something changed (so the file is the timeline of WHEN money and lines moved).
@@ -96,5 +96,5 @@ if __name__ == "__main__":
         # signals over the last 3 capture days (games can be seen days ahead)
         files = sorted(x for x in os.listdir(d) if x[:4].isdigit())[-3:]
         A = pd.concat([pd.read_csv(os.path.join(d, x)) for x in files], ignore_index=True)
-        signals(A).to_csv(os.path.join(d, f"signals_{NOW.date()}.csv"), index=False)
+        if "--no-signals" not in sys.argv: signals(A).to_csv(os.path.join(d, f"signals_{NOW.date()}.csv"), index=False)
         print(f"{sport}: {len(S)} book rows, {len(new)} changed, books seen {sorted(S.book.astype(str).unique())}")

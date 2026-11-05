@@ -7,7 +7,7 @@ import os, sys, json, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 W = os.path.abspath(sys.argv[1]); ARG = lambda k, d=None: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
-OUT = os.path.join(W, "ncaab", "data", "espn_openers.csv")
+OUT = ARG("--out", os.path.join(W, "ncaab", "data", "espn_openers.csv"))
 URL = "https://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/events/{e}/competitions/{e}/odds?limit=50"
 num = lambda x: (lambda v: v)(float(str(x).replace("+", ""))) if x not in (None, "", "EVEN", "even") else None
 

@@ -104,3 +104,5 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 
 - [ ] (Nov 5, 2026) DraftKings direct feed (CT) every 30-60 s from Jeffrey's home connection: run live_capture/Probe_DraftKings.bat, then build the poller + switch alert source (cloud/GitHub is 403)
 - [ ] (Nov 5, 2026) Scrub Kalshi test files (sharp/data/kalshi) from this repo's git history; Jeffrey approved, scheduled Nov 6 3:30 AM ET (pause pushing workflows, filter-repo, force-push, re-enable).
+
+- [ ] Always-on machine (Raspberry Pi or ~$5/mo cloud server) for alerts seconds after a line posts; Jeffrey looking into hardware (Nov 5, 2026; betting-goals GOALS.md + FINDINGS.md)

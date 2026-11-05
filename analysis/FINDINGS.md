@@ -3,6 +3,16 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: NFL break-even CLV measured: totals +0.79, spreads ~+0.76 (NFL) [TEST]
+- Question: Jeffrey asked whether any NFL model is profitable; the NFL totals break-even CLV had never been measured (inventory: "not found").
+- Data / method: training_games 2018-25 closing lines, 2,227 games; break-even = 0.0597 x sd(result - close) (-110 needs 52.38%).
+- Result: totals sd 13.18 -> **break-even +0.79 pts** (by season sd 12.5-13.7); spreads sd 12.75 -> ~+0.76 ignoring key numbers (the +0.64 used
+  for NFL spreads earlier was measured with key numbers; keep it for spreads).
+- Read: the live NFL totals rule's honest mid-week CLV (+0.61 Tuesday, +0.69 Monday, 2020-25) is below +0.79; only the 2016-19 SBR out-of-sample
+  test (CLV +0.93 to +1.13, +9.7% to +10.4%) clears it. NFL totals are thin, not proven.
+- Decision: nothing changes yet; use +0.79 for NFL totals in every future NFL prereg and review.
+- Files: one-off check (this entry); numbers from nfl-mixed-model data/training_games.csv.
+
 ## 2026-11-05: Exchange history stored in the private repo; full download started (all sports) [DECISION] [TEST]
 - Question: where to keep Kalshi/Polymarket history so Kalshi's no-sharing term is respected (all three model repos are public).
 - Data / method: Jeffrey's private repo `JeffreyD24/private`, folder `exchange/` (README there). Downloader `exchange/exchange_history.py` + `.github/workflows/exchange-history.yml` (copy of sharp/exchange_history.py, plus Kalshi trades and Kalshi's historical tier). 2-game test run 42124943284 passed for all 13 series; full run 42125372646 started 5:50 PM ET.

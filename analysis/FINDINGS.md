@@ -42,7 +42,7 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 ## 2026-11-05: Saved build products; never rebuild what exists (all sports) [DECISION]
 - What happened: the 2021-26 DK predictions and the 2015-2021 goalie-model predictions (built Nov 3-4) had only lived in the
   gitignored `_tmp/` folder, so both were rebuilt from scratch today for the puck line tests.
-- Decision (Jeffrey): RULE 3 in CLAUDE.md (all three repos). Build products go in `derived/` (gzipped, tracked) with a row in
+- Decision (Jeffrey): RULE 4 in CLAUDE.md (all three repos). Build products go in `derived/` (gzipped, tracked) with a row in
   `derived/MANIFEST.md`; scripts restore them with `derived.py` before building. NHL set up and saved: dk_holdout 2022-2026,
   oos_games, oos_games_g, gr_G1 predictions 2015-2021 (4.8 MB). Checked: both puck line tests reproduce exactly from the saved files.
 

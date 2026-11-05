@@ -1,0 +1,13 @@
+season 2023: 164 game days
+  day 1/164 2022-10-18: files so far 19
+  day 21/164 2022-11-07: files so far 399
+  day 41/164 2022-11-29: files so far 779
+  day 61/164 2022-12-19: files so far 1159
+  day 81/164 2023-01-09: files so far 1537
+  day 101/164 2023-01-29: files so far 1917
+  day 121/164 2023-02-24: files so far 2297
+  day 141/164 2023-03-16: files so far 2677
+  day 161/164 2023-04-06: files so far 3057
+download: {'ok': 3114, 'missing:403': 2}
+parsed 3114 files -> 326989 rows; files per calendar day median 13; as_of missing 0.0%; rows missing team/date/matchup 0.0%
+{'Out': 226916, 'Questionable': 35781, 'NOT YET SUBMITTED': 24170, 'Available': 21831, 'Probable': 13859, 'Doubtful': 4432}

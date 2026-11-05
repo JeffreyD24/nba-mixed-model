@@ -10,7 +10,10 @@ G["ac"] = G.season.astype(str) + "_" + G.away_conf_id.fillna(-1).astype(int).ast
 # teams with fewer than 8 games in a season (mostly non-D-I opponents) share one effect "OTHER" for that season
 G["hk"], G["ak"] = G.hk.astype(str), G.ak.astype(str)
 cnt = pd.concat([G[["season", "hk"]].rename(columns={"hk": "t"}), G[["season", "ak"]].rename(columns={"ak": "t"})]).value_counts()
-for s_ in ("hk", "ak"): G[s_] = [t if cnt.get((se, t), 0) >= 8 else "OTHER" for se, t in zip(G.season, G[s_])]
+if "--live-rule" in sys.argv:   # Nov 5 (Fable review): pre-game-known rule -- a team with no conference id is "OTHER"
+    for s_, c_ in (("hk", "home_conf_id"), ("ak", "away_conf_id")): G[s_] = np.where(G[c_].notna(), G[s_], "OTHER")
+else:
+    for s_ in ("hk", "ak"): G[s_] = [t if cnt.get((se, t), 0) >= 8 else "OTHER" for se, t in zip(G.season, G[s_])]
 log_lines = []
 
 def run_season(S, prior, ridge=5.0, cridge=None, level_half=None, log=False):

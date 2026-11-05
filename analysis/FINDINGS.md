@@ -3,6 +3,25 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: DraftKings' own feed works from GitHub with a Chrome fingerprint; direct poller built (all sports) [TEST] [DECISION]
+- Question: Jeffrey: see every DraftKings line every minute, from DraftKings, not Action Network / ESPN.
+- Data / method: `tools/probe_dk_cffi.py` on a GitHub runner, 22:45 UTC Nov 5, curl_cffi impersonating chrome124 / chrome131 / safari17_0.
+  Plain requests: HTTP 403 from the runner AND from Jeffrey's home PowerShell (so it is the request's fingerprint, not the address; an earlier note here
+  guessed a home connection would work: wrong). Output: research/probes/dk_cffi_probe.md, dk_nba_dkusct_sample.json.
+- Result: HTTP 200 for NBA / NHL (CT and NJ), 6 NBA games / 14 NHL games listed, one reply of 56-82 KB per league with every game's moneyline, spread,
+  total and prices. DraftKings CT at ~5:50 PM ET: PHI @ CLE total 230.5 (-110/-110), MIN @ NO 229.5 (-105/-115), SA @ SAC 228.5, TOR @ MIL 231.5;
+  LAL @ POR NOT listed. So Action Network's DraftKings 234.5 (CLE-PHI) and 238.5 (LAL-POR) were stale / not on DraftKings, and the 4 PM movement
+  alerts for both were wrong at DraftKings' real line. CT and NJ NBA lines were the same on this sample (6 games).
+- Read: observation on one evening, 6 games; strong enough to stop trusting Action Network's DraftKings number for "is this posted / what is it".
+- Decision (Jeffrey's request): `dk_direct.py` polls NBA / NHL / NFL game lines every minute inside alert_loop.sh, records every changed line to
+  research/dk_direct/YYYY-MM-DD.csv.gz (+ state/dk_direct_now.json). `opener_watch.py` (new-line trigger) and `dk_confirmed()` (movement + blend alerts and
+  reminders) now use it, ESPN / Action Network only if the direct fetch fails; DraftKings bet-slip links now come from the direct feed (event id + selection
+  id; tapping one not yet tested). alerts.yml installs curl_cffi.
+- Still not done: the main model and movement model still take `dk_now` from Action Network (a mismatch now blocks the alert rather than correcting it);
+  props, alt lines, quarters and halves (category endpoints, e.g. /leagues/42648/categories/<id>); NHL and NFL repos' own alert code; a Raspberry Pi is not needed.
+- Files: dk_direct.py, opener_watch.py, market_models_live.py, alert_loop.sh, .github/workflows/alerts.yml, tools/probe_dk_cffi.py,
+  .github/workflows/probe-dk-cffi.yml, research/probes/dk_cffi_probe.md.
+
 ## 2026-11-05: Where our "DraftKings" lines come from, and why the direct feed is blocked (all sports) [OBSERVATION] [IDEA]
 - Question: Jeffrey, after the POR / PHI alerts: "we are relying on ESPN to get DraftKings lines? ... find a site that allows us to see every single
   line every minute."

@@ -1,0 +1,29 @@
+name: Probe DraftKings + FanDuel markets
+
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/probe-dk-markets.yml", "tools/probe_dk_markets.py"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install curl_cffi
+      - name: Probe
+        run: python tools/probe_dk_markets.py .
+      - name: Save the results
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add research/probes
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "DK+FD markets probe results"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && break; sleep 8; done

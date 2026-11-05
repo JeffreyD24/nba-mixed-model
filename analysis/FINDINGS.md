@@ -39,6 +39,23 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
   each kind of record goes, the entry template and TYPE labels ([TEST] [OBSERVATION] [CORRELATION] [CAUSAL] [LEAD] [IDEA] [DECISION]).
   This file stays the master log; open ideas also go in each repo's `research/IDEAS_AND_CHECKLIST.md`.
 
+## 2026-11-05: -1.5 puck lines at EV 9%+ re-tested on 2014-21 with a fixed price rebuild (NHL) [TEST] [CORRELATION] [LEAD]
+- Question: the side-bar test's T3 showed -1.5 at 9%+ losing on older seasons (-12.2%) vs +11.8% on DK 2021-26, but its rebuilt
+  price was biased. Re-run with the rebuild fixed (pre-registered, nhl-mixed-model research/spreads/PL_FAV_9PLUS_PREREG.md, e0107b5).
+- Data / method: goalie-aware shot model (saved derived/gr_G1_pred_2015..2021), 2014-15..2020-21. Opening puck line rebuilt from
+  SBR's opening moneyline with a mapping fit on SBR's own closing lines (home/road favorites separate, leave-one-season-out).
+  Rebuild error vs real closes: bias 0.0 pts (was +1.5/-1.0), sd 2.15 pts (was 3.2).
+- Result: -1.5 at 9%+ 654 bets -6.6u (-1.0%), 90% interval -9.8% to +7.9%, negative 5/7 seasons. -1.5 at 4-6% +8.5%, 6-9% +5.8%,
+  9-12% -7.3%, 12%+ +2.6%. +1.5: -0.1%, +4.0%, -0.2%, +2.7% by the same bands.
+- Read: verdict by the written rule LEAD CONFIRMED: the DK record overstates -1.5 at 9%+. Pooled with DK 2021-26: 1,223 bets +60.8u
+  (+5.0%), still profitable. Not evidence that it loses (wide interval). Still approximate prices, consensus not DK opener.
+- [CORRELATION] Puck line EV bands do not keep their order across eras (older seasons: -1.5 4-9% won, 9-12% lost; DK: reverse).
+  EV is not sorting puck line profit reliably, so a bar chosen by band, 9% included, fits noise.
+- [LEAD] Pre-register a pooled 12-season test of whether puck line EV predicts profit at all (slope, leave-one-season-out).
+- [IDEA] Expect about +5% on -1.5 at 9%+ when judging live results, not +11.8%.
+- Decision: nothing changes live (the prereg allowed none). Any change is a proposal for Jeffrey after the EV test.
+- Files: nhl-mixed-model analysis/pl_fav_9plus.py, analysis/pl_fav_9plus_output.txt, research/spreads/PL_FAV_9PLUS_RESULTS.md.
+
 ## 2026-11-05: Saved build products; never rebuild what exists (all sports) [DECISION]
 - What happened: the 2021-26 DK predictions and the 2015-2021 goalie-model predictions (built Nov 3-4) had only lived in the
   gitignored `_tmp/` folder, so both were rebuilt from scratch today for the puck line tests.

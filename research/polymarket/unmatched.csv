@@ -24,3 +24,5 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-02 22:00,nba-mia-lal-2026-11-02,MIA Heat vs. LA Lakers,2026-11-02 22:00,"lal,mia",no matching game in the model files
 2026-11-04 08:00,nba-lead-pts-2026-11-04,NBA Nov 4th Points Leader,2026-11-04 19:00,"cha,cle,dal,den,det,hou,ind,lal,mem,ny,okc,phi,phx,por,sa,sac,tor,utah,wsh",no matching game in the model files
 2026-11-04 08:05,nba-lead-3pm-2026-11-04,NBA Nov 4th 3-Pointers Made Leader,2026-11-04 19:00,"atl,bkn,bos,cha,chi,cle,dal,den,det,hou,ind,lac,lal,mem,mil,min,ny,okc,phi,por,sa,sac,tor,utah",no matching game in the model files
+2026-11-04 19:00,nba-phi-det-2026-11-04,PHI 76ers vs. DET Pistons,2026-11-04 19:00,"det,phi",no matching game in the model files
+2026-11-04 19:00,nba-atl-was-2026-11-04,ATL Hawks vs. WAS Wizards,2026-11-04 19:00,"atl,wsh",no matching game in the model files

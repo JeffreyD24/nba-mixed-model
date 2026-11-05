@@ -379,6 +379,8 @@ def grade_my_bets(games, logdf):
     model = {(r.date_s, r.home, r.away): (r.pred_margin, r.pred_total) for r in picks.itertuples()}
     out = []
     for r in B.itertuples():
+        if r.market == "prop":      # Nov 5, 2026: player props are graded by props_shadow.py (grade_my_props); keep its result
+            out.append((getattr(r, "result", None), getattr(r, "profit", np.nan), np.nan, np.nan)); continue
         hp, ap = res.get((r.date, r.home, r.away), (np.nan, np.nan))
         mm, mt = model.get((r.date, r.home, r.away), (np.nan, np.nan))
         if r.market == "total":
@@ -400,7 +402,9 @@ def grade_my_bets(games, logdf):
     cv, yc = [], []
     for r in B.itertuples():
         cs, ct = closes.get((r.date, r.home, r.away), (np.nan, np.nan))
-        if r.market == "total":
+        if r.market == "prop":
+            yc.append(np.nan); cv.append(np.nan)
+        elif r.market == "total":
             yc.append(ct); cv.append(clv("total", r.pick, r.line, ct))
         else:   # your line is from your team's side; the closing spread is from the home side
             your_close = cs if r.pick == r.home else (-cs if not pd.isna(cs) else np.nan)

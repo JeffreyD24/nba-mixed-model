@@ -34,6 +34,7 @@ def main():
         return v.iloc[-1].version if len(v) else "before tracking"
     B["version"] = [version(r) for r in B.itertuples()]
     B.loc[B.notes.astype(str).str.contains("OFF-MODEL"), "version"] = "off-model (no alert)"      # bets the model did not call for
+    B.loc[B.market.astype(str) == "prop", "version"] = "PROVISIONAL: NBA props v1b at FanDuel openers"   # Nov 5, 2026 (props_shadow.py live)
     # PROVISIONAL tier (Nov 4, 2026; research/PROVISIONAL_BETS.md): bets that match a provisional BET alert get their own record
     try:
         A = pd.read_csv(os.path.join(STATE, "alerts.csv"))

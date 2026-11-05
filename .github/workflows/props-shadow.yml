@@ -1,11 +1,12 @@
-name: Props shadow record (paper, FanDuel)
+name: Props (FanDuel lines, PROVISIONAL alerts, paper record)
 
-# Hourly 11 AM - 11 PM ET: FanDuel prop lines for today's games. At the 11 AM ET run also: refresh 2026-27 box stats, grade
-# yesterday's paper bets, and log today's paper bets (props v1b, EV >= 5%). Paper only: no phone alerts, no real bets.
+# Nov 5, 2026: every 30 minutes, all day: FanDuel prop lines for today's AND tomorrow's games (so each prop's opener is caught
+# when FanDuel posts it). Each run also sends PROVISIONAL prop alerts (props v1b at FanDuel openers; 6 AM - 8 PM ET only;
+# research/PROVISIONAL_BETS.md). At the 11 AM ET run: refresh box stats, grade yesterday (alerts, paper record, logged props),
+# and log the v1b paper picks.
 on:
   schedule:
-    - cron: "7 15-23 * * *"
-    - cron: "7 0-4 * * *"
+    - cron: "7,37 * * * *"
   push:
     branches: [main]
     paths: [".github/workflows/props-shadow.yml", "props_shadow.py"]
@@ -27,18 +28,21 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12", cache: pip }
       - run: pip install -q pandas numpy scipy
-      - name: Snapshot, and once a day grade + pick
+      - name: Snapshot, alerts, and once a day grade + paper picks
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: |
           git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
           git fetch -q origin main && git checkout -q -B main origin/main
           python props_shadow.py . snapshot || echo "snapshot failed"
-          H=$(TZ=America/New_York date +%H)
-          if [ "$H" = "11" ] || [ "${{ github.event_name }}" != "schedule" ]; then
+          H=$(TZ=America/New_York date +%H); M=$(TZ=America/New_York date +%M)
+          if [ "$H" = "11" ] && [ "$M" -lt "30" ] || [ "${{ github.event_name }}" != "schedule" ]; then
             python player_stats_backfill.py . 2027 || echo "box update failed"
             python props_shadow.py . grade || echo "grade failed"
             python props_shadow.py . pick || echo "pick failed"
           fi
-          git add research/props_fd state/props_shadow.csv data/player_stats 2>/dev/null || true
+          python props_shadow.py . live || echo "live alerts failed"
+          git add research/props_fd state/props_shadow.csv state/props_live.csv state/my_bets.csv data/player_stats 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
-          git commit -q -m "Props shadow $(TZ=America/New_York date '+%Y-%m-%d %H:%M')"
+          git commit -q -m "Props $(TZ=America/New_York date '+%Y-%m-%d %H:%M')"
           for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push -q origin main && break; sleep 8; done

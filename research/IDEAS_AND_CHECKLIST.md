@@ -84,3 +84,9 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - Consensus-price strategy: Kaunitz, Zhong, Kreiner, arXiv 1710.02824; github.com/Lisandro79/BeatTheBookie
 - nfelo market regression: nfeloapp.com
 - Data: github.com/FinnedAI/sportsbookreview-scraper
+
+## Sharp money (Nov 5, 2026; sharp/SHARP_RESULTS_2026-11-05.md)
+- [ ] Historical timing: does Pinnacle (Odds API hourly multi-book snapshots 2020-26) move before DraftKings, and does following its first move beat DK's opener? Pre-register.
+- [ ] Early-money warning: once the live tracker has history, does a money gap >= 10 against our bet seen BEFORE the line moves predict our losers? (Lead: NBA totals v4 sharp-disagree 197 bets 49.7%.)
+- [ ] Steam and reverse line moves from live data: which books move first, and how much of DK's move follows.
+- [ ] Polymarket: follow large, historically profitable wallets in sports markets (public trade history with wallet ids).

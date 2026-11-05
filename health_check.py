@@ -41,6 +41,9 @@ if SPORT in ("nba", "nhl"):
     WORKFLOWS["early.yml"] = (16, "Early model run (2-4 days ahead)")
 if SPORT in ("nfl", "nhl", "nba"):
     WORKFLOWS["live.yml"] = (30, "Live line recorder")
+if SPORT == "nba":   # Nov 5, 2026: live sharp-money tracker, all five leagues
+    WORKFLOWS["sharp-live.yml"] = (2, "Sharp money tracker (every 10 min)")
+    STREAMS.update({"sharp/live/nba": (24, "Sharp money live captures", "warn")})
 if SPORT == "nba":
     WORKFLOWS["econ-gdp.yml"] = (14, "Economics (GDP) recorder")
     WORKFLOWS["ncaab.yml"] = (30, "NCAAM daily (test-only)")        # Nov 5, 2026

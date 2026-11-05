@@ -46,6 +46,18 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
   research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
 
+## 2026-11-05: What the NHL Pinnacle veto actually did; correction (NHL) [OBSERVATION] [DECISION]
+- Question (Jeffrey): were we waiting for Pinnacle? He bets as soon as an alert arrives, which would make Pinnacle a non-factor.
+- Result: the veto (nhl alert.py USE_PINNACLE_RULE, PIN_DISAGREE 0.005) never waited: it only applied when Pinnacle had ALREADY posted at alert
+  time and gave our side 0.5+ win-% points less than DraftKings' opener. Pinnacle usually posts NHL lines 5-12 h after DraftKings, so it rarely
+  applied. This season (state/alerts.csv, 93 rows): 2 vetoes; 0 later "Pinnacle has now opened" notes (PIN_FOLLOWUP); 0 second-chance alerts.
+- Correction: earlier today Claude said vetoed bets "lost every season 2021-26". That claim is stale: the Nov 4 rule audit showed it came from
+  look-ahead (graded with Pinnacle's later price); with bettable timing the vetoed group was 27 bets -8.8u (small sample) and the wider group +5.4u.
+  The follow-up note text in nhl alert.py (~line 820) still says "lost every season 2021-26": fix when the Pinnacle replacement goes in.
+- Read: the stopped feed costs little now; the second-chance rule (172 bets +17.2u 2021-26) is the larger loss, and it had not fired this season.
+- Decision: Claude advises NOT skipping EV 4-9% moneylines (the premise was the veto); awaiting Jeffrey. Replacement (Kalshi / Polymarket NHL
+  price vs DK opener) to be tested on past seasons with the saved Pinnacle history.
+
 ## 2026-11-05: Sharp money tracker moved to about once a minute; OPEN_LEADS register + weekly recap (all sports) [DECISION]
 - Jeffrey: track closer to every minute; keep one place with every working lead and test, checked weekly.
 - Decision: `sharp/live_loop.sh` captures every 60 s for ~28 min per run, two runs an hour (`sharp-live.yml`, cron :01 and :31), commits every

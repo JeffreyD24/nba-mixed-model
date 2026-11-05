@@ -32,6 +32,12 @@ jobs:
         run: python nba_luck.py . || echo "Shooting luck not updated; alerts use yesterday's file."
       - name: Save tomorrow's model early (for alerts when DraftKings opens tomorrow's lines)
         run: python tracker.py . --tomorrow --model-only || echo "Tomorrow's model not saved this time; the evening run will make it."
+      - name: Box scores 2026-27 for the market models (ESPN, only games not saved yet)
+        run: python player_stats_backfill.py . 2027 || echo "Box scores not updated; the market models use yesterday's."
+      - name: Market models (Nov 5, 2026; PROVISIONAL movement bets) - grade last night, refit the opener model
+        run: |
+          python market_models_live.py . grade || echo "Market models grading failed; it will run again tomorrow."
+          python market_models_live.py . fit || echo "Market models refit failed; the 5-minute check retries hourly."
       - name: Bet record by model version
         run: python bet_record.py . || echo "Bet record not updated; it will run again tomorrow."
       - name: Provisional bets review (Nov 4, 2026; research/PROVISIONAL_BETS.md stop/promote lines)
@@ -55,6 +61,7 @@ jobs:
           git config user.name "nba-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
           git add state NBA_Live_Tracker.xlsx
+          git add data/player_stats
           if [ -d research/polymarket ]; then git add research/polymarket; fi
           if [ -d research/edge_stats ]; then git add research/edge_stats; fi
           git diff --cached --quiet || git commit -m "Morning run $(TZ=America/New_York date +%F)"

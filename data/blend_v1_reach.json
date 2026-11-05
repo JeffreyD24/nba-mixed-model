@@ -1,0 +1,20 @@
+{
+ "version": "blend v1",
+ "fit_on": "2023-24..2025-26, decision = first DK snapshot at/after 9 PM ET the night before",
+ "a": -14.002202415676914,
+ "w_v4": 0.3061974584903481,
+ "w_mkt_exp_close": 0.7572033910482006,
+ "bet_edge": 2.0,
+ "n": 3684,
+ "prereg": "research/market_models/STEP4_BLEND_PREREG.md",
+ "test_2025_26": {
+  "n": 257,
+  "overs": 228,
+  "clv": 1.44,
+  "clv_se": 0.18,
+  "units": 1.8,
+  "roi": 0.007,
+  "win": 0.529,
+  "status": "PREREG"
+ }
+}

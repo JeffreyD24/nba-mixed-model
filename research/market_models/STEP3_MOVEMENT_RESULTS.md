@@ -73,3 +73,33 @@ on 2025-26. Its edge vs the current DK line got a large weight (+0.85) but barel
 ## Next
 - Step 4: blend (our outcome model + market + movement prediction), the exploratory result above suggests the pieces add.
 - Shadow record for this movement rule in 2026-27 (needs the live snapshot version and a Fable check before it runs).
+
+## Addendum (Nov 5, 2026, afternoon): live version without Pinnacle ("movement v1-an")
+Jeffrey asked for the movement bets to go live with money as PROVISIONAL. The Odds API live feed (Pinnacle + 9 books) paused that
+morning when the plan's credits ran low (the player-prop backfill used them), so the live model can only use the free Action Network
+feed: DraftKings, FanDuel, Caesars, BetMGM, BetRivers (no Pinnacle). Pre-registered as an addendum (7f40f5e) before running,
+same fit/test/trigger, refit without the night-before injury report and without the Pinnacle inputs:
+
+| v1-an, bet the first 1.5+ predicted move | Bets | CLV | Units | Win % |
+|---|---|---|---|---|
+| 2025-26 test | 505 | **+1.41 ± 0.15** | **+5.4** | 53.3% |
+| 2024-25 | 710 | +1.83 | +71.2 | |
+
+It passes both parts of the original rule (CLV above +1.07 and units positive), better on units than the Pinnacle version
+(593 bets, CLV +1.47, -8.0u), so Pinnacle's inputs weren't carrying the result. Live since Nov 5 (research/PROVISIONAL_BETS.md).
+Bets with fewer than 3 books quoting (DK posts first) were 187 of the 505, CLV +1.42: no reason to wait for other books.
+
+## Correction (Nov 5, 2026, Fable check): bets the live code can actually make
+The team features are keyed by game date, so a snapshot taken before a team's previous game was played still used that game's
+box score. Live, the code waits until the morning run after both teams' previous games (box scores arrive ~11:41 AM ET).
+144 of the 505 v1-an test bets fired before that point. Re-run with only reachable snapshots (and 48 h or less before tip), trained
+the same way (`export_movement_model.py --an --reach`, live model `data/movement_model_v1an_reach.json`):
+
+| v1-an, reachable snapshots only | Bets | CLV | Units | Win % |
+|---|---|---|---|---|
+| 2025-26 test | 385 | **+1.31 ± 0.16** | **-10.8** | 51.2% |
+| 2024-25 | 519 | +1.59 | +19.4 | |
+
+CLV still clears break-even (+1.07), by about 1.5 standard errors; units do not. The addendum's live bar was CLV, and Jeffrey asked
+for these to go live with money as PROVISIONAL, so it does, with its stop lines. Honest expectation: about +0.5% per bet from the
+CLV, which the vig and luck can easily swamp. This is the weakest of the live provisional rules.

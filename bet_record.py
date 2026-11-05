@@ -47,6 +47,28 @@ def main():
                 B.loc[prov, "version"] = vname
     except Exception as ex:
         print("provisional tagging skipped:", type(ex).__name__, str(ex)[:100])
+    # market models line-movement bets (Nov 5, 2026): a logged total matching a pushed movement alert (same game and side)
+    try:
+        mp = os.path.join(STATE, "market_models", "movement_alerts.csv")
+        if os.path.exists(mp):
+            M = pd.read_csv(mp); M = M[M.pushed.astype(str).isin(["True", "1", "1.0"])]
+            mk = {(str(r.date), r.home, r.away, "total", str(r.side)) for r in M.itertuples()}
+            mov = [(str(r.date), r.home, r.away, r.market, str(r.pick).lower()) in mk for r in B.itertuples()]
+            mov = np.array(mov) & ~B.version.astype(str).str.startswith("PROVISIONAL").to_numpy()   # never overwrite another provisional tag
+            B.loc[mov, "version"] = "PROVISIONAL: NBA totals line-movement (market models v1-an)"
+    except Exception as ex:
+        print("movement tagging skipped:", type(ex).__name__, str(ex)[:100])
+    # market models blend bets (Nov 5, 2026): a logged total matching a pushed blend alert (same game and side)
+    try:
+        bp = os.path.join(STATE, "market_models", "blend_alerts.csv")
+        if os.path.exists(bp):
+            M = pd.read_csv(bp); M = M[M.pushed.astype(str).isin(["True", "1", "1.0"])]
+            mk = {(str(r.date), r.home, r.away, "total", str(r.side)) for r in M.itertuples()}
+            bl = [(str(r.date), r.home, r.away, r.market, str(r.pick).lower()) in mk for r in B.itertuples()]
+            bl = np.array(bl) & ~B.version.astype(str).str.startswith("PROVISIONAL").to_numpy()
+            B.loc[bl, "version"] = "PROVISIONAL: NBA totals blend v4 + market (market models blend v1)"
+    except Exception as ex:
+        print("blend tagging skipped:", type(ex).__name__, str(ex)[:100])
     B["status"] = np.where(B.result.isin(["W", "L", "P"]), B.result, "pending")
     B["units"] = np.where(B.status == "pending", np.nan, B.profit / B.stake)
     keep = ["placed_et", "issue", "date", "away", "home", "market", "pick", "line", "odds", "stake", "version", "status", "profit", "units"]

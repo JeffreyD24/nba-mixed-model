@@ -107,7 +107,11 @@ if SPORT == "nba":
                     "state/early": (30, "Early model files", "warn"), "state/pinnacle_now.json": (72, "Pinnacle now", "warn"),
                     "state/injury_status_seen.csv": (72, "Injury status seen", "warn"),
                     "research/report_watch": (72, "Report watcher log (TEST, Nov 4 2026)", "warn"), "state/report_watch.md": (30, "Report watcher grades (daily)", "warn"),
-                    "state/report_watch_seen.json": (30, "Report watcher memory", "warn"), "state/altitude_watch.json": (30, "Altitude tripwire watch", "warn")})
+                    "state/report_watch_seen.json": (30, "Report watcher memory", "warn"), "state/altitude_watch.json": (30, "Altitude tripwire watch", "warn"),
+                    "research/market_models_live": (30, "Market models predictions (PROVISIONAL movement bets, Nov 5 2026)", "warn"),
+                    "state/market_models/opener_model.json": (30, "Market models opener model refit", "warn"),
+                    "state/market_models/dk_first_seen.csv": (48, "Market models DK first lines (Action Network)", "warn"),
+                    "data/player_stats/season_2027.csv.gz": (36, "Box scores 2026-27 (market models)", "warn")})
 if SPORT == "nfl":
     # NFL is weekly: windows are 8-9 days for game-driven files (they go stale after the Super Bowl, expected in the off-season)
     STREAMS.update({"research/injury_decisions.csv": (72, "Key-player injury log"),
@@ -204,6 +208,10 @@ for rid in alert_run_ids:
     pgf = len(re.findall(r"Pregame recorder failed", out)); pgn = len(re.findall(r"pregame: \d+ prices seen", out))
     if pgf > 5 or (pgn == 0 and checks):
         warn(f"alert run {rid}: pre-game line recorder failed {pgf} times, ran OK {pgn} times")
+    # market models (PROVISIONAL movement + blend bets, Nov 5, 2026): the 5-minute check must run, not just exist
+    mmf = len(re.findall(r"Market models check failed", out)); mmn = len(re.findall(r"\[market models\] checked \d+ games", out))
+    if mmf > 5:
+        warn(f"alert run {rid}: market models check failed {mmf} times, ran OK {mmn} times")
     tb = len(re.findall(r"Traceback \(most recent call last\)", out))
     checks = len(re.findall(r"=== check at", out))
     tot_fail += fail; tot_tb += tb; tot_poly += poly

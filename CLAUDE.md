@@ -73,3 +73,16 @@ whatever honest out-of-sample design the data allows, before anyone suggests wai
 3. Reconstructed or approximate inputs (e.g. a price rebuilt from another market), clearly labeled as approximate.
 Only if NONE of these is possible may the current season be used, and then say exactly why past seasons can't answer it and
 record that reason in FINDINGS.md. The live season's own TEST rows are a running check, not the test.
+
+## RULE 3: Never rebuild what was already built (Jeffrey, Nov 5, 2026)
+
+Anything that takes more than about a minute to build (walk-forward predictions, joined game tables, snapshot pulls, fitted
+models) is saved in the repo under `derived/`, gzipped, with a row in `derived/MANIFEST.md` saying what it is, which script and
+inputs built it, and the commit. Same session it is built. `_tmp/` is scratch only: nothing in it is ever the only copy.
+
+Before building anything:
+1. Read `derived/MANIFEST.md` and run `python derived.py .` (restores every saved file into `_tmp/`, where the scripts look).
+2. Only build what is not listed there; then `python derived.py . --save` and add its MANIFEST row.
+New analysis scripts call `derived.ensure(WORK, [...])` at the top so they use the saved copy automatically.
+nhl-mixed-model has the reference setup (`derived.py`, `derived/MANIFEST.md`); nba/nfl-mixed-model copy it the first time they save.
+Files over ~50 MB compressed: ask Jeffrey before committing (GitHub's limit is 100 MB per file).

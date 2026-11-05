@@ -20,6 +20,23 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
   research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
 
+## 2026-11-05: Paid Pinnacle feed stopped (credits ran out); Pinnacle API status; what Kalshi / Polymarket history holds (all sports) [OBSERVATION] [TEST] [LEAD]
+- Observation: The Odds API credits ran out, so `pinnacle_watch.py` stopped on Nov 5. Effect in nhl-mixed-model alert.py: the "Pinnacle
+  disagrees" veto (line ~645, PIN_DISAGREE) only applies to games in state/pinnacle_now.json, so new games now get NHL moneyline BET alerts
+  WITHOUT the veto (bets it vetoed lost every season 2021-26), and the second-chance rule (line ~580) returns False, so those bets stopped.
+- Pinnacle: public API closed July 23, 2025 (pinnacleapi-documentation on GitHub); access now only for select bettors, partners and, per the
+  docs, academics and pregame handicapping projects, by email to api@pinnacle.com; requires a funded Pinnacle account (Pinnacle does not take
+  US customers), limits 1 odds request per 2 min per sport. Pulling Pinnacle's website feed is not used (against its terms).
+- Kalshi (public, free): settled game markets with every trade (price, contracts = size, time; no trader identity). Listing of settled markets
+  reached back to Sep 2026 (NHL), Oct 2026 (college football), Nov 2026 (NCAAM); older history not yet found (may need its historical endpoint).
+- Polymarket (public, free): closed NBA game markets back to Oct 2025 with real volume (e.g. $45k-55k on early-season games); trades carry
+  wallet, size, price, time; the per-market trade query used in the probe returned 0 rows (parameter to fix).
+- Read: Polymarket is the one source with bet SIZE + WHO + RESULT, i.e. it can track individual sharps. Kalshi shows big trades but not who.
+  Books (BetOnline, Bovada) show lines only; Action Network shows % of money, not sizes.
+- Decision: pending Jeffrey (NHL veto handling while Pinnacle is gone; whether to apply to Pinnacle's academic access).
+- [LEAD] Replacement for the NHL veto: Kalshi or Polymarket NHL price vs DraftKings' opener, tested on past seasons with the saved Pinnacle
+  history as the benchmark.
+
 ## 2026-11-05: Free replacements for the paid Pinnacle feed; Polymarket wallet data confirmed (all sports) [TEST] [DECISION] [IDEA]
 - Question (Jeffrey): stop paying for The Odds API (pinnacle_watch.py, ~2,600 credits a day) and track sharp prices another way.
 - Data / method: probes from this workspace and a GitHub runner (`.github/workflows/probe-free-sharp.yml`).

@@ -6,7 +6,7 @@ import os, sys
 import numpy as np, pandas as pd
 W = os.path.abspath(sys.argv[1]); sys.path.insert(0, W)
 from nba_mixed_model import run
-K = pd.read_csv("/home/claude/data/cviaxmiwnptr_nba-betting-data-october-2007-to-june-2024/nba_2008-2026.csv")
+K = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data/external/kaggle/nba_betting_2008_2026/nba_2008-2026.csv.gz"))
 K = K[K.regular & ~K.playoffs].copy()
 K["spread_h"] = np.where(K.whos_favored == "home", -K.spread, K.spread)
 D = pd.DataFrame(dict(date=K.date, season=K.season, home=K.home, away=K.away, home_pts=K.score_home, away_pts=K.score_away,

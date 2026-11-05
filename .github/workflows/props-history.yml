@@ -31,7 +31,7 @@ jobs:
           git fetch -q origin main && git checkout -q -B main origin/main
           for b in $(seq 1 26); do
             if [ $b -le 13 ]; then RANGE="--from 2025-10-21 --to 2026-04-12"; else RANGE="--from 2024-10-22 --to 2025-04-13"; fi
-            OUT=$(python props_history.py . $RANGE --max-dates 15 2>&1); RC=$?
+            OUT=$(python props_history.py . $RANGE --max-dates 15 2>&1) && RC=0 || RC=$?
             echo "$OUT" | tail -3
             git add data/props_history
             if ! git diff --cached --quiet; then

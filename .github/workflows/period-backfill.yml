@@ -32,7 +32,7 @@ jobs:
           git fetch -q origin main && git checkout -q -B main origin/main
           FROM="${{ inputs.from || '2021-10-19' }}"; TO="${{ inputs.to || '2026-04-12' }}"
           for b in $(seq 1 20); do
-            OUT=$(python period_backfill.py . --from "$FROM" --to "$TO" --max-dates 50 2>&1); RC=$?
+            OUT=$(python period_backfill.py . --from "$FROM" --to "$TO" --max-dates 50 2>&1) && RC=0 || RC=$?
             echo "$OUT" | tail -2
             git add data/period_history
             if ! git diff --cached --quiet; then

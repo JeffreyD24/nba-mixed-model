@@ -12,7 +12,7 @@ PG = PG[PG.season_type.astype(str).str.contains("Regular")].copy()
 PG["minutes"] = pd.to_numeric(PG.minutes, errors="coerce"); PG = PG[PG.minutes > 0]
 codes = {"GS": "gs", "NO": "no", "NY": "ny", "SA": "sa", "UTAH": "utah", "WSH": "wsh", "PHX": "phx", "BKN": "bkn"}
 PG["team"] = PG.team.map(lambda t: codes.get(t, str(t).lower())); PG["date"] = pd.to_datetime(PG.game_date)
-E = pd.read_csv("/home/claude/data/deocheng/csv/public.player_epm.csv", usecols=["player_name", "season", "game_dt", "epm_tot", "epm_off", "epm_def"])
+E = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data/external/kaggle/deocheng_epm/public.player_epm.csv.gz"), usecols=["player_name", "season", "game_dt", "epm_tot", "epm_off", "epm_def"])
 E = E.sort_values("game_dt").groupby(["player_name", "season"]).tail(1)
 def norm(s):
     s = unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()

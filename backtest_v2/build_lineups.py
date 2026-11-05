@@ -1,3 +1,4 @@
+import os
 """
 Pre-game projected lineups for every team-game (no lookahead). Used by Model 2.
 
@@ -72,7 +73,7 @@ hist = {pid: (g.date.values, g.playerteamId.values, g.MIN.values, g.absent.value
 team_days = {t: np.sort(g.date.unique()) for t, g in REG.groupby("playerteamId")}
 
 # ---------------- ratings: final EPM of each season
-E = pd.read_csv("/home/claude/dl/deo/public.player_epm.csv", usecols=["nba_player_id", "season", "game_dt", "epm_off", "epm_def"])
+E = pd.read_csv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data/external/kaggle/deocheng_epm/public.player_epm.csv.gz"), usecols=["nba_player_id", "season", "game_dt", "epm_off", "epm_def"])
 E = E.sort_values("game_dt").groupby(["nba_player_id", "season"]).tail(1)
 rating = {(r.nba_player_id, r.season): (r.epm_off, r.epm_def) for r in E.itertuples()}
 

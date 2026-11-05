@@ -23,3 +23,9 @@ MANIFEST.csv lists every file with size and checksum.** Re-run `python3 -I make_
 | Folder | What | Status |
 |---|---|---|
 | `nba_box/` | player-game box scores 2011-12..2025-26 (ESPN) and `missed_value.csv` (who missed the last game, weighted by last season's rating) | scripts + workflow written; run `fetch-nba-box.yml` in GitHub Actions |
+
+## Added Nov 5, 2026 (data-source audit: every outside source now in git)
+| Folder | What | Status |
+|---|---|---|
+| `kaggle/` | the three Kaggle datasets the models use (eoinamoore box scores/schedule/referees, NBA betting lines 2008-2026, EPM); CC0 / Apache 2.0 | in repo; refreshed daily by `archive-kaggle.yml` |
+| `hockeyr/` | fetch script now pinned to upstream commit 333b1ee; `UPSTREAM_PIN.csv` has each raw file's git hash | raw still not stored (no license) |

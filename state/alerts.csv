@@ -86,5 +86,5 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600176,spread,2026-11-04 14:20:23.782989,2026-11-04,bkn,cha,2026-11-04 19:30:00,home,3.5,2.5,1.1,4.6,2026-11-04_02_15PM,False,,,,,,,PASS,,,,,,,0.04,True,provisional
 22600184,spread,2026-11-04 14:20:23.782989,2026-11-04,sa,dal,2026-11-04 21:30:00,away,-12.5,12.5,6.68,5.82,2026-11-04_02_15PM,False,,,,,,,PASS,,,,,,,6.58,True,provisional
 22600185,spread,2026-11-04 16:00:24.057953,2026-11-04,sac,lal,2026-11-04 22:00:00,home,12.5,11.5,-9.43,3.07,2026-11-04_04_00PM,False,,,,,,,TEST,,,,,,,-9.85,True,provisional
-22600188,total,2026-11-05 00:25:11.243391,2026-11-05,gs,mia,2026-11-05 22:00:00,under,238.5,238.5,234.08,4.42,as of 2026-11-04 22:21,True,,,,,,,BET,,,,,,,,False,
+22600188,total,2026-11-05 00:25:11.243391,2026-11-05,gs,mia,2026-11-05 22:00:00,under,238.5,238.5,234.08,4.42,as of 2026-11-04 22:21,True,,,,,,,BET,,,2026-11-05 01:35,,,,,False,
 22600187,total,2026-11-05 01:24:32.815255,2026-11-05,phx,orl,2026-11-05 21:00:00,over,223.5,224.5,227.08,3.58,as of 2026-11-04 22:21,False,"line moved 1.0 pts against this bet since open (in backtests, bets after the line moved against the model won only about 43%)",,,,,,PASS,,,,,,,,False,

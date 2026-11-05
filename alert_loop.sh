@@ -19,7 +19,7 @@ busy() {   # 0 if another state-writing workflow is running
 }
 
 save() {
-  for f in state/heartbeat_alert.txt state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json state/bluesky_seen.json state/news_overrides.json state/poly_paper.csv state/poly_last.json state/pinnacle_now.json state/pinnacle_off state/ml_test.csv; do
+  for f in state/heartbeat_alert.txt state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json state/bluesky_seen.json state/news_overrides.json state/poly_paper.csv state/poly_last.json state/pinnacle_now.json state/pinnacle_off state/ml_test.csv state/report_watch_seen.json state/report_watch_last.csv; do
     if [ -f "$f" ]; then git add "$f"; fi
   done
   if [ -d research ]; then git add research; fi
@@ -42,6 +42,7 @@ while :; do
   python polymarket.py . || echo "Polymarket check failed; trying again next time."
   python pinnacle_watch.py . || echo "Live odds recorder failed; trying again next time."
   timeout 90 python pregame.py . || echo "Pregame recorder failed; continuing."
+  timeout 60 python report_watch.py . || echo "Report watch failed; continuing."
   while busy; do echo "Another run is saving; waiting."; sleep 30; done
   save
   NOW=$(date +%s)
@@ -56,6 +57,7 @@ while :; do
     if [ "$RC" -eq 10 ]; then echo "Reporter news on a player decision: checking now."; break; fi
     [ "$RC" -ne 0 ] && echo "Bluesky watch failed; continuing."
     timeout 90 python pregame.py . || echo "Pregame recorder failed; continuing."
+    timeout 60 python report_watch.py . || echo "Report watch failed; continuing."   # Nov 4, 2026: TEST, logged only
     python opener_watch.py .; RC=$?
     if [ "$RC" -eq 10 ]; then echo "New DraftKings line: checking now."; break; fi
   done

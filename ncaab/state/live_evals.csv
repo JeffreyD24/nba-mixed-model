@@ -15,3 +15,15 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-05 18:50,297618,North Carolina Tar Heels,Wofford Terriers,-22.5,22.92,21.11,22.11,22.62,0.12,PASS,edge 0.12 < 0.5
 2026-11-05 18:50,301288,Kennesaw State Owls,Austin Peay Governors,-6.5,12.58,8.73,8.58,6.83,0.33,PASS,edge 0.33 < 0.5
 2026-11-05 18:50,297405,Alabama Crimson Tide,Arkansas State Red Wolves,-25.5,25.85,28.55,25.18,25.79,0.29,PASS,edge 0.29 < 0.5
+2026-11-05 18:55,297398,Wisconsin Badgers,Delaware Fightin Blue Hens,-24.5,22.26,26.68,26.73,25.0,0.5,PASS,edge 0.50 < 0.5
+2026-11-05 18:55,302474,Wright State Raiders,Florida Atlantic Owls,-2.5,9.87,6.66,3.84,2.77,0.27,PASS,edge 0.27 < 0.5
+2026-11-05 18:55,297386,Northwestern Wildcats,Stony Brook Seawolves,-14.5,18.63,22.1,16.15,15.02,0.52,PASS,a team has under 3 games
+2026-11-05 18:55,297399,Texas A&M Aggies,Northern Kentucky Norse,-24.5,21.46,23.91,23.16,24.54,0.04,PASS,edge 0.04 < 0.5
+2026-11-05 18:55,297607,Iowa State Cyclones,Southern Miss Golden Eagles,-30.5,27.39,29.75,30.82,30.78,0.28,PASS,edge 0.28 < 0.5
+2026-11-05 18:55,297608,Marquette Golden Eagles,Detroit Mercy Titans,-30.5,,,,,,PASS,team not rated
+2026-11-05 18:55,297609,Minnesota Golden Gophers,St. Thomas Tommies,-15.5,14.12,17.72,13.22,15.42,-0.08,PASS,edge 0.08 < 0.5
+2026-11-05 18:55,301766,UIC Flames,Robert Morris Colonials,-11.5,15.62,11.64,8.47,11.28,-0.22,PASS,edge 0.22 < 0.5
+2026-11-05 18:55,297394,Wyoming Cowboys,Idaho State Bengals,-19.5,19.38,17.15,15.54,19.17,-0.33,PASS,edge 0.33 < 0.5
+2026-11-05 18:55,297610,Kansas City Roos,Southern Illinois Salukis,3.5,-3.9,-4.77,-3.05,-3.61,-0.11,PASS,edge 0.11 < 0.5
+2026-11-05 18:55,297619,Iowa Hawkeyes,Eastern Illinois Panthers,-35.5,30.73,33.61,32.23,35.42,-0.08,PASS,edge 0.08 < 0.5
+2026-11-05 18:55,302292,Ole Miss Rebels,Central Arkansas Bears,-19.5,16.88,17.6,21.09,19.75,0.25,PASS,edge 0.25 < 0.5

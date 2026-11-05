@@ -1,5 +1,14 @@
 # Research findings log
 
+## 2026-11-05: Market models step 3, movement model for DK NBA totals (pre-registered, fd8a220)
+- Boosted model of DK close - DK now from same-snapshot inputs removes 6.7% of the error vs "no move" on 2025-26.
+- Bet the first time the predicted move is 1.5+: 2025-26 573 bets, **CLV +1.52 ± 0.13 (break-even +1.07), -8.7u, 51.8%**
+  (expected 53.3%, -0.7 sd). 2024-25: CLV +2.11, +42.3u. Fails the written rule on units: not bet; shadow record proposed.
+- Strongest inputs: step-2 opener residual (line comes back), FanDuel and other-book gaps, momentum, Pinnacle price lean. Pinnacle's number adds little.
+- **CLV check (exploratory, 5,643 games 2021-26): 1 pt of CLV = +2.2% win rate in NBA totals, every season; the DK close is fair and +1.07 is the right break-even.**
+- Exploratory: adding Model 3's edge (fit 2024-25 only) -> 489 bets CLV +1.83, +20.2u on 2025-26.
+- research/market_models/STEP3_MOVEMENT_RESULTS.md
+
 ## 2026-11-05: Market models step 2, opener models for NBA totals (pre-registered, d08f49b)
 - A mixed model (pace x efficiency, recent DK closes, league scoring level, injuries at open, team-season effects) predicts each book's
   first-seen total within 2.41 (DK), 2.52 (Pinnacle), 2.50 (FanDuel) pts on 2025-26. Beat linear, boosted trees and a naive baseline.

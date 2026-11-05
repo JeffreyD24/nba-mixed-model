@@ -81,7 +81,7 @@ def features():
         B[f"mu_{s}"] = B.min_proj * B[f"rate_{s}"] * B[f"allow_{s}"].fillna(1.0) * (B.pace if PACE[s] else 1.0)
     B["name"] = B.player.map(norm)
     keep = ["season", "date", "game_id", "team", "opp", "home", "player_id", "player", "name", "starter", "min", "n_prev", "min_proj", "pace"] + \
-           list(STATS.values()) + [f"mu_{s}" for s in STATS.values()]
+           list(STATS.values()) + [f"mu_{s}" for s in STATS.values()] + [f"rate_{s}" for s in STATS.values()] + [f"allow_{s}" for s in STATS.values()]
     B[keep].to_csv(os.path.join(W, "_tmp", "props_features.csv.gz"), index=False)
     say(f"features: {len(B)} player-games, seasons {B.season.value_counts().sort_index().to_dict()}")
     for s in STATS.values():

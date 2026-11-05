@@ -796,3 +796,7 @@ game_id,market,seen_at_et,line,open_line,source
 22600031,total,2026-11-05 18:50,228.5,229.5,dkdirect
 22600032,spread,2026-11-05 18:55,-2.5,,dkdirect
 22600032,total,2026-11-05 18:55,233.5,,dkdirect
+22600028,spread,2026-11-05 18:57,-7.5,,dkdirect
+22600028,total,2026-11-05 18:57,223.5,,dkdirect
+22600031,spread,2026-11-05 18:57,4.5,5.5,dkdirect
+22600031,total,2026-11-05 18:57,229.5,229.5,dkdirect

@@ -11223,3 +11223,5 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 18:56:09,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,firstquarter,moneyline,home,0.0,-140,normal
 2026-11-05 18:56:09,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,secondhalf,spread,home,-0.5,-120,normal
 2026-11-05 18:56:09,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,secondhalf,spread,away,0.5,-110,normal
+2026-11-05 18:57:26,295389,2026-11-05,2026-11-05 22:00,mia,gs,bet365,firsthalf,moneyline,away,0.0,132,normal
+2026-11-05 18:57:26,295389,2026-11-05,2026-11-05 22:00,mia,gs,bet365,firsthalf,moneyline,home,0.0,-157,normal

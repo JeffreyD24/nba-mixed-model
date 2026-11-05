@@ -1,0 +1,5 @@
+an_id,start,home,away,snapshots,spread_gap_now,spread_gap10_first_at,spread_gap10_side,spread_bets_pct_now,dk_spread_first,dk_spread_now,dk_spread_first_at,dk_spread_move,spread_rlm,spread_steam,total_gap_now,total_gap10_first_at,total_gap10_side,total_bets_pct_now,dk_total_first,dk_total_now,dk_total_first_at,dk_total_move,total_rlm,total_steam
+295190,2026-11-07T00:30:00.000Z,Cleveland Cavaliers,Philadelphia 76ers,3,0.0,,0.0,0.0,-1.5,-1.5,2026-11-05 15:25:00,0.0,0,0,0.0,,0,0.0,234.5,234.5,2026-11-05 15:25:00,0.0,0,0
+295196,2026-11-07T03:00:00.000Z,Los Angeles Lakers,Portland Trail Blazers,3,0.0,,0.0,0.0,-3.5,-3.5,2026-11-05 15:25:00,0.0,0,0,0.0,,0,0.0,238.5,238.5,2026-11-05 15:25:00,0.0,0,0
+295388,2026-11-06T02:00:00.000Z,Phoenix Suns,Orlando Magic,4,2.0,,0.0,67.0,-1.5,-1.5,2026-11-05 15:25:00,0.0,0,0,-8.0,,0,73.0,221.5,221.5,2026-11-05 15:25:00,0.0,0,0
+295389,2026-11-06T03:00:00.000Z,Golden State Warriors,Miami Heat,4,-11.0,2026-11-05 15:25:00,-1.0,43.0,-6.5,-6.5,2026-11-05 15:25:00,0.0,0,0,-3.0,,0,64.0,232.5,232.5,2026-11-05 15:25:00,0.0,0,0

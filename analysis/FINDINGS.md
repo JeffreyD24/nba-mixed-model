@@ -20,6 +20,25 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - research/props/UNDERS_RULE_RESULTS_2026-11-05.md, research/props/PROPS_V2_RESULTS_2026-11-05.md,
   research/props/reviews/FABLE_REVIEW_PROPS_V2_2026-11-05.md
 
+## 2026-11-05: Sharp money: where it goes, does it beat the close, and does it disagree with our models (all sports) [TEST] [CORRELATION] [LEAD] [DECISION]
+- Question (Jeffrey): track where and when the money is bet, follow the sharps, and see what their models pick up that ours don't.
+- Data / method: Action Network archive splits (% bets, % money, bet counts) for 61,980 games 2019-26, five leagues; signals fixed in advance
+  (money - bets >= 10 = sharp side; reverse line move); discovery 2019-23, holdout 2023-26; pre-registration `sharp/SHARP_PREREG_2026-11-05.md`.
+- Result: betting the sharp side at the close 49.8-52.7% in the holdout, no cell qualified; reverse line moves 48.9-51.2% vs the close.
+  Vs the opener (descriptive, near-tip split) sharps were right: 50.8-58.9%, reverse-line-move side 56.5-62.1%; money gap vs line move corr
+  up to +0.34 (NFL totals). Final split adds nothing beyond the close (t -0.3..+1.0). Our NBA totals bets that sharp money opposed: 197 bets
+  49.7%, -9.8u (vs 55.8-57.1% otherwise); NCAAM spreads ENS with sharps agreeing 89 bets 60.5%.
+- Read: [CORRELATION] money gap and line moves move together (the money moves the line). The near-tip split is already in the close.
+  [LEAD] sharp money opposing our NBA totals bets marks losers, but the split is from after our bet: needs the timing of when that money
+  arrives (live tracker) and a historical timing test via multi-book line snapshots (Pinnacle first, DraftKings follows).
+- Decision: nothing live changes; live tracker for all five leagues started (`sharp/live_capture.py`, `sharp-live.yml`, every 10 min, recorded only).
+- Files: `sharp/backfill_splits.py`, `sharp/data/*_splits.csv.gz`, `sharp/signals_test.py`, `sharp/signals_output.txt`, `sharp/SHARP_RESULTS_2026-11-05.md`,
+  betting-goals `SHARP_MONEY.md`, `MODEL_PLAYBOOK.md`.
+
+## 2026-11-05: Model-building playbook saved (all sports) [DECISION]
+- Jeffrey: save the outline of how to build the best model and read it before every new model.
+- Decision: betting-goals `MODEL_PLAYBOOK.md` (+ Project doc), and rule 3 in CLAUDE.md of all three model repos: read it before building any model.
+
 ## 2026-11-05: Can a results-only model ever beat the closing line's accuracy? (NCAAM, all sports) [OBSERVATION] [DECISION]
 - Question (Jeffrey): if we keep building models with new weights, will we get more accurate than DraftKings at the close?
 - Evidence: 10+ NCAAM model variants (Model 1, M2, M4, M8, M10, MKT, ENS, stacks) across 2007-26: the closing line is the most accurate

@@ -1,0 +1,55 @@
+Seasons are end-year labels (2024 = 2023-24); football: 2024 = the 2023 season. Pushes excluded. -110.
+
+================ NBA (9552 games, 9128 with splits) ================
+  spread sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 52.5% (1116) | vs CLOSE disc 49.9% (3016, z -0.1) hold 50.1% (1121, z +0.1) -> not qualified
+  spread reverse line move      vs OPENER (descriptive) disc nan% (0) hold 58.3% (1351) | vs CLOSE disc nan% (0, z +nan) hold 48.9% (1346, z -0.8) -> not qualified
+  spread corr(gap, open->close move) +0.16  (n 3989)
+  total  sharp side (gap>=10)   vs OPENER (descriptive) disc 0.0% (1) hold 53.6% (869) | vs CLOSE disc 51.3% (3486, z +1.6) hold 52.7% (866, z +1.6) -> not qualified
+  total  reverse line move      vs OPENER (descriptive) disc nan% (0) hold 59.3% (1284) | vs CLOSE disc nan% (0, z +nan) hold 50.6% (1278, z +0.4) -> not qualified
+  total  corr(gap, open->close move) +0.05  (n 3932)
+
+================ NHL (9626 games, 8533 with splits) ================
+  spread: NHL puck lines (+/-1.5 at varied prices) skipped; see totals
+  total  sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 50.8% (847) | vs CLOSE disc 50.4% (3330, z +0.5) hold 49.9% (834, z -0.1) -> not qualified
+  total  reverse line move      vs OPENER (descriptive) disc nan% (0) hold 71.4% (7) | vs CLOSE disc nan% (0, z +nan) hold 0.0% (7, z -2.6) -> not qualified
+  total  corr(gap, open->close move) +0.04  (n 3945)
+
+================ NFL (2079 games, 1958 with splits) ================
+  spread sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 50.0% (342) | vs CLOSE disc 50.2% (568, z +0.1) hold 52.0% (331, z +0.7) -> not qualified
+  spread reverse line move      vs OPENER (descriptive) disc nan% (0) hold 60.9% (230) | vs CLOSE disc nan% (0, z +nan) hold 48.9% (225, z -0.3) -> not qualified
+  spread corr(gap, open->close move) -0.09  (n 855)
+  total  sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 58.9% (384) | vs CLOSE disc 52.0% (666, z +1.0) hold 52.5% (379, z +1.0) -> not qualified
+  total  reverse line move      vs OPENER (descriptive) disc nan% (0) hold 62.1% (309) | vs CLOSE disc nan% (0, z +nan) hold 50.5% (311, z +0.2) -> not qualified
+  total  corr(gap, open->close move) +0.34  (n 855)
+
+================ NCAAB (38573 games, 35535 with splits) ================
+  spread sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 51.4% (6898) | vs CLOSE disc 50.3% (12521, z +0.7) hold 49.8% (6876, z -0.3) -> not qualified
+  spread reverse line move      vs OPENER (descriptive) disc nan% (0) hold 56.5% (4952) | vs CLOSE disc nan% (0, z +nan) hold 50.1% (4943, z +0.1) -> not qualified
+  spread corr(gap, open->close move) +0.14  (n 16373)
+  total  sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 51.7% (3591) | vs CLOSE disc 50.1% (12416, z +0.3) hold 50.6% (3582, z +0.7) -> not qualified
+  total  reverse line move      vs OPENER (descriptive) disc nan% (0) hold 57.9% (4257) | vs CLOSE disc nan% (0, z +nan) hold 50.7% (4245, z +0.9) -> not qualified
+  total  corr(gap, open->close move) +0.11  (n 16064)
+
+================ NCAAF (6998 games, 6051 with splits) ================
+  spread sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 52.2% (1589) | vs CLOSE disc 51.7% (1742, z +1.4) hold 50.2% (1577, z +0.2) -> not qualified
+  spread reverse line move      vs OPENER (descriptive) disc nan% (0) hold 60.1% (873) | vs CLOSE disc nan% (0, z +nan) hold 51.2% (858, z +0.7) -> not qualified
+  spread corr(gap, open->close move) +0.12  (n 2790)
+  total  sharp side (gap>=10)   vs OPENER (descriptive) disc nan% (0) hold 53.3% (1727) | vs CLOSE disc 52.4% (2042, z +2.2) hold 52.0% (1715, z +1.6) -> not qualified
+  total  reverse line move      vs OPENER (descriptive) disc nan% (0) hold 58.0% (896) | vs CLOSE disc nan% (0, z +nan) hold 49.5% (893, z -0.3) -> not qualified
+  total  corr(gap, open->close move) +0.26  (n 2764)
+
+================ Q3 / Q4: our models and sharp money (2023-26) ================
+NBA v4 totals matched to splits: 3676 of 3684
+  NBA totals v4 (3+)           sharps agree (gap>=10 same side)        206 bets  at opener 55.8%  +13.5u  at close 52.0%   -1.6u
+  NBA totals v4 (3+)           sharps disagree (gap>=10 other side)    197 bets  at opener 49.7%   -9.8u  at close 46.9%  -20.4u
+  NBA totals v4 (3+)           no strong signal                       1248 bets  at opener 57.1% +113.3u  at close 52.3%   -1.1u
+  NBA totals v4 (3+)           Q4 result-close = a + b(model-close) + c(gap): b +0.028 (t +0.4), c +0.0218 per gap point (t +1.0), n 3572
+NCAAM DraftKings-opener games matched to splits: 9309 of 9915
+  NCAAM totals M2 (6+)         sharps agree (gap>=10 same side)         97 bets  at opener 56.2%   +7.1u  at close 51.0%   -2.5u
+  NCAAM totals M2 (6+)         sharps disagree (gap>=10 other side)     93 bets  at opener 53.3%   +1.5u  at close 51.1%   -2.3u
+  NCAAM totals M2 (6+)         no strong signal                        460 bets  at opener 52.0%   -3.7u  at close 49.1%  -28.5u
+  NCAAM totals M2 (6+)         Q4 result-close = a + b(model-close) + c(gap): b +0.021 (t +0.4), c -0.0034 per gap point (t -0.3), n 8578
+  NCAAM spreads ENS (5+)       sharps agree (gap>=10 same side)         89 bets  at opener 60.5%  +13.3u  at close 58.4%  +10.3u
+  NCAAM spreads ENS (5+)       sharps disagree (gap>=10 other side)    100 bets  at opener 55.0%   +5.0u  at close 53.5%   +2.2u
+  NCAAM spreads ENS (5+)       no strong signal                        324 bets  at opener 53.7%   +8.3u  at close 53.0%   +3.5u
+  NCAAM spreads ENS (5+)       Q4 result-close = a + b(model-close) + c(gap): b +0.106 (t +2.3), c +0.0006 per gap point (t +0.1), n 8957

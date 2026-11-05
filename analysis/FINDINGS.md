@@ -1,5 +1,14 @@
 # Research findings log
 
+## 2026-11-05: Market models step 2, opener models for NBA totals (pre-registered, d08f49b)
+- A mixed model (pace x efficiency, recent DK closes, league scoring level, injuries at open, team-season effects) predicts each book's
+  first-seen total within 2.41 (DK), 2.52 (Pinnacle), 2.50 (FanDuel) pts on 2025-26. Beat linear, boosted trees and a naive baseline.
+- Bet against a 3+ pt DK residual: **fails.** 2025-26 381 bets, CLV +1.00 (break-even +1.07), -18.5u, 49.9%. 2024-25 was +2.12, +33.2u.
+- The residual predicts **movement** (corr with close-open -0.39 / -0.18) but not the result (-0.12 / +0.04). Becomes a step-3 input.
+- DK and Pinnacle residuals move together (0.87): shared deviations are information we lack, not book mistakes; they did worst.
+- Process: the prereg missed its break-even CLV line (now +1.07 for NBA full-game totals); verdict unchanged.
+- research/market_models/STEP2_OPENER_RESULTS.md
+
 ## 2026-11-04: Quarter/half/team-total lines from the full-game models (pre-registered)
 - Backfilled every NBA date 2021-26 from Action Network (DK/FD period lines from 2023-24 on). Fit 2023-24, test 2024-26.
 - 1H total, 1Q spread and 1Q total pass the written rule (CLV > 0, units > 0 at DK close) but their CLV (+0.04 to +0.20) is far below

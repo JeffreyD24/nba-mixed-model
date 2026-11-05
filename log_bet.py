@@ -68,7 +68,7 @@ def main():
         pick = get("Pick").lower().strip()
         if market == "prop":
             import re as _re
-            m = _re.match(r"^(.*?)[ ,]+(over|under|o|u)[ ,]+(points|pts|rebounds|reb|assists|ast|threes|3s|3pm|3pt)\b", pick)
+            m = _re.match(r"^(.*?)[ ,]+(over|under|o|u)[ ,]+(?:[\d.]+[ ,]+)?(points|pts|rebounds|reb|assists|ast|threes|3s|3pm|3pt)\b", pick)
             if not m: raise ValueError("For a prop, Pick must look like: Desmond Bane under points")
             prop_player = m.group(1).strip(" ,").title(); prop_side = "over" if m.group(2).startswith("o") else "under"
             prop_stat = {"p": "pts", "r": "reb", "a": "ast", "t": "fg3m", "3": "fg3m"}[m.group(3)[0]]
@@ -99,10 +99,10 @@ def main():
     row = dict(logged_at_et=str(dt.datetime.now(ZoneInfo("America/New_York")).replace(tzinfo=None, microsecond=0)),
                issue=issue["number"], date=str(date), away=away, home=home, market=market, pick=pick, line=line, odds=odds,
                stake=stake, book=(books.canon_book(get("Sportsbook (optional)")) if get("Sportsbook (optional)") else ""), notes=get("Notes (optional)"))
+    if market == "prop":     # Fable fix 1: before saving, so the columns exist for grading
+        row.update(player=prop_player, side=prop_side, stat=prop_stat)
     B = pd.concat([B, pd.DataFrame([row])], ignore_index=True)
     B.to_csv(path, index=False)
-    if market == "prop":
-        row.update(player=prop_player, side=prop_side, stat=prop_stat)
     desc = (f"{pick.upper()} {line:g}" if market in ("total", "prop") else f"{pick.upper()} {line:+g}")
     win = stake * (100 / abs(odds) if odds < 0 else odds / 100)
     open(os.path.join(STATE, "_bet_reply.md"), "w").write(

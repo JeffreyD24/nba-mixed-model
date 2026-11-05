@@ -73,6 +73,8 @@ def snapshot():
                                  game=e["name"], home=home, away=away, stat=stat, player=m["marketName"].split(" - ")[0], name=norm(m["marketName"].split(" - ")[0]),
                                  line=o.get("handicap"), over=odds(o), under=odds(u), team_abbr=o.get("teamAbbr")))
     allnew = pd.DataFrame(rows)
+    rp = os.path.join(W, "state", "props_fd_runs.csv")      # every snapshot time, so an "opener" is only trusted if a run just before it saw nothing
+    pd.DataFrame([dict(run_et=NOW.strftime("%Y-%m-%d %H:%M"), lines=len(rows))]).to_csv(rp, mode="a", header=not os.path.exists(rp), index=False)
     if allnew.empty: print("no FanDuel prop lines right now"); return
     for gdate, new in allnew.groupby("date"):
         path = os.path.join(W, "research", "props_fd", f"{gdate}.csv"); os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -104,7 +106,7 @@ def player_state():
         for r in g.itertuples():
             Sm = Sm * dm + r.min; Sw = Sw * dm + 1; Srm = Srm * dr + r.min
             for s in STATS: Sr[s] = Sr[s] * dr + getattr(r, s)
-        row = dict(player_id=pid, player=g.player.iloc[-1], name=norm(g.player.iloc[-1]), team=g.team.iloc[-1], n_prev=len(g),
+        row = dict(player_id=pid, player=g.player.iloc[-1], name=norm(g.player.iloc[-1]), team=g.team.iloc[-1], n_prev=len(g), last_date=g.date.iloc[-1],
                    min_proj=(Sm + P["prior_games"] * p_mpg) / (Sw + P["prior_games"]))
         for s in STATS: row[f"rate_{s}"] = (Sr[s] + P["prior_min"] * p_rate[s]) / (Srm + P["prior_min"])
         out.append(row)
@@ -231,8 +233,18 @@ def live():
     tip = pd.to_datetime(J.tip_et); first_seen = pd.to_datetime(J.seen_at_et_open)
     J = J[(J.line == J.line_open) & (J.line >= PO["min_line"]) & ((tip - first_seen).dt.total_seconds() >= PO["min_lead_hours"] * 3600)
           & ((tip - pd.Timestamp(NOW.replace(tzinfo=None))).dt.total_seconds() > 0)]
+    rp = os.path.join(W, "state", "props_fd_runs.csv")
+    runs = pd.to_datetime(pd.read_csv(rp).run_et).sort_values().tolist() if os.path.exists(rp) else []
+    def prior_run_ok(t):      # Fable fix 3: trust an "opener" only if a snapshot ran 1-45 min before it and did not have the line
+        before = [x for x in runs if x < t - pd.Timedelta(minutes=1)]
+        return bool(before) and (t - before[-1]) <= pd.Timedelta(minutes=45)
+    now_n = pd.Timestamp(NOW.replace(tzinfo=None)); fs = pd.to_datetime(J.seen_at_et_open)
+    # Fable fix 4: the backtest bets AT the opener, so alert only openers first seen in the last 40 minutes
+    J = J[((now_n - fs) <= pd.Timedelta(minutes=40)).values & np.array([prior_run_ok(t) for t in fs], dtype=bool)]
     S, allow = player_state()
-    an = actionnet.lines(TODAY)
+    try: an = actionnet.lines(TODAY)
+    except Exception as e:
+        print("props live: Action Network totals unavailable, pace = 1:", e); an = pd.DataFrame(columns=["home", "away", "an_total"])
     O = pd.read_csv(os.path.join(W, "data", "odds_history", "nba_open_close.csv")); avg = O[O.book == "draftkings"].open_total.tail(1230).mean()
     teams = {}
     for r in an.itertuples(): teams[r.home] = (r.away, r.an_total); teams[r.away] = (r.home, r.an_total)
@@ -241,6 +253,9 @@ def live():
     rows = []
     for r in LS.itertuples():
         if r.n_prev < 3: continue
+        if str(r.last_date) >= str(r.seen_at_et_open)[:10]: continue      # Fable fix 5: no result from the opener's own day in the features
+        vals = [r.over, r.under, r.over_open, r.under_open]
+        if not all(np.isfinite(float(v)) and 100 <= abs(float(v)) <= 1000 for v in vals): continue   # Fable fix 2: suspended / bad quotes
         opp, tot = teams.get(r.team, (None, np.nan))
         pace = (tot / avg) if (tot == tot and r.stat != "reb") else 1.0
         mu = r.min_proj * getattr(r, f"rate_{r.stat}") * allow.get(opp, {}).get(r.stat, 1.0) * pace
@@ -251,8 +266,9 @@ def live():
             # backtest = bet AT the opener: line unchanged AND this side's price within 5 cents of its opening price; EV at the opening price
             if abs(float(dec(price)) - float(dec(popen))) > 0.05: continue
             ev = ps * float(dec(popen)) - 1
+            ev_now = ps * float(dec(price)) - 1                 # Fable: EV must also clear 5% at the price Jeffrey actually gets
             key = f"{TODAY}|{r.event_id}|{r.stat}|{r.name}"
-            if ev < PO["ev_min"] or key in done: continue
+            if not np.isfinite(ev) or ev < PO["ev_min"] or ev_now < PO["ev_min"] or key in done: continue
             done.add(key)
             sname = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes"}[r.stat]
             title = f"PROVISIONAL PROP - {r.player} {side.upper()} {r.line:g} {sname} {int(price):+d} (FanDuel)"
@@ -285,7 +301,7 @@ def grade_my_props():
     for i, r in B[(B.market == "prop") & B.result.isna()].iterrows():
         b = X[(X.date == r.date) & (X.name == norm(r.player))]
         if b.empty: continue
-        if float(b["min"].iloc[0]) <= 0: B.loc[i, ["result", "profit"]] = ["void", 0.0]; continue
+        if float(b["min"].iloc[0]) <= 0: B.loc[i, ["result", "profit"]] = ["P", 0.0]; continue    # did not play = void, shown as a push
         a = float(b[r.stat].iloc[0]); v = (a - r.line) * (1 if r.side == "over" else -1)
         B.loc[i, "result"] = "W" if v > 0 else ("L" if v < 0 else "P")
         B.loc[i, "profit"] = round(r.stake * (100 / abs(r.odds) if r.odds < 0 else r.odds / 100), 2) if v > 0 else (-r.stake if v < 0 else 0.0)

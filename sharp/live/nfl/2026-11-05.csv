@@ -180,3 +180,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-05 18:52:00,290957,2026-11-06T01:15:00.000Z,Baltimore Ravens,Jacksonville Jaguars,116493,dk,9.5,-110.0,39.5,-120.0,350.0,-470.0,,,,,,
 2026-11-05 18:52:00,290961,2026-11-08T18:00:00.000Z,Kansas City Chiefs,New York Jets,12238,fd,-9.5,-122.0,47.5,-110.0,-560.0,420.0,,,,,,
 2026-11-05 18:52:00,290963,2026-11-08T18:00:00.000Z,Washington Commanders,Los Angeles Rams,8244,cons,4.5,-105.0,48.5,-106.0,185.0,-227.0,37.0,27.0,55.0,48.0,9.0,1.0
+2026-11-05 18:55:00,290957,2026-11-06T01:15:00.000Z,Baltimore Ravens,Jacksonville Jaguars,123541,fd,9.5,-110.0,39.5,-115.0,385.0,-500.0,,,,,,
+2026-11-05 18:55:00,290961,2026-11-08T18:00:00.000Z,Kansas City Chiefs,New York Jets,12308,fd,-9.5,-120.0,47.5,-110.0,-560.0,420.0,,,,,,

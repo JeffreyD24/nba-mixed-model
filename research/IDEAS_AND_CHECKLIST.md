@@ -106,3 +106,5 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - [ ] (Nov 5, 2026) Scrub Kalshi test files (sharp/data/kalshi) from this repo's git history; Jeffrey approved, scheduled Nov 6 3:30 AM ET (pause pushing workflows, filter-repo, force-push, re-enable).
 
 - [ ] Always-on machine (Raspberry Pi or ~$5/mo cloud server) for alerts seconds after a line posts; Jeffrey looking into hardware (Nov 5, 2026; betting-goals GOALS.md + FINDINGS.md)
+
+- [ ] Odds feed (Nov 5): analyse research/feed/ once a week of data exists: first-seen latency, CLV on quarters/halves/alt lines/props, DK vs FD stale prices, repo size check. Add NHL/NFL alert code switch to direct DK lines. Find a FanDuel page id for college hockey. Tap-test DK slip links.

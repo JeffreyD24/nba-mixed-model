@@ -15,6 +15,7 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
 - Next step (written, not yet run): `live_capture/Probe_DraftKings.bat` (dk_probe.ps1) on Jeffrey's laptop: reads DraftKings' own CT and NJ
   feeds for NBA / NHL / NFL, saves the raw replies and prints each game's total. If it works: poll it every 30-60 s with the existing nightly capture and
   use it as the DraftKings source for alerts (Action Network stays as the cross-check). Always-on later = a Raspberry Pi at home (a cloud server is likely blocked).
+- Nov 5, 5:42 PM: Windows Smart App Control blocked the downloaded .bat (files from the internet; no run-anyway, and turning it off is permanent). Workaround: paste dk_probe.ps1 into a PowerShell window (no file). Any new laptop script has to be pasted or created locally, not downloaded.
 - Files: live_capture/dk_probe.ps1, live_capture/Probe_DraftKings.bat.
 
 ## 2026-11-05: Movement / blend alerts fired on DraftKings lines that were not bettable (NBA) [OBSERVATION] [DECISION]

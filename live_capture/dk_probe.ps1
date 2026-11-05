@@ -2,7 +2,8 @@
 # GitHub's servers get "Access Denied" (403) from DraftKings; a home internet connection usually does not.
 # Saves the raw replies to data\dk_probe\ and prints, per league, the games DraftKings lists with the total it shows.
 $ErrorActionPreference = "Continue"
-$dir = Join-Path $PSScriptRoot "data\dk_probe"; New-Item -ItemType Directory -Force -Path $dir | Out-Null
+$base = if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path }     # works when pasted into a PowerShell window too
+$dir = Join-Path $base "data\dk_probe"; New-Item -ItemType Directory -Force -Path $dir | Out-Null
 $stamp = Get-Date -Format "yyyy-MM-dd_HHmmss"
 $hdr = @{ "User-Agent" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
           "Accept" = "application/json"; "Origin" = "https://sportsbook.draftkings.com"; "Referer" = "https://sportsbook.draftkings.com/" }

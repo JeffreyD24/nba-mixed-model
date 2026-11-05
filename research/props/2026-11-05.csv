@@ -964,3 +964,5 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-05 05:20,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4066436,De'Anthony Melton,,16.5,-126.0,16.5,-126.0,2026-11-05T11:24Z,under
 2026-11-05 05:20,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4709138,Brandin Podziemski,,25.5,-123.0,24.5,-122.0,2026-11-05T13:03Z,over
 2026-11-05 05:20,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4709138,Brandin Podziemski,,25.5,-107.0,24.5,-108.0,2026-11-05T13:03Z,under
+2026-11-05 05:43,22600188,2026-11-05,Total 3-Point Field Goals,4066436,De'Anthony Melton,,1.5,-101.0,1.5,107.0,2026-11-05T12:30Z,over
+2026-11-05 05:43,22600188,2026-11-05,Total 3-Point Field Goals,4066436,De'Anthony Melton,,1.5,-130.0,1.5,-141.0,2026-11-05T12:30Z,under

@@ -38,7 +38,11 @@ REMIND_HOURS = (0, 24)              #   24 hours a day (Jeffrey, Nov 5, 2026: al
 REMIND_GAPS = ((24, 240), (6, 120), (2, 60))   # Nov 4, 2026: reminders spaced by time to start: 24h+ every 4 h, 6-24 h every 2 h,
                                               #   2-6 h hourly, under 2 h every REMIND_EVERY_MIN (an opener alerted the day before
                                               #   no longer sends ~25 reminders)
+FAST_REMIND = (4, 20)               # Nov 5, 2026 (Jeffrey): 4 AM - 8 PM a bet that is still a BET and not logged is reminded every check
+FAST_REMIND_GAP = 4                 #   (~5 min; 4 so a check a few seconds early still fires). Outside those hours the spaced gaps above
+                                    #   still apply (RULE 5: nothing is held for sleep). Stops only via DON'T BET / logged / tip.
 def remind_gap_min(tip, now):
+    if FAST_REMIND[0] <= now.hour < FAST_REMIND[1]: return FAST_REMIND_GAP
     try: h = (pd.Timestamp(tip) - now).total_seconds() / 3600
     except Exception: return REMIND_EVERY_MIN
     return next((m for hh, m in REMIND_GAPS if h > hh), REMIND_EVERY_MIN)

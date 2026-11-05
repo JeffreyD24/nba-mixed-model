@@ -225,6 +225,36 @@ def price_txt(px):
     except Exception: return ""
 
 
+_DK = {}
+DK_NBA_PAGE = "https://sportsbook.draftkings.com/leagues/basketball/nba"
+def dk_total_link(date, home, away, side, line):
+    """DraftKings bet-slip link for a total (ESPN's odds feed; falls back to the game page). None if ESPN has no DraftKings link.
+    Nov 5, 2026: movement / blend alerts had dk=None, so no DraftKings button."""
+    try:
+        import espn
+        if date not in _DK:
+            _DK[date] = espn.lines([date], when=("current",))
+        L = _DK[date]
+        row = L[(L.home == home) & (L.away == away)] if len(L) and "home" in L else L.iloc[0:0]
+        import alert as AL
+        lk = AL.dk_link(row.iloc[0].to_dict(), "total", side, line) if len(row) else None
+        # ESPN's odds feed lags Action Network by an hour or more on a new line (POR @ LAL, PHI @ CLE Nov 5: ESPN had no DraftKings
+        # line yet), so there is no bet-slip link: fall back to DraftKings' NBA page rather than no button
+        return lk or DK_NBA_PAGE
+    except Exception as ex:
+        print("[market models] DraftKings link unavailable:", type(ex).__name__, str(ex)[:80]); return DK_NBA_PAGE
+
+
+def fd_extra(r, side, dk_line):
+    """FanDuel button args for a reminder: only when FanDuel has a line for this total (Nov 5, 2026)"""
+    try:
+        import alert as AL
+        _, fdl, best = AL.fanduel.compare("nba", r.date, r.home, r.away, "total", side, dk_line, None, label=side)
+        return dict(fd=fdl, best=best)
+    except Exception:
+        return {}
+
+
 def check():
     up = os.path.join(SD, "upcoming.csv")
     om_path = os.path.join(SD, "opener_model.json")
@@ -312,7 +342,7 @@ def check():
             try:
                 sent = AL.notify(f"BET {what} (PROVISIONAL movement): {Aw} @ {H}, {tip_txt}", body, priority="high",
                                  tags="chart_with_upwards_trend" if side == "over" else "chart_with_downwards_trend",
-                                 kind="bet", dk=None, fd=fdl, best=best)
+                                 kind="bet", dk=dk_total_link(r.date, r.home, r.away, side, float(r.dk_now)), fd=fdl, best=best)
             except Exception as ex:
                 skip = f"NOT sent: ntfy error ({type(ex).__name__})"
         gid = np.nan
@@ -370,7 +400,7 @@ def check():
                 if fdt: body = fdt + "\n" + body
                 try:
                     sent = AL.notify(f"BET {what} (PROVISIONAL blend): {Aw} @ {H}, {tip_txt}", body, priority="high",
-                                     tags="scales", kind="bet", dk=None, fd=fdl, best=best)
+                                     tags="scales", kind="bet", dk=dk_total_link(r.date, r.home, r.away, side, float(r.dk_now)), fd=fdl, best=best)
                 except Exception as ex:
                     skip = f"NOT sent: ntfy error ({type(ex).__name__})"
             gid = np.nan
@@ -406,7 +436,9 @@ def check():
             AL.notify(f"REMINDER - BET {str(r.side).upper()} {q.dk_now:g} (PROVISIONAL blend): {Aw} @ {H}",
                       f"REMINDER: still a BET and not logged yet. DraftKings now {q.dk_now:g} (alerted {float(r.line):g}); blend edge "
                       f"{e_side:+.1f} pts. Tip {pd.Timestamp(r.tip_et):%a %-I:%M %p}. If you already bet it, log it to stop these.",
-                      priority="default", tags="alarm_clock", kind="bet")
+                      priority="default", tags="alarm_clock", kind="bet",
+                      dk=dk_total_link(r.date, r.home, r.away, r.side, float(q.dk_now)),
+                      **fd_extra(r, r.side, float(q.dk_now)))
             B.loc[i, "reminded_at_et"] = str(NOW)[:16]; bchanged = True
         if bchanged: save_csv(B[BC], os.path.join(SD, "blend_alerts.csv"))
 
@@ -435,7 +467,8 @@ def check():
         AL.notify(f"REMINDER - BET {str(r.side).upper()} {cur:g} (PROVISIONAL movement): {Aw} @ {H}",
                   f"REMINDER: still a BET and not logged yet. DraftKings now {cur:g} (alerted {float(r.line):g}); predicted move "
                   f"{mv:+.1f} pts your way. Tip {pd.Timestamp(r.tip_et):%a %-I:%M %p}. If you already bet it, log it to stop these.",
-                  priority="default", tags="alarm_clock", kind="bet")
+                  priority="default", tags="alarm_clock", kind="bet",
+                  dk=dk_total_link(r.date, r.home, r.away, r.side, float(cur)), **fd_extra(r, r.side, float(cur)))
         A.loc[i, "reminded_at_et"] = str(NOW)[:16]; changed = True
     if changed: save_csv(A[A_COLS], os.path.join(SD, "movement_alerts.csv"))
     p(f"checked {len(P)} games; {int((P.pred.abs() >= BET_MOVE).sum())} at a 1.5+ predicted move")

@@ -20,4 +20,13 @@ for name, url in URLS.items():
             out.append(f"| {name} | {imp} | {r.status_code} | {len(r.content)} | {note} |")
         except Exception as e:
             out.append(f"| {name} | {imp} | error | 0 | {type(e).__name__}: {str(e)[:80]} |")
+# raw NBA reply + a readable look at the layout (Nov 5: first run showed it works; this one is to learn the fields)
+try:
+    r = R.get(URLS["NBA dkusct"], impersonate="chrome124", timeout=30, headers={"Accept": "application/json", "Referer": "https://sportsbook.draftkings.com/"})
+    j = r.json(); json.dump(j, open(f"{W}/research/probes/dk_nba_dkusct_sample.json", "w"))
+    out += ["", "## NBA dkusct layout", f"top-level keys: {list(j.keys())}", f"counts: " + ", ".join(f"{k}={len(v)}" for k, v in j.items() if isinstance(v, list))]
+    for k, v in j.items():
+        if isinstance(v, list) and v: out.append(f"first {k}: " + json.dumps(v[0])[:700])
+except Exception as e:
+    out.append(f"layout dump failed: {type(e).__name__}: {str(e)[:100]}")
 open(f"{W}/research/probes/dk_cffi_probe.md", "w").write("\n".join(out) + "\n"); print("\n".join(out))

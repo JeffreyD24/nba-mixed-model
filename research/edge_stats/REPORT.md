@@ -1,4 +1,4 @@
-# Edge statistics (NBA), made 2026-11-04 11:29 ET
+# Edge statistics (NBA), made 2026-11-05 11:40 ET
 
 ## ROI and closing line value with bootstrap ranges
 
@@ -81,17 +81,17 @@ price_clv_pct = fair Pinnacle close x bet decimal odds - 1 (negative = paid the 
 
 | source | rule | market | n | points_clv_n | points_clv_mean | points_clv_lo90 | points_clv_hi90 | price_clv_pct_n | price_clv_pct_mean | price_clv_pct_lo90 | price_clv_pct_hi90 | winpct_pts_n | winpct_pts_mean | winpct_pts_lo90 | winpct_pts_hi90 | share_points_positive | note |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| scorecard | Model 2 open spread 3+ pts | spread | 4 | 4 | 0.375 | -1.125 | 1.250 | 4 | -0.038 | -0.107 | 0.000 | 4 | -2.003 | -4.076 | 0.019 | 0.750 | n<30: too few bets to read |
-| scorecard | Model 1 open spread 3+ pts | spread | 5 | 5 | 0.400 | -0.205 | 1.000 | 5 | -0.040 | -0.069 | -0.014 | 5 | -2.070 | -3.713 | -0.730 | 0.600 | n<30: too few bets to read |
-| scorecard | Model 3 open spread 3+ pts | spread | 5 | 5 | 0.100 | -0.500 | 0.800 | 5 | -0.046 | -0.081 | -0.009 | 5 | -2.397 | -4.333 | -0.460 | 0.400 | n<30: too few bets to read |
-| scorecard | Model 2 open total 3+ pts | total | 8 | 8 | 1.062 | -1.000 | 3.188 | 8 | -0.045 | -0.523 | 0.432 | 8 | -2.381 | -27.4 | 22.6 | 0.625 | n<30: too few bets to read |
-| scorecard | Model 1 open total 3+ pts | total | 5 | 5 | -0.900 | -2.400 | 1.300 | 5 | -0.236 | -1.000 | 0.527 | 5 | -12.4 | -52.4 | 27.6 | 0.200 | n<30: too few bets to read |
-| scorecard | Model 3 open total 3+ pts | total | 2 | 2 | -2.250 | -3.000 | -1.500 | 2 | -1.000 | -1.000 | -1.000 | 2 | -52.4 | -52.4 | -52.4 | 0.000 | n<30: too few bets to read |
-| alerts | alert spread caution / DON'T BET | spread | 7 | 7 | 0.214 | -0.143 | 0.571 | 7 | -0.046 | -0.066 | -0.029 | 7 | -2.400 | -3.431 | -1.517 | 0.571 | n<30: too few bets to read |
-| alerts | alert total caution / DON'T BET | total | 13 | 13 | -0.308 | -1.346 | 0.769 | 13 | -0.119 | -0.559 | 0.322 | 13 | -6.227 | -29.3 | 16.8 | 0.462 | n<30: too few bets to read |
+| scorecard | Model 2 open spread 3+ pts | spread | 10 | 10 | 2.500 | -0.550 | 7.350 | 10 | 0.049 | -0.067 | 0.213 | 10 | 2.586 | -3.447 | 11.2 | 0.700 | n<30: too few bets to read |
+| scorecard | Model 1 open spread 3+ pts | spread | 11 | 11 | 2.455 | -0.182 | 6.909 | 11 | 0.044 | -0.057 | 0.197 | 11 | 2.306 | -2.979 | 10.2 | 0.636 | n<30: too few bets to read |
+| scorecard | Model 3 open spread 3+ pts | spread | 10 | 10 | 2.750 | -0.050 | 7.600 | 10 | 0.060 | -0.048 | 0.229 | 10 | 3.126 | -2.524 | 11.8 | 0.600 | n<30: too few bets to read |
+| scorecard | Model 2 open total 3+ pts | total | 13 | 13 | 1.385 | -0.156 | 2.962 | 13 | 0.175 | -0.266 | 0.615 | 13 | 9.158 | -13.9 | 32.2 | 0.615 | n<30: too few bets to read |
+| scorecard | Model 1 open total 3+ pts | total | 7 | 7 | -0.429 | -2.286 | 1.571 | 7 | -0.182 | -0.727 | 0.364 | 7 | -9.524 | -38.1 | 19.0 | 0.286 | n<30: too few bets to read |
+| scorecard | Model 3 open total 3+ pts | total | 3 | 3 | 0.000 | -2.500 | 2.500 | 3 | -0.364 | -1.000 | 0.273 | 3 | -19.0 | -52.4 | 14.3 | 0.333 | n<30: too few bets to read |
+| alerts | alert spread caution / DON'T BET | spread | 17 | 17 | 0.176 | -0.176 | 0.529 | 17 | -0.032 | -0.054 | -0.011 | 17 | -1.691 | -2.841 | -0.546 | 0.471 | n<30: too few bets to read |
+| alerts | alert total caution / DON'T BET | total | 22 | 22 | -0.068 | -0.932 | 0.795 | 22 | -0.131 | -0.436 | 0.174 | 22 | -6.853 | -22.8 | 9.108 | 0.409 | n<30: too few bets to read |
 | my bets | NBA totals v2 | total | 3 | 3 | -0.500 | -2.500 | 1.500 | 3 | -0.364 | -1.000 | 0.273 | 3 | -18.7 | -52.0 | 14.7 | 0.333 | n<30: too few bets to read |
-| my bets | NBA totals v4 | total | 1 | 1 | -2.500 | -2.500 | -2.500 | 1 | 0.935 | 0.935 | 0.935 | 1 | 48.3 | 48.3 | 48.3 | 0.000 | n<30: too few bets to read |
-| my bets | ALL logged bets | total | 4 | 4 | -1.000 | -2.750 | 1.000 | 4 | -0.039 | -1.000 | 0.915 | 4 | -1.918 | -51.5 | 47.8 | 0.250 | n<30: too few bets to read |
+| my bets | NBA totals v4 | total | 3 | 3 | 0.333 | -1.667 | 2.333 | 3 | 0.600 | 0.282 | 0.918 | 3 | 31.4 | 15.0 | 47.9 | 0.333 | n<30: too few bets to read |
+| my bets | ALL logged bets | total | 6 | 6 | -0.083 | -1.750 | 1.583 | 6 | 0.118 | -0.514 | 0.608 | 6 | 6.380 | -26.5 | 31.8 | 0.333 | n<30: too few bets to read |
 
 
 ## By sportsbook (bets logged through `Log a bet`)

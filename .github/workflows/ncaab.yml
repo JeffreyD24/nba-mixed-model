@@ -1,0 +1,35 @@
+name: NCAAM daily (test-only)
+
+on:
+  schedule:
+    - cron: "17 14 * * *"      # 9:17 AM EST / 10:17 AM EDT: last night's NCAA men's games, model refit, test record
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: state-writes
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install tools
+        run: pip install -q -r requirements.txt scipy
+      - name: NCAAM daily (scores, lines, model, test record)
+        run: python ncaab/daily.py .
+      - name: Save results
+        run: |
+          git config user.name "nba-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ncaab/data ncaab/state
+          git diff --cached --quiet || git commit -m "NCAAM daily $(TZ=America/New_York date +%F)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

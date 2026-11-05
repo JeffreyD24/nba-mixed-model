@@ -43,6 +43,7 @@ if SPORT in ("nfl", "nhl", "nba"):
     WORKFLOWS["live.yml"] = (30, "Live line recorder")
 if SPORT == "nba":
     WORKFLOWS["econ-gdp.yml"] = (14, "Economics (GDP) recorder")
+    WORKFLOWS["ncaab.yml"] = (30, "NCAAM daily (test-only)")        # Nov 5, 2026
 
 # data streams: path in repo -> (max hours since newest commit touching it, label[, "warn"])
 # Odds files log CHANGES only, so a quiet overnight gap is normal: windows are deliberately wide.
@@ -72,6 +73,8 @@ COMMON = {
     "state/poly_paper.csv": (72, "Polymarket paper trades", "warn"),
 }
 STREAMS = dict(COMMON)
+if SPORT == "nba":   # Nov 5, 2026: NCAA men's basketball (test-only): ncaab/daily.py
+    STREAMS.update({"ncaab/data/games.csv": (30, "NCAAM scores and lines"), "ncaab/state/test_record.md": (30, "NCAAM test record (daily)")})
 if SPORT == "nba":   # Nov 4, 2026: line-move shadow record (analysis/LINE_MOVE_PREREG.md); NBA only for now
     STREAMS["state/shadow_passed.md"] = (30, "Shadow record of bets passed for a line move against (daily)")
 if SPORT == "nhl":

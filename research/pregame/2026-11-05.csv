@@ -10139,3 +10139,5 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 17:49:48,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,total,under,222.5,-106,normal
 2026-11-05 17:49:48,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,fourthquarter,moneyline,home,0.0,-115,normal
 2026-11-05 17:49:48,295389,2026-11-05,2026-11-05 22:00,mia,gs,Consensus,event,moneyline,home,0.0,-160,normal
+2026-11-05 17:52:10,295388,2026-11-05,2026-11-05 21:00,orl,phx,bet365,firsthalf,moneyline,away,0.0,-103,normal
+2026-11-05 17:52:10,295388,2026-11-05,2026-11-05 21:00,orl,phx,bet365,firsthalf,moneyline,home,0.0,-117,normal

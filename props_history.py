@@ -1,13 +1,14 @@
 """
 Past NBA player-prop lines from The Odds API (paid; key in the GitHub secret ODDS_API_KEY, never printed or saved), for the props backtest.
-Approved budget (Nov 5, 2026): one season (2025-26), two snapshots per game, about 98k credits.
+Approved budget (Nov 5, 2026): first one season (~98k credits), then widened the same morning to use all the credits:
+2025-26 first, then 2024-25, two snapshots per game, stopping ~2k credits from zero.
 For every 2025-26 game date in data/odds_history/schedule.csv:
   - the events list at 11 AM ET (1 credit)
   - per game: points, rebounds, assists, threes at DraftKings, FanDuel, Pinnacle, BetMGM, Caesars, BetRivers
       'am'    = the snapshot at 11 AM ET (the bet line)
       'close' = the snapshot 10 minutes before tip (the close)
     40 credits per snapshot (4 markets x 1 region of up to 10 books)
-Stops when credits left drop under --min-credits (default 98000, so the live recorder keeps the rest).
+Stops when credits left drop under --min-credits (default 2000).
   python props_history.py WORKDIR [--from 2025-10-21] [--to 2026-04-12] [--max-dates 20] [--min-credits 98000] [--dry-run]
 Writes data/props_history/nba/{date}.csv.gz; dates already saved are skipped.
 """
@@ -23,7 +24,7 @@ API = "https://api.the-odds-api.com/v4"
 BOOKS = "draftkings,fanduel,pinnacle,betmgm,williamhill_us,betrivers"
 MARKETS = "player_points,player_rebounds,player_assists,player_threes"
 ET, UTC = ZoneInfo("America/New_York"), dt.timezone.utc
-MIN = int(ARG("--min-credits", "98000")); DRY = "--dry-run" in sys.argv
+MIN = int(ARG("--min-credits", "2000")); DRY = "--dry-run" in sys.argv
 state = dict(left=None, used=0)
 
 

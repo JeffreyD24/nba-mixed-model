@@ -36,3 +36,13 @@ at DK's line and price at that snapshot. One bet per game.
 - Exploratory only: thresholds 1.0 and 2.0; bets only 3 h+ before tip; the same test on 2024-25;
   adding our outcome model's edge (Model 3 at the opener report, available only for 2024-25 and 2025-26).
 - Known bias: CLV comparisons favor earlier bets (more time to move). Reported by hours-before-tip bucket.
+
+## Addendum (Nov 5, 2026, 3:15 PM ET, before running): feed-compatible variant "movement v1-an"
+The Odds API live feed (Pinnacle + 9 books) paused at 6:10 AM Nov 5 (credits used by the props backfill, ~2,089 left).
+The free Action Network feed (every minute; DraftKings, FanDuel, Caesars, BetMGM, BetRivers, Fanatics, bet365; no Pinnacle)
+keeps running. To bet the movement rule live without Pinnacle, the same model is re-fit with only inputs that feed has:
+- Books: DraftKings, FanDuel, Caesars (williamhill_us), BetMGM, BetRivers. Fanatics and bet365 are left out (not in the history).
+- Inputs dropped: Pinnacle gap, Pinnacle price lean, Pinnacle present. Everything else as in the no-injury live model.
+- Same fit (2022-23..2024-25), same test (2025-26, once), same trigger (1.5 pts), same grading.
+- **Goes live as PROVISIONAL (alerts with money, Jeffrey Nov 5)** if its 2025-26 CLV is at or above break-even (+1.07).
+  If CLV is above 0 but below +1.07: not pushed, reported to Jeffrey. If CLV <= 0: not used.

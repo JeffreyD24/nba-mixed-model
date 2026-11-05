@@ -96,7 +96,7 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - [ ] Polymarket wallets (data API v2): pull past sports trades, rank wallets by profit and closing-price edge, test following them out of sample.
 
 - [ ] [LEAD, Nov 5 2026] NHL: rested team vs a back-to-back team wins more than the no-vig close implies (57.7% vs 55.3% 2016-22; 59.7% vs 55.8% 2024-26), CLV ~0. Pre-register a moneyline rule (opener and close, units + "won vs no-vig close"), test on SBR 2011-16 (not used to find it), then PROVISIONAL. research/PROVISIONAL_CANDIDATES_2026-11-05.md
-- [ ] [IDEA, Nov 5 2026] NFL 2H totals are bet with money without a provisional row: pre-register and measure CLV, or stop.
+- [x] [IDEA, Nov 5 2026] NFL 2H totals are bet with money without a provisional row: pre-register and measure CLV, or stop. DONE: failed (2023 -15.4u), alerts stopped.
 - [ ] [IDEA, Nov 5 2026] Market models step 6: copy the opener/movement/blend setup to NBA spreads, then NHL and NFL (needs the reachability filter from day one).
 - [ ] (Nov 5, 2026) Polymarket sharp-wallet follow test: download full 2025-26 trade history into the private repo, run `sharp/wallet_rankings.py --before 2026-01-15`, grade per `sharp/POLY_WALLETS_PREREG_2026-11-05.md`.
 - [ ] (Nov 5, 2026) Kalshi history (candles + trades with sizes) into the private repo; test Kalshi/Polymarket close vs DK close and vs saved Pinnacle history (NHL veto replacement).

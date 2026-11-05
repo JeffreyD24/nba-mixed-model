@@ -3,6 +3,20 @@
 Master log for all three sports, newest first. Rules for what goes here and how: `CLAUDE.md` at the root of each repo (RULE 1:
 every test, finding, correlation, causal claim, lead, idea and decision gets an entry, committed the same session).
 
+## 2026-11-05: NFL second-half totals rule, honest test: fails; alerts stopped (NFL) [TEST] [DECISION]
+- Question: the 2H totals alerts (edge 3+, 52-35 best of ~100 slices) were being bet with money with no provisional row or CLV evidence. Bet or stop?
+- Data / method: pre-registered (nfl-mixed-model research/halves/H2_TOTALS_PREREG.md, 02d06b7). A: 2023 real Action Network closing 2H totals (the
+  only season with 2H lines the rule wasn't chosen on), half model early number (backtests/h2_predictions.csv, reused). B: 2018-21 reconstructed
+  2H lines (approximate: 2H = -0.73 + 0.509 x SBR full-game total, fit on 2023 only; R² 0.89 vs real lines). C: in-sample CLV 2024-26.
+  Break-even CLV 0.56 pts (0.0597 x sd 9.33). Script nfl-mixed-model dev/h2_totals_oos.py.
+- Result: **A 2023: 66 bets, 26-39-1, -15.4u (overs -19.9u), beat-the-close slope +0.06 (t 0.25).** B 2018-21: 94 bets, 53.2%, +1.5u, approx CLV
+  +0.85, slope -0.00 (t -0.01, 1,010 games). C 2024-26 (in-sample): 88 bets, 59.8%, +12.3u, CLV +0.16 vs 0.56.
+- Read: out of sample the rule loses and the half model carries no information beyond the close in any period. The 52-35 was slice selection.
+  B's CLV mostly reflects full-game total movement (the reconstructed line can only move with it), not second-half skill.
+- Decision: h2_alert.py PUSH = False (Nov 5, 2026, Jeffrey asked for the test): alerts recorded TEST-only, not pushed. The three Nov 8 2H bets
+  already placed stand. [IDEA] any 2H edge would be live/halftime (game script), not pregame.
+- Files: nfl-mixed-model research/halves/H2_TOTALS_RESULTS.md, dev/h2_totals_oos_output.txt, dev/h2_totals_oos_bets.csv, derived/h2_halfmodel_preds_2018_2022.csv.gz
+
 ## 2026-11-05: DraftKings' own feed works from GitHub with a Chrome fingerprint; direct poller built (all sports) [TEST] [DECISION]
 - Question: Jeffrey: see every DraftKings line every minute, from DraftKings, not Action Network / ESPN.
 - Data / method: `tools/probe_dk_cffi.py` on a GitHub runner, 22:45 UTC Nov 5, curl_cffi impersonating chrome124 / chrome131 / safari17_0.

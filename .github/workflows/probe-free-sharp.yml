@@ -4,17 +4,36 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 8
     steps:
-      - name: History depth and bet sizes (Kalshi, Polymarket)
+      - name: Kalshi historical endpoints
         run: |
           K=https://api.elections.kalshi.com/trade-api/v2
-          echo "KALSHI settled NBA game markets (oldest page):"; curl -sS -m 30 "$K/markets?series_ticker=KXNBAGAME&status=settled&limit=1000" | python3 -c "import json,sys; d=json.load(sys.stdin); m=d.get('markets',[]); t=sorted(x.get('close_time','') for x in m); print(len(m), 'cursor' if d.get('cursor') else 'no-more', t[:1], t[-1:])"
-          T=$(curl -sS -m 30 "$K/markets?series_ticker=KXNBAGAME&status=settled&limit=1" | python3 -c "import json,sys; print(json.load(sys.stdin)['markets'][0]['ticker'])"); echo "KALSHI trades for settled $T:"; curl -sS -m 30 "$K/markets/trades?ticker=$T&limit=1000" | python3 -c "import json,sys; d=json.load(sys.stdin)['trades']; import statistics as s; c=[float(x['count_fp']) for x in d]; print(len(d), 'trades; contracts per trade median', s.median(c) if c else None, 'max', max(c) if c else None)"
-          for s in KXNHLGAME KXNFLGAME KXNCAAMBGAME KXNCAAFGAME; do printf "KALSHI $s settled: "; curl -sS -m 30 "$K/markets?series_ticker=$s&status=settled&limit=1000" | python3 -c "import json,sys; m=json.load(sys.stdin).get('markets',[]); t=sorted(x.get('close_time','') for x in m); print(len(m), t[:1])"; done
+          for u in "$K/historical/cutoff" "$K/historical/markets?series_ticker=KXNBAGAME&limit=5" "$K/historical/markets?limit=3" "$K/series/KXNBAGAME" "$K/events?series_ticker=KXNBAGAME&status=settled&limit=200"; do echo "KALSHI $u"; curl -sS -m 30 "$u" | head -c 700; echo; done
+          echo "KALSHI oldest settled NBA via events pages:"; python3 - <<'PY'
+          import json, urllib.request
+          K = "https://api.elections.kalshi.com/trade-api/v2"
+          def g(u):
+              return json.loads(urllib.request.urlopen(u, timeout=30).read())
+          for ser in ("KXNBAGAME", "KXNHLGAME", "KXNFLGAME", "KXNCAAMBGAME", "KXNCAAFGAME"):
+              cur, n, oldest = "", 0, None
+              for _ in range(40):
+                  d = g(f"{K}/events?series_ticker={ser}&status=settled&limit=200" + (f"&cursor={cur}" if cur else ""))
+                  ev = d.get("events", []); n += len(ev)
+                  for e in ev:
+                      t = e.get("strike_date") or e.get("event_ticker")
+                      oldest = t if oldest is None or str(t) < str(oldest) else oldest
+                  cur = d.get("cursor")
+                  if not cur or not ev: break
+              print("KALSHI", ser, "settled events", n, "oldest", oldest)
+          PY
+      - name: Polymarket price history and trades by market
+        run: |
           P=https://gamma-api.polymarket.com
-          curl -sS -m 30 "$P/sports" | python3 -c "import json,sys; d=json.load(sys.stdin); [print('POLY sport', x['sport'], 'series', x.get('series'), 'tags', x.get('tags')) for x in d if x['sport'] in ('nba','nhl','nfl','cbb','ncaab','cfb','ncaaf')]"
-          SER=$(curl -sS -m 30 "$P/sports" | python3 -c "import json,sys; print([x for x in json.load(sys.stdin) if x['sport']=='nba'][0]['series'])")
-          curl -sS -m 30 "$P/events?series_id=$SER&closed=true&limit=500&order=startDate&ascending=true" | python3 -c "import json,sys; d=json.load(sys.stdin); print('POLY closed NBA events', len(d), 'oldest', [(e.get('title'), e.get('startDate'), round(e.get('volume') or 0)) for e in d[:2]])"
-          CID=$(curl -sS -m 30 "$P/events?series_id=$SER&closed=true&limit=50&order=volume&ascending=false" | python3 -c "import json,sys; d=json.load(sys.stdin); e=d[0]; print(e['markets'][0]['conditionId'])")
-          curl -sS -m 30 "https://data-api.polymarket.com/v2/trades?market=$CID&limit=500" | python3 -c "import json,sys; d=json.load(sys.stdin).get('data',[]); import collections; w=collections.Counter(x['proxy_wallet'] for x in d); sz=sorted(x['size']*x['price'] for x in d); print('POLY trades in a big closed NBA market', len(d), 'distinct wallets', len(w), 'largest \$ trades', [round(v) for v in sz[-3:]], 'title', d[0]['title'] if d else '')"
+          EV=$(curl -sS -m 30 "$P/events?series_id=10345&closed=true&limit=1&order=startDate&ascending=true")
+          echo "$EV" | python3 -c "import json,sys; e=json.load(sys.stdin)[0]; m=e['markets'][0]; print('POLY oldest NBA event', e['title'], e.get('startDate'), 'cond', m['conditionId'], 'tokens', m.get('clobTokenIds'))"
+          COND=$(echo "$EV" | python3 -c "import json,sys; print(json.load(sys.stdin)[0]['markets'][0]['conditionId'])")
+          TOK=$(echo "$EV" | python3 -c "import json,sys; print(json.loads(json.load(sys.stdin)[0]['markets'][0]['clobTokenIds'])[0])")
+          for u in "https://data-api.polymarket.com/v2/trades?market=$COND&limit=5" "https://data-api.polymarket.com/v2/trades?condition_id=$COND&limit=5" "https://data-api.polymarket.com/v2/trades?conditionId=$COND&limit=5" "https://data-api.polymarket.com/v2/trades?asset=$TOK&limit=5" "https://data-api.polymarket.com/v2/trades?token_id=$TOK&limit=5"; do echo "POLY $u"; curl -sS -m 30 "$u" | head -c 400; echo; done
+          echo "POLY prices-history:"; curl -sS -m 30 "https://clob.polymarket.com/prices-history?market=$TOK&interval=max&fidelity=60" | head -c 400; echo
+          echo "POLY oldest sports events by series:"; for s in 10345 10346 12185 10470 39 12756; do curl -sS -m 30 "$P/events?series_id=$s&closed=true&limit=1&order=startDate&ascending=true" | python3 -c "import json,sys; d=json.load(sys.stdin); print('  series $s', d[0]['title'] if d else None, d[0].get('startDate') if d else None)"; done

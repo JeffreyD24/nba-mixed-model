@@ -26,3 +26,6 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-04 08:05,nba-lead-3pm-2026-11-04,NBA Nov 4th 3-Pointers Made Leader,2026-11-04 19:00,"atl,bkn,bos,cha,chi,cle,dal,den,det,hou,ind,lac,lal,mem,mil,min,ny,okc,phi,por,sa,sac,tor,utah",no matching game in the model files
 2026-11-04 19:00,nba-phi-det-2026-11-04,PHI 76ers vs. DET Pistons,2026-11-04 19:00,"det,phi",no matching game in the model files
 2026-11-04 19:00,nba-atl-was-2026-11-04,ATL Hawks vs. WAS Wizards,2026-11-04 19:00,"atl,wsh",no matching game in the model files
+2026-11-04 19:30,nba-chi-ny-2026-11-04,CHI Bulls vs. NY Knicks,2026-11-04 19:30,"chi,ny",no matching game in the model files
+2026-11-04 19:30,nba-mil-bos-2026-11-04,MIL Bucks vs. BOS Celtics,2026-11-04 19:30,"bos,mil",no matching game in the model files
+2026-11-04 19:30,nba-cha-bkn-2026-11-04,CHA Hornets vs. BKN Nets,2026-11-04 19:30,"bkn,cha",no matching game in the model files

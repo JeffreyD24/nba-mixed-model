@@ -181,11 +181,9 @@ key,status,snapshot
 2026-11-04|okc|cason wallace,Out,2026-11-03_05_30PM
 2026-11-04|okc|jalen williams,Out,2026-11-03_05_30PM
 2026-11-04|no|yves missi,Out,2026-11-03_05_45PM
-2026-11-04|no|jordan poole,Probable,2026-11-03_05_45PM
 2026-11-04|min|donte divincenzo,Out,2026-11-03_06_00PM
 2026-11-04|min|anthony edwards,Out,2026-11-03_06_00PM
 2026-11-04|utah|trey alexander,Out,2026-11-03_06_00PM
-2026-11-04|utah|mo bamba,Questionable,2026-11-03_06_00PM
 2026-11-04|utah|harrison ingram,Out,2026-11-03_06_00PM
 2026-11-04|utah|jaren jackson,Out,2026-11-03_06_00PM
 2026-11-04|utah|jusuf nurkic,Out,2026-11-03_06_00PM
@@ -194,16 +192,10 @@ key,status,snapshot
 2026-11-04|tor|kawhi leonard,Out,2026-11-03_06_30PM
 2026-11-04|tor|jakob poeltl,Questionable,2026-11-03_06_30PM
 2026-11-04|tor|malachi smith,Out,2026-11-03_06_30PM
-2026-11-04|ind|kobe brown,Questionable,2026-11-03_06_30PM
 2026-11-04|ind|johnny furphy,Out,2026-11-03_06_30PM
 2026-11-04|ind|tyrese haliburton,Out,2026-11-03_06_30PM
 2026-11-04|ind|t j mcconnell,Out,2026-11-03_06_30PM
-2026-11-04|ind|kelly oubre,Questionable,2026-11-03_06_30PM
 2026-11-04|ind|ben sheppard,Out,2026-11-03_06_30PM
-2026-11-04|ind|jalen slawson,Questionable,2026-11-03_06_30PM
-2026-11-04|ind|braden smith,Questionable,2026-11-03_06_30PM
-2026-11-04|ind|obi toppin,Questionable,2026-11-03_06_30PM
-2026-11-04|ind|ivica zubac,Questionable,2026-11-03_06_30PM
 2026-11-04|den|alpha diallo,Probable,2026-11-03_06_45PM
 2026-11-04|den|cameron johnson,Probable,2026-11-03_06_45PM
 2026-11-04|den|spencer jones,Out,2026-11-03_06_45PM
@@ -262,3 +254,15 @@ key,status,snapshot
 2026-11-04|mem|carson cooper,Out,2026-11-04_07_15PM
 2026-11-04|mem|quinten post,Available,2026-11-04_07_15PM
 2026-11-04|mem|javon small,Out,2026-11-04_07_15PM
+2026-11-04|ind|kobe brown,Available,2026-11-04_07_30PM
+2026-11-04|ind|kelly oubre,Out,2026-11-04_07_30PM
+2026-11-04|ind|jalen slawson,Available,2026-11-04_07_30PM
+2026-11-04|ind|braden smith,Available,2026-11-04_07_30PM
+2026-11-04|ind|obi toppin,Available,2026-11-04_07_30PM
+2026-11-04|ind|ivica zubac,Available,2026-11-04_07_30PM
+2026-11-04|no|jordan poole,Available,2026-11-04_07_30PM
+2026-11-04|utah|mo bamba,Available,2026-11-04_07_30PM
+2026-11-05|gs|jimmy butler,Out,2026-11-04_07_30PM
+2026-11-05|gs|moses moody,Out,2026-11-04_07_30PM
+2026-11-05|gs|kristaps porzingis,Out,2026-11-04_07_30PM
+2026-11-05|gs|gui santos,Out,2026-11-04_07_30PM

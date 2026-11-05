@@ -4644,3 +4644,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 12:20:45,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,secondhalf,spread,away,3.5,-113,normal
 2026-11-05 12:20:45,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,firstquarter,moneyline,away,0.0,136,normal
 2026-11-05 12:20:45,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,firstquarter,moneyline,home,0.0,-168,normal
+2026-11-05 12:22:00,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,thirdquarter,moneyline,away,0.0,154,normal
+2026-11-05 12:22:00,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,thirdquarter,moneyline,home,0.0,-192,normal
+2026-11-05 12:23:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,fourthquarter,team_total,home_under,28.5,-140,normal
+2026-11-05 12:23:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,fourthquarter,team_total,away_under,27.5,-135,normal
+2026-11-05 12:23:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,fourthquarter,total,under,55.5,-115,normal
+2026-11-05 12:23:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,fourthquarter,total,over,55.5,-111,normal
+2026-11-05 12:23:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,secondhalf,total,under,113.5,-110,normal
+2026-11-05 12:23:11,295389,2026-11-05,2026-11-05 22:00,mia,gs,FanDuel,secondhalf,total,over,113.5,-110,normal

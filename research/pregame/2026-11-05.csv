@@ -2180,3 +2180,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 08:15:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,event,team_total,away_over,114.5,-110,normal
 2026-11-05 08:15:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,firstquarter,moneyline,away,0.0,140,normal
 2026-11-05 08:15:47,295389,2026-11-05,2026-11-05 22:00,mia,gs,Caesars,firstquarter,moneyline,home,0.0,-170,normal
+2026-11-05 08:17:02,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondquarter,total,over,58.5,-105,normal
+2026-11-05 08:17:02,295388,2026-11-05,2026-11-05 21:00,orl,phx,Caesars,secondquarter,total,under,58.5,-125,normal
+2026-11-05 08:18:12,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,total,under,223.0,-110,normal
+2026-11-05 08:18:12,295388,2026-11-05,2026-11-05 21:00,orl,phx,Consensus,event,total,over,223.0,-111,normal
+2026-11-05 08:18:12,295388,2026-11-05,2026-11-05 21:00,orl,phx,BetMGM,event,total,over,11.5,-110,normal
+2026-11-05 08:18:12,295388,2026-11-05,2026-11-05 21:00,orl,phx,BetMGM,event,total,under,11.5,-120,normal
+2026-11-05 08:19:23,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,event,moneyline,away,0.0,220,normal
+2026-11-05 08:19:23,295389,2026-11-05,2026-11-05 22:00,mia,gs,Fanatics,event,moneyline,home,0.0,-275,normal

@@ -16,7 +16,7 @@ re-testing the same idea later.
 
 | What | Where |
 |---|---|
-| **The master log** (all three sports, newest first) | `nba-mixed-model/analysis/FINDINGS.md`. One dated entry per test, finding, observation or decision. |
+| **The master log** (all sports, newest first) | `betting-goals/FINDINGS.md` (moved from nba-mixed-model/analysis/FINDINGS.md on Nov 5, 2026). One dated entry per test, finding, observation or decision. |
 | Open leads and new ideas not yet tested | this repo's `research/IDEAS_AND_CHECKLIST.md` (checkbox list) **and** a one-line `[IDEA]`/`[LEAD]` entry in FINDINGS.md |
 | The code for a test | `analysis/` or `dev/` in the repo whose data it uses, never only in a scratch folder |
 | The full output of a test | next to the code as `<script>_output.txt` (or a `.csv` of every bet), committed |
@@ -49,7 +49,7 @@ the win rate" is not something a backtest shows.
 
 ### End-of-session check
 
-Before finishing any session: `git status` in every repo touched. Every new script and output is committed, FINDINGS.md has an
+Before finishing any session: `git status` in every repo touched. Every new script and output is committed, betting-goals/FINDINGS.md has an
 entry for every test/finding/idea from the session, and everything is pushed. Tell Jeffrey in one line what was recorded and where.
 
 ## RULE 2: The current season is NOT a test season (Jeffrey, Nov 5, 2026)

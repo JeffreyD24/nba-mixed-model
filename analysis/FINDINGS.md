@@ -39,6 +39,13 @@ every test, finding, correlation, causal claim, lead, idea and decision gets an 
   each kind of record goes, the entry template and TYPE labels ([TEST] [OBSERVATION] [CORRELATION] [CAUSAL] [LEAD] [IDEA] [DECISION]).
   This file stays the master log; open ideas also go in each repo's `research/IDEAS_AND_CHECKLIST.md`.
 
+## 2026-11-05: Saved build products; never rebuild what exists (all sports) [DECISION]
+- What happened: the 2021-26 DK predictions and the 2015-2021 goalie-model predictions (built Nov 3-4) had only lived in the
+  gitignored `_tmp/` folder, so both were rebuilt from scratch today for the puck line tests.
+- Decision (Jeffrey): RULE 3 in CLAUDE.md (all three repos). Build products go in `derived/` (gzipped, tracked) with a row in
+  `derived/MANIFEST.md`; scripts restore them with `derived.py` before building. NHL set up and saved: dk_holdout 2022-2026,
+  oos_games, oos_games_g, gr_G1 predictions 2015-2021 (4.8 MB). Checked: both puck line tests reproduce exactly from the saved files.
+
 ## 2026-11-05: Separate EV bars for -1.5 and +1.5 puck lines, tested on past seasons (NHL) [TEST] [LEAD] [CORRELATION]
 - Question: should +1.5 puck lines get a lower EV bar than -1.5 (lead from the 1-point band test)? Tested now on past seasons (RULE 2).
 - Data / method: pre-registered (nhl-mixed-model research/spreads/PL_SIDE_BARS_PREREG.md, 87f5e0b). T1 leave-one-season-out on DK

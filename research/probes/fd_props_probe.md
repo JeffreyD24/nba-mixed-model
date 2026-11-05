@@ -1,0 +1,18 @@
+# FanDuel props probe
+
+- NBA page HTTP 200; events 18; with '@' 17; sample [' NBA Player Awards', 'Miami Heat @ Golden State Warriors', 'Orlando Magic @ Phoenix Suns']
+-  NBA Player Awards tab player-points: HTTP 200, markets 0, types []
+-  NBA Player Awards tab player-rebounds: HTTP 200, markets 0, types []
+-  NBA Player Awards tab player-assists: HTTP 200, markets 0, types []
+-  NBA Player Awards tab player-threes: HTTP 200, markets 0, types []
+-  NBA Player Awards tab popular: HTTP 200, markets 0, types []
+- Miami Heat @ Golden State Warriors tab player-points: HTTP 200, markets 40, types ['1ST_QUARTER_-_TO_SCORE_10+_POINTS', '1ST_QUARTER_-_TO_SCORE_12+_POINTS', '1ST_QUARTER_-_TO_SCORE_15+_POINTS', '1ST_QUARTER_-_TO_SCORE_2+_POINTS', '1ST_QUARTER_-_TO_SCORE_20+_POINTS', '1ST_QUARTER_-_TO_SCORE_4+_POINTS', '1ST_QUARTER_-_TO_SCORE_6+_POINTS', '1ST_QUARTER_-_TO_SCORE_8+_POINTS', 'MATCH_HANDICAP_(2-WAY)', 'MONEY_LINE', 'PLAYER_A_1ST_QUARTER_POINTS', 'PLAYER_A_TOTAL_POINTS']
+  - example: Davion Mitchell - Points | runners [('Davion Mitchell Over', 13.5, {'americanOdds': 102, 'americanOddsInt': 102}), ('Davion Mitchell Under', 13.5, {'americanOdds': -136, 'americanOddsInt': -136})]
+- Miami Heat @ Golden State Warriors tab player-rebounds: HTTP 200, markets 23, types ['MATCH_HANDICAP_(2-WAY)', 'MONEY_LINE', 'PLAYER_A_TOTAL_REBOUNDS', 'PLAYER_B_TOTAL_REBOUNDS', 'PLAYER_C_TOTAL_REBOUNDS', 'PLAYER_D_TOTAL_REBOUNDS', 'PLAYER_E_TOTAL_REBOUNDS', 'PLAYER_F_TOTAL_REBOUNDS', 'PLAYER_G_TOTAL_REBOUNDS', 'PLAYER_H_TOTAL_REBOUNDS', 'PLAYER_I_TOTAL_REBOUNDS', 'PLAYER_J_TOTAL_REBOUNDS']
+  - example: Total Points | runners [('Over', 235.5, {'americanOdds': -105, 'americanOddsInt': -105}), ('Under', 235.5, {'americanOdds': -115, 'americanOddsInt': -115})]
+- Miami Heat @ Golden State Warriors tab player-assists: HTTP 200, markets 19, types ['MATCH_HANDICAP_(2-WAY)', 'MONEY_LINE', 'PLAYER_A_TOTAL_ASSISTS', 'PLAYER_B_TOTAL_ASSISTS', 'PLAYER_C_TOTAL_ASSISTS', 'PLAYER_D_TOTAL_ASSISTS', 'PLAYER_E_TOTAL_ASSISTS', 'PLAYER_F_TOTAL_ASSISTS', 'PLAYER_I_TOTAL_ASSISTS', 'PLAYER_J_TOTAL_ASSISTS', 'PLAYER_K_TOTAL_ASSISTS', 'TOTAL_POINTS_(OVER/UNDER)']
+  - example: Total Points | runners [('Over', 235.5, {'americanOdds': -105, 'americanOddsInt': -105}), ('Under', 235.5, {'americanOdds': -115, 'americanOddsInt': -115})]
+- Miami Heat @ Golden State Warriors tab player-threes: HTTP 200, markets 23, types ['1+_MADE_THREES', '10+_MADE_THREES', '2+_MADE_THREES', '3+_MADE_THREES', '4+_MADE_THREES', '5+_MADE_THREES', '6+_MADE_THREES', '7+_MADE_THREES', '8+_MADE_THREES', '9+_MADE_THREES', 'MATCH_HANDICAP_(2-WAY)', 'MONEY_LINE']
+  - example: Total Points | runners [('Over', 235.5, {'americanOdds': -105, 'americanOddsInt': -105}), ('Under', 235.5, {'americanOdds': -115, 'americanOddsInt': -115})]
+- Miami Heat @ Golden State Warriors tab popular: HTTP 200, markets 81, types ['1+_MADE_THREES', '10+_MADE_THREES', '1ST_HALF_ALTERNATE_HANDICAP', '1ST_HALF_ALTERNATE_TOTAL_POINTS', '1ST_HALF_HANDICAP', '1ST_HALF_TOTAL_POINTS', '1ST_HALF_WINNER', '1ST_QUARTER_-_TO_SCORE_10+_POINTS', '1ST_QUARTER_-_TO_SCORE_12+_POINTS', '1ST_QUARTER_-_TO_SCORE_15+_POINTS', '1ST_QUARTER_-_TO_SCORE_2+_POINTS', '1ST_QUARTER_-_TO_SCORE_20+_POINTS']
+  - example: 1st Quarter - To Score 20+ Points | runners [('Stephen Curry', 0, {'americanOdds': 6500, 'americanOddsInt': 6500}), ('Giannis Antetokounmpo', 0, {'americanOdds': 7000, 'americanOddsInt': 7000})]

@@ -85,7 +85,7 @@ def frame(rows, name):
 
 
 def main():
-    if not (9 <= NOW.hour <= 23): return                      # reports post ~11 AM - 10 PM ET on game days
+    # Nov 5, 2026: watch 24 hours a day (alerts are never held for any hours); reports mostly post ~11 AM - 10 PM ET
     js = load_state()
     if js["pause_until"] and str(NOW) < js["pause_until"]:
         print("Report watch: paused after a 403 until", js["pause_until"]); return

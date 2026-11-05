@@ -2,14 +2,13 @@
 When the DraftKings line moves k+ pts against a bet Jeffrey logged (state/my_bets.csv), before tip, send one alert per tier with the
 cash-out amount worth taking: what riding has been worth on average from that spot in 2023-26 (analysis/bailout_thresholds.csv).
 Below that offer, let it ride. Tiers from the pre-registered rule: totals 3 and 4 pts, spreads 1 and 2 pts (larger spread tiers had
-under 30 bets). Called from alert.py every check; never allowed to break the alerts. Sent between 4 AM and 8 PM ET (asleep otherwise);
-a tier reached overnight is sent at 4 AM if the game hasn't started.
+under 30 bets). Called from alert.py every check; never allowed to break the alerts. Sent 24 hours a day (Nov 5, 2026: never held for sleep hours).
 Log: state/bailout_alerts.csv (one row per bet and tier, sent or not)."""
 import os
 import numpy as np, pandas as pd
 
 TIERS = {"total": (3, 4), "spread": (1, 2)}
-AWAKE = (4, 20)                      # ET hours
+AWAKE = (0, 24)                      # ET hours: 24 hours a day (Jeffrey, Nov 5, 2026; was 4 AM - 8 PM)
 EXAMPLE_STAKE = 2.50
 
 

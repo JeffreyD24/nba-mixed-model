@@ -33,8 +33,15 @@
  ],
  "book": "FanDuel",
  "alert_hours_et": [
-  6,
-  20
+  0,
+  24
  ],
- "live_from": "2026-11-06"
+ "live_from": "2026-11-06",
+ "min_lead_hours_any": 1,
+ "tiers": {
+  "early": "fresh FanDuel opener (first seen <= 40 min ago, verified by an earlier snapshot), posted 4h+ before tip",
+  "late": "fresh FanDuel opener posted 1-4h before tip",
+  "stale": "line still at FanDuel's opener but not a fresh/verified opener (first seen > 40 min ago or no earlier snapshot), 1h+ before tip"
+ },
+ "note_24h": "Nov 5, 2026 (Jeffrey): alerts 24 hours a day for every model; never held for sleep hours."
 }

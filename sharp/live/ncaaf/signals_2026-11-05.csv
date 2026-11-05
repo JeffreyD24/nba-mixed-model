@@ -1,6 +1,6 @@
 an_id,start,home,away,snapshots,spread_gap_now,spread_gap10_first_at,spread_gap10_side,spread_bets_pct_now,dk_spread_first,dk_spread_now,dk_spread_first_at,dk_spread_move,spread_rlm,spread_steam,total_gap_now,total_gap10_first_at,total_gap10_side,total_bets_pct_now,dk_total_first,dk_total_now,dk_total_first_at,dk_total_move,total_rlm,total_steam
 289599,2026-11-07T20:00:00.000Z,Kennesaw State Owls,Delaware Fightin Blue Hens,4,0.0,,0.0,0.0,1.5,1.5,2026-11-05 15:25:00,0.0,0.0,0,0.0,,0.0,0.0,57.5,57.5,2026-11-05 15:25:00,0.0,0,0
-289825,2026-11-06T00:30:00.000Z,Florida Atlantic Owls,UTSA Roadrunners,7,10.0,2026-11-05 15:25:00,1.0,54.0,6.5,6.5,2026-11-05 15:25:00,0.0,0.0,0,30.0,2026-11-05 15:25:00,1.0,16.0,72.5,72.5,2026-11-05 15:25:00,0.0,0,0
+289825,2026-11-06T00:30:00.000Z,Florida Atlantic Owls,UTSA Roadrunners,9,10.0,2026-11-05 15:25:00,1.0,54.0,6.5,6.5,2026-11-05 15:25:00,0.0,0.0,0,30.0,2026-11-05 15:25:00,1.0,16.0,72.5,72.5,2026-11-05 15:25:00,0.0,0,0
 289826,2026-11-06T01:00:00.000Z,Southern Miss Golden Eagles,James Madison Dukes,7,9.0,,0.0,36.0,13.5,13.5,2026-11-05 15:25:00,0.0,0.0,0,5.0,,0.0,12.0,58.5,58.5,2026-11-05 15:25:00,0.0,0,0
 289827,2026-11-07T00:30:00.000Z,East Carolina Pirates,South Florida Bulls,5,-17.0,2026-11-05 15:25:00,-1.0,42.0,-2.5,-2.5,2026-11-05 15:25:00,0.0,0.0,0,-7.0,,0.0,80.0,39.5,39.5,2026-11-05 15:25:00,0.0,0,0
 289828,2026-11-07T03:15:00.000Z,Arizona Wildcats,TCU Horned Frogs,7,-3.0,,0.0,60.0,-7.5,-7.5,2026-11-05 15:25:00,0.0,0.0,0,1.0,,0.0,45.0,45.5,45.5,2026-11-05 15:25:00,0.0,0,0

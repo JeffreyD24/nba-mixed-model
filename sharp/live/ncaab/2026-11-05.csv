@@ -355,3 +355,10 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-05 15:54:00,302099,2026-11-06T00:00:00.000Z,Quinnipiac Bobcats,Bryant Bulldogs,1146.0,dk,-6.5,-108.0,148.5,-110.0,-265.0,215.0,,,,,,
 2026-11-05 15:55:00,302098,2026-11-06T00:00:00.000Z,Alcorn State Braves,Howard Bison,676.0,dk,9.5,-118.0,149.5,-110.0,330.0,-425.0,,,,,,
 2026-11-05 16:01:00,297403,2026-11-06T22:00:00.000Z,Virginia Cavaliers,Northeastern Huskies,60.0,cons,-31.5,-110.0,158.5,-110.0,,,0.0,0.0,0.0,0.0,,
+2026-11-05 16:02:00,297396,2026-11-07T00:00:00.000Z,North Carolina State Wolfpack,East Tennessee State Buccaneers,60.0,cons,-15.5,-110.0,150.5,-115.0,-3000.0,1060.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05 16:03:00,301764,2026-11-05T22:00:00.000Z,North Texas Mean Green,McNeese State Cowboys,4831.0,cons,2.5,-116.0,138.5,-115.0,115.0,-140.0,42.0,26.0,62.0,46.0,28.0,21.0
+2026-11-05 16:03:00,297368,2026-11-06T00:30:00.000Z,Mississippi State Bulldogs,Northwestern State Demons,873.0,cons,-21.5,-110.0,150.5,-115.0,-10000.0,1800.0,83.0,90.0,46.0,19.0,97.0,96.0
+2026-11-05 16:03:00,297396,2026-11-07T00:00:00.000Z,North Carolina State Wolfpack,East Tennessee State Buccaneers,60.0,cons,-16.5,-110.0,150.5,-115.0,-3000.0,1200.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-05 16:04:00,297403,2026-11-06T22:00:00.000Z,Virginia Cavaliers,Northeastern Huskies,60.0,fd,-31.5,-110.0,158.5,-110.0,,,,,,,,
+2026-11-05 16:05:00,297396,2026-11-07T00:00:00.000Z,North Carolina State Wolfpack,East Tennessee State Buccaneers,60.0,fd,-16.5,-110.0,150.5,-115.0,-3000.0,1200.0,,,,,,
+2026-11-05 16:05:00,297611,2026-11-07T00:00:00.000Z,Florida State Seminoles,Troy Trojans,50.0,fd,-18.5,-115.0,157.5,-110.0,-4000.0,1400.0,,,,,,

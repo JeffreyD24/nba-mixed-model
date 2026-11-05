@@ -1,0 +1,38 @@
+NCAAM pre-registered backtest. Bets at the Open (-110); CLV = Open -> DraftKings close toward the bet (points).
+eligible games with Open + DK close: by season {2024: 4800, 2025: 4840, 2026: 4888}
+
+SPREAD: 2023-24 sd of result vs DK close 11.18 -> break-even CLV 0.67
+  fit 2023-24, 2+             1671 bets  CLV +0.34 [+0.24,+0.43] (break-even 0.67)  at Open 840-808 51.0%   -44.4u (-2.7%)  at DK close   -81.0u (-4.8%)  by season u/CLV 24:-44.4/+0.34
+  fit 2023-24, 3+              858 bets  CLV +0.51 [+0.38,+0.65] (break-even 0.67)  at Open 445-398 52.8%    +6.5u (+0.8%)  at DK close   -12.8u (-1.5%)  by season u/CLV 24:+6.5/+0.51
+  fit 2023-24, 4+              395 bets  CLV +0.56 [+0.35,+0.81] (break-even 0.67)  at Open 202-183 52.5%    +0.6u (+0.2%)  at DK close    -5.4u (-1.4%)  by season u/CLV 24:+0.6/+0.56
+  fit 2023-24, 5+              198 bets  CLV +0.75 [+0.43,+1.11] (break-even 0.67)  at Open 100-92 52.1%    -1.1u (-0.6%)  at DK close    -7.0u (-3.5%)  by season u/CLV 24:-1.1/+0.75
+  fit 2023-24, 6+               84 bets  CLV +1.18 [+0.58,+1.81] (break-even 0.67)  at Open 43-41 51.2%    -1.9u (-2.3%)  at DK close    -5.8u (-6.9%)  by season u/CLV 24:-1.9/+1.18
+  chosen threshold: 5
+  TEST 2024-26, 5+             448 bets  CLV +0.95 [+0.71,+1.24] (break-even 0.67)  at Open 233-214 52.1%    -2.2u (-0.5%)  at DK close   -31.8u (-7.1%)  by season u/CLV 25:+4.4/+0.90 26:-6.5/+0.99
+  descriptive (test seasons): 
+    Nov-Dec                    382 bets  CLV +0.65 [+0.43,+0.89] (break-even 0.67)  at Open 194-187 50.9%   -10.6u (-2.8%)  at DK close   -28.7u (-7.5%)  by season u/CLV 25:-1.7/+0.69 26:-8.9/+0.61
+    Jan-Apr                     66 bets  CLV +2.68 [+1.83,+3.62] (break-even 0.67)  at Open 39-27 59.1%    +8.5u (+12.8%)  at DK close    -3.1u (-4.8%)  by season u/CLV 25:+6.1/+1.88 26:+2.4/+3.53
+    conference games            97 bets  CLV +1.76 [+1.18,+2.40] (break-even 0.67)  at Open 51-46 52.6%    +0.4u (+0.4%)  at DK close   -13.2u (-13.6%)  by season u/CLV 25:+0.7/+0.86 26:-0.4/+2.60
+    neutral sites               65 bets  CLV +2.04 [+1.09,+3.00] (break-even 0.67)  at Open 42-23 64.6%   +15.2u (+23.4%)  at DK close    +3.7u (+5.7%)  by season u/CLV 25:+6.0/+2.11 26:+9.2/+1.95
+    favorite/over side         294 bets  CLV +1.13 [+0.87,+1.42] (break-even 0.67)  at Open 158-135 53.9%    +8.6u (+2.9%)  at DK close   -12.6u (-4.3%)  by season u/CLV 25:+2.8/+0.91 26:+5.8/+1.30
+    dog/under side             154 bets  CLV +0.60 [+0.22,+1.04] (break-even 0.67)  at Open 75-79 48.7%   -10.8u (-7.0%)  at DK close   -19.2u (-12.5%)  by season u/CLV 25:+1.5/+0.87 26:-12.4/+0.37
+
+TOTAL: 2023-24 sd of result vs DK close 16.67 -> break-even CLV 0.99
+  fit 2023-24, 2+             2306 bets  CLV +0.56 [+0.45,+0.68] (break-even 0.99)  at Open 1154-1129 50.5%   -79.9u (-3.5%)  at DK close  -181.1u (-7.9%)  by season u/CLV 24:-79.9/+0.56
+  fit 2023-24, 3+             1402 bets  CLV +0.68 [+0.54,+0.82] (break-even 0.99)  at Open 687-698 49.6%   -73.5u (-5.2%)  at DK close  -135.1u (-9.6%)  by season u/CLV 24:-73.5/+0.68
+  fit 2023-24, 4+              836 bets  CLV +0.82 [+0.63,+1.01] (break-even 0.99)  at Open 409-416 49.6%   -44.2u (-5.3%)  at DK close  -100.0u (-12.0%)  by season u/CLV 24:-44.2/+0.82
+  fit 2023-24, 5+              466 bets  CLV +0.87 [+0.61,+1.14] (break-even 0.99)  at Open 229-231 49.8%   -22.8u (-4.9%)  at DK close   -48.6u (-10.4%)  by season u/CLV 24:-22.8/+0.87
+  fit 2023-24, 6+              241 bets  CLV +1.21 [+0.84,+1.61] (break-even 0.99)  at Open 122-115 51.5%    -4.1u (-1.7%)  at DK close   -14.6u (-6.0%)  by season u/CLV 24:-4.1/+1.21
+  chosen threshold: 6
+  TEST 2024-26, 6+             914 bets  CLV +1.09 [+0.90,+1.27] (break-even 0.99)  at Open 476-438 52.1%    -5.3u (-0.6%)  at DK close   -47.8u (-5.2%)  by season u/CLV 25:-17.2/+0.93 26:+11.9/+1.23
+  descriptive (test seasons): 
+    Nov-Dec                    348 bets  CLV +1.32 [+0.97,+1.68] (break-even 0.99)  at Open 166-182 47.7%   -31.1u (-8.9%)  at DK close   -46.9u (-13.5%)  by season u/CLV 25:-33.7/+1.00 26:+2.6/+1.64
+    Jan-Apr                    566 bets  CLV +0.95 [+0.75,+1.14] (break-even 0.99)  at Open 310-256 54.8%   +25.8u (+4.6%)  at DK close    -0.9u (-0.2%)  by season u/CLV 25:+16.5/+0.87 26:+9.3/+1.00
+    conference games           580 bets  CLV +0.96 [+0.77,+1.16] (break-even 0.99)  at Open 324-256 55.9%   +38.5u (+6.6%)  at DK close   +14.6u (+2.5%)  by season u/CLV 25:+15.5/+0.82 26:+23.1/+1.07
+    neutral sites              183 bets  CLV +0.88 [+0.43,+1.34] (break-even 0.99)  at Open 81-102 44.3%   -28.4u (-15.5%)  at DK close   -41.7u (-22.8%)  by season u/CLV 25:-15.4/+1.17 26:-13.0/+0.47
+    favorite/over side         823 bets  CLV +0.95 [+0.78,+1.12] (break-even 0.99)  at Open 422-401 51.3%   -17.4u (-2.1%)  at DK close   -48.6u (-5.9%)  by season u/CLV 25:-19.1/+0.85 26:+1.7/+1.03
+    dog/under side              91 bets  CLV +2.37 [+1.58,+3.18] (break-even 0.99)  at Open 54-37 59.3%   +12.1u (+13.3%)  at DK close    +0.7u (+0.8%)  by season u/CLV 25:+1.9/+1.60 26:+10.2/+3.04
+
+DECISIONS (pre-registered rule):
+  spread: FAIL (CLV +0.95 vs 0.67, CLV low +0.70, units at Open -2.2)
+  total: FAIL (CLV +1.09 vs 0.99, CLV low +0.90, units at Open -5.3)

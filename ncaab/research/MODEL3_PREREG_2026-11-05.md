@@ -24,3 +24,8 @@ opener-to-close move predicted (R^2 of predicted move on actual move).
 X chosen on SBR 2016-21: smallest of {0.5, 1, 1.5, 2, 3} whose CLV >= break-even (spreads 0.63, totals 1.02).
 PASS (decision seasons, DK only) = CLV >= break-even AND units at the DK opener > 0 AND CLV 90% low end > 0 -> Fable review before any
 PROVISIONAL use. Otherwise TEST record. All entrants reported either way.
+
+## Addendum (after the first run, before this one): MKT-T, a tuned market model
+MKT used Model 1's ridge (5), tuned for noisy game results; closing lines are far less noisy, so it was over-shrunk (worst opener RMSE).
+MKT-T = the same market model with ridge chosen from {0.05, 0.2, 0.5, 1, 2} by RMSE vs the SBR opener on 2009-2011 only. It then enters
+BLEND-B and BLEND-C (rebuilt with MKT-T in place of MKT). Same decision rows and betting rule as above; reported next to the first run.

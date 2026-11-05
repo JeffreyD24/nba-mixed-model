@@ -93,5 +93,28 @@ try:
 except Exception as e:
     lines += ["", f"- v2 scoreboard with periods: HTTP {code}, unreadable ({e})"]
 
+# ---- round 2 (Nov 4): FanDuel boost pages, depth of the period-line history, NFL by week ----
+lines += ["", "## Round 2", ""]
+FD = "https://sbapi.ct.sportsbook.fanduel.com/api/content-managed-page?page={p}&customPageId={c}&_ak=FhMFpcPWXMeyZxOx&timezone=America%2FNew_York"
+for p, c in [("HOME", ""), ("CUSTOM", "boost"), ("CUSTOM", "odds-boost"), ("CUSTOM", "profit-boost"), ("CUSTOM", "boosts-hub"),
+             ("CUSTOM", "promos"), ("CUSTOM", "nfl"), ("CUSTOM", "nhl"), ("SPORT", "")]:
+    code, b = fetch(FD.format(p=p, c=c)); txt = b.decode("utf-8", "ignore"); nb, nob, npb = boost_hits(txt)
+    lines.append(f"- FanDuel {p}/{c or '-'}: HTTP {code}, {len(b)} bytes, 'boost' {nb} (odds boost {nob}, profit boost {npb})")
+    if code == 200 and nb:
+        open(os.path.join(OUT, f"fd_{p}_{c or 'x'}.json"), "w").write(txt[:600000])
+for day in ["20221025", "20221215", "20230115", "20230315", "20231101", "20250115", "20260115"]:
+    code, b = fetch(f"https://api.actionnetwork.com/web/v1/scoreboard/nba?period=firsthalf&bookIds={BOOKS}&date={day}")
+    try: G = json.loads(b).get("games", [])
+    except Exception: G = []
+    bk = sorted({o.get("book_id") for g in G for o in (g.get("odds") or [])})
+    lines.append(f"- NBA 1H {day}: games {len(G)}, book ids with odds {bk}")
+for wk in ["14"]:
+    code, b = fetch(f"https://api.actionnetwork.com/web/v1/scoreboard/nfl?period=firsthalf&bookIds={BOOKS}&season=2023&week={wk}")
+    try: G = json.loads(b).get("games", [])
+    except Exception: G = []
+    st = sorted({g.get("status") for g in G}); dates = sorted({str(g.get("start_time"))[:10] for g in G})
+    bk = sorted({o.get("book_id") for g in G for o in (g.get("odds") or [])})
+    lines.append(f"- NFL 1H season 2023 week {wk}: HTTP {code}, games {len(G)} {st}, dates {dates[:3]}, books {bk}")
+
 open(os.path.join(OUT, "markets_probe.md"), "w").write("\n".join(lines) + "\n")
 print("\n".join(lines))

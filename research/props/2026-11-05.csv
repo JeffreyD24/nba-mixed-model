@@ -4560,3 +4560,15 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-05 18:05,22600188,2026-11-05,Total Assists,4278053,Davion Mitchell,,7.5,-147.0,7.5,-109.0,2026-11-06T02:03Z,under
 2026-11-05 18:05,22600188,2026-11-05,Total Points and Assists,6589,Draymond Green,,11.5,-135.0,12.5,100.0,2026-11-06T02:03Z,over
 2026-11-05 18:05,22600188,2026-11-05,Total Points and Assists,6589,Draymond Green,,11.5,102.0,12.5,-131.0,2026-11-06T02:03Z,under
+2026-11-05 18:20,22600188,2026-11-05,Total Points,4709138,Brandin Podziemski,,16.5,-114.0,15.5,-124.0,2026-11-05T23:46Z,over
+2026-11-05 18:20,22600188,2026-11-05,Total Points,4709138,Brandin Podziemski,,16.5,-112.0,15.5,-102.0,2026-11-05T23:46Z,under
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Assists,3975,Stephen Curry,,32.5,-114.0,31.5,-122.0,2026-11-05T23:46Z,over
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Assists,3975,Stephen Curry,,32.5,-115.0,31.5,-108.0,2026-11-05T23:46Z,under
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Assists,4601025,Pelle Larsson,,14.5,-115.0,16.5,-115.0,2026-11-05T23:49Z,over
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Assists,4601025,Pelle Larsson,,14.5,-114.0,16.5,-114.0,2026-11-05T23:49Z,under
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Assists,5175737,Yaxel Lendeborg,,22.5,-128.0,23.5,-126.0,2026-11-06T00:54Z,over
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Assists,5175737,Yaxel Lendeborg,,22.5,-103.0,23.5,-105.0,2026-11-06T00:54Z,under
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Rebounds,4897262,Will Richard,,8.5,-105.0,9.5,-119.0,2026-11-05T23:46Z,over
+2026-11-05 18:20,22600188,2026-11-05,Total Points and Rebounds,4897262,Will Richard,,8.5,-125.0,9.5,-110.0,2026-11-05T23:46Z,under
+2026-11-05 18:20,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4066261,Bam Adebayo,,30.5,-125.0,36.5,-112.0,2026-11-06T02:09Z,over
+2026-11-05 18:20,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4066261,Bam Adebayo,,30.5,-105.0,36.5,-117.0,2026-11-06T02:09Z,under

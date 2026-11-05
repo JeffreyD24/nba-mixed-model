@@ -1,0 +1,14 @@
+name: Probe free sharp-price sources (one-off)
+on:
+  workflow_dispatch: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Kalshi and Polymarket public market data (no key)
+        run: |
+          echo "== Kalshi series"; for s in KXNBAGAME KXNHLGAME KXNFLGAME KXNCAAMBGAME KXNCAAFGAME KXNBASPREAD KXNBATOTAL; do
+            printf "%s: " $s; curl -sS -m 20 "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=$s&status=open&limit=200" | python3 -c "import json,sys; d=json.load(sys.stdin); m=d.get('markets',[]); print(len(m), [(x.get('ticker'), x.get('yes_bid'), x.get('yes_ask'), x.get('volume')) for x in m[:2]])" || echo fail; done
+          echo "== Polymarket"; for t in nba nhl nfl ncaab cfb; do printf "%s: " $t; curl -sS -m 20 "https://gamma-api.polymarket.com/events?tag_slug=$t&closed=false&limit=100" | python3 -c "import json,sys; d=json.load(sys.stdin); print(len(d), [ (e.get('title'), e.get('volume')) for e in d[:2]])" || echo fail; done
+          echo "== Polymarket public trades sample (wallets visible)"; curl -sS -m 20 "https://data-api.polymarket.com/trades?limit=3" | head -c 600; echo

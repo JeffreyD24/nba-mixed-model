@@ -106,6 +106,12 @@ Settings live at the top of `alert.py`: `THRESHOLD`, `MAX_LINE_MOVE`, and `WINDO
 - **Bet on DraftKings button:** alerts carry a button that opens DraftKings with that bet on your slip (the link from ESPN).
   If ESPN's copy of the line is behind DraftKings' current line, the button opens the game page instead. You still confirm the bet.
 
+## Player props shadow record (since Nov 5, 2026; paper only)
+`props_shadow.py` (workflow `props-shadow.yml`) records FanDuel's NBA player-prop lines every hour from 11 AM to 11 PM ET, and at
+11 AM logs paper bets from props v1b (EV 5%+ vs FanDuel) to `state/props_shadow.csv`, graded the next morning with the result and
+FanDuel's last pre-tip line (closing-line EV). Why paper: the 2025-26 backtest made money but did not beat the closing line
+(`research/props/PROPS_V1_RESULTS_2026-11-05.md`). No alerts. Revisit after ~500 graded paper bets.
+
 ## Checking boosts (since Nov 4, 2026)
 Open a new issue with the **Check a boost** form (Issues -> New issue). Two ways to use it:
 - **Find me the best bet:** pick the book, enter the boost % (and how many legs the token needs, the lowest odds it allows). The reply ranks every

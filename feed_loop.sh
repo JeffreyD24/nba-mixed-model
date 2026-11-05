@@ -2,7 +2,7 @@
 # All-markets odds feed (DraftKings + FanDuel): one odds_feed.py tick a minute for ~50 minutes, commit the new files every 5 minutes.
 # Own workflow and lock, so it never delays the alert loop. Only research/feed/ is committed (changes only, one small file per 5 minutes).
 set -u
-git config user.name "nba-tracker-bot"
+git config user.name "odds-feed-bot"
 git config user.email "actions@users.noreply.github.com"
 START=$(date +%s); LIMIT=${LOOP_SECONDS:-3000}; LAST_SAVE=0
 save() {

@@ -1,0 +1,38 @@
+stints 186619, players 1030, seasons [np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025), np.int64(2026)]
+games with DK 1Q close + starters: 3556 by season {2024: 1227, 2025: 1228, 2026: 1101}
+
+lambda choice on 2023-24 (1Q squared error of starters' prediction, margin / total):
+  lambda 50: margin MSE 73.01, total MSE 71.87; DK line margin MSE 69.23, total 63.80
+  lambda 150: margin MSE 72.16, total MSE 70.74; DK line margin MSE 69.23, total 63.80
+  lambda 400: margin MSE 71.26, total MSE 69.55; DK line margin MSE 69.23, total 63.80
+  lambda 1000: margin MSE 70.68, total MSE 68.65; DK line margin MSE 69.23, total 63.80
+chosen lambda 1000
+calibration (2023-24): spread b = 0.081, total b = -0.095  (gap sd 1.11 / 2.00)
+
+== TEST 2024-25 + 2025-26 ==
+1Q spread: squared-error gain vs DK close -0.007 [-0.067, +0.050] (n 2329) | bets 0: nan%, +0.0u (+nan% [+nan, +nan]) -> fail
+     2025: gain -0.024, bets 0
+     2026: gain +0.011, bets 0
+     descriptive: biggest 10% of raw gaps (|gap| >= 2.09), side = gap direction: 231 games, 51.5% win
+1Q total: squared-error gain vs DK close -0.138 [-0.251, -0.022] (n 2329) | bets 0: nan%, +0.0u (+nan% [+nan, +nan]) -> fail
+     2025: gain -0.125, bets 0
+     2026: gain -0.152, bets 0
+     descriptive: biggest 10% of raw gaps (|gap| >= 3.65), side = gap direction: 233 games, 50.6% win
+
+== Accuracy (test): 1Q margin / total MSE ==
+  DK close line: 67.93 / 64.44
+  starters' raw prediction: 69.48 / 68.37
+  DK close + calibrated gap: 67.93 / 64.57
+
+== Side: surprise starts (a team's starting five differs from its last game) ==
+  surprise=False: games 543, |spread gap| 0.93, spread gain -0.069, total gain -0.080
+  surprise=True: games 1786, |spread gap| 1.05, spread gain +0.011, total gain -0.155
+
+== Side: does the 1Q starters' gap also predict the 1st half / full game cover? (test, corr with cover margin) ==
+  y_s: corr -0.006 (n 2327)
+  y_h1: corr +0.002 (n 2327)
+  y_fg: corr +0.038 (n 2327)
+
+== Verdict ==
+1Q spread: did not pass
+1Q total: did not pass

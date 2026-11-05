@@ -1,0 +1,27 @@
+name: NCAAM box scores (one-off backfill, one job per season)
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  box:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      max-parallel: 4
+      fail-fast: false
+      matrix:
+        season: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas
+      - name: Box scores for season ${{ matrix.season }}
+        run: python ncaab/espn_boxscores.py . --season ${{ matrix.season }} --threads 6
+      - name: Save
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add ncaab/data/box
+          git diff --cached --quiet || git commit -q -m "NCAAM box scores ${{ matrix.season }}"
+          for i in 1 2 3 4 5 6 7 8; do git pull --rebase -q && git push -q && break; sleep $((RANDOM % 20 + 5)); done

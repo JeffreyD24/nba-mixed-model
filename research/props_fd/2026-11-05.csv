@@ -624,3 +624,15 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 20:29,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Franz Wagner,franz wagner,6.5,-130,102,ORL
 2026-11-05 20:29,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Tristan da Silva,tristan da silva,1.5,-132,104,ORL
 2026-11-05 20:29,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Desmond Bane,desmond bane,3.5,102,-130,ORL
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Jamal Cain,jamal cain,6.5,108,-138,ORL
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Tristan da Silva,tristan da silva,12.5,-108,-118,ORL
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Oso Ighodaro,oso ighodaro,6.5,-115,-111,PHX
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Desmond Bane,desmond bane,20.5,-108,-118,ORL
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Jalen Green,jalen green,16.5,-113,-113,PHX
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Collin Gillespie,collin gillespie,3.5,120,-154,PHX
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Anthony Black,anthony black,4.5,-128,100,ORL
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Oso Ighodaro,oso ighodaro,2.5,-156,122,PHX
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Tristan da Silva,tristan da silva,1.5,-136,106,ORL
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Devin Booker,devin booker,5.5,112,-142,PHX
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Desmond Bane,desmond bane,3.5,100,-128,ORL
+2026-11-05 20:31,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Jalen Green,jalen green,2.5,-164,128,PHX

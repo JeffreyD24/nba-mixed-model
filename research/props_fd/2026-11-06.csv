@@ -7980,7 +7980,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 15:55,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Ja'Kobe Walter,jakobe walter,2.5,-108.0,-122.0,TOR,709.196047312,62606687.0,62606690.0
 2026-11-06 15:55,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Collin Murray-Boyles,collin murray boyles,2.5,134.0,-180.0,TOR,709.196047278,65925589.0,65925572.0
 2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Grayson Allen,grayson allen,13.5,100.0,-128.0,CHA,709.196111177,37819081.0,37819080.0
-2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Sam Hauser,sam hauser,6.5,-111.0,-115.0,BOS,709.196098120,49890235.0,49890236.0
+2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Sam Hauser,sam hauser,6.5,-111.0,-115.0,BOS,709.19609812,49890235.0,49890236.0
 2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Ryan Kalkbrenner,ryan kalkbrenner,6.5,-128.0,100.0,CHA,709.196166892,43049110.0,43049111.0
 2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Derrick White,derrick white,13.5,-104.0,-122.0,BOS,709.196079651,22613511.0,22613512.0
 2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Brandon Miller,brandon miller,21.5,-128.0,100.0,CHA,709.196085055,50113302.0,50113301.0
@@ -7990,7 +7990,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Paul George,paul george,3.5,-125.0,-102.0,BOS,709.196079629,12234250.0,12234251.0
 2026-11-06 15:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Naz Reid,naz reid,2.5,136.0,-174.0,CHA,709.196085087,27986553.0,27986554.0
 2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Dyson Daniels,dyson daniels,12.5,102.0,-130.0,ATL,709.196077219,50686100.0,50686102.0
-2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Bilal Coulibaly,bilal coulibaly,7.5,-130.0,102.0,WAS,709.196115000,62134999.0,62135001.0
+2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Bilal Coulibaly,bilal coulibaly,7.5,-130.0,102.0,WAS,709.196115,62134999.0,62135001.0
 2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Anthony Davis,anthony davis,21.5,-122.0,-104.0,WAS,709.196069348,12260628.0,12260629.0
 2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Onyeka Okongwu,onyeka okongwu,14.5,-120.0,-106.0,ATL,709.196077208,42160899.0,42160900.0
 2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Jalen Johnson,jalen johnson,20.5,-106.0,-120.0,ATL,709.196077205,40197109.0,40197108.0
@@ -8001,3 +8001,29 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Trae Young,trae young,9.5,102.0,-130.0,WAS,709.196071404,21175415.0,21175416.0
 2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Kyshawn George,kyshawn george,4.5,140.0,-180.0,WAS,709.196071432,74706441.0,74706439.0
 2026-11-06 15:57,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Onyeka Okongwu,onyeka okongwu,3.5,142.0,-184.0,ATL,709.196077193,42160899.0,42160900.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Max Christie,max christie,8.5,-108.0,-122.0,DAL,709.196052759,43025877.0,43025876.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,P.J. Washington,pj washington,13.5,-110.0,-122.0,DAL,709.196052764,62687064.0,62687065.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Zaccharie Risacher,zaccharie risacher,7.5,102.0,-136.0,DAL,709.196118820,71463821.0,71463823.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Kyrie Irving,kyrie irving,22.5,-104.0,-128.0,DAL,709.196052739,12260613.0,12260614.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Daniel Gafford,daniel gafford,9.5,-106.0,-125.0,DAL,709.196052745,27543227.0,27543228.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Cooper Flagg,cooper flagg,26.5,-110.0,-122.0,DAL,709.196052748,75811240.0,75811222.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Cooper Flagg,cooper flagg,6.5,-144.0,108.0,DAL,709.196052734,75811240.0,75811222.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,P.J. Washington,pj washington,6.5,-158.0,116.0,DAL,709.196052737,62687064.0,62687065.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Max Christie,max christie,2.5,100.0,-132.0,DAL,709.196052757,43025877.0,43025876.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Zaccharie Risacher,zaccharie risacher,3.5,-138.0,104.0,DAL,709.196118819,71463821.0,71463823.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Jaxson Hayes,jaxson hayes,5.5,-138.0,104.0,UTA,709.196050268,27031950.0,27031951.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Kyrie Irving,kyrie irving,3.5,-144.0,108.0,DAL,709.196052726,12260613.0,12260614.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Naji Marshall,naji marshall,3.5,100.0,-132.0,DAL,709.196052723,39295949.0,39295948.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Kyrie Irving,kyrie irving,4.5,-104.0,-128.0,DAL,709.196052742,12260613.0,12260614.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,6.5,128.0,-172.0,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 15:59,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,5.5,-162.0,122.0,UTA,709.196050232,50315096.0,50315095.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Jakob Poeltl,jakob poeltl,9.5,-108.0,-122.0,TOR,709.196094058,23936961.0,23936962.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Ja'Kobe Walter,jakobe walter,14.5,104.0,-138.0,TOR,709.196047378,62606687.0,62606690.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Immanuel Quickley,immanuel quickley,19.5,-110.0,-122.0,TOR,709.196047353,38389172.0,38389173.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ja'Kobe Walter,jakobe walter,4.5,108.0,-144.0,TOR,709.196047350,62606687.0,62606690.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,RJ Barrett,rj barrett,6.5,100.0,-132.0,TOR,709.196047283,24729449.0,24729450.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jamal Shead,jamal shead,2.5,-136.0,102.0,TOR,709.196172493,43166207.0,43166206.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Jaime Jaquez Jr.,jaime jaquez,3.5,132.0,-178.0,MIL,709.196052505,43072643.0,43072644.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Immanuel Quickley,immanuel quickley,6.5,-118.0,-112.0,TOR,709.196047327,38389172.0,38389173.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,-130.0,-102.0,TOR,709.196047368,24729449.0,24729450.0
+2026-11-06 15:59,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Collin Murray-Boyles,collin murray boyles,2.5,132.0,-178.0,TOR,709.196047278,65925589.0,65925572.0

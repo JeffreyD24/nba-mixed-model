@@ -14,5 +14,16 @@ placed_et,issue,date,away,home,market,pick,line,odds,stake,version,status,profit
 2026-11-01 20:18:00,14.0,2026-11-02,utah,sa,total,over,230.5,-105.0,1.0,NBA totals v2,L,-1.0,-1.0
 2026-11-02 05:42:00,15.0,2026-11-02,sac,dal,total,under,234.5,-110.0,1.0,NBA totals v2,W,0.91,0.91
 2026-11-02 12:51:00,16.0,2026-11-02,chi,phi,total,under,238.5,-107.0,1.0,NBA totals v4,W,0.93,0.93
-2026-11-03 20:01:00,17.0,2026-11-04,mia,lac,total,under,233.5,-106.0,1.0,NBA totals v4,pending,,
-2026-11-04 08:48:00,18.0,2026-11-04,atl,wsh,total,under,233.5,-113.0,1.0,NBA totals v4,pending,,
+2026-11-03 20:01:00,17.0,2026-11-04,mia,lac,total,under,233.5,-106.0,1.0,NBA totals v4,W,0.94,0.94
+2026-11-04 08:48:00,18.0,2026-11-04,atl,wsh,total,under,233.5,-113.0,1.0,NBA totals v4,W,0.88,0.88
+2026-11-05 16:26:00,,2026-11-06,min,no,total,over,229.5,-105.0,1.0,PROVISIONAL: NBA totals 2.5-3 pt edges,pending,,
+2026-11-05 16:31:00,,2026-11-06,sa,sac,total,over,228.5,-110.0,1.0,NBA totals v6,pending,,
+2026-11-05 19:14:00,,2026-11-06,por,lal,total,under,233.5,-106.0,1.0,PROVISIONAL: NBA totals line-movement (market models v1-an),pending,,
+2026-11-05 19:15:00,,2026-11-06,utah,dal,total,over,226.5,-110.0,1.0,NBA totals v6,pending,,
+2026-11-05 23:41:00,,2026-11-06,bos,cha,total,over,210.5,-106.0,1.0,NBA totals v6,pending,,
+2026-11-06 00:01:00,,2026-11-06,uta,dal,prop,Darryn Peterson under ast,4.5,100.0,1.0,PROVISIONAL: NBA props at FanDuel openers (STALE opener),pending,,
+2026-11-06 00:02:00,,2026-11-06,por,lal,prop,Damian Lillard under pts,21.5,-130.0,1.0,PROVISIONAL: NBA props at FanDuel openers (STALE opener),pending,,
+2026-11-06 00:03:00,,2026-11-06,okc,mem,prop,Jared McCain under pts,12.5,100.0,1.0,PROVISIONAL: NBA props at FanDuel openers (STALE opener),pending,,
+2026-11-06 00:03:00,,2026-11-06,okc,mem,prop,Aday Mara under reb,7.5,-114.0,1.0,PROVISIONAL: NBA props at FanDuel openers (STALE opener),pending,,
+2026-11-06 04:37:00,,2026-11-06,wsh,atl,prop,AJ Dybantsa under pts,18.5,-114.0,1.0,PROVISIONAL: NBA props at FanDuel openers (4h+ before tip),pending,,
+2026-11-06 04:38:00,,2026-11-06,wsh,atl,prop,Kingston Flemings under ast,5.5,-120.0,1.0,PROVISIONAL: NBA props at FanDuel openers (4h+ before tip),pending,,

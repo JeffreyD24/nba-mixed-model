@@ -5366,7 +5366,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cam Spencer,cam spencer,7.5,-114.0,-114.0,MEM,709.196060194,50729407.0,50729406.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Zach Edey,zach edey,7.5,-136.0,102.0,MEM,709.196046721,43111543.0,43111547.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cameron Boozer,cameron boozer,16.5,-125.0,-106.0,MEM,709.196045732,90748927.0,90748928.0
-2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Shai Gilgeous-Alexander,shai gilgeous alexander,32.5,-102.0,-130.0,OKC,709.196043070,21662973.0,21662974.0
+2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Shai Gilgeous-Alexander,shai gilgeous alexander,32.5,-102.0,-130.0,OKC,709.19604307,21662973.0,21662974.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Alex Caruso,alex caruso,8.5,-108.0,-122.0,OKC,709.196044518,23677919.0,23677920.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cedric Coward,cedric coward,12.5,-130.0,-102.0,MEM,709.196045905,76584720.0,76584726.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Jerami Grant,jerami grant,11.5,102.0,-136.0,MEM,709.196060265,16529226.0,16529227.0
@@ -5375,5 +5375,5 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Alex Caruso,alex caruso,3.5,106.0,-140.0,OKC,709.196044515,23677919.0,23677920.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Shai Gilgeous-Alexander,shai gilgeous alexander,4.5,-108.0,-122.0,OKC,709.196043048,21662973.0,21662974.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Ajay Mitchell,ajay mitchell,4.5,112.0,-148.0,OKC,709.196043201,53679067.0,53679062.0
-2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cam Spencer,cam spencer,5.5,126.0,-166.0,MEM,709.196060190,50729407.0,50729406.0
+2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cam Spencer,cam spencer,5.5,126.0,-166.0,MEM,709.19606019,50729407.0,50729406.0
 2026-11-06 12:15,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ty Jerome,ty jerome,5.5,-110.0,-120.0,MEM,709.196045668,23651199.0,23651198.0

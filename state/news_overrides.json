@@ -218,5 +218,16 @@
   "url": "https://bsky.app/profile/paulgarcia.bsky.social/post/3mzm4dgjwpa2h",
   "text": "Tobias Harris and Jayden Quaintance are OUT Friday in Sacramento.  Maliq Brown and Ja'Kobi Gillespie are OUT with the Austin Spurs.",
   "swing": 0.03
+ },
+ "2026-11-06|cha|moussa diabate": {
+  "status": "Out",
+  "player": "Moussa Diabate",
+  "game_id": 22600026,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 12:57:15",
+  "seen_at_et": "2026-11-06 12:58:20",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mznxfv2uoo2v",
+  "text": "Moussa Diabate: Ruled out for Friday    https://www.rotowire.com/basketball/player/moussa-diabate-5708",
+  "swing": 0.49
  }
 }

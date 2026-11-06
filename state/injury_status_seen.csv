@@ -139,10 +139,8 @@ key,status,snapshot
 2026-11-06|wsh|felix okpara,Doubtful,2026-11-05_05_00PM
 2026-11-06|wsh|tristan vukcevic,Out,2026-11-05_05_00PM
 2026-11-06|wsh|jamir watkins,Out,2026-11-05_05_00PM
-2026-11-06|cha|moussa diabate,Questionable,2026-11-05_05_00PM
 2026-11-06|cha|pj hall,Out,2026-11-05_05_00PM
 2026-11-06|cha|kon knueppel,Out,2026-11-05_05_00PM
-2026-11-06|cha|dennis schroder,Questionable,2026-11-05_05_00PM
 2026-11-06|cha|grant williams,Out,2026-11-05_05_00PM
 2026-11-06|cle|jarrett allen,Questionable,2026-11-05_05_00PM
 2026-11-06|cle|tyrese proctor,Questionable,2026-11-05_05_00PM
@@ -171,7 +169,6 @@ key,status,snapshot
 2026-11-06|mil|cormac ryan,Out,2026-11-05_06_00PM
 2026-11-06|min|donte divincenzo,Out,2026-11-05_06_00PM
 2026-11-06|min|anthony edwards,Out,2026-11-05_06_00PM
-2026-11-06|min|terrence shannon,Questionable,2026-11-05_06_00PM
 2026-11-06|okc|chet holmgren,Out,2026-11-05_06_15PM
 2026-11-06|okc|nikola topic,Out,2026-11-05_06_15PM
 2026-11-06|okc|cason wallace,Out,2026-11-05_06_15PM
@@ -201,3 +198,6 @@ key,status,snapshot
 2026-11-06|tor|immanuel quickley,Questionable,2026-11-06_12_45PM
 2026-11-06|no|trey murphy,Available,2026-11-06_12_45PM
 2026-11-06|no|julian reese,Available,2026-11-06_12_45PM
+2026-11-06|cha|moussa diabate,Out,2026-11-06_01_00PM
+2026-11-06|cha|dennis schroder,Out,2026-11-06_01_00PM
+2026-11-06|min|terrence shannon,Out,2026-11-06_01_00PM

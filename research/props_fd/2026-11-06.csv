@@ -1085,12 +1085,25 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jrue Holiday,jrue holiday,4.5,134,-180,POR,709.196048593,12260620.0,12260621.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jake Laravia,jake laravia,2.5,-172,128,LAL,709.196045282,90251254.0,90251266.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Sidy Cissoko,sidy cissoko,2.5,-130,-102,POR,709.196048604,68232609.0,68232610.0
-2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Robert Williams III,robert williams,6.5,126,-166,POR,709.196048600,90846389.0,90846386.0
+2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Robert Williams III,robert williams,6.5,126,-166,POR,709.1960486,90846389.0,90846386.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Damian Lillard,damian lillard,3.5,-140,106,POR,709.196048586,12260575.0,12260576.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Deni Avdija,deni avdija,6.5,-130,-102,POR,709.196048584,37901072.0,37901070.0
-2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,102,-136,POR,709.196048560,12260575.0,12260576.0
-2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Toumani Camara,toumani camara,1.5,-106,-122,POR,709.196048570,43450264.0,43450266.0
+2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,102,-136,POR,709.19604856,12260575.0,12260576.0
+2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Toumani Camara,toumani camara,1.5,-106,-122,POR,709.19604857,43450264.0,43450266.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,100,-132,POR,709.196048601,12260620.0,12260621.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Donovan Clingan,donovan clingan,1.5,-132,100,POR,709.196048578,50752175.0,50752173.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,5.5,-136,102,POR,709.196048599,37901072.0,37901070.0
 2026-11-06 00:13,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-160,120,LAL,709.196045222,41574998.0,41574999.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Jaime Jaquez Jr.,jaime jaquez,14.5,-102,-130,MIL,709.196052493,43072643.0,43072644.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Myles Turner,myles turner,10.5,-104,-128,MIL,709.196052477,12234258.0,12234259.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Kel'el Ware,kelel ware,9.5,100,-132,MIL,709.196054133,50596621.0,50596622.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Ryan Rollins,ryan rollins,10.5,-120,-110,MIL,709.196053657,43183325.0,43183330.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Brayden Burries,brayden burries,11.5,-120,-110,MIL,709.196052488,92719057.0,92719056.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Kyle Kuzma,kyle kuzma,4.5,-128,-104,MIL,709.196052501,13527607.0,13527606.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Kyle Kuzma,kyle kuzma,2.5,100,-132,MIL,709.196052513,13527607.0,13527606.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Jaime Jaquez Jr.,jaime jaquez,3.5,102,-136,MIL,709.196052505,43072643.0,43072644.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Ryan Rollins,ryan rollins,4.5,132,-178,MIL,709.196053661,43183325.0,43183330.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Tyler Herro,tyler herro,3.5,-160,120,MIL,709.196052492,26611574.0,26611575.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,110,-146,TOR,709.196047368,24729449.0,24729450.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Ja'Kobe Walter,jakobe walter,1.5,-198,146,TOR,709.196047312,62606687.0,62606690.0
+2026-11-06 00:15,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Collin Murray-Boyles,collin murray boyles,1.5,-178,132,TOR,709.196047278,65925589.0,65925572.0

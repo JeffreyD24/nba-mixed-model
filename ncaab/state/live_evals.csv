@@ -68,3 +68,7 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 18:25,297627,Furman Paladins,Northern Iowa Panthers,-4.5,10.25,8.24,3.39,4.51,0.01,PASS,edge 0.01 < 0.5,,,PASS,no live_features.csv,
 2026-11-06 18:25,303327,UTSA Roadrunners,VMI Keydets,-5.5,10.43,9.36,11.21,6.24,0.74,PASS,a team has under 3 games,,,PASS,no live_features.csv,
 2026-11-06 18:25,297639,Bradley Braves,Pacific Tigers,-1.5,8.95,7.0,9.14,2.46,0.96,PASS,a team has under 3 games,,,PASS,no live_features.csv,
+2026-11-06 18:35,302477,Winthrop Eagles,North Dakota Fighting Hawks,-9.5,18.43,17.75,14.63,10.38,0.88,PASS,a team has under 3 games,,,PASS,no live_features.csv,
+2026-11-06 18:35,297419,East Carolina Pirates,UNC Wilmington Seahawks,3.5,4.16,3.8,4.44,-2.52,0.98,PASS,a team has under 3 games,,,PASS,no live_features.csv,
+2026-11-06 18:35,297634,Drexel Dragons,Colgate Raiders,-1.5,8.43,10.05,0.47,1.63,0.13,PASS,edge 0.13 < 0.5,,,PASS,no live_features.csv,
+2026-11-06 18:35,297421,Montana State Bobcats,Long Beach State 49ers,-10.5,13.99,18.82,14.64,11.25,0.75,PASS,a team has under 3 games,,,PASS,no live_features.csv,

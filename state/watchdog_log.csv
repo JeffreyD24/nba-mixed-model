@@ -5,3 +5,4 @@ time_utc,event,detail
 2026-11-06 00:21,fixed,"FanDuel prop snapshots: state/props_fd_runs.csv never saved"
 2026-11-06 03:32,problem,"NBA evening run: last run FAILED 10 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)"
 2026-11-06 06:45,problem,"Sharp money tracker: no run for 73 min (expected within 60)"
+2026-11-06 08:00,fixed,"Sharp money tracker: no run for 73 min (expected within 60)"

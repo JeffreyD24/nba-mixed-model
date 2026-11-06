@@ -1,4 +1,3 @@
 {
- "stale|nba-mixed-model|sharp-live.yml": "Sharp money tracker: no run for 73 min (expected within 60)",
- "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 203 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)"
+ "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 277 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)"
 }

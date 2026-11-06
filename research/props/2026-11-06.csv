@@ -8908,3 +8908,21 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-06 10:00,22600031,2026-11-06,Total Assists and Rebounds,4395628,Zion Williamson,,8.5,-147.0,7.5,111.0,2026-11-06T17:58Z,under
 2026-11-06 10:00,22600031,2026-11-06,Total Assists and Rebounds,4397002,Ayo Dosunmu,,8.5,-146.0,9.5,-115.0,2026-11-06T17:51Z,over
 2026-11-06 10:00,22600031,2026-11-06,Total Assists and Rebounds,4397002,Ayo Dosunmu,,8.5,111.0,9.5,-114.0,2026-11-06T17:51Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Points,3134907,Kyle Kuzma,,10.5,-113.0,10.5,-117.0,2026-11-06T09:25Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Points,3134907,Kyle Kuzma,,10.5,-113.0,10.5,-109.0,2026-11-06T09:25Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Points,5105623,Kel'el Ware,,9.5,-121.0,9.5,-115.0,2026-11-06T09:25Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Points,5105623,Kel'el Ware,,9.5,-105.0,9.5,-111.0,2026-11-06T09:25Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Rebounds,4395724,Immanuel Quickley,,4.5,125.0,3.5,-160.0,2026-11-06T17:32Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Rebounds,4395724,Immanuel Quickley,,4.5,-165.0,3.5,121.0,2026-11-06T17:32Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Rebounds,4684272,Ja'Kobe Walter,,3.5,-140.0,3.5,-146.0,2026-11-06T11:37Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Rebounds,4684272,Ja'Kobe Walter,,3.5,107.0,3.5,111.0,2026-11-06T11:37Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Points and Assists,4432848,Jaime Jaquez Jr.,,18.5,-107.0,18.5,-103.0,2026-11-06T17:32Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Points and Assists,4432848,Jaime Jaquez Jr.,,18.5,-123.0,18.5,-127.0,2026-11-06T17:32Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Points and Rebounds,4684272,Ja'Kobe Walter,,15.5,-119.0,16.5,-111.0,2026-11-06T17:32Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Points and Rebounds,4684272,Ja'Kobe Walter,,15.5,-111.0,16.5,-119.0,2026-11-06T17:32Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Points and Rebounds,5082206,Brayden Burries,,15.5,-118.0,15.5,-112.0,2026-11-06T12:19Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Points and Rebounds,5082206,Brayden Burries,,15.5,-112.0,15.5,-118.0,2026-11-06T12:19Z,under
+2026-11-06 10:05,22600030,2026-11-06,Total Assists and Rebounds,4684272,Ja'Kobe Walter,,5.5,-145.0,5.5,-150.0,2026-11-06T18:01Z,over
+2026-11-06 10:05,22600030,2026-11-06,Total Assists and Rebounds,4684272,Ja'Kobe Walter,,5.5,110.0,5.5,114.0,2026-11-06T18:01Z,under
+2026-11-06 10:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4684272,Ja'Kobe Walter,,17.5,-125.0,18.5,-115.0,2026-11-06T18:01Z,over
+2026-11-06 10:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4684272,Ja'Kobe Walter,,17.5,-105.0,18.5,-114.0,2026-11-06T18:01Z,under

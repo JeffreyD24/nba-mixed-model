@@ -8602,8 +8602,31 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Ayo Dosunmu,ayo dosunmu,17.5,-122.0,-104.0,MIN,709.196061872,41652478.0,41652484.0
 2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jonathan Kuminga,jonathan kuminga,14.5,-113.0,-113.0,MIN,709.196062178,40221490.0,40221489.0
 2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Rudy Gobert,rudy gobert,10.5,104.0,-132.0,MIN,709.196062741,12260609.0,12260610.0
-2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-128.0,100.0,MIN,709.196062180,40221490.0,40221489.0
+2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-128.0,100.0,MIN,709.19606218,40221490.0,40221489.0
 2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jaden McDaniels,jaden mcdaniels,5.5,-122.0,-104.0,MIN,709.196061625,38988768.0,38988773.0
 2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jonathan Kuminga,jonathan kuminga,2.5,-102.0,-125.0,MIN,709.196062181,40221490.0,40221489.0
 2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Trey Murphy III,trey murphy,2.5,-162.0,126.0,NOP,709.196064716,40336995.0,40336994.0
 2026-11-06 16:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-128.0,100.0,MIN,709.196062475,26324737.0,26324736.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Naz Reid,naz reid,16.5,-111.0,-115.0,CHA,709.196085084,27986553.0,27986554.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,26.5,-120.0,-106.0,BOS,709.196079679,15552473.0,15552474.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Ryan Kalkbrenner,ryan kalkbrenner,6.5,-111.0,-115.0,CHA,709.196166892,43049110.0,43049111.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Brandon Miller,brandon miller,21.5,-125.0,-102.0,CHA,709.196085055,50113302.0,50113301.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Coby White,coby white,12.5,-115.0,-111.0,CHA,709.196085086,26636212.0,26636213.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Payton Pritchard,payton pritchard,2.5,-156.0,124.0,BOS,709.196079638,38225629.0,38225623.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Royce O'Neale,royce oneale,1.5,114.0,-146.0,CHA,709.196166888,12537923.0,12537924.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Grayson Allen,grayson allen,2.5,-111.0,-115.0,CHA,709.196111182,37819081.0,37819080.0
+2026-11-06 16:37,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Brandon Miller,brandon miller,3.5,144.0,-186.0,CHA,709.196085063,50113302.0,50113301.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Max Christie,max christie,8.5,-108.0,-118.0,DAL,709.196052759,43025877.0,43025876.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Darryn Peterson,darryn peterson,13.5,-102.0,-125.0,UTA,709.196050324,90729780.0,90729781.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Cooper Flagg,cooper flagg,26.5,-104.0,-122.0,DAL,709.196052748,75811240.0,75811222.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,P.J. Washington,pj washington,6.5,-154.0,120.0,DAL,709.196052737,62687064.0,62687065.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Lauri Markkanen,lauri markkanen,6.5,100.0,-128.0,UTA,709.196050272,14588996.0,14588997.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Naji Marshall,naji marshall,3.5,100.0,-128.0,DAL,709.196052723,39295949.0,39295948.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,3.5,-162.0,126.0,UTA,709.196050326,90729780.0,90729781.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,6.5,124.0,-160.0,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 16:37,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,5.5,-154.0,120.0,UTA,709.196050232,50315096.0,50315095.0
+2026-11-06 16:37,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Robert Williams III,robert williams,5.5,-132.0,100.0,POR,709.196048562,90846389.0,90846386.0
+2026-11-06 16:37,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Scoot Henderson,scoot henderson,11.5,-112.0,-118.0,POR,709.196048610,62064858.0,62064857.0
+2026-11-06 16:37,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Toumani Camara,toumani camara,3.5,-154.0,116.0,POR,709.196048568,43450264.0,43450266.0
+2026-11-06 16:37,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Damian Lillard,damian lillard,3.5,-144.0,108.0,POR,709.196048586,12260575.0,12260576.0
+2026-11-06 16:37,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Deni Avdija,deni avdija,6.5,-118.0,-112.0,POR,709.196048584,37901072.0,37901070.0

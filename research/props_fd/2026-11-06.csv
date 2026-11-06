@@ -923,3 +923,12 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 23:57,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-114,-114,MIN
 2026-11-05 23:57,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jaden McDaniels,jaden mcdaniels,5.5,-114,-114,MIN
 2026-11-05 23:57,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jaden McDaniels,jaden mcdaniels,2.5,-132,100,MIN
+2026-11-05 23:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,James Harden,james harden,17.5,-130,-102,CLE
+2026-11-05 23:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Jarrett Allen,jarrett allen,12.5,-132,100,CLE
+2026-11-05 23:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Evan Mobley,evan mobley,9.5,106,-140,CLE
+2026-11-05 23:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,James Harden,james harden,6.5,-112,-118,CLE
+2026-11-05 23:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,LeBron James,lebron james,6.5,-132,100,PHI
+2026-11-05 23:59,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Ayo Dosunmu,ayo dosunmu,17.5,-108,-122,MIN
+2026-11-05 23:59,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Ayo Dosunmu,ayo dosunmu,4.5,-162,122,MIN
+2026-11-05 23:59,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Ayo Dosunmu,ayo dosunmu,4.5,-114,-114,MIN
+2026-11-05 23:59,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jaden McDaniels,jaden mcdaniels,2.5,-136,102,MIN

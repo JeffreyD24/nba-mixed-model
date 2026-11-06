@@ -1795,3 +1795,24 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cameron Boozer,cameron boozer,5.5,126,-166,MEM,709.196045733,90748927.0,90748928.0
 2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-148,112,OKC,709.196044513,23677919.0,23677920.0
 2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ajay Mitchell,ajay mitchell,3.5,-132,100,OKC,709.196043198,53679067.0,53679062.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Ziaire Williams,ziaire williams,7.5,-120,-110,LAL,709.196045261,40297002.0,40297001.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Damian Lillard,damian lillard,21.5,-106,-122,POR,709.196048594,12260575.0,12260576.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Donovan Clingan,donovan clingan,12.5,102,-136,POR,709.196048571,50752175.0,50752173.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Walker Kessler,walker kessler,12.5,-110,-120,LAL,709.196045234,43049096.0,43049095.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Quentin Grimes,quentin grimes,6.5,-128,-104,LAL,709.196045256,42067800.0,42067801.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Robert Williams III,robert williams,5.5,-130,-102,POR,709.196048562,90846389.0,90846386.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jrue Holiday,jrue holiday,13.5,-108,-122,POR,709.196048583,12260620.0,12260621.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Toumani Camara,toumani camara,11.5,-122,-108,POR,709.196048581,43450264.0,43450266.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Austin Reaves,austin reaves,21.5,-106,-125,LAL,709.196045245,41574998.0,41574999.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jake Laravia,jake laravia,5.5,-110,-120,LAL,709.196045224,90251254.0,90251266.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Sidy Cissoko,sidy cissoko,5.5,100,-132,POR,709.196048611,68232609.0,68232610.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Scoot Henderson,scoot henderson,11.5,-114,-114,POR,709.196048610,62064858.0,62064857.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jake Laravia,jake laravia,2.5,-174,130,LAL,709.196045282,90251254.0,90251266.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Sidy Cissoko,sidy cissoko,2.5,-130,-102,POR,709.196048604,68232609.0,68232610.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Robert Williams III,robert williams,6.5,126,-168,POR,709.196048600,90846389.0,90846386.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,104,-138,POR,709.196048560,12260575.0,12260576.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Toumani Camara,toumani camara,1.5,-106,-125,POR,709.196048570,43450264.0,43450266.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Scoot Henderson,scoot henderson,2.5,-106,-125,POR,709.196048559,62064858.0,62064857.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,100,-132,POR,709.196048601,12260620.0,12260621.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,6.5,122,-162,POR,709.196048599,37901072.0,37901070.0
+2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-166,124,LAL,709.196045222,41574998.0,41574999.0

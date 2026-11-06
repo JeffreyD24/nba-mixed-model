@@ -1,4 +1,1 @@
-{
- "fail|nfl-mixed-model|health.yml": "NFL daily health check: last run FAILED 620 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42034193275)",
- "hb|nba-mixed-model|state/props_fd_runs.csv": "FanDuel prop snapshots: state/props_fd_runs.csv never saved"
-}
+{}

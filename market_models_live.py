@@ -401,6 +401,13 @@ def check():
                     f"FanDuel "
                     f"{('%g' % r.pt_fanduel) if not pd.isna(r.pt_fanduel) else '-'}. Tip {tip_txt}.\n"
                     f"Backtest 2025-26 (bets the live code could make): 385 bets, beat the close by 1.31 pts (break-even 1.07) but -10.8u. Unproven.")
+            # Nov 6, 2026 (Jeffrey): every alert says when to stop. Approximate: the DON'T BET fires when the PREDICTED move left drops
+            # under 0.5 pts; holding the predicted close fixed, that is about here (half-point grid, rounded toward the alert line)
+            _c = float(r.dk_now) + (abs(r.pred) if side == "over" else -abs(r.pred))
+            _st = (max(float(r.dk_now) + 0.5, np.ceil((_c - 0.5) * 2) / 2) if side == "over" else min(float(r.dk_now) - 0.5, np.floor((_c + 0.5) * 2) / 2))
+            body += (f"\nSTOP: don't bet if DraftKings' total {'rises' if side == 'over' else 'drops'} to {_st:g} or "
+                     f"{'higher' if side == 'over' else 'lower'} (most of the predicted move is gone; approximate), or the price is worse than "
+                     f"{AL.MAX_PRICE} and FanDuel has nothing as good. A DON'T BET push follows if the model stops expecting the move.")
             if fdt: body = fdt + "\n" + body
             try:
                 sent = AL.notify(f"BET {what} (PROVISIONAL movement): {Aw} @ {H}, {tip_txt}", body, priority="high",
@@ -462,6 +469,12 @@ def check():
                         f"expected close {r.dk_now + r.pred:.1f} blend to a fair total of {fair:.1f}, {abs(edge):.1f} pts "
                         f"{'above' if edge > 0 else 'below'} DraftKings {r.dk_now:g}: bet {side.upper()}. Tip {tip_txt}.\n"
                         f"Backtest 2025-26 (honest timing): 257 bets, beat the close by 1.44 pts (break-even 1.07), +1.8u. Unproven.")
+                # Nov 6, 2026 (Jeffrey): every alert says when to stop. DON'T BET fires when the edge at DK now drops under BLEND_STOP;
+                # holding the fair total fixed (conservative: in fact fair rises ~0.76 pts per pt the market moves our way)
+                _st = (np.ceil((fair - BLEND_STOP) * 2) / 2 if side == "over" else np.floor((fair + BLEND_STOP) * 2) / 2)
+                body += (f"\nSTOP: don't bet if DraftKings' total {'rises' if side == 'over' else 'drops'} to {_st:g} or "
+                         f"{'higher' if side == 'over' else 'lower'} (edge under {BLEND_STOP} pts vs the fair {fair:.1f}), or the price is worse "
+                         f"than {AL.MAX_PRICE} and FanDuel has nothing as good.")
                 if fdt: body = fdt + "\n" + body
                 try:
                     sent = AL.notify(f"BET {what} (PROVISIONAL blend): {Aw} @ {H}, {tip_txt}", body, priority="high",

@@ -115,7 +115,7 @@ for d in dates:
                 title = f"[BET] PROVISIONAL NCAAM: {team} {bl:+g} ({float(px):+.0f}) DraftKings"
                 body = (f"BET {team} {bl:+g} at DraftKings ({float(px):+.0f}): DraftKings' opening number only. {an} @ {hn}, {tip:%a %-I:%M %p}.\n"
                         f"Stale-line rule: the opener is {abs(e):.2f} pts off the predicted close ({-pc:+.1f} home), so the line should move toward {team}. "
-                        f"If it has already moved against you, skip.\nLINES: DraftKings {bl:+g} ({float(px):+.0f}) | {fd_txt}\n"
+                        f"\nSTOP: bet only {team} {bl:+g} at {MAX_PRICE} or better. If DraftKings' number is no longer {bl:+g}, or the price is worse than {MAX_PRICE}, don't bet it (the rule only bets DraftKings' first number; Nov 6, 2026).\nLINES: DraftKings {bl:+g} ({float(px):+.0f}) | {fd_txt}\n"
                         f"PROVISIONAL (2023-26 at DraftKings' opener: 623 bets 57.9%, +65.5u, CLV +1.27). Own record; stops at -15u, or at 100 bets if CLV < +0.63.")
                 bets.append(dict(at_et=str(NOW)[:16], an_id=gid, date=d, home=hn, away=an, side=side, team=team, line=bl, price=px, edge=round(abs(e), 2),
                                  pred_close_home=round(-pc, 2), sent=False, title=title, body=body))

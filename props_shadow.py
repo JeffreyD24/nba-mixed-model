@@ -128,6 +128,18 @@ def p_over(mu, stat, line, params=None):
     return float(1 - stats.nbinom.cdf(np.floor(line), r, r / (r + mu)))
 
 
+def stop_price(popen, p, ev_min, tol=0.05):
+    """Worst American price the live rule still bets (Nov 6, 2026, Jeffrey asked every alert to say when to stop).
+    Same two checks as live(): decimal price within `tol` of the opener's, and EV >= ev_min at that price."""
+    ok = lambda a: abs(float(dec(a)) - float(dec(popen))) <= tol and p * float(dec(a)) - 1 >= ev_min   # exactly live()'s checks
+    a = int(popen)
+    if not ok(a): return None
+    while True:                                   # step one cent worse at a time (-118 -> -119 ...; +110 -> +109 ... +100 -> -101)
+        nxt = a - 1 if a > 100 else (-101 if a == 100 else a - 1)
+        if not ok(nxt): return a
+        a = nxt
+
+
 def pick():
     import actionnet
     path = os.path.join(W, "research", "props_fd", f"{TODAY}.csv")
@@ -278,7 +290,11 @@ def live():
             body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. Model projects {mu:.1f} {sname}; chance {ps*100:.0f}% vs FanDuel's {((pk if side == 'over' else 1-pk))*100:.0f}%, "
                     f"EV {ev*100:+.1f}%. Still at FanDuel's opening line. {tier_lab} (props v1b at FanDuel openers, tier '{r.tier}'): 1 unit, own record, "
                     f"stop rules in research/PROVISIONAL_BETS.md. Backtest 2023-25 at FanDuel openers: 4h+ before tip +3.9% ROI; 1-4h +22%; stale not tested. "
-                    f"If the line has moved, skip it. Log it with 'Log a bet' (market: prop) if you place it.")
+                    f"Log it with 'Log a bet' (market: prop) if you place it.")
+            # Nov 6, 2026 (Jeffrey): every alert says exactly when to stop placing it (the same two price checks this rule uses)
+            sp = stop_price(popen, ps, PO["ev_min"])
+            if sp is not None: body += (f"\nSTOP: bet only {side.upper()} {r.line:g} at {sp:+d} or better at FanDuel. If the line leaves {r.line:g} or the price "
+                     f"gets worse than {sp:+d}, don't bet it (outside the opener window or EV under {PO['ev_min']*100:.0f}%).\n")
             # Nov 6, 2026 (Jeffrey): FanDuel + DraftKings links and which book is better, by the model's own EV at each book's line and price
             try:
                 import dk_props, fanduel

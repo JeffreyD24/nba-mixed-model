@@ -17915,3 +17915,29 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-06 16:55,22600029,2026-11-06,"Total Points, Rebounds, and Assists",4278073,Shai Gilgeous-Alexander,,43.5,-124.0,42.5,-109.0,2026-11-07T00:50Z,under
 2026-11-06 16:55,22600029,2026-11-06,"Total Points, Rebounds, and Assists",4900671,Ajay Mitchell,,28.5,-117.0,27.5,-113.0,2026-11-06T23:11Z,over
 2026-11-06 16:55,22600029,2026-11-06,"Total Points, Rebounds, and Assists",4900671,Ajay Mitchell,,28.5,-112.0,27.5,-117.0,2026-11-06T23:11Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points,4591725,Ryan Rollins,,11.5,-129.0,10.5,-105.0,2026-11-07T00:47Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points,4591725,Ryan Rollins,,11.5,101.0,10.5,-122.0,2026-11-07T00:47Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Rebounds,3134907,Kyle Kuzma,,4.5,-133.0,4.5,-136.0,2026-11-06T20:49Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Rebounds,3134907,Kyle Kuzma,,4.5,101.0,4.5,103.0,2026-11-06T20:49Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total 3-Point Field Goals,3133628,Myles Turner,,1.5,-114.0,1.5,-134.0,2026-11-06T20:49Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total 3-Point Field Goals,3133628,Myles Turner,,1.5,-115.0,1.5,102.0,2026-11-06T20:49Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total 3-Point Field Goals,4432848,Jaime Jaquez Jr.,,1.5,177.0,1.5,143.0,2026-11-06T20:49Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total 3-Point Field Goals,4432848,Jaime Jaquez Jr.,,1.5,-237.0,1.5,-190.0,2026-11-06T20:49Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total 3-Point Field Goals,4591725,Ryan Rollins,,1.5,-112.0,1.5,153.0,2026-11-06T20:49Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total 3-Point Field Goals,4591725,Ryan Rollins,,1.5,-118.0,1.5,-204.0,2026-11-06T20:49Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Assists,3133628,Myles Turner,,12.5,-109.0,12.5,-114.0,2026-11-06T20:49Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Assists,3133628,Myles Turner,,12.5,-121.0,12.5,-116.0,2026-11-06T20:49Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Assists,4432848,Jaime Jaquez Jr.,,17.5,-122.0,18.5,-103.0,2026-11-06T20:49Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Assists,4432848,Jaime Jaquez Jr.,,17.5,-108.0,18.5,-127.0,2026-11-06T20:49Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Assists,4591725,Ryan Rollins,,16.5,-115.0,15.5,-105.0,2026-11-07T00:47Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Assists,4591725,Ryan Rollins,,16.5,-114.0,15.5,-125.0,2026-11-07T00:47Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,3133628,Myles Turner,,16.5,-104.0,16.5,-110.0,2026-11-06T21:06Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,3133628,Myles Turner,,16.5,-127.0,16.5,-119.0,2026-11-06T21:06Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,3134908,Jakob Poeltl,,16.5,-105.0,13.5,-114.0,2026-11-07T00:16Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,3134908,Jakob Poeltl,,16.5,-125.0,13.5,-116.0,2026-11-07T00:16Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,4395725,Tyler Herro,,24.5,-126.0,25.5,-124.0,2026-11-07T00:47Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,4395725,Tyler Herro,,24.5,-104.0,25.5,-106.0,2026-11-07T00:47Z,under
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,4591725,Ryan Rollins,,15.5,-120.0,14.5,-109.0,2026-11-07T00:50Z,over
+2026-11-06 17:00,22600030,2026-11-06,Total Points and Rebounds,4591725,Ryan Rollins,,15.5,-110.0,14.5,-120.0,2026-11-07T00:50Z,under
+2026-11-06 17:00,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4591725,Ryan Rollins,,20.5,-107.0,18.5,-120.0,2026-11-06T20:49Z,over
+2026-11-06 17:00,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4591725,Ryan Rollins,,20.5,-123.0,18.5,-110.0,2026-11-06T20:49Z,under

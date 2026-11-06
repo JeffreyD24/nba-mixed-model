@@ -301,7 +301,7 @@ def live():
                 dkq = dk_props.quote(r.stat, r.name)
                 ps_at = lambda ln: (p_over(max(mu, 0.05), r.stat, ln, PO) if side == "over" else 1 - p_over(max(mu, 0.05), r.stat, ln, PO))
                 ev_fd = ps_at(r.line) * float(dec(price)) - 1
-                fd_link = (f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={r.market_id}&selectionId[0]={r.over_sel if side == 'over' else r.under_sel}"
+                fd_link = (f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={r.market_id}&selectionId[0]={int(float(r.over_sel if side == 'over' else r.under_sel))}"   # int(): pandas made the id a float, '43049111.0' broke the link (Nov 6, 2026)
                            if pd.notna(getattr(r, "market_id", np.nan)) else fanduel.FD_PAGE["nba"])
                 if dkq:
                     dpx = dkq[side]; ev_dk = ps_at(dkq["line"]) * float(dec(dpx)) - 1

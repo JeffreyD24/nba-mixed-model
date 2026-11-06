@@ -1777,3 +1777,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:14,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,112,-148,TOR,709.196047368,24729449.0,24729450.0
 2026-11-06 01:14,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Ja'Kobe Walter,jakobe walter,1.5,-194,144,TOR,709.196047312,62606687.0,62606690.0
 2026-11-06 01:14,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Collin Murray-Boyles,collin murray boyles,1.5,-174,130,TOR,709.196047278,65925589.0,65925572.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Max Christie,max christie,9.5,-110,-120,DAL,709.196052759,43025877.0,43025876.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Naji Marshall,naji marshall,11.5,-120,-110,DAL,709.196052762,39295949.0,39295948.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,P.J. Washington,pj washington,6.5,-158,118,DAL,709.196052737,62687064.0,62687065.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Max Christie,max christie,3.5,132,-178,DAL,709.196052757,43025877.0,43025876.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Naji Marshall,naji marshall,3.5,-138,104,DAL,709.196052761,39295949.0,39295948.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,P.J. Washington,pj washington,1.5,126,-168,DAL,709.196052767,62687064.0,62687065.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Naji Marshall,naji marshall,3.5,106,-140,DAL,709.196052723,39295949.0,39295948.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Daniel Gafford,daniel gafford,1.5,-158,118,DAL,709.196052725,27543227.0,27543228.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Lauri Markkanen,lauri markkanen,1.5,-180,134,UTA,709.196050273,14588996.0,14588997.0
+2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-152,114,DAL,709.196052741,75811240.0,75811222.0

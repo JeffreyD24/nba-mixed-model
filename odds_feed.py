@@ -147,7 +147,8 @@ def write(W, rows):
     for (book, sport), g in df.groupby([df.book, df.sport.fillna("")]):
         d = os.path.join(W, "research", "feed", book, sport or "all", f"{win:%Y-%m-%d}"); os.makedirs(d, exist_ok=True)
         f = os.path.join(d, f"{win:%H%M}.csv.gz")
-        old = pd.read_csv(f, low_memory=False) if os.path.exists(f) else pd.DataFrame()
+        # dtype=str (Nov 6, 2026): read as numbers, FanDuel market ids lost a trailing zero (709.196153110 -> 709.19615311; ~8% of rows)
+        old = pd.read_csv(f, low_memory=False, dtype={"event_id": str, "market_id": str, "sel_id": str}) if os.path.exists(f) else pd.DataFrame()
         pd.concat([old, g], ignore_index=True).to_csv(f, index=False, compression="gzip"); n += len(g)
     return n
 

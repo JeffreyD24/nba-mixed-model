@@ -1279,3 +1279,12 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 20:38:24,295190,2026-11-06,2026-11-06 19:30,phi,cle,Consensus,event,total,over,229.5,-111,normal
 2026-11-05 20:38:24,295191,2026-11-06,2026-11-06 20:00,tor,mil,Consensus,event,spread,home,7.5,-114,normal
 2026-11-05 20:38:24,295191,2026-11-06,2026-11-06 20:00,tor,mil,Consensus,event,total,over,230.5,-110,normal
+2026-11-05 20:42:15,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,total,over,228.5,-110,normal
+2026-11-05 20:44:35,295191,2026-11-06,2026-11-06 20:00,tor,mil,Fanatics,event,moneyline,home,0.0,220,normal
+2026-11-05 20:44:35,295191,2026-11-06,2026-11-06 20:00,tor,mil,Fanatics,event,moneyline,away,0.0,-275,normal
+2026-11-05 20:44:35,295191,2026-11-06,2026-11-06 20:00,tor,mil,Fanatics,event,spread,home,7.0,-110,normal
+2026-11-05 20:44:35,295191,2026-11-06,2026-11-06 20:00,tor,mil,Fanatics,event,spread,away,-7.0,-110,normal
+2026-11-05 20:44:35,295191,2026-11-06,2026-11-06 20:00,tor,mil,Fanatics,event,total,under,230.5,-110,normal
+2026-11-05 20:44:35,295191,2026-11-06,2026-11-06 20:00,tor,mil,Fanatics,event,total,over,230.5,-110,normal
+2026-11-05 20:46:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,bet365,event,total,over,228.5,-110,normal
+2026-11-05 20:46:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,bet365,event,total,under,228.5,-110,normal

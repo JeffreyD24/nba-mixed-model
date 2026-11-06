@@ -43,6 +43,7 @@ LFN = ["lost_min_share", "lost_pts_share", "new_starters", "travel_miles", "tz_s
 V2, FTI, V2_OFF, FEAT_AT = None, {}, None, None
 try:
     V2 = json.load(open(os.path.join(W, "ncaab", "data", "live_blendc_v2.json"))); EDGE_V2 = float(V2["edge"])     # 0.62 (Nov 5, 2026)
+    if V2["features"] != ["const", "M2", "M8", "MKTL", "opener"] + LFN or len(V2["coef"]) != 17: V2_OFF = "v2 coefficients file has an unexpected feature order"
 except Exception as ex: V2_OFF = f"v2 coefficients unreadable ({type(ex).__name__})"
 try:
     FP = os.path.join(ST, "live_features.csv")
@@ -161,9 +162,6 @@ for d in dates:
                               v2_pred_close_margin=round(pc2, 2) if pc2 is not None and np.isfinite(pc2) else None,
                               v2_edge=round(e2, 2) if e2 is not None and np.isfinite(e2) else None, v2_verdict="PAPER" if why2 is None else "PASS", v2_reason=why2,
                               features_made_at_et=FEAT_AT))
-            if why2 is None:
-                paper2.append(dict(at_et=str(NOW)[:16], an_id=gid, date=d, home=hn, away=an, side=side2, team=hn if side2 == "home" else an,
-                                   line=line if side2 == "home" else -line, price=px2, edge=round(abs(e2), 2), pred_close_home=round(-pc2, 2), sent="paper"))
             if why is None:
                 team = hn if side == "home" else an; bl = line if side == "home" else -line
                 fdev = ((g.get("markets") or {}).get("69") or {}).get("event") or {}
@@ -176,6 +174,10 @@ for d in dates:
                         f"PROVISIONAL (2023-26 at DraftKings' opener: 623 bets 57.9%, +65.5u, CLV +1.27). Own record; stops at -15u, or at 100 bets if CLV < +0.63.")
                 bets.append(dict(at_et=str(NOW)[:16], an_id=gid, date=d, home=hn, away=an, side=side, team=team, line=bl, price=px, edge=round(abs(e), 2),
                                  pred_close_home=round(-pc, 2), sent=False, title=title, body=body))
+            if why2 is None:   # after v1's alert block, inside its own try: a v2 error can never drop a v1 alert (Fable re-review, Nov 6, 2026)
+                try: paper2.append(dict(at_et=str(NOW)[:16], an_id=gid, date=d, home=hn, away=an, side=side2, team=hn if side2 == "home" else an,
+                                        line=line if side2 == "home" else -line, price=px2, edge=round(abs(e2), 2), pred_close_home=round(-pc2, 2), sent="paper"))
+                except Exception as ex: print("v2 paper pick skipped:", type(ex).__name__)
         except Exception as ex:
             print("game skipped:", type(ex).__name__, str(ex)[:100])
 # ---- save state BEFORE any push (a crash after this cannot re-alert), then send and record 'sent'

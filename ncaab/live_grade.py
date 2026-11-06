@@ -44,7 +44,7 @@ if units <= -15: dec = "STOP (-15u)"
 elif n >= 100 and (clv < 0.63 or units < 0): dec = "STOP (100-bet check failed)"
 elif n >= 100: dec = "100-bet check passed: Fable review to promote"
 out += ["", f"- **{len(R)} alerts, graded {(D.result == 'W').sum()}-{(D.result == 'L').sum()}-{(D.result == 'P').sum()}, {units:+.2f}u, CLV {clv:+.2f} (break-even +0.63; expected ~+1.2 if we get the opener)**",
-        f"- Decision: **{dec}**", "", "| Date | Bet | Result | Units | CLV |", "|---|---|---|---|---|"] + \
+        f"- Decision: **{dec}**" + ("" if LIVE else " (paper: informational only, nothing is stopped or promoted by this record)"), "", "| Date | Bet | Result | Units | CLV |", "|---|---|---|---|---|"] + \
        [f"| {x.date} | {x.bet} | {x.result} | {x.units:+.2f} | {x.clv:+.2f} |" for x in R.sort_values("date", ascending=False).itertuples()]
 open(os.path.join(ST, REC), "w").write("\n".join(out) + "\n"); print("\n".join(out[:6]))
 if LIVE and dec.startswith("STOP"): open(os.path.join(ST, "live_stop.txt"), "w").write(f"{dec} on {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d}\n")   # live_alert.py stops alerting

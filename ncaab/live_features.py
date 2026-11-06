@@ -17,7 +17,12 @@ today = pd.Timestamp.now(tz="America/New_York").normalize().tz_localize(None)
 G = pd.read_csv(os.path.join(W, "ncaab", "data", "all_games.csv"), low_memory=False, usecols=["season", "date"]); cur = int(G.season.max())
 last = pd.to_datetime(G.date).max()
 if last < today - pd.Timedelta(days=1):   # Fable fix, Nov 6, 2026: m2_daily failed -> rest_days / back_to_back would be wrong; keep the old file (live_alert ignores it after 1 day)
-    print(f"all_games.csv ends {last.date()}, before yesterday ({(today - pd.Timedelta(days=1)).date()}): the daily update failed; features NOT written"); sys.exit(0)
+    missed = []                              # days after the last saved game that DID have games (a no-game day like Dec 25 is fine; re-review Nov 6)
+    for k in range(1, min((today - last).days, 6)):
+        js = get(f"https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={last + pd.Timedelta(days=k):%Y%m%d}&groups=50&limit=500")
+        if js is None or js.get("events"): missed.append(str((last + pd.Timedelta(days=k)).date()))
+    if missed or (today - last).days > 5:
+        print(f"all_games.csv ends {last.date()}, but games were played (or could not be checked) on {missed or 'too many days'}: the daily update failed; features NOT written"); sys.exit(0)
 if today.month >= 8 and today.year + 1 > cur: cur = today.year + 1
 rows = []
 for k in range(4):

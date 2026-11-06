@@ -6263,9 +6263,28 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Royce O'Neale,royce oneale,6.5,-125.0,-106.0,CHA,709.196166893,12537923.0,12537924.0
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Coby White,coby white,13.5,100.0,-132.0,CHA,709.196085086,26636212.0,26636213.0
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Paul George,paul george,4.5,-120.0,-110.0,BOS,709.196079664,12234250.0,12234251.0
-2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Brandon Miller,brandon miller,4.5,-152.0,114.0,CHA,709.196085080,50113302.0,50113301.0
+2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Brandon Miller,brandon miller,4.5,-152.0,114.0,CHA,709.19608508,50113302.0,50113301.0
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Jayson Tatum,jayson tatum,7.5,118.0,-158.0,BOS,709.196079667,15552473.0,15552474.0
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Neemias Queta,neemias queta,6.5,-148.0,112.0,BOS,709.196079694,64163654.0,64163656.0
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Ryan Kalkbrenner,ryan kalkbrenner,6.5,-125.0,-106.0,CHA,709.196166889,43049110.0,43049111.0
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Jayson Tatum,jayson tatum,6.5,110.0,-146.0,BOS,709.196079624,15552473.0,15552474.0
 2026-11-06 13:18,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Derrick White,derrick white,4.5,104.0,-138.0,BOS,709.196079689,22613511.0,22613512.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Naz Reid,naz reid,15.5,-125.0,-104.0,CHA,709.196085084,27986553.0,27986554.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Brandon Miller,brandon miller,21.5,-106.0,-125.0,CHA,709.196085055,50113302.0,50113301.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Ryan Kalkbrenner,ryan kalkbrenner,7.5,-120.0,-110.0,CHA,709.196166892,43049110.0,43049111.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Royce O'Neale,royce oneale,6.5,-128.0,-104.0,CHA,709.196166893,12537923.0,12537924.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Coby White,coby white,12.5,-120.0,-110.0,CHA,709.196085086,26636212.0,26636213.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Ryan Kalkbrenner,ryan kalkbrenner,6.5,-114.0,-114.0,CHA,709.196166889,43049110.0,43049111.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Naz Reid,naz reid,2.5,158.0,-215.0,CHA,709.196085087,27986553.0,27986554.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Brandon Miller,brandon miller,3.5,146.0,-198.0,CHA,709.196085063,50113302.0,50113301.0
+2026-11-06 13:20,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Royce O'Neale,royce oneale,1.5,120.0,-160.0,CHA,709.196166888,12537923.0,12537924.0
+2026-11-06 13:20,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,3.5,-152.0,114.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 13:20,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-108.0,-122.0,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cameron Boozer,cameron boozer,16.5,-122.0,-108.0,MEM,709.196045732,90748927.0,90748928.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Jaylen Wells,jaylen wells,10.5,-118.0,-114.0,MEM,709.196046345,65284710.0,65284709.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cedric Coward,cedric coward,12.5,-130.0,-102.0,MEM,709.196045905,76584720.0,76584726.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Ty Jerome,ty jerome,21.5,-104.0,-128.0,MEM,709.196045666,23651199.0,23651198.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Jerami Grant,jerami grant,11.5,102.0,-136.0,MEM,709.196060265,16529226.0,16529227.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Cedric Coward,cedric coward,7.5,102.0,-136.0,MEM,709.196045907,76584720.0,76584726.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Ty Jerome,ty jerome,3.5,-106.0,-125.0,MEM,709.196045669,23651199.0,23651198.0
+2026-11-06 13:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cedric Coward,cedric coward,2.5,-122.0,-108.0,MEM,709.196045911,76584720.0,76584726.0

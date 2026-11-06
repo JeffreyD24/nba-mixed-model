@@ -7638,3 +7638,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 15:25,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cameron Boozer,cameron boozer,4.5,-136.0,102.0,MEM,709.196045733,90748927.0,90748928.0
 2026-11-06 15:25,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-132.0,100.0,OKC,709.196044513,23677919.0,23677920.0
 2026-11-06 15:25,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ty Jerome,ty jerome,5.5,-106.0,-122.0,MEM,709.196045668,23651199.0,23651198.0
+2026-11-06 15:27,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Sam Hauser,sam hauser,6.5,-136.0,106.0,BOS,709.196098120,49890235.0,49890236.0
+2026-11-06 15:27,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Derrick White,derrick white,3.5,100.0,-128.0,BOS,709.196079695,22613511.0,22613512.0
+2026-11-06 15:27,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Sam Hauser,sam hauser,2.5,-136.0,106.0,BOS,709.196098121,49890235.0,49890236.0

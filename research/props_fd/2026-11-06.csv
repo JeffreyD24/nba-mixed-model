@@ -4503,3 +4503,42 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Evan Mobley,evan mobley,3.5,-102.0,-128.0,CLE,709.196003681,41407628.0,41407629.0
 2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Joel Embiid,joel embiid,3.5,-104.0,-128.0,PHI,709.196004274,12260618.0,12260619.0
 2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Peyton Watson,peyton watson,1.5,-162.0,122.0,CLE,709.196103878,54472264.0,54472265.0
+2026-11-06 10:05,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Derrick White,derrick white,13.5,-122.0,-108.0,BOS,709.196079651,22613511.0,22613512.0
+2026-11-06 10:05,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,27.5,-102.0,-130.0,BOS,709.196079679,15552473.0,15552474.0
+2026-11-06 10:05,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Payton Pritchard,payton pritchard,13.5,-108.0,-122.0,BOS,709.196079627,38225629.0,38225623.0
+2026-11-06 10:05,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Paul George,paul george,3.5,-128.0,-104.0,BOS,709.196079629,12234250.0,12234251.0
+2026-11-06 10:05,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Jayson Tatum,jayson tatum,6.5,-122.0,-108.0,BOS,709.196079624,15552473.0,15552474.0
+2026-11-06 10:05,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Payton Pritchard,payton pritchard,3.5,-102.0,-130.0,BOS,709.196079644,38225629.0,38225623.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Precious Achiuwa,precious achiuwa,8.5,-122.0,-108.0,SAC,709.196063806,38212281.0,38212282.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Domantas Sabonis,domantas sabonis,13.5,-125.0,-106.0,SAC,709.196063804,12601272.0,12601273.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Keldon Johnson,keldon johnson,9.5,-120.0,-110.0,SAS,709.196062637,37873186.0,37873185.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Dylan Harper,dylan harper,17.5,-108.0,-122.0,SAS,709.196062571,76027865.0,76027863.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Darius Acuff Jr.,darius acuff,23.5,-102.0,-130.0,SAC,709.196063816,90960656.0,90960655.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,De'Andre Hunter,deandre hunter,12.5,-108.0,-122.0,SAC,709.196063815,26624379.0,26624380.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,De'Aaron Fox,deaaron fox,15.5,-112.0,-118.0,SAS,709.196062584,15572079.0,15572080.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Malik Monk,malik monk,2.5,140.0,-188.0,SAC,709.196100099,22280387.0,22280388.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Zach LaVine,zach lavine,2.5,-166.0,124.0,SAC,709.196063827,12257190.0,12257191.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Domantas Sabonis,domantas sabonis,12.5,-130.0,-102.0,SAC,709.196063808,12601272.0,12601273.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,De'Aaron Fox,deaaron fox,3.5,-118.0,-112.0,SAS,709.196062554,15572079.0,15572080.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Julian Champagnie,julian champagnie,4.5,116.0,-154.0,SAS,709.196062631,43049038.0,43049039.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Keldon Johnson,keldon johnson,4.5,-104.0,-128.0,SAS,709.196062646,37873186.0,37873185.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Victor Wembanyama,victor wembanyama,11.5,-120.0,-110.0,SAS,709.196062585,61967224.0,61967225.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,-102.0,-130.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-118.0,-112.0,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,5.5,-125.0,-106.0,SAS,709.196062653,64780942.0,64780943.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Dylan Harper,dylan harper,4.5,-166.0,124.0,SAS,709.196062603,76027865.0,76027863.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,De'Aaron Fox,deaaron fox,5.5,-114.0,-114.0,SAS,709.196062558,15572079.0,15572080.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Darius Acuff Jr.,darius acuff,5.5,-130.0,-102.0,SAC,709.196063801,90960656.0,90960655.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,100.0,-132.0,SAC,709.196063823,12257190.0,12257191.0
+2026-11-06 10:05,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-188.0,140.0,SAS,709.196062582,61967224.0,61967225.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Donovan Mitchell,donovan mitchell,24.5,-112.0,-118.0,CLE,709.196003729,15907303.0,15907304.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Joel Embiid,joel embiid,21.5,-102.0,-130.0,PHI,709.196004277,12260618.0,12260619.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,LeBron James,lebron james,6.5,-132.0,100.0,PHI,709.196004115,12260611.0,12260612.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,VJ Edgecombe,vj edgecombe,5.5,-112.0,-118.0,PHI,709.196004312,75784960.0,75784927.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,James Harden,james harden,4.5,-138.0,104.0,CLE,709.196003718,12260579.0,12260580.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Jarrett Allen,jarrett allen,7.5,106.0,-140.0,CLE,709.196003728,21174117.0,21174118.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Kentavious Caldwell-Pope,kentavious caldwell pope,1.5,-186.0,136.0,PHI,709.196100408,15643012.0,15643013.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,LeBron James,lebron james,6.5,-125.0,-106.0,PHI,709.196004111,12260611.0,12260612.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Evan Mobley,evan mobley,3.5,-104.0,-128.0,CLE,709.196003681,41407628.0,41407629.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Joel Embiid,joel embiid,3.5,-102.0,-130.0,PHI,709.196004274,12260618.0,12260619.0
+2026-11-06 10:05,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Peyton Watson,peyton watson,1.5,-166.0,124.0,CLE,709.196103878,54472264.0,54472265.0

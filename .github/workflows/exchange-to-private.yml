@@ -1,0 +1,67 @@
+name: Exchange history -> private repo (runs here for free minutes, saves only to JeffreyD24/private)
+# Nov 6, 2026 (Jeffrey): heavy downloads run on this public repo's free Actions minutes and save ONLY into the private repo.
+# Nothing is written to this repo; logs show counts only (no rows). Needs secret PRIVATE_REPO_TOKEN: a fine-grained token with
+# Contents read/write on JeffreyD24/private only. The downloader code lives in the private repo (exchange/exchange_history.py).
+on:
+  workflow_dispatch:
+    inputs:
+      only: { description: "kalshi, poly or all", default: "poly" }
+      series: { description: "one series (e.g. 10345), or all", default: "all" }
+      max_events: { description: "Events per series (small = test)", default: "100000" }
+permissions:
+  contents: read
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        job: ["poly 10345 2025-12,2026-01", "poly 10345 2026-02,2026-03", "poly 10345 2026-04,2026-05,2026-06", "poly 10345 2026-07,2026-08,2026-09,2026-10,2026-11,2026-12",
+              "poly 10470 2025-12", "poly 10470 2026-01", "poly 10470 2026-02", "poly 10470 2026-03,2026-04", "poly 10470 2026-10,2026-11",
+              "poly 10346", "poly 10187", "poly 12185", "poly 12756",
+              "kalshi KXNBAGAME", "kalshi KXNHLGAME", "kalshi KXNFLGAME", "kalshi KXNCAAMBGAME", "kalshi KXNCAAFGAME", "kalshi KXNBASPREAD", "kalshi KXNBATOTAL"]
+    steps:
+      - name: Filter
+        id: f
+        run: |
+          set -- ${{ matrix.job }}
+          run=yes
+          [ "${{ inputs.only }}" != all ] && [ "${{ inputs.only }}" != "$1" ] && run=no
+          [ "${{ inputs.series }}" != all ] && [ "${{ inputs.series }}" != "$2" ] && run=no
+          echo "run=$run" >> $GITHUB_OUTPUT
+      - name: Check out the private repo (code, market lists and resume markers only; no trade data)
+        if: steps.f.outputs.run == 'yes'
+        uses: actions/checkout@v4
+        with:
+          repository: JeffreyD24/private
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          path: private
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /exchange/*.py
+            /exchange/*/*.done
+            /exchange/*/*_markets.csv.gz
+            /exchange/kalshi/*_candles_*.csv.gz
+      - uses: actions/setup-python@v5
+        if: steps.f.outputs.run == 'yes'
+        with: { python-version: "3.12" }
+      - name: Download ${{ matrix.job }}
+        if: steps.f.outputs.run == 'yes'
+        working-directory: private
+        run: |
+          pip install -q pandas
+          set -- ${{ matrix.job }}
+          python exchange/exchange_history.py exchange $1 --series $2 --max-events ${{ inputs.max_events }} ${3:+--months $3} --minutes 290 | grep -v "^saved"
+      - name: Save to the private repo
+        if: always() && steps.f.outputs.run == 'yes'
+        working-directory: private
+        run: |
+          git config user.name "exchange-bot"; git config user.email "actions@users.noreply.github.com"
+          find exchange -name '*.gz' -size +50M -print > big.txt; cat big.txt
+          git add --sparse exchange; [ -s big.txt ] && xargs git reset -q < big.txt
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "Exchange history (from nba-mixed-model runner): ${{ matrix.job }}"
+          for i in $(seq 1 12); do git pull --rebase -q && git push -q && echo "saved to private" && break; sleep $((RANDOM % 20 + 5)); done

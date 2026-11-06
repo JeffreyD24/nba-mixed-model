@@ -352,3 +352,12 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 21:18,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Sidy Cissoko,sidy cissoko,1.5,-118,-112,POR
 2026-11-05 21:18,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Donovan Clingan,donovan clingan,1.5,-132,100,POR
 2026-11-05 21:18,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,5.5,-136,102,POR
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Donovan Clingan,donovan clingan,12.5,-102,-130,POR
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Walker Kessler,walker kessler,12.5,-104,-125,LAL
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Quentin Grimes,quentin grimes,6.5,-128,-104,LAL
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Luka Doncic,luka doncic,34.5,-125,-106,LAL
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Toumani Camara,toumani camara,11.5,-122,-108,POR
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Sidy Cissoko,sidy cissoko,5.5,-102,-130,POR
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Scoot Henderson,scoot henderson,2.5,-102,-130,POR
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jrue Holiday,jrue holiday,4.5,136,-182,POR
+2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Luka Doncic,luka doncic,6.5,-158,118,LAL

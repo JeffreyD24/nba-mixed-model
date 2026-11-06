@@ -620,3 +620,6 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-05 21:26:00,289878,2026-11-07T21:15:00.000Z,Mississippi State Bulldogs,Vanderbilt Commodores,3978,cons,-3.0,-108.0,48.5,-112.0,-150.0,124.0,61.0,79.0,70.0,63.0,80.0,47.0
 2026-11-05 21:27:00,289910,2026-11-07T17:45:00.000Z,Auburn Tigers,Arkansas Razorbacks,2948,dk,-10.0,-112.0,54.5,-105.0,-395.0,310.0,,,,,,
 2026-11-05 21:28:00,289899,2026-11-07T17:00:00.000Z,Minnesota Golden Gophers,UCLA Bruins,11293,dk,5.5,-112.0,38.5,-115.0,170.0,-205.0,,,,,,
+2026-11-05 21:31:00,289855,2026-11-07T20:45:00.000Z,Kansas Jayhawks,UCF Knights,1676,dk,-3.0,-108.0,47.5,-110.0,-155.0,130.0,,,,,,
+2026-11-05 21:31:00,289842,2026-11-07T21:15:00.000Z,Wisconsin Badgers,Rutgers Scarlet Knights,1726,dk,-18.5,-108.0,46.5,-108.0,-1000.0,650.0,,,,,,
+2026-11-05 21:33:00,289878,2026-11-07T21:15:00.000Z,Mississippi State Bulldogs,Vanderbilt Commodores,3988,dk,-3.0,-108.0,48.5,-112.0,-148.0,124.0,,,,,,

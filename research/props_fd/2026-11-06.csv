@@ -5016,3 +5016,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 10:47,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,CJ McCollum,cj mccollum,3.5,-144.0,108.0,ATL,709.196098259,12260572.0,12260571.0
 2026-11-06 10:47,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Jalen Johnson,jalen johnson,7.5,-106.0,-125.0,ATL,709.196077202,40197109.0,40197108.0
 2026-11-06 10:47,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Kyshawn George,kyshawn george,4.5,136.0,-182.0,WAS,709.196071432,74706441.0,74706439.0
+2026-11-06 10:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Julian Champagnie,julian champagnie,4.5,116.0,-152.0,SAS,709.196062631,43049038.0,43049039.0
+2026-11-06 10:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,102.0,-136.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 10:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Devin Vassell,devin vassell,2.5,-112.0,-118.0,SAS,709.196062619,38295529.0,38295528.0
+2026-11-06 10:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,5.5,-128.0,-104.0,SAS,709.196062653,64780942.0,64780943.0
+2026-11-06 10:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Dylan Harper,dylan harper,4.5,-162.0,122.0,SAS,709.196062603,76027865.0,76027863.0
+2026-11-06 10:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,De'Aaron Fox,deaaron fox,5.5,-136.0,102.0,SAS,709.196062558,15572079.0,15572080.0
+2026-11-06 10:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-186.0,138.0,SAS,709.196062582,61967224.0,61967225.0

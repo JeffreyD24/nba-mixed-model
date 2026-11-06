@@ -4774,12 +4774,12 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 10:25,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,James Harden,james harden,4.5,-136.0,102.0,CLE,709.196003718,12260579.0,12260580.0
 2026-11-06 10:25,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Donovan Mitchell,donovan mitchell,5.5,112.0,-148.0,CLE,709.196003642,15907303.0,15907304.0
 2026-11-06 10:25,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Evan Mobley,evan mobley,3.5,-106.0,-125.0,CLE,709.196003681,41407628.0,41407629.0
-2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-112.0,-118.0,MIN,709.196061600,38988768.0,38988773.0
+2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-112.0,-118.0,MIN,709.1960616,38988768.0,38988773.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Terrence Shannon Jr.,terrence shannon,11.5,-118.0,-112.0,MIN,709.196062885,43165976.0,43165975.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Ayo Dosunmu,ayo dosunmu,17.5,-110.0,-120.0,MIN,709.196061872,41652478.0,41652484.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Zion Williamson,zion williamson,19.5,100.0,-132.0,NOP,709.196064504,24729467.0,24729466.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Rudy Gobert,rudy gobert,9.5,-136.0,102.0,MIN,709.196062741,12260609.0,12260610.0
-2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-140.0,106.0,MIN,709.196062180,40221490.0,40221489.0
+2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-140.0,106.0,MIN,709.19606218,40221490.0,40221489.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Ayo Dosunmu,ayo dosunmu,4.5,104.0,-138.0,MIN,709.196061869,41652478.0,41652484.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Terrence Shannon Jr.,terrence shannon,2.5,-130.0,-102.0,MIN,709.196062886,43165976.0,43165975.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jaden McDaniels,jaden mcdaniels,5.5,-114.0,-114.0,MIN,709.196061625,38988768.0,38988773.0
@@ -4789,11 +4789,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Zion Williamson,zion williamson,2.5,-144.0,108.0,NOP,709.196064507,24729467.0,24729466.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Trey Murphy III,trey murphy,2.5,-180.0,134.0,NOP,709.196064716,40336995.0,40336994.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Derik Queen,derik queen,2.5,-130.0,-102.0,NOP,709.196065584,76134713.0,76134712.0
-2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,-120.0,-110.0,NOP,709.196064940,77055416.0,77055417.0
+2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,-120.0,-110.0,NOP,709.19606494,77055416.0,77055417.0
 2026-11-06 10:27,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-132.0,100.0,MIN,709.196062475,26324737.0,26324736.0
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Jamal Shead,jamal shead,7.5,-112.0,-118.0,TOR,709.196094057,43166207.0,43166206.0
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Scottie Barnes,scottie barnes,22.5,-104.0,-128.0,TOR,709.196047352,40221569.0,40221568.0
-2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ja'Kobe Walter,jakobe walter,3.5,-152.0,114.0,TOR,709.196047350,62606687.0,62606690.0
+2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ja'Kobe Walter,jakobe walter,3.5,-152.0,114.0,TOR,709.19604735,62606687.0,62606690.0
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,RJ Barrett,rj barrett,5.5,-146.0,110.0,TOR,709.196047283,24729449.0,24729450.0
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Immanuel Quickley,immanuel quickley,3.5,-158.0,118.0,TOR,709.196047334,38389172.0,38389173.0
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Kyle Kuzma,kyle kuzma,2.5,104.0,-136.0,MIL,709.196052513,13527607.0,13527606.0
@@ -4801,3 +4801,29 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Brayden Burries,brayden burries,2.5,108.0,-144.0,MIL,709.196052512,92719057.0,92719056.0
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Myles Turner,myles turner,1.5,-132.0,100.0,MIL,709.196052476,12234258.0,12234259.0
 2026-11-06 10:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Collin Murray-Boyles,collin murray boyles,1.5,-178.0,132.0,TOR,709.196047278,65925589.0,65925572.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cam Spencer,cam spencer,7.5,-114.0,-114.0,MEM,709.196060194,50729407.0,50729406.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cameron Boozer,cameron boozer,16.5,-112.0,-118.0,MEM,709.196045732,90748927.0,90748928.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Jaylen Wells,jaylen wells,10.5,-118.0,-112.0,MEM,709.196046345,65284710.0,65284709.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Ty Jerome,ty jerome,21.5,-102.0,-130.0,MEM,709.196045666,23651199.0,23651198.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Cameron Boozer,cameron boozer,9.5,110.0,-146.0,MEM,709.196045734,90748927.0,90748928.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Jaylen Wells,jaylen wells,3.5,130.0,-174.0,MEM,709.196046348,65284710.0,65284709.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Cam Spencer,cam spencer,2.5,110.0,-146.0,MEM,709.196060191,50729407.0,50729406.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Cedric Coward,cedric coward,7.5,104.0,-138.0,MEM,709.196045907,76584720.0,76584726.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Zach Edey,zach edey,8.5,-106.0,-125.0,MEM,709.196046719,43111543.0,43111547.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Ty Jerome,ty jerome,3.5,-106.0,-125.0,MEM,709.196045669,23651199.0,23651198.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cam Spencer,cam spencer,5.5,126.0,-168.0,MEM,709.196060190,50729407.0,50729406.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,112.0,-148.0,OKC,709.196043449,41500697.0,41500698.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cameron Boozer,cameron boozer,5.5,118.0,-158.0,MEM,709.196045733,90748927.0,90748928.0
+2026-11-06 10:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ty Jerome,ty jerome,5.5,-110.0,-120.0,MEM,709.196045668,23651199.0,23651198.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Jamal Shead,jamal shead,7.5,-110.0,-120.0,TOR,709.196094057,43166207.0,43166206.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Ja'Kobe Walter,jakobe walter,11.5,-114.0,-114.0,TOR,709.196047378,62606687.0,62606690.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Scottie Barnes,scottie barnes,22.5,-106.0,-125.0,TOR,709.196047352,40221569.0,40221568.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Tyler Herro,tyler herro,20.5,-106.0,-122.0,MIL,709.196052506,26611574.0,26611575.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Brayden Burries,brayden burries,10.5,-136.0,102.0,MIL,709.196052488,92719057.0,92719056.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Tyler Herro,tyler herro,4.5,100.0,-132.0,MIL,709.196052510,26611574.0,26611575.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jaime Jaquez Jr.,jaime jaquez,5.5,-112.0,-118.0,MIL,709.196052490,43072643.0,43072644.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Jamal Shead,jamal shead,5.5,-118.0,-112.0,TOR,709.196094054,43166207.0,43166206.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Kyle Kuzma,kyle kuzma,2.5,102.0,-136.0,MIL,709.196052513,13527607.0,13527606.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Scottie Barnes,scottie barnes,5.5,-120.0,-110.0,TOR,709.196047298,40221569.0,40221568.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Tyler Herro,tyler herro,3.5,-160.0,120.0,MIL,709.196052492,26611574.0,26611575.0
+2026-11-06 10:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,112.0,-148.0,TOR,709.196047368,24729449.0,24729450.0

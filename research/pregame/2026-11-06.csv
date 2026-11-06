@@ -5686,3 +5686,17 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 04:10:51,295190,2026-11-06,2026-11-06 19:30,phi,cle,Fanatics,event,team_total,home_over,113.5,-110,normal
 2026-11-06 04:10:51,295196,2026-11-06,2026-11-06 22:00,por,lal,Consensus,event,team_total,away_under,115.0,-110,normal
 2026-11-06 04:10:51,295196,2026-11-06,2026-11-06 22:00,por,lal,Consensus,event,team_total,away_over,115.0,-111,normal
+2026-11-06 04:12:09,295190,2026-11-06,2026-11-06 19:30,phi,cle,BetMGM,event,spread,away,-2.5,-110,normal
+2026-11-06 04:12:09,295190,2026-11-06,2026-11-06 19:30,phi,cle,BetMGM,event,spread,home,2.5,-110,normal
+2026-11-06 04:12:09,295191,2026-11-06,2026-11-06 20:00,tor,mil,BetMGM,event,spread,away,-6.5,-118,normal
+2026-11-06 04:12:09,295191,2026-11-06,2026-11-06 20:00,tor,mil,BetMGM,event,spread,home,6.5,-102,normal
+2026-11-06 04:12:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetMGM,event,team_total,home_over,117.5,-105,normal
+2026-11-06 04:12:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetMGM,event,team_total,home_under,117.5,-120,normal
+2026-11-06 04:13:24,295189,2026-11-06,2026-11-06 19:00,wsh,atl,Fanatics,event,team_total,away_over,111.5,-120,normal
+2026-11-06 04:13:24,295189,2026-11-06,2026-11-06 19:00,wsh,atl,Fanatics,event,team_total,away_under,111.5,-110,normal
+2026-11-06 04:14:39,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetMGM,event,team_total,home_over,116.5,-118,normal
+2026-11-06 04:14:39,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetMGM,event,team_total,home_under,116.5,-110,normal
+2026-11-06 04:14:39,295196,2026-11-06,2026-11-06 22:00,por,lal,DraftKings,event,team_total,away_under,115.5,-118,normal
+2026-11-06 04:14:39,295196,2026-11-06,2026-11-06 22:00,por,lal,DraftKings,event,team_total,away_over,115.5,-102,normal
+2026-11-06 04:15:53,295188,2026-11-06,2026-11-06 19:00,bos,cha,Consensus,event,team_total,away_over,109.5,-110,normal
+2026-11-06 04:15:53,295188,2026-11-06,2026-11-06 19:00,bos,cha,Consensus,event,team_total,away_under,109.5,-115,normal

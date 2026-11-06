@@ -35,6 +35,22 @@ FULL = {"Atlanta Hawks": "atl", "Boston Celtics": "bos", "Brooklyn Nets": "bkn",
         "Washington Wizards": "wsh"}
 
 
+
+def ntfy_open(req, tries=4):
+    """urlopen for ntfy pushes with retries (Nov 6, 2026): ntfy.sh answers HTTP 429 to bursts, and a refused push used to be lost.
+    Retries after 5, 15, 30 s on 429 / 5xx / network errors; the last error is raised as before."""
+    import time, urllib.error
+    for i in range(tries):
+        try:
+            return urllib.request.urlopen(req, timeout=20)
+        except urllib.error.HTTPError as e:
+            if e.code != 429 and e.code < 500 or i == tries - 1: raise
+            print(f"ntfy refused (HTTP {e.code}); retrying")
+        except OSError:
+            if i == tries - 1: raise
+            print("ntfy unreachable; retrying")
+        time.sleep((5, 15, 30)[min(i, 2)])
+
 def norm(n):
     n = unicodedata.normalize("NFKD", str(n)).encode("ascii", "ignore").decode().lower()
     n = re.sub(r"[.'`]", "", n).replace("-", " "); n = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b", "", n)
@@ -227,7 +243,7 @@ def push(title, body, actions=""):
     if not topic: print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
                                  headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": "high", "Tags": "basketball", **({"Actions": actions} if actions else {})})
-    urllib.request.urlopen(req, timeout=20); return True
+    ntfy_open(req); return True
 
 
 def live():

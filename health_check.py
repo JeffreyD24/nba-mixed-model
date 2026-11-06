@@ -216,6 +216,10 @@ for rid in alert_run_ids:
     if mmf > 5:
         warn(f"alert run {rid}: market models check failed {mmf} times, ran OK {mmn} times")
     tb = len(re.findall(r"Traceback \(most recent call last\)", out))
+    # Nov 6, 2026 (Jeffrey: "the daily audits should check the health of the alert system"): pushes that never reached ntfy
+    pf = len(re.findall(r"push failed|notify failed|ntfy push failed", out)); rt = len(re.findall(r"ntfy refused|ntfy unreachable", out))
+    if pf: bad(f"alert run {rid}: {pf} alert push(es) FAILED (never reached ntfy; see the run log)")
+    elif rt: warn(f"alert run {rid}: ntfy refused {rt} push attempt(s) (rate limit); retries got them through")
     checks = len(re.findall(r"=== check at", out))
     tot_fail += fail; tot_tb += tb; tot_poly += poly
     first_err = ""

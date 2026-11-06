@@ -1,0 +1,47 @@
+name: Alert delivery audit
+
+# Nov 6, 2026 (Jeffrey): the daily audits check the alert system too. alert_audit.py reads the ntfy topic's own history (12 h)
+# and every sport repo's alert records: recorded-sent alerts missing from ntfy, bet alerts without a one-tap bet link, bursts.
+on:
+  schedule:
+    - cron: "20 13 * * *"      # 8:20 AM EST: always sends a summary
+    - cron: "20 1 * * *"       # 8:20 PM EST: sends only if something is wrong
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: state-writes
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            alert_audit.py
+            state
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pandas
+      - name: Audit
+        id: audit
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python alert_audit.py . || echo "problems=1" >> "$GITHUB_OUTPUT"
+      - name: Save report
+        run: |
+          git config user.name "health-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/alert_audit_latest.md state/alert_audit_log.csv
+          git diff --cached --quiet || git commit -q -m "Alert audit $(TZ=America/New_York date '+%F %H:%M')"
+          git pull --rebase -q && git push -q
+      - name: Fail the run if an alert went missing
+        if: steps.audit.outputs.problems == '1'
+        run: exit 1

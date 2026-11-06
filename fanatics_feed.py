@@ -11,6 +11,8 @@ Dates polled: today and tomorrow every minute; NFL/NCAAF also the next 8 days ev
 Player props (Nov 6, 2026, RULE 12): RotoWire's free props page carries every book's prop lines (Fanatics, DraftKings, FanDuel, BetMGM,
 Caesars, ...). Every 10 minutes the NFL and NBA pages are read and every book's line/price CHANGES are saved to
 research/feed/rotowire_props/<sport>/<YYYY-MM-DD>/<HHMM>.csv.gz (first row seen = that book's opener as RotoWire showed it).
+Game lines of every book (spread / total / moneyline; NBA, NHL, NFL) from RotoWire's games tables, also every 10 minutes, to
+research/feed/rotowire_games/<sport>/... (track B: BetMGM, Caesars, Hard Rock, ... openers and closes for free).
 """
 import os, sys, json, time, gzip, urllib.request
 import datetime as dt
@@ -49,7 +51,7 @@ def rows_for(sport, day):
     return out
 
 
-RW_SPORTS = ("nfl", "nba")
+RW_SPORTS = ("nfl", "nba", "nhl")          # NHL props page added Nov 6 (shots, points, goals, assists, saves...)
 RW_COLS = ["snap_et", "sport", "game_id", "player_id", "player", "team", "opp", "book", "market", "line", "over", "under"]
 
 
@@ -91,6 +93,45 @@ def rotowire_props(S, snap):
     return n
 
 
+RWG_COLS = ["snap_et", "sport", "game_id", "game_date", "team", "opp", "home_away", "book", "market", "line", "price"]
+
+
+def rotowire_games(S, snap):
+    """every book's full-game spread / total / moneyline from RotoWire's games tables (NBA, NHL, NFL), changes only (Nov 6, RULE 13)"""
+    S.setdefault("rwg", {}); S.setdefault("rwg_due", 0)
+    if time.time() < S["rwg_due"]: return 0
+    S["rwg_due"] = time.time() + 590
+    n = 0
+    for sport in ("nba", "nhl", "nfl"):
+        try: G = get_any(f"https://www.rotowire.com/betting/{sport}/tables/{sport}-games.php")
+        except Exception as ex: print("RotoWire games fetch failed:", sport, type(ex).__name__); continue
+        out = []
+        for g in G if isinstance(G, list) else []:
+            books = {k.split("_")[0] for k in g if k.endswith("_has_spread")}
+            for bk in books:
+                for mk, ln_k, px_k in (("spread", f"{bk}_spread", f"{bk}_spreadML"), ("total", f"{bk}_ou", f"{bk}_ouML"),
+                                       ("moneyline", None, f"{bk}_moneyline")):
+                    px = g.get(px_k); ln = g.get(ln_k) if ln_k else None
+                    if px in (None, ""): continue
+                    key = f"{sport}|{g['gameID']}|{g.get('abbr')}|{bk}|{mk}"
+                    if S["rwg"].get(key) != [ln, px]:
+                        S["rwg"][key] = [ln, px]
+                        out.append(dict(snap_et=snap, sport=sport, game_id=g["gameID"], game_date=g.get("gameDate"), team=g.get("abbr"),
+                                        opp=g.get("oppAbbr"), home_away=g.get("homeAway"), book=bk, market=mk, line=ln, price=px))
+        if out:
+            d = os.path.join(W, "research", "feed", "rotowire_games", sport, f"{NOW:%Y-%m-%d}"); os.makedirs(d, exist_ok=True)
+            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}.csv.gz")
+            old = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=RWG_COLS)
+            pd.concat([old, pd.DataFrame(out)[RWG_COLS]], ignore_index=True).to_csv(f, index=False, compression="gzip")
+        n += len(out)
+    return n
+
+
+def get_any(url):
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": H["User-Agent"], "Accept": "application/json"}), timeout=40) as r:
+        return json.loads(r.read())
+
+
 def main():
     try: S = json.load(open(SP))
     except Exception: S = {"last": {}, "due": {}}
@@ -130,7 +171,10 @@ def main():
             pd.concat([old, g], ignore_index=True).to_csv(f, index=False, compression="gzip")
     try: n_rw = rotowire_props(S, snap)
     except Exception as ex: n_rw = 0; print("RotoWire props failed:", type(ex).__name__, str(ex)[:120])
+    try: n_rwg = rotowire_games(S, snap)
+    except Exception as ex: n_rwg = 0; print("RotoWire games failed:", type(ex).__name__, str(ex)[:120])
     json.dump(S, open(SP, "w"))
+    print(f"RotoWire game-line changes {n_rwg}")
     print(f"fanatics feed: {stats['req']} requests, {stats['err']} errors, {len(new)} changes; RotoWire props changes {n_rw}")
 
 

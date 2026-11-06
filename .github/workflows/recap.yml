@@ -68,6 +68,7 @@ jobs:
         if: steps.due.outputs.run == 'true'
         with:
           repository: JeffreyD24/nhl-mixed-model
+          token: ${{ secrets.REPOS_TOKEN }}   # Nov 6, 2026: repos are going private; default token reads only this repo
           path: nhl-mixed-model
           sparse-checkout-cone-mode: false
           sparse-checkout: |
@@ -77,6 +78,7 @@ jobs:
         if: steps.due.outputs.run == 'true'
         with:
           repository: JeffreyD24/nfl-mixed-model
+          token: ${{ secrets.REPOS_TOKEN }}   # Nov 6, 2026: repos are going private; default token reads only this repo
           path: nfl-mixed-model
           sparse-checkout-cone-mode: false
           sparse-checkout: |
@@ -86,6 +88,7 @@ jobs:
         if: steps.due.outputs.run == 'true'
         with:
           repository: JeffreyD24/betting-goals
+          token: ${{ secrets.REPOS_TOKEN }}   # Nov 6, 2026: repos are going private; default token reads only this repo
           path: betting-goals
           sparse-checkout: ops
       - uses: actions/setup-python@v5

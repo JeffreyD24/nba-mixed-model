@@ -19,6 +19,7 @@ import build_report_features as brf                      # noqa: E402
 import espn                                              # noqa: E402
 import actionnet
 import fanduel
+import fanatics            # Nov 6, 2026: Fanatics SHADOW log only (not in phone alerts until Jeffrey says so)
 
 THRESHOLD = 3.0                     # points, for spreads (and the proven totals rule)
 TOTAL_THRESHOLD = 2.5               # Nov 4, 2026 (approved; PROVISIONAL tier, research/PROVISIONAL_BETS.md): totals bet from 2.5 pts of edge.
@@ -882,6 +883,10 @@ def main():
                     quiet.add(qk); rec_row["sent"] = False; new.append(rec_row)
                     print("LOGGED ONLY (not a bet):", title, "|", vr); continue
                 rec_row["sent"] = notify(title, body, priority=prio, link=link, dk=dk, kind="bet", fd=fd_link, best=best_book)
+                # Nov 6, 2026: what Fanatics offered for this bet -> state/fanatics_shadow.csv only (NOT in the alert; fanatics.SHOW_IN_ALERTS)
+                _fd = best_book == "FanDuel" and not pd.isna(rec_row.get("fd_price", np.nan))
+                fanatics.shadow(STATE, "game", "nba", M["date"], market, side, "FanDuel" if _fd else "DraftKings",
+                                rec_row.get("fd_line") if _fd else dk_bet_line, rec_row.get("fd_price") if _fd else px, home=g["home"], away=g["away"])
                 new.append(rec_row); done.add((g["game_id"], market))
                 if is_news: news_done.add((g["game_id"], market, NK))
                 print("ALERT:", title, "|", body)

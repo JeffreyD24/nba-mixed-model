@@ -334,6 +334,11 @@ def live():
                 acts = "view, Bet on FanDuel, https://sportsbook.fanduel.com/navigation/nba"; print("props alert links failed:", type(ex).__name__, str(ex)[:100])
             try: sent = push(title, body, acts)
             except Exception as e: sent = False; print("push failed:", e)
+            # Nov 6, 2026: Fanatics' line for this prop -> state/fanatics_shadow_props.csv only (NOT in the alert; fanatics.SHOW_IN_ALERTS)
+            try:
+                import fanatics
+                fanatics.shadow(os.path.join(W, "state"), "prop", "nba", str(r.tip_et)[:10], r.stat, side, "FanDuel", r.line, int(price), player=r.player, stat=r.stat)
+            except Exception as _e: print("Fanatics shadow skipped:", type(_e).__name__)
             rows.append(dict(key=key, date=TODAY, logged_at_et=NOW.strftime("%Y-%m-%d %H:%M"), model_version=PO["version"], tier=f"provisional_{r.tier}",
                              book="FanDuel", game=r.game, tip_et=r.tip_et, player=r.player, name=r.name, team=r.team, stat=r.stat, side=side,
                              line=r.line, price=int(price), open_seen_et=r.seen_at_et_open, mu=round(mu, 2), p_model=round(pm, 4), p_market=round(pk, 4),

@@ -723,3 +723,5 @@ seen_at_et,game_id,date,away,home,market,line_home,long_side,slug,bid,ask,bid_de
 2026-11-06 05:10,22600203,2026-11-09,lal,atl,moneyline,,away,aec-nba-lal-atl-2026-11-09,0.53,0.65,9.0,9.0,0.41,0.65,19.24,14.24,team
 2026-11-06 05:10,22600208,2026-11-09,den,hou,moneyline,,away,aec-nba-den-hou-2026-11-09,0.25,0.34,7.0,10.0,0.705,0.23,13.54,13.54,team
 2026-11-06 05:10,22600210,2026-11-09,no,gs,moneyline,,away,aec-nba-no-gs-2026-11-09,0.26,0.34,7.0,7.0,0.7,0.16,347.45,314.45,team
+2026-11-06 05:15,22600203,2026-11-09,lal,atl,moneyline,,away,aec-nba-lal-atl-2026-11-09,0.53,0.65,9.0,7.0,0.41,0.65,19.24,14.24,team
+2026-11-06 05:15,22600208,2026-11-09,den,hou,moneyline,,away,aec-nba-den-hou-2026-11-09,0.25,0.34,7.0,9.0,0.705,0.23,13.54,13.54,team

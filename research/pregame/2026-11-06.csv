@@ -2587,3 +2587,10 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 00:33:21,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,moneyline,home,0.0,700,normal
 2026-11-06 00:33:21,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,total,under,229.5,-110,normal
 2026-11-06 00:33:21,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,total,over,229.5,-108,normal
+2026-11-06 00:35:43,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetRivers,event,moneyline,home,0.0,-315,normal
+2026-11-06 00:35:43,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetRivers,event,moneyline,away,0.0,240,normal
+2026-11-06 00:35:43,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetRivers,event,spread,home,-8.5,-106,normal
+2026-11-06 00:35:43,295193,2026-11-06,2026-11-06 20:00,utah,dal,BetRivers,event,total,over,226.5,-114,normal
+2026-11-06 00:35:43,295194,2026-11-06,2026-11-06 20:00,okc,mem,BetRivers,event,spread,home,4.5,-118,normal
+2026-11-06 00:35:43,295194,2026-11-06,2026-11-06 20:00,okc,mem,BetRivers,event,spread,away,-4.5,-105,normal
+2026-11-06 00:35:43,295194,2026-11-06,2026-11-06 20:00,okc,mem,BetRivers,event,total,under,226.5,-113,normal

@@ -18,6 +18,7 @@ save() {
 while :; do
   T0=$(date +%s)
   timeout 100 python odds_feed.py . || echo "feed tick failed; next minute."
+  timeout 60 python fanatics_feed.py . || echo "fanatics tick failed; next minute."     # Nov 6, 2026: Fanatics CT lines, every sport
   NOW=$(date +%s)
   if [ $((NOW - LAST_SAVE)) -ge 300 ]; then save; LAST_SAVE=$NOW; fi
   [ $((NOW - START + 60)) -ge "$LIMIT" ] && break

@@ -5138,11 +5138,16 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Precious Achiuwa,precious achiuwa,8.5,-118.0,-112.0,SAC,709.196063806,38212281.0,38212282.0
 2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Domantas Sabonis,domantas sabonis,13.5,-130.0,-102.0,SAC,709.196063804,12601272.0,12601273.0
 2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Malik Monk,malik monk,2.5,136.0,-182.0,SAC,709.196100099,22280387.0,22280388.0
-2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Precious Achiuwa,precious achiuwa,6.5,126.0,-168.0,SAC,709.196063810,38212281.0,38212282.0
-2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-114.0,-114.0,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Precious Achiuwa,precious achiuwa,6.5,126.0,-168.0,SAC,709.19606381,38212281.0,38212282.0
+2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-114.0,-114.0,SAC,709.19606382,12601272.0,12601273.0
 2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196062558,15572079.0,15572080.0
 2026-11-06 11:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,100.0,-132.0,SAC,709.196063823,12257190.0,12257191.0
 2026-11-06 11:17,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Scottie Barnes,scottie barnes,5.5,-118.0,-112.0,TOR,709.196047298,40221569.0,40221568.0
 2026-11-06 11:17,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Immanuel Quickley,immanuel quickley,6.5,100.0,-132.0,TOR,709.196047327,38389172.0,38389173.0
 2026-11-06 11:17,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,108.0,-144.0,TOR,709.196047368,24729449.0,24729450.0
 2026-11-06 11:17,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Collin Murray-Boyles,collin murray boyles,1.5,-174.0,130.0,TOR,709.196047278,65925589.0,65925572.0
+2026-11-06 11:19,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Precious Achiuwa,precious achiuwa,8.5,-114.0,-114.0,SAC,709.196063806,38212281.0,38212282.0
+2026-11-06 11:19,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,De'Andre Hunter,deandre hunter,12.5,-102.0,-130.0,SAC,709.196063815,26624379.0,26624380.0
+2026-11-06 11:19,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Julian Champagnie,julian champagnie,4.5,116.0,-154.0,SAS,709.196062631,43049038.0,43049039.0
+2026-11-06 11:19,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,118.0,-158.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 11:19,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,102.0,-136.0,SAC,709.196063823,12257190.0,12257191.0

@@ -27,3 +27,12 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-05 18:55,297610,Kansas City Roos,Southern Illinois Salukis,3.5,-3.9,-4.77,-3.05,-3.61,-0.11,PASS,edge 0.11 < 0.5
 2026-11-05 18:55,297619,Iowa Hawkeyes,Eastern Illinois Panthers,-35.5,30.73,33.61,32.23,35.42,-0.08,PASS,edge 0.08 < 0.5
 2026-11-05 18:55,302292,Ole Miss Rebels,Central Arkansas Bears,-19.5,16.88,17.6,21.09,19.75,0.25,PASS,edge 0.25 < 0.5
+2026-11-05 19:00,297384,BYU Cougars,Omaha Mavericks,-29.5,35.4,33.72,27.87,29.77,0.27,PASS,edge 0.27 < 0.5
+2026-11-05 19:00,297389,Colorado State Rams,Idaho Vandals,-15.5,14.75,12.08,12.19,15.16,-0.34,PASS,edge 0.34 < 0.5
+2026-11-05 19:00,297392,Arizona State Sun Devils,Northern Colorado Bears,-15.5,13.64,14.76,16.86,15.72,0.22,PASS,edge 0.22 < 0.5
+2026-11-05 19:00,297416,Kansas State Wildcats,Cal State Northridge Matadors,-9.5,13.45,19.91,16.62,10.61,1.11,PASS,a team has under 3 games
+2026-11-05 19:00,297614,Kansas Jayhawks,Middle Tennessee Blue Raiders,-27.5,24.13,23.16,20.85,26.91,-0.59,PASS,a team has under 3 games
+2026-11-05 19:00,297390,Oregon State Beavers,California Baptist Lancers,-16.5,15.25,14.36,9.74,15.84,-0.66,PASS,a team has under 3 games
+2026-11-05 19:00,297417,San Diego Toreros,Tarleton State Texans,-4.5,7.48,7.12,7.14,4.85,0.35,PASS,edge 0.35 < 0.5
+2026-11-05 19:00,297407,San Francisco Dons,North Dakota State Bison,-7.5,12.18,13.66,11.79,8.17,0.67,PASS,a team has under 3 games
+2026-11-05 19:00,297616,Stanford Cardinal,Oakland Golden Grizzlies,-14.5,12.16,12.22,12.23,14.28,-0.22,PASS,edge 0.22 < 0.5

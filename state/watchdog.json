@@ -1,6 +1,6 @@
 {
- "stale|nba-mixed-model|alerts.yml": "NBA alert loop: no run for 55 min (expected within 30)",
- "stale|nhl-mixed-model|alerts.yml": "NHL alert loop: no run for 60 min (expected within 30)",
- "stale|nfl-mixed-model|alerts.yml": "NFL alert loop: no run for 58 min (expected within 30)",
- "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 429 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)"
+ "stale|nhl-mixed-model|alerts.yml": "NHL alert loop: no run for 49 min (expected within 30)",
+ "stale|nfl-mixed-model|alerts.yml": "NFL alert loop: no run for 48 min (expected within 30)",
+ "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 482 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)",
+ "hb|nba-mixed-model|state/heartbeat_alert.txt": "NBA alert checks: nothing saved for 59 min (expected every few minutes)"
 }

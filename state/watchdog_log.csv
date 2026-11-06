@@ -11,3 +11,5 @@ time_utc,event,detail
 2026-11-06 09:32,problem,"NBA props loop: no run for 55 min (expected within 30)"
 2026-11-06 10:31,problem,"NHL alert loop: no run for 60 min (expected within 30)"
 2026-11-06 10:31,fixed,"NBA props loop: no run for 55 min (expected within 30)"
+2026-11-06 11:24,problem,"NBA alert checks: nothing saved for 59 min (expected every few minutes)"
+2026-11-06 11:24,fixed,"NBA alert loop: no run for 55 min (expected within 30)"

@@ -19,3 +19,4 @@ time_utc,event,detail
 2026-11-06 13:27,problem,"NFL daily health check: last run FAILED 17 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"
 2026-11-06 14:30,fixed,"NFL alert loop: no run for 68 min (expected within 30)"
 2026-11-06 15:13,problem,"Sharp money tracker: no run for 64 min (expected within 60)"
+2026-11-06 15:56,fixed,"Sharp money tracker: no run for 64 min (expected within 60)"

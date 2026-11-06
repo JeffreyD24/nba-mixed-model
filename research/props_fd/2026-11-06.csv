@@ -6464,15 +6464,20 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Immanuel Quickley,immanuel quickley,19.5,-118.0,-112.0,TOR,709.196047353,38389172.0,38389173.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,RJ Barrett,rj barrett,25.5,104.0,-136.0,TOR,709.196047372,24729449.0,24729450.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Brayden Burries,brayden burries,10.5,-106.0,-125.0,MIL,709.196052488,92719057.0,92719056.0
-2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ja'Kobe Walter,jakobe walter,4.5,112.0,-148.0,TOR,709.196047350,62606687.0,62606690.0
-2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ryan Rollins,ryan rollins,3.5,-104.0,-128.0,MIL,709.196053660,43183325.0,43183330.0
-2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Tyler Herro,tyler herro,4.5,100.0,-132.0,MIL,709.196052510,26611574.0,26611575.0
+2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ja'Kobe Walter,jakobe walter,4.5,112.0,-148.0,TOR,709.19604735,62606687.0,62606690.0
+2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ryan Rollins,ryan rollins,3.5,-104.0,-128.0,MIL,709.19605366,43183325.0,43183330.0
+2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Tyler Herro,tyler herro,4.5,100.0,-132.0,MIL,709.19605251,26611574.0,26611575.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Myles Turner,myles turner,5.5,-104.0,-128.0,MIL,709.196052487,12234258.0,12234259.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Kel'el Ware,kelel ware,7.5,-102.0,-130.0,MIL,709.196054134,50596621.0,50596622.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Brayden Burries,brayden burries,4.5,110.0,-146.0,MIL,709.196052491,92719057.0,92719056.0
-2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jaime Jaquez Jr.,jaime jaquez,5.5,-110.0,-122.0,MIL,709.196052490,43072643.0,43072644.0
+2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jaime Jaquez Jr.,jaime jaquez,5.5,-110.0,-122.0,MIL,709.19605249,43072643.0,43072644.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Immanuel Quickley,immanuel quickley,3.5,-154.0,116.0,TOR,709.196047334,38389172.0,38389173.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Ryan Rollins,ryan rollins,4.5,110.0,-146.0,MIL,709.196053661,43183325.0,43183330.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Tyler Herro,tyler herro,3.5,-154.0,116.0,MIL,709.196052492,26611574.0,26611575.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Myles Turner,myles turner,1.5,-136.0,102.0,MIL,709.196052476,12234258.0,12234259.0
 2026-11-06 13:34,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Ja'Kobe Walter,jakobe walter,2.5,140.0,-188.0,TOR,709.196047312,62606687.0,62606690.0
+2026-11-06 13:36,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Ja'Kobe Walter,jakobe walter,14.5,-110.0,-120.0,TOR,709.196047378,62606687.0,62606690.0
+2026-11-06 13:36,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Immanuel Quickley,immanuel quickley,19.5,-114.0,-114.0,TOR,709.196047353,38389172.0,38389173.0
+2026-11-06 13:36,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,RJ Barrett,rj barrett,25.5,102.0,-136.0,TOR,709.196047372,24729449.0,24729450.0
+2026-11-06 13:36,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jamal Shead,jamal shead,2.5,116.0,-154.0,TOR,709.196172493,43166207.0,43166206.0
+2026-11-06 13:36,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Immanuel Quickley,immanuel quickley,6.5,-114.0,-114.0,TOR,709.196047327,38389172.0,38389173.0

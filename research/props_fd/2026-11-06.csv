@@ -6684,3 +6684,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 13:48,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Immanuel Quickley,immanuel quickley,6.5,-112.0,-118.0,TOR,709.196047327,38389172.0,38389173.0
 2026-11-06 13:48,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,-112.0,-118.0,TOR,709.196047368,24729449.0,24729450.0
 2026-11-06 13:48,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Collin Murray-Boyles,collin murray boyles,2.5,134.0,-180.0,TOR,709.196047278,65925589.0,65925572.0
+2026-11-06 13:52,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Saddiq Bey,saddiq bey,3.5,-146.0,110.0,NOP,709.196065913,38090839.0,38090838.0
+2026-11-06 13:52,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Zion Williamson,zion williamson,2.5,-144.0,108.0,NOP,709.196064507,24729467.0,24729466.0
+2026-11-06 13:52,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,132.0,-178.0,NOP,709.196064940,77055416.0,77055417.0

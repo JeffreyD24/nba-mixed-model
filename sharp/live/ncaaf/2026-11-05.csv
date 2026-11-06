@@ -543,3 +543,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-05 19:07:00,289895,2026-11-07T17:00:00.000Z,UConn Huskies,North Carolina Tar Heels,6225,cons,7.0,-112.0,54.5,-114.0,215.0,-270.0,22.0,35.0,47.0,69.0,5.0,4.0
 2026-11-05 19:07:00,290167,2026-11-07T20:30:00.000Z,Middle Tennessee Blue Raiders,Western Kentucky Hilltoppers,727,cons,2.0,-110.0,53.5,-108.0,102.0,-122.0,0.0,0.0,33.0,41.0,56.0,3.0
 2026-11-05 19:07:00,290174,2026-11-08T00:00:00.000Z,Jacksonville State Gamecocks,Sam Houston State Bearkats,994,cons,-17.5,-106.0,48.5,-105.0,-900.0,600.0,0.0,0.0,48.0,64.0,99.0,96.0
+2026-11-05 19:08:00,289825,2026-11-06T00:30:00.000Z,Florida Atlantic Owls,UTSA Roadrunners,27035,fd,7.5,-120.0,72.5,-108.0,220.0,-275.0,,,,,,
+2026-11-05 19:11:00,289826,2026-11-06T01:00:00.000Z,Southern Miss Golden Eagles,James Madison Dukes,13066,dk,13.5,-110.0,58.5,-108.0,440.0,-600.0,,,,,,

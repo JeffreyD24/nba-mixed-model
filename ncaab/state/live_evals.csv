@@ -59,3 +59,4 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 14:03,297428,Nebraska Cornhuskers,Providence Friars,-4.5,9.05,9.49,4.95,4.7,0.2,PASS,edge 0.20 < 0.5,,,PASS,no live_features.csv,
 2026-11-06 14:35,297648,Memphis Tigers,VCU Rams,-1.5,7.76,3.3,3.92,1.79,0.29,PASS,edge 0.29 < 0.5,,,PASS,no live_features.csv,
 2026-11-06 14:35,297638,Georgetown Hoyas,Maryland Terrapins,-1.5,10.74,6.47,3.63,1.88,0.38,PASS,edge 0.38 < 0.5,,,PASS,no live_features.csv,
+2026-11-06 14:45,297624,San Diego State Aztecs,Colorado Buffaloes,-2.5,0.85,-1.12,-1.65,1.9,-0.6,PASS,a team has under 3 games,,,PASS,no live_features.csv,

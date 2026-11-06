@@ -5069,6 +5069,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jrue Holiday,jrue holiday,4.5,110.0,-146.0,POR,709.196048593,12260620.0,12260621.0
 2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Sidy Cissoko,sidy cissoko,2.5,-122.0,-108.0,POR,709.196048604,68232609.0,68232610.0
 2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Toumani Camara,toumani camara,3.5,-154.0,116.0,POR,709.196048568,43450264.0,43450266.0
-2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,-102.0,-128.0,POR,709.196048560,12260575.0,12260576.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,-102.0,-128.0,POR,709.19604856,12260575.0,12260576.0
 2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Scoot Henderson,scoot henderson,2.5,102.0,-136.0,POR,709.196048559,62064858.0,62064857.0
 2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-166.0,126.0,LAL,709.196045222,41574998.0,41574999.0
+2026-11-06 11:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Lauri Markkanen,lauri markkanen,21.5,-114.0,-114.0,UTA,709.196050333,14588996.0,14588997.0
+2026-11-06 11:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Keyonte George,keyonte george,21.5,-108.0,-122.0,UTA,709.196050277,50315096.0,50315095.0
+2026-11-06 11:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Jaxson Hayes,jaxson hayes,8.5,-104.0,-128.0,UTA,709.196050305,27031950.0,27031951.0
+2026-11-06 11:11,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,116.0,-154.0,SAC,709.196100094,22280387.0,22280388.0

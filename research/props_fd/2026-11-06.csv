@@ -2382,3 +2382,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 04:14,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jonathan Kuminga,jonathan kuminga,2.5,102.0,-136.0,MIN,709.196062181,40221490.0,40221489.0
 2026-11-06 04:14,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Ayo Dosunmu,ayo dosunmu,4.5,-112.0,-118.0,MIN,709.196061874,41652478.0,41652484.0
 2026-11-06 04:14,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jaden McDaniels,jaden mcdaniels,2.5,-140.0,106.0,MIN,709.196061567,38988768.0,38988773.0
+2026-11-06 04:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,De'Andre Hunter,deandre hunter,12.5,-102.0,-130.0,SAC,709.196063815,26624379.0,26624380.0
+2026-11-06 04:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-138.0,104.0,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 04:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,116.0,-154.0,SAC,709.196063823,12257190.0,12257191.0

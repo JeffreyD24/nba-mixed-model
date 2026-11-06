@@ -1865,3 +1865,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:38,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Jaylen Brown,jaylen brown,6.5,124,-166,PHI,709.196004289,15552471.0,15552472.0
 2026-11-06 01:38,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Jaylen Brown,jaylen brown,3.5,-112,-118,PHI,709.196004287,15552471.0,15552472.0
 2026-11-06 01:38,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Tyrese Maxey,tyrese maxey,4.5,-138,104,PHI,709.196004211,38185448.0,38185450.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Daniel Gafford,daniel gafford,7.5,110,-146,DAL,709.196052766,27543227.0,27543228.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,P.J. Washington,pj washington,6.5,-154,116,DAL,709.196052737,62687064.0,62687065.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,P.J. Washington,pj washington,1.5,124,-166,DAL,709.196052767,62687064.0,62687065.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Naji Marshall,naji marshall,3.5,104,-138,DAL,709.196052723,39295949.0,39295948.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Max Christie,max christie,1.5,-154,116,DAL,709.196052727,43025877.0,43025876.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Daniel Gafford,daniel gafford,1.5,-160,120,DAL,709.196052725,27543227.0,27543228.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-138,104,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,6.5,116,-154,UTA,709.196050232,50315096.0,50315095.0

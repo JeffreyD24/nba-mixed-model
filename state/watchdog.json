@@ -1,5 +1,5 @@
 {
- "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 1042 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)",
- "fail|nba-mixed-model|health.yml": "NBA daily health check: last run FAILED 313 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42243706969)",
- "fail|nfl-mixed-model|health.yml": "NFL daily health check: last run FAILED 455 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"
+ "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 1082 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)",
+ "fail|nba-mixed-model|health.yml": "NBA daily health check: last run FAILED 353 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42243706969)",
+ "fail|nfl-mixed-model|health.yml": "NFL daily health check: last run FAILED 495 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"
 }

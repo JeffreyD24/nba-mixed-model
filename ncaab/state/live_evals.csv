@@ -43,3 +43,4 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 00:33,303548,Florida International Golden Panthers,West Florida Argonauts,-14.5,,,,,,PASS,game not matched to ESPN
 2026-11-06 00:33,297615,Georgia Bulldogs,Presbyterian Blue Hose,-21.5,26.2,29.2,27.63,22.58,1.08,PASS,a team has under 3 games
 2026-11-06 00:40,297397,Miami (FL) Hurricanes,Wagner Seahawks,-31.5,28.25,30.07,29.45,31.52,0.02,PASS,edge 0.02 < 0.5
+2026-11-06 00:45,297623,Oklahoma State Cowboys,Queens Royals,-19.5,17.52,13.47,17.27,19.24,-0.26,PASS,edge 0.26 < 0.5

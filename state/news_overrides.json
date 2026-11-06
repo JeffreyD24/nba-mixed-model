@@ -240,5 +240,16 @@
   "url": "https://bsky.app/profile/lawmurraythenu.bsky.social/post/3mzobrje3xc2y",
   "text": "Sandro Mamukelashvili (illness) will play tonight vs Trail Blazers",
   "swing": 0.33
+ },
+ "2026-11-07|ny|josh hart": {
+  "status": "Out",
+  "player": "Josh Hart",
+  "game_id": 22600191,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 16:48:38",
+  "seen_at_et": "2026-11-06 16:48:49",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzoedmfvkv2v",
+  "text": "Josh Hart: Ruled out for Saturday    https://www.rotowire.com/basketball/player/josh-hart-4136",
+  "swing": 0.4
  }
 }

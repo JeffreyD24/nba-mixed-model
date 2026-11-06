@@ -4992,8 +4992,12 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 10:43,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Devin Vassell,devin vassell,11.5,-132.0,100.0,SAS,709.196062641,38295529.0,38295528.0
 2026-11-06 10:43,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Dylan Harper,dylan harper,4.5,-158.0,118.0,SAS,709.196062603,76027865.0,76027863.0
 2026-11-06 10:43,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-186.0,140.0,SAS,709.196062582,61967224.0,61967225.0
-2026-11-06 10:43,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Nickeil Alexander-Walker,nickeil alexander walker,20.5,-125.0,-106.0,ATL,709.196077190,38310472.0,38310473.0
+2026-11-06 10:43,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Nickeil Alexander-Walker,nickeil alexander walker,20.5,-125.0,-106.0,ATL,709.19607719,38310472.0,38310473.0
 2026-11-06 10:43,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Luguentz Dort,luguentz dort,9.5,100.0,-132.0,ATL,709.196098251,35489576.0,35489577.0
-2026-11-06 10:43,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Dyson Daniels,dyson daniels,5.5,102.0,-136.0,ATL,709.196077200,50686100.0,50686102.0
+2026-11-06 10:43,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Dyson Daniels,dyson daniels,5.5,102.0,-136.0,ATL,709.1960772,50686100.0,50686102.0
 2026-11-06 10:43,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Jalen Johnson,jalen johnson,7.5,-108.0,-122.0,ATL,709.196077202,40197109.0,40197108.0
 2026-11-06 10:43,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Onyeka Okongwu,onyeka okongwu,3.5,116.0,-154.0,ATL,709.196077193,42160899.0,42160900.0
+2026-11-06 10:45,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Payton Pritchard,payton pritchard,2.5,-174.0,130.0,BOS,709.196079638,38225629.0,38225623.0
+2026-11-06 10:45,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Paul George,paul george,3.5,-130.0,-102.0,BOS,709.196079629,12234250.0,12234251.0
+2026-11-06 10:45,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Coby White,coby white,3.5,142.0,-192.0,CHA,709.196085061,26636212.0,26636213.0
+2026-11-06 10:45,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Brandon Miller,brandon miller,3.5,140.0,-188.0,CHA,709.196085063,50113302.0,50113301.0

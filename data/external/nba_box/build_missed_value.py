@@ -13,8 +13,54 @@ _n = P.groupby("team").game_id.nunique(); P = P[P.team.isin(_n[_n >= 20].index)]
 # ESPN can list the same team twice on one date (duplicate/postponed event): keep the game with the most minutes, drop the other game entirely
 _g = P.groupby(["team", "date", "game_id"]).minutes.sum().reset_index().sort_values("minutes", ascending=False)
 _drop = set(_g[_g.duplicated(["team", "date"], keep="first")].game_id); P = P[~P.game_id.isin(_drop)]
-# ESPN returns zero minutes / no stats for every Chicago and New Orleans game 2013-2018 (both sides of those games); empty box scores must not count
-# as "everyone missed", so drop any game whose team minutes sum to < 100 and report how many (see checks.txt; diagnose_empty.py shows the raw response)
+# ESPN returns zero minutes / no stats for every Chicago and New Orleans game 2013-2018 (both sides of those games; re-checked Nov 6, 2026:
+# still blank in ESPN's summary and athlete game logs). Nov 6, 2026: those games are now FILLED from the Kaggle eoinamoore box scores
+# (../kaggle/eoinamoore/PlayerStatistics_*.csv.gz, archived from 2011-12; 98.6% of ESPN 2016-17 player-games match, minutes within 1).
+# Each blank ESPN row keeps its ESPN player_id and name; minutes, plus-minus, starter and played come from the Kaggle row with the same
+# date, team and normalized name. Kaggle players with no ESPN row in that game get the ESPN id seen for that name elsewhere (unique), else
+# "nba:<personId>". Games still under 100 team minutes after the fill are dropped as before and counted in checks.txt.
+import re
+def _norm(s):
+    s = re.sub(r"[^a-z ]", "", str(s).lower().replace("-", " ")); return " ".join(w for w in s.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+_CODE = {"Hawks": "atl", "Celtics": "bos", "Bobcats": "cha", "Bulls": "chi", "Cavaliers": "cle", "Mavericks": "dal", "Nuggets": "den",
+         "Pistons": "det", "Warriors": "gs", "Rockets": "hou", "Pacers": "ind", "Clippers": "lac", "Lakers": "lal", "Grizzlies": "mem", "Heat": "mia",
+         "Bucks": "mil", "Timberwolves": "min", "Pelicans": "no", "Knicks": "ny", "Thunder": "okc", "Magic": "orl", "76ers": "phi", "Suns": "phx",
+         "Trail Blazers": "por", "Kings": "sac", "Spurs": "sa", "Raptors": "tor", "Jazz": "utah", "Wizards": "wsh"}
+_tm = P.groupby(["game_id", "team"]).minutes.sum(); _blank = set(_tm[_tm < 100].reset_index().game_id)
+KAGGLE_FILLED = {}
+if _blank:
+    _K = []
+    for _p in sorted(glob.glob("../kaggle/eoinamoore/PlayerStatistics_*.csv.gz")):
+        _y = int(os.path.basename(_p)[17:21]) + 1
+        if _y not in set(P[P.game_id.isin(_blank)].season): continue
+        _k = pd.read_csv(_p, usecols=["firstName", "lastName", "personId", "gameDateTimeEst", "playerteamCity", "playerteamName", "gameType",
+                                      "numMinutes", "plusMinusPoints", "startingPosition"], low_memory=False)
+        _k = _k[_k.gameType.astype(str).str.contains("Regular")].copy(); _k["season"] = _y
+        _K.append(_k)
+    K = pd.concat(_K, ignore_index=True)
+    K["team"] = np.where(K.playerteamName == "Hornets", np.where(K.playerteamCity == "New Orleans", "no", "cha"),
+                np.where(K.playerteamName == "Nets", np.where(K.season <= 2012, "nj", "bkn"), K.playerteamName.map(_CODE)))
+    K["date"] = K.gameDateTimeEst.astype(str).str[:10]; K["nm"] = (K.firstName.astype(str) + " " + K.lastName.astype(str)).map(_norm)
+    K["mins"] = pd.to_numeric(K.numMinutes, errors="coerce").fillna(0.0)
+    P["nm"] = P.player.map(_norm)
+    _ids = P[~P.game_id.isin(_blank)].groupby("nm").player_id.agg(lambda x: x.iloc[0] if x.nunique() == 1 else None)
+    _new = []
+    for gid, G in P[P.game_id.isin(_blank)].groupby("game_id"):
+        d, teams = G.date.iloc[0], set(G.team)
+        Kg = K[(K.date == d) & K.team.isin(teams)]
+        if Kg.groupby("team").mins.sum().reindex(list(teams)).fillna(0).min() < 100: continue   # Kaggle can't fill this game either
+        for r in Kg.itertuples():
+            row = G[(G.team == r.team) & (G.nm == r.nm)]
+            vals = dict(minutes=float(r.mins), played=int(r.mins > 0), plus_minus=r.plusMinusPoints, starter=int(pd.notna(r.startingPosition) and str(r.startingPosition) != ""))
+            if len(row): P.loc[row.index[0], list(vals)] = list(vals.values())
+            else:
+                base = G[G.team == r.team].iloc[0]
+                _new.append(dict(season=base.season, date=d, game_id=gid, team=r.team, home=base.home, player_id=_ids.get(r.nm) or f"nba:{r.personId}",
+                                 player=f"{r.firstName} {r.lastName}", nm=r.nm, **vals))
+        KAGGLE_FILLED[G.season.iloc[0]] = KAGGLE_FILLED.get(G.season.iloc[0], 0) + 1
+    if _new: P = pd.concat([P, pd.DataFrame(_new)], ignore_index=True)
+    P = P.drop(columns="nm")
+# empty box scores must not count as "everyone missed": drop any game whose team minutes still sum to < 100 and report how many
 _tm = P.groupby(["game_id", "team"]).minutes.sum(); _empty = set(_tm[_tm < 100].reset_index().game_id); EMPTY_DROPPED = P[P.game_id.isin(_empty)].groupby("season").game_id.nunique().to_dict()
 P = P[~P.game_id.isin(_empty)]
 P["plus_minus"] = pd.to_numeric(P.plus_minus.astype(str).str.replace("+", "", regex=False), errors="coerce")
@@ -22,10 +68,14 @@ P[["season", "date", "game_id", "team", "player_id", "player", "minutes", "playe
 # ---- checks
 T = P.groupby(["season", "team", "game_id"]).agg(min=("minutes", "sum")).reset_index()
 n = T.groupby(["season", "team"]).size().unstack(0)
-L = [f"player-game rows {len(P)} (after dropping All-Star teams, duplicate events and empty box scores)", f"empty box-score games dropped by season: {EMPTY_DROPPED}", "games per team-season (min/max by season; expect 82, 66 in 2012, ~72 in 2020-21, 64-75 in 2020): "]
+L = [f"player-game rows {len(P)} (after dropping All-Star teams, duplicate events and empty box scores)",
+     f"blank ESPN games filled from Kaggle by season: {KAGGLE_FILLED}", f"empty box-score games dropped by season: {EMPTY_DROPPED}", "games per team-season (min/max by season; expect 82, 66 in 2012, ~72 in 2020-21, 64-75 in 2020): "]
 for s, c in n.items(): L.append(f"  {s}: {int(c.min())}-{int(c.max())} games, {c.notna().sum()} teams")
 ot = ((T["min"] - 240) / 25).round(); L.append("team minutes within 3 of 240 + 25 x overtimes: %.1f%%" % (100 * ((T["min"] - 240 - 25 * ot).abs() <= 3).mean()))
 L.append("median team minutes %.0f; share below 235: %.2f%%" % (T["min"].median(), 100 * (T["min"] < 235).mean()))
+_dev = (T["min"] - 240 - 25 * ot).abs(); _kf = T.season.isin(list(KAGGLE_FILLED))
+L.append("seasons with Kaggle-filled games (Kaggle minutes are whole numbers, so team totals drift a few minutes): within 10 of 240 + 25 x OT: %.1f%%; worst %.0f"
+         % (100 * (_dev[_kf] <= 10).mean() if _kf.any() else 100.0, _dev[_kf].max() if _kf.any() else 0))
 # ---- missed value
 games = P.groupby(["season", "team", "game_id"]).date.first().reset_index(); games["date"] = pd.to_datetime(games.date)
 pg = P[P.played == 1].copy(); pg["date"] = pd.to_datetime(pg.date)

@@ -39,3 +39,4 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-05 19:50,297620,Saint Louis Billikens,Missouri Tigers,2.5,-2.1,-2.36,0.7,-2.26,0.24,PASS,edge 0.24 < 0.5
 2026-11-05 22:45,302869,Texas-Arlington Mavericks,Portland Pilots,1.5,1.53,2.39,0.38,-1.26,0.24,PASS,edge 0.24 < 0.5
 2026-11-06 00:00,297409,Baylor Bears,Arkansas-Pine Bluff Golden Lions,-36.5,29.63,32.18,32.13,36.23,-0.27,PASS,edge 0.27 < 0.5
+2026-11-06 00:10,297617,Clemson Tigers,American Eagles,-17.5,21.48,24.63,25.5,18.71,1.21,PASS,a team has under 3 games

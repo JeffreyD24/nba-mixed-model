@@ -108,3 +108,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 20:03,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Kenrich Williams,kenrich williams,5.5,108,-144,OKC
 2026-11-05 20:03,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,2.5,-188,140,OKC
 2026-11-05 20:03,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,6.5,100,-132,OKC
+2026-11-05 20:05,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Shai Gilgeous-Alexander,shai gilgeous alexander,32.5,-104,-128,OKC
+2026-11-05 20:05,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Isaiah Hartenstein,isaiah hartenstein,8.5,-132,100,OKC
+2026-11-05 20:05,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Aday Mara,aday mara,8.5,-120,-110,OKC
+2026-11-05 20:05,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Kenrich Williams,kenrich williams,10.5,-110,-120,OKC
+2026-11-05 20:05,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Ajay Mitchell,ajay mitchell,4.5,110,-146,OKC
+2026-11-05 20:05,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Aday Mara,aday mara,7.5,-114,-114,OKC
+2026-11-05 20:05,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Kenrich Williams,kenrich williams,5.5,112,-148,OKC

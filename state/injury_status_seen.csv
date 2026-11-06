@@ -137,10 +137,8 @@ key,status,snapshot
 2026-11-06|cha|pj hall,Out,2026-11-05_05_00PM
 2026-11-06|cha|kon knueppel,Out,2026-11-05_05_00PM
 2026-11-06|cha|grant williams,Out,2026-11-05_05_00PM
-2026-11-06|cle|jarrett allen,Questionable,2026-11-05_05_00PM
 2026-11-06|cle|nae qwan tomlin,Out,2026-11-05_05_00PM
 2026-11-06|cle|jaylon tyson,Out,2026-11-05_05_00PM
-2026-11-06|cle|peyton watson,Questionable,2026-11-05_05_00PM
 2026-11-06|phi|dominick barlow,Out,2026-11-05_05_00PM
 2026-11-06|phi|ariel hukporti,Out,2026-11-05_05_00PM
 2026-11-06|dal|santi aldama,Probable,2026-11-05_05_15PM
@@ -181,13 +179,9 @@ key,status,snapshot
 2026-11-06|por|ja morant,Out,2026-11-05_08_00PM
 2026-11-06|por|shaedon sharpe,Out,2026-11-05_08_00PM
 2026-11-06|por|john tonje,Out,2026-11-05_08_00PM
-2026-11-06|tor|scottie barnes,Questionable,2026-11-05_08_15PM
 2026-11-06|cha|christian anderson,Available,2026-11-06_10_00AM
 2026-11-06|cha|hannes steinbach,Available,2026-11-06_10_15AM
-2026-11-06|tor|kyle anderson,Questionable,2026-11-06_10_45AM
 2026-11-06|bos|payton pritchard,Available,2026-11-06_12_30PM
-2026-11-06|tor|jakob poeltl,Probable,2026-11-06_12_45PM
-2026-11-06|tor|immanuel quickley,Questionable,2026-11-06_12_45PM
 2026-11-06|no|trey murphy,Available,2026-11-06_12_45PM
 2026-11-06|no|julian reese,Available,2026-11-06_12_45PM
 2026-11-06|cha|moussa diabate,Out,2026-11-06_01_00PM
@@ -230,3 +224,9 @@ key,status,snapshot
 2026-11-07|ind|t j mcconnell,Questionable,2026-11-06_06_00PM
 2026-11-07|ind|kelly oubre,Questionable,2026-11-06_06_00PM
 2026-11-07|ind|ben sheppard,Out,2026-11-06_06_00PM
+2026-11-06|cle|jarrett allen,Out,2026-11-06_06_45PM
+2026-11-06|cle|peyton watson,Available,2026-11-06_06_45PM
+2026-11-06|tor|kyle anderson,Probable,2026-11-06_06_45PM
+2026-11-06|tor|scottie barnes,Doubtful,2026-11-06_06_45PM
+2026-11-06|tor|jakob poeltl,Available,2026-11-06_06_45PM
+2026-11-06|tor|immanuel quickley,Doubtful,2026-11-06_06_45PM

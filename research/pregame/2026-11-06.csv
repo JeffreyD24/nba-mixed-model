@@ -7490,3 +7490,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 06:53:21,295196,2026-11-06,2026-11-06 22:00,por,lal,Fanatics,event,team_total,away_under,115.5,-120,normal
 2026-11-06 06:53:21,295196,2026-11-06,2026-11-06 22:00,por,lal,Fanatics,event,team_total,home_over,117.5,-110,normal
 2026-11-06 06:53:21,295196,2026-11-06,2026-11-06 22:00,por,lal,Fanatics,event,team_total,home_under,117.5,-120,normal
+2026-11-06 06:54:39,295189,2026-11-06,2026-11-06 19:00,wsh,atl,BetRivers,event,total,under,228.5,-112,normal
+2026-11-06 06:54:39,295189,2026-11-06,2026-11-06 19:00,wsh,atl,BetMGM,event,total,under,228.5,-105,normal
+2026-11-06 06:54:39,295189,2026-11-06,2026-11-06 19:00,wsh,atl,BetMGM,event,total,over,228.5,-115,normal
+2026-11-06 06:54:39,295189,2026-11-06,2026-11-06 19:00,wsh,atl,Fanatics,event,team_total,away_over,110.5,-125,normal
+2026-11-06 06:54:39,295189,2026-11-06,2026-11-06 19:00,wsh,atl,Fanatics,event,team_total,away_under,110.5,-105,normal
+2026-11-06 06:54:39,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetRivers,event,spread,away,-15.5,-113,normal
+2026-11-06 06:55:47,295190,2026-11-06,2026-11-06 19:30,phi,cle,bet365,event,total,over,228.5,-112,normal
+2026-11-06 06:55:47,295190,2026-11-06,2026-11-06 19:30,phi,cle,bet365,event,total,under,228.5,-108,normal
+2026-11-06 06:55:47,295196,2026-11-06,2026-11-06 22:00,por,lal,bet365,event,total,over,232.5,-107,normal
+2026-11-06 06:55:47,295196,2026-11-06,2026-11-06 22:00,por,lal,bet365,event,total,under,232.5,-113,normal

@@ -5215,3 +5215,8 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 11:39,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Ayo Dosunmu,ayo dosunmu,4.5,-125.0,-106.0,MIN,709.196061874,41652478.0,41652484.0
 2026-11-06 11:39,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,-122.0,-108.0,NOP,709.19606494,77055416.0,77055417.0
 2026-11-06 11:39,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-132.0,100.0,MIN,709.196062475,26324737.0,26324736.0
+2026-11-06 11:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Domantas Sabonis,domantas sabonis,13.5,-128.0,-104.0,SAC,709.196063804,12601272.0,12601273.0
+2026-11-06 11:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Zach LaVine,zach lavine,19.5,-110.0,-120.0,SAC,709.196063812,12257190.0,12257191.0
+2026-11-06 11:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,De'Andre Hunter,deandre hunter,12.5,-108.0,-122.0,SAC,709.196063815,26624379.0,26624380.0
+2026-11-06 11:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,116.0,-154.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 11:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-118.0,-112.0,SAC,709.196063820,12601272.0,12601273.0

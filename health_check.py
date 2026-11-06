@@ -43,7 +43,6 @@ if SPORT in ("nfl", "nhl", "nba"):
     WORKFLOWS["live.yml"] = (30, "Live line recorder")
 if SPORT == "nba":   # Nov 5, 2026: live sharp-money tracker, all five leagues
     WORKFLOWS["sharp-live.yml"] = (2, "Sharp money tracker (about every minute)")
-    STREAMS.update({"sharp/live/nba": (24, "Sharp money live captures", "warn")})
 if SPORT == "nba":
     WORKFLOWS["watchdog.yml"] = (1, "Pipeline watchdog (every 10 min; pushes when anything breaks)")   # Nov 5, 2026
     WORKFLOWS["props-loop.yml"] = (2, "Props loop (FanDuel lines + prop alerts every ~2 min)")       # Nov 5, 2026
@@ -79,6 +78,8 @@ COMMON = {
     "state/poly_paper.csv": (72, "Polymarket paper trades", "warn"),
 }
 STREAMS = dict(COMMON)
+if SPORT == "nba":   # moved here Nov 6, 2026: it ran before STREAMS existed (NameError crashed the daily check)
+    STREAMS.update({"sharp/live/nba": (24, "Sharp money live captures", "warn")})
 if SPORT == "nba":   # Nov 5, 2026: NCAA men's basketball (test-only): ncaab/daily.py
     STREAMS.update({"ncaab/data/games.csv": (30, "NCAAM scores and lines"), "ncaab/state/test_record.md": (30, "NCAAM test record (daily)"), "ncaab/state/m2_totals_test.md": (30, "NCAAM M2 totals test record (daily)"), "ncaab/state/live_ratings.json": (30, "NCAAM live ratings (daily)"), "ncaab/state/dk_lines.csv": (24, "NCAAM DraftKings first-seen lines (alert loop)", "warn"), "ncaab/state/live_record.md": (30, "NCAAM PROVISIONAL record (daily)")})
 if SPORT == "nba":   # Nov 4, 2026: line-move shadow record (analysis/LINE_MOVE_PREREG.md); NBA only for now

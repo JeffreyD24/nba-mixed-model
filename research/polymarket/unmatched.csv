@@ -41,3 +41,4 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-05 08:00,nba-lead-pts-2026-11-05,NBA Nov 5th Points Leader,2026-11-05 21:00,"gs,mia,orl,phx",no matching game in the model files
 2026-11-05 08:00,nba-lead-3pm-2026-11-05,NBA Nov 5th 3-Pointers Made Leader,2026-11-05 21:00,"gs,mia,orl,phx",no matching game in the model files
 2026-11-05 21:00,nba-orl-pho-2026-11-05,ORL Magic vs. PHO Suns,2026-11-05 21:00,"orl,phx",no matching game in the model files
+2026-11-05 22:00,nba-mia-gs-2026-11-05,MIA Heat vs. GS Warriors,2026-11-05 22:00,"gs,mia",no matching game in the model files

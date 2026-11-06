@@ -995,3 +995,16 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 21:52,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,ast,Pelle Larsson,pelle larsson,3.5,-115,-111,MIA
 2026-11-05 21:52,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,ast,Brandin Podziemski,brandin podziemski,3.5,-150,118,GSW
 2026-11-05 21:52,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,ast,Yaxel Lendeborg,yaxel lendeborg,3.5,-156,122,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,pts,Stephen Curry,stephen curry,28.5,-104,-122,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,pts,De'Anthony Melton,deanthony melton,10.5,100,-128,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,pts,Giannis Antetokounmpo,giannis antetokounmpo,27.5,-115,-111,MIA
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,pts,Klay Thompson,klay thompson,11.5,-102,-125,MIA
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,pts,Yaxel Lendeborg,yaxel lendeborg,19.5,-115,-113,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,reb,Stephen Curry,stephen curry,3.5,-130,102,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,reb,Georges Niang,georges niang,3.5,134,-172,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,reb,Draymond Green,draymond green,5.5,132,-170,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,reb,Bam Adebayo,bam adebayo,9.5,112,-142,MIA
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,ast,De'Anthony Melton,deanthony melton,2.5,122,-156,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,ast,Draymond Green,draymond green,6.5,118,-150,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,ast,Brandin Podziemski,brandin podziemski,3.5,-154,120,GSW
+2026-11-05 21:54,2026-11-05,36268667,2026-11-05 22:10,Miami Heat @ Golden State Warriors,gs,mia,ast,Stephen Curry,stephen curry,4.5,-122,-104,GSW

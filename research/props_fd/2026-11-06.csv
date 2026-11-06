@@ -5296,7 +5296,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 11:57,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Brandon Miller,brandon miller,2.5,-158.0,118.0,CHA,709.196085063,50113302.0,50113301.0
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Naz Reid,naz reid,15.5,-130.0,-102.0,CHA,709.196085084,27986553.0,27986554.0
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Derrick White,derrick white,13.5,-120.0,-110.0,BOS,709.196079651,22613511.0,22613512.0
-2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Moussa Diabaté,moussa diabate,7.5,-112.0,-118.0,CHA,709.196085060,90209944.0,90209942.0
+2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Moussa Diabaté,moussa diabate,7.5,-112.0,-118.0,CHA,709.19608506,90209944.0,90209942.0
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,27.5,-106.0,-125.0,BOS,709.196079679,15552473.0,15552474.0
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Neemias Queta,neemias queta,9.5,-125.0,-106.0,BOS,709.196079683,64163654.0,64163656.0
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Paul George,paul george,17.5,-114.0,-114.0,BOS,709.196079625,12234250.0,12234251.0
@@ -5309,3 +5309,15 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Jayson Tatum,jayson tatum,6.5,-114.0,-114.0,BOS,709.196079624,15552473.0,15552474.0
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Payton Pritchard,payton pritchard,3.5,100.0,-132.0,BOS,709.196079644,38225629.0,38225623.0
 2026-11-06 11:59,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Derrick White,derrick white,4.5,-106.0,-125.0,BOS,709.196079689,22613511.0,22613512.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Ziaire Williams,ziaire williams,7.5,-122.0,-108.0,LAL,709.196045261,40297002.0,40297001.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Walker Kessler,walker kessler,12.5,-110.0,-120.0,LAL,709.196045234,43049096.0,43049095.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Luka Doncic,luka doncic,35.5,-106.0,-125.0,LAL,709.196045232,12463224.0,12463223.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Austin Reaves,austin reaves,21.5,-125.0,-106.0,LAL,709.196045245,41574998.0,41574999.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Sandro Mamukelashvili,sandro mamukelashvili,8.5,-102.0,-130.0,LAL,709.196045443,42119780.0,42119779.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Scoot Henderson,scoot henderson,2.5,112.0,-148.0,POR,709.196048574,62064858.0,62064857.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jake Laravia,jake laravia,2.5,-166.0,124.0,LAL,709.196045282,90251254.0,90251266.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Quentin Grimes,quentin grimes,2.5,-122.0,-108.0,LAL,709.196045267,42067800.0,42067801.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Walker Kessler,walker kessler,10.5,104.0,-138.0,LAL,709.196045287,43049096.0,43049095.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,-104.0,-128.0,POR,709.196048560,12260575.0,12260576.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,6.5,120.0,-160.0,POR,709.196048599,37901072.0,37901070.0
+2026-11-06 12:01,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-166.0,124.0,LAL,709.196045222,41574998.0,41574999.0

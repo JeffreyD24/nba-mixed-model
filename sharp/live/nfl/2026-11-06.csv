@@ -221,3 +221,4 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-06 11:32:00,290967,2026-11-08T21:25:00.000Z,Seattle Seahawks,Arizona Cardinals,13777,cons,-8.5,-110.0,39.5,-112.0,-445.0,343.0,49.0,48.0,66.0,26.0,95.0,67.0
 2026-11-06 11:32:00,290969,2026-11-09T01:20:00.000Z,Chicago Bears,Tampa Bay Buccaneers,11516,cons,-6.5,-107.0,47.5,-110.0,-282.0,230.0,68.0,78.0,61.0,70.0,95.0,95.0
 2026-11-06 11:34:00,290967,2026-11-08T21:25:00.000Z,Seattle Seahawks,Arizona Cardinals,13777,dk,-8.5,-110.0,39.5,-112.0,-470.0,360.0,,,,,,
+2026-11-06 11:43:00,290963,2026-11-08T18:00:00.000Z,Washington Commanders,Los Angeles Rams,10173,fd,4.5,-105.0,48.5,-105.0,194.0,-235.0,,,,,,

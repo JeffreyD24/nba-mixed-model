@@ -5080,3 +5080,35 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-05 19:40,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4278053,Davion Mitchell,,21.5,-105.0,23.5,-109.0,2026-11-06T00:22Z,under
 2026-11-05 19:40,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4601025,Pelle Larsson,,18.5,-109.0,20.5,-115.0,2026-11-06T00:06Z,over
 2026-11-05 19:40,22600188,2026-11-05,"Total Points, Rebounds, and Assists",4601025,Pelle Larsson,,18.5,-120.0,20.5,-115.0,2026-11-06T00:06Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points,4566434,Franz Wagner,,23.5,-106.0,22.5,-117.0,2026-11-06T03:47Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points,4566434,Franz Wagner,,23.5,-120.0,22.5,-109.0,2026-11-06T03:47Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points,4601023,Oso Ighodaro,,6.5,-114.0,6.5,-124.0,2026-11-05T23:15Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points,4601023,Oso Ighodaro,,6.5,-112.0,6.5,-103.0,2026-11-05T23:15Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points,4702382,Tristan da Silva,,11.5,-128.0,12.5,-109.0,2026-11-06T03:47Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points,4702382,Tristan da Silva,,11.5,100.0,12.5,-117.0,2026-11-06T03:47Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points,5239561,Jase Richardson,,8.5,100.0,8.5,-123.0,2026-11-05T21:32Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points,5239561,Jase Richardson,,8.5,-127.0,8.5,-104.0,2026-11-05T21:32Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Assists,3136193,Devin Booker,,5.5,111.0,4.5,-127.0,2026-11-05T20:12Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Assists,3136193,Devin Booker,,5.5,-147.0,4.5,-103.0,2026-11-05T20:12Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Assists,4277847,Wendell Carter Jr.,,13.5,-117.0,13.5,-114.0,2026-11-06T00:02Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Assists,4277847,Wendell Carter Jr.,,13.5,-113.0,13.5,-116.0,2026-11-06T00:02Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Assists,4566434,Franz Wagner,,30.5,-108.0,29.5,-120.0,2026-11-06T03:47Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Assists,4566434,Franz Wagner,,30.5,-121.0,29.5,-110.0,2026-11-06T03:47Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Assists,4601023,Oso Ighodaro,,9.5,-124.0,9.5,-101.0,2026-11-06T00:57Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Assists,4601023,Oso Ighodaro,,9.5,-106.0,9.5,-130.0,2026-11-06T00:57Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Rebounds,3155526,Dillon Brooks,,20.5,-109.0,20.5,-125.0,2026-11-06T00:59Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Rebounds,3155526,Dillon Brooks,,20.5,-121.0,20.5,-105.0,2026-11-06T00:59Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Rebounds,4601023,Oso Ighodaro,,12.5,-103.0,12.5,-104.0,2026-11-06T01:05Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Rebounds,4601023,Oso Ighodaro,,12.5,-128.0,12.5,-126.0,2026-11-06T01:05Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Rebounds,5239561,Jase Richardson,,10.5,-132.0,11.5,-110.0,2026-11-06T02:49Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Points and Rebounds,5239561,Jase Richardson,,10.5,100.0,11.5,-119.0,2026-11-06T02:49Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Assists and Rebounds,3136193,Devin Booker,,8.5,-135.0,8.5,-137.0,2026-11-05T23:12Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Assists and Rebounds,3136193,Devin Booker,,8.5,102.0,8.5,104.0,2026-11-05T23:12Z,under
+2026-11-05 19:55,22600187,2026-11-05,Total Assists and Rebounds,4278585,Collin Gillespie,,7.5,112.0,6.5,-139.0,2026-11-06T03:48Z,over
+2026-11-05 19:55,22600187,2026-11-05,Total Assists and Rebounds,4278585,Collin Gillespie,,7.5,-147.0,6.5,106.0,2026-11-06T03:48Z,under
+2026-11-05 19:55,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3155526,Dillon Brooks,,22.5,-117.0,23.5,-113.0,2026-11-06T02:45Z,over
+2026-11-05 19:55,22600187,2026-11-05,"Total Points, Rebounds, and Assists",3155526,Dillon Brooks,,22.5,-112.0,23.5,-116.0,2026-11-06T02:45Z,under
+2026-11-05 19:55,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4566434,Franz Wagner,,36.5,-112.0,35.5,-124.0,2026-11-06T03:05Z,over
+2026-11-05 19:55,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4566434,Franz Wagner,,36.5,-117.0,35.5,-106.0,2026-11-06T03:05Z,under
+2026-11-05 19:55,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4601023,Oso Ighodaro,,15.5,-104.0,14.5,-110.0,2026-11-06T00:56Z,over
+2026-11-05 19:55,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4601023,Oso Ighodaro,,15.5,-126.0,14.5,-120.0,2026-11-06T00:56Z,under

@@ -32395,3 +32395,15 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 16:34:07,295196,2026-11-06,2026-11-06 22:00,por,lal,Fanatics,thirdquarter,team_total,home_over,29.5,120,normal
 2026-11-06 16:34:07,295196,2026-11-06,2026-11-06 22:00,por,lal,Fanatics,firstquarter,team_total,home_over,30.5,-120,normal
 2026-11-06 16:34:07,295196,2026-11-06,2026-11-06 22:00,por,lal,Fanatics,firstquarter,team_total,home_under,30.5,-110,normal
+2026-11-06 16:35:28,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,event,team_total,home_under,98.5,-115,normal
+2026-11-06 16:35:28,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,event,team_total,home_over,98.5,-110,normal
+2026-11-06 16:35:28,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,event,moneyline,away,0.0,-425,normal
+2026-11-06 16:35:28,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,event,moneyline,home,0.0,325,normal
+2026-11-06 16:35:28,295189,2026-11-06,2026-11-06 19:00,wsh,atl,BetMGM,event,total,under,16.5,-105,normal
+2026-11-06 16:35:28,295189,2026-11-06,2026-11-06 19:00,wsh,atl,BetMGM,event,total,over,16.5,-130,normal
+2026-11-06 16:35:28,295191,2026-11-06,2026-11-06 20:00,tor,mil,BetMGM,event,total,under,11.5,-135,normal
+2026-11-06 16:35:28,295191,2026-11-06,2026-11-06 20:00,tor,mil,BetMGM,event,total,over,11.5,100,normal
+2026-11-06 16:36:49,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,event,total,under,5.5,-120,normal
+2026-11-06 16:36:49,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,event,total,over,5.5,-111,normal
+2026-11-06 16:36:49,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,firsthalf,total,under,107.5,-115,normal
+2026-11-06 16:36:49,295188,2026-11-06,2026-11-06 19:00,bos,cha,BetMGM,firsthalf,total,over,107.5,-105,normal

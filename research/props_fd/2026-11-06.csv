@@ -1885,3 +1885,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,De'Andre Hunter,deandre hunter,1.5,100,-132,SAC,709.196063831,26624379.0,26624380.0
 2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-148,112,SAC,709.19606382,12601272.0,12601273.0
 2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Darius Acuff Jr.,darius acuff,5.5,-125,-106,SAC,709.196063801,90960656.0,90960655.0
+2026-11-06 01:54,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,114,-152,OKC,709.196043449,41500697.0,41500698.0
+2026-11-06 01:54,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-146,110,OKC,709.196044513,23677919.0,23677920.0
+2026-11-06 01:54,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Jared McCain,jared mccain,1.5,-188,140,OKC,709.196044324,63496225.0,63496226.0
+2026-11-06 01:54,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,6.5,106,-140,OKC,709.196043076,21662973.0,21662974.0

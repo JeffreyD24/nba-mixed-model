@@ -1541,7 +1541,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Ayo Dosunmu,ayo dosunmu,17.5,-104,-128,MIN,709.196061872,41652478.0,41652484.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Zion Williamson,zion williamson,19.5,102,-136,NOP,709.196064504,24729467.0,24729466.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Rudy Gobert,rudy gobert,9.5,-136,102,MIN,709.196062741,12260609.0,12260610.0
-2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-158,118,MIN,709.196062180,40221490.0,40221489.0
+2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-158,118,MIN,709.19606218,40221490.0,40221489.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Ayo Dosunmu,ayo dosunmu,4.5,-166,124,MIN,709.196061869,41652478.0,41652484.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Dejounte Murray,dejounte murray,5.5,-136,102,NOP,709.196064317,15695648.0,15695649.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Zion Williamson,zion williamson,5.5,104,-138,NOP,709.196064502,24729467.0,24729466.0
@@ -1554,10 +1554,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Rudy Gobert,rudy gobert,1.5,-122,-108,MIN,709.196062738,12260609.0,12260610.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Dejounte Murray,dejounte murray,5.5,-128,-104,NOP,709.196064316,15695648.0,15695649.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Ayo Dosunmu,ayo dosunmu,4.5,-114,-114,MIN,709.196061874,41652478.0,41652484.0
-2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Saddiq Bey,saddiq bey,1.5,-158,118,NOP,709.196065910,38090839.0,38090838.0
+2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Saddiq Bey,saddiq bey,1.5,-158,118,NOP,709.19606591,38090839.0,38090838.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Zion Williamson,zion williamson,2.5,-154,116,NOP,709.196064507,24729467.0,24729466.0
 2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Trey Murphy III,trey murphy,2.5,-182,136,NOP,709.196064716,40336995.0,40336994.0
-2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,-120,-110,NOP,709.196064940,77055416.0,77055417.0
+2026-11-06 00:51,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,-120,-110,NOP,709.19606494,77055416.0,77055417.0
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Damian Lillard,damian lillard,21.5,-102,-130,POR,709.196048594,12260575.0,12260576.0
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Donovan Clingan,donovan clingan,12.5,102,-136,POR,709.196048571,50752175.0,50752173.0
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Deni Avdija,deni avdija,23.5,-122,-108,POR,709.196048602,37901072.0,37901070.0
@@ -1570,7 +1570,53 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Toumani Camara,toumani camara,3.5,-154,116,POR,709.196048568,43450264.0,43450266.0
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Damian Lillard,damian lillard,3.5,-144,108,POR,709.196048586,12260575.0,12260576.0
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Quentin Grimes,quentin grimes,2.5,-132,100,LAL,709.196045267,42067800.0,42067801.0
-2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,106,-140,POR,709.196048560,12260575.0,12260576.0
-2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Toumani Camara,toumani camara,1.5,-104,-128,POR,709.196048570,43450264.0,43450266.0
+2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,106,-140,POR,709.19604856,12260575.0,12260576.0
+2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Toumani Camara,toumani camara,1.5,-104,-128,POR,709.19604857,43450264.0,43450266.0
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,104,-138,POR,709.196048601,12260620.0,12260621.0
 2026-11-06 00:51,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Donovan Clingan,donovan clingan,1.5,-132,100,POR,709.196048578,50752175.0,50752173.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Lauri Markkanen,lauri markkanen,21.5,-110,-120,UTA,709.196050333,14588996.0,14588997.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Max Christie,max christie,9.5,-108,-122,DAL,709.196052759,43025877.0,43025876.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Ace Bailey,ace bailey,12.5,-130,-102,UTA,709.196050270,77851408.0,77851407.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Kyrie Irving,kyrie irving,21.5,100,-132,DAL,709.196052739,12260613.0,12260614.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Daniel Gafford,daniel gafford,9.5,-118,-114,DAL,709.196052745,27543227.0,27543228.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,P.J. Washington,pj washington,12.5,-130,-102,DAL,709.196052764,62687064.0,62687065.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Cooper Flagg,cooper flagg,26.5,100,-132,DAL,709.196052748,75811240.0,75811222.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Jaxson Hayes,jaxson hayes,8.5,-108,-122,UTA,709.196050305,27031950.0,27031951.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Naji Marshall,naji marshall,11.5,-120,-110,DAL,709.196052762,39295949.0,39295948.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Cooper Flagg,cooper flagg,6.5,-148,112,DAL,709.196052734,75811240.0,75811222.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Daniel Gafford,daniel gafford,7.5,108,-144,DAL,709.196052766,27543227.0,27543228.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Jaxson Hayes,jaxson hayes,5.5,-160,120,UTA,709.196050268,27031950.0,27031951.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Kyrie Irving,kyrie irving,3.5,-158,118,DAL,709.196052726,12260613.0,12260614.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Ace Bailey,ace bailey,5.5,-114,-114,UTA,709.196050294,77851408.0,77851407.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Darryn Peterson,darryn peterson,3.5,-144,108,UTA,709.196050310,90729780.0,90729781.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Naji Marshall,naji marshall,3.5,-144,108,DAL,709.196052761,39295949.0,39295948.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,P.J. Washington,pj washington,1.5,126,-166,DAL,709.196052767,62687064.0,62687065.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Jaxson Hayes,jaxson hayes,1.5,-152,114,UTA,709.196050303,27031950.0,27031951.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Max Christie,max christie,1.5,-154,116,DAL,709.196052727,43025877.0,43025876.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,4.5,-136,102,UTA,709.196050326,90729780.0,90729781.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Daniel Gafford,daniel gafford,1.5,-158,118,DAL,709.196052725,27543227.0,27543228.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Lauri Markkanen,lauri markkanen,1.5,-182,136,UTA,709.196050273,14588996.0,14588997.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-158,118,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 00:53,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,6.5,116,-154,UTA,709.196050232,50315096.0,50315095.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Ziaire Williams,ziaire williams,7.5,-118,-110,LAL,709.196045261,40297002.0,40297001.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Donovan Clingan,donovan clingan,12.5,-102,-130,POR,709.196048571,50752175.0,50752173.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Deni Avdija,deni avdija,23.5,-120,-110,POR,709.196048602,37901072.0,37901070.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Quentin Grimes,quentin grimes,6.5,-128,-104,LAL,709.196045256,42067800.0,42067801.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Matisse Thybulle,matisse thybulle,6.5,-114,-114,LAL,709.196045257,27661447.0,27661448.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Luka Doncic,luka doncic,35.5,-104,-128,LAL,709.196045232,12463224.0,12463223.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jrue Holiday,jrue holiday,13.5,-112,-118,POR,709.196048583,12260620.0,12260621.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Toumani Camara,toumani camara,11.5,-122,-108,POR,709.196048581,43450264.0,43450266.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Austin Reaves,austin reaves,21.5,-110,-120,LAL,709.196045245,41574998.0,41574999.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jake Laravia,jake laravia,5.5,-108,-122,LAL,709.196045224,90251254.0,90251266.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Sidy Cissoko,sidy cissoko,5.5,-102,-130,POR,709.196048611,68232609.0,68232610.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Scoot Henderson,scoot henderson,11.5,-114,-114,POR,709.196048610,62064858.0,62064857.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Austin Reaves,austin reaves,3.5,-118,-112,LAL,709.196045260,41574998.0,41574999.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Sidy Cissoko,sidy cissoko,2.5,-125,-104,POR,709.196048604,68232609.0,68232610.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Toumani Camara,toumani camara,3.5,-158,116,POR,709.196048568,43450264.0,43450266.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Sandro Mamukelashvili,sandro mamukelashvili,4.5,-104,-128,LAL,709.196045445,42119780.0,42119779.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Quentin Grimes,quentin grimes,2.5,-130,-102,LAL,709.196045267,42067800.0,42067801.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,104,-138,POR,709.196048560,12260575.0,12260576.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Scoot Henderson,scoot henderson,2.5,-104,-128,POR,709.196048559,62064858.0,62064857.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Luka Doncic,luka doncic,6.5,-154,116,LAL,709.196045289,12463224.0,12463223.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Sidy Cissoko,sidy cissoko,1.5,-112,-118,POR,709.196048579,68232609.0,68232610.0
+2026-11-06 00:53,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Donovan Clingan,donovan clingan,1.5,-130,-102,POR,709.196048578,50752175.0,50752173.0

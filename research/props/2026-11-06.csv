@@ -10724,3 +10724,33 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-06 11:15,22600033,2026-11-06,"Total Points, Rebounds, and Assists",4845367,Stephon Castle,,28.5,-115.0,27.5,-106.0,2026-11-06T14:23Z,under
 2026-11-06 11:15,22600033,2026-11-06,"Total Points, Rebounds, and Assists",5037871,Dylan Harper,,27.5,-111.0,27.5,-124.0,2026-11-06T13:12Z,over
 2026-11-06 11:15,22600033,2026-11-06,"Total Points, Rebounds, and Assists",5037871,Dylan Harper,,27.5,-118.0,27.5,-106.0,2026-11-06T13:12Z,under
+2026-11-06 11:25,22600026,2026-11-06,Total Assists,4395651,Coby White,,3.5,131.0,2.5,-152.0,2026-11-06T18:14Z,over
+2026-11-06 11:25,22600026,2026-11-06,Total Assists,4395651,Coby White,,3.5,-173.0,2.5,115.0,2026-11-06T18:14Z,under
+2026-11-06 11:25,22600026,2026-11-06,Total Assists and Rebounds,4395651,Coby White,,5.5,-120.0,5.5,116.0,2026-11-06T14:17Z,over
+2026-11-06 11:25,22600026,2026-11-06,Total Assists and Rebounds,4395651,Coby White,,5.5,-110.0,5.5,-153.0,2026-11-06T14:17Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points,4395625,RJ Barrett,,23.5,-113.0,23.5,-114.0,2026-11-06T14:04Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points,4395625,RJ Barrett,,23.5,-113.0,23.5,-112.0,2026-11-06T14:04Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points,4433134,Scottie Barnes,,22.5,-103.0,22.5,-112.0,2026-11-06T15:38Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points,4433134,Scottie Barnes,,22.5,-123.0,22.5,-113.0,2026-11-06T15:38Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points,5093267,Collin Murray-Boyles,,12.5,-105.0,11.5,-128.0,2026-11-06T15:44Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points,5093267,Collin Murray-Boyles,,12.5,-122.0,11.5,101.0,2026-11-06T15:44Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,3134907,Kyle Kuzma,,12.5,-122.0,13.5,-108.0,2026-11-06T18:20Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,3134907,Kyle Kuzma,,12.5,-108.0,13.5,-122.0,2026-11-06T18:20Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,4395625,RJ Barrett,,27.5,-121.0,27.5,-112.0,2026-11-06T12:20Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,4395625,RJ Barrett,,27.5,-108.0,27.5,-118.0,2026-11-06T12:20Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,4433134,Scottie Barnes,,28.5,-104.0,28.5,-125.0,2026-11-06T15:12Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,4433134,Scottie Barnes,,28.5,-126.0,28.5,-106.0,2026-11-06T15:12Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,5093267,Collin Murray-Boyles,,14.5,-111.0,14.5,-116.0,2026-11-06T18:16Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Assists,5093267,Collin Murray-Boyles,,14.5,-118.0,14.5,-113.0,2026-11-06T18:16Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Rebounds,4395625,RJ Barrett,,29.5,-123.0,29.5,-108.0,2026-11-06T12:28Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Rebounds,4395625,RJ Barrett,,29.5,-107.0,29.5,-122.0,2026-11-06T12:28Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Rebounds,4433134,Scottie Barnes,,30.5,-113.0,31.5,-108.0,2026-11-06T14:28Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Rebounds,4433134,Scottie Barnes,,30.5,-116.0,31.5,-122.0,2026-11-06T14:28Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Rebounds,5093267,Collin Murray-Boyles,,17.5,-126.0,18.5,-116.0,2026-11-06T16:27Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Points and Rebounds,5093267,Collin Murray-Boyles,,17.5,-105.0,18.5,-113.0,2026-11-06T16:27Z,under
+2026-11-06 11:25,22600030,2026-11-06,Total Assists and Rebounds,3133628,Myles Turner,,7.5,-101.0,7.5,-102.0,2026-11-06T12:19Z,over
+2026-11-06 11:25,22600030,2026-11-06,Total Assists and Rebounds,3133628,Myles Turner,,7.5,-130.0,7.5,-129.0,2026-11-06T12:19Z,under
+2026-11-06 11:25,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4433134,Scottie Barnes,,36.5,-114.0,37.5,-108.0,2026-11-06T19:14Z,over
+2026-11-06 11:25,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4433134,Scottie Barnes,,36.5,-116.0,37.5,-121.0,2026-11-06T19:14Z,under
+2026-11-06 11:25,22600030,2026-11-06,"Total Points, Rebounds, and Assists",5093267,Collin Murray-Boyles,,20.5,-105.0,20.5,-120.0,2026-11-06T19:14Z,over
+2026-11-06 11:25,22600030,2026-11-06,"Total Points, Rebounds, and Assists",5093267,Collin Murray-Boyles,,20.5,-125.0,20.5,-110.0,2026-11-06T19:14Z,under

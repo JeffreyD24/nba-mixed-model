@@ -5501,7 +5501,41 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 12:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Myles Turner,myles turner,1.5,-132.0,100.0,MIL,709.196052476,12234258.0,12234259.0
 2026-11-06 12:27,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,110.0,-146.0,TOR,709.196047368,24729449.0,24729450.0
 2026-11-06 12:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Kyle Kuzma,kyle kuzma,4.5,-132.0,100.0,MIL,709.196052501,13527607.0,13527606.0
-2026-11-06 12:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ryan Rollins,ryan rollins,3.5,-106.0,-125.0,MIL,709.196053660,43183325.0,43183330.0
-2026-11-06 12:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Tyler Herro,tyler herro,4.5,104.0,-138.0,MIL,709.196052510,26611574.0,26611575.0
+2026-11-06 12:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ryan Rollins,ryan rollins,3.5,-106.0,-125.0,MIL,709.19605366,43183325.0,43183330.0
+2026-11-06 12:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Tyler Herro,tyler herro,4.5,104.0,-138.0,MIL,709.19605251,26611574.0,26611575.0
 2026-11-06 12:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Myles Turner,myles turner,5.5,-104.0,-128.0,MIL,709.196052487,12234258.0,12234259.0
 2026-11-06 12:29,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Kel'el Ware,kelel ware,7.5,100.0,-132.0,MIL,709.196054134,50596621.0,50596622.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Derrick White,derrick white,13.5,-108.0,-122.0,BOS,709.196079651,22613511.0,22613512.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,26.5,-120.0,-110.0,BOS,709.196079679,15552473.0,15552474.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Neemias Queta,neemias queta,9.5,-125.0,-106.0,BOS,709.196079683,64163654.0,64163656.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Payton Pritchard,payton pritchard,14.5,102.0,-136.0,BOS,709.196079627,38225629.0,38225623.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Paul George,paul george,17.5,-108.0,-122.0,BOS,709.196079625,12234250.0,12234251.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Payton Pritchard,payton pritchard,2.5,-168.0,126.0,BOS,709.196079638,38225629.0,38225623.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Naz Reid,naz reid,6.5,-146.0,110.0,CHA,709.196085072,27986553.0,27986554.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Paul George,paul george,4.5,-120.0,-110.0,BOS,709.196079664,12234250.0,12234251.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Derrick White,derrick white,3.5,116.0,-154.0,BOS,709.196079695,22613511.0,22613512.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Brandon Miller,brandon miller,4.5,-136.0,102.0,CHA,709.196085080,50113302.0,50113301.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Jayson Tatum,jayson tatum,7.5,114.0,-152.0,BOS,709.196079667,15552473.0,15552474.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Coby White,coby white,2.5,-108.0,-122.0,CHA,709.196085076,26636212.0,26636213.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Moussa Diabaté,moussa diabate,8.5,-152.0,114.0,CHA,709.196085065,90209944.0,90209942.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Neemias Queta,neemias queta,7.5,114.0,-152.0,BOS,709.196079694,64163654.0,64163656.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Coby White,coby white,3.5,136.0,-182.0,CHA,709.196085061,26636212.0,26636213.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Jayson Tatum,jayson tatum,6.5,-102.0,-130.0,BOS,709.196079624,15552473.0,15552474.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Payton Pritchard,payton pritchard,3.5,-106.0,-125.0,BOS,709.196079644,38225629.0,38225623.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Derrick White,derrick white,4.5,134.0,-180.0,BOS,709.196079689,22613511.0,22613512.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Naz Reid,naz reid,2.5,158.0,-215.0,CHA,709.196085087,27986553.0,27986554.0
+2026-11-06 12:31,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Brandon Miller,brandon miller,2.5,-158.0,118.0,CHA,709.196085063,50113302.0,50113301.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,VJ Edgecombe,vj edgecombe,11.5,-122.0,-108.0,PHI,709.196004314,75784960.0,75784927.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Peyton Watson,peyton watson,10.5,-122.0,-108.0,CLE,709.196103881,54472264.0,54472265.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Joel Embiid,joel embiid,21.5,-102.0,-130.0,PHI,709.196004277,12260618.0,12260619.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,LeBron James,lebron james,16.5,-128.0,-104.0,PHI,709.196004112,12260611.0,12260612.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Tyrese Maxey,tyrese maxey,3.5,-106.0,-125.0,PHI,709.196004206,38185448.0,38185450.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Jarrett Allen,jarrett allen,7.5,106.0,-140.0,CLE,709.196003728,21174117.0,21174118.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Kentavious Caldwell-Pope,kentavious caldwell pope,1.5,-186.0,138.0,PHI,709.196100408,15643012.0,15643013.0
+2026-11-06 12:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,LeBron James,lebron james,6.5,-138.0,104.0,PHI,709.196004111,12260611.0,12260612.0
+2026-11-06 12:31,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jeremiah Fears,jeremiah fears,14.5,-108.0,-122.0,NOP,709.196064939,77055416.0,77055417.0
+2026-11-06 12:31,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Derik Queen,derik queen,10.5,-120.0,-110.0,NOP,709.196065579,76134713.0,76134712.0
+2026-11-06 12:31,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Trey Murphy III,trey murphy,4.5,-128.0,-104.0,NOP,709.196064717,40336995.0,40336994.0
+2026-11-06 12:31,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Saddiq Bey,saddiq bey,3.5,-146.0,110.0,NOP,709.196065913,38090839.0,38090838.0
+2026-11-06 12:31,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Derik Queen,derik queen,2.5,-122.0,-108.0,NOP,709.196065584,76134713.0,76134712.0
+2026-11-06 12:31,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,102.0,-136.0,NOP,709.196064940,77055416.0,77055417.0

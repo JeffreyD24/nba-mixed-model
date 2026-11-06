@@ -828,3 +828,24 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 20:58,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Desmond Bane,desmond bane,3.5,100,-128,ORL
 2026-11-05 20:58,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Jalen Green,jalen green,2.5,-162,126,PHX
 2026-11-05 20:58,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Miles Bridges,miles bridges,2.5,-142,112,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Anthony Black,anthony black,15.5,-115,-111,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Dillon Brooks,dillon brooks,16.5,102,-130,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Jamal Cain,jamal cain,6.5,106,-136,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Wendell Carter Jr.,wendell carter,11.5,-136,106,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Miles Bridges,miles bridges,16.5,-111,-115,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Tristan da Silva,tristan da silva,12.5,-118,-108,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Jase Richardson,jase richardson,7.5,-128,100,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Desmond Bane,desmond bane,20.5,-108,-118,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Jalen Green,jalen green,16.5,-111,-115,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Collin Gillespie,collin gillespie,3.5,120,-154,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Khaman Maluach,khaman maluach,5.5,-102,-125,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Oso Ighodaro,oso ighodaro,5.5,-138,108,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Jase Richardson,jase richardson,2.5,100,-128,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Desmond Bane,desmond bane,4.5,108,-138,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Dillon Brooks,dillon brooks,4.5,128,-164,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Devin Booker,devin booker,3.5,-106,-120,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Wendell Carter Jr.,wendell carter,9.5,102,-130,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Oso Ighodaro,oso ighodaro,2.5,-174,136,PHX
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Tristan da Silva,tristan da silva,1.5,-136,106,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Jase Richardson,jase richardson,2.5,-102,-125,ORL
+2026-11-05 21:04,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Anthony Black,anthony black,4.5,-120,-106,ORL

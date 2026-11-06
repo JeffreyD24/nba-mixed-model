@@ -262,5 +262,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzofcwiekx2n",
   "text": "Jalen Johnson: Ruled out for Friday    https://www.rotowire.com/basketball/player/jalen-johnson-5329",
   "swing": 0.62
+ },
+ "2026-11-06|wsh|anthony davis": {
+  "status": "Out",
+  "player": "Anthony Davis",
+  "game_id": 22600025,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 17:37:05",
+  "seen_at_et": "2026-11-06 17:37:07",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzoh2arwwt2g",
+  "text": "Anthony Davis: Ruled out Friday night    https://www.rotowire.com/basketball/player/anthony-davis-3297",
+  "swing": 0.63
  }
 }

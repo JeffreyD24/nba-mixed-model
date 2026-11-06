@@ -76,7 +76,9 @@ def state(X, model):
     home = e > 0; dog = home & (X.hs > 0)
     us_cat = np.where(home, X.h_cat, X.a_cat); them_cat = np.where(home, X.a_cat, X.h_cat); us_arr = np.where(home, X.h_arr, X.a_arr)
     trap = (us_cat == "tanking") | (them_cat == "middle") | (pd.Series(us_arr).fillna(0).values > 0)
-    ok = X.ready & ((~X.late & ~dog) | (X.late & ~trap))
+    # Nov 6, 2026 fix (RULE 11): home underdogs are excluded in every month, as in alert.py 862-873. The pre-registered run
+    # (commit 1ae29c3) used Oct-Jan only; both are reported in betting-goals models/tests/NBA_SPREAD_MOVED_TOWARD_RESULTS.md.
+    ok = X.ready & ~dog & (~X.late | ~trap)
     return e, side, mv, ok
 def grade(X, side, at_open=False):
     line = X.open_hs if at_open else X.hs

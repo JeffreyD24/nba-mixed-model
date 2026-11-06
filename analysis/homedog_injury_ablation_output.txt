@@ -1,0 +1,26 @@
+NBA spreads, Model 1 walk-forward (lag 1), DK openers 2023-24..2025-26, edge 3+, both teams 10+ games, -110
+games: 3218; injury shift (with minus without) mean -0.03, sd 1.47
+
+(a) WITH injuries
+  all bets                                           1046 bets  50.0%   -47.5u ( -4.5/100)  [2024:-39.6 2025:-12.0 2026:+4.1]
+  home underdogs                                      400 bets  44.0%   -64.0u (-15.8/100)  [2024:-31.5 2025:-17.5 2026:-15.0]
+  everything else                                     646 bets  53.7%   +16.5u ( +2.5/100)  [2024:-8.1 2025:+5.5 2026:+19.1]
+  home underdogs, Oct-Jan                             165 bets  47.9%   -14.2u ( -8.5/100)  [2024:-7.1 2025:-3.5 2026:-3.5]
+  everything else, Oct-Jan                            327 bets  59.6%   +45.3u (+13.6/100)  [2024:+11.1 2025:+15.1 2026:+19.1]
+
+(b) WITHOUT injuries
+  all bets                                           1151 bets  51.3%   -24.6u ( -2.1/100)  [2024:-34.5 2025:+5.5 2026:+4.4]
+  home underdogs                                      446 bets  46.9%   -47.0u (-10.4/100)  [2024:-20.8 2025:-13.7 2026:-12.5]
+  everything else                                     705 bets  54.0%   +22.4u ( +3.1/100)  [2024:-13.7 2025:+19.3 2026:+16.8]
+  home underdogs, Oct-Jan                             194 bets  52.6%    +0.7u ( +0.4/100)  [2024:-1.0 2025:-2.9 2026:+4.6]
+  everything else, Oct-Jan                            341 bets  58.7%   +40.8u (+11.7/100)  [2024:+5.9 2025:+16.4 2026:+18.5]
+
+Home-dog bets by model
+  in both (a) and (b)                                 333 bets  44.1%   -52.4u (-15.6/100)  [2024:-25.1 2025:-19.2 2026:-8.1]
+  injury-made: only with injuries (a)                  67 bets  43.3%   -11.6u (-17.1/100)  [2024:-6.5 2025:+1.7 2026:-6.9]
+  only without injuries (b)                           113 bets  54.9%    +5.4u ( +4.7/100)  [2024:+4.3 2025:+5.5 2026:-4.4]
+  (a) home-dog bets: injury shift toward home, mean -0.10 pts
+
+PRIMARY TEST: ROI per bet of home-dog bets, (b) without injuries minus (a) with
+  (a) -15.8/100, (b) -10.4/100, difference +5.4/100; bootstrap 10th percentile -3.0, 90% range -5.2 to +15.9; injury-made home-dog ROI -17.1/100
+  VERDICT (pre-registered rule): INCONCLUSIVE

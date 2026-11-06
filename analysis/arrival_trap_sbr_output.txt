@@ -1,0 +1,19 @@
+NBA arrival trap at SBR openers 2013-14..2021-22 (Model 1 no injuries, edge 3+, -110, trusted, both teams 10+ games)
+player-games 250951; mid-season joins 800; bets 1998; late bets with our arrival>0: 324
+late bets with an arrival, by season: 14:16 15:37 16:35 17:18 18:30 19:24 20:31 21:86 22:47
+
+Late period, passing the other live filters (no home dog, not on tanking, not against 5-10)
+  our team has a recent arrival (trap)                   67 bets  58.2%    +7.5u (+11.1/100)  [14:+0 15:+1 16:-1 17:+2 18:+2 19:+3 20:-2 21:+2 22:+1]
+  no recent arrival                                     167 bets  55.7%   +10.5u ( +6.2/100)  [14:-3 15:-1 16:-1 17:-1 18:+3 19:+2 20:+3 21:+2 22:+6]
+
+Reported, not tested
+  late: opponent has a recent arrival                    61 bets  62.3%   +11.5u (+18.9/100)  [14:+0 15:+1 16:-0 17:+2 18:+2 19:-0 20:+2 21:+2 22:+3]
+  Oct-Jan (no home dogs): our team has an arrival        33 bets  78.8%   +16.6u (+48.9/100)  [14:+3 15:+1 16:+0 17:+0 18:+5 19:+2 20:+1 21:+3 22:+3]
+  Oct-Jan (no home dogs): none                          517 bets  52.2%    -1.5u ( -0.3/100)  [14:-1 15:+7 16:-4 17:-5 18:+6 19:-1 20:+6 21:-1 22:-8]
+  FULL live filter (all three traps, no home dogs): kept  717 bets  54.3%   +25.6u ( +3.5/100)  [14:-2 15:+7 16:-5 17:-5 18:+14 19:+3 20:+10 21:+3 22:+0]
+  FULL live filter: removed                            1243 bets  47.1%  -126.2u ( -9.9/100)  [14:-10 15:-21 16:+1 17:-11 18:-8 19:-6 20:-7 21:-44 22:-21]
+  (Nov 6 filter test definition: kept)                  955 bets  53.5%   +20.5u ( +2.1/100)  [14:-2 15:+8 16:-5 17:-3 18:+15 19:+3 20:+9 21:-3 22:-2]
+
+PRIMARY TEST: ROI per bet, no-arrival minus arrival (late, other live filters passed)
+  arrival +11.1/100, none +6.2/100, difference -4.9/100; bootstrap 10th percentile -21.9, 90% range -27.0 to +17.1
+  VERDICT (pre-registered rule): REJECTED

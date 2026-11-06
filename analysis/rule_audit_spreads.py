@@ -48,7 +48,9 @@ def live_ok(model, line):
     dog = home & (line > 0)
     us_cat = np.where(home, R.h_cat, R.a_cat); them_cat = np.where(home, R.a_cat, R.h_cat); us_arr = np.where(home, R.h_arr, R.a_arr)
     trap = (us_cat == "tanking") | (them_cat == "middle") | (pd.Series(us_arr).fillna(0).values > 0)
-    return ready & ((~late & ~dog) | (late & ~trap))
+    # Nov 6, 2026 fix (RULE 11): the live alert (alert.py 862-873) excludes home underdogs in EVERY month, not only Oct-Jan.
+    # Before this fix this audit let Feb-Apr home dogs through; numbers before the fix are in git history (commit 1ae29c3).
+    return ready & ~dog & (~late | ~trap)
 
 def g(model, line, mask, label):
     e = model + line; m = mask & (e.abs() >= 3) & line.notna() & model.notna()

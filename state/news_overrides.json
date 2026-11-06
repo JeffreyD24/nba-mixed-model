@@ -284,5 +284,27 @@
   "url": "https://bsky.app/profile/christopherhine.bsky.social/post/3mzoiearnlc2f",
   "text": "Sixers say Adem Bona is out tonight",
   "swing": 0.47
+ },
+ "2026-11-06|dal|kyrie irving": {
+  "status": "Available",
+  "player": "Kyrie Irving",
+  "game_id": 22600028,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 18:10:49",
+  "seen_at_et": "2026-11-06 18:14:19",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzoiwl44e42g",
+  "text": "Kyrie Irving: Upgraded to available    https://www.rotowire.com/basketball/player/kyrie-irving-3186",
+  "swing": 1.59
+ },
+ "2026-11-06|dal|santi aldama": {
+  "status": "Available",
+  "player": "Santi Aldama",
+  "game_id": 22600028,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 18:10:30",
+  "seen_at_et": "2026-11-06 18:14:19",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzoivzh77w2y",
+  "text": "Santi Aldama: Available to play    https://www.rotowire.com/basketball/player/santi-aldama-5428",
+  "swing": 0.11
  }
 }

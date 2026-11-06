@@ -247,3 +247,4 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-06 12:36:00,290963,2026-11-08T18:00:00.000Z,Washington Commanders,Los Angeles Rams,10501,fd,4.5,-105.0,47.5,-115.0,194.0,-235.0,,,,,,
 2026-11-06 12:37:00,290962,2026-11-08T18:00:00.000Z,New Orleans Saints,Cleveland Browns,11293,fd,-3.0,-100.0,42.5,-110.0,-148.0,126.0,,,,,,
 2026-11-06 12:37:00,290963,2026-11-08T18:00:00.000Z,Washington Commanders,Los Angeles Rams,10501,cons,4.5,-107.0,48.0,-110.0,185.0,-226.0,37.0,31.0,62.0,57.0,8.0,1.0
+2026-11-06 12:46:00,290963,2026-11-08T18:00:00.000Z,Washington Commanders,Los Angeles Rams,10501,cons,4.5,-107.0,48.0,-111.0,185.0,-226.0,37.0,31.0,62.0,57.0,8.0,1.0

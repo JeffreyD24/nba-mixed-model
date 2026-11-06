@@ -156,6 +156,14 @@ def stop_price(popen, p, ev_min, tol=0.05):
         a = nxt
 
 
+def ev_stop(p, ev_min):
+    """worst American price at which a bet with win chance p still has EV >= ev_min (Nov 6, 2026: 'bet until' for the other book)"""
+    d = (1 + ev_min) / p
+    if d <= 1: return None
+    import math
+    return int(math.ceil((d - 1) * 100)) if d >= 2 else int(math.ceil(-100 / (d - 1)))
+
+
 def pick():
     import actionnet
     path = os.path.join(W, "research", "props_fd", f"{TODAY}.csv")
@@ -302,36 +310,29 @@ def live():
             tier_lab = {"early": "PROVISIONAL PROP", "late": "PROVISIONAL PROP (LATE)", "stale": "PROVISIONAL PROP (STALE OPENER)"}[r.tier]
             done.add(key)
             sname = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes"}[r.stat]
-            title = f"{tier_lab} - {r.player} {side.upper()} {r.line:g} {sname} {int(price):+d} (FanDuel)"
-            body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. Model projects {mu:.1f} {sname}; chance {ps*100:.0f}% vs FanDuel's {((pk if side == 'over' else 1-pk))*100:.0f}%, "
-                    f"EV {ev*100:+.1f}%. Still at FanDuel's opening line. {tier_lab} (props v1b at FanDuel openers, tier '{r.tier}'): 1 unit, own record, "
-                    f"stop rules in research/PROVISIONAL_BETS.md. Backtest 2023-25 at FanDuel openers: 4h+ before tip +3.9% ROI; 1-4h +22%; stale not tested. "
-                    f"Log it with 'Log a bet' (market: prop) if you place it.")
-            # Nov 6, 2026 (Jeffrey): every alert says exactly when to stop placing it (the same two price checks this rule uses)
+            # Nov 6, 2026 (Jeffrey): alerts say only WHAT to bet, WHERE, and WHEN TO STOP ("bet until +102"). The model numbers, tier and
+            # backtest stay in state/props_live.csv (written below), not in the alert.
             sp = stop_price(popen, ps, PO["ev_min"])
-            if sp is not None: body += (f"\nSTOP: bet only {side.upper()} {r.line:g} at {sp:+d} or better at FanDuel. If the line leaves {r.line:g} or the price "
-                     f"gets worse than {sp:+d}, don't bet it (outside the opener window or EV under {PO['ev_min']*100:.0f}%).\n")
-            # Nov 6, 2026 (Jeffrey): FanDuel + DraftKings links and which book is better, by the model's own EV at each book's line and price
+            ps_at = lambda ln: (p_over(max(mu, 0.05), r.stat, ln, PO) if side == "over" else 1 - p_over(max(mu, 0.05), r.stat, ln, PO))
+            book, bline, bprice, bstop = "FanDuel", r.line, int(price), sp
             try:
                 import dk_props, fanduel
                 dkq = dk_props.quote(r.stat, r.name)
-                ps_at = lambda ln: (p_over(max(mu, 0.05), r.stat, ln, PO) if side == "over" else 1 - p_over(max(mu, 0.05), r.stat, ln, PO))
                 ev_fd = ps_at(r.line) * float(dec(price)) - 1
                 fd_link = (f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={r.market_id}&selectionId[0]={int(float(r.over_sel if side == 'over' else r.under_sel))}"   # int(): pandas made the id a float, '43049111.0' broke the link (Nov 6, 2026)
                            if pd.notna(getattr(r, "market_id", np.nan)) else fanduel.FD_PAGE["nba"])
+                dk_link = None
                 if dkq:
-                    dpx = dkq[side]; ev_dk = ps_at(dkq["line"]) * float(dec(dpx)) - 1
-                    best = "FanDuel" if ev_fd >= ev_dk else "DraftKings"
-                    comp = (f"BEST: {best}. FanDuel {side} {r.line:g} ({int(price):+d}) model EV {ev_fd*100:+.1f}% | "
-                            f"DraftKings {side} {dkq['line']:g} ({int(dpx):+d}) model EV {ev_dk*100:+.1f}%")
+                    dpx = dkq[side]; pdk = ps_at(dkq["line"]); ev_dk = pdk * float(dec(dpx)) - 1
                     dk_link = dkq[side + "_link"]
-                else:
-                    best, dk_link = "FanDuel", None
-                    comp = f"BEST: FanDuel (no DraftKings {sname} line found for {r.player}: not posted, or not reachable). FanDuel {side} {r.line:g} ({int(price):+d})"
-                body += " " + comp
-                acts = fanduel.actions(dk_link, fd_link, best)
+                    if ev_dk > ev_fd and ev_dk >= PO["ev_min"]:   # DraftKings better: bet until = worst DK price still clearing the EV bar
+                        book, bline, bprice, bstop = "DraftKings", dkq["line"], int(dpx), ev_stop(pdk, PO["ev_min"])
+                acts = fanduel.actions(dk_link, fd_link, book)
             except Exception as ex:
                 acts = "view, Bet on FanDuel, https://sportsbook.fanduel.com/navigation/nba"; print("props alert links failed:", type(ex).__name__, str(ex)[:100])
+            title = f"BET {r.player} {side.upper()} {bline:g} {sname} {bprice:+d} at {book}"
+            body = ((f"Bet until {bstop:+d}. Stop if the price gets worse or the line moves off {bline:g}.\n" if bstop is not None else "")
+                    + f"{r.game}, tip {pd.Timestamp(r.tip_et):%I:%M %p} ET.")
             try: sent = push(title, body, acts)
             except Exception as e: sent = False; print("push failed:", e)
             # Nov 6, 2026: Fanatics' line for this prop -> state/fanatics_shadow_props.csv only (NOT in the alert; fanatics.SHOW_IN_ALERTS)
@@ -389,15 +390,12 @@ def followups(A, PO):
         if state == "bet" and not in_range:
             why = (f"the line moved from {float(r.line):g} to {ln:g}" if ln != float(r.line) else
                    f"the price is {int(px):+d}, worse than the stop at {sp:+d} (outside the opener window or EV under {PO['ev_min']*100:.0f}%)")
-            title = f"DON'T BET - {r.player} {side.upper()} {float(r.line):g} {sname} (now {now_txt}, FanDuel)"
-            body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. The {str(r.logged_at_et)[11:16]} prop alert is off: {why}. "
-                    f"Not logged, so skip it. If you did place it, log it with 'Log a bet' (market: prop) and ignore this. "
-                    f"Still graded on the rule's record as alerted.")
+            title = f"STOP: don't bet {r.player} {side.upper()} {float(r.line):g} {sname}"
+            body = (f"FanDuel is now {now_txt}; bet until was {sp:+d} on {float(r.line):g}. If you already bet it, just log it.")
             status = "stopped"
         elif state == "stopped" and in_range:
-            title = f"BET again - {r.player} {side.upper()} {float(r.line):g} {sname} {int(px):+d} (FanDuel)"
-            body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. Back in range: FanDuel {now_txt}, stop is {sp:+d}. "
-                    f"The DON'T BET no longer applies. STOP again if the line leaves {float(r.line):g} or the price gets worse than {sp:+d}.")
+            title = f"BET again {r.player} {side.upper()} {float(r.line):g} {sname} {int(px):+d} at FanDuel"
+            body = f"Back in range. Bet until {sp:+d}. Stop if the price gets worse or the line moves off {float(r.line):g}."
             status = "bet"
         else:
             continue

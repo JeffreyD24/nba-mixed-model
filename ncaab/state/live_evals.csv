@@ -36,3 +36,4 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-05 19:00,297417,San Diego Toreros,Tarleton State Texans,-4.5,7.48,7.12,7.14,4.85,0.35,PASS,edge 0.35 < 0.5
 2026-11-05 19:00,297407,San Francisco Dons,North Dakota State Bison,-7.5,12.18,13.66,11.79,8.17,0.67,PASS,a team has under 3 games
 2026-11-05 19:00,297616,Stanford Cardinal,Oakland Golden Grizzlies,-14.5,12.16,12.22,12.23,14.28,-0.22,PASS,edge 0.22 < 0.5
+2026-11-05 19:50,297620,Saint Louis Billikens,Missouri Tigers,2.5,-2.1,-2.36,0.7,-2.26,0.24,PASS,edge 0.24 < 0.5

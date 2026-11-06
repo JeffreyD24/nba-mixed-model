@@ -46,3 +46,9 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 00:45,297623,Oklahoma State Cowboys,Queens Royals,-19.5,17.52,13.47,17.27,19.24,-0.26,PASS,edge 0.26 < 0.5
 2026-11-06 00:50,297622,UAB Blazers,Nicholls State Colonels,-13.5,10.54,9.75,15.42,13.66,0.16,PASS,edge 0.16 < 0.5
 2026-11-06 00:50,301545,UCLA Bruins,North Florida Ospreys,-31.5,28.28,26.92,33.1,31.82,0.32,PASS,edge 0.32 < 0.5
+2026-11-06 00:55,297385,Villanova Wildcats,Holy Cross Crusaders,-31.5,30.92,32.48,27.43,31.4,-0.1,PASS,edge 0.10 < 0.5
+2026-11-06 00:55,297404,West Virginia Mountaineers,Stetson Hatters,-24.5,27.58,22.73,28.57,25.12,0.62,PASS,a team has under 3 games
+2026-11-06 00:55,301544,Rutgers Scarlet Knights,New Haven Chargers,-24.5,,,,,,PASS,team not rated
+2026-11-06 00:55,297400,LSU Tigers,Texas Southern Tigers,-30.5,28.72,32.6,28.7,30.65,0.15,PASS,edge 0.15 < 0.5
+2026-11-06 00:55,297406,TCU Horned Frogs,Southern University Jaguars,-23.5,24.23,25.94,25.65,24.01,0.51,PASS,a team has under 3 games
+2026-11-06 00:55,297612,Oklahoma Sooners,Mississippi Valley State Delta Devils,-38.5,,,,,,PASS,team not rated

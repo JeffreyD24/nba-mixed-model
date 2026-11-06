@@ -306,5 +306,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzoivzh77w2y",
   "text": "Santi Aldama: Available to play    https://www.rotowire.com/basketball/player/santi-aldama-5428",
   "swing": 0.11
+ },
+ "2026-11-06|tor|immanuel quickley": {
+  "status": "Out",
+  "player": "Immanuel Quickley",
+  "game_id": 22600030,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 18:41:07",
+  "seen_at_et": "2026-11-06 18:42:20",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzokmqtxw72g",
+  "text": "Immanuel Quickley: Ruled out for Friday    https://www.rotowire.com/basketball/player/immanuel-quickley-5201",
+  "swing": 0.8
  }
 }

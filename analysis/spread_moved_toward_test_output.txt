@@ -1,0 +1,22 @@
+NBA spreads, live spread number (Model 1 + 8 PM report + form + roster, lag 1), live filters, DK snapshots 2023-24..2025-26
+games with snapshots + live number: 3204; snapshots/game median 38
+games with a bettable 3+ edge snapshot after 8:55 PM the night before: 571
+
+First bettable snapshot, graded at that line and DK price
+  T moved toward 0.5+ (BET)                        69 bets  59.4%    +9.2u (+12.9/100)  [2024: 16-14 +0.5u; 2025: 19-13 +4.2u; 2026: 6-1 +4.5u]
+     T, move 0.5-2.5                               65 bets  58.5%    +7.4u (+11.1/100)  [2024: 14-14 -1.3u; 2025: 18-12 +4.3u; 2026: 6-1 +4.5u]
+     T, move 3+                                     4 bets  75.0%    +1.7u (+43.6/100)  [2024: 2-0 +1.8u; 2025: 1-1 -0.1u; 2026: 0-0 +0.0u]
+     same T games at the opener (-110)             71 bets  60.6%   +11.1u (+15.6/100)  [2024: 17-14 +1.5u; 2025: 20-13 +5.2u; 2026: 6-1 +4.5u]
+  U unmoved (BET)                                 258 bets  60.9%   +41.3u (+16.0/100)  [2024: 46-30 +11.8u; 2025: 48-27 +16.6u; 2026: 63-44 +12.9u]
+  A moved against 0.5+ (PASS; reference)          238 bets  52.5%    -0.4u ( -0.2/100)  [2024: 41-40 -2.9u; 2025: 51-48 -1.8u; 2026: 33-25 +4.2u]
+
+PRIMARY TEST: ROI per bet of T
+  T 71 bets, ROI +12.9/100; bootstrap 90% range -5.7 to +30.5; 90th percentile +26.5
+  VERDICT (pre-registered rule): REJECTED
+
+EXPLORATORY (not pre-registered): first snapshot moved 0.5-2.5 toward with 3+ left, adding live ingredients one at a time
+  (1) move-cap number, no filters, any time       428 bets  48.6%   -28.5u ( -6.6/100)  [2024: 65-86 -26.5u; 2025: 84-82 -5.2u; 2026: 59-52 +3.2u]
+  (2) + live filters                              155 bets  57.4%   +15.7u (+10.0/100)  [2024: 29-25 +1.5u; 2025: 41-30 +7.5u; 2026: 19-11 +6.7u]
+  (3) + form and roster (live number)             185 bets  56.8%   +16.6u ( +8.8/100)  [2024: 35-32 -0.1u; 2025: 41-32 +5.4u; 2026: 29-16 +11.3u]
+  (4) + after 8:55 PM night before only           172 bets  57.6%   +18.0u (+10.2/100)  [2024: 31-29 -0.8u; 2025: 40-29 +7.5u; 2026: 28-15 +11.3u]
+  (3b) live number, no filters, any time          443 bets  49.4%   -22.6u ( -5.0/100)  [2024: 68-92 -29.9u; 2025: 92-83 +1.2u; 2026: 59-49 +6.1u]

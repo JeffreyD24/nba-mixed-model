@@ -507,3 +507,9 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 19:07:07,295194,2026-11-06,2026-11-06 20:00,okc,mem,Caesars,event,total,over,225.0,-110,normal
 2026-11-05 19:07:38,295194,2026-11-06,2026-11-06 20:00,okc,mem,Consensus,event,total,under,224.5,-111,normal
 2026-11-05 19:07:38,295194,2026-11-06,2026-11-06 20:00,okc,mem,Consensus,event,total,over,224.5,-116,normal
+2026-11-05 19:10:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,Caesars,event,moneyline,home,0.0,-260,normal
+2026-11-05 19:10:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,Caesars,event,moneyline,away,0.0,210,normal
+2026-11-05 19:10:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,Caesars,event,spread,away,7.0,-115,normal
+2026-11-05 19:10:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,Caesars,event,spread,home,-7.0,-105,normal
+2026-11-05 19:10:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,Caesars,event,total,under,225.0,-105,normal
+2026-11-05 19:10:09,295193,2026-11-06,2026-11-06 20:00,utah,dal,Caesars,event,total,over,225.0,-115,normal

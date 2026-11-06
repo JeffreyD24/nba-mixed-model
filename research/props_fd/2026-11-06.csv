@@ -8552,3 +8552,41 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 16:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,5.5,-120.0,-106.0,OKC,709.196043076,21662973.0,21662974.0
 2026-11-06 16:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,118.0,-150.0,OKC,709.196043449,41500697.0,41500698.0
 2026-11-06 16:29,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-120.0,-106.0,OKC,709.196044513,23677919.0,23677920.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Lauri Markkanen,lauri markkanen,20.5,-122.0,-104.0,UTA,709.196050333,14588996.0,14588997.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Max Christie,max christie,8.5,-111.0,-115.0,DAL,709.196052759,43025877.0,43025876.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,P.J. Washington,pj washington,13.5,-106.0,-120.0,DAL,709.196052764,62687064.0,62687065.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Jaxson Hayes,jaxson hayes,8.5,-104.0,-122.0,UTA,709.196050305,27031950.0,27031951.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Naji Marshall,naji marshall,11.5,-118.0,-108.0,DAL,709.196052762,39295949.0,39295948.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Ace Bailey,ace bailey,12.5,-125.0,-102.0,UTA,709.196050270,77851408.0,77851407.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Keyonte George,keyonte george,21.5,-106.0,-120.0,UTA,709.196050277,50315096.0,50315095.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Kyrie Irving,kyrie irving,22.5,100.0,-128.0,DAL,709.196052739,12260613.0,12260614.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Darryn Peterson,darryn peterson,13.5,-104.0,-122.0,UTA,709.196050324,90729780.0,90729781.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Daniel Gafford,daniel gafford,9.5,-106.0,-120.0,DAL,709.196052745,27543227.0,27543228.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Cooper Flagg,cooper flagg,26.5,-102.0,-125.0,DAL,709.196052748,75811240.0,75811222.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Cooper Flagg,cooper flagg,6.5,-138.0,108.0,DAL,709.196052734,75811240.0,75811222.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,P.J. Washington,pj washington,6.5,-156.0,122.0,DAL,709.196052737,62687064.0,62687065.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Max Christie,max christie,2.5,100.0,-128.0,DAL,709.196052757,43025877.0,43025876.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Lauri Markkanen,lauri markkanen,6.5,102.0,-130.0,UTA,709.196050272,14588996.0,14588997.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Keyonte George,keyonte george,3.5,-132.0,104.0,UTA,709.196050293,50315096.0,50315095.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Daniel Gafford,daniel gafford,6.5,-156.0,122.0,DAL,709.196052766,27543227.0,27543228.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Zaccharie Risacher,zaccharie risacher,3.5,-140.0,110.0,DAL,709.196118819,71463821.0,71463823.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Jaxson Hayes,jaxson hayes,5.5,-142.0,112.0,UTA,709.196050268,27031950.0,27031951.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Kyrie Irving,kyrie irving,3.5,-142.0,112.0,DAL,709.196052726,12260613.0,12260614.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Naji Marshall,naji marshall,3.5,-104.0,-122.0,DAL,709.196052761,39295949.0,39295948.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Naji Marshall,naji marshall,3.5,102.0,-130.0,DAL,709.196052723,39295949.0,39295948.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Kyrie Irving,kyrie irving,4.5,-102.0,-125.0,DAL,709.196052742,12260613.0,12260614.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,3.5,-160.0,124.0,UTA,709.196050326,90729780.0,90729781.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,6.5,124.0,-158.0,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 16:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,5.5,-164.0,128.0,UTA,709.196050232,50315096.0,50315095.0
+2026-11-06 16:31,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Keldon Johnson,keldon johnson,9.5,-125.0,-106.0,SAS,709.196062637,37873186.0,37873185.0
+2026-11-06 16:31,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Julian Champagnie,julian champagnie,9.5,-104.0,-128.0,SAS,709.196062658,43049038.0,43049039.0
+2026-11-06 16:31,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Victor Wembanyama,victor wembanyama,11.5,-122.0,-110.0,SAS,709.196062585,61967224.0,61967225.0
+2026-11-06 16:31,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,5.5,-132.0,100.0,SAS,709.196062653,64780942.0,64780943.0
+2026-11-06 16:31,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-178.0,132.0,SAS,709.196062582,61967224.0,61967225.0
+2026-11-06 16:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Tyrese Maxey,tyrese maxey,25.5,100.0,-128.0,PHI,709.196004207,38185448.0,38185450.0
+2026-11-06 16:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Joel Embiid,joel embiid,21.5,100.0,-128.0,PHI,709.196004277,12260618.0,12260619.0
+2026-11-06 16:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Tyrese Maxey,tyrese maxey,3.5,-108.0,-118.0,PHI,709.196004206,38185448.0,38185450.0
+2026-11-06 16:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,VJ Edgecombe,vj edgecombe,2.5,-136.0,108.0,PHI,709.196004308,75784960.0,75784927.0
+2026-11-06 16:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Jaylen Brown,jaylen brown,3.5,-106.0,-120.0,PHI,709.196004287,15552471.0,15552472.0
+2026-11-06 16:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,LeBron James,lebron james,6.5,-148.0,116.0,PHI,709.196004111,12260611.0,12260612.0
+2026-11-06 16:31,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Tyrese Maxey,tyrese maxey,4.5,-148.0,116.0,PHI,709.196004211,38185448.0,38185450.0

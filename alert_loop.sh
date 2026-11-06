@@ -19,7 +19,7 @@ busy() {   # 0 if another state-writing workflow is running
 }
 
 save() {
-  for f in state/heartbeat_alert.txt state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json state/bluesky_seen.json state/news_overrides.json state/poly_paper.csv state/poly_last.json state/pinnacle_now.json state/pinnacle_off state/ml_test.csv state/report_watch_seen.json state/report_watch_last.csv state/bailout_alerts.csv state/dk_direct_now.json state/dk_direct_last.json ncaab/state/dk_lines.csv ncaab/state/live_evals.csv ncaab/state/live_bets.csv ncaab/state/live_poll.json ncaab/state/live_stop.txt; do
+  for f in state/heartbeat_alert.txt state/alerts.csv state/market_moves.csv state/line_history.csv state/line_jumps.csv state/test_alert_result.txt state/injury_status_seen.csv state/key_player_alerts.csv state/openers_seen.json state/bluesky_seen.json state/news_overrides.json state/poly_paper.csv state/poly_last.json state/pinnacle_now.json state/pinnacle_off state/ml_test.csv state/report_watch_seen.json state/report_watch_last.csv state/bailout_alerts.csv state/dk_direct_now.json state/dk_direct_last.json ncaab/state/dk_lines.csv ncaab/state/live_evals.csv ncaab/state/live_bets.csv ncaab/state/live_bets_v2.csv ncaab/state/live_paper_v1.csv ncaab/state/live_poll.json ncaab/state/live_stop.txt; do
     if [ -f "$f" ]; then git add "$f"; fi
   done
   if [ -d state/market_models ]; then git add state/market_models; fi

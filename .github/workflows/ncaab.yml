@@ -23,15 +23,21 @@ jobs:
           python-version: "3.12"
           cache: pip
       - name: Install tools
-        run: pip install -q -r requirements.txt scipy
+        run: pip install -q -r requirements.txt scipy zipcodes
       - name: NCAAM daily (scores, lines, model, test record)
         run: python ncaab/daily.py .
       - name: NCAAM M2 totals TEST record (Nov 5, 2026; Fable-blocked for live, tracked at DraftKings' own opener)
         run: python ncaab/m2_daily.py . || echo "M2 test record not updated; it will run again tomorrow."
       - name: NCAAM live ratings for the PROVISIONAL stale-line spreads (Nov 5, 2026)
         run: python ncaab/live_ratings.py . || echo "live ratings not updated; alerts use yesterday's file"
-      - name: Grade NCAAM PROVISIONAL alerts
-        run: python ncaab/live_grade.py . || echo "live grading failed; it will run again tomorrow"
+      - name: NCAAM box scores, last 3 days (Nov 5, 2026; stale-line v2 lineup and roster features)
+        run: python ncaab/box_daily.py . || echo "box scores not updated; features use what we have"
+      - name: NCAAM layer features for today..+3 days (stale-line v2)
+        run: python ncaab/live_features.py . || echo "live features not updated; v2 skips games without features"
+      - name: Grade NCAAM PROVISIONAL alerts (stale-line v2, live)
+        run: python ncaab/live_grade.py . --version v2 || echo "live grading failed; it will run again tomorrow"
+      - name: Grade NCAAM stale-line v1 paper picks
+        run: python ncaab/live_grade.py . --version v1paper || echo "paper grading failed; it will run again tomorrow"
       - name: Save results
         run: |
           git config user.name "nba-tracker-bot"

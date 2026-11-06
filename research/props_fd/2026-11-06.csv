@@ -5054,3 +5054,21 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 11:05,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Jalen Johnson,jalen johnson,7.5,-108.0,-122.0,ATL,709.196077202,40197109.0,40197108.0
 2026-11-06 11:05,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Kyshawn George,kyshawn george,4.5,134.0,-182.0,WAS,709.196071432,74706441.0,74706439.0
 2026-11-06 11:05,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Onyeka Okongwu,onyeka okongwu,3.5,124.0,-166.0,ATL,709.196077193,42160899.0,42160900.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Max Christie,max christie,8.5,-122.0,-108.0,DAL,709.196052759,43025877.0,43025876.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Keyonte George,keyonte george,21.5,-112.0,-118.0,UTA,709.196050277,50315096.0,50315095.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Darryn Peterson,darryn peterson,13.5,-104.0,-128.0,UTA,709.196050324,90729780.0,90729781.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,P.J. Washington,pj washington,12.5,-128.0,-104.0,DAL,709.196052764,62687064.0,62687065.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Jaxson Hayes,jaxson hayes,5.5,-140.0,106.0,UTA,709.196050268,27031950.0,27031951.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Lauri Markkanen,lauri markkanen,6.5,-102.0,-130.0,UTA,709.196050272,14588996.0,14588997.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Ace Bailey,ace bailey,5.5,-114.0,-114.0,UTA,709.196050294,77851408.0,77851407.0
+2026-11-06 11:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-138.0,104.0,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Damian Lillard,damian lillard,21.5,-106.0,-125.0,POR,709.196048594,12260575.0,12260576.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Toumani Camara,toumani camara,11.5,-125.0,-106.0,POR,709.196048581,43450264.0,43450266.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jake Laravia,jake laravia,5.5,-110.0,-120.0,LAL,709.196045224,90251254.0,90251266.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Sidy Cissoko,sidy cissoko,5.5,102.0,-136.0,POR,709.196048611,68232609.0,68232610.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jrue Holiday,jrue holiday,4.5,110.0,-146.0,POR,709.196048593,12260620.0,12260621.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Sidy Cissoko,sidy cissoko,2.5,-122.0,-108.0,POR,709.196048604,68232609.0,68232610.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Toumani Camara,toumani camara,3.5,-154.0,116.0,POR,709.196048568,43450264.0,43450266.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,-102.0,-128.0,POR,709.196048560,12260575.0,12260576.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Scoot Henderson,scoot henderson,2.5,102.0,-136.0,POR,709.196048559,62064858.0,62064857.0
+2026-11-06 11:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-166.0,126.0,LAL,709.196045222,41574998.0,41574999.0

@@ -15,3 +15,5 @@ time_utc,event,detail
 2026-11-06 11:24,fixed,"NBA alert loop: no run for 55 min (expected within 30)"
 2026-11-06 12:17,fixed,"NHL alert loop: no run for 49 min (expected within 30)"
 2026-11-06 12:17,fixed,"NBA alert checks: nothing saved for 59 min (expected every few minutes)"
+2026-11-06 13:27,problem,"NBA daily health check: last run FAILED 5 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42224935288)"
+2026-11-06 13:27,problem,"NFL daily health check: last run FAILED 17 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"

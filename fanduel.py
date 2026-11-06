@@ -205,3 +205,63 @@ def same_or_better(sport, day, home, away, market, side, dk_line, cap):
     ok = (float(fl) >= float(dk_line) if market in ("spread", "puck line") else
           float(fl) <= float(dk_line) if side == "over" else float(fl) >= float(dk_line))
     return fp if ok else None
+
+
+# ---- short alerts (Nov 6, 2026, Jeffrey: "All I need to know is what bet to make, where to make it, and when I should stop") ----
+import re as _re
+_SKIP = ("INFO ONLY", "NO BET", "TEST", "[PASS]", "Line jump", "Market agrees", "Injury", "Key decision", "BAIL-OUT")
+
+
+def compact_alert(title, body, best=None):
+    """Short form of a game bet alert / reminder / back-in-range / DON'T BET: (title, body), or None to keep the original.
+    Title: BET <side line price> at <book>. Body: Bet until <stop>, then the game. The long text (model numbers, goalies, record)
+    is not sent; it stays in the repo's alert records. Anything it can't read is sent unchanged."""
+    try:
+        t = str(title).strip()
+        if any(s in t for s in _SKIP): return None
+        core = _re.sub(r"\s*\|\s*BEST AT FANDUEL\s*$", "", t)
+        m = _re.search(r"(DON'T BET -|- BET|\bBet)\s+(.+?):\s+(.+)$", core)
+        if not m: return None
+        verb, what, game = m.group(1), m.group(2).strip(), m.group(3).strip()
+        flags = [f for f in ("ALREADY BET", "YOU BET THE OTHER SIDE") if f in t]
+        b = str(body)
+        if verb.startswith("DON'T"):
+            plain = _re.sub(r"\s*\(?[+-]\d{3,}\)?$|\s*EVEN$", "", what).strip()
+            now = _re.search(r"\bat ([+-]\d{3,})\b", b)
+            return (f"STOP: don't bet {plain}",
+                    f"It moved past the bet-until price/line{' (now ' + now.group(1) + ')' if now else ''}. If you already bet it, just log it.\n{game}.")
+        # where and at what price: the better book from the BEST/LINES line (fanduel.compare), else DraftKings
+        book, bet = "DraftKings", what
+        mb = _re.search(r"^(BEST|LINES(?: \(same at both\))?): (DraftKings|FanDuel): (.+?) \(([+-]\d+)\)", b, _re.M)
+        if mb:
+            book = "DraftKings or FanDuel" if "same" in mb.group(1) else mb.group(2)
+            lab, px = mb.group(3).strip(), mb.group(4)
+            lab = _re.sub(r"^(over|under)\b", lambda x: x.group(1).upper(), lab)
+            if not _re.search(r"\d", lab): lab += " ML"
+            bet = f"{lab} {px}"
+        else:
+            bet = _re.sub(r"\(([+-]\d+)\)", r"\1", what)
+        # when to stop
+        stop = None
+        ms = _re.search(r"Bet only at ([+-]?\d+|EVEN) or better", b)
+        if ms: stop = f"Bet until {ms.group(1)}."
+        mr = _re.search(r"BET RANGE: (.+?) [+-]?[\d.]+ (?:down|up) to ([+-]?[\d.]+)\.", b)
+        if mr and not stop:
+            who = mr.group(1).upper() if mr.group(1) in ("over", "under") else mr.group(1)
+            cap = _re.search(r"Price (-?\d+) or better", b)
+            other = _re.search(r"(?:moves the other way to (.+?)|drops to ([\d.]+) or lower|rises to ([\d.]+) or higher) \(", b)
+            o = next((x for x in (other.groups() if other else ()) if x), None)
+            stop = (f"Bet until {who} {mr.group(2)}" + (f" at {cap.group(1)} or better" if cap else "") + "."
+                    + (f" Also stop if DraftKings moves the other way to {o}." if o else ""))
+        if not stop: return None
+        verb_t = "REMINDER: BET" if "REMINDER" in t else "BET again" if "BACK IN RANGE" in t else "BET"
+        head = (" / ".join(flags) + " - ") if flags else ""
+        note = ""
+        ma = _re.search(r"ALREADY BET: (you logged .+?)\.", b)
+        if ma: note = f"Already bet: {ma.group(1)}.\n"
+        mc = _re.search(r"CAUTION: (.+?)\.", b)
+        if mc: note += f"Caution: {mc.group(1)}.\n"
+        return f"{head}{verb_t} {bet} at {book}", f"{note}{stop}\n{game}."
+    except Exception as e:
+        print("compact_alert skipped:", type(e).__name__, str(e)[:80])
+        return None

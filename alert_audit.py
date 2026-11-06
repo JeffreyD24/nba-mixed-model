@@ -75,7 +75,8 @@ for repo in ("nba-mixed-model", "nhl-mixed-model", "nfl-mixed-model"):
         for r in A.drop_duplicates(["game_id", "market", "alerted_at_et"]).itertuples():
             checked += 1
             codes = [str(r.away).upper(), str(r.home).upper()]
-            if not near(r.t.to_pydatetime(), lambda m: any(re.search(rf"\b{re.escape(c)}\b", U(m)) for c in codes)):
+            # title + text: since Nov 6 short alerts put the game ("FLA @ WSH") in the text, not the title
+            if not near(r.t.to_pydatetime(), lambda m: any(re.search(rf"\b{re.escape(c)}\b", U(m) + " " + m.get("message", "").upper()) for c in codes)):
                 missing.append(f"{repo.split('-')[0].upper()} {r.market} {r.away}@{r.home} recorded sent {r.t:%a %I:%M %p}")
     if repo == "nhl-mixed-model": continue
     P = state_csv(repo, "props_live.csv")

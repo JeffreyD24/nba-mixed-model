@@ -10500,3 +10500,33 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-06 11:00,22600033,2026-11-06,"Total Points, Rebounds, and Assists",4066262,Malik Monk,,17.5,-104.0,17.5,-105.0,2026-11-06T18:31Z,under
 2026-11-06 11:00,22600033,2026-11-06,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,32.5,-110.0,32.5,-119.0,2026-11-06T18:21Z,over
 2026-11-06 11:00,22600033,2026-11-06,"Total Points, Rebounds, and Assists",5142620,Darius Acuff Jr.,,32.5,-120.0,32.5,-110.0,2026-11-06T18:21Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Points,4395724,Immanuel Quickley,,18.5,-108.0,18.5,-121.0,2026-11-06T15:12Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Points,4395724,Immanuel Quickley,,18.5,-118.0,18.5,-105.0,2026-11-06T15:12Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Assists,4395724,Immanuel Quickley,,6.5,108.0,6.5,-104.0,2026-11-06T11:53Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Assists,4395724,Immanuel Quickley,,6.5,-142.0,6.5,-126.0,2026-11-06T11:53Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Rebounds,3134907,Kyle Kuzma,,4.5,-136.0,4.5,-136.0,2026-11-06T11:32Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Rebounds,3134907,Kyle Kuzma,,4.5,104.0,4.5,103.0,2026-11-06T11:32Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Rebounds,4395724,Immanuel Quickley,,3.5,-154.0,3.5,-160.0,2026-11-06T18:58Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Rebounds,4395724,Immanuel Quickley,,3.5,117.0,3.5,121.0,2026-11-06T18:58Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Points and Assists,4395724,Immanuel Quickley,,24.5,-121.0,25.5,-108.0,2026-11-06T18:58Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Points and Assists,4395724,Immanuel Quickley,,24.5,-109.0,25.5,-121.0,2026-11-06T18:58Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Points and Assists,4684272,Ja'Kobe Walter,,14.5,-103.0,14.5,-114.0,2026-11-06T18:35Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Points and Assists,4684272,Ja'Kobe Walter,,14.5,-128.0,14.5,-116.0,2026-11-06T18:35Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Points and Rebounds,4395724,Immanuel Quickley,,22.5,-114.0,22.5,-122.0,2026-11-06T18:58Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Points and Rebounds,4395724,Immanuel Quickley,,22.5,-115.0,22.5,-108.0,2026-11-06T18:58Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Assists and Rebounds,4395625,RJ Barrett,,10.5,-107.0,10.5,102.0,2026-11-06T12:20Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Assists and Rebounds,4395625,RJ Barrett,,10.5,-123.0,10.5,-135.0,2026-11-06T12:20Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Assists and Rebounds,4395724,Immanuel Quickley,,10.5,-101.0,10.5,-109.0,2026-11-06T12:20Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Assists and Rebounds,4395724,Immanuel Quickley,,10.5,-131.0,10.5,-121.0,2026-11-06T12:20Z,under
+2026-11-06 11:10,22600030,2026-11-06,Total Assists and Rebounds,4433134,Scottie Barnes,,14.5,103.0,13.5,-128.0,2026-11-06T18:58Z,over
+2026-11-06 11:10,22600030,2026-11-06,Total Assists and Rebounds,4433134,Scottie Barnes,,14.5,-136.0,13.5,-103.0,2026-11-06T18:58Z,under
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4395625,RJ Barrett,,34.5,-107.0,33.5,-115.0,2026-11-06T18:20Z,over
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4395625,RJ Barrett,,34.5,-123.0,33.5,-114.0,2026-11-06T18:20Z,under
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4395724,Immanuel Quickley,,28.5,-123.0,29.5,-111.0,2026-11-06T18:58Z,over
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4395724,Immanuel Quickley,,28.5,-107.0,29.5,-119.0,2026-11-06T18:58Z,under
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4433134,Scottie Barnes,,37.5,-107.0,37.5,-108.0,2026-11-06T18:58Z,over
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4433134,Scottie Barnes,,37.5,-123.0,37.5,-121.0,2026-11-06T18:58Z,under
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4684272,Ja'Kobe Walter,,17.5,-126.0,18.5,-115.0,2026-11-06T18:01Z,over
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4684272,Ja'Kobe Walter,,17.5,-104.0,18.5,-114.0,2026-11-06T18:01Z,under
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",5093267,Collin Murray-Boyles,,19.5,-127.0,20.5,-120.0,2026-11-06T16:27Z,over
+2026-11-06 11:10,22600030,2026-11-06,"Total Points, Rebounds, and Assists",5093267,Collin Murray-Boyles,,19.5,-104.0,20.5,-110.0,2026-11-06T16:27Z,under

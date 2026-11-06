@@ -1,2 +1,3 @@
 first_seen_et,report,prev_report,report_as_of,date,game_id,away,home,tip_et,team,player,from_status,to_status,p_miss_from,p_miss_to,rated,d_home_margin,d_total
 2026-11-05 20:15:11,2026-11-05_08_15PM,2026-11-05_08_00PM,2026-11-05 20:15:00,2026-11-06,22600030,tor,mil,2026-11-06 20:00:00,tor,"Barnes, Scottie",not listed,Questionable,0.0,0.497,True,0.675,0.01
+2026-11-06 10:00:25,2026-11-06_10_00AM,2026-11-06_09_45AM,2026-11-06 10:00:00,2026-11-06,22600026,bos,cha,2026-11-06 19:00:00,cha,"Anderson, Christian",Out,Available,0.999,0.213,True,-0.165,-0.079

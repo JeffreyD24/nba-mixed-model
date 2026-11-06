@@ -251,5 +251,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzoedmfvkv2v",
   "text": "Josh Hart: Ruled out for Saturday    https://www.rotowire.com/basketball/player/josh-hart-4136",
   "swing": 0.4
+ },
+ "2026-11-06|atl|jalen johnson": {
+  "status": "Out",
+  "player": "Jalen Johnson",
+  "game_id": 22600025,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 17:06:08",
+  "seen_at_et": "2026-11-06 17:07:42",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzofcwiekx2n",
+  "text": "Jalen Johnson: Ruled out for Friday    https://www.rotowire.com/basketball/player/jalen-johnson-5329",
+  "swing": 0.62
  }
 }

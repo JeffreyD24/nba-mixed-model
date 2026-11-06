@@ -8154,7 +8154,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Keldon Johnson,keldon johnson,9.5,-122.0,-106.0,SAS,709.196062637,37873186.0,37873185.0
 2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Zach LaVine,zach lavine,2.5,-146.0,110.0,SAC,709.196063827,12257190.0,12257191.0
 2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Domantas Sabonis,domantas sabonis,12.5,-132.0,100.0,SAC,709.196063808,12601272.0,12601273.0
-2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Precious Achiuwa,precious achiuwa,6.5,116.0,-154.0,SAC,709.196063810,38212281.0,38212282.0
+2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Precious Achiuwa,precious achiuwa,6.5,116.0,-154.0,SAC,709.19606381,38212281.0,38212282.0
 2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Victor Wembanyama,victor wembanyama,11.5,-122.0,-108.0,SAS,709.196062585,61967224.0,61967225.0
 2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Darius Acuff Jr.,darius acuff,5.5,-130.0,-102.0,SAC,709.196063801,90960656.0,90960655.0
 2026-11-06 16:07,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,104.0,-138.0,SAC,709.196063823,12257190.0,12257191.0
@@ -8166,3 +8166,33 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 16:07,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,reb,Onyeka Okongwu,onyeka okongwu,8.5,-113.0,-113.0,ATL,709.196077196,42160899.0,42160900.0
 2026-11-06 16:07,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,CJ McCollum,cj mccollum,3.5,-115.0,-111.0,ATL,709.196098259,12260572.0,12260571.0
 2026-11-06 16:07,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Kyshawn George,kyshawn george,4.5,138.0,-180.0,WAS,709.196071432,74706441.0,74706439.0
+2026-11-06 16:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Ace Bailey,ace bailey,12.5,-130.0,-102.0,UTA,709.196050270,77851408.0,77851407.0
+2026-11-06 16:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Keyonte George,keyonte george,3.5,-140.0,106.0,UTA,709.196050293,50315096.0,50315095.0
+2026-11-06 16:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Jaxson Hayes,jaxson hayes,5.5,-140.0,106.0,UTA,709.196050268,27031950.0,27031951.0
+2026-11-06 16:09,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,5.5,-160.0,120.0,UTA,709.196050232,50315096.0,50315095.0
+2026-11-06 16:09,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Domantas Sabonis,domantas sabonis,13.5,-120.0,-110.0,SAC,709.196063804,12601272.0,12601273.0
+2026-11-06 16:09,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Darius Acuff Jr.,darius acuff,23.5,100.0,-132.0,SAC,709.196063816,90960656.0,90960655.0
+2026-11-06 16:09,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,De'Andre Hunter,deandre hunter,11.5,-136.0,102.0,SAC,709.196063815,26624379.0,26624380.0
+2026-11-06 16:09,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Malik Monk,malik monk,12.5,-114.0,-114.0,SAC,709.196100096,22280387.0,22280388.0
+2026-11-06 16:09,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Victor Wembanyama,victor wembanyama,11.5,-120.0,-110.0,SAS,709.196062585,61967224.0,61967225.0
+2026-11-06 16:09,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-114.0,-114.0,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 16:09,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,126.0,-168.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Kingston Flemings,kingston flemings,9.5,100.0,-128.0,ATL,709.196077218,91126163.0,91126164.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Onyeka Okongwu,onyeka okongwu,14.5,-120.0,-106.0,ATL,709.196077208,42160899.0,42160900.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,reb,Luguentz Dort,luguentz dort,3.5,118.0,-150.0,ATL,709.196098254,35489576.0,35489577.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,reb,Trae Young,trae young,2.5,-180.0,138.0,WAS,709.196071398,21175415.0,21175416.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,reb,Onyeka Okongwu,onyeka okongwu,8.5,-120.0,-106.0,ATL,709.196077196,42160899.0,42160900.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Kingston Flemings,kingston flemings,5.5,120.0,-154.0,ATL,709.196077207,91126163.0,91126164.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,CJ McCollum,cj mccollum,3.5,106.0,-136.0,ATL,709.196098259,12260572.0,12260571.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Dyson Daniels,dyson daniels,5.5,110.0,-140.0,ATL,709.196077200,50686100.0,50686102.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Jalen Johnson,jalen johnson,7.5,114.0,-146.0,ATL,709.196077202,40197109.0,40197108.0
+2026-11-06 16:09,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Kyshawn George,kyshawn george,4.5,138.0,-178.0,WAS,709.196071432,74706441.0,74706439.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Ja'Kobe Walter,jakobe walter,14.5,102.0,-136.0,TOR,709.196047378,62606687.0,62606690.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Immanuel Quickley,immanuel quickley,19.5,-114.0,-114.0,TOR,709.196047353,38389172.0,38389173.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Collin Murray-Boyles,collin murray boyles,14.5,102.0,-136.0,TOR,709.196047330,65925589.0,65925572.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,RJ Barrett,rj barrett,25.5,-128.0,-104.0,TOR,709.196047372,24729449.0,24729450.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Ja'Kobe Walter,jakobe walter,4.5,108.0,-144.0,TOR,709.196047350,62606687.0,62606690.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,RJ Barrett,rj barrett,6.5,-102.0,-130.0,TOR,709.196047283,24729449.0,24729450.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Tyler Herro,tyler herro,3.5,-158.0,118.0,MIL,709.196052492,26611574.0,26611575.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Immanuel Quickley,immanuel quickley,6.5,-114.0,-114.0,TOR,709.196047327,38389172.0,38389173.0
+2026-11-06 16:09,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,-130.0,-102.0,TOR,709.196047368,24729449.0,24729450.0

@@ -44,22 +44,22 @@ W = rank(R)
 W.to_csv(os.path.join(OUT, "rank_period_wallets.csv.gz"), index=False, compression="gzip")
 q = W[W.markets >= 30]
 lists = {"primary_clv": q[(q.risk >= 2000) & (q.clv_t >= 2.0)],
-         "top20_profit": q.sort_values("profit", ascending=False).groupby("league").head(20),
-         "top20_accuracy": q.sort_values("accuracy", ascending=False).groupby("league").head(20)}
-for k, v in lists.items(): print(k, v.groupby("league").size().to_dict())
+         "top20_profit": q.sort_values("profit", ascending=False).groupby("league", observed=True).head(20),
+         "top20_accuracy": q.sort_values("accuracy", ascending=False).groupby("league", observed=True).head(20)}
+for k, v in lists.items(): print(k, v.groupby("league", observed=True).size().to_dict())
 
 # per wallet x market in TEST: net position, side, own money-weighted price for that side
 buy = T.side.eq("BUY")
 T["side_of_fill"] = np.where(buy, T.outcome_index, 1 - T.outcome_index)   # selling outcome k = backing the other side
 T["side_price"] = np.where(buy, T.price, 1 - T.price)
-pos = T.groupby(["league", "wallet", "condition_id"]).net0.sum().rename("net0").reset_index()
+pos = T.groupby(["league", "wallet", "condition_id"], observed=True).net0.sum().rename("net0").reset_index()
 pos = pos[pos.net0.abs() > 1e-9]; pos["side"] = np.where(pos.net0 > 0, 0, 1)
-px = T.assign(w=T["size"]).groupby(["wallet", "condition_id", "side_of_fill"]).apply(
+px = T.assign(w=T["size"]).groupby(["wallet", "condition_id", "side_of_fill"], observed=True).apply(
     lambda g: np.average(g.side_price, weights=g.w), include_groups=False).rename("own_px").reset_index().rename(columns={"side_of_fill": "side"})
 pos = pos.merge(px, on=["wallet", "condition_id", "side"], how="left")
-mi = T.groupby("condition_id").agg(event_id=("event_id", "first"), market_type=("market_type", "first"), win0=("win0", "first"))
-close0 = T[T.outcome_index == 0].groupby("condition_id").close.first()
-close1 = T[T.outcome_index == 1].groupby("condition_id").close.first()
+mi = T.groupby("condition_id", observed=True).agg(event_id=("event_id", "first"), market_type=("market_type", "first"), win0=("win0", "first"))
+close0 = T[T.outcome_index == 0].groupby("condition_id", observed=True).close.first()
+close1 = T[T.outcome_index == 1].groupby("condition_id", observed=True).close.first()
 mi["close0"] = close0; mi["close1"] = close1
 mi["close0"] = mi.close0.fillna(1 - mi.close1); mi["close1"] = mi.close1.fillna(1 - mi.close0)
 
@@ -68,7 +68,7 @@ def follow(wallets):
     """wallets: DataFrame with league, wallet. Returns one row per bet."""
     s = pos.merge(wallets[["league", "wallet"]], on=["league", "wallet"])
     if s.empty: return pd.DataFrame()
-    g = s.groupby("condition_id").agg(league=("league", "first"), sides=("side", "nunique"), side=("side", "first"),
+    g = s.groupby("condition_id", observed=True).agg(league=("league", "first"), sides=("side", "nunique"), side=("side", "first"),
                                       own_px=("own_px", "mean"), n_wallets=("wallet", "nunique"))
     g = g[g.sides == 1].join(mi, how="left")
     g["entry"] = np.minimum(g.own_px + 0.01, 0.99)
@@ -86,7 +86,7 @@ def summ(b):
 
 
 def boot(b, n=2000):
-    ev = b.groupby("event_id").units.agg(["sum", "size"]); s, c = ev["sum"].to_numpy(), ev["size"].to_numpy()
+    ev = b.groupby("event_id", observed=True).units.agg(["sum", "size"]); s, c = ev["sum"].to_numpy(), ev["size"].to_numpy()
     idx = rng.integers(0, len(ev), (n, len(ev)))
     r = s[idx].sum(1) / c[idx].sum(1)
     return np.percentile(r, [5, 95])
@@ -100,8 +100,8 @@ for name, wl in lists.items():
     b.to_csv(os.path.join(OUT, f"bets_{name}.csv.gz"), index=False, compression="gzip")
     lo, hi = boot(b)
     lines.append(f"\n== {name}: pooled\n{summ(b).round(4).to_string()}\nROI 90% interval by game: {lo:.4f} .. {hi:.4f}")
-    lines.append("-- by league\n" + b.groupby("league").apply(summ, include_groups=False).round(4).to_string())
-    lines.append("-- by market type\n" + b.groupby("market_type").apply(summ, include_groups=False).round(4).to_string())
+    lines.append("-- by league\n" + b.groupby("league", observed=True).apply(summ, include_groups=False).round(4).to_string())
+    lines.append("-- by market type\n" + b.groupby("market_type", observed=True).apply(summ, include_groups=False).round(4).to_string())
 
 # random matched baseline for the primary list
 P = lists["primary_clv"]; base = []

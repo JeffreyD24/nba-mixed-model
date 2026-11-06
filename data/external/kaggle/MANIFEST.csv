@@ -1,17 +1,27 @@
 dataset,kaggle_slug,file,kept,kaggle_file_date,rows,sha256_16
 betting,cviaxmiwnptr/nba-betting-data-october-2007-to-june-2024,nba_2008-2026.csv,all rows,2026-06-15,24440,d85f813ff89f3df2
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,Games.csv,all rows,2026-11-05,73468,39b7085d7307af82
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,LeagueSchedule24_25.csv,all rows,2026-11-05,1408,f956ec97c5eb461f
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,LeagueSchedule25_26.csv,all rows,2026-11-05,1399,571a6d599f697f4d
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,LeagueSchedule26_27.csv,all rows,2026-11-05,1274,9b21837422693b91
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2021_22),games 2021-08-01 to 2022-07-31,2026-11-05,36363,9be4116348dd319d
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2022_23),games 2022-08-01 to 2023-07-31,2026-11-05,36512,a8c9f9d3a5c91943
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2023_24),games 2023-08-01 to 2024-07-31,2026-11-05,37300,cf52f6c11cdc814a
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2024_25),games 2024-08-01 to 2025-07-31,2026-11-05,37806,ce11464c2922e0a6
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2025_26),games 2025-08-01 to 2026-07-31,2026-11-05,37576,145411fa22230ab8
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2026_27),games 2026-08-01 to 2027-07-31,2026-11-05,6354,972ea31131263445
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,Players.csv,all rows,2026-11-05,6820,74c6f054b1dc86f4
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,TeamHistories.csv,all rows,2026-11-05,140,8e16158a963e6d66
-eoin,eoinamoore/historical-nba-data-and-player-box-scores,TeamStatistics.csv,all rows,2026-11-05,146938,a0be5d8e02d7f0df
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,Games.csv,all rows,2026-11-06,73470,a1e9850ce6970165
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,LeagueSchedule24_25.csv,all rows,2026-11-06,1408,f956ec97c5eb461f
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,LeagueSchedule25_26.csv,all rows,2026-11-06,1399,571a6d599f697f4d
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,LeagueSchedule26_27.csv,all rows,2026-11-06,1274,9b21837422693b91
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2011_12),games 2011-08-01 to 2012-07-31,2026-11-06,28415,0d542987b1b0d49a
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2012_13),games 2012-08-01 to 2013-07-31,2026-11-06,36222,0835f5483d6648d6
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2013_14),games 2013-08-01 to 2014-07-31,2026-11-06,36411,53ce17c00162b946
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2014_15),games 2014-08-01 to 2015-07-31,2026-11-06,37268,078a36c4dd600197
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2015_16),games 2015-08-01 to 2016-07-31,2026-11-06,37184,52731d9376c4433e
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2016_17),games 2016-08-01 to 2017-07-31,2026-11-06,37003,f1e017cd5e7bba03
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2017_18),games 2017-08-01 to 2018-07-31,2026-11-06,35743,d2b5a15dba6cc5f7
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2018_19),games 2018-08-01 to 2019-07-31,2026-11-06,35375,bcc8630cb2f808c1
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2019_20),games 2019-08-01 to 2020-07-31,2026-11-06,28098,ce067dee3d275066
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2020_21),games 2020-08-01 to 2021-07-31,2026-11-06,37597,fc25e4f8874c30fb
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2021_22),games 2021-08-01 to 2022-07-31,2026-11-06,36363,64c56fbdfb7b0e54
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2022_23),games 2022-08-01 to 2023-07-31,2026-11-06,36512,701b76369e505cde
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2023_24),games 2023-08-01 to 2024-07-31,2026-11-06,37300,a529ec21794ac23d
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2024_25),games 2024-08-01 to 2025-07-31,2026-11-06,37806,61e2a2ee85596876
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2025_26),games 2025-08-01 to 2026-07-31,2026-11-06,37576,a28a80803049b6a4
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,PlayerStatistics.csv (2026_27),games 2026-08-01 to 2027-07-31,2026-11-06,6407,d46693b754069875
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,Players.csv,all rows,2026-11-06,6820,74c6f054b1dc86f4
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,TeamHistories.csv,all rows,2026-11-06,140,8e16158a963e6d66
+eoin,eoinamoore/historical-nba-data-and-player-box-scores,TeamStatistics.csv,all rows,2026-11-06,146942,082661c340296ca3
 epm,deocheng/nba-data-1946-2026,csv/public.player_epm.csv,all rows,2026-08-18,13255,e66bfc251b44e5a5
 epm,deocheng/nba-data-1946-2026,csv/public.player_epm_actual.csv,all rows,2026-08-18,602,ba86ace319ead604

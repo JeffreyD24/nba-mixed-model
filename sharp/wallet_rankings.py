@@ -16,16 +16,12 @@ Writes OUT_DIR/wallets_{league}_{period}.csv.gz and prints the top wallets by ea
 import os, sys, glob
 import numpy as np, pandas as pd
 
-DATA, OUT = sys.argv[1], sys.argv[2]
-BEFORE = sys.argv[sys.argv.index("--before") + 1] if "--before" in sys.argv else None
 LEAGUE = {"10345": "nba", "10346": "nhl", "10470": "ncaab", "39": "ncaa_old", "10187": "nfl", "12185": "nfl", "12756": "ncaaf"}
-os.makedirs(OUT, exist_ok=True)
-
-
-def load():
+def load(DATA, series=None):
     mk, tr = [], []
     for f in glob.glob(os.path.join(DATA, "*_markets.csv.gz")):
         ser = os.path.basename(f).split("_")[0]
+        if series and ser not in series: continue
         m = pd.read_csv(f, dtype=str); m["series"] = ser; m["league"] = LEAGUE.get(ser, ser); mk.append(m)
         for t in glob.glob(os.path.join(DATA, f"{ser}_trades_*.csv.gz")):
             tr.append(pd.read_csv(t, dtype={"condition_id": str, "wallet": str, "side": str}))
@@ -40,7 +36,7 @@ def per_fill(mk, tr):
     mk = mk.assign(win0=pd.to_numeric(fp[0], errors="coerce"), start_ts=pd.to_datetime(mk.game_start, utc=True, errors="coerce", format="mixed"))
     mk = mk[mk.win0.isin([0.0, 1.0]) & mk.start_ts.notna()]
     mk["start_ts"] = (mk.start_ts - pd.Timestamp("1970-01-01", tz="UTC")).dt.total_seconds()
-    t = tr.merge(mk[["condition_id", "league", "market_type", "win0", "start_ts", "game_start"]], on="condition_id")
+    t = tr.merge(mk[["condition_id", "event_id", "league", "market_type", "win0", "start_ts", "game_start"]], on="condition_id")
     t = t[t.ts < t.start_ts].copy()  # pre-game only
     t["won"] = np.where(t.outcome_index == 0, t.win0, 1 - t.win0)
     # close: last pre-game fill price per token; complement for a token with no fills
@@ -75,15 +71,19 @@ def rank(t):
     return w.drop(columns="rclv").reset_index()
 
 
-mk, tr = load()
-t = per_fill(mk, tr)
-periods = {"all": t} if not BEFORE else {"rank": t[t.game_start < BEFORE], "test": t[t.game_start >= BEFORE]}
-for name, part in periods.items():
-    w = rank(part)
-    for lg, x in w.groupby("league"):
-        x.sort_values("profit", ascending=False).to_csv(os.path.join(OUT, f"wallets_{lg}_{name}.csv.gz"), index=False, compression="gzip")
-        q = x[x.markets >= 20]
-        print(f"\n== {lg} {name}: wallets {len(x)}, with 20+ markets {len(q)}, pre-game money ${x.risk.sum():,.0f}, markets {part[part.league == lg].condition_id.nunique()}")
-        cols = ["wallet", "markets", "risk", "profit", "roi", "accuracy", "clv", "clv_t", "hours"]
-        for by in ("profit", "roi", "accuracy", "clv_t"):
-            print(f"-- top 5 by {by} (20+ markets)"); print(q.sort_values(by, ascending=False)[cols].head(5).round(3).to_string(index=False))
+if __name__ == "__main__":
+  DATA, OUT = sys.argv[1], sys.argv[2]
+  BEFORE = sys.argv[sys.argv.index("--before") + 1] if "--before" in sys.argv else None
+  os.makedirs(OUT, exist_ok=True)
+  mk, tr = load(DATA)
+  t = per_fill(mk, tr)
+  periods = {"all": t} if not BEFORE else {"rank": t[t.game_start < BEFORE], "test": t[t.game_start >= BEFORE]}
+  for name, part in periods.items():
+      w = rank(part)
+      for lg, x in w.groupby("league"):
+          x.sort_values("profit", ascending=False).to_csv(os.path.join(OUT, f"wallets_{lg}_{name}.csv.gz"), index=False, compression="gzip")
+          q = x[x.markets >= 20]
+          print(f"\n== {lg} {name}: wallets {len(x)}, with 20+ markets {len(q)}, pre-game money ${x.risk.sum():,.0f}, markets {part[part.league == lg].condition_id.nunique()}")
+          cols = ["wallet", "markets", "risk", "profit", "roi", "accuracy", "clv", "clv_t", "hours"]
+          for by in ("profit", "roi", "accuracy", "clv_t"):
+              print(f"-- top 5 by {by} (20+ markets)"); print(q.sort_values(by, ascending=False)[cols].head(5).round(3).to_string(index=False))

@@ -6493,4 +6493,43 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 13:38,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Immanuel Quickley,immanuel quickley,19.5,-118.0,-112.0,TOR,709.196047353,38389172.0,38389173.0
 2026-11-06 13:38,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,RJ Barrett,rj barrett,25.5,100.0,-132.0,TOR,709.196047372,24729449.0,24729450.0
 2026-11-06 13:38,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Brayden Burries,brayden burries,4.5,112.0,-148.0,MIL,709.196052491,92719057.0,92719056.0
-2026-11-06 13:38,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jaime Jaquez Jr.,jaime jaquez,5.5,-110.0,-120.0,MIL,709.196052490,43072643.0,43072644.0
+2026-11-06 13:38,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jaime Jaquez Jr.,jaime jaquez,5.5,-110.0,-120.0,MIL,709.19605249,43072643.0,43072644.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Naz Reid,naz reid,15.5,-122.0,-106.0,CHA,709.196085084,27986553.0,27986554.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,26.5,-114.0,-114.0,BOS,709.196079679,15552473.0,15552474.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Neemias Queta,neemias queta,9.5,-114.0,-114.0,BOS,709.196079683,64163654.0,64163656.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Brandon Miller,brandon miller,21.5,-125.0,-106.0,CHA,709.196085055,50113302.0,50113301.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Paul George,paul george,17.5,-106.0,-125.0,BOS,709.196079625,12234250.0,12234251.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Ryan Kalkbrenner,ryan kalkbrenner,7.5,-122.0,-108.0,CHA,709.196166892,43049110.0,43049111.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Royce O'Neale,royce oneale,6.5,-122.0,-108.0,CHA,709.196166893,12537923.0,12537924.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Coby White,coby white,12.5,-120.0,-110.0,CHA,709.196085086,26636212.0,26636213.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Payton Pritchard,payton pritchard,2.5,-172.0,128.0,BOS,709.196079638,38225629.0,38225623.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Naz Reid,naz reid,7.5,-118.0,-112.0,CHA,709.196085072,27986553.0,27986554.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Paul George,paul george,4.5,-118.0,-112.0,BOS,709.196079664,12234250.0,12234251.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Derrick White,derrick white,3.5,-106.0,-125.0,BOS,709.196079695,22613511.0,22613512.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Brandon Miller,brandon miller,4.5,-146.0,110.0,CHA,709.196085080,50113302.0,50113301.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Jayson Tatum,jayson tatum,7.5,120.0,-160.0,BOS,709.196079667,15552473.0,15552474.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Coby White,coby white,2.5,108.0,-144.0,CHA,709.196085076,26636212.0,26636213.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Royce O'Neale,royce oneale,3.5,-125.0,-106.0,CHA,709.196166886,12537923.0,12537924.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Ryan Kalkbrenner,ryan kalkbrenner,6.5,-106.0,-125.0,CHA,709.196166889,43049110.0,43049111.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Paul George,paul george,3.5,-125.0,-106.0,BOS,709.196079629,12234250.0,12234251.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Coby White,coby white,2.5,-160.0,120.0,CHA,709.196085061,26636212.0,26636213.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Derrick White,derrick white,4.5,108.0,-144.0,BOS,709.196079689,22613511.0,22613512.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Naz Reid,naz reid,2.5,154.0,-210.0,CHA,709.196085087,27986553.0,27986554.0
+2026-11-06 13:40,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Brandon Miller,brandon miller,3.5,138.0,-186.0,CHA,709.196085063,50113302.0,50113301.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Kyle Kuzma,kyle kuzma,10.5,102.0,-136.0,MIL,709.196052514,13527607.0,13527606.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Jaime Jaquez Jr.,jaime jaquez,14.5,100.0,-132.0,MIL,709.196052493,43072643.0,43072644.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Myles Turner,myles turner,10.5,-108.0,-122.0,MIL,709.196052477,12234258.0,12234259.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Ja'Kobe Walter,jakobe walter,14.5,-104.0,-125.0,TOR,709.196047378,62606687.0,62606690.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Ryan Rollins,ryan rollins,11.5,-118.0,-112.0,MIL,709.196053657,43183325.0,43183330.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Immanuel Quickley,immanuel quickley,19.5,-114.0,-114.0,TOR,709.196047353,38389172.0,38389173.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,RJ Barrett,rj barrett,25.5,102.0,-136.0,TOR,709.196047372,24729449.0,24729450.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,pts,Brayden Burries,brayden burries,10.5,-110.0,-120.0,MIL,709.196052488,92719057.0,92719056.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,RJ Barrett,rj barrett,6.5,108.0,-144.0,TOR,709.196047283,24729449.0,24729450.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Tyler Herro,tyler herro,4.5,102.0,-136.0,MIL,709.196052510,26611574.0,26611575.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Myles Turner,myles turner,5.5,-106.0,-125.0,MIL,709.196052487,12234258.0,12234259.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Brayden Burries,brayden burries,4.5,114.0,-152.0,MIL,709.196052491,92719057.0,92719056.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,reb,Jaime Jaquez Jr.,jaime jaquez,5.5,-112.0,-118.0,MIL,709.196052490,43072643.0,43072644.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Kyle Kuzma,kyle kuzma,2.5,100.0,-132.0,MIL,709.196052513,13527607.0,13527606.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Tyler Herro,tyler herro,3.5,-160.0,120.0,MIL,709.196052492,26611574.0,26611575.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,RJ Barrett,rj barrett,4.5,-118.0,-112.0,TOR,709.196047368,24729449.0,24729450.0
+2026-11-06 13:40,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Ja'Kobe Walter,jakobe walter,2.5,142.0,-192.0,TOR,709.196047312,62606687.0,62606690.0

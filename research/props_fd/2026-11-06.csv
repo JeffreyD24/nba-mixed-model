@@ -2902,3 +2902,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 06:18,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,-104.0,-128.0,POR,709.19604856,12260575.0,12260576.0
 2026-11-06 06:18,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Scoot Henderson,scoot henderson,2.5,-102.0,-130.0,POR,709.196048559,62064858.0,62064857.0
 2026-11-06 06:18,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,6.5,122.0,-162.0,POR,709.196048599,37901072.0,37901070.0
+2026-11-06 06:22,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Max Christie,max christie,3.5,132.0,-178.0,DAL,709.196052757,43025877.0,43025876.0
+2026-11-06 06:22,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Naji Marshall,naji marshall,3.5,104.0,-138.0,DAL,709.196052723,39295949.0,39295948.0
+2026-11-06 06:22,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Kyrie Irving,kyrie irving,4.5,-118.0,-112.0,DAL,709.196052742,12260613.0,12260614.0
+2026-11-06 06:22,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,4.5,-110.0,-122.0,UTA,709.196050326,90729780.0,90729781.0

@@ -5196,3 +5196,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 11:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Keyonte George,keyonte george,3.5,-136.0,102.0,UTA,709.196050293,50315096.0,50315095.0
 2026-11-06 11:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Naji Marshall,naji marshall,3.5,110.0,-146.0,DAL,709.196052723,39295949.0,39295948.0
 2026-11-06 11:31,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-136.0,104.0,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 11:35,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Alex Caruso,alex caruso,8.5,-112.0,-118.0,OKC,709.196044518,23677919.0,23677920.0
+2026-11-06 11:35,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Isaiah Hartenstein,isaiah hartenstein,10.5,-118.0,-114.0,OKC,709.196043451,41500697.0,41500698.0
+2026-11-06 11:35,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Shai Gilgeous-Alexander,shai gilgeous alexander,4.5,-114.0,-114.0,OKC,709.196043048,21662973.0,21662974.0
+2026-11-06 11:35,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Ajay Mitchell,ajay mitchell,4.5,114.0,-152.0,OKC,709.196043201,53679067.0,53679062.0
+2026-11-06 11:35,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Kenrich Williams,kenrich williams,5.5,110.0,-146.0,OKC,709.196043582,26962656.0,26962657.0
+2026-11-06 11:35,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ty Jerome,ty jerome,5.5,-112.0,-118.0,MEM,709.196045668,23651199.0,23651198.0
+2026-11-06 11:35,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,5.5,-130.0,-102.0,OKC,709.196043076,21662973.0,21662974.0
+2026-11-06 11:35,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,reb,Dyson Daniels,dyson daniels,6.5,-125.0,-104.0,ATL,709.196077217,50686100.0,50686102.0
+2026-11-06 11:35,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,CJ McCollum,cj mccollum,3.5,-136.0,102.0,ATL,709.196098259,12260572.0,12260571.0
+2026-11-06 11:35,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Onyeka Okongwu,onyeka okongwu,3.5,130.0,-174.0,ATL,709.196077193,42160899.0,42160900.0

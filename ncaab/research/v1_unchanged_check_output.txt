@@ -1,0 +1,23 @@
+[A normal] main: 72 evaluated, 32 v1 alerts | new: 72 evaluated, 32 v1 alerts, alert texts identical True | v2 paper picks 33 | v1 identical: True
+   v1 verdicts: {'PASS': 40, 'BET': 32} | v1 reasons: {'edge < 0.5': 39, 'BET': 32, 'Connecticut restriction': 1}
+   v2: {'PASS': 39, 'PAPER': 33} | v2 reasons: {'edge < 0.62': 34, 'PAPER': 33, 'tip under 30 minutes away': 1, 'Connecticut restriction': 1, 'a team has under 3 games': 1, 'price -120 worse than -115': 1, 'no layer features for this game': 1}
+   new script's last line: NCAAM lines: 72 new DraftKings openers, 72 evaluated, 32 BET alerts; v2 paper picks 33
+   v1 vs v2 edge correlation on 71 games: 0.810; v2 never alerts: True
+[B stop file present] main: 72 evaluated, 0 v1 alerts | new: 72 evaluated, 0 v1 alerts, alert texts identical True | v2 paper picks 33 | v1 identical: True
+   v1 verdicts: {'PASS': 72} | v1 reasons: {'edge < 0.5': 39, 'rule STOPPED (ncaab/state/live_stop.txt)': 32, 'Connecticut restriction': 1}
+   v2: {'PASS': 39, 'PAPER': 33} | v2 reasons: {'edge < 0.62': 34, 'PAPER': 33, 'tip under 30 minutes away': 1, 'Connecticut restriction': 1, 'a team has under 3 games': 1, 'price -120 worse than -115': 1, 'no layer features for this game': 1}
+   new script's last line: NCAAM lines: 72 new DraftKings openers, 72 evaluated, 0 BET alerts (rule stopped); v2 paper picks 33
+   stop file: v1 alerts 0 (must be 0); v2 paper picks 33 (must be > 0)
+[C features older than 1 day] main: 72 evaluated, 32 v1 alerts | new: 72 evaluated, 32 v1 alerts, alert texts identical True | v2 paper picks 0 | v1 identical: True
+   v1 verdicts: {'PASS': 40, 'BET': 32} | v1 reasons: {'edge < 0.5': 39, 'BET': 32, 'Connecticut restriction': 1}
+   v2: {'PASS': 72} | v2 reasons: {'features file older than 1 day (made 2026-11-05 05:07)': 72}
+   new script's last line: NCAAM lines: 72 new DraftKings openers, 72 evaluated, 32 BET alerts; v2 paper picks 0 (v2 off: features file older than 1 day (made 2026-11-05 05:07))
+[D malformed features file] main: 72 evaluated, 32 v1 alerts | new: 72 evaluated, 32 v1 alerts, alert texts identical True | v2 paper picks 0 | v1 identical: True
+   v1 verdicts: {'PASS': 40, 'BET': 32} | v1 reasons: {'edge < 0.5': 39, 'BET': 32, 'Connecticut restriction': 1}
+   v2: {'PASS': 72} | v2 reasons: {'features file unreadable (ParserError)': 72}
+   new script's last line: NCAAM lines: 72 new DraftKings openers, 72 evaluated, 32 BET alerts; v2 paper picks 0 (v2 off: features file unreadable (ParserError))
+[E no features file] main: 72 evaluated, 32 v1 alerts | new: 72 evaluated, 32 v1 alerts, alert texts identical True | v2 paper picks 0 | v1 identical: True
+   v1 verdicts: {'PASS': 40, 'BET': 32} | v1 reasons: {'edge < 0.5': 39, 'BET': 32, 'Connecticut restriction': 1}
+   v2: {'PASS': 72} | v2 reasons: {'no live_features.csv': 72}
+   new script's last line: NCAAM lines: 72 new DraftKings openers, 72 evaluated, 32 BET alerts; v2 paper picks 0 (v2 off: no live_features.csv)
+RESULT: v1 UNCHANGED in every scenario

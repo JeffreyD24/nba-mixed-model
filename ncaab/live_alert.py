@@ -7,6 +7,14 @@ live-code review by Fable (both APPROVE WITH FIXES; fixes applied). Runs inside 
   + lagged market model + opener; ncaab/state/live_ratings.json); BET alert when 0.5+ pts off. Filters: both teams 3+ games and a conference id,
   no Connecticut school on either side and no game played in Connecticut, price -115 or better, tip 30+ minutes away, no stop file.
   Evaluations: ncaab/state/live_evals.csv; alerts: ncaab/state/live_bets.csv (saved before the push so a crash cannot re-alert).
+- Nov 6, 2026 (Jeffrey, 10:18: "keep v1 LIVE; v2 runs on PAPER only"; Fable review NCAAM ncaab/research/fable_review_stale_line_v2_2026-11-05/REVIEW.md:
+  BLOCK v2 as the live decider, APPROVE with roles swapped). Everything above (v1) decides the alerts exactly as before. STALE-LINE v2 is computed for every
+  fresh opener and logged on PAPER only, never alerted: BLEND-C v2 = v1 + 12 layer features (lineup / inferred injuries / travel / rest, early-season
+  roster; ncaab/state/live_features.csv from ncaab/live_features.py) with coefficients ncaab/data/live_blendc_v2.json, PAPER pick when 0.62+ pts off.
+  v2 tested at 0.62 on DK 2023-24 + 2025-26: 625 bets, 57.4%, +58.8u, CLV +1.42 (v1: 642 bets, 57.8%, +65.5u, CLV +1.29); NCAAM
+  ncaab/research/stale_line_v2_fixed_threshold_check_output.txt. Paper picks: ncaab/state/live_paper_v2.csv (sent="paper"); both rules' edges and
+  verdicts in live_evals.csv (v1: edge/verdict/reason; v2: v2_edge/v2_verdict/v2_reason). The stop file stops v1 alerts only, never v2 paper logging.
+  No v2 failure (missing/malformed/stale features file, feature error) can stop the v1 check or the line capture.
   python ncaab/live_alert.py WORKDIR"""
 import os, sys, json, time, urllib.request
 import numpy as np, pandas as pd
@@ -29,6 +37,29 @@ prev = pd.Timestamp(poll["last_poll_et"]) if poll.get("last_poll_et") else None
 prev_dates = set(poll.get("dates", []))
 recent = prev is not None and (NOW - prev) <= pd.Timedelta(minutes=FRESH_MIN)
 stopped = os.path.exists(STOP)
+# ---- stale-line v2, PAPER only (Nov 6, 2026; see docstring). Any failure here only disables v2 for this check.
+PP2 = os.path.join(ST, "live_paper_v2.csv")
+LFN = ["lost_min_share", "lost_pts_share", "new_starters", "travel_miles", "tz_shift", "rest_days", "back_to_back", "games_last_7", "R1", "R2", "R3", "R4"]
+V2, FTI, V2_OFF, FEAT_AT = None, {}, None, None
+try:
+    V2 = json.load(open(os.path.join(W, "ncaab", "data", "live_blendc_v2.json"))); EDGE_V2 = float(V2["edge"])     # 0.62 (Nov 5, 2026)
+    if V2["features"] != ["const", "M2", "M8", "MKTL", "opener"] + LFN or len(V2["coef"]) != 17: V2_OFF = "v2 coefficients file has an unexpected feature order"
+except Exception as ex: V2_OFF = f"v2 coefficients unreadable ({type(ex).__name__})"
+try:
+    FP = os.path.join(ST, "live_features.csv")
+    if not os.path.exists(FP): V2_OFF = V2_OFF or "no live_features.csv"
+    else:
+        FT = pd.read_csv(FP, dtype={"hk": str, "ak": str})
+        FEAT_AT = str(FT["made_at_et"].dropna().iloc[0]) if "made_at_et" in FT and FT["made_at_et"].notna().any() else None
+        if FEAT_AT is None or NOW - pd.Timestamp(FEAT_AT) > pd.Timedelta(days=1): V2_OFF = V2_OFF or f"features file older than 1 day (made {FEAT_AT})"
+        else: FTI = {(str(r["date"]), str(r["hk"]), str(r["ak"])): r for _, r in FT.iterrows()}
+except Exception as ex: V2_OFF = V2_OFF or f"features file unreadable ({type(ex).__name__})"; FTI = {}
+def layer_diffs(d, h, a, neutral):
+    """home - away layer feature differences in Action Network's home/away orientation; None if the game has no features row."""
+    r = FTI.get((d, h, a)); sg = 1.0
+    if r is None and neutral: r = FTI.get((d, a, h)); sg = -1.0
+    if r is None: return None
+    return [sg * (0.0 if pd.isna(r["h_" + f] - r["a_" + f]) else float(r["h_" + f] - r["a_" + f])) for f in LFN]
 RP = os.path.join(ST, "live_ratings.json"); R = json.load(open(RP)) if os.path.exists(RP) else None
 TM = pd.read_csv(os.path.join(W, "ncaab", "data", "team_map_an_espn.csv")); amap = dict(zip(TM.an_id.astype(int), TM.espn_team.astype(int).astype(str)))
 dates = [str((NOW.normalize() + pd.Timedelta(days=k)).date()) for k in range(DAYS)]
@@ -67,7 +98,7 @@ def notify(title, body):
     try: urllib.request.urlopen(req, timeout=15); return True
     except Exception as ex: print("ntfy failed:", ex); return False
 known = set(L.an_id.astype(int)) if len(L) else set(); idx = {int(a): i for i, a in enumerate(L.an_id)} if len(L) else {}
-new_rows, evals, bets = [], [], []
+new_rows, evals, bets, paper2 = [], [], [], []
 for d in dates:
     for g in AN[d]:
         try:
@@ -104,9 +135,33 @@ for d in dates:
                     elif px is None or float(px) < MAX_PRICE: why = f"price {px} worse than {MAX_PRICE}"
                     elif tip - NOW < pd.Timedelta(minutes=30): why = "tip under 30 minutes away"
                     elif stopped: why = "rule STOPPED (ncaab/state/live_stop.txt)"
+            # ---- v2 PAPER (Nov 6, 2026): same filters as v1 except the stop file; never alerts; errors only affect v2
+            why2 = None; pc2 = e2 = px2 = side2 = None
+            try:
+                if eg is None: why2 = "game not matched to ESPN"
+                elif any(v is None for v in preds.values()): why2 = "team not rated"
+                elif V2_OFF: why2 = V2_OFF
+                else:
+                    try: ld = layer_diffs(d, h, a, eg["neutral"])
+                    except Exception as ex: ld = None; why2 = f"features error ({type(ex).__name__})"
+                    if why2 is None and ld is None: why2 = "no layer features for this game"
+                    if why2 is None:
+                        pc2 = float(np.dot(V2["coef"], [1.0, preds["M2"], preds["M8"], preds["MKTL"], -line] + ld)); e2 = pc2 + line
+                        side2 = "home" if e2 > 0 else "away"; px2 = hs.get("odds") if side2 == "home" else (as_ or {}).get("odds")
+                        if not np.isfinite(e2): why2 = "rating error"
+                        elif abs(e2) < EDGE_V2: why2 = f"edge {abs(e2):.2f} < {EDGE_V2}"
+                        elif min(R["games"].get(h, 0), R["games"].get(a, 0)) < MIN_GAMES: why2 = "a team has under 3 games"
+                        elif "None" in (eg["hc"], eg["ac"]) or "-1" in (R["conf"].get(h, "-1"), R["conf"].get(a, "-1")): why2 = "no conference id"
+                        elif any(x in str(hn) or x in str(an) for x in CT) or eg.get("state") == "CT": why2 = "Connecticut restriction"
+                        elif px2 is None or float(px2) < MAX_PRICE: why2 = f"price {px2} worse than {MAX_PRICE}"
+                        elif tip - NOW < pd.Timedelta(minutes=30): why2 = "tip under 30 minutes away"
+            except Exception as ex: why2 = f"features error ({type(ex).__name__})"; pc2 = e2 = None
             evals.append(dict(at_et=str(NOW)[:16], an_id=gid, home=hn, away=an, dk_home_spread=line, **{k: round(v, 2) for k, v in preds.items() if v is not None},
                               pred_close_margin=round(pc, 2) if pc is not None else None, edge=round(e, 2) if e is not None and np.isfinite(e) else None,
-                              verdict="BET" if why is None else "PASS", reason=why))
+                              verdict="BET" if why is None else "PASS", reason=why,
+                              v2_pred_close_margin=round(pc2, 2) if pc2 is not None and np.isfinite(pc2) else None,
+                              v2_edge=round(e2, 2) if e2 is not None and np.isfinite(e2) else None, v2_verdict="PAPER" if why2 is None else "PASS", v2_reason=why2,
+                              features_made_at_et=FEAT_AT))
             if why is None:
                 team = hn if side == "home" else an; bl = line if side == "home" else -line
                 fdev = ((g.get("markets") or {}).get("69") or {}).get("event") or {}
@@ -119,6 +174,10 @@ for d in dates:
                         f"PROVISIONAL (2023-26 at DraftKings' opener: 623 bets 57.9%, +65.5u, CLV +1.27). Own record; stops at -15u, or at 100 bets if CLV < +0.63.")
                 bets.append(dict(at_et=str(NOW)[:16], an_id=gid, date=d, home=hn, away=an, side=side, team=team, line=bl, price=px, edge=round(abs(e), 2),
                                  pred_close_home=round(-pc, 2), sent=False, title=title, body=body))
+            if why2 is None:   # after v1's alert block, inside its own try: a v2 error can never drop a v1 alert (Fable re-review, Nov 6, 2026)
+                try: paper2.append(dict(at_et=str(NOW)[:16], an_id=gid, date=d, home=hn, away=an, side=side2, team=hn if side2 == "home" else an,
+                                        line=line if side2 == "home" else -line, price=px2, edge=round(abs(e2), 2), pred_close_home=round(-pc2, 2), sent="paper"))
+                except Exception as ex: print("v2 paper pick skipped:", type(ex).__name__)
         except Exception as ex:
             print("game skipped:", type(ex).__name__, str(ex)[:100])
 # ---- save state BEFORE any push (a crash after this cannot re-alert), then send and record 'sent'
@@ -129,6 +188,8 @@ def append(path, rows):
     old = pd.read_csv(path) if os.path.exists(path) else None
     (pd.concat([old, pd.DataFrame(rows)], ignore_index=True) if old is not None else pd.DataFrame(rows)).to_csv(path, index=False)
 append(EP, evals)
+try: append(PP2, paper2)                                             # v2 paper picks (Nov 6, 2026)
+except Exception as ex: print("v2 paper log failed:", ex)
 B0 = pd.read_csv(BP) if os.path.exists(BP) else None; append(BP, [{k: v for k, v in b.items() if k not in ("title", "body")} for b in bets])
 json.dump(dict(last_poll_et=str(NOW), dates=dates), open(SP, "w"))
 if bets:
@@ -136,4 +197,5 @@ if bets:
     for b in bets:
         ok = notify(b["title"], b["body"]); Bf.loc[(Bf.an_id == b["an_id"]) & (Bf.at_et == b["at_et"]), "sent"] = ok; print("NCAAM BET:", b["title"])
     Bf.to_csv(BP, index=False)
-print(f"NCAAM lines: {len(new_rows)} new DraftKings openers, {len(evals)} evaluated, {len(bets)} BET alerts{' (rule stopped)' if stopped else ''}")
+print(f"NCAAM lines: {len(new_rows)} new DraftKings openers, {len(evals)} evaluated, {len(bets)} BET alerts{' (rule stopped)' if stopped else ''}; "
+      f"v2 paper picks {len(paper2)}{' (v2 off: ' + V2_OFF + ')' if V2_OFF else ''}")

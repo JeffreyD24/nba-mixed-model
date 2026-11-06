@@ -1,0 +1,5 @@
+v1 refit on <= 2025-26: [-0.0765, 0.0076, 0.028, 0.1055, 0.871] | live_blendc.json: [-0.0765, 0.0076, 0.028, 0.1055, 0.871] | max diff 0.0
+v2 coefficients (rows 53726): [-0.1011, 0.0129, 0.0319, 0.1059, 0.857, 0.867, -2.2737, -0.0021, -0.0053, -0.0701, 0.0109, -0.7063, 0.0014, -0.9355, 1.0785, 0.0053, 0.052]
+season 2024: v1 bets 257; v2 cut-off for the same count 0.6330
+season 2026: v1 bets 385; v2 cut-off for the same count 0.6070
+live v2 threshold (mean): 0.62

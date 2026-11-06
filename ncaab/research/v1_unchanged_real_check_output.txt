@@ -1,0 +1,10 @@
+[real responses] main: 58 openers captured, 58 evaluated, 0 v1 alerts | new: 58 captured, 58 evaluated, 0 v1 alerts, alert texts identical True | v2 paper picks 0 | v1 identical: True
+   v1 reasons: {'edge < 0.5': 33, 'a team has under 3 games': 21, 'team not rated': 3, 'game not matched to ESPN': 1}
+   v2 reasons: {'edge < 0.62': 34, 'a team has under 3 games': 20, 'team not rated': 3, 'game not matched to ESPN': 1}
+   new script's last line: NCAAM lines: 58 new DraftKings openers, 58 evaluated, 0 BET alerts; v2 paper picks 0
+[real responses + stop file] main: 58 openers captured, 58 evaluated, 0 v1 alerts | new: 58 captured, 58 evaluated, 0 v1 alerts, alert texts identical True | v2 paper picks 0 | v1 identical: True
+   v1 reasons: {'edge < 0.5': 33, 'a team has under 3 games': 21, 'team not rated': 3, 'game not matched to ESPN': 1}
+   v2 reasons: {'edge < 0.62': 34, 'a team has under 3 games': 20, 'team not rated': 3, 'game not matched to ESPN': 1}
+   new script's last line: NCAAM lines: 58 new DraftKings openers, 58 evaluated, 0 BET alerts (rule stopped); v2 paper picks 0
+responses recorded: 8 (Action Network + ESPN, 2026-11-06..2026-11-09), fetched at 2026-11-06 11:07 ET
+RESULT: v1 UNCHANGED on real responses

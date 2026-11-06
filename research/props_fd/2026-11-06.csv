@@ -1873,3 +1873,15 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Daniel Gafford,daniel gafford,1.5,-160,120,DAL,709.196052725,27543227.0,27543228.0
 2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-138,104,DAL,709.196052741,75811240.0,75811222.0
 2026-11-06 01:42,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,6.5,116,-154,UTA,709.196050232,50315096.0,50315095.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Precious Achiuwa,precious achiuwa,9.5,-102,-130,SAC,709.196063806,38212281.0,38212282.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Julian Champagnie,julian champagnie,9.5,-106,-125,SAS,709.196062658,43049038.0,43049039.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Keldon Johnson,keldon johnson,9.5,100,-132,SAS,709.196062637,37873186.0,37873185.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Victor Wembanyama,victor wembanyama,28.5,100,-132,SAS,709.196062623,61967224.0,61967225.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Stephon Castle,stephon castle,16.5,-112,-118,SAS,709.196062647,64780942.0,64780943.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Zach LaVine,zach lavine,19.5,-125,-106,SAC,709.196063812,12257190.0,12257191.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,De'Aaron Fox,deaaron fox,15.5,-120,-110,SAS,709.196062584,15572079.0,15572080.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Zach LaVine,zach lavine,2.5,-180,134,SAC,709.196063827,12257190.0,12257191.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Stephon Castle,stephon castle,5.5,-106,-122,SAS,709.196062587,64780942.0,64780943.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,De'Andre Hunter,deandre hunter,1.5,100,-132,SAC,709.196063831,26624379.0,26624380.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-148,112,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 01:50,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Darius Acuff Jr.,darius acuff,5.5,-125,-106,SAC,709.196063801,90960656.0,90960655.0

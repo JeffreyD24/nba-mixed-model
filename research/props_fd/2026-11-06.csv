@@ -4491,3 +4491,15 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 09:55,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,114.0,-148.0,OKC,709.196043449,41500697.0,41500698.0
 2026-11-06 09:55,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-132.0,100.0,OKC,709.196044513,23677919.0,23677920.0
 2026-11-06 09:57,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,104.0,-138.0,SAC,709.196063823,12257190.0,12257191.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Donovan Mitchell,donovan mitchell,24.5,-114.0,-118.0,CLE,709.196003729,15907303.0,15907304.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Tyrese Maxey,tyrese maxey,24.5,-125.0,-106.0,PHI,709.196004207,38185448.0,38185450.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Joel Embiid,joel embiid,21.5,-104.0,-128.0,PHI,709.196004277,12260618.0,12260619.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,LeBron James,lebron james,16.5,-125.0,-106.0,PHI,709.196004112,12260611.0,12260612.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Kentavious Caldwell-Pope,kentavious caldwell pope,5.5,106.0,-140.0,PHI,709.196100404,15643012.0,15643013.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,LeBron James,lebron james,6.5,-130.0,-102.0,PHI,709.196004115,12260611.0,12260612.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Kentavious Caldwell-Pope,kentavious caldwell pope,1.5,-186.0,138.0,PHI,709.196100408,15643012.0,15643013.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Joel Embiid,joel embiid,8.5,-144.0,108.0,PHI,709.196004273,12260618.0,12260619.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,LeBron James,lebron james,6.5,-128.0,-104.0,PHI,709.196004111,12260611.0,12260612.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Evan Mobley,evan mobley,3.5,-102.0,-128.0,CLE,709.196003681,41407628.0,41407629.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Joel Embiid,joel embiid,3.5,-104.0,-128.0,PHI,709.196004274,12260618.0,12260619.0
+2026-11-06 09:59,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Peyton Watson,peyton watson,1.5,-162.0,122.0,CLE,709.196103878,54472264.0,54472265.0

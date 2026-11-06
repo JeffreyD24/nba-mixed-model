@@ -273,5 +273,16 @@
   "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzoh2arwwt2g",
   "text": "Anthony Davis: Ruled out Friday night    https://www.rotowire.com/basketball/player/anthony-davis-3297",
   "swing": 0.63
+ },
+ "2026-11-06|phi|adem bona": {
+  "status": "Out",
+  "player": "Adem Bona",
+  "game_id": 22600027,
+  "reporter": "Chris Hine",
+  "posted_at_et": "2026-11-06 18:00:34",
+  "seen_at_et": "2026-11-06 18:02:04",
+  "url": "https://bsky.app/profile/christopherhine.bsky.social/post/3mzoiearnlc2f",
+  "text": "Sixers say Adem Bona is out tonight",
+  "swing": 0.47
  }
 }

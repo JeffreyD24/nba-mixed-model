@@ -3226,3 +3226,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 07:45,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Scoot Henderson,scoot henderson,2.5,100.0,-132.0,POR,709.196048559,62064858.0,62064857.0
 2026-11-06 07:45,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-162.0,122.0,LAL,709.196045222,41574998.0,41574999.0
 2026-11-06 07:49,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,100.0,-132.0,OKC,709.196043449,41500697.0,41500698.0
+2026-11-06 07:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Keldon Johnson,keldon johnson,9.5,-104.0,-125.0,SAS,709.196062637,37873186.0,37873185.0
+2026-11-06 07:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Darius Acuff Jr.,darius acuff,23.5,100.0,-132.0,SAC,709.196063816,90960656.0,90960655.0
+2026-11-06 07:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,-112.0,-118.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 07:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-122.0,-108.0,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 07:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,5.5,-122.0,-106.0,SAS,709.196062653,64780942.0,64780943.0
+2026-11-06 07:51,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Darius Acuff Jr.,darius acuff,5.5,-130.0,-102.0,SAC,709.196063801,90960656.0,90960655.0

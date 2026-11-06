@@ -21,7 +21,9 @@ DATASETS = {
     "betting": "cviaxmiwnptr/nba-betting-data-october-2007-to-june-2024",
     "epm": "deocheng/nba-data-1946-2026",
 }
-SLICE_FROM = "2021-10-01"   # PlayerStatistics is ~390 MB for all history; we keep 2021-22 on (every season any model uses)
+SLICE_FROM = "2011-08-01"   # PlayerStatistics is ~390 MB for all history; we keep 2011-12 on (~1 MB a season gzipped).
+                            # Nov 6, 2026: was 2021-10-01; extended because ESPN box scores for Chicago and New Orleans 2012-13..2017-18
+                            # are blank (data/external/nba_box/checks.txt), which the older-season spread tests (recent-arrival trap) need.
 
 
 def download(key, zdir):

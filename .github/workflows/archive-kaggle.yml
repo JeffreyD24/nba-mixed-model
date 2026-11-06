@@ -6,6 +6,9 @@ name: Archive Kaggle tables in git (data-source audit)
 on:
   schedule:
     - cron: "23 13 * * *"      # 8:23 AM EST / 9:23 AM EDT, after Kaggle's overnight update
+  push:                        # Nov 6, 2026: re-archive when the archive script changes (e.g. a new SLICE_FROM)
+    branches: [main]
+    paths: [tools/archive_kaggle.py]
   workflow_dispatch:
     inputs:
       only:
@@ -29,7 +32,7 @@ jobs:
       - name: Save the Kaggle tables
         run: |
           ONLY="${{ inputs.only }}"
-          if [ -z "$ONLY" ] && [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%u)" != "1" ]; then ONLY=eoin; fi
+          if [ -z "$ONLY" ] && { [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event_name }}" = "push" ]; } && [ "$(date -u +%u)" != "1" ]; then ONLY=eoin; fi
           if [ -n "$ONLY" ]; then python tools/archive_kaggle.py . --only "$ONLY"; else python tools/archive_kaggle.py .; fi
       - name: Commit
         run: |

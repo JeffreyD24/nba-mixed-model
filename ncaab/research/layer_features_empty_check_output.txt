@@ -1,0 +1,32 @@
+                          0
+espn_id           999999991
+h_lost_min_share        NaN
+h_lost_pts_share        NaN
+h_new_starters          NaN
+h_travel_miles     0.199095
+h_tz_shift                0
+h_rest_days               7
+h_back_to_back            0
+h_games_last_7            0
+h_n_box                   0
+h_R1                    NaN
+h_R2                    NaN
+h_R3                    NaN
+h_R4                    NaN
+h_n                     NaN
+a_lost_min_share        NaN
+a_lost_pts_share        NaN
+a_new_starters          NaN
+a_travel_miles     6.315936
+a_tz_shift                0
+a_rest_days               7
+a_back_to_back            0
+a_games_last_7            0
+a_n_box                   0
+a_R1                    NaN
+a_R2                    NaN
+a_R3                    NaN
+a_R4                    NaN
+a_n                     NaN
+diffs: [[0.0, 0.0, 0.0, -6.116841315180661, 0, 0, 0, 0, 0, 0, 0, 0]]
+branch f6230eb version on the same input: AttributeError: 'DataFrame' object has no attribute 'n' (run Nov 6, 2026)

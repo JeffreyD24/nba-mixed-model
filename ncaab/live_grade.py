@@ -1,15 +1,29 @@
-"""Grade the NCAAM PROVISIONAL stale-line spread alerts (ncaab/state/live_bets.csv) each morning: result from Action Network's final score
+"""Grade the NCAAM PROVISIONAL stale-line spread alerts (ncaab/state/live_bets.csv) and the v2 paper picks each morning: result from Action Network's final score
 (ncaab/data/games.csv by an_id), close = our own last pre-tip DraftKings capture (ncaab/state/dk_lines.csv). Stop rules (fixed Nov 5, 2026):
 stop at -15u any time; at 100 graded bets stop if CLV < +0.63 or units < 0; first-100 CLV near +0.6 = we are not getting the opener.
-  python ncaab/live_grade.py WORKDIR -> ncaab/state/live_record.md"""
+  python ncaab/live_grade.py WORKDIR [--version v1|v2paper]
+Nov 6, 2026 (Jeffrey: keep v1 LIVE, v2 on PAPER; Fable review NCAAM ncaab/research/fable_review_stale_line_v2_2026-11-05/REVIEW.md):
+  v1 (default): ncaab/state/live_bets.csv -> live_record.md, stop rules and stop file exactly as before.
+  v2paper: ncaab/state/live_paper_v2.csv -> live_record_v2_paper.md, same grading, NEVER writes the stop file."""
 import os, sys
 import numpy as np, pandas as pd
-W = os.path.abspath(sys.argv[1]); ST = os.path.join(W, "ncaab", "state"); BP = os.path.join(ST, "live_bets.csv")
-out = [f"# NCAAM PROVISIONAL stale-line spreads, updated {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d %H:%M} ET", "",
-       "Rule: ncaab/research/MODEL3_RESULTS_2026-11-05.md. 1 unit per alert at the alerted DraftKings number and price."]
-if not os.path.exists(BP):
-    out.append("\n- no alerts yet"); open(os.path.join(ST, "live_record.md"), "w").write("\n".join(out) + "\n"); print("\n".join(out)); sys.exit(0)
-B = pd.read_csv(BP); B = B[B.sent.astype(str).isin(["True", "1"])].drop_duplicates("an_id")
+W = os.path.abspath(sys.argv[1]); ST = os.path.join(W, "ncaab", "state")
+VER = sys.argv[sys.argv.index("--version") + 1] if "--version" in sys.argv else "v1"
+BP, REC, SENT, LIVE, TITLE, RULE, EMPTY = {
+    "v1": ("live_bets.csv", "live_record.md", ["True", "1"], True, "NCAAM PROVISIONAL stale-line spreads",
+           "Rule: ncaab/research/MODEL3_RESULTS_2026-11-05.md. 1 unit per alert at the alerted DraftKings number and price.", "no alerts yet"),
+    "v2paper": ("live_paper_v2.csv", "live_record_v2_paper.md", ["paper"], False, "NCAAM stale-line spreads v2 (PAPER, nothing is bet)",
+                "Rule: v1 + lineup/travel/rest/roster layers, |edge| >= 0.62 (ncaab/data/live_blendc_v2.json). Tested at 0.62 on DK 2023-24 + 2025-26: "
+                "625 bets, 57.4%, +58.8u, CLV +1.42 (NCAAM ncaab/research/stale_line_v2_fixed_threshold_check_output.txt); SBR 2014-2021: 1,520 bets, "
+                "+251.1u, CLV +0.64 vs v1 +0.56 (NCAAM ncaab/research/STALE_LINE_V2_SBR_RESULTS_2026-11-06.md, SBR openers not bettable). "
+                "Paper picks logged beside v1 at the same DraftKings number and price; nothing is bet.", "no picks yet"),
+}[VER]
+BP = os.path.join(ST, BP)
+out = [f"# {TITLE}, updated {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d %H:%M} ET", "", RULE]
+B = pd.read_csv(BP) if os.path.exists(BP) else pd.DataFrame(columns=["sent", "an_id"])
+B = B[B.sent.astype(str).isin(SENT)].drop_duplicates("an_id")
+if not len(B):
+    out.append("\n- " + EMPTY); open(os.path.join(ST, REC), "w").write("\n".join(out) + "\n"); print("\n".join(out)); sys.exit(0)
 G = pd.read_csv(os.path.join(W, "ncaab", "data", "games.csv"), low_memory=False).drop_duplicates("an_id").set_index("an_id")
 L = pd.read_csv(os.path.join(ST, "dk_lines.csv")).drop_duplicates("an_id").set_index("an_id")
 rows = []
@@ -32,5 +46,5 @@ elif n >= 100: dec = "100-bet check passed: Fable review to promote"
 out += ["", f"- **{len(R)} alerts, graded {(D.result == 'W').sum()}-{(D.result == 'L').sum()}-{(D.result == 'P').sum()}, {units:+.2f}u, CLV {clv:+.2f} (break-even +0.63; expected ~+1.2 if we get the opener)**",
         f"- Decision: **{dec}**", "", "| Date | Bet | Result | Units | CLV |", "|---|---|---|---|---|"] + \
        [f"| {x.date} | {x.bet} | {x.result} | {x.units:+.2f} | {x.clv:+.2f} |" for x in R.sort_values("date", ascending=False).itertuples()]
-open(os.path.join(ST, "live_record.md"), "w").write("\n".join(out) + "\n"); print("\n".join(out[:6]))
-if dec.startswith("STOP"): open(os.path.join(ST, "live_stop.txt"), "w").write(f"{dec} on {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d}\n")   # live_alert.py stops alerting
+open(os.path.join(ST, REC), "w").write("\n".join(out) + "\n"); print("\n".join(out[:6]))
+if LIVE and dec.startswith("STOP"): open(os.path.join(ST, "live_stop.txt"), "w").write(f"{dec} on {pd.Timestamp.now(tz='America/New_York'):%Y-%m-%d}\n")   # live_alert.py stops alerting

@@ -1,0 +1,5 @@
+[full season 2025-26] games 6300 | columns 24 | max abs difference 7.11e-15 | cells differing 0
+[live replay 2025-11-21 (scheduled games, data before that day)] games 73 | columns 24 | max abs difference 3.55e-15 | cells differing 0
+[live replay 2026-01-14 (scheduled games, data before that day)] games 61 | columns 24 | max abs difference 8.88e-16 | cells differing 0
+[live replay 2026-02-21 (scheduled games, data before that day)] games 148 | columns 24 | max abs difference 8.88e-16 | cells differing 0
+RESULT: IDENTICAL

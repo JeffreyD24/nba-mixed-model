@@ -1889,3 +1889,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:54,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-146,110,OKC,709.196044513,23677919.0,23677920.0
 2026-11-06 01:54,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Jared McCain,jared mccain,1.5,-188,140,OKC,709.196044324,63496225.0,63496226.0
 2026-11-06 01:54,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,6.5,106,-140,OKC,709.196043076,21662973.0,21662974.0
+2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,LaMelo Ball,lamelo ball,21.5,102,-136,MIN,709.196062469,26324737.0,26324736.0
+2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Karlo Matkovic,karlo matkovic,4.5,-102,-130,NOP,709.196065283,79845375.0,79845366.0
+2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,LaMelo Ball,lamelo ball,4.5,-118,-112,MIN,709.196062471,26324737.0,26324736.0
+2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Rudy Gobert,rudy gobert,1.5,-120,-110,MIN,709.196062738,12260609.0,12260610.0
+2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Ayo Dosunmu,ayo dosunmu,4.5,-112,-118,MIN,709.196061874,41652478.0,41652484.0
+2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-132,100,MIN,709.196062475,26324737.0,26324736.0

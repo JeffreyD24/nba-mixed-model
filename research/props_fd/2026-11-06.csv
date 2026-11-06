@@ -8431,9 +8431,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 16:17,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Grayson Allen,grayson allen,2.5,-111.0,-115.0,CHA,709.196111182,37819081.0,37819080.0
 2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Lauri Markkanen,lauri markkanen,21.5,-113.0,-113.0,UTA,709.196050333,14588996.0,14588997.0
 2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Jaxson Hayes,jaxson hayes,8.5,100.0,-128.0,UTA,709.196050305,27031950.0,27031951.0
-2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Ace Bailey,ace bailey,12.5,-125.0,-102.0,UTA,709.196050270,77851408.0,77851407.0
+2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Ace Bailey,ace bailey,12.5,-125.0,-102.0,UTA,709.19605027,77851408.0,77851407.0
 2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Lauri Markkanen,lauri markkanen,6.5,-102.0,-125.0,UTA,709.196050272,14588996.0,14588997.0
-2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Darryn Peterson,darryn peterson,3.5,-148.0,116.0,UTA,709.196050310,90729780.0,90729781.0
+2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Darryn Peterson,darryn peterson,3.5,-148.0,116.0,UTA,709.19605031,90729780.0,90729781.0
 2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Kyrie Irving,kyrie irving,4.5,-104.0,-122.0,DAL,709.196052742,12260613.0,12260614.0
 2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,3.5,-154.0,120.0,UTA,709.196050326,90729780.0,90729781.0
 2026-11-06 16:17,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,5.5,-160.0,124.0,UTA,709.196050232,50315096.0,50315095.0
@@ -8442,3 +8442,22 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 16:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Zach LaVine,zach lavine,19.5,-114.0,-114.0,SAC,709.196063812,12257190.0,12257191.0
 2026-11-06 16:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Julian Champagnie,julian champagnie,9.5,-104.0,-125.0,SAS,709.196062658,43049038.0,43049039.0
 2026-11-06 16:17,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,122.0,-162.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 16:19,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Lauri Markkanen,lauri markkanen,20.5,-128.0,100.0,UTA,709.196050333,14588996.0,14588997.0
+2026-11-06 16:19,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Jaxson Hayes,jaxson hayes,8.5,-102.0,-128.0,UTA,709.196050305,27031950.0,27031951.0
+2026-11-06 16:19,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Ace Bailey,ace bailey,12.5,-128.0,100.0,UTA,709.196050270,77851408.0,77851407.0
+2026-11-06 16:19,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Lauri Markkanen,lauri markkanen,6.5,-104.0,-122.0,UTA,709.196050272,14588996.0,14588997.0
+2026-11-06 16:19,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Keyonte George,keyonte george,5.5,-158.0,124.0,UTA,709.196050232,50315096.0,50315095.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Jaylen Wells,jaylen wells,10.5,-113.0,-113.0,MEM,709.196046345,65284710.0,65284709.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Alex Caruso,alex caruso,8.5,-111.0,-115.0,OKC,709.196044518,23677919.0,23677920.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Jerami Grant,jerami grant,10.5,-113.0,-113.0,MEM,709.196060265,16529226.0,16529227.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cam Spencer,cam spencer,7.5,-111.0,-115.0,MEM,709.196060194,50729407.0,50729406.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Zach Edey,zach edey,7.5,-136.0,106.0,MEM,709.196046721,43111543.0,43111547.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Cedric Coward,cedric coward,13.5,106.0,-136.0,MEM,709.196045905,76584720.0,76584726.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Cam Spencer,cam spencer,2.5,102.0,-130.0,MEM,709.196060191,50729407.0,50729406.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Jerami Grant,jerami grant,2.5,100.0,-130.0,MEM,709.196060267,16529226.0,16529227.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Ty Jerome,ty jerome,3.5,-102.0,-125.0,MEM,709.196045669,23651199.0,23651198.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Kenrich Williams,kenrich williams,5.5,130.0,-166.0,OKC,709.196043582,26962656.0,26962657.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cedric Coward,cedric coward,2.5,-122.0,-104.0,MEM,709.196045911,76584720.0,76584726.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ajay Mitchell,ajay mitchell,3.5,-122.0,-104.0,OKC,709.196043198,53679067.0,53679062.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cam Spencer,cam spencer,5.5,122.0,-156.0,MEM,709.196060190,50729407.0,50729406.0
+2026-11-06 16:19,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,122.0,-154.0,OKC,709.196043449,41500697.0,41500698.0

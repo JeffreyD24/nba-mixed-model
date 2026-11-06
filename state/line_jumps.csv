@@ -84,3 +84,4 @@ game_id,market,detected_at_et,date,away,home,from_line,to_line,move,steady_since
 22600027,total,2026-11-06 14:20,2026-11-06,phi,cle,229.5,231.5,2.0,2026-11-06 12:40,2026-11-06 14:20,2026-11-06 14:20,0.0,5.2,231.4,away from model,,0.0,False,,,
 22600033,total,2026-11-06 14:25,2026-11-06,sa,sac,229.5,231.5,2.0,2026-11-06 09:50,2026-11-06 13:30,2026-11-06 14:25,55.0,7.6,229.5,away from model,,0.0,False,,,
 22600025,spread,2026-11-06 17:25,2026-11-06,wsh,atl,-8.5,-6.5,2.0,2026-11-06 15:20,2026-11-06 17:05,2026-11-06 17:25,20.0,1.6,9.2,away from model,ATL 5:06 PM: Johnson (ankle) is out for Friday's game against the Wizards.,1.0,False,,,
+22600025,total,2026-11-06 17:35,2026-11-06,wsh,atl,229.5,227.5,-2.0,2026-11-06 15:20,2026-11-06 17:05,2026-11-06 17:35,30.0,1.4,228.2,away from model,ATL 5:06 PM: Johnson (ankle) is out for Friday's game against the Wizards.,1.0,False,,,

@@ -7572,7 +7572,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,26.5,-125.0,-102.0,BOS,709.196079679,15552473.0,15552474.0
 2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Brandon Miller,brandon miller,21.5,-125.0,-102.0,CHA,709.196085055,50113302.0,50113301.0
 2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Payton Pritchard,payton pritchard,13.5,-102.0,-125.0,BOS,709.196079627,38225629.0,38225623.0
-2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Sam Hauser,sam hauser,6.5,-125.0,-102.0,BOS,709.196098120,49890235.0,49890236.0
+2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Sam Hauser,sam hauser,6.5,-125.0,-102.0,BOS,709.19609812,49890235.0,49890236.0
 2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Paul George,paul george,17.5,-108.0,-118.0,BOS,709.196079625,12234250.0,12234251.0
 2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Ryan Kalkbrenner,ryan kalkbrenner,7.5,-104.0,-122.0,CHA,709.196166892,43049110.0,43049111.0
 2026-11-06 15:21,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Royce O'Neale,royce oneale,6.5,-128.0,100.0,CHA,709.196166893,12537923.0,12537924.0
@@ -7597,3 +7597,22 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 15:21,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Zion Williamson,zion williamson,2.5,-146.0,110.0,NOP,709.196064507,24729467.0,24729466.0
 2026-11-06 15:21,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Derik Queen,derik queen,2.5,-152.0,114.0,NOP,709.196065584,76134713.0,76134712.0
 2026-11-06 15:21,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-130.0,-102.0,MIN,709.196062475,26324737.0,26324736.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Grayson Allen,grayson allen,13.5,102.0,-130.0,CHA,709.196111177,37819081.0,37819080.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Naz Reid,naz reid,16.5,-115.0,-113.0,CHA,709.196085084,27986553.0,27986554.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,26.5,-128.0,100.0,BOS,709.196079679,15552473.0,15552474.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Neemias Queta,neemias queta,9.5,-111.0,-115.0,BOS,709.196079683,64163654.0,64163656.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Payton Pritchard,payton pritchard,13.5,-104.0,-122.0,BOS,709.196079627,38225629.0,38225623.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Sam Hauser,sam hauser,6.5,-130.0,102.0,BOS,709.196098120,49890235.0,49890236.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Paul George,paul george,17.5,-106.0,-120.0,BOS,709.196079625,12234250.0,12234251.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Royce O'Neale,royce oneale,6.5,-120.0,-104.0,CHA,709.196166893,12537923.0,12537924.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Payton Pritchard,payton pritchard,2.5,-170.0,132.0,BOS,709.196079638,38225629.0,38225623.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Grayson Allen,grayson allen,2.5,-125.0,-102.0,CHA,709.196111181,37819081.0,37819080.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Naz Reid,naz reid,8.5,118.0,-150.0,CHA,709.196085072,27986553.0,27986554.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Jayson Tatum,jayson tatum,7.5,116.0,-148.0,BOS,709.196079667,15552473.0,15552474.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Coby White,coby white,2.5,-148.0,116.0,CHA,709.196085061,26636212.0,26636213.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Paul George,paul george,3.5,-122.0,-104.0,BOS,709.196079629,12234250.0,12234251.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Jayson Tatum,jayson tatum,6.5,106.0,-136.0,BOS,709.196079624,15552473.0,15552474.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Payton Pritchard,payton pritchard,3.5,100.0,-128.0,BOS,709.196079644,38225629.0,38225623.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Derrick White,derrick white,4.5,108.0,-138.0,BOS,709.196079689,22613511.0,22613512.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Naz Reid,naz reid,2.5,134.0,-172.0,CHA,709.196085087,27986553.0,27986554.0
+2026-11-06 15:23,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Brandon Miller,brandon miller,3.5,144.0,-186.0,CHA,709.196085063,50113302.0,50113301.0

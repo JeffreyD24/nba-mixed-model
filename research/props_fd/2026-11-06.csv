@@ -1787,3 +1787,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Daniel Gafford,daniel gafford,1.5,-158,118,DAL,709.196052725,27543227.0,27543228.0
 2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Lauri Markkanen,lauri markkanen,1.5,-180,134,UTA,709.196050273,14588996.0,14588997.0
 2026-11-06 01:16,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-152,114,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Jared McCain,jared mccain,12.5,-120,-110,OKC,709.196044323,63496225.0,63496226.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Aday Mara,aday mara,7.5,-114,-114,OKC,709.196044124,91219507.0,91219508.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Kenrich Williams,kenrich williams,5.5,106,-140,OKC,709.196043582,26962656.0,26962657.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cedric Coward,cedric coward,2.5,-120,-110,MEM,709.196045911,76584720.0,76584726.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,2.5,-180,134,OKC,709.196043449,41500697.0,41500698.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cameron Boozer,cameron boozer,5.5,126,-166,MEM,709.196045733,90748927.0,90748928.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-148,112,OKC,709.196044513,23677919.0,23677920.0
+2026-11-06 01:20,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ajay Mitchell,ajay mitchell,3.5,-132,100,OKC,709.196043198,53679067.0,53679062.0

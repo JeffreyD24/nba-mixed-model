@@ -8,7 +8,8 @@ alert_text() into the alert bodies, and add a FINDINGS.md [DECISION] entry.
 
 Sources (Fanatics' own site refuses cloud clients):
   game lines: Action Network's Fanatics CT book (id 2821), through fanduel.py's Action Network code (same request shape as FanDuel CT 741);
-  player props: BettingPros (book 14 = Fanatics), current offers. Never raises; any failure logs blanks.
+  player props: RotoWire's free props page first (Nov 6, 2026, RULE 12: Fanatics on ~480 of 887 NFL receptions props, ~372 of 397 NBA
+  points props, line + both prices, every book), BettingPros (book 14) as the fallback. Never raises; any failure logs blanks.
 """
 import os, re, json, time, urllib.request, urllib.parse, unicodedata
 import datetime as dt
@@ -57,8 +58,45 @@ def _bp(path, params):
             time.sleep(2)
 
 
+RW_MARKET = {("nfl", "receptions"): "recs", ("nfl", "rec_yds"): "recyds", ("nba", "pts"): "pts", ("nba", "reb"): "reb",
+             ("nba", "ast"): "ast", ("nba", "fg3m"): "threes"}
+_RW_CACHE = {}
+
+
+def rotowire_rows(sport):
+    """Every player row of RotoWire's props page for this sport (one dict per player x market group, keys like fanatics_recs,
+    fanatics_recsOver, draftkings_recs, ...). Cached per run; [] on failure."""
+    if sport in _RW_CACHE: return _RW_CACHE[sport]
+    rows = []
+    try:
+        url = f"https://www.rotowire.com/betting/{sport}/player-props.php"
+        req = urllib.request.Request(url, headers={"User-Agent": BP_HDR["User-Agent"], "Accept": "text/html"})
+        with urllib.request.urlopen(req, timeout=40) as r: h = r.read().decode("utf-8", "ignore")
+        rows = [json.loads(o) for o in re.findall(r'\{"gameID":"\d+","playerID"[^{}]*\}', h)]
+    except Exception as ex:
+        print("RotoWire props unavailable:", type(ex).__name__, str(ex)[:100])
+    _RW_CACHE[sport] = rows
+    return rows
+
+
+def _rw_quote(sport, player, stat, side, book="fanatics"):
+    mk = RW_MARKET.get((sport, stat))
+    if mk is None: return None, None
+    for r in rotowire_rows(sport):
+        if _nm(r.get("name")) != _nm(player) or r.get(f"{book}_{mk}") in (None, ""): continue
+        px = r.get(f"{book}_{mk}{'Over' if side == 'over' else 'Under'}")
+        if px in (None, ""): continue
+        return float(r[f"{book}_{mk}"]), float(px)
+    return None, None
+
+
 def prop_quote(sport, day, player, stat, side):
-    """Fanatics' (line, price) for a player prop from BettingPros (main line), or (None, None)."""
+    """Fanatics' (line, price) for a player prop: RotoWire first, then BettingPros (main line); (None, None) if neither has it."""
+    try:
+        ln, px = _rw_quote(sport, player, stat, side)
+        if px is not None: return ln, px
+    except Exception as ex:
+        print("RotoWire quote failed:", type(ex).__name__, str(ex)[:100])
     try:
         mid = BP_MARKETS.get((sport, stat))
         if mid is None: return None, None

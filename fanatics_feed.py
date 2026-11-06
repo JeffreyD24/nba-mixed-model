@@ -8,7 +8,9 @@ Only CHANGES are saved (a new line/price, or a market that disappeared = status 
 research/feed/fanatics/<sport>/<YYYY-MM-DD>/<HHMM>.csv.gz, the same layout as research/feed/{dk,fd}/ (opener = first row seen,
 close = last row before the start). Memory between ticks: WORKDIR/_tmp/fanatics_state.json (not committed).
 Dates polled: today and tomorrow every minute; NFL/NCAAF also the next 8 days every 10 minutes. Never raises.
-Player props: Action Network does not serve them publicly; Fanatics props come from BettingPros (book 14) in the props scripts.
+Player props (Nov 6, 2026, RULE 12): RotoWire's free props page carries every book's prop lines (Fanatics, DraftKings, FanDuel, BetMGM,
+Caesars, ...). Every 10 minutes the NFL and NBA pages are read and every book's line/price CHANGES are saved to
+research/feed/rotowire_props/<sport>/<YYYY-MM-DD>/<HHMM>.csv.gz (first row seen = that book's opener as RotoWire showed it).
 """
 import os, sys, json, time, gzip, urllib.request
 import datetime as dt
@@ -45,6 +47,48 @@ def rows_for(sport, day):
                                 home=teams.get(g.get("home_team_id")), market=mk, side=o.get("side"),
                                 points=o.get("value"), price=o.get("odds")))
     return out
+
+
+RW_SPORTS = ("nfl", "nba")
+RW_COLS = ["snap_et", "sport", "game_id", "player_id", "player", "team", "opp", "book", "market", "line", "over", "under"]
+
+
+def rotowire_props(S, snap):
+    """every book's prop lines from RotoWire (free page), changes only; state in S['rw']"""
+    import re as _re
+    S.setdefault("rw", {}); S.setdefault("rw_due", 0)
+    if time.time() < S["rw_due"]: return 0
+    S["rw_due"] = time.time() + 590
+    n = 0
+    for sport in RW_SPORTS:
+        try:
+            req = urllib.request.Request(f"https://www.rotowire.com/betting/{sport}/player-props.php", headers={"User-Agent": H["User-Agent"], "Accept": "text/html"})
+            with urllib.request.urlopen(req, timeout=60) as r: h = r.read().decode("utf-8", "ignore")
+        except Exception as ex:
+            print("RotoWire props fetch failed:", sport, type(ex).__name__); continue
+        out = []
+        for o in _re.findall(r'\{"gameID":"\d+","playerID"[^{}]*\}', h):
+            try: r = json.loads(o)
+            except Exception: continue
+            for k, v in r.items():
+                m = _re.match(r"^([a-z0-9]+)_([a-z]+)$", k)
+                if not m or v in (None, "") or k in ("gameID", "playerID"): continue
+                bk, mk = m.groups()
+                ov, un = r.get(f"{k}Over"), r.get(f"{k}Under")
+                key = f"{sport}|{r['gameID']}|{r['playerID']}|{bk}|{mk}"
+                val = [v, ov, un]
+                if S["rw"].get(key) != val:
+                    S["rw"][key] = val
+                    out.append(dict(snap_et=snap, sport=sport, game_id=r["gameID"], player_id=r["playerID"], player=r.get("name"),
+                                    team=r.get("team"), opp=r.get("opp"), book=bk, market=mk, line=v, over=ov, under=un))
+        if out:
+            d = os.path.join(W, "research", "feed", "rotowire_props", sport, f"{NOW:%Y-%m-%d}"); os.makedirs(d, exist_ok=True)
+            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}.csv.gz")
+            old = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=RW_COLS)
+            pd.concat([old, pd.DataFrame(out)[RW_COLS]], ignore_index=True).to_csv(f, index=False, compression="gzip")
+        n += len(out)
+    if len(S["rw"]) > 400000: S["rw"] = {}          # keep the state small (a fresh job re-logs everything once anyway)
+    return n
 
 
 def main():
@@ -84,8 +128,10 @@ def main():
             f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}.csv.gz")
             old = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=COLS)
             pd.concat([old, g], ignore_index=True).to_csv(f, index=False, compression="gzip")
+    try: n_rw = rotowire_props(S, snap)
+    except Exception as ex: n_rw = 0; print("RotoWire props failed:", type(ex).__name__, str(ex)[:120])
     json.dump(S, open(SP, "w"))
-    print(f"fanatics feed: {stats['req']} requests, {stats['err']} errors, {len(new)} changes")
+    print(f"fanatics feed: {stats['req']} requests, {stats['err']} errors, {len(new)} changes; RotoWire props changes {n_rw}")
 
 
 if __name__ == "__main__":

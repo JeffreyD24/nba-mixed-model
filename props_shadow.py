@@ -324,7 +324,67 @@ def live():
                              p=round(ps, 4), ev=round(ev, 4), units=1, pushed=sent, result="", actual="", u="", close_line="", close_price="",
                              close_other="", close_ev=""))
     if rows: pd.DataFrame(rows).to_csv(LIVE, mode="a", header=not os.path.exists(LIVE), index=False)
+    try: followups(A, PO)                       # Nov 6, 2026: DON'T BET / BACK IN RANGE for alerted, unlogged props
+    except Exception as e: print("props follow-ups failed:", type(e).__name__, str(e)[:120])
     print(f"props live: {len(rows)} PROVISIONAL prop alerts {pd.Series([x['tier'] for x in rows]).value_counts().to_dict() if rows else ''} ({sum(r['pushed'] for r in rows)} pushed) from {len(LS)} FanDuel lines at their opener")
+
+
+STOPS = os.path.join(W, "state", "props_stop_sent.csv")   # DON'T BET / BACK IN RANGE follow-ups already sent (one row per push)
+MAX_FOLLOWUPS = 3                                          # per alert, so a price flapping -120/-121 can't spam the phone
+
+
+def followups(A, PO):
+    """Nov 6, 2026 (Jeffrey): DON'T BET push when an alerted prop he has NOT logged passes its STOP line (line leaves the alerted number,
+    or FanDuel's price gets worse than stop_price(): outside the opener's 5-cent window or EV under 5%). If it comes back in range
+    before tip, a BACK IN RANGE push says it is a bet again. 24 hours a day (RULE 5); logged bets never get these."""
+    if not os.path.exists(LIVE) or A is None or not len(A): return
+    L = pd.read_csv(LIVE)
+    L = L[(L.date.astype(str) == TODAY) & L.pushed.astype(str).isin(["True", "1", "1.0"])]
+    if not len(L): return
+    S = pd.read_csv(STOPS) if os.path.exists(STOPS) else pd.DataFrame(columns=["key", "sent_at_et", "status", "line_now", "price_now", "stop_price", "pushed"])
+    mb = os.path.join(W, "state", "my_bets.csv")
+    B = pd.read_csv(mb) if os.path.exists(mb) else pd.DataFrame(columns=["date", "market", "player", "stat", "side"])
+    B = B[(B.market == "prop") & (B.date.astype(str) == TODAY)] if "market" in B else B.iloc[:0]
+    logged = set(zip(B.player.astype(str).map(norm), B.stat.astype(str), B.side.astype(str).str.lower()))
+    A = A.copy(); A["event_id"] = A.event_id.astype(str)
+    first = A.drop_duplicates(["event_id", "stat", "name"], keep="first"); last = A.drop_duplicates(["event_id", "stat", "name"], keep="last")
+    now_n = pd.Timestamp(NOW.replace(tzinfo=None)); new = []
+    for r in L.itertuples():
+        if (r.name, r.stat, str(r.side).lower()) in logged or norm(str(r.player)) in {x[0] for x in logged if x[1:] == (r.stat, str(r.side).lower())}: continue
+        if pd.Timestamp(r.tip_et) <= now_n: continue
+        ev_id = str(r.key).split("|")[1]
+        f = first[(first.event_id == ev_id) & (first.stat == r.stat) & (first.name == r.name)]
+        q = last[(last.event_id == ev_id) & (last.stat == r.stat) & (last.name == r.name)]
+        if not len(f) or not len(q): continue
+        side = str(r.side).lower(); popen = float(f[side].iloc[0]); px = float(q[side].iloc[0]); ln = float(q.line.iloc[0])
+        sp = stop_price(popen, float(r.p), PO["ev_min"])
+        if sp is None or not np.isfinite(px): continue
+        in_range = (ln == float(r.line)) and float(dec(px)) >= float(dec(sp)) - 1e-9
+        mine = S[S.key == r.key]
+        state = str(mine.status.iloc[-1]) if len(mine) else "bet"
+        if len(mine) >= MAX_FOLLOWUPS: continue
+        sname = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes"}[r.stat]
+        now_txt = f"{side.upper()} {ln:g} {int(px):+d}"
+        if state == "bet" and not in_range:
+            why = (f"the line moved from {float(r.line):g} to {ln:g}" if ln != float(r.line) else
+                   f"the price is {int(px):+d}, worse than the stop at {sp:+d} (outside the opener window or EV under {PO['ev_min']*100:.0f}%)")
+            title = f"DON'T BET - {r.player} {side.upper()} {float(r.line):g} {sname} (now {now_txt}, FanDuel)"
+            body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. The {str(r.logged_at_et)[11:16]} prop alert is off: {why}. "
+                    f"Not logged, so skip it. If you did place it, log it with 'Log a bet' (market: prop) and ignore this. "
+                    f"Still graded on the rule's record as alerted.")
+            status = "stopped"
+        elif state == "stopped" and in_range:
+            title = f"BET again - {r.player} {side.upper()} {float(r.line):g} {sname} {int(px):+d} (FanDuel)"
+            body = (f"{r.game}, tip {str(r.tip_et)[11:16]} ET. Back in range: FanDuel {now_txt}, stop is {sp:+d}. "
+                    f"The DON'T BET no longer applies. STOP again if the line leaves {float(r.line):g} or the price gets worse than {sp:+d}.")
+            status = "bet"
+        else:
+            continue
+        try: sent = push(title, body, "view, Open FanDuel, https://sportsbook.fanduel.com/navigation/nba")
+        except Exception as e: sent = False; print("follow-up push failed:", e)
+        new.append(dict(key=r.key, sent_at_et=NOW.strftime("%Y-%m-%d %H:%M"), status=status, line_now=ln, price_now=int(px), stop_price=sp, pushed=sent))
+        print("props follow-up:", title)
+    if new: pd.DataFrame(new).to_csv(STOPS, mode="a", header=not os.path.exists(STOPS), index=False)
 
 
 def grade_my_props():

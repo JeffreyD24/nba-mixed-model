@@ -3782,3 +3782,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 08:43,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Victor Wembanyama,victor wembanyama,11.5,-120.0,-110.0,SAS,709.196062585,61967224.0,61967225.0
 2026-11-06 08:43,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,5.5,-128.0,-104.0,SAS,709.196062653,64780942.0,64780943.0
 2026-11-06 08:43,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Dylan Harper,dylan harper,4.5,-166.0,124.0,SAS,709.196062603,76027865.0,76027863.0
+2026-11-06 08:45,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Grayson Allen,grayson allen,13.5,,,CHA,709.196111177,37819081.0,37819080.0
+2026-11-06 08:45,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Grayson Allen,grayson allen,2.5,,,CHA,709.196111181,37819081.0,37819080.0
+2026-11-06 08:45,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Grayson Allen,grayson allen,2.5,,,CHA,709.196111182,37819081.0,37819080.0

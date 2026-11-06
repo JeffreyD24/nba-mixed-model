@@ -60,3 +60,6 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 14:35,297648,Memphis Tigers,VCU Rams,-1.5,7.76,3.3,3.92,1.79,0.29,PASS,edge 0.29 < 0.5,,,PASS,no live_features.csv,
 2026-11-06 14:35,297638,Georgetown Hoyas,Maryland Terrapins,-1.5,10.74,6.47,3.63,1.88,0.38,PASS,edge 0.38 < 0.5,,,PASS,no live_features.csv,
 2026-11-06 14:45,297624,San Diego State Aztecs,Colorado Buffaloes,-2.5,0.85,-1.12,-1.65,1.9,-0.6,PASS,a team has under 3 games,,,PASS,no live_features.csv,
+2026-11-06 18:10,297635,Louisville Cardinals,Morehead State Eagles,-36.5,29.7,29.51,33.79,36.33,-0.17,PASS,edge 0.17 < 0.5,,,PASS,no live_features.csv,
+2026-11-06 18:10,301461,Ohio Bobcats,North Carolina A&T Aggies,-12.5,,,,,,PASS,team not rated,,,PASS,team not rated,
+2026-11-06 18:10,297637,Marshall Thundering Herd,Toledo Rockets,-2.5,8.81,5.32,1.77,2.5,0.0,PASS,edge 0.00 < 0.5,,,PASS,no live_features.csv,

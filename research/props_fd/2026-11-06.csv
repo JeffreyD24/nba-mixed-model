@@ -1929,3 +1929,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 02:04,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ty Jerome,ty jerome,5.5,-104,-128,MEM,709.196045668,23651199.0,23651198.0
 2026-11-06 02:04,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ajay Mitchell,ajay mitchell,3.5,-136,102,OKC,709.196043198,53679067.0,53679062.0
 2026-11-06 02:04,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,6.5,104,-138,OKC,709.196043076,21662973.0,21662974.0
+2026-11-06 02:10,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Trae Young,trae young,20.5,-120,-110,WAS,709.196071399,21175415.0,21175416.0
+2026-11-06 02:10,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Anthony Davis,anthony davis,22.5,-120,-110,WAS,709.196069348,12260628.0,12260629.0
+2026-11-06 02:10,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Trae Young,trae young,9.5,-132,100,WAS,709.196071404,21175415.0,21175416.0
+2026-11-06 02:10,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,AJ Dybantsa,aj dybantsa,1.5,-152,114,WAS,709.196071630,90729348.0,90729347.0
+2026-11-06 02:10,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Alex Sarr,alex sarr,1.5,-146,110,WAS,709.196071725,92784087.0,92784086.0
+2026-11-06 02:10,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Anthony Davis,anthony davis,2.5,144,-194,WAS,709.196069325,12260628.0,12260629.0

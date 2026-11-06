@@ -1192,3 +1192,4 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-05 20:10:55,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,total,over,228.5,-108,normal
 2026-11-05 20:10:55,295196,2026-11-06,2026-11-06 22:00,por,lal,Caesars,event,total,under,233.0,-110,normal
 2026-11-05 20:10:55,295196,2026-11-06,2026-11-06 22:00,por,lal,Caesars,event,total,over,233.0,-110,normal
+2026-11-05 20:15:10,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetRivers,event,spread,away,-15.5,-113,normal

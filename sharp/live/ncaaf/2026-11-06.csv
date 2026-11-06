@@ -808,3 +808,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-06 11:31:00,290174,2026-11-08T00:00:00.000Z,Jacksonville State Gamecocks,Sam Houston State Bearkats,1161,cons,-17.5,-106.0,46.5,-108.0,-900.0,600.0,0.0,0.0,51.0,29.0,99.0,97.0
 2026-11-06 11:33:00,289828,2026-11-07T03:15:00.000Z,Arizona Wildcats,TCU Horned Frogs,11647,fd,-6.5,-122.0,46.5,-108.0,-250.0,205.0,,,,,,
 2026-11-06 11:35:00,289828,2026-11-07T03:15:00.000Z,Arizona Wildcats,TCU Horned Frogs,11647,dk,-7.0,-105.0,46.5,-112.0,-285.0,230.0,,,,,,
+2026-11-06 11:37:00,289901,2026-11-08T00:30:00.000Z,Michigan Wolverines,Michigan State Spartans,3917,fd,-14.5,-112.0,39.5,-110.0,-720.0,520.0,,,,,,
+2026-11-06 11:38:00,289836,2026-11-07T19:30:00.000Z,Appalachian State Mountaineers,Georgia State Panthers,2680,cons,-6.5,-111.0,54.5,-110.0,-235.0,190.0,27.0,24.0,8.0,7.0,97.0,93.0

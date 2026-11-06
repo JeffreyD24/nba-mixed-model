@@ -583,3 +583,4 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-05 20:13:00,289827,2026-11-07T00:30:00.000Z,East Carolina Pirates,South Florida Bulls,5811,cons,-2.5,-110.0,39.5,-108.0,-135.0,110.0,40.0,23.0,80.0,73.0,72.0,68.0
 2026-11-05 20:13:00,290167,2026-11-07T20:30:00.000Z,Middle Tennessee Blue Raiders,Western Kentucky Hilltoppers,752,cons,2.0,-110.0,53.5,-108.0,102.0,-122.0,0.0,0.0,33.0,47.0,56.0,3.0
 2026-11-05 20:16:00,289857,2026-11-07T17:30:00.000Z,North Carolina State Wolfpack,Duke Blue Devils,4357,fd,4.5,-110.0,51.5,-115.0,155.0,-188.0,,,,,,
+2026-11-05 20:22:00,289857,2026-11-07T17:30:00.000Z,North Carolina State Wolfpack,Duke Blue Devils,4357,cons,4.5,-110.0,51.5,-113.0,157.0,-190.0,39.0,38.0,12.0,16.0,9.0,69.0

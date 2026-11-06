@@ -1221,16 +1221,30 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 00:33,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,5.5,-130,-102,SAS,709.196062653,64780942.0,64780943.0
 2026-11-06 00:33,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,122,-162,SAC,709.196063823,12257190.0,12257191.0
 2026-11-06 00:33,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-182,136,SAS,709.196062582,61967224.0,61967225.0
-2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-118,-112,MIN,709.196061600,38988768.0,38988773.0
+2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-118,-112,MIN,709.1960616,38988768.0,38988773.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Dejounte Murray,dejounte murray,16.5,-132,100,NOP,709.196064319,15695648.0,15695649.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Terrence Shannon Jr.,terrence shannon,11.5,-130,-102,MIN,709.196062885,43165976.0,43165975.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Ayo Dosunmu,ayo dosunmu,17.5,-110,-120,MIN,709.196061872,41652478.0,41652484.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Rudy Gobert,rudy gobert,9.5,-136,102,MIN,709.196062741,12260609.0,12260610.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,LaMelo Ball,lamelo ball,20.5,-125,-106,MIN,709.196062469,26324737.0,26324736.0
-2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-158,118,MIN,709.196062180,40221490.0,40221489.0
+2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-158,118,MIN,709.19606218,40221490.0,40221489.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Dejounte Murray,dejounte murray,5.5,-154,116,NOP,709.196064317,15695648.0,15695649.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Rudy Gobert,rudy gobert,11.5,116,-154,MIN,709.196062737,12260609.0,12260610.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,LaMelo Ball,lamelo ball,4.5,-128,-104,MIN,709.196062471,26324737.0,26324736.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Dejounte Murray,dejounte murray,5.5,-125,-106,NOP,709.196064316,15695648.0,15695649.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Ayo Dosunmu,ayo dosunmu,4.5,-114,-114,MIN,709.196061874,41652478.0,41652484.0
 2026-11-06 00:33,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-132,100,MIN,709.196062475,26324737.0,26324736.0
+2026-11-06 00:35,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Tyrese Maxey,tyrese maxey,24.5,-128,-104,PHI,709.196004207,38185448.0,38185450.0
+2026-11-06 00:35,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Jaylen Brown,jaylen brown,19.5,-108,-122,PHI,709.196004292,15552471.0,15552472.0
+2026-11-06 00:35,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,James Harden,james harden,6.5,-108,-122,CLE,709.196003705,12260579.0,12260580.0
+2026-11-06 00:35,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Jaylen Brown,jaylen brown,3.5,-114,-114,PHI,709.196004287,15552471.0,15552472.0
+2026-11-06 00:35,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Evan Mobley,evan mobley,3.5,-108,-122,CLE,709.196003681,41407628.0,41407629.0
+2026-11-06 00:35,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Tyrese Maxey,tyrese maxey,4.5,-138,104,PHI,709.196004211,38185448.0,38185450.0
+2026-11-06 00:35,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Joel Embiid,joel embiid,3.5,-140,106,PHI,709.196004274,12260618.0,12260619.0
+2026-11-06 00:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Dejounte Murray,dejounte murray,16.5,-128,-104,NOP,709.196064319,15695648.0,15695649.0
+2026-11-06 00:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Ayo Dosunmu,ayo dosunmu,17.5,-112,-118,MIN,709.196061872,41652478.0,41652484.0
+2026-11-06 00:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Zion Williamson,zion williamson,19.5,102,-136,NOP,709.196064504,24729467.0,24729466.0
+2026-11-06 00:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Zion Williamson,zion williamson,5.5,-130,-102,NOP,709.196064502,24729467.0,24729466.0
+2026-11-06 00:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Rudy Gobert,rudy gobert,1.5,-128,-104,MIN,709.196062738,12260609.0,12260610.0
+2026-11-06 00:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Dejounte Murray,dejounte murray,5.5,-120,-110,NOP,709.196064316,15695648.0,15695649.0
+2026-11-06 00:35,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Zion Williamson,zion williamson,2.5,-146,110,NOP,709.196064507,24729467.0,24729466.0

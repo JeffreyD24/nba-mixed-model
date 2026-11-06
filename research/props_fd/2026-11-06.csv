@@ -2885,3 +2885,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 06:12,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,100.0,-132.0,POR,709.196048601,12260620.0,12260621.0
 2026-11-06 06:12,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,6.5,120.0,-160.0,POR,709.196048599,37901072.0,37901070.0
 2026-11-06 06:12,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-162.0,122.0,LAL,709.196045222,41574998.0,41574999.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Derrick White,derrick white,13.5,-130.0,-102.0,BOS,709.196079651,22613511.0,22613512.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Jayson Tatum,jayson tatum,27.5,-102.0,-130.0,BOS,709.196079679,15552473.0,15552474.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Neemias Queta,neemias queta,10.5,100.0,-132.0,BOS,709.196079683,64163654.0,64163656.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,pts,Brandon Miller,brandon miller,21.5,-114.0,-114.0,CHA,709.196085055,50113302.0,50113301.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Payton Pritchard,payton pritchard,3.5,140.0,-188.0,BOS,709.196079638,38225629.0,38225623.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Sam Hauser,sam hauser,3.5,130.0,-174.0,BOS,709.196098121,49890235.0,49890236.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Paul George,paul george,4.5,-136.0,102.0,BOS,709.196079664,12234250.0,12234251.0
+2026-11-06 06:16,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,reb,Neemias Queta,neemias queta,7.5,118.0,-158.0,BOS,709.196079694,64163654.0,64163656.0

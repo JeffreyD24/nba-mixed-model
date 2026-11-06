@@ -350,5 +350,16 @@
   "url": "https://bsky.app/profile/jlewenberg.bsky.social/post/3mzoktjt36c2o",
   "text": "Barnes (adductor) and Quickley (hamstring) have both been ruled OUT for tonight, so the Raptors are down 3 starters (Scottie, IQ and Kawhi) vs the Bucks.  Poeltl and Anderson are available.",
   "swing": 0.35
+ },
+ "2026-11-06|cle|peyton watson": {
+  "status": "Available",
+  "player": "Peyton Watson",
+  "game_id": 22600027,
+  "reporter": "Rotowire NBA (account)",
+  "posted_at_et": "2026-11-06 18:52:57",
+  "seen_at_et": "2026-11-06 18:53:10",
+  "url": "https://bsky.app/profile/rotowirenba.bsky.social/post/3mzolbwi5ha2h",
+  "text": "Peyton Watson: Available to play    https://www.rotowire.com/basketball/player/peyton-watson-5722",
+  "swing": 0.13
  }
 }

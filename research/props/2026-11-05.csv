@@ -4816,3 +4816,31 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-05 18:55,22600187,2026-11-05,"Total Points, Rebounds, and Assists",4712849,Anthony Black,,24.5,-119.0,23.5,-123.0,2026-11-06T00:02Z,under
 2026-11-05 18:55,22600187,2026-11-05,Total Steals and Blocks,4277847,Wendell Carter Jr.,,1.5,-114.0,1.5,-125.0,2026-11-05T21:18Z,over
 2026-11-05 18:55,22600187,2026-11-05,Total Steals and Blocks,4277847,Wendell Carter Jr.,,1.5,-117.0,1.5,-106.0,2026-11-05T21:18Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Points,4278053,Davion Mitchell,,12.5,100.0,13.5,-105.0,2026-11-06T00:29Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Points,4278053,Davion Mitchell,,12.5,-128.0,13.5,-121.0,2026-11-06T00:29Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Points,4709138,Brandin Podziemski,,16.5,-124.0,15.5,-124.0,2026-11-05T23:46Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Points,4709138,Brandin Podziemski,,16.5,-103.0,15.5,-102.0,2026-11-05T23:46Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,3032977,Giannis Antetokounmpo,,10.5,-140.0,11.5,-124.0,2026-11-05T23:46Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,3032977,Giannis Antetokounmpo,,10.5,106.0,11.5,-106.0,2026-11-05T23:46Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,3059319,Andrew Wiggins,,3.5,-124.0,3.5,-126.0,2026-11-05T23:46Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,3059319,Andrew Wiggins,,3.5,-106.0,3.5,-105.0,2026-11-05T23:46Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,3064482,Bobby Portis,,5.5,105.0,5.5,114.0,2026-11-06T00:29Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,3064482,Bobby Portis,,5.5,-138.0,5.5,-150.0,2026-11-06T00:29Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,4601025,Pelle Larsson,,3.5,-106.0,3.5,-129.0,2026-11-05T23:46Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Rebounds,4601025,Pelle Larsson,,3.5,-124.0,3.5,-102.0,2026-11-05T23:46Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Assists,5175737,Yaxel Lendeborg,,23.5,-104.0,23.5,-126.0,2026-11-06T02:25Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Assists,5175737,Yaxel Lendeborg,,23.5,-126.0,23.5,-105.0,2026-11-06T02:25Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,6475,Klay Thompson,,14.5,-110.0,15.5,-113.0,2026-11-06T00:54Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,6475,Klay Thompson,,14.5,-119.0,15.5,-116.0,2026-11-06T00:54Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,6589,Draymond Green,,10.5,-134.0,10.5,-117.0,2026-11-06T02:56Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,6589,Draymond Green,,10.5,102.0,10.5,-112.0,2026-11-06T02:56Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,3059319,Andrew Wiggins,,14.5,-127.0,16.5,-109.0,2026-11-06T02:25Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,3059319,Andrew Wiggins,,14.5,-104.0,16.5,-121.0,2026-11-06T02:25Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,3064482,Bobby Portis,,13.5,-125.0,14.5,-103.0,2026-11-06T00:22Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Points and Rebounds,3064482,Bobby Portis,,13.5,-106.0,14.5,-128.0,2026-11-06T00:22Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Assists and Rebounds,3032977,Giannis Antetokounmpo,,17.5,-105.0,18.5,-105.0,2026-11-05T23:46Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Assists and Rebounds,3032977,Giannis Antetokounmpo,,17.5,-125.0,18.5,-125.0,2026-11-05T23:46Z,under
+2026-11-05 19:05,22600188,2026-11-05,Total Assists and Rebounds,4601025,Pelle Larsson,,6.5,-146.0,7.5,-119.0,2026-11-06T02:51Z,over
+2026-11-05 19:05,22600188,2026-11-05,Total Assists and Rebounds,4601025,Pelle Larsson,,6.5,111.0,7.5,-110.0,2026-11-06T02:51Z,under
+2026-11-05 19:05,22600188,2026-11-05,"Total Points, Rebounds, and Assists",6475,Klay Thompson,,16.5,-105.0,17.5,-114.0,2026-11-06T02:51Z,over
+2026-11-05 19:05,22600188,2026-11-05,"Total Points, Rebounds, and Assists",6475,Klay Thompson,,16.5,-125.0,17.5,-115.0,2026-11-06T02:51Z,under

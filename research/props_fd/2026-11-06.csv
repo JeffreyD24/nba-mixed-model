@@ -1816,3 +1816,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,100,-132,POR,709.196048601,12260620.0,12260621.0
 2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,6.5,122,-162,POR,709.196048599,37901072.0,37901070.0
 2026-11-06 01:26,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-166,124,LAL,709.196045222,41574998.0,41574999.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Tyrese Maxey,tyrese maxey,24.5,-125,-106,PHI,709.196004207,38185448.0,38185450.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Jaylen Brown,jaylen brown,19.5,-106,-122,PHI,709.196004292,15552471.0,15552472.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Joel Embiid,joel embiid,21.5,100,-132,PHI,709.196004277,12260618.0,12260619.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Evan Mobley,evan mobley,9.5,102,-136,CLE,709.196003658,41407628.0,41407629.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Jarrett Allen,jarrett allen,7.5,108,-144,CLE,709.196003728,21174117.0,21174118.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Jaylen Brown,jaylen brown,6.5,126,-168,PHI,709.196004289,15552471.0,15552472.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Jaylen Brown,jaylen brown,3.5,-114,-118,PHI,709.196004287,15552471.0,15552472.0
+2026-11-06 01:30,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Tyrese Maxey,tyrese maxey,4.5,-136,102,PHI,709.196004211,38185448.0,38185450.0

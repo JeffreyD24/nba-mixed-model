@@ -52,3 +52,7 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 00:55,297400,LSU Tigers,Texas Southern Tigers,-30.5,28.72,32.6,28.7,30.65,0.15,PASS,edge 0.15 < 0.5
 2026-11-06 00:55,297406,TCU Horned Frogs,Southern University Jaguars,-23.5,24.23,25.94,25.65,24.01,0.51,PASS,a team has under 3 games
 2026-11-06 00:55,297612,Oklahoma Sooners,Mississippi Valley State Delta Devils,-38.5,,,,,,PASS,team not rated
+2026-11-06 01:00,297410,USC Upstate Spartans,South Carolina State Bulldogs,-7.5,15.33,12.83,1.96,7.14,-0.36,PASS,edge 0.36 < 0.5
+2026-11-06 01:00,297391,George Mason Patriots,Coppin State Eagles,-26.5,31.04,30.58,29.87,27.25,0.75,PASS,a team has under 3 games
+2026-11-06 01:00,297413,Mount St. Mary's Mountaineers,Loyola (MD) Greyhounds,-5.5,8.04,7.98,6.01,5.63,0.13,PASS,edge 0.13 < 0.5
+2026-11-06 01:00,297414,Brown Bears,Boston University Terriers,-5.5,7.6,7.16,7.66,5.78,0.28,PASS,edge 0.28 < 0.5

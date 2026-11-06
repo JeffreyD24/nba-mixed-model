@@ -1,0 +1,15 @@
+seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,open_odds,book_updated,side
+2026-11-06 01:10,22600027,2026-11-06,Total Points,3992,James Harden,,17.5,-120.0,17.5,-120.0,2026-11-06T09:09Z,over
+2026-11-06 01:10,22600027,2026-11-06,Total Points,3992,James Harden,,17.5,-106.0,17.5,-106.0,2026-11-06T09:09Z,under
+2026-11-06 01:10,22600027,2026-11-06,Total Points,3908809,Donovan Mitchell,,24.5,-121.0,24.5,-121.0,2026-11-06T09:09Z,over
+2026-11-06 01:10,22600027,2026-11-06,Total Points,3908809,Donovan Mitchell,,24.5,-105.0,24.5,-105.0,2026-11-06T09:09Z,under
+2026-11-06 01:10,22600027,2026-11-06,Total Points,4066328,Jarrett Allen,,12.5,-125.0,13.5,-105.0,2026-11-06T09:09Z,over
+2026-11-06 01:10,22600027,2026-11-06,Total Points,4066328,Jarrett Allen,,12.5,-102.0,13.5,-122.0,2026-11-06T09:09Z,under
+2026-11-06 01:10,22600027,2026-11-06,Total Points,4432158,Evan Mobley,,18.5,-116.0,18.5,-116.0,2026-11-06T09:09Z,over
+2026-11-06 01:10,22600027,2026-11-06,Total Points,4432158,Evan Mobley,,18.5,-110.0,18.5,-110.0,2026-11-06T09:09Z,under
+2026-11-06 01:10,22600027,2026-11-06,Total 3-Point Field Goals,3992,James Harden,,2.5,123.0,2.5,129.0,2026-11-06T09:09Z,over
+2026-11-06 01:10,22600027,2026-11-06,Total 3-Point Field Goals,3992,James Harden,,2.5,-163.0,2.5,-171.0,2026-11-06T09:09Z,under
+2026-11-06 01:10,22600027,2026-11-06,Total 3-Point Field Goals,3908809,Donovan Mitchell,,2.5,-101.0,2.5,-101.0,2026-11-06T09:09Z,over
+2026-11-06 01:10,22600027,2026-11-06,Total 3-Point Field Goals,3908809,Donovan Mitchell,,2.5,-130.0,2.5,-130.0,2026-11-06T09:09Z,under
+2026-11-06 01:10,22600027,2026-11-06,Total 3-Point Field Goals,4432158,Evan Mobley,,1.5,156.0,1.5,156.0,2026-11-06T09:09Z,over
+2026-11-06 01:10,22600027,2026-11-06,Total 3-Point Field Goals,4432158,Evan Mobley,,1.5,-208.0,1.5,-208.0,2026-11-06T09:09Z,under

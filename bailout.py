@@ -19,6 +19,16 @@ def payout(odds):
     return 100 / abs(o) if o < 0 else o / 100
 
 
+# Nov 6, 2026 (Jeffrey): a button straight to the open bets at the book the bet was placed at (book column of my_bets.csv),
+# for a quick cash-out. Web addresses the apps should open; not yet confirmed on his phone.
+MY_BETS = {"DraftKings": "https://sportsbook.draftkings.com/mybets", "FanDuel": "https://sportsbook.fanduel.com/my-bets"}
+
+
+def mybets_button(book):
+    b = next((k for k in MY_BETS if k.lower() in str(book).lower()), None)
+    return f"view, Cash out at {b} (My Bets), {MY_BETS[b]}" if b else None
+
+
 def check(W, NOW, LINE_NOW, MYB, notify):
     STATE = os.path.join(W, "state")
     T = pd.read_csv(os.path.join(W, "analysis", "bailout_thresholds.csv")).set_index(["market", "k"])
@@ -39,6 +49,9 @@ def check(W, NOW, LINE_NOW, MYB, notify):
     awake = AWAKE[0] <= NOW.hour < AWAKE[1]
     new, n_sent = [], 0
     for r in pending.itertuples(index=False):
+        # Nov 6, 2026 (Jeffrey): no more bail-out alerts once he has cashed out or hedged (cashout_usd filled, or said so in the notes)
+        if pd.notna(getattr(r, "cashout_usd", np.nan)) or any(w in str(getattr(r, "notes", "")).lower() for w in ("cashed out", "hedged")):
+            continue
         mk = str(r.market)
         if mk not in TIERS: continue
         v = by_game.get((str(r.date), r.home, r.away, mk))
@@ -75,10 +88,10 @@ def check(W, NOW, LINE_NOW, MYB, notify):
             if bool(t.hedge_ok):
                 body += (f"\nHedge option: bet {other} instead of cashing out. From here the other side won {t.hedge_win:.0%} in 2023-26 "
                          f"(only {int(t.n)} bets, provisional).")
-            body += "\nProvisional tool (analysis/BAILOUT_PREREG.md). If you cash out or hedge, add it to your bet's notes." + v.get("hist", "")
+            body += "\nProvisional tool (analysis/BAILOUT_PREREG.md). If you cash out or hedge, tell Claude (amount) and these alerts stop." + v.get("hist", "")
             title = f"BAIL-OUT CHECK - {what}: {v['Aw']} @ {v['H']}, {v['tip']}"
             sent = False
-            try: sent = notify(title, body, priority="high", tags="rotating_light", kind="bailout")
+            try: sent = notify(title, body, priority="high", tags="rotating_light", kind="bailout", actions=mybets_button(getattr(r, "book", "")))
             except Exception as e: print("bail-out notify failed:", type(e).__name__)
             new.append(dict(at_et=str(NOW)[:16], bet_key=bet_key, date=r.date, home=r.home, away=r.away, market=mk, pick=pick,
                             bet_line=line, odds=r.odds, tier=k, line_now=cur, moved_against=round(against, 1),

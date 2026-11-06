@@ -181,7 +181,7 @@ def dk_link(ln, market, side, line):
     return dk
 
 
-def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info", fd=None, best=None):
+def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info", fd=None, best=None, actions=None):
     """kind: 'bet' (a BET verdict), 'stop' (DON'T BET follow-up), 'test', or 'info' (not pushed while BET_ONLY).
     dk / fd: DraftKings / FanDuel links (better book first, from fanduel.compare). link: unused since Nov 4, 2026 (Log button removed)."""
     if BET_ONLY and kind not in ("bet", "stop", "test", "bailout"):   # bailout: asked for Nov 4, 2026 (bailout.py)
@@ -189,7 +189,7 @@ def notify(title, body, priority="high", tags="basketball", link=None, dk=None, 
     topic = os.environ.get("NTFY_TOPIC")
     if not topic:
         print("NTFY_TOPIC not set; would have sent:", title, "|", body, "| DK:", dk or "-", "| FD:", fd or "-"); return False
-    actions = fanduel.actions(dk, fd, best)
+    actions = actions or fanduel.actions(dk, fd, best)      # actions: ready-made buttons (bail-out: the book's My Bets page)
     if best == "FanDuel" and "BEST AT FANDUEL" not in title: title += " | BEST AT FANDUEL"     # every alert type (Fable review)
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
                                  headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": priority, "Tags": tags,

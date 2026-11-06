@@ -380,7 +380,7 @@ def grade_my_bets(games, logdf):
     out = []
     for r in B.itertuples():
         if r.market == "prop":      # Nov 5, 2026: player props are graded by props_shadow.py (grade_my_props); keep its result
-            out.append((getattr(r, "result", None), getattr(r, "profit", np.nan), np.nan, np.nan)); continue
+            out.append((getattr(r, "result", None), getattr(r, "profit", np.nan), np.nan, np.nan, getattr(r, "result_if_ridden", None))); continue
         hp, ap = res.get((r.date, r.home, r.away), (np.nan, np.nan))
         mm, mt = model.get((r.date, r.home, r.away), (np.nan, np.nan))
         if r.market == "total":
@@ -395,9 +395,15 @@ def grade_my_bets(games, logdf):
         elif v > 0: result, profit = "W", r.stake * (100 / abs(r.odds) if r.odds < 0 else r.odds / 100)
         elif v < 0: result, profit = "L", -r.stake
         else: result, profit = "P", 0.0
+        ridden = result
+        # Nov 6, 2026 (Jeffrey): a cashed-out bet is graded at the cash-out (result CO, profit = cash-out / wager - 1 units);
+        # what riding would have done stays in result_if_ridden, so the bail-out tool can be judged
+        co, wg = getattr(r, "cashout_usd", np.nan), getattr(r, "wager_usd", np.nan)
+        if pd.notna(co) and pd.notna(wg) and float(wg) > 0:
+            result, profit = "CO", r.stake * (float(co) / float(wg) - 1)
         out.append((result, round(profit, 2) if not np.isnan(profit) else np.nan,
-                    round(model_num, 1) if not np.isnan(model_num) else np.nan, round(edge, 1) if not np.isnan(edge) else np.nan))
-    B["result"], B["profit"], B["model_number"], B["model_edge_at_your_line"] = zip(*out)
+                    round(model_num, 1) if not np.isnan(model_num) else np.nan, round(edge, 1) if not np.isnan(edge) else np.nan, ridden))
+    B["result"], B["profit"], B["model_number"], B["model_edge_at_your_line"], B["result_if_ridden"] = zip(*out)
     closes = {(r.date_s, r.home, r.away): (r.close_spread, r.close_total) for r in picks.itertuples()} if "close_spread" in picks else {}
     cv, yc = [], []
     for r in B.itertuples():

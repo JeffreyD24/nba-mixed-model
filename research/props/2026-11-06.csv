@@ -6672,3 +6672,47 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-06 09:00,22600031,2026-11-06,"Total Points, Rebounds, and Assists",4869780,Derik Queen,,20.5,-114.0,20.5,-118.0,2026-11-06T11:38Z,under
 2026-11-06 09:00,22600031,2026-11-06,"Total Points, Rebounds, and Assists",5144091,Jeremiah Fears,,22.5,-106.0,22.5,-109.0,2026-11-06T11:38Z,over
 2026-11-06 09:00,22600031,2026-11-06,"Total Points, Rebounds, and Assists",5144091,Jeremiah Fears,,22.5,-124.0,22.5,-121.0,2026-11-06T11:38Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points,4395725,Tyler Herro,,20.5,-113.0,21.5,-105.0,2026-11-06T16:37Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points,4395725,Tyler Herro,,20.5,-113.0,21.5,-121.0,2026-11-06T16:37Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points,4432848,Jaime Jaquez Jr.,,14.5,-108.0,15.5,-101.0,2026-11-06T09:34Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points,4432848,Jaime Jaquez Jr.,,14.5,-118.0,15.5,-126.0,2026-11-06T09:34Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points,4591725,Ryan Rollins,,11.5,-103.0,10.5,-105.0,2026-11-06T15:49Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points,4591725,Ryan Rollins,,11.5,-124.0,10.5,-122.0,2026-11-06T15:49Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,4395625,RJ Barrett,,5.5,-155.0,5.5,-141.0,2026-11-06T11:37Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,4395625,RJ Barrett,,5.5,117.0,5.5,107.0,2026-11-06T11:37Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,4395724,Immanuel Quickley,,3.5,-162.0,3.5,-160.0,2026-11-06T16:57Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,4395724,Immanuel Quickley,,3.5,123.0,3.5,121.0,2026-11-06T16:57Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,4433134,Scottie Barnes,,8.5,106.0,7.5,-143.0,2026-11-06T14:30Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,4433134,Scottie Barnes,,8.5,-139.0,7.5,109.0,2026-11-06T14:30Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,5093267,Collin Murray-Boyles,,5.5,-101.0,5.5,-143.0,2026-11-06T11:37Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Rebounds,5093267,Collin Murray-Boyles,,5.5,-131.0,5.5,108.0,2026-11-06T11:37Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,3133628,Myles Turner,,12.5,-118.0,12.5,-114.0,2026-11-06T12:19Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,3133628,Myles Turner,,12.5,-112.0,12.5,-116.0,2026-11-06T12:19Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,3134907,Kyle Kuzma,,12.5,-124.0,13.5,-108.0,2026-11-06T13:35Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,3134907,Kyle Kuzma,,12.5,-106.0,13.5,-122.0,2026-11-06T13:35Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,4432848,Jaime Jaquez Jr.,,17.5,-126.0,18.5,-103.0,2026-11-06T16:57Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,4432848,Jaime Jaquez Jr.,,17.5,-105.0,18.5,-127.0,2026-11-06T16:57Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,4591725,Ryan Rollins,,15.5,-116.0,15.5,-105.0,2026-11-06T12:19Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Assists,4591725,Ryan Rollins,,15.5,-113.0,15.5,-125.0,2026-11-06T12:19Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,4432848,Jaime Jaquez Jr.,,19.5,-126.0,20.5,-104.0,2026-11-06T16:57Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,4432848,Jaime Jaquez Jr.,,19.5,-104.0,20.5,-126.0,2026-11-06T16:57Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,4591725,Ryan Rollins,,14.5,-124.0,14.5,-109.0,2026-11-06T12:19Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,4591725,Ryan Rollins,,14.5,-107.0,14.5,-120.0,2026-11-06T12:19Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,4684272,Ja'Kobe Walter,,16.5,-115.0,16.5,-111.0,2026-11-06T12:20Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,4684272,Ja'Kobe Walter,,16.5,-115.0,16.5,-119.0,2026-11-06T12:20Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,5093267,Collin Murray-Boyles,,17.5,-113.0,18.5,-116.0,2026-11-06T16:27Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Points and Rebounds,5093267,Collin Murray-Boyles,,17.5,-117.0,18.5,-113.0,2026-11-06T16:27Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Assists and Rebounds,4433134,Scottie Barnes,,13.5,-136.0,13.5,-128.0,2026-11-06T14:28Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Assists and Rebounds,4433134,Scottie Barnes,,13.5,103.0,13.5,-103.0,2026-11-06T14:28Z,under
+2026-11-06 09:05,22600030,2026-11-06,Total Assists and Rebounds,5093267,Collin Murray-Boyles,,7.5,-107.0,7.5,-144.0,2026-11-06T15:22Z,over
+2026-11-06 09:05,22600030,2026-11-06,Total Assists and Rebounds,5093267,Collin Murray-Boyles,,7.5,-123.0,7.5,109.0,2026-11-06T15:22Z,under
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",3133628,Myles Turner,,18.5,-110.0,18.5,-106.0,2026-11-06T12:19Z,over
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",3133628,Myles Turner,,18.5,-120.0,18.5,-124.0,2026-11-06T12:19Z,under
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",3134907,Kyle Kuzma,,17.5,-122.0,18.5,-111.0,2026-11-06T14:30Z,over
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",3134907,Kyle Kuzma,,17.5,-108.0,18.5,-119.0,2026-11-06T14:30Z,under
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4432848,Jaime Jaquez Jr.,,23.5,-116.0,23.5,-118.0,2026-11-06T16:57Z,over
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4432848,Jaime Jaquez Jr.,,23.5,-114.0,23.5,-112.0,2026-11-06T16:57Z,under
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4433134,Scottie Barnes,,36.5,-114.0,37.5,-108.0,2026-11-06T14:28Z,over
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",4433134,Scottie Barnes,,36.5,-115.0,37.5,-121.0,2026-11-06T14:28Z,under
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",5093267,Collin Murray-Boyles,,19.5,-115.0,20.5,-120.0,2026-11-06T16:27Z,over
+2026-11-06 09:05,22600030,2026-11-06,"Total Points, Rebounds, and Assists",5093267,Collin Murray-Boyles,,19.5,-114.0,20.5,-110.0,2026-11-06T16:27Z,under

@@ -4143,3 +4143,12 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 09:29,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Kyrie Irving,kyrie irving,3.5,-158.0,116.0,DAL,709.196052726,12260613.0,12260614.0
 2026-11-06 09:29,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Max Christie,max christie,3.5,142.0,-192.0,DAL,709.196052757,43025877.0,43025876.0
 2026-11-06 09:29,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Naji Marshall,naji marshall,3.5,-118.0,-112.0,DAL,709.196052761,39295949.0,39295948.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Ziaire Williams,ziaire williams,7.5,-122.0,-110.0,LAL,709.196045261,40297002.0,40297001.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Damian Lillard,damian lillard,21.5,-102.0,-130.0,POR,709.196048594,12260575.0,12260576.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Quentin Grimes,quentin grimes,6.5,-130.0,-102.0,LAL,709.196045256,42067800.0,42067801.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Robert Williams III,robert williams,5.5,-138.0,104.0,POR,709.196048562,90846389.0,90846386.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jrue Holiday,jrue holiday,13.5,-125.0,-106.0,POR,709.196048583,12260620.0,12260621.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jake Laravia,jake laravia,5.5,-108.0,-122.0,LAL,709.196045224,90251254.0,90251266.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Scoot Henderson,scoot henderson,11.5,-114.0,-114.0,POR,709.196048610,62064858.0,62064857.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Damian Lillard,damian lillard,4.5,-104.0,-128.0,POR,709.196048560,12260575.0,12260576.0
+2026-11-06 09:32,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,-108.0,-122.0,POR,709.196048601,12260620.0,12260621.0

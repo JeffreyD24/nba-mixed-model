@@ -762,12 +762,20 @@ def main():
                                model=round(margin if market == "spread" else total, 2), edge=round(abs(e), 2),
                                injury_report=used, sent=False, skipped=skip, news_key=NK if is_news else np.nan,
                                pre_report_model=(round(mb, 2) if mb is not None else np.nan), news_bet=news_bet,
-                               tier=("provisional" if prov else "provisional_totals" if prov_tot else np.nan))
+                               tier=("provisional" if prov else "provisional_totals" if prov_tot else np.nan),
+                               # Nov 6, 2026 (Jeffrey): store the price so alerts are graded at their real price, not -110
+                               price=(float(px) if px is not None and not pd.isna(px) else np.nan))
                 # FanDuel next to DraftKings (Nov 4, 2026): both books' lines in the alert, the better one first and marked
                 dk_bet_line = bet_line if market == "spread" else cur
                 fd_txt, fd_link, best_book = fanduel.compare("nba", M["date"], g["home"], g["away"], market, side, dk_bet_line, px,
                                                              label=(team if market == "spread" else side), edge=abs(e), need=(THRESHOLD if market == "total" and abs(e) >= THRESHOLD else thr(market)))
                 rec_row["best_book"] = best_book
+                if best_book == "FanDuel":      # Nov 6, 2026: FanDuel's line and price at alert time (the bet is placed there)
+                    try:
+                        _fl, _fp = fanduel.quote("nba", M["date"], g["home"], g["away"], market, side)
+                        rec_row["fd_line"], rec_row["fd_price"] = (float(_fl) if _fl is not None else np.nan), (float(_fp) if _fp is not None else np.nan)
+                    except Exception as _e:
+                        print("FanDuel quote for the alert log failed:", type(_e).__name__)
                 fd_top = (fd_txt + "\n") if fd_txt else ""          # placed right under the verdict line
                 if skip:
                     # caution alert: still sent, once per game and market, flagged with the reason
@@ -839,6 +847,7 @@ def main():
                     if fd_ok:
                         vr += f". DraftKings' price is {float(px):+.0f} (worse than {MAX_PRICE}): bet it at FanDuel ({float(fp_):+.0f}, same or better line)"
                         best_book = "FanDuel"; fd_link = fd_link or fanduel.FD_PAGE["nba"]; rec_row["best_book"] = best_book
+                        rec_row["fd_line"], rec_row["fd_price"] = float(fl_), float(fp_)
                     else:
                         vd, vr = "PASS", f"DraftKings' price is {float(px):+.0f}, worse than {MAX_PRICE} (a 55% bet breaks even at about -122)"
                 if vd == "BET" and market == "spread" and PIN_SPREAD_RULE and pin_against(PINS.get((g["home"], g["away"])), side, opn):

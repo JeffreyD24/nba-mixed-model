@@ -29,8 +29,14 @@ def main():
     B = pd.read_csv(os.path.join(STATE, "my_bets.csv"))
     V = pd.read_csv(os.path.join(STATE, "bet_versions.csv"), parse_dates=["live_from_et"])
     B["placed_et"] = [placed_at(r) for r in B.itertuples()]
+    # Nov 6, 2026 bug fix: NBA and NCAAM versions share the market name "spread", so any NBA spread logged after Nov 5 11:30 was tagged
+    # "NCAAM spreads v1". Match the sport too: both teams NBA codes -> NBA versions only; otherwise -> NCAAM versions only.
+    NBA_TEAMS = {"atl", "bkn", "bos", "cha", "chi", "cle", "dal", "den", "det", "gs", "hou", "ind", "lac", "lal", "mem", "mia", "mil", "min",
+                 "no", "ny", "okc", "orl", "phi", "phx", "por", "sa", "sac", "tor", "utah", "wsh"}
+    is_ncaam_v = V.version.astype(str).str.upper().str.startswith("NCAAM")
     def version(r):
-        v = V[(V.market == r.market) & (V.live_from_et <= r.placed_et)].sort_values("live_from_et")
+        nba = str(r.home).lower() in NBA_TEAMS and str(r.away).lower() in NBA_TEAMS
+        v = V[(V.market == r.market) & (V.live_from_et <= r.placed_et) & (~is_ncaam_v if nba else is_ncaam_v)].sort_values("live_from_et")
         return v.iloc[-1].version if len(v) else "before tracking"
     B["version"] = [version(r) for r in B.itertuples()]
     B.loc[B.notes.astype(str).str.contains("OFF-MODEL"), "version"] = "off-model (no alert)"      # bets the model did not call for

@@ -7052,7 +7052,12 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Daniel Gafford,daniel gafford,9.5,100.0,-132.0,DAL,709.196052745,27543227.0,27543228.0
 2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,P.J. Washington,pj washington,12.5,-128.0,-104.0,DAL,709.196052764,62687064.0,62687065.0
 2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Naji Marshall,naji marshall,11.5,-128.0,-104.0,DAL,709.196052762,39295949.0,39295948.0
-2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Zaccharie Risacher,zaccharie risacher,7.5,-106.0,-122.0,DAL,709.196118820,71463821.0,71463823.0
+2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Zaccharie Risacher,zaccharie risacher,7.5,-106.0,-122.0,DAL,709.19611882,71463821.0,71463823.0
 2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Naji Marshall,naji marshall,3.5,-106.0,-125.0,DAL,709.196052761,39295949.0,39295948.0
 2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,3.5,-166.0,124.0,UTA,709.196050326,90729780.0,90729781.0
 2026-11-06 14:38,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-136.0,102.0,DAL,709.196052741,75811240.0,75811222.0
+2026-11-06 14:40,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,pts,Ajay Mitchell,ajay mitchell,19.5,-106.0,-125.0,OKC,709.196043200,53679067.0,53679062.0
+2026-11-06 14:40,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Alex Caruso,alex caruso,3.5,106.0,-140.0,OKC,709.196044515,23677919.0,23677920.0
+2026-11-06 14:40,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Kenrich Williams,kenrich williams,5.5,124.0,-166.0,OKC,709.196043582,26962656.0,26962657.0
+2026-11-06 14:40,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Ajay Mitchell,ajay mitchell,3.5,-128.0,-104.0,OKC,709.196043198,53679067.0,53679062.0
+2026-11-06 14:40,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,5.5,-120.0,-110.0,OKC,709.196043076,21662973.0,21662974.0

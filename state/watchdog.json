@@ -1,5 +1,8 @@
 {
- "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 893 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)",
- "fail|nba-mixed-model|health.yml": "NBA daily health check: last run FAILED 164 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42243706969)",
- "fail|nfl-mixed-model|health.yml": "NFL daily health check: last run FAILED 306 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"
+ "stale|nhl-mixed-model|alerts.yml": "NHL alert loop: no run for 49 min (expected within 30)",
+ "stale|nfl-mixed-model|alerts.yml": "NFL alert loop: no run for 51 min (expected within 30)",
+ "stale|nba-mixed-model|props-loop.yml": "NBA props loop: no run for 61 min (expected within 30)",
+ "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 951 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)",
+ "fail|nba-mixed-model|health.yml": "NBA daily health check: last run FAILED 222 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42243706969)",
+ "fail|nfl-mixed-model|health.yml": "NFL daily health check: last run FAILED 364 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"
 }

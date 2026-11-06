@@ -518,3 +518,15 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 20:07,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Tristan da Silva,tristan da silva,1.5,-130,102,ORL
 2026-11-05 20:07,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Jase Richardson,jase richardson,2.5,124,-158,ORL
 2026-11-05 20:07,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Miles Bridges,miles bridges,2.5,-146,114,PHX
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Anthony Black,anthony black,15.5,-113,-113,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Tristan da Silva,tristan da silva,12.5,100,-128,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,pts,Franz Wagner,franz wagner,23.5,-104,-122,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Khaman Maluach,khaman maluach,5.5,-113,-115,PHX
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Tristan da Silva,tristan da silva,4.5,120,-154,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Anthony Black,anthony black,4.5,-130,102,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,reb,Miles Bridges,miles bridges,6.5,100,-128,PHX
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Franz Wagner,franz wagner,6.5,-128,100,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Tristan da Silva,tristan da silva,1.5,-132,104,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Jase Richardson,jase richardson,2.5,100,-128,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Anthony Black,anthony black,4.5,-111,-115,ORL
+2026-11-05 20:09,2026-11-05,36268668,2026-11-05 21:10,Orlando Magic @ Phoenix Suns,phx,orl,ast,Miles Bridges,miles bridges,2.5,-142,112,PHX

@@ -66,8 +66,8 @@ def remind_gap_min(tip, now):
 ROSTER_W = 0.57                     # spread fix, Nov 2, 2026 (analysis/spread_fixes.py)
 SPREAD_TEST_ONLY = True             # NBA spreads failed the 2023-24 holdout (46.8%, -38.4u; 51.6% over 3 seasons): recorded, not bet (Nov 2, 2026)
 SPREAD_LIVE_MONTHS = (10, 11, 12, 1) # ...except Oct-Jan once both teams have 10+ games (roster + form active), not on home underdogs:
-                                     #   Feb-Apr only outside three traps (tanking team, against a playoff-spot team, our team added a player in
-                                     #   30 days) (approved Nov 2, 2026). Honest record (Nov 4, 2026; research/spreads/STEP1_NBA_RESULTS.md: DK openers
+                                     #   Feb-Apr only outside two traps (tanking team, against a playoff-spot team) (approved Nov 2, 2026; the third trap,
+                                     #   our team added a player in 30 days, was dropped Nov 6, 2026: failed on 2013-22). Honest record (Nov 4, 2026; research/spreads/STEP1_NBA_RESULTS.md: DK openers
                                      #   2023-26 with only what was known when the opener posted): Oct-Jan 373 bets 53.4% +6.9u, Feb-Apr 93 bets 57.0%
                                      #   +8.2u; CLV +0.85 pts vs break-even ~+0.77. The +42u / +18u first quoted here used the 8 PM report at the opener.
 PROVISIONAL_NEWS_SPREADS = True      # Nov 4, 2026 (approved; PROVISIONAL tier, research/PROVISIONAL_BETS.md): an NBA spread "news bet" is a
@@ -648,8 +648,8 @@ def main():
                 late_ok = True
                 if pd.Timestamp(M["date"]).month not in SPREAD_LIVE_MONTHS:
                     ST, AR = M.get("standing", {}), M.get("arrivals", {})
-                    late_ok = (g["away"] in ST and g["home"] in ST and ST[g["away"]]["cat"] != "tanking" and ST[g["home"]]["cat"] != "middle"
-                               and AR.get(g["away"], 0) == 0)
+                    late_ok = (g["away"] in ST and g["home"] in ST and ST[g["away"]]["cat"] != "tanking" and ST[g["home"]]["cat"] != "middle")
+                    # Nov 6, 2026: arrival trap dropped here too, as in the spread rule (NBA_ARRIVAL_TRAP_SBR_RESULTS.md)
                 if pa_now <= 150 and ev_a >= 0.06 and near and late_ok:
                     ml_rows.append(dict(recorded_at_et=str(NOW)[:16], game_id=g["game_id"], date=M["date"], home=g["home"], away=g["away"],
                                         tip_et=g["tip_et"], pick=g["away"], price=pa_now, open_price=f_["away"], model_margin=round(margin, 2),
@@ -863,14 +863,18 @@ def main():
                     month_ok = pd.Timestamp(M["date"]).month in SPREAD_LIVE_MONTHS
                     home_dog = side == "home" and float(cur) > 0
                     late_why = None
-                    if not month_ok:      # Feb-Apr rule (approved Nov 2, 2026; analysis/late_season.py): only outside the three traps
+                    if not month_ok:      # Feb-Apr rule (approved Nov 2, 2026; analysis/late_season.py): only outside two traps (the arrival trap was dropped Nov 6, 2026)
                         ST, AR = M.get("standing", {}), M.get("arrivals", {})
                         us, them = (g["home"], g["away"]) if side == "home" else (g["away"], g["home"])
                         if us not in ST or them not in ST: late_why = "Feb-Apr: standings unavailable"
                         elif ST[us]["cat"] == "tanking": late_why = f"Feb-Apr: {us.upper()} is tanking (bets on tanking teams lost every season)"
                         elif ST[them]["cat"] == "middle": late_why = f"Feb-Apr: {them.upper()} is in a playoff spot (5-10) and fighting for seeding (lost every season)"
-                        elif AR.get(us, 0) > 0: late_why = f"Feb-Apr: {us.upper()} added a player in the last 30 days (lost every season)"
                         else: month_ok = True
+                        # Nov 6, 2026 (Jeffrey approved): the "our team added a player in the last 30 days" trap is DROPPED. Pre-registered
+                        #   test on 2013-14..2021-22 at SBR openers (betting-goals models/tests/NBA_ARRIVAL_TRAP_SBR_RESULTS.md): those bets went
+                        #   67, 58.2%, +7.5u vs 55.7% without (REJECTED; chosen in-sample on 2023-26). Paper-tracked: rec_row["arrival_trap"] = 1
+                        #   marks the bets the old trap would have blocked, so they can be graded on their own.
+                        rec_row["arrival_trap"] = int(AR.get(us, 0) > 0)
                     if not (month_ok and sp_ready and not home_dog):
                         why_t = (late_why if late_why else
                                  "home underdog: these lost every season" if home_dog else

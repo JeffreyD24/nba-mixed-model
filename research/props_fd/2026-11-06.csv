@@ -4126,3 +4126,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 09:25,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Kyle Kuzma,kyle kuzma,2.5,104.0,-138.0,MIL,709.196052513,13527607.0,13527606.0
 2026-11-06 09:25,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Jaime Jaquez Jr.,jaime jaquez,3.5,-102.0,-130.0,MIL,709.196052505,43072643.0,43072644.0
 2026-11-06 09:25,2026-11-06,36279176,2026-11-06 20:10,Toronto Raptors @ Milwaukee Bucks,mil,tor,ast,Tyler Herro,tyler herro,3.5,-154.0,116.0,MIL,709.196052492,26611574.0,26611575.0
+2026-11-06 09:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Keldon Johnson,keldon johnson,9.5,-112.0,-118.0,SAS,709.196062637,37873186.0,37873185.0
+2026-11-06 09:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,De'Andre Hunter,deandre hunter,4.5,-120.0,-110.0,SAC,709.196063818,26624379.0,26624380.0
+2026-11-06 09:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Devin Vassell,devin vassell,4.5,116.0,-154.0,SAS,709.196062563,38295529.0,38295528.0
+2026-11-06 09:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Devin Vassell,devin vassell,2.5,-114.0,-114.0,SAS,709.196062619,38295529.0,38295528.0
+2026-11-06 09:27,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-180.0,134.0,SAS,709.196062582,61967224.0,61967225.0
+2026-11-06 09:27,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cam Spencer,cam spencer,5.5,132.0,-174.0,MEM,709.196060190,50729407.0,50729406.0
+2026-11-06 09:27,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,108.0,-144.0,OKC,709.196043449,41500697.0,41500698.0

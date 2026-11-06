@@ -65,4 +65,4 @@ jobs:
           if [ -d research/polymarket ]; then git add research/polymarket; fi
           if [ -d research/edge_stats ]; then git add research/edge_stats; fi
           git diff --cached --quiet || git commit -m "Morning run $(TZ=America/New_York date +%F)"
-          git pull --rebase -q && git push -q
+          ok=0; for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && { ok=1; break; }; sleep $((RANDOM % 15 + 5)); done; [ "$ok" = 1 ]   # Nov 6, 2026: retry; one try lost the Nov 6 evening save to an alert-loop push

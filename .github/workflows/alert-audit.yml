@@ -41,7 +41,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add state/alert_audit_latest.md state/alert_audit_log.csv
           git diff --cached --quiet || git commit -q -m "Alert audit $(TZ=America/New_York date '+%F %H:%M')"
-          git pull --rebase -q && git push -q
+          ok=0; for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && { ok=1; break; }; sleep $((RANDOM % 15 + 5)); done; [ "$ok" = 1 ]   # Nov 6, 2026: retry; one try lost the Nov 6 evening save to an alert-loop push
       - name: Fail the run if an alert went missing
         if: steps.audit.outputs.problems == '1'
         run: exit 1

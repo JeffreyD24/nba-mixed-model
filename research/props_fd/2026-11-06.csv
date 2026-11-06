@@ -2202,3 +2202,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 03:46,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,reb,Aday Mara,aday mara,7.5,-106.0,-125.0,OKC,709.196044124,91219507.0,91219508.0
 2026-11-06 03:46,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Cam Spencer,cam spencer,5.5,130.0,-174.0,MEM,709.19606019,50729407.0,50729406.0
 2026-11-06 03:46,2026-11-06,36279172,2026-11-06 20:10,Oklahoma City Thunder @ Memphis Grizzlies,mem,okc,ast,Alex Caruso,alex caruso,2.5,-148.0,112.0,OKC,709.196044513,23677919.0,23677920.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-114.0,-114.0,MIN,709.196061600,38988768.0,38988773.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Terrence Shannon Jr.,terrence shannon,11.5,-132.0,100.0,MIN,709.196062885,43165976.0,43165975.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Ayo Dosunmu,ayo dosunmu,17.5,-106.0,-125.0,MIN,709.196061872,41652478.0,41652484.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Rudy Gobert,rudy gobert,9.5,-130.0,-102.0,MIN,709.196062741,12260609.0,12260610.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Terrence Shannon Jr.,terrence shannon,2.5,-154.0,116.0,MIN,709.196062886,43165976.0,43165975.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,LaMelo Ball,lamelo ball,4.5,-120.0,-110.0,MIN,709.196062471,26324737.0,26324736.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Trey Murphy III,trey murphy,2.5,-182.0,136.0,NOP,709.196064716,40336995.0,40336994.0
+2026-11-06 03:54,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-132.0,100.0,MIN,709.196062475,26324737.0,26324736.0

@@ -185,5 +185,38 @@
   "url": "https://bsky.app/profile/jlewenberg.bsky.social/post/3mzjphao6z22g",
   "text": "Jakob Poeltl (shoulder) is available for the Raptors tonight in Denver, which is great news because the Nuggets have a pretty good big man.",
   "swing": 0.18
+ },
+ "2026-11-06|sa|tobias harris": {
+  "status": "Out",
+  "player": "Tobias Harris",
+  "game_id": 22600033,
+  "reporter": "Paul Garcia",
+  "posted_at_et": "2026-11-05 19:20:02",
+  "seen_at_et": "2026-11-05 19:23:47",
+  "url": "https://bsky.app/profile/paulgarcia.bsky.social/post/3mzm4dgjwpa2h",
+  "text": "Tobias Harris and Jayden Quaintance are OUT Friday in Sacramento.  Maliq Brown and Ja'Kobi Gillespie are OUT with the Austin Spurs.",
+  "swing": 0.73
+ },
+ "2026-11-06|sa|ja kobi gillespie": {
+  "status": "Out",
+  "player": "Ja Kobi Gillespie",
+  "game_id": 22600033,
+  "reporter": "Paul Garcia",
+  "posted_at_et": "2026-11-05 19:20:02",
+  "seen_at_et": "2026-11-05 19:23:47",
+  "url": "https://bsky.app/profile/paulgarcia.bsky.social/post/3mzm4dgjwpa2h",
+  "text": "Tobias Harris and Jayden Quaintance are OUT Friday in Sacramento.  Maliq Brown and Ja'Kobi Gillespie are OUT with the Austin Spurs.",
+  "swing": 0.04
+ },
+ "2026-11-06|sa|maliq brown": {
+  "status": "Out",
+  "player": "Maliq Brown",
+  "game_id": 22600033,
+  "reporter": "Paul Garcia",
+  "posted_at_et": "2026-11-05 19:20:02",
+  "seen_at_et": "2026-11-05 19:23:47",
+  "url": "https://bsky.app/profile/paulgarcia.bsky.social/post/3mzm4dgjwpa2h",
+  "text": "Tobias Harris and Jayden Quaintance are OUT Friday in Sacramento.  Maliq Brown and Ja'Kobi Gillespie are OUT with the Austin Spurs.",
+  "swing": 0.03
  }
 }

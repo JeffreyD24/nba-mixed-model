@@ -1895,3 +1895,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Rudy Gobert,rudy gobert,1.5,-120,-110,MIN,709.196062738,12260609.0,12260610.0
 2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Ayo Dosunmu,ayo dosunmu,4.5,-112,-118,MIN,709.196061874,41652478.0,41652484.0
 2026-11-06 01:58,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-132,100,MIN,709.196062475,26324737.0,26324736.0
+2026-11-06 02:00,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Anthony Davis,anthony davis,22.5,-118,-112,WAS,709.196069348,12260628.0,12260629.0
+2026-11-06 02:00,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,pts,Trae Young,trae young,20.5,-120,-110,WAS,709.196071399,21175415.0,21175416.0
+2026-11-06 02:00,2026-11-06,36279175,2026-11-06 19:10,Washington Wizards @ Atlanta Hawks,atl,wsh,ast,Anthony Davis,anthony davis,2.5,148,-200,WAS,709.196069325,12260628.0,12260629.0

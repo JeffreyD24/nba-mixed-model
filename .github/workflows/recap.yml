@@ -1,0 +1,118 @@
+name: Bet recaps (daily, weekly, monthly)
+
+# Jeffrey, Nov 6, 2026: a recap every morning at 4:00 AM ET of last night's bets (all sports), a weekly recap on Monday
+# (previous Mon-Sun) and a monthly recap on the 1st (previous month), each with the three season records per model.
+# Code: betting-goals/ops/recap.py (checked out next to the three sport repos). Files: recaps/ in this repo (README there).
+# Phone summary through NTFY_TOPIC (this repo's secret). Reads the sport repos' state files; never changes them.
+
+on:
+  schedule:
+    - cron: "0 8 * * *"        # 4:00 AM EDT (summer time)
+    - cron: "0 9 * * *"        # 4:00 AM EST (winter time); each run goes ahead only when the ET hour is 4 and today's file is not made yet
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "which recap (auto = daily, plus weekly on Mondays and monthly on the 1st)"
+        type: choice
+        options: [auto, daily, weekly, monthly]
+        default: auto
+      date:
+        description: "the morning the recap is for, YYYY-MM-DD (ET); empty = today"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recap
+  cancel-in-progress: false
+
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Which recaps are due
+        id: due
+        run: |
+          D="${{ inputs.date }}"; [ -z "$D" ] && D=$(TZ=America/New_York date +%F)
+          H=$(TZ=America/New_York date +%H)
+          KIND="${{ inputs.kind }}"; [ -z "$KIND" ] && KIND=auto
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$H" != "04" ]; then
+            echo "ET hour is $H, not 4: the other cron covers this season's clock"; echo "run=false" >> $GITHUB_OUTPUT; exit 0
+          fi
+          if [ "$KIND" = "auto" ]; then
+            KINDS="daily"
+            [ "$(date -d "$D" +%u)" = "1" ] && KINDS="$KINDS weekly"
+            [ "$(date -d "$D" +%d)" = "01" ] && KINDS="$KINDS monthly"
+          else
+            KINDS="$KIND"
+          fi
+          echo "date=$D" >> $GITHUB_OUTPUT; echo "kinds=$KINDS" >> $GITHUB_OUTPUT; echo "run=true" >> $GITHUB_OUTPUT
+          echo "Recaps for $D: $KINDS"
+      - uses: actions/checkout@v4
+        if: steps.due.outputs.run == 'true'
+        with:
+          path: nba-mixed-model
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /*.txt
+            /state/
+            /ncaab/state/
+            /ncaab/data/games.csv
+            /recaps/
+            /.github/
+      - uses: actions/checkout@v4
+        if: steps.due.outputs.run == 'true'
+        with:
+          repository: JeffreyD24/nhl-mixed-model
+          path: nhl-mixed-model
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /state/
+      - uses: actions/checkout@v4
+        if: steps.due.outputs.run == 'true'
+        with:
+          repository: JeffreyD24/nfl-mixed-model
+          path: nfl-mixed-model
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /state/
+      - uses: actions/checkout@v4
+        if: steps.due.outputs.run == 'true'
+        with:
+          repository: JeffreyD24/betting-goals
+          path: betting-goals
+          sparse-checkout: ops
+      - uses: actions/setup-python@v5
+        if: steps.due.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+      - name: Make the recaps and send the phone summaries
+        if: steps.due.outputs.run == 'true'
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          pip install -q pandas numpy
+          D="${{ steps.due.outputs.date }}"
+          for K in ${{ steps.due.outputs.kinds }}; do
+            if [ "$K" = "daily" ] && [ "${{ github.event_name }}" = "schedule" ] && [ -f "nba-mixed-model/recaps/daily/$D.md" ]; then
+              echo "daily recap for $D already made"; continue
+            fi
+            python betting-goals/ops/recap.py --kind "$K" --date "$D" --espn \
+              --repos nba-mixed-model nhl-mixed-model nfl-mixed-model --out nba-mixed-model/recaps || echo "$K recap failed"
+          done
+      - name: Save the recaps
+        if: steps.due.outputs.run == 'true'
+        working-directory: nba-mixed-model
+        run: |
+          git config user.name "nba-tracker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add recaps
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "Bet recaps ${{ steps.due.outputs.date }} (${{ steps.due.outputs.kinds }})"
+          for i in 1 2 3 4; do git pull --rebase -q && git push -q && break; sleep 15; done

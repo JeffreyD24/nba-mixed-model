@@ -3377,7 +3377,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 08:09,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Deni Avdija,deni avdija,6.5,120.0,-160.0,POR,709.196048599,37901072.0,37901070.0
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Max Christie,max christie,9.5,-106.0,-125.0,DAL,709.196052759,43025877.0,43025876.0
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Naji Marshall,naji marshall,11.5,-122.0,-108.0,DAL,709.196052762,39295949.0,39295948.0
-2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Zaccharie Risacher,zaccharie risacher,7.5,-110.0,-122.0,DAL,709.196118820,71463821.0,71463823.0
+2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,pts,Zaccharie Risacher,zaccharie risacher,7.5,-110.0,-122.0,DAL,709.19611882,71463821.0,71463823.0
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Cooper Flagg,cooper flagg,6.5,-152.0,114.0,DAL,709.196052734,75811240.0,75811222.0
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,P.J. Washington,pj washington,6.5,-160.0,120.0,DAL,709.196052737,62687064.0,62687065.0
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,reb,Max Christie,max christie,3.5,146.0,-198.0,DAL,709.196052757,43025877.0,43025876.0
@@ -3385,10 +3385,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Kyrie Irving,kyrie irving,4.5,-112.0,-118.0,DAL,709.196052742,12260613.0,12260614.0
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,4.5,100.0,-132.0,UTA,709.196050326,90729780.0,90729781.0
 2026-11-06 08:11,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Cooper Flagg,cooper flagg,5.5,-136.0,102.0,DAL,709.196052741,75811240.0,75811222.0
-2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-118.0,-112.0,MIN,709.196061600,38988768.0,38988773.0
+2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,16.5,-118.0,-112.0,MIN,709.1960616,38988768.0,38988773.0
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jonathan Kuminga,jonathan kuminga,14.5,-114.0,-114.0,MIN,709.196062178,40221490.0,40221489.0
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Rudy Gobert,rudy gobert,9.5,-130.0,-102.0,MIN,709.196062741,12260609.0,12260610.0
-2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-152.0,114.0,MIN,709.196062180,40221490.0,40221489.0
+2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-152.0,114.0,MIN,709.19606218,40221490.0,40221489.0
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Ayo Dosunmu,ayo dosunmu,4.5,-122.0,-108.0,MIN,709.196061869,41652478.0,41652484.0
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Terrence Shannon Jr.,terrence shannon,2.5,-138.0,104.0,MIN,709.196062886,43165976.0,43165975.0
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jaden McDaniels,jaden mcdaniels,5.5,-112.0,-118.0,MIN,709.196061625,38988768.0,38988773.0
@@ -3396,3 +3396,17 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Trey Murphy III,trey murphy,2.5,-178.0,132.0,NOP,709.196064716,40336995.0,40336994.0
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Derik Queen,derik queen,2.5,-128.0,-104.0,NOP,709.196065584,76134713.0,76134712.0
 2026-11-06 08:11,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,LaMelo Ball,lamelo ball,6.5,-132.0,100.0,MIN,709.196062475,26324737.0,26324736.0
+2026-11-06 08:13,2026-11-06,36279169,2026-11-06 20:10,Utah Jazz @ Dallas Mavericks,dal,utah,ast,Darryn Peterson,darryn peterson,3.5,-162.0,122.0,UTA,709.196050326,90729780.0,90729781.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Precious Achiuwa,precious achiuwa,9.5,106.0,-140.0,SAC,709.196063806,38212281.0,38212282.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Domantas Sabonis,domantas sabonis,13.5,-120.0,-110.0,SAC,709.196063804,12601272.0,12601273.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Malik Monk,malik monk,11.5,-118.0,-112.0,SAC,709.196100096,22280387.0,22280388.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Zach LaVine,zach lavine,2.5,-178.0,132.0,SAC,709.196063827,12257190.0,12257191.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,De'Andre Hunter,deandre hunter,4.5,-114.0,-114.0,SAC,709.196063818,26624379.0,26624380.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Precious Achiuwa,precious achiuwa,6.5,104.0,-138.0,SAC,709.196063810,38212281.0,38212282.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Victor Wembanyama,victor wembanyama,11.5,-122.0,-110.0,SAS,709.196062585,61967224.0,61967225.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,4.5,100.0,-132.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Devin Vassell,devin vassell,2.5,-114.0,-114.0,SAS,709.196062619,38295529.0,38295528.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Domantas Sabonis,domantas sabonis,5.5,-125.0,-106.0,SAC,709.196063820,12601272.0,12601273.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,5.5,-125.0,-106.0,SAS,709.196062653,64780942.0,64780943.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,118.0,-158.0,SAC,709.196063823,12257190.0,12257191.0
+2026-11-06 08:13,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-174.0,130.0,SAS,709.196062582,61967224.0,61967225.0

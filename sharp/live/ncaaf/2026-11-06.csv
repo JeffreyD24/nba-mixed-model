@@ -708,3 +708,10 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-06 10:22:00,289841,2026-11-07T01:00:00.000Z,Illinois Fighting Illini,Nebraska Cornhuskers,7325,cons,4.0,-110.0,50.5,-110.0,160.0,-192.0,52.0,58.0,14.0,41.0,15.0,72.0
 2026-11-06 10:22:00,289890,2026-11-07T20:30:00.000Z,Houston Cougars,Cincinnati Bearcats,3115,cons,-10.5,-110.0,62.5,-110.0,-440.0,333.0,39.0,46.0,5.0,47.0,98.0,73.0
 2026-11-06 10:22:00,289853,2026-11-08T02:30:00.000Z,Texas Tech Red Raiders,West Virginia Mountaineers,6331,cons,-16.5,-113.0,65.5,-111.0,-900.0,550.0,24.0,9.0,4.0,59.0,98.0,94.0
+2026-11-06 10:26:00,289890,2026-11-07T20:30:00.000Z,Houston Cougars,Cincinnati Bearcats,3140,dk,-10.5,-110.0,61.5,-115.0,-410.0,320.0,,,,,,
+2026-11-06 10:27:00,289841,2026-11-07T01:00:00.000Z,Illinois Fighting Illini,Nebraska Cornhuskers,7522,cons,4.0,-112.0,50.5,-110.0,160.0,-190.0,52.0,58.0,14.0,41.0,15.0,72.0
+2026-11-06 10:27:00,289841,2026-11-07T01:00:00.000Z,Illinois Fighting Illini,Nebraska Cornhuskers,7522,dk,4.0,-110.0,50.5,-110.0,160.0,-192.0,,,,,,
+2026-11-06 10:27:00,289841,2026-11-07T01:00:00.000Z,Illinois Fighting Illini,Nebraska Cornhuskers,7522,fd,4.5,-114.0,49.5,-114.0,158.0,-188.0,,,,,,
+2026-11-06 10:27:00,289890,2026-11-07T20:30:00.000Z,Houston Cougars,Cincinnati Bearcats,3140,fd,-10.5,-120.0,61.5,-106.0,-450.0,340.0,,,,,,
+2026-11-06 10:27:00,289842,2026-11-07T21:15:00.000Z,Wisconsin Badgers,Rutgers Scarlet Knights,1979,fd,-18.5,-108.0,45.5,-114.0,-1200.0,760.0,,,,,,
+2026-11-06 10:27:00,289853,2026-11-08T02:30:00.000Z,Texas Tech Red Raiders,West Virginia Mountaineers,6356,cons,-16.5,-113.0,65.5,-111.0,-800.0,550.0,24.0,9.0,4.0,59.0,98.0,94.0

@@ -71,7 +71,8 @@ def snapshot():
                 odds = lambda x: (x.get("winRunnerOdds") or {}).get("americanDisplayOdds", {}).get("americanOdds")
                 rows.append(dict(seen_at_et=NOW.strftime("%Y-%m-%d %H:%M"), date=gdate, event_id=e["eventId"], tip_et=tip.strftime("%Y-%m-%d %H:%M"),
                                  game=e["name"], home=home, away=away, stat=stat, player=m["marketName"].split(" - ")[0], name=norm(m["marketName"].split(" - ")[0]),
-                                 line=o.get("handicap"), over=odds(o), under=odds(u), team_abbr=o.get("teamAbbr")))
+                                 line=o.get("handicap"), over=odds(o), under=odds(u), team_abbr=o.get("teamAbbr"),
+                                 market_id=m.get("marketId"), over_sel=o.get("selectionId"), under_sel=u.get("selectionId")))     # Nov 6, 2026: ids for the FanDuel bet-slip link
     allnew = pd.DataFrame(rows)
     rp = os.path.join(W, "state", "props_fd_runs.csv")      # every snapshot time, so an "opener" is only trusted if a run just before it saw nothing
     pd.DataFrame([dict(run_et=NOW.strftime("%Y-%m-%d %H:%M"), lines=len(rows))]).to_csv(rp, mode="a", header=not os.path.exists(rp), index=False)
@@ -209,11 +210,11 @@ LIVE = os.path.join(W, "state", "props_live.csv")
 PO_PATH = os.path.join(W, "data", "props_v1b_open_params.json")
 
 
-def push(title, body):
+def push(title, body, actions=""):
     topic = os.environ.get("NTFY_TOPIC")
     if not topic: print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
-                                 headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": "high", "Tags": "basketball"})
+                                 headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": "high", "Tags": "basketball", **({"Actions": actions} if actions else {})})
     urllib.request.urlopen(req, timeout=20); return True
 
 
@@ -278,7 +279,28 @@ def live():
                     f"EV {ev*100:+.1f}%. Still at FanDuel's opening line. {tier_lab} (props v1b at FanDuel openers, tier '{r.tier}'): 1 unit, own record, "
                     f"stop rules in research/PROVISIONAL_BETS.md. Backtest 2023-25 at FanDuel openers: 4h+ before tip +3.9% ROI; 1-4h +22%; stale not tested. "
                     f"If the line has moved, skip it. Log it with 'Log a bet' (market: prop) if you place it.")
-            try: sent = push(title, body)
+            # Nov 6, 2026 (Jeffrey): FanDuel + DraftKings links and which book is better, by the model's own EV at each book's line and price
+            try:
+                import dk_props, fanduel
+                dkq = dk_props.quote(r.stat, r.name)
+                ps_at = lambda ln: (p_over(max(mu, 0.05), r.stat, ln, PO) if side == "over" else 1 - p_over(max(mu, 0.05), r.stat, ln, PO))
+                ev_fd = ps_at(r.line) * float(dec(price)) - 1
+                fd_link = (f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={r.market_id}&selectionId[0]={r.over_sel if side == 'over' else r.under_sel}"
+                           if pd.notna(getattr(r, "market_id", np.nan)) else fanduel.FD_PAGE["nba"])
+                if dkq:
+                    dpx = dkq[side]; ev_dk = ps_at(dkq["line"]) * float(dec(dpx)) - 1
+                    best = "FanDuel" if ev_fd >= ev_dk else "DraftKings"
+                    comp = (f"BEST: {best}. FanDuel {side} {r.line:g} ({int(price):+d}) model EV {ev_fd*100:+.1f}% | "
+                            f"DraftKings {side} {dkq['line']:g} ({int(dpx):+d}) model EV {ev_dk*100:+.1f}%")
+                    dk_link = dkq[side + "_link"]
+                else:
+                    best, dk_link = "FanDuel", None
+                    comp = f"BEST: FanDuel (no DraftKings {sname} line found for {r.player}: not posted, or not reachable). FanDuel {side} {r.line:g} ({int(price):+d})"
+                body += " " + comp
+                acts = fanduel.actions(dk_link, fd_link, best)
+            except Exception as ex:
+                acts = "view, Bet on FanDuel, https://sportsbook.fanduel.com/navigation/nba"; print("props alert links failed:", type(ex).__name__, str(ex)[:100])
+            try: sent = push(title, body, acts)
             except Exception as e: sent = False; print("push failed:", e)
             rows.append(dict(key=key, date=TODAY, logged_at_et=NOW.strftime("%Y-%m-%d %H:%M"), model_version=PO["version"], tier=f"provisional_{r.tier}",
                              book="FanDuel", game=r.game, tip_et=r.tip_et, player=r.player, name=r.name, team=r.team, stat=r.stat, side=side,

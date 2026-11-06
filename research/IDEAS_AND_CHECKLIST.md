@@ -108,3 +108,8 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - [ ] Always-on machine (Raspberry Pi or ~$5/mo cloud server) for alerts seconds after a line posts; Jeffrey looking into hardware (Nov 5, 2026; betting-goals GOALS.md + FINDINGS.md)
 
 - [ ] Odds feed (Nov 5): analyse research/feed/ once a week of data exists: first-seen latency, CLV on quarters/halves/alt lines/props, DK vs FD stale prices, repo size check. Add NHL/NFL alert code switch to direct DK lines. Find a FanDuel page id for college hockey. Tap-test DK slip links.
+
+## Line already moved toward the model (Nov 6, 2026; analysis/fast_move_units.py)
+- [ ] [LEAD] Totals bets placed AFTER the DK line moved 3+ toward the model (3+ still left) were break-even in 2023-26 (242 bets, 51.7%, -2.9u), vs +5.1/100 for moves of 0.5-2.5. Test capping the "moved toward with 3+ left" BET rule at moves under 3 pts: pre-register, then check on spreads 2023-26 and the NFL snapshots (different market/sport = not chosen there).
+- [ ] [IDEA] Moves of 3+ within the first hour were too rare in the hourly-ish Odds API history (7 games) to judge on their own. The minute-level DK direct feed (state/line_history.csv) will build that sample; it is a running check, not the test (RULE 2: past seasons already say the moved line is not worth more units).
+- [ ] [IDEA] If a move toward us is predictable (movement model v1-an), size up AT THE OPENER when the movement model also expects a move toward the model; the same games won 61.3% at the opener. Test on 2024-26 with the walk-forward movement model predictions.

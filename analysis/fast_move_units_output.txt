@@ -1,0 +1,43 @@
+NBA totals, DraftKings, live totals number v4 (morning lock lag 1), both teams 10+ games, 2023-24..2025-26
+games with DK snapshots and a model number: 3204; snapshots per game median 38
+opener edge 2.5+: 1712 games, 3+: 1450
+
+Baseline: bet at DK's first total (1 unit at -110), edge at the open
+  edge 2.5+ at the open                        1708 bets  56.9%  +147.6u ( +8.6/100)  [2024: 370-285 +51.4u; 2025: 298-233 +37.9u; 2026: 304-218 +58.4u]
+  edge 3.0+ at the open                        1448 bets  56.8%  +121.3u ( +8.4/100)  [2024: 320-255 +35.9u; 2025: 245-195 +27.7u; 2026: 257-176 +57.6u]
+
+A. Line ~1 hour after the open (first snapshot 30-120 min after DK's first total); 3+ edge LEFT at that line
+  moved AGAINST 0.5+                            127 bets  49.6%    -6.9u ( -5.4/100)  [2024: 22-32 -12.1u; 2025: 23-16 +4.9u; 2026: 18-16 +0.3u]
+  unmoved                                      1144 bets  57.1%  +102.3u ( +8.9/100)  [2024: 269-201 +43.5u; 2025: 179-149 +13.7u; 2026: 205-141 +45.1u]
+  moved toward 0.5-1.5                          108 bets  58.3%   +12.3u (+11.4/100)  [2024: 21-20 -0.9u; 2025: 22-14 +6.0u; 2026: 20-11 +7.2u]
+  moved toward 2-2.5                              9 bets  66.7%    +2.5u (+27.9/100)  [2024: 2-1 +0.8u; 2025: 1-2 -1.1u; 2026: 3-0 +2.8u]
+  moved toward 3+                                 2 bets  50.0%    -0.1u ( -4.5/100)  [2024: 0-0 +0.0u; 2025: 1-1 -0.1u; 2026: 0-0 +0.0u]
+  moved toward 4+                                 0 bets
+  same games, graded at the OPENER instead (what betting right away would have paid):
+    moved toward 3+ -> at open                    2 bets  50.0%    -0.1u ( -4.5/100)  [2024: 0-0 +0.0u; 2025: 1-1 -0.1u; 2026: 0-0 +0.0u]
+    unmoved -> at open                         1144 bets  57.1%  +102.6u ( +9.0/100)  [2024: 269-201 +43.5u; 2025: 179-149 +13.7u; 2026: 205-141 +45.4u]
+
+B. Any time before tip: first snapshot where the line moved 3+ toward the model with 3+ still left
+  moved 3+ toward, 3+ left (graded at that line)  242 bets  51.7%    -2.9u ( -1.2/100)  [2024: 56-52 -1.1u; 2025: 39-37 -1.5u; 2026: 30-28 -0.4u]
+    same games at the opener                    243 bets  61.3%   +41.5u (+17.1/100)  [2024: 66-43 +17.0u; 2025: 46-30 +11.8u; 2026: 37-21 +12.6u]
+    edge left 3-4                                91 bets  51.6%    -1.2u ( -1.4/100)  [2024: 16-17 -2.5u; 2025: 17-15 +0.5u; 2026: 14-12 +0.8u]
+    edge left 4-6                                97 bets  47.4%    -8.8u ( -9.1/100)  [2024: 20-22 -3.7u; 2025: 16-15 -0.4u; 2026: 10-14 -4.7u]
+    edge left 6-+                                54 bets  59.3%    +7.1u (+13.2/100)  [2024: 20-13 +5.2u; 2025: 6-7 -1.5u; 2026: 6-2 +3.5u]
+  rest of the bettable pool for comparison: any time, line moved toward 0.5-2.5 with 3+ left (first such snapshot)
+  moved toward 0.5-2.5, 3+ left, never 3+       675 bets  55.0%   +34.6u ( +5.1/100)  [2024: 144-121 +10.1u; 2025: 116-108 -2.5u; 2026: 111-75 +27.0u]
+
+C. How fast did the 3+ move happen?
+  within 30 min of the open                       1 bets   0.0%    -1.0u (-100.0/100)  [2024: 0-0 +0.0u; 2025: 0-1 -1.0u; 2026: 0-0 +0.0u]
+  30-60 min                                       6 bets  50.0%    -0.3u ( -4.5/100)  [2024: 0-1 -1.0u; 2025: 3-2 +0.7u; 2026: 0-0 +0.0u]
+  1-3 h                                          15 bets  60.0%    +2.2u (+15.0/100)  [2024: 2-1 +0.8u; 2025: 5-5 -0.4u; 2026: 2-0 +1.9u]
+  3 h+                                          220 bets  51.4%    -3.9u ( -1.8/100)  [2024: 54-50 -0.9u; 2025: 31-29 -0.8u; 2026: 28-28 -2.2u]
+
+D. Leave-one-season-out: 'moved 3+ toward, 3+ left' (design B) vs bets at the opener with edge 3+
+  2024: fast-move group 56-52 -1.1u (-1.0/100) | opener 3+ 320-255 +6.2/100 | other two seasons' fast-move win% 51.5%
+  2025: fast-move group 39-37 -1.5u (-1.9/100) | opener 3+ 245-195 +6.3/100 | other two seasons' fast-move win% 51.8%
+  2026: fast-move group 30-28 -0.4u (-0.6/100) | opener 3+ 257-176 +13.3/100 | other two seasons' fast-move win% 51.6%
+
+E. Kelly check (what the win rate supports, relative to a plain opener bet at -110)
+  opener edge 3+: win 56.8% -> Kelly 0.092
+  moved 3+ toward, 3+ left: win 51.7% (SE 3.2%, n=242) -> Kelly 0.000; ratio 0.00x
+  at the low end of its 1-SE range (48.4%) -> ratio 0.00x

@@ -6238,13 +6238,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 13:13,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Naz Reid,naz reid,2.5,154.0,-210.0,CHA,709.196085087,27986553.0,27986554.0
 2026-11-06 13:13,2026-11-06,36279168,2026-11-06 19:10,Boston Celtics @ Charlotte Hornets,cha,bos,ast,Royce O'Neale,royce oneale,1.5,118.0,-158.0,CHA,709.196166888,12537923.0,12537924.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jeremiah Fears,jeremiah fears,13.5,-125.0,-106.0,NOP,709.196064939,77055416.0,77055417.0
-2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,17.5,-102.0,-130.0,MIN,709.196061600,38988768.0,38988773.0
+2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jaden McDaniels,jaden mcdaniels,17.5,-102.0,-130.0,MIN,709.1960616,38988768.0,38988773.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Jonathan Kuminga,jonathan kuminga,14.5,-112.0,-118.0,MIN,709.196062178,40221490.0,40221489.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Terrence Shannon Jr.,terrence shannon,11.5,-104.0,-128.0,MIN,709.196062885,43165976.0,43165975.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Rudy Gobert,rudy gobert,9.5,-136.0,102.0,MIN,709.196062741,12260609.0,12260610.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,LaMelo Ball,lamelo ball,21.5,-125.0,-106.0,MIN,709.196062469,26324737.0,26324736.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,pts,Trey Murphy III,trey murphy,15.5,100.0,-132.0,NOP,709.196064721,40336995.0,40336994.0
-2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-140.0,106.0,MIN,709.196062180,40221490.0,40221489.0
+2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jonathan Kuminga,jonathan kuminga,5.5,-140.0,106.0,MIN,709.19606218,40221490.0,40221489.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Terrence Shannon Jr.,terrence shannon,2.5,-128.0,-104.0,MIN,709.196062886,43165976.0,43165975.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Jaden McDaniels,jaden mcdaniels,5.5,-114.0,-114.0,MIN,709.196061625,38988768.0,38988773.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,reb,Saddiq Bey,saddiq bey,3.5,-144.0,108.0,NOP,709.196065913,38090839.0,38090838.0
@@ -6252,4 +6252,4 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jaden McDaniels,jaden mcdaniels,2.5,-144.0,108.0,MIN,709.196061567,38988768.0,38988773.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Trey Murphy III,trey murphy,2.5,-166.0,124.0,NOP,709.196064716,40336995.0,40336994.0
 2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Derik Queen,derik queen,2.5,-138.0,104.0,NOP,709.196065584,76134713.0,76134712.0
-2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,114.0,-152.0,NOP,709.196064940,77055416.0,77055417.0
+2026-11-06 13:13,2026-11-06,36279173,2026-11-06 20:10,Minnesota Timberwolves @ New Orleans Pelicans,no,min,ast,Jeremiah Fears,jeremiah fears,3.5,114.0,-152.0,NOP,709.19606494,77055416.0,77055417.0

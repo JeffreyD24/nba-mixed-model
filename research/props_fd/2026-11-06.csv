@@ -361,3 +361,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Scoot Henderson,scoot henderson,2.5,-102,-130,POR
 2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jrue Holiday,jrue holiday,4.5,136,-182,POR
 2026-11-05 21:24,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Luka Doncic,luka doncic,6.5,-158,118,LAL
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,VJ Edgecombe,vj edgecombe,11.5,-118,-112,PHI
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,pts,Jarrett Allen,jarrett allen,12.5,-132,100,CLE
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Tyrese Maxey,tyrese maxey,3.5,-120,-110,PHI
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,VJ Edgecombe,vj edgecombe,5.5,-114,-114,PHI
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Jaylen Brown,jaylen brown,6.5,122,-162,PHI
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,reb,Joel Embiid,joel embiid,7.5,-128,-102,PHI
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,VJ Edgecombe,vj edgecombe,2.5,-144,108,PHI
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,LeBron James,lebron james,6.5,-132,100,PHI
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Evan Mobley,evan mobley,3.5,-102,-128,CLE
+2026-11-05 21:26,2026-11-06,36279171,2026-11-06 19:40,Philadelphia 76ers @ Cleveland Cavaliers,cle,phi,ast,Tyrese Maxey,tyrese maxey,4.5,-138,104,PHI

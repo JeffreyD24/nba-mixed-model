@@ -1106,3 +1106,51 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-07 04:13,22600195,2026-11-07,Total 3-Point Field Goals,4683678,Scoot Henderson,,1.5,-108.0,1.5,-108.0,2026-11-07T12:12Z,under
 2026-11-07 04:13,22600195,2026-11-07,Total 3-Point Field Goals,5105565,Donovan Clingan,,1.5,170.0,1.5,181.0,2026-11-07T12:12Z,over
 2026-11-07 04:13,22600195,2026-11-07,Total 3-Point Field Goals,5105565,Donovan Clingan,,1.5,-227.0,1.5,-242.0,2026-11-07T12:12Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3136195,Karl-Anthony Towns,,24.5,-115.0,24.5,-115.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3136195,Karl-Anthony Towns,,24.5,-114.0,24.5,-114.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3147657,Mikal Bridges,,13.5,-103.0,13.5,-103.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3147657,Mikal Bridges,,13.5,-128.0,13.5,-128.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3914044,Landry Shamet,,12.5,100.0,12.5,100.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3914044,Landry Shamet,,12.5,-131.0,12.5,-131.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3934672,Jalen Brunson,,33.5,-106.0,33.5,-106.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3934672,Jalen Brunson,,33.5,-124.0,33.5,-124.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3934719,OG Anunoby,,19.5,-113.0,19.5,-113.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Assists,3934719,OG Anunoby,,19.5,-116.0,19.5,-116.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3136195,Karl-Anthony Towns,,33.5,-118.0,33.5,-118.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3136195,Karl-Anthony Towns,,33.5,-111.0,33.5,-111.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3147657,Mikal Bridges,,13.5,-107.0,13.5,-107.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3147657,Mikal Bridges,,13.5,-123.0,13.5,-123.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3914044,Landry Shamet,,12.5,-119.0,12.5,-119.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3914044,Landry Shamet,,12.5,-110.0,12.5,-110.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3934672,Jalen Brunson,,29.5,-117.0,29.5,-117.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3934672,Jalen Brunson,,29.5,-113.0,29.5,-113.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3934719,OG Anunoby,,22.5,-126.0,23.5,-105.0,2026-11-07T12:05Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Points and Rebounds,3934719,OG Anunoby,,22.5,-104.0,23.5,-126.0,2026-11-07T12:05Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3136195,Karl-Anthony Towns,,16.5,-121.0,16.5,-121.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3136195,Karl-Anthony Towns,,16.5,-109.0,16.5,-109.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3147657,Mikal Bridges,,5.5,-154.0,6.5,117.0,2026-11-07T12:05Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3147657,Mikal Bridges,,5.5,117.0,6.5,-154.0,2026-11-07T12:05Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3914044,Landry Shamet,,3.5,-140.0,3.5,-140.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3914044,Landry Shamet,,3.5,106.0,3.5,106.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3934672,Jalen Brunson,,9.5,-119.0,9.5,-119.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3934672,Jalen Brunson,,9.5,-111.0,9.5,-111.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3934719,OG Anunoby,,7.5,-139.0,7.5,-139.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,Total Assists and Rebounds,3934719,OG Anunoby,,7.5,105.0,7.5,105.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3136195,Karl-Anthony Towns,,37.5,-118.0,37.5,-118.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3136195,Karl-Anthony Towns,,37.5,-112.0,37.5,-112.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3147657,Mikal Bridges,,16.5,-109.0,16.5,-109.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3147657,Mikal Bridges,,16.5,-120.0,16.5,-120.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3914044,Landry Shamet,,14.5,-110.0,14.5,-110.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3914044,Landry Shamet,,14.5,-119.0,14.5,-119.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3934672,Jalen Brunson,,36.5,-111.0,36.5,-111.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3934672,Jalen Brunson,,36.5,-119.0,36.5,-119.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3934719,OG Anunoby,,25.5,-111.0,25.5,-111.0,2026-11-07T12:04Z,over
+2026-11-07 04:20,22600191,2026-11-07,"Total Points, Rebounds, and Assists",3934719,OG Anunoby,,25.5,-118.0,25.5,-118.0,2026-11-07T12:04Z,under
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,2991350,Alex Caruso,,1.5,113.0,1.5,113.0,2026-11-07T12:17Z,over
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,2991350,Alex Caruso,,1.5,-149.0,1.5,-149.0,2026-11-07T12:17Z,under
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,4278073,Shai Gilgeous-Alexander,,2.5,143.0,2.5,143.0,2026-11-07T12:17Z,over
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,4278073,Shai Gilgeous-Alexander,,2.5,-190.0,2.5,-190.0,2026-11-07T12:17Z,under
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,4683778,Jared McCain,,2.5,136.0,2.5,136.0,2026-11-07T12:17Z,over
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,4683778,Jared McCain,,2.5,-181.0,2.5,-181.0,2026-11-07T12:17Z,under
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,4900671,Ajay Mitchell,,1.5,155.0,1.5,155.0,2026-11-07T12:17Z,over
+2026-11-07 04:20,22600192,2026-11-07,Total 3-Point Field Goals,4900671,Ajay Mitchell,,1.5,-207.0,1.5,-207.0,2026-11-07T12:17Z,under

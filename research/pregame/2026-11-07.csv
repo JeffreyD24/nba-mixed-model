@@ -4267,3 +4267,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 04:15:53,295392,2026-11-07,2026-11-07 20:00,ny,cle,Fanatics,event,team_total,home_under,109.5,-110,opener
 2026-11-07 04:15:53,295392,2026-11-07,2026-11-07 20:00,ny,cle,Fanatics,event,team_total,away_under,114.5,-120,opener
 2026-11-07 04:15:53,295392,2026-11-07,2026-11-07 20:00,ny,cle,Fanatics,event,team_total,home_over,109.5,-120,opener
+2026-11-07 04:17:12,295393,2026-11-07,2026-11-07 20:00,wsh,okc,DraftKings,event,total,over,220.5,-105,normal
+2026-11-07 04:17:12,295393,2026-11-07,2026-11-07 20:00,wsh,okc,DraftKings,event,total,under,220.5,-115,normal
+2026-11-07 04:18:27,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,event,total,over,219.5,-115,normal
+2026-11-07 04:18:27,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,event,total,under,219.5,-105,normal
+2026-11-07 04:18:27,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,firsthalf,total,over,113.5,-105,normal
+2026-11-07 04:18:27,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,firsthalf,total,under,113.5,-115,normal
+2026-11-07 04:20:55,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,under,224.0,-110,normal
+2026-11-07 04:20:55,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,over,224.0,-110,normal

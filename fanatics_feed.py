@@ -11,7 +11,7 @@ Dates polled: today and tomorrow every minute; NFL/NCAAF also the next 8 days ev
 Player props (Nov 6, 2026, RULE 12): RotoWire's free props page carries every book's prop lines (Fanatics, DraftKings, FanDuel, BetMGM,
 Caesars, ...). Every 10 minutes the NFL and NBA pages are read and every book's line/price CHANGES are saved to
 research/feed/rotowire_props/<sport>/<YYYY-MM-DD>/<HHMM>.csv.gz (first row seen = that book's opener as RotoWire showed it).
-Game lines of every book (spread / total / moneyline; NBA, NHL, NFL) from RotoWire's games tables, also every 10 minutes, to
+Game lines of every book (spread / total / moneyline; NBA, NHL, NFL) from RotoWire's games tables, every minute (Nov 7), to
 research/feed/rotowire_games/<sport>/... (track B: BetMGM, Caesars, Hard Rock, ... openers and closes for free).
 """
 import os, sys, json, time, gzip, urllib.request
@@ -60,7 +60,7 @@ def rotowire_props(S, snap):
     import re as _re
     S.setdefault("rw", {}); S.setdefault("rw_due", 0)
     if time.time() < S["rw_due"]: return 0
-    S["rw_due"] = time.time() + 590
+    S["rw_due"] = time.time() + 590     # props pages stay every 10 min: ~9 MB per pass, unchanged across 10 one-minute fetches (Nov 7)
     n = 0
     for sport in RW_SPORTS:
         try:
@@ -100,7 +100,8 @@ def rotowire_games(S, snap):
     """every book's full-game spread / total / moneyline from RotoWire's games tables (NBA, NHL, NFL), changes only (Nov 6, RULE 13)"""
     S.setdefault("rwg", {}); S.setdefault("rwg_due", 0)
     if time.time() < S["rwg_due"]: return 0
-    S["rwg_due"] = time.time() + 590
+    S["rwg_due"] = time.time() + 50     # every minute (Nov 7, 2026): RotoWire's game tables change every few minutes and are small (0.14 MB);
+                                        # measured: 3 changes in 10 one-minute fetches (scratch test, FINDINGS Nov 7)
     n = 0
     for sport in ("nba", "nhl", "nfl"):
         try: G = get_any(f"https://www.rotowire.com/betting/{sport}/tables/{sport}-games.php")

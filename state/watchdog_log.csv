@@ -32,3 +32,4 @@ time_utc,event,detail
 2026-11-07 00:56,problem,"NFL daily health check: could not read its runs (HTTPError)"
 2026-11-07 00:56,problem,"NFL alert checks: could not read commits (HTTPError)"
 2026-11-07 00:56,fixed,"NFL daily health check: last run FAILED 646 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"
+2026-11-07 04:08,fixed,"NBA evening run: last run FAILED 1433 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)"

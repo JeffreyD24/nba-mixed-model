@@ -117,3 +117,4 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600194,total,2026-11-06 21:20:24.397835,2026-11-07,phx,hou,2026-11-07 21:00:00,over,222.5,222.5,226.97,4.47,2026-11-06_09_15PM,True,,,,,,,BET,,,,,,,,False,,FanDuel,-114.0,220.5,-110.0
 22600191,spread,2026-11-06 22:05:04.104482,2026-11-07,cle,ny,2026-11-07 20:00:00,home,3.5,,-0.24,3.26,as of 2026-11-06 11:27,False,a team has not filed its injury report,,,,,,CHECK,,,,,,,,False,,DraftKings,-106.0,,
 22600191,total,2026-11-06 22:05:04.104482,2026-11-07,cle,ny,2026-11-07 20:00:00,over,225.5,,228.19,2.69,as of 2026-11-06 11:27,False,,,,,,,CHECK,,,,,,,,False,provisional_totals,DraftKings,-106.0,,
+22600190,total,2026-11-06 22:07:08.004572,2026-11-07,atl,bkn,2026-11-07 19:30:00,over,224.5,,228.12,3.62,as of 2026-11-06 11:27,False,,,,,,,CHECK,,,,,,,,False,,DraftKings,-106.0,,

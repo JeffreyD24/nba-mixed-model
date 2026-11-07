@@ -1,0 +1,49 @@
+name: Feed archive (move feed days older than 21 days to Releases)
+# Nov 7, 2026 (Jeffrey): keep checkouts fast. tools/feed_archive.py packs each research/feed day older than 21 days into
+# feed_<date>.tar.gz on the release feed-archive-<YYYY-MM>, verifies it byte for byte, then removes that day from main.
+# Restore any range: python tools/feed_archive.py restore --from YYYY-MM-DD [--to YYYY-MM-DD]
+# On a change to the script or this file: SELF-TEST only (archive the oldest day under a test tag, restore, compare, delete the test release).
+on:
+  schedule:
+    - cron: "17 8 * * 1"          # Mondays ~3-4 AM ET
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["tools/feed_archive.py", ".github/workflows/feed-archive.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: feed-archive
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest   # public repo: free GitHub runners (switch to [self-hosted, oracle] if this repo goes private, RULE 8)
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Self-test (push only)
+        if: github.event_name == 'push'
+        run: |
+          set -e
+          OLD=$(ls -d research/feed/*/*/20??-??-?? 2>/dev/null | xargs -n1 basename | sort -u | head -1)
+          [ -z "$OLD" ] && { echo "no feed days to test"; exit 0; }
+          KEEP=$(( ( $(date -u +%s) - $(date -u -d "$OLD" +%s) ) / 86400 - 1 ))
+          python tools/feed_archive.py archive --keep-days $KEEP --no-delete --tag-prefix feed-archive-test
+          rm -rf /tmp/rest   # self-hosted runner: the folder survives between runs
+          python tools/feed_archive.py restore --from "$OLD" --to "$OLD" --dest /tmp/rest --tag-prefix feed-archive-test
+          N=0; for d in $(ls -d research/feed/*/*/"$OLD"); do diff -r "$d" "/tmp/rest/$d"; N=$((N+$(ls "$d" | wc -l))); done
+          echo "SELF-TEST OK: $OLD restored identical ($N files)"
+          python tools/feed_archive.py delete-release --tag "feed-archive-test-${OLD:0:7}"
+      - name: Archive feed days older than 21 days
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "feed-archive-bot"; git config user.email "actions@users.noreply.github.com"
+          python tools/feed_archive.py archive --keep-days 21
+          git diff --cached --quiet && { echo "nothing to move"; exit 0; }
+          git commit -q -m "Feed archive: days older than 21 days moved to Releases (tools/feed_archive.py)"
+          for i in 1 2 3 4 5 6; do git pull --rebase --autostash -q && git push -q && exit 0; sleep $((5 + i * 5)); done
+          exit 1

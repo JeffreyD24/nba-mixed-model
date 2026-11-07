@@ -1529,3 +1529,13 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-07 04:45,22600195,2026-11-07,"Total Points, Rebounds, and Assists",5104157,Victor Wembanyama,,42.5,-123.0,42.5,-123.0,2026-11-07T12:31Z,under
 2026-11-07 04:45,22600195,2026-11-07,Total Steals and Blocks,5104157,Victor Wembanyama,,4.5,-125.0,4.5,-125.0,2026-11-07T12:40Z,over
 2026-11-07 04:45,22600195,2026-11-07,Total Steals and Blocks,5104157,Victor Wembanyama,,4.5,-106.0,4.5,-106.0,2026-11-07T12:40Z,under
+2026-11-07 04:50,22600192,2026-11-07,Total Points,4278073,Shai Gilgeous-Alexander,,31.5,-104.0,31.5,-107.0,2026-11-07T12:30Z,over
+2026-11-07 04:50,22600192,2026-11-07,Total Points,4278073,Shai Gilgeous-Alexander,,31.5,-123.0,31.5,-120.0,2026-11-07T12:30Z,under
+2026-11-07 04:50,22600192,2026-11-07,Total Points,4900671,Ajay Mitchell,,19.5,-117.0,19.5,-124.0,2026-11-07T12:30Z,over
+2026-11-07 04:50,22600192,2026-11-07,Total Points,4900671,Ajay Mitchell,,19.5,-109.0,19.5,-103.0,2026-11-07T12:30Z,under
+2026-11-07 04:50,22600192,2026-11-07,Total Rebounds,4278073,Shai Gilgeous-Alexander,,4.5,100.0,4.5,100.0,2026-11-07T12:45Z,over
+2026-11-07 04:50,22600192,2026-11-07,Total Rebounds,4278073,Shai Gilgeous-Alexander,,4.5,-132.0,4.5,-132.0,2026-11-07T12:45Z,under
+2026-11-07 04:50,22600192,2026-11-07,Total Rebounds,4683778,Jared McCain,,3.5,114.0,3.5,114.0,2026-11-07T12:46Z,over
+2026-11-07 04:50,22600192,2026-11-07,Total Rebounds,4683778,Jared McCain,,3.5,-151.0,3.5,-151.0,2026-11-07T12:46Z,under
+2026-11-07 04:50,22600192,2026-11-07,Total Rebounds,4900671,Ajay Mitchell,,4.5,119.0,4.5,119.0,2026-11-07T12:45Z,over
+2026-11-07 04:50,22600192,2026-11-07,Total Rebounds,4900671,Ajay Mitchell,,4.5,-156.0,4.5,-156.0,2026-11-07T12:45Z,under

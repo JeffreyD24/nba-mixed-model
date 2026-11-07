@@ -60,11 +60,19 @@ RW_SPORTS = ("nfl", "nba", "nhl")          # NHL props page added Nov 6 (shots, 
 RW_COLS = ["snap_et", "sport", "game_id", "player_id", "player", "team", "opp", "book", "market", "line", "over", "under"]
 
 
+def rw_blocked(S, ex=None):
+    """Nov 7, 2026: be polite to RotoWire. If it ever answers 403 / 429 (refused or rate-limited), stop asking for an hour."""
+    if ex is not None and getattr(ex, "code", None) in (403, 429):
+        S["rw_block_until"] = time.time() + 3600
+        print(f"RotoWire refused us (HTTP {ex.code}): pausing RotoWire for 1 hour", flush=True)
+    return time.time() < S.get("rw_block_until", 0)
+
+
 def rotowire_props(S, snap):
     """every book's prop lines from RotoWire (free page), changes only; state in S['rw']"""
     import re as _re
     S.setdefault("rw", {}); S.setdefault("rw_due", 0)
-    if time.time() < S["rw_due"]: return 0
+    if time.time() < S["rw_due"] or rw_blocked(S): return 0
     S["rw_due"] = time.time() + 590     # props pages stay every 10 min: ~9 MB per pass, unchanged across 10 one-minute fetches (Nov 7)
     n = 0
     for sport in RW_SPORTS:
@@ -72,7 +80,9 @@ def rotowire_props(S, snap):
             req = urllib.request.Request(f"https://www.rotowire.com/betting/{sport}/player-props.php", headers={"User-Agent": H["User-Agent"], "Accept": "text/html"})
             with urllib.request.urlopen(req, timeout=60) as r: h = r.read().decode("utf-8", "ignore")
         except Exception as ex:
-            print("RotoWire props fetch failed:", sport, type(ex).__name__); continue
+            print("RotoWire props fetch failed:", sport, type(ex).__name__)
+            if rw_blocked(S, ex): break
+            continue
         out = []
         for o in _re.findall(r'\{"gameID":"\d+","playerID"[^{}]*\}', h):
             try: r = json.loads(o)
@@ -104,13 +114,16 @@ RWG_COLS = ["snap_et", "sport", "game_id", "game_date", "team", "opp", "home_awa
 def rotowire_games(S, snap):
     """every book's full-game spread / total / moneyline from RotoWire's games tables (NBA, NHL, NFL), changes only (Nov 6, RULE 13)"""
     S.setdefault("rwg", {}); S.setdefault("rwg_due", 0)
-    if time.time() < S["rwg_due"]: return 0
+    if time.time() < S["rwg_due"] or rw_blocked(S): return 0
     S["rwg_due"] = time.time() + 50     # every minute (Nov 7, 2026): RotoWire's game tables change every few minutes and are small (0.14 MB);
                                         # measured: 3 changes in 10 one-minute fetches (scratch test, FINDINGS Nov 7)
     n = 0
     for sport in ("nba", "nhl", "nfl"):
         try: G = get_any(f"https://www.rotowire.com/betting/{sport}/tables/{sport}-games.php")
-        except Exception as ex: print("RotoWire games fetch failed:", sport, type(ex).__name__); continue
+        except Exception as ex:
+            print("RotoWire games fetch failed:", sport, type(ex).__name__)
+            if rw_blocked(S, ex): break
+            continue
         out = []
         for g in G if isinstance(G, list) else []:
             books = {k.split("_")[0] for k in g if k.endswith("_has_spread")}

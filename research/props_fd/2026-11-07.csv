@@ -3381,3 +3381,5 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 10:15,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-148.0,112.0,PHX,709.196236016,23559725,23559726
 2026-11-07 10:15,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Fred VanVleet,fred vanvleet,5.5,112.0,-148.0,HOU,709.196234511,21175485,21175486
 2026-11-07 10:15,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-132.0,100.0,HOU,709.196232701,62134320,62134329
+2026-11-07 10:16,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Alex Sarr,alex sarr,1.5,-188.0,140.0,WAS,709.196253976,92784087,92784086
+2026-11-07 10:16,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Trae Young,trae young,8.5,-118.0,-112.0,WAS,709.196253527,21175415,21175416

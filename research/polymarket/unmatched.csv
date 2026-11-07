@@ -53,3 +53,5 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-06 20:00,nba-okc-mem-2026-11-06,OKC Thunder vs. MEM Grizzlies,2026-11-06 20:00,"mem,okc",no matching game in the model files
 2026-11-06 22:00,nba-sa-sac-2026-11-06,SA Spurs vs. SAC Kings,2026-11-06 22:00,"sa,sac",no matching game in the model files
 2026-11-06 22:00,nba-por-lal-2026-11-06,POR Trail Blazers vs. LA Lakers,2026-11-06 22:00,"lal,por",no matching game in the model files
+2026-11-07 08:00,nba-lead-pts-2026-11-07,NBA Nov 7th Points Leader,2026-11-07 17:00,"atl,bkn,cle,den,gs,hou,ind,ny,okc,orl,phx,por,sa,wsh",no matching game in the model files
+2026-11-07 08:00,nba-lead-3pm-2026-11-07,NBA Nov 7th 3-Pointers Made Leader,2026-11-07 17:00,"atl,bkn,gs",no matching game in the model files

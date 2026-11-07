@@ -440,3 +440,11 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-07 03:00,22600195,2026-11-07,Total 3-Point Field Goals,5037871,Dylan Harper,,1.5,-236.0,1.5,-228.0,2026-11-07T10:41Z,under
 2026-11-07 03:00,22600195,2026-11-07,Total 3-Point Field Goals,5105565,Donovan Clingan,,0.5,-242.0,1.5,181.0,2026-11-07T10:57Z,over
 2026-11-07 03:00,22600195,2026-11-07,Total 3-Point Field Goals,5105565,Donovan Clingan,,0.5,180.0,1.5,-242.0,2026-11-07T10:57Z,under
+2026-11-07 03:15,22600193,2026-11-07,Total Points,6589,Draymond Green,,5.5,103.0,5.5,-101.0,2026-11-07T10:21Z,over
+2026-11-07 03:15,22600193,2026-11-07,Total Points,6589,Draymond Green,,5.5,-131.0,5.5,-126.0,2026-11-07T10:21Z,under
+2026-11-07 03:15,22600193,2026-11-07,Total 3-Point Field Goals,4066436,De'Anthony Melton,,1.5,107.0,1.5,107.0,2026-11-07T11:11Z,over
+2026-11-07 03:15,22600193,2026-11-07,Total 3-Point Field Goals,4066436,De'Anthony Melton,,1.5,-140.0,1.5,-140.0,2026-11-07T11:11Z,under
+2026-11-07 03:15,22600193,2026-11-07,Total 3-Point Field Goals,4709138,Brandin Podziemski,,1.5,-188.0,1.5,-182.0,2026-11-07T10:21Z,over
+2026-11-07 03:15,22600193,2026-11-07,Total 3-Point Field Goals,4709138,Brandin Podziemski,,1.5,142.0,1.5,137.0,2026-11-07T10:21Z,under
+2026-11-07 03:15,22600193,2026-11-07,Total 3-Point Field Goals,5175737,Yaxel Lendeborg,,1.5,-160.0,1.5,-156.0,2026-11-07T10:21Z,over
+2026-11-07 03:15,22600193,2026-11-07,Total 3-Point Field Goals,5175737,Yaxel Lendeborg,,1.5,121.0,1.5,118.0,2026-11-07T10:21Z,under

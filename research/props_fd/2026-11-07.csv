@@ -3649,3 +3649,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 11:06,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Alperen Sengun,alperen sengun,6.5,-118.0,-112.0,HOU,709.196232451,40296685,40296686
 2026-11-07 11:06,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,140.0,-188.0,HOU,709.196231971,12260605,12260606
 2026-11-07 11:06,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-140.0,106.0,HOU,709.196232701,62134320,62134329
+2026-11-07 11:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Cam Johnson,cam johnson,12.5,-108.0,-122.0,DEN,709.196220934,51835103,51835094
+2026-11-07 11:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,-104.0,-128.0,DEN,709.196217273,12257278,12257279
+2026-11-07 11:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Pascal Siakam,pascal siakam,3.5,-146.0,110.0,IND,709.196222706,21558499,21558500
+2026-11-07 11:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,140.0,-188.0,DEN,709.196220607,43026473,43026472
+2026-11-07 11:10,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Michael Porter Jr.,michael porter,23.5,-102.0,-130.0,BKN,709.196260081,27559094,27559095
+2026-11-07 11:10,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Julius Randle,julius randle,20.5,-108.0,-122.0,BKN,709.196259993,12260654,12260655
+2026-11-07 11:10,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,CJ McCollum,cj mccollum,2.5,-118.0,-112.0,ATL,709.196264265,12260572,12260571
+2026-11-07 11:10,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Day'Ron Sharpe,dayron sharpe,8.5,108.0,-144.0,BKN,709.196260039,42351813,42351812
+2026-11-07 11:10,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Dyson Daniels,dyson daniels,5.5,-132.0,100.0,ATL,709.196263433,50686100,50686102
+2026-11-07 11:10,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Julius Randle,julius randle,4.5,-110.0,-120.0,BKN,709.196260106,12260654,12260655

@@ -73,3 +73,4 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 18:35,297634,Drexel Dragons,Colgate Raiders,-1.5,8.43,10.05,0.47,1.63,0.13,PASS,edge 0.13 < 0.5,,,PASS,no live_features.csv,
 2026-11-06 18:35,297421,Montana State Bobcats,Long Beach State 49ers,-10.5,13.99,18.82,14.64,11.25,0.75,PASS,a team has under 3 games,,,PASS,no live_features.csv,
 2026-11-06 19:15,297640,New Mexico Lobos,Northern Arizona Lumberjacks,-25.5,28.46,24.85,24.99,25.68,0.18,PASS,edge 0.18 < 0.5,26.09,0.59,PASS,edge 0.59 < 0.62,2026-11-06 19:01
+2026-11-06 19:35,297433,UC San Diego Tritons,Fresno State Bulldogs,-9.5,13.1,7.23,9.52,9.5,0.0,PASS,edge 0.00 < 0.5,10.0,0.5,PASS,edge 0.50 < 0.62,2026-11-06 19:01

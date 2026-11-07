@@ -1928,3 +1928,8 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 06:17,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Michael Porter Jr.,michael porter,7.5,116.0,-154.0,BKN,709.196260016,27559094,27559095
 2026-11-07 06:17,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,CJ McCollum,cj mccollum,3.5,-102.0,-130.0,ATL,709.196264266,12260572,12260571
 2026-11-07 06:17,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Kingston Flemings,kingston flemings,5.5,-122.0,-108.0,ATL,709.196263389,91126163,91126164
+2026-11-07 06:29,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Dylan Harper,dylan harper,17.5,-104.0,-128.0,SAS,709.196242477,76027865,76027863
+2026-11-07 06:29,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Dylan Harper,dylan harper,5.5,106.0,-140.0,SAS,709.196242487,76027865,76027863
+2026-11-07 06:29,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,De'Aaron Fox,deaaron fox,3.5,-104.0,-128.0,SAS,709.196241744,15572079,15572080
+2026-11-07 06:29,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Devin Vassell,devin vassell,2.5,-114.0,-118.0,SAS,709.196242498,38295529,38295528
+2026-11-07 06:29,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Dylan Harper,dylan harper,4.5,-138.0,104.0,SAS,709.196242474,76027865,76027863

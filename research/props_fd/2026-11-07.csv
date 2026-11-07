@@ -2082,3 +2082,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 07:36,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,154.0,-210.0,WAS,709.196253328,12260628,12260629
 2026-11-07 07:36,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Alex Sarr,alex sarr,1.5,-188.0,140.0,WAS,709.196253976,92784087,92784086
 2026-11-07 07:36,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Trae Young,trae young,9.5,108.0,-144.0,WAS,709.196253527,21175415,21175416
+2026-11-07 07:40,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Christian Braun,christian braun,12.5,-112.0,-118.0,DEN,709.196220602,43026473,43026472
+2026-11-07 07:40,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,22.5,-122.0,-108.0,DEN,709.196217709,16127791,16127792
+2026-11-07 07:40,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Pascal Siakam,pascal siakam,6.5,-106.0,-125.0,IND,709.196222705,21558499,21558500
+2026-11-07 07:40,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Ivica Zubac,ivica zubac,8.5,120.0,-158.0,IND,709.196223352,13527611,22190771
+2026-11-07 07:40,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-118.0,-112.0,DEN,709.196220682,12730307,12730306
+2026-11-07 07:40,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-102.0,-130.0,DEN,709.196217261,12257278,12257279
+2026-11-07 07:40,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-148.0,112.0,DEN,709.196221261,12234472,12234473

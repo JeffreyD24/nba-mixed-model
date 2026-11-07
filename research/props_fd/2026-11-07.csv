@@ -2137,3 +2137,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 07:46,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Julius Randle,julius randle,4.5,-106.0,-125.0,BKN,709.196260106,12260654,12260655
 2026-11-07 07:46,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Nickeil Alexander-Walker,nickeil alexander walker,3.5,114.0,-152.0,ATL,709.196263409,38310472,38310473
 2026-11-07 07:46,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Jalen Johnson,jalen johnson,7.5,118.0,-158.0,ATL,709.196263390,40197109,40197108
+2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Kelly Oubre Jr.,kelly oubre,9.5,-110.0,-118.0,IND,709.196223952,41408119,41408118
+2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Andrew Nembhard,andrew nembhard,16.5,104.0,-138.0,IND,709.196222867,43058624,43058625
+2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Andrew Nembhard,andrew nembhard,2.5,-136.0,102.0,IND,709.196222868,43058624,43058625
+2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Ivica Zubac,ivica zubac,8.5,120.0,-160.0,IND,709.196223352,13527611,22190771
+2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Jamal Murray,jamal murray,4.5,-112.0,-118.0,DEN,709.196217705,16127791,16127792
+2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-148.0,114.0,DEN,709.196221261,12234472,12234473
+2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,104.0,-138.0,DEN,709.196217703,16127791,16127792

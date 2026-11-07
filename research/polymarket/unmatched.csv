@@ -47,3 +47,7 @@ first_seen_et,slug,title,start_et,teams,reason
 2026-11-06 19:05,nba-bos-cha-2026-11-06,BOS Celtics vs. CHA Hornets,2026-11-06 19:00,"bos,cha",no matching game in the model files
 2026-11-06 19:05,nba-was-atl-2026-11-06,WAS Wizards vs. ATL Hawks,2026-11-06 19:00,"atl,wsh",no matching game in the model files
 2026-11-06 19:30,nba-phi-cle-2026-11-06,PHI 76ers vs. CLE Cavaliers,2026-11-06 19:30,"cle,phi",no matching game in the model files
+2026-11-06 20:00,nba-uta-dal-2026-11-06,UTA Jazz vs. DAL Mavericks,2026-11-06 20:00,"dal,utah",no matching game in the model files
+2026-11-06 20:00,nba-tor-mil-2026-11-06,TOR Raptors vs. MIL Bucks,2026-11-06 20:00,"mil,tor",no matching game in the model files
+2026-11-06 20:00,nba-min-no-2026-11-06,MIN Timberwolves vs. NO Pelicans,2026-11-06 20:00,"min,no",no matching game in the model files
+2026-11-06 20:00,nba-okc-mem-2026-11-06,OKC Thunder vs. MEM Grizzlies,2026-11-06 20:00,"mem,okc",no matching game in the model files

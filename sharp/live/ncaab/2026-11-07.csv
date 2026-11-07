@@ -452,3 +452,15 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-07 04:43:00,297643,2026-11-08T01:00:00.000Z,Little Rock Trojans,Southeastern Louisiana Lions,60.0,cons,-5.5,-110.0,147.5,-111.0,-238.0,195.0,0.0,0.0,0.0,0.0,0.0,0.0
 2026-11-07 04:43:00,297643,2026-11-08T01:00:00.000Z,Little Rock Trojans,Southeastern Louisiana Lions,60.0,fd,-5.5,-110.0,147.5,-110.0,-240.0,195.0,,,,,,
 2026-11-07 04:47:00,297640,2026-11-07T23:00:00.000Z,New Mexico Lobos,Northern Arizona Lumberjacks,176.0,cons,-26.5,-113.0,155.5,-108.0,-10000.0,3000.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07 04:48:00,297425,2026-11-07T22:00:00.000Z,IU Indianapolis Jaguars,Tennessee-Martin Skyhawks,242.0,cons,2.5,-112.0,160.5,-110.0,115.0,-137.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07 04:48:00,297425,2026-11-07T22:00:00.000Z,IU Indianapolis Jaguars,Tennessee-Martin Skyhawks,242.0,fd,2.5,-110.0,160.5,-110.0,116.0,-140.0,,,,,,
+2026-11-07 04:48:00,297420,2026-11-07T22:30:00.000Z,UNC Asheville Bulldogs,Western Carolina Catamounts,70.0,cons,2.5,-112.0,149.5,-110.0,114.0,-135.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07 04:48:00,297420,2026-11-07T22:30:00.000Z,UNC Asheville Bulldogs,Western Carolina Catamounts,70.0,fd,2.5,-110.0,149.5,-110.0,122.0,-146.0,,,,,,
+2026-11-07 04:48:00,297427,2026-11-07T22:30:00.000Z,Texas Rio Grande Valley Vaqueros,Prairie View A&M Panthers,55.0,cons,-8.5,-109.0,149.5,-110.0,-360.0,280.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07 04:48:00,297427,2026-11-07T22:30:00.000Z,Texas Rio Grande Valley Vaqueros,Prairie View A&M Panthers,55.0,fd,-8.5,-110.0,149.5,-110.0,-400.0,310.0,,,,,,
+2026-11-07 04:48:00,297647,2026-11-07T23:00:00.000Z,George Washington Colonials,Hampton Pirates,131.0,cons,-19.0,-111.0,147.5,-110.0,-3000.0,1300.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07 04:48:00,297647,2026-11-07T23:00:00.000Z,George Washington Colonials,Hampton Pirates,131.0,fd,-18.5,-120.0,147.5,-110.0,-4500.0,1600.0,,,,,,
+2026-11-07 04:48:00,297633,2026-11-07T23:30:00.000Z,Niagara Purple Eagles,Morgan State Bears,90.0,cons,-3.5,-110.0,150.5,-105.0,-166.0,140.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07 04:48:00,297633,2026-11-07T23:30:00.000Z,Niagara Purple Eagles,Morgan State Bears,90.0,fd,-3.5,-110.0,150.5,-108.0,-166.0,138.0,,,,,,
+2026-11-07 04:48:00,297628,2026-11-08T00:30:00.000Z,UC Riverside Highlanders,Denver Pioneers,126.0,fd,-1.5,-120.0,154.5,-110.0,-134.0,112.0,,,,,,
+2026-11-07 04:49:00,297640,2026-11-07T23:00:00.000Z,New Mexico Lobos,Northern Arizona Lumberjacks,176.0,dk,-26.5,-112.0,155.5,-112.0,-9000.0,2500.0,,,,,,

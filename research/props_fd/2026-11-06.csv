@@ -14621,3 +14621,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 20:35,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Devin Vassell,devin vassell,2.5,-115.0,-111.0,SAS,709.196062619,38295529.0,38295528.0
 2026-11-06 20:35,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,6.5,106.0,-136.0,SAS,709.196062653,64780942.0,64780943.0
 2026-11-06 20:35,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-172.0,134.0,SAS,709.196062582,61967224.0,61967225.0
+2026-11-06 20:39,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Quentin Grimes,quentin grimes,6.5,-122.0,-104.0,LAL,709.196045256,42067800.0,42067801.0
+2026-11-06 20:39,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Austin Reaves,austin reaves,21.5,-125.0,-102.0,LAL,709.196045245,41574998.0,41574999.0
+2026-11-06 20:39,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Donovan Clingan,donovan clingan,10.5,-115.0,-111.0,POR,709.196048572,50752175.0,50752173.0
+2026-11-06 20:39,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Austin Reaves,austin reaves,3.5,-128.0,100.0,LAL,709.196045260,41574998.0,41574999.0
+2026-11-06 20:39,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jake Laravia,jake laravia,2.5,-166.0,130.0,LAL,709.196045282,90251254.0,90251266.0
+2026-11-06 20:39,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Sandro Mamukelashvili,sandro mamukelashvili,4.5,-104.0,-120.0,LAL,709.196045445,42119780.0,42119779.0

@@ -2038,3 +2038,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 07:06,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Kevin Durant,kevin durant,5.5,126.0,-172.0,HOU,709.196231951,12260605,12260606
 2026-11-07 07:06,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Collin Gillespie,collin gillespie,3.5,114.0,-152.0,PHX,709.196237553,43026356,43026355
 2026-11-07 07:06,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-148.0,112.0,PHX,709.196236016,23559725,23559726
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Nesmith,aaron nesmith,12.5,-102.0,-130.0,IND,709.196223604,39494853,39494854
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,-102.0,-130.0,DEN,709.196217273,12257278,12257279
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,22.5,-125.0,-106.0,DEN,709.196217709,16127791,16127792
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,DeMar DeRozan,demar derozan,2.5,118.0,-158.0,DEN,709.196221258,12234472,12234473
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,136.0,-182.0,DEN,709.196220607,43026473,43026472
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-118.0,-112.0,DEN,709.196220682,12730307,12730306
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-106.0,-125.0,DEN,709.196217261,12257278,12257279
+2026-11-07 07:08,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-158.0,118.0,DEN,709.196221261,12234472,12234473

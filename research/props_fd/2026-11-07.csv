@@ -2184,3 +2184,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 08:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Obi Toppin,obi toppin,4.5,-110.0,-122.0,IND,709.196224067,41641966,41641967
 2026-11-07 08:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-118.0,-112.0,DEN,709.196220682,12730307,12730306
 2026-11-07 08:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,104.0,-138.0,DEN,709.196217703,16127791,16127792
+2026-11-07 08:04,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Yaxel Lendeborg,yaxel lendeborg,17.5,-128.0,-104.0,GSW,709.196238234,64937530,64937543
+2026-11-07 08:04,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Stephen Curry,stephen curry,4.5,-146.0,110.0,GSW,709.196238220,12260597,12260598
+2026-11-07 08:04,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Yaxel Lendeborg,yaxel lendeborg,4.5,-112.0,-118.0,GSW,709.196238212,64937530,64937543

@@ -118,3 +118,6 @@ game_id,market,alerted_at_et,date,home,away,tip_et,side,line,open_line,model,edg
 22600191,spread,2026-11-06 22:05:04.104482,2026-11-07,cle,ny,2026-11-07 20:00:00,home,3.5,,-0.24,3.26,as of 2026-11-06 11:27,False,a team has not filed its injury report,,,,,,CHECK,,,,,,,,False,,DraftKings,-106.0,,
 22600191,total,2026-11-06 22:05:04.104482,2026-11-07,cle,ny,2026-11-07 20:00:00,over,225.5,,228.19,2.69,as of 2026-11-06 11:27,False,,,,,,,CHECK,,,,,,,,False,provisional_totals,DraftKings,-106.0,,
 22600190,total,2026-11-06 22:07:08.004572,2026-11-07,atl,bkn,2026-11-07 19:30:00,over,224.5,,228.12,3.62,as of 2026-11-06 11:27,False,,,,,,,CHECK,,,,,,,,False,,DraftKings,-106.0,,
+22600190,total,2026-11-06 22:09:10.614001,2026-11-07,atl,bkn,2026-11-07 19:30:00,over,224.5,224.5,228.12,3.62,as of 2026-11-06 11:27,True,,,,,,,BET,,,,,,,,False,,DraftKings,-106.0,,
+22600191,total,2026-11-06 22:09:10.614001,2026-11-07,cle,ny,2026-11-07 20:00:00,over,225.5,225.5,228.19,2.69,as of 2026-11-06 11:27,True,,,,,,,BET,,,,,,,,False,provisional_totals,DraftKings,-106.0,,
+22600192,total,2026-11-06 22:09:10.614001,2026-11-07,okc,wsh,2026-11-07 20:00:00,over,220.5,,223.14,2.64,as of 2026-11-06 11:27,False,,,,,,,CHECK,,,,,,,,False,provisional_totals,DraftKings,-114.0,,

@@ -1,3 +1,5 @@
 logged_at_et,kind,sport,date,home,away,market,side,player,stat,our_book,our_line,our_price,fan_line,fan_price,fan_best,note
 2026-11-06 21:02:42,game,nba,2026-11-07,gs,orl,total,over,,,FanDuel,219.5,-115.0,,,,Fanatics line not found
 2026-11-06 21:20:30,game,nba,2026-11-07,phx,hou,total,over,,,FanDuel,220.5,-110.0,,,,Fanatics line not found
+2026-11-06 22:09:14,game,nba,2026-11-07,atl,bkn,total,over,,,DraftKings,224.5,-106.0,,,,Fanatics line not found
+2026-11-06 22:09:15,game,nba,2026-11-07,cle,ny,total,over,,,DraftKings,225.5,-106.0,,,,Fanatics line not found

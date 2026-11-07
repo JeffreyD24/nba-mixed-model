@@ -2193,3 +2193,38 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 08:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Yaxel Lendeborg,yaxel lendeborg,7.5,-102.0,-130.0,GSW,709.196238224,64937530,64937543
 2026-11-07 08:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Stephen Curry,stephen curry,4.5,-140.0,106.0,GSW,709.196238220,12260597,12260598
 2026-11-07 08:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Brandin Podziemski,brandin podziemski,3.5,-172.0,128.0,GSW,709.196238204,52263972,52263968
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Desmond Bane,desmond bane,19.5,-112.0,-118.0,ORL,709.196236361,38187360,38187370
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Franz Wagner,franz wagner,21.5,-132.0,100.0,ORL,709.196236458,40196992,40196991
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Jase Richardson,jase richardson,7.5,-128.0,-102.0,ORL,709.196236395,76284095,76284094
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Brandin Podziemski,brandin podziemski,15.5,100.0,-132.0,GSW,709.196238213,52263972,52263968
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Tristan da Silva,tristan da silva,12.5,102.0,-136.0,ORL,709.196236409,43072432,43072430
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Wendell Carter Jr.,wendell carter,12.5,-128.0,-104.0,ORL,709.196236347,41408443,41408444
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Draymond Green,draymond green,5.5,102.0,-136.0,GSW,709.196238232,12260600,12260599
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Desmond Bane,desmond bane,4.5,134.0,-180.0,ORL,709.196236385,38187360,38187370
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Jase Richardson,jase richardson,2.5,-125.0,-106.0,ORL,709.196236397,76284095,76284094
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Tristan da Silva,tristan da silva,3.5,-166.0,124.0,ORL,709.196236420,43072432,43072430
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Franz Wagner,franz wagner,5.5,-120.0,-110.0,ORL,709.196236387,40196992,40196991
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Stephen Curry,stephen curry,4.5,-144.0,108.0,GSW,709.196238220,12260597,12260598
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Jase Richardson,jase richardson,2.5,-118.0,-112.0,ORL,709.196236360,76284095,76284094
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Brandin Podziemski,brandin podziemski,3.5,-162.0,122.0,GSW,709.196238204,52263972,52263968
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Franz Wagner,franz wagner,7.5,114.0,-152.0,ORL,709.196236433,40196992,40196991
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Wendell Carter Jr.,wendell carter,1.5,-118.0,-112.0,ORL,709.196236364,41408443,41408444
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Draymond Green,draymond green,6.5,112.0,-148.0,GSW,709.196238223,12260600,12260599
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Yaxel Lendeborg,yaxel lendeborg,4.5,-108.0,-122.0,GSW,709.196238212,64937530,64937543
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-136.0,102.0,ORL,709.196236448,43072432,43072430
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Anthony Black,anthony black,4.5,-112.0,-118.0,ORL,709.196236325,50378078,50378080
+2026-11-07 08:10,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Desmond Bane,desmond bane,2.5,-172.0,128.0,ORL,709.196236416,38187360,38187370
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,100.0,-132.0,HOU,709.196233870,43049093,43049094
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Collin Gillespie,collin gillespie,8.5,-128.0,-104.0,PHX,709.196237548,43026356,43026355
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Marcus Smart,marcus smart,6.5,-122.0,-106.0,HOU,709.196237789,12880787,12880788
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Fred VanVleet,fred vanvleet,12.5,102.0,-136.0,HOU,709.196234512,21175485,21175486
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Luke Kennard,luke kennard,5.5,-128.0,-104.0,PHX,709.196237721,16954514,16954515
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Devin Booker,devin booker,23.5,-122.0,-108.0,PHX,709.196235822,12257187,12257186
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Reed Sheppard,reed sheppard,8.5,104.0,-138.0,HOU,709.196235485,63497028,63497029
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Khaman Maluach,khaman maluach,4.5,-152.0,114.0,PHX,709.196237620,76787777,76787780
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Kevin Durant,kevin durant,5.5,126.0,-168.0,HOU,709.196231951,12260605,12260606
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Collin Gillespie,collin gillespie,3.5,112.0,-148.0,PHX,709.196237553,43026356,43026355
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Devin Booker,devin booker,5.5,122.0,-162.0,PHX,709.196235821,12257187,12257186
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-146.0,110.0,PHX,709.196236016,23559725,23559726
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,128.0,-172.0,HOU,709.196235489,63497028,63497029
+2026-11-07 08:10,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,134.0,-180.0,HOU,709.196231971,12260605,12260606

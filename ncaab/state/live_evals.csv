@@ -93,3 +93,7 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 23:12,297626,Rhode Island Rams,Monmouth Hawks,-6.5,4.38,6.25,6.86,6.52,0.02,PASS,edge 0.02 < 0.5,6.62,0.12,PASS,edge 0.12 < 0.62,2026-11-06 19:01
 2026-11-06 23:30,297425,IU Indianapolis Jaguars,Tennessee-Martin Skyhawks,1.5,3.66,4.63,1.69,-1.05,0.45,PASS,edge 0.45 < 0.5,-0.78,0.72,PASS,a team has under 3 games,2026-11-06 19:01
 2026-11-06 23:30,297647,George Washington Colonials,Hampton Pirates,-19.5,25.72,23.88,18.64,19.74,0.24,PASS,edge 0.24 < 0.5,19.73,0.23,PASS,edge 0.23 < 0.62,2026-11-06 19:01
+2026-11-06 23:35,297628,UC Riverside Highlanders,Denver Pioneers,-1.5,9.79,-4.33,6.33,1.85,0.35,PASS,edge 0.35 < 0.5,1.91,0.41,PASS,edge 0.41 < 0.62,2026-11-06 19:01
+2026-11-06 23:35,297431,Southern Indiana Screaming Eagles,Evansville Purple Aces,9.5,,,,,,PASS,game not matched to ESPN,,,PASS,game not matched to ESPN,2026-11-06 19:01
+2026-11-06 23:35,297629,Murray State Racers,Northwestern State Demons,-21.5,21.03,13.59,21.31,21.44,-0.06,PASS,edge 0.06 < 0.5,21.81,0.31,PASS,edge 0.31 < 0.62,2026-11-06 19:01
+2026-11-06 23:35,297643,Little Rock Trojans,Southeastern Louisiana Lions,-5.5,11.11,8.21,8.94,5.97,0.47,PASS,edge 0.47 < 0.5,6.12,0.62,PASS,edge 0.62 < 0.62,2026-11-06 19:01

@@ -3147,3 +3147,7 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-07 06:15,22600194,2026-11-07,Total Assists and Rebounds,2991230,Fred VanVleet,,8.5,-123.0,8.5,-127.0,2026-11-07T12:29Z,under
 2026-11-07 06:15,22600194,2026-11-07,"Total Points, Rebounds, and Assists",3202,Kevin Durant,,30.5,-113.0,30.5,-108.0,2026-11-07T13:51Z,over
 2026-11-07 06:15,22600194,2026-11-07,"Total Points, Rebounds, and Assists",3202,Kevin Durant,,30.5,-116.0,30.5,-121.0,2026-11-07T13:51Z,under
+2026-11-07 06:20,22600195,2026-11-07,Total Assists,5105565,Donovan Clingan,,1.5,-138.0,1.5,-124.0,2026-11-07T12:19Z,over
+2026-11-07 06:20,22600195,2026-11-07,Total Assists,5105565,Donovan Clingan,,1.5,105.0,1.5,-106.0,2026-11-07T12:19Z,under
+2026-11-07 06:20,22600195,2026-11-07,"Total Points, Rebounds, and Assists",6606,Damian Lillard,,28.5,-125.0,28.5,-122.0,2026-11-07T14:08Z,over
+2026-11-07 06:20,22600195,2026-11-07,"Total Points, Rebounds, and Assists",6606,Damian Lillard,,28.5,-105.0,28.5,-108.0,2026-11-07T14:08Z,under

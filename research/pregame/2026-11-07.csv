@@ -4275,3 +4275,12 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 04:18:27,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,firsthalf,total,under,113.5,-115,normal
 2026-11-07 04:20:55,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,under,224.0,-110,normal
 2026-11-07 04:20:55,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,over,224.0,-110,normal
+2026-11-07 04:22:12,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,total,over,221.5,-110,normal
+2026-11-07 04:22:12,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,total,over,221.5,-110,normal
+2026-11-07 04:22:12,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,total,under,221.5,-110,normal
+2026-11-07 04:23:27,295396,2026-11-07,2026-11-07 22:00,sa,por,Consensus,event,spread,home,5.5,-114,normal
+2026-11-07 04:23:27,295396,2026-11-07,2026-11-07 22:00,sa,por,Consensus,event,spread,away,-5.5,-107,normal
+2026-11-07 04:24:43,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetMGM,event,moneyline,home,0.0,170,normal
+2026-11-07 04:24:43,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetMGM,event,moneyline,away,0.0,-210,normal
+2026-11-07 04:25:53,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetMGM,event,moneyline,home,0.0,165,normal
+2026-11-07 04:25:53,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetMGM,event,moneyline,away,0.0,-200,normal

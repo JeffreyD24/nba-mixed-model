@@ -4241,3 +4241,7 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 03:58:32,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,secondquarter,spread,away,3.5,-125,normal
 2026-11-07 03:58:32,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,total,under,221.0,-110,normal
 2026-11-07 03:58:32,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,total,over,221.0,-110,normal
+2026-11-07 04:02:05,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,away_over,110.5,-110,normal
+2026-11-07 04:02:05,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,home_under,116.5,-110,normal
+2026-11-07 04:02:05,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,away_under,110.5,-120,normal
+2026-11-07 04:02:05,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,home_over,116.5,-120,normal

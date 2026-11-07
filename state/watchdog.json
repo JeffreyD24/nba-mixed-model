@@ -1,5 +1,9 @@
 {
- "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 1233 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)",
- "fail|nba-mixed-model|health.yml": "NBA daily health check: last run FAILED 504 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42243706969)",
- "fail|nfl-mixed-model|health.yml": "NFL daily health check: last run FAILED 646 min ago (https://github.com/JeffreyD24/nfl-mixed-model/actions/runs/42223162129)"
+ "api|nfl-mixed-model|alerts.yml": "NFL alert loop: could not read its runs (HTTPError)",
+ "fail|nba-mixed-model|evening.yml": "NBA evening run: last run FAILED 1294 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42155916257)",
+ "fail|nba-mixed-model|health.yml": "NBA daily health check: last run FAILED 565 min ago (https://github.com/JeffreyD24/nba-mixed-model/actions/runs/42243706969)",
+ "api|nfl-mixed-model|morning.yml": "NFL morning run: could not read its runs (HTTPError)",
+ "api|nfl-mixed-model|evening.yml": "NFL evening run: could not read its runs (HTTPError)",
+ "api|nfl-mixed-model|health.yml": "NFL daily health check: could not read its runs (HTTPError)",
+ "api|nfl-mixed-model|state/heartbeat_alert.txt": "NFL alert checks: could not read commits (HTTPError)"
 }

@@ -733,3 +733,9 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 22:40:56,295396,2026-11-07,2026-11-07 22:00,sa,por,bet365,event,spread,away,-4.5,-110,normal
 2026-11-06 22:40:56,295396,2026-11-07,2026-11-07 22:00,sa,por,bet365,event,total,under,228.5,-115,normal
 2026-11-06 22:40:56,295396,2026-11-07,2026-11-07 22:00,sa,por,bet365,event,total,over,228.5,-105,normal
+2026-11-06 22:42:15,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,total,over,222.0,-110,normal
+2026-11-06 22:42:15,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,total,under,222.0,-108,normal
+2026-11-06 22:43:29,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,under,225.0,-110,normal
+2026-11-06 22:43:29,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,over,225.0,-110,normal
+2026-11-06 22:43:29,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,event,spread,away,-3.5,-115,normal
+2026-11-06 22:43:29,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,event,spread,home,3.5,-105,normal

@@ -1704,3 +1704,21 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 05:18,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Peyton Watson,peyton watson,2.5,140.0,-188.0,CLE,709.196263774,54472264,54472265
 2026-11-07 05:18,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Evan Mobley,evan mobley,3.5,128.0,-172.0,CLE,709.196263466,41407628,41407629
 2026-11-07 05:18,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-130.0,-102.0,NYK,709.196233958,41408270,41408268
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,-102.0,-130.0,DEN,709.196217273,12257278,12257279
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,102.0,-136.0,DEN,709.196220683,12730307,12730306
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,22.5,-112.0,-118.0,DEN,709.196217709,16127791,16127792
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Christian Braun,christian braun,4.5,-114.0,-114.0,DEN,709.196220605,43026473,43026472
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,DeMar DeRozan,demar derozan,2.5,122.0,-162.0,DEN,709.196221258,12234472,12234473
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Andrew Nembhard,andrew nembhard,7.5,100.0,-132.0,IND,709.196222869,43058624,43058625
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,140.0,-188.0,DEN,709.196220607,43026473,43026472
+2026-11-07 05:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-114.0,-114.0,DEN,709.196220682,12730307,12730306
+2026-11-07 05:25,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Julius Randle,julius randle,20.5,-128.0,-104.0,BKN,709.196259993,12260654,12260655
+2026-11-07 05:25,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Julius Randle,julius randle,4.5,-110.0,-120.0,BKN,709.196260106,12260654,12260655
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-114.0,-114.0,NYK,709.196234001,41408270,41408268
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,9.5,-120.0,-110.0,NYK,709.196233928,17926931,17926932
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-106.0,-125.0,NYK,709.196233910,17926928,17926927
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-136.0,102.0,NYK,709.196233932,16220637,16220638
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Donovan Mitchell,donovan mitchell,5.5,106.0,-140.0,CLE,709.196263457,15907303,15907304
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Evan Mobley,evan mobley,3.5,126.0,-168.0,CLE,709.196263466,41407628,41407629
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-132.0,100.0,NYK,709.196233958,41408270,41408268
+2026-11-07 05:25,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,138.0,-186.0,NYK,709.196233878,16220637,16220638

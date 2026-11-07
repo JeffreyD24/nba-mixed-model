@@ -19,3 +19,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 20:12,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Christian Braun,christian braun,4.5,-118,-112,DEN,709.196220605,43026473,43026472
 2026-11-06 20:12,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Nikola Jokic,nikola jokic,11.5,-140,106,DEN,709.196217284,12257278,12257279
 2026-11-06 20:12,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,140,-188,DEN,709.196220607,43026473,43026472
+2026-11-06 20:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,-102,-130,DEN,709.196220683,12730307,12730306
+2026-11-06 20:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Aaron Gordon,aaron gordon,5.5,-118,-112,DEN,709.196220686,12730307,12730306
+2026-11-06 20:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-114,-114,DEN,709.196220682,12730307,12730306

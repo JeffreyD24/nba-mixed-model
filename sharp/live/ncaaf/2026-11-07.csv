@@ -548,3 +548,6 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-07 05:38:00,289839,2026-11-08T00:30:00.000Z,Northwestern Wildcats,Iowa Hawkeyes,17241,cons,2.5,-107.0,43.5,-108.0,111.0,-135.0,27.0,13.0,55.0,44.0,35.0,10.0
 2026-11-07 05:38:00,289839,2026-11-08T00:30:00.000Z,Northwestern Wildcats,Iowa Hawkeyes,17241,fd,2.5,-108.0,43.5,-110.0,110.0,-132.0,,,,,,
 2026-11-07 05:38:00,289917,2026-11-08T00:30:00.000Z,Arizona State Sun Devils,Colorado Buffaloes,4589,cons,-3.0,-115.0,48.5,-108.0,-160.0,130.0,67.0,76.0,70.0,69.0,83.0,98.0
+2026-11-07 05:48:00,289854,2026-11-07T20:30:00.000Z,Georgia Southern Eagles,Marshall Thundering Herd,3847,cons,-8.5,-110.0,54.5,-112.0,-350.0,270.0,17.0,10.0,6.0,9.0,99.0,98.0
+2026-11-07 05:51:00,289854,2026-11-07T20:30:00.000Z,Georgia Southern Eagles,Marshall Thundering Herd,3847,fd,-9.5,-105.0,54.5,-114.0,-330.0,265.0,,,,,,
+2026-11-07 05:51:00,289839,2026-11-08T00:30:00.000Z,Northwestern Wildcats,Iowa Hawkeyes,17241,cons,2.5,-107.0,43.5,-108.0,113.0,-135.0,27.0,13.0,55.0,44.0,35.0,10.0

@@ -2733,3 +2733,20 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 09:01,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,126.0,-168.0,HOU,709.196235489,63497028,63497029
 2026-11-07 09:01,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,134.0,-180.0,HOU,709.196231971,12260605,12260606
 2026-11-07 09:01,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-132.0,100.0,HOU,709.196232701,62134320,62134329
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Dylan Harper,dylan harper,17.5,-106.0,-125.0,SAS,709.196242477,76027865,76027863
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Deni Avdija,deni avdija,23.5,-106.0,-125.0,POR,709.196238599,37901072,37901070
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Jrue Holiday,jrue holiday,12.5,-130.0,-102.0,POR,709.196239148,12260620,12260621
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Jrue Holiday,jrue holiday,4.5,118.0,-158.0,POR,709.196239146,12260620,12260621
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Devin Vassell,devin vassell,4.5,120.0,-160.0,SAS,709.196242485,38295529,38295528
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,De'Aaron Fox,deaaron fox,3.5,-104.0,-128.0,SAS,709.196241744,15572079,15572080
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Donovan Clingan,donovan clingan,1.5,-180.0,134.0,POR,709.196238655,50752175,50752173
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Devin Vassell,devin vassell,2.5,-112.0,-118.0,SAS,709.196242498,38295529,38295528
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Scoot Henderson,scoot henderson,3.5,-102.0,-130.0,POR,709.196238664,62064858,62064857
+2026-11-07 09:03,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Dylan Harper,dylan harper,4.5,-138.0,104.0,SAS,709.196242474,76027865,76027863
+2026-11-07 09:03,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-114.0,-114.0,NYK,709.196234001,41408270,41408268
+2026-11-07 09:03,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,10.5,-102.0,-130.0,NYK,709.196233928,17926931,17926932
+2026-11-07 09:03,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,17.5,102.0,-136.0,NYK,709.196233906,16220637,16220638
+2026-11-07 09:03,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Landry Shamet,landry shamet,10.5,100.0,-132.0,NYK,709.196233962,22599731,22599732
+2026-11-07 09:03,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Miles McBride,miles mcbride,7.5,-102.0,-130.0,NYK,709.196233898,42109139,42109140
+2026-11-07 09:03,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-106.0,-125.0,NYK,709.196233910,17926928,17926927
+2026-11-07 09:03,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,138.0,-186.0,NYK,709.196233878,16220637,16220638

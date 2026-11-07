@@ -1006,10 +1006,41 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,9.5,-128.0,-104.0,NYK,709.196233928,17926931,17926932
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,16.5,-132.0,100.0,NYK,709.196233906,16220637,16220638
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Landry Shamet,landry shamet,10.5,102.0,-136.0,NYK,709.196233962,22599731,22599732
-2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-102.0,-130.0,NYK,709.196233910,17926928,17926927
-2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Karl-Anthony Towns,karl anthony towns,12.5,-144.0,108.0,NYK,709.196233980,41408270,41408268
+2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-102.0,-130.0,NYK,709.19623391,17926928,17926927
+2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Karl-Anthony Towns,karl anthony towns,12.5,-144.0,108.0,NYK,709.19623398,41408270,41408268
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,136.0,-182.0,NYK,709.196233917,17926931,17926932
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Landry Shamet,landry shamet,2.5,118.0,-158.0,NYK,709.196233994,22599731,22599732
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-148.0,112.0,NYK,709.196233932,16220637,16220638
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Mikal Bridges,mikal bridges,2.5,-166.0,126.0,NYK,709.196233961,17926931,17926932
 2026-11-07 01:44,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Jalen Brunson,jalen brunson,6.5,-108.0,-122.0,NYK,709.196233944,17926928,17926927
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Scoot Henderson,scoot henderson,11.5,-132.0,100.0,POR,709.196238684,62064858,62064857
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Victor Wembanyama,victor wembanyama,27.5,-118.0,-112.0,SAS,709.196241593,61967224,61967225
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,De'Aaron Fox,deaaron fox,15.5,-102.0,-130.0,SAS,709.196241738,15572079,15572080
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Devin Vassell,devin vassell,11.5,-132.0,100.0,SAS,709.196242492,38295529,38295528
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Dylan Harper,dylan harper,17.5,-110.0,-120.0,SAS,709.196242477,76027865,76027863
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Jrue Holiday,jrue holiday,12.5,-122.0,-108.0,POR,709.196239148,12260620,12260621
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Damian Lillard,damian lillard,20.5,-125.0,-106.0,POR,709.196238689,12260575,12260576
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Donovan Clingan,donovan clingan,11.5,102.0,-136.0,POR,709.196238628,50752175,50752173
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Jrue Holiday,jrue holiday,4.5,122.0,-162.0,POR,709.196239146,12260620,12260621
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Stephon Castle,stephon castle,5.5,112.0,-148.0,SAS,709.196242486,64780942,64780943
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Dylan Harper,dylan harper,5.5,-104.0,-128.0,SAS,709.196242487,76027865,76027863
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Damian Lillard,damian lillard,3.5,-130.0,-102.0,POR,709.196238675,12260575,12260576
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Devin Vassell,devin vassell,4.5,124.0,-166.0,SAS,709.196242485,38295529,38295528
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Donovan Clingan,donovan clingan,10.5,-146.0,110.0,POR,709.196238591,50752175,50752173
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,De'Aaron Fox,deaaron fox,3.5,-102.0,-130.0,SAS,709.196241744,15572079,15572080
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Toumani Camara,toumani camara,3.5,-154.0,116.0,POR,709.196238645,43450264,43450266
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Deni Avdija,deni avdija,6.5,-120.0,-110.0,POR,709.196238627,37901072,37901070
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-106.0,-125.0,POR,709.196238650,43450264,43450266
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Devin Vassell,devin vassell,2.5,-114.0,-114.0,SAS,709.196242498,38295529,38295528
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Scoot Henderson,scoot henderson,2.5,-158.0,118.0,POR,709.196238664,62064858,62064857
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Dylan Harper,dylan harper,4.5,-146.0,110.0,SAS,709.196242474,76027865,76027863
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-144.0,108.0,SAS,709.196241601,61967224,61967225
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196241734,15572079,15572080
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Deni Avdija,deni avdija,6.5,-102.0,-130.0,POR,709.196238601,37901072,37901070
+2026-11-07 01:46,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,108.0,-144.0,POR,709.196238656,12260575,12260576
+2026-11-07 01:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,9.5,-122.0,-108.0,NYK,709.196233928,17926931,17926932
+2026-11-07 01:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,16.5,-130.0,-102.0,NYK,709.196233906,16220637,16220638
+2026-11-07 01:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-104.0,-128.0,NYK,709.196233910,17926928,17926927
+2026-11-07 01:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-146.0,110.0,NYK,709.196233932,16220637,16220638
+2026-11-07 01:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-132.0,100.0,NYK,709.196233958,41408270,41408268
+2026-11-07 01:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Mikal Bridges,mikal bridges,2.5,-172.0,128.0,NYK,709.196233961,17926931,17926932

@@ -3343,3 +3343,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,136.0,-182.0,NYK,709.196233917,17926931,17926932
 2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,James Harden,james harden,6.5,104.0,-138.0,CLE,709.196263550,12260579,12260580
 2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,140.0,-186.0,NYK,709.196233878,16220637,16220638
+2026-11-07 10:13,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Day'Ron Sharpe,dayron sharpe,8.5,106.0,-140.0,BKN,709.196260039,42351813,42351812
+2026-11-07 10:13,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Julius Randle,julius randle,6.5,-136.0,102.0,BKN,709.196260059,12260654,12260655
+2026-11-07 10:13,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Michael Porter Jr.,michael porter,7.5,114.0,-152.0,BKN,709.196260016,27559094,27559095
+2026-11-07 10:13,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Nolan Traore,nolan traore,4.5,120.0,-160.0,BKN,709.196260010,85959192,85959193
+2026-11-07 10:13,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,CJ McCollum,cj mccollum,3.5,-108.0,-122.0,ATL,709.196264266,12260572,12260571
+2026-11-07 10:13,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Kingston Flemings,kingston flemings,5.5,-108.0,-122.0,ATL,709.196263389,91126163,91126164

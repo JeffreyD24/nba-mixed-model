@@ -941,7 +941,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Fred VanVleet,fred vanvleet,12.5,102.0,-136.0,HOU,709.196234512,21175485,21175486
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Devin Booker,devin booker,23.5,-125.0,-106.0,PHX,709.196235822,12257187,12257186
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Dillon Brooks,dillon brooks,15.5,-112.0,-118.0,PHX,709.196236132,12798648,12798647
-2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-108.0,-122.0,HOU,709.196232450,40296685,40296686
+2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-108.0,-122.0,HOU,709.19623245,40296685,40296686
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Reed Sheppard,reed sheppard,8.5,104.0,-138.0,HOU,709.196235485,63497028,63497029
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Kevin Durant,kevin durant,22.5,-102.0,-130.0,HOU,709.196231939,12260605,12260606
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Collin Gillespie,collin gillespie,2.5,-180.0,134.0,PHX,709.196237551,43026356,43026355
@@ -949,10 +949,34 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Alperen Sengun,alperen sengun,9.5,-108.0,-122.0,HOU,709.196232452,40296685,40296686
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Tari Eason,tari eason,5.5,108.0,-144.0,HOU,709.196234653,43049623,43049624
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Dillon Brooks,dillon brooks,3.5,-158.0,118.0,PHX,709.196236131,12798648,12798647
-2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Khaman Maluach,khaman maluach,5.5,102.0,-136.0,PHX,709.196237620,76787777,76787780
+2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Khaman Maluach,khaman maluach,5.5,102.0,-136.0,PHX,709.19623762,76787777,76787780
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Kevin Durant,kevin durant,5.5,128.0,-172.0,HOU,709.196231951,12260605,12260606
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Alperen Sengun,alperen sengun,6.5,-158.0,118.0,HOU,709.196232451,40296685,40296686
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Oso Ighodaro,oso ighodaro,2.5,-148.0,112.0,PHX,709.196237081,50184535,50184532
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-148.0,112.0,PHX,709.196236016,23559725,23559726
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,134.0,-180.0,HOU,709.196235489,63497028,63497029
 2026-11-07 01:36,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-136.0,102.0,HOU,709.196232701,62134320,62134329
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Scoot Henderson,scoot henderson,11.5,-128.0,-104.0,POR,709.196238684,62064858,62064857
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Toumani Camara,toumani camara,11.5,-102.0,-130.0,POR,709.196238637,43450264,43450266
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Devin Vassell,devin vassell,11.5,-136.0,102.0,SAS,709.196242492,38295529,38295528
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Dylan Harper,dylan harper,17.5,-108.0,-122.0,SAS,709.196242477,76027865,76027863
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Deni Avdija,deni avdija,23.5,-102.0,-130.0,POR,709.196238599,37901072,37901070
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Jrue Holiday,jrue holiday,12.5,-128.0,-104.0,POR,709.196239148,12260620,12260621
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Damian Lillard,damian lillard,20.5,-130.0,-102.0,POR,709.196238689,12260575,12260576
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Donovan Clingan,donovan clingan,11.5,-102.0,-130.0,POR,709.196238628,50752175,50752173
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Jrue Holiday,jrue holiday,4.5,118.0,-158.0,POR,709.196239146,12260620,12260621
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Victor Wembanyama,victor wembanyama,11.5,-102.0,-130.0,SAS,709.196241599,61967224,61967225
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Scoot Henderson,scoot henderson,2.5,108.0,-144.0,POR,709.196238661,62064858,62064857
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Stephon Castle,stephon castle,5.5,112.0,-148.0,SAS,709.196242486,64780942,64780943
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Dylan Harper,dylan harper,5.5,100.0,-132.0,SAS,709.196242487,76027865,76027863
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Damian Lillard,damian lillard,3.5,-136.0,102.0,POR,709.196238675,12260575,12260576
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Devin Vassell,devin vassell,4.5,126.0,-168.0,SAS,709.196242485,38295529,38295528
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Donovan Clingan,donovan clingan,10.5,-146.0,110.0,POR,709.196238591,50752175,50752173
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Deni Avdija,deni avdija,6.5,-120.0,-110.0,POR,709.196238627,37901072,37901070
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-108.0,-122.0,POR,709.196238650,43450264,43450266
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Dylan Harper,dylan harper,4.5,-152.0,114.0,SAS,709.196242474,76027865,76027863
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Jrue Holiday,jrue holiday,4.5,124.0,-166.0,POR,709.196239142,12260620,12260621
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-144.0,108.0,SAS,709.196241601,61967224,61967225
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196241734,15572079,15572080
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Deni Avdija,deni avdija,6.5,102.0,-136.0,POR,709.196238601,37901072,37901070
+2026-11-07 01:38,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,110.0,-146.0,POR,709.196238656,12260575,12260576

@@ -262,3 +262,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-07 00:47:00,297639,2026-11-08T01:00:00.000Z,Bradley Braves,Pacific Tigers,106.0,dk,-1.5,-115.0,142.5,-110.0,-125.0,105.0,,,,,,
 2026-11-07 00:53:00,297421,2026-11-07T20:00:00.000Z,Montana State Bobcats,Long Beach State 49ers,50.0,cons,-10.5,-110.0,146.5,-115.0,-610.0,450.0,0.0,0.0,0.0,0.0,95.0,79.0
 2026-11-07 00:53:00,297421,2026-11-07T20:00:00.000Z,Montana State Bobcats,Long Beach State 49ers,50.0,dk,-10.5,-110.0,147.5,-105.0,-600.0,440.0,,,,,,
+2026-11-07 00:56:00,297636,2026-11-07T19:00:00.000Z,Abilene Christian Wildcats,Lamar Cardinals,75.0,cons,-2.5,-111.0,159.5,-110.0,-151.0,127.0,0.0,0.0,0.0,0.0,0.0,0.0
+2026-11-07 00:57:00,297642,2026-11-07T22:00:00.000Z,Bucknell Bison,Old Dominion Monarchs,50.0,cons,4.5,-105.0,144.5,-110.0,167.0,-202.0,0.0,0.0,0.0,0.0,0.0,0.0

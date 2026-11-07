@@ -185,3 +185,15 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 21:11:02,295394,2026-11-07,2026-11-07 20:30,orl,gs,DraftKings,event,spread,away,6.5,-106,normal
 2026-11-06 21:11:02,295394,2026-11-07,2026-11-07 20:30,orl,gs,DraftKings,event,total,under,220.5,-106,normal
 2026-11-06 21:11:02,295394,2026-11-07,2026-11-07 20:30,orl,gs,DraftKings,event,total,over,220.5,-114,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,moneyline,home,0.0,194,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,moneyline,away,0.0,-235,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,spread,home,6.5,-106,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,spread,away,-6.5,-114,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,total,over,222.5,-114,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,total,under,222.5,-106,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,DraftKings,event,moneyline,away,0.0,-241,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,DraftKings,event,moneyline,home,0.0,199,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,DraftKings,event,spread,away,-6.5,-114,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,DraftKings,event,spread,home,6.5,-106,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,DraftKings,event,total,under,222.5,-106,normal
+2026-11-06 21:13:29,295395,2026-11-07,2026-11-07 21:00,hou,phx,DraftKings,event,total,over,222.5,-114,normal

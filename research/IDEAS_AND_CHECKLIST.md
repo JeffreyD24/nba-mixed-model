@@ -124,3 +124,9 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - [x] [FIXED Nov 6 2026: bet_record.py matches the sport (NBA team codes -> NBA versions only)] [LEAD] (Nov 6, 2026, bet recaps) NBA alerts.csv / picks_log.csv had no scores for Nov 4-5 games at 11 AM Nov 6 (Kaggle results lag). Add ESPN's scoreboard as a fallback in tracker.py grade_alerts (betting-goals ops/recap.py already grades from it, marked *). Also fix bet_record.py: NBA spreads logged after Nov 5 11:30 get the "NCAAM spreads v1" tag (same market name "spread").
 - [ ] [NEXT, Nov 6 2026] Fanatics (Jeffrey's third CT book): feed live (fanatics_feed.py, Action Network book 2821, all sports). Next: (1) add Fanatics to every alert's best-book comparison (fanduel.compare in nba/nhl/nfl), (2) Fanatics props from BettingPros (book 14) for NBA/NFL props, (3) grade each live model at Fanatics openers once a few weeks of lines exist.
 - [ ] [LEAD, Nov 6 2026, RULE 12] RotoWire props history (research/feed/rotowire_props/, every book incl. Fanatics/BetMGM/Caesars, NFL+NBA, every 10 min since Nov 6): after 2-3 weeks, grade NBA props v1b and NFL props v2 at EACH book's own opener (multi-market track B). Add NHL if RotoWire has an NHL props page.
+
+## Line-move persistence / bet timing (Nov 7, 2026; betting-goals `models/tests/NBA_MOVE_BLUP_TIMING_RESULTS.md`)
+- [x] Walk-forward BLUP of past moves (team; player markers) predicts the next open-to-close move: pre-registered, PASS SBR 2012-22 LOSO,
+  CONFIRMED DK 2023-26 (timing value +0.51-0.61 pts of line per signalled game; player version preferred)
+- [ ] Add the player-marker move prediction to the live DK totals movement model (movement_model_v1an) and the alert timing notes: pre-register, LOSO DK 2022-26 (+ SBR for spreads)
+- [ ] "Bet the predicted-move side at the close" (result - close slope on the prediction was positive, noticed only): pre-register SBR 2012-17, grade 2018-22, then DK 2023-26

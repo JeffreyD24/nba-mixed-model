@@ -3685,3 +3685,20 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 11:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-130.0,-102.0,SAS,709.196241734,15572079,15572080
 2026-11-07 11:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Deni Avdija,deni avdija,6.5,102.0,-136.0,POR,709.196238601,37901072,37901070
 2026-11-07 11:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,110.0,-146.0,POR,709.196238656,12260575,12260576
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Franz Wagner,franz wagner,21.5,-128.0,-104.0,ORL,709.196236458,40196992,40196991
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Stephen Curry,stephen curry,26.5,-110.0,-118.0,GSW,709.196238217,12260597,12260598
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Anthony Black,anthony black,14.5,-125.0,-106.0,ORL,709.196236355,50378078,50378080
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Yaxel Lendeborg,yaxel lendeborg,17.5,-128.0,-104.0,GSW,709.196238234,64937530,64937543
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Wendell Carter Jr.,wendell carter,12.5,-106.0,-125.0,ORL,709.196236347,41408443,41408444
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Jase Richardson,jase richardson,2.5,-110.0,-118.0,ORL,709.196236360,76284095,76284094
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Wendell Carter Jr.,wendell carter,1.5,-125.0,-106.0,ORL,709.196236364,41408443,41408444
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-138.0,104.0,ORL,709.196236448,43072432,43072430
+2026-11-07 11:20,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Anthony Black,anthony black,4.5,-144.0,108.0,ORL,709.196236325,50378078,50378080
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Michael Porter Jr.,michael porter,22.5,-112.0,-118.0,BKN,709.196260081,27559094,27559095
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Nolan Traore,nolan traore,10.5,-136.0,102.0,BKN,709.196260123,85959192,85959193
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Julius Randle,julius randle,20.5,-106.0,-122.0,BKN,709.196259993,12260654,12260655
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Day'Ron Sharpe,dayron sharpe,8.5,-125.0,-106.0,BKN,709.196260072,42351813,42351812
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,CJ McCollum,cj mccollum,2.5,-114.0,-114.0,ATL,709.196264265,12260572,12260571
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Day'Ron Sharpe,dayron sharpe,8.5,106.0,-140.0,BKN,709.196260039,42351813,42351812
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Dyson Daniels,dyson daniels,5.5,-136.0,102.0,ATL,709.196263433,50686100,50686102
+2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Julius Randle,julius randle,4.5,-106.0,-125.0,BKN,709.196260106,12260654,12260655

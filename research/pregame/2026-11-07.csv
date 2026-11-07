@@ -4231,3 +4231,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,spread,away,3.5,-122,normal
 2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,total,over,54.5,-102,normal
 2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,total,under,54.5,-125,normal
+2026-11-07 03:57:20,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,total,over,229.5,-105,normal
+2026-11-07 03:57:20,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,total,under,229.5,-114,normal
+2026-11-07 03:57:20,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,total,under,221.5,-114,normal
+2026-11-07 03:57:20,295395,2026-11-07,2026-11-07 21:00,hou,phx,Consensus,event,total,over,221.5,-108,normal
+2026-11-07 03:58:32,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,firsthalf,spread,home,-6.5,-110,normal
+2026-11-07 03:58:32,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,firsthalf,spread,away,6.5,-110,normal
+2026-11-07 03:58:32,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,secondquarter,spread,home,-3.5,-105,normal
+2026-11-07 03:58:32,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Caesars,secondquarter,spread,away,3.5,-125,normal
+2026-11-07 03:58:32,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,total,under,221.0,-110,normal
+2026-11-07 03:58:32,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,total,over,221.0,-110,normal

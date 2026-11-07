@@ -3284,3 +3284,22 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 09:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,132.0,-178.0,HOU,709.196235489,63497028,63497029
 2026-11-07 09:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,134.0,-180.0,HOU,709.196231971,12260605,12260606
 2026-11-07 09:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-130.0,-102.0,HOU,709.196232701,62134320,62134329
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Kingston Flemings,kingston flemings,9.5,100.0,-132.0,ATL,709.196263402,91126163,91126164
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Onyeka Okongwu,onyeka okongwu,13.5,-102.0,-130.0,ATL,709.196263427,42160899,42160900
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Jalen Johnson,jalen johnson,20.5,-114.0,-114.0,ATL,709.196263407,40197109,40197108
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Nickeil Alexander-Walker,nickeil alexander walker,20.5,-128.0,-104.0,ATL,709.196263393,38310472,38310473
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,CJ McCollum,cj mccollum,2.5,-114.0,-114.0,ATL,709.196264265,12260572,12260571
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Onyeka Okongwu,onyeka okongwu,8.5,116.0,-158.0,ATL,709.196263422,42160899,42160900
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Nickeil Alexander-Walker,nickeil alexander walker,3.5,128.0,-172.0,ATL,709.196263406,38310472,38310473
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Kingston Flemings,kingston flemings,5.5,-106.0,-125.0,ATL,709.196263389,91126163,91126164
+2026-11-07 09:55,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Nickeil Alexander-Walker,nickeil alexander walker,3.5,116.0,-154.0,ATL,709.196263409,38310472,38310473
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Miles Bridges,miles bridges,15.5,-122.0,-108.0,PHX,709.196236017,23559725,23559726
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Luke Kennard,luke kennard,5.5,-122.0,-108.0,PHX,709.196237721,16954514,16954515
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Dillon Brooks,dillon brooks,15.5,-112.0,-118.0,PHX,709.196236132,12798648,12798647
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jalen Green,jalen green,14.5,-132.0,100.0,PHX,709.196236598,41386184,41386185
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Khaman Maluach,khaman maluach,5.5,-114.0,-114.0,PHX,709.196237618,76787777,76787780
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Collin Gillespie,collin gillespie,2.5,-182.0,136.0,PHX,709.196237551,43026356,43026355
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Dillon Brooks,dillon brooks,3.5,-118.0,-112.0,PHX,709.196236131,12798648,12798647
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Dillon Brooks,dillon brooks,2.5,134.0,-180.0,PHX,709.196236752,12798648,12798647
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Oso Ighodaro,oso ighodaro,2.5,-152.0,114.0,PHX,709.196237081,50184535,50184532
+2026-11-07 09:55,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-152.0,114.0,PHX,709.196236016,23559725,23559726

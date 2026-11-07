@@ -98,3 +98,6 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 23:35,297629,Murray State Racers,Northwestern State Demons,-21.5,21.03,13.59,21.31,21.44,-0.06,PASS,edge 0.06 < 0.5,21.81,0.31,PASS,edge 0.31 < 0.62,2026-11-06 19:01
 2026-11-06 23:35,297643,Little Rock Trojans,Southeastern Louisiana Lions,-5.5,11.11,8.21,8.94,5.97,0.47,PASS,edge 0.47 < 0.5,6.12,0.62,PASS,edge 0.62 < 0.62,2026-11-06 19:01
 2026-11-06 23:40,297633,Niagara Purple Eagles,Morgan State Bears,-3.5,5.48,2.76,8.84,4.02,0.52,PASS,a team has under 3 games,4.12,0.62,PASS,a team has under 3 games,2026-11-06 19:01
+2026-11-06 23:45,297642,Bucknell Bison,Old Dominion Monarchs,4.5,3.52,-0.46,4.11,-3.55,0.95,PASS,a team has under 3 games,-3.72,0.78,PASS,a team has under 3 games,2026-11-06 19:01
+2026-11-06 23:45,297420,UNC Asheville Bulldogs,Western Carolina Catamounts,2.5,2.96,1.91,5.77,-1.57,0.93,PASS,a team has under 3 games,-1.68,0.82,PASS,a team has under 3 games,2026-11-06 19:01
+2026-11-06 23:45,297427,Texas Rio Grande Valley Vaqueros,Prairie View A&M Panthers,-8.5,18.46,22.28,15.22,9.7,1.2,PASS,a team has under 3 games,9.73,1.23,PASS,a team has under 3 games,2026-11-06 19:01

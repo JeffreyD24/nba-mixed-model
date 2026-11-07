@@ -111500,3 +111500,75 @@ season,date,start,espn_id,hk,ak,home_name,away_name,home_conf_id,away_conf_id,h,
 2027,2026-11-05,2026-11-05,401929292,2492,3167,Pepperdine Waves,La Sierra Golden Eagles,29.0,,0.5,False,False,False,STD,99,99,106,66,,,,,,,,AN open / DK close
 2027,2026-11-05,2026-11-05,401929370,2453,237,North Alabama Lions,Union (TN) Bulldogs,30.0,,0.5,False,False,False,STD,99,99,76,66,,,,,,,,
 2027,2026-11-05,2026-11-05,401929418,50,2232,Florida A&M Rattlers,Fort Valley State Wildcats,26.0,,0.5,False,False,False,STD,99,99,70,75,,,,,,,,
+2027,2026-11-06,2026-11-06,401906758,333,2032,Alabama Crimson Tide,Arkansas State Red Wolves,23.0,27.0,0.5,False,False,False,STD,20,99,101,86,-25.5,-25.5,168.5,178.5,-25.5,173.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401906780,61,2506,Georgia Bulldogs,Presbyterian Blue Hose,23.0,6.0,0.5,False,False,False,STD,99,99,91,77,-20.5,-24.5,155.5,157.5,-21.5,156.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401906802,201,2400,Oklahoma Sooners,Mississippi Valley State Delta Devils,23.0,26.0,0.5,False,False,False,STD,99,99,84,57,-38.5,-40.5,148.5,152.5,-38.5,148.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909523,269,2174,Marquette Golden Eagles,Detroit Mercy Titans,4.0,45.0,0.5,False,False,False,STD,99,99,93,32,-30.5,-32.5,155.5,154.5,-30.5,152.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909542,2752,2199,Xavier Musketeers,Eastern Michigan Eagles,4.0,14.0,0.5,False,False,False,STD,99,99,76,53,-18.5,-23.5,155.5,151.5,-20.5,156.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909552,103,113,Boston College Eagles,Massachusetts Minutemen,2.0,14.0,0.0,True,False,False,STD,99,99,71,55,-5.5,-5.5,146.5,143.5,-5.5,144.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909695,52,2653,Florida State Seminoles,Troy Trojans,2.0,27.0,0.5,False,False,False,STD,99,99,91,68,-18.5,-22.5,154.5,158.5,-20.5,157.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909751,239,2029,Baylor Bears,Arkansas-Pine Bluff Golden Lions,8.0,26.0,0.5,False,False,False,STD,99,99,109,53,-33.5,-38.5,155.5,163.5,-36.5,158.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909772,66,2572,Iowa State Cyclones,Southern Miss Golden Eagles,8.0,27.0,0.5,False,False,False,STD,18,99,83,57,-29.5,-31.5,151.5,145.5,-30.5,148.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909785,2305,2393,Kansas Jayhawks,Middle Tennessee Blue Raiders,8.0,11.0,0.5,False,False,False,STD,17,99,89,45,-27.5,-28.5,150.5,156.5,-27.5,150.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401909797,2306,2463,Kansas State Wildcats,Cal State Northridge Matadors,8.0,9.0,0.5,False,False,False,STD,99,99,95,78,-10.5,-12.5,159.5,164.5,-9.5,159.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401911005,2050,282,Ball State Cardinals,Indiana State Sycamores,14.0,18.0,0.5,False,False,False,STD,99,99,66,69,-3.5,-1.5,146.5,146.5,-2.5,147.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401911006,2117,2800,Central Michigan Chippewas,Alma Scots,14.0,,0.5,False,False,False,STD,99,99,93,50,,,,,,,,AN open / DK close
+2027,2026-11-06,2026-11-06,401911249,142,139,Missouri Tigers,Saint Louis Billikens,23.0,3.0,0.0,True,False,False,STD,99,99,84,90,-3.5,-2.5,162.5,161.5,-2.5,161.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401911305,225,104,Brown Bears,Boston University Terriers,12.0,22.0,0.5,False,False,False,STD,99,99,67,72,-5.5,-1.5,160.5,143.5,-5.5,,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401912208,228,44,Clemson Tigers,American University Eagles,2.0,22.0,0.5,False,False,False,STD,99,99,82,73,-17.5,-15.5,144.5,141.5,-17.5,141.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401913100,153,2747,North Carolina Tar Heels,Wofford Terriers,2.0,24.0,0.5,False,False,False,STD,99,99,109,70,-22.5,-20.5,155.5,155.5,-22.5,156.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401916304,135,2900,Minnesota Golden Gophers,St. Thomas Tommies,7.0,49.0,0.5,False,False,False,STD,99,99,76,62,-15.5,-15.5,148.5,148.5,-15.5,146.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401916314,194,2754,Ohio State Buckeyes,Youngstown State Penguins,7.0,45.0,0.5,False,False,False,STD,99,99,89,65,-24.5,-25.5,153.5,154.5,-25.5,154.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401917515,301,2627,San Diego Toreros,Tarleton State Texans,29.0,30.0,0.5,False,False,False,STD,99,99,96,90,-5.5,-7.5,150.5,147.5,-4.5,150.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401917516,2351,124946,Loyola Marymount Lions,Lincoln (CA) Oaklanders,29.0,,0.5,False,False,False,STD,99,99,102,50,,,,,,,,AN open / DK close
+2027,2026-11-06,2026-11-06,401917914,145,2110,Ole Miss Rebels,Central Arkansas Bears,23.0,30.0,0.5,False,False,False,STD,99,99,92,60,-18.5,-16.5,149.5,154.5,-19.5,150.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401917949,338,2046,Kennesaw State Owls,Austin Peay Governors,11.0,30.0,0.5,False,False,False,STD,99,99,71,69,-5.5,-5.5,157.5,161.5,-6.5,157.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401918956,152,2193,NC State Wolfpack,East Tennessee State Buccaneers,2.0,24.0,0.5,False,False,False,STD,99,99,77,63,-15.5,-17.5,150.5,152.5,-16.5,152.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401919015,5,2447,UAB Blazers,Nicholls Colonels,62.0,25.0,0.5,False,False,False,STD,99,99,70,63,-11.5,-15.5,155.5,158.5,-13.5,155.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401919040,197,2511,Oklahoma State Cowboys,Queens University Royals,8.0,46.0,0.5,False,False,False,STD,99,99,118,68,-18.5,-17.5,173.5,179.5,-19.5,175.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401919048,2628,2582,TCU Horned Frogs,Southern Jaguars,8.0,26.0,0.5,False,False,False,STD,99,99,106,54,-23.5,-26.5,152.5,152.5,-23.5,152.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920072,2244,2154,George Mason Patriots,Coppin State Eagles,3.0,16.0,0.5,False,False,False,STD,99,99,68,51,-26.5,-27.5,142.5,140.5,-26.5,142.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920305,59,290,Georgia Tech Yellow Jackets,Georgia Southern Eagles,2.0,27.0,0.5,False,False,False,STD,99,99,95,83,-15.5,-16.5,153.5,160.5,-16.5,154.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920344,204,2856,Oregon State Beavers,California Baptist Lancers,21.0,9.0,0.5,False,False,False,STD,99,99,96,68,-16.5,-20.5,150.5,157.5,-16.5,153.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920423,258,111,Virginia Cavaliers,Northeastern Huskies,2.0,10.0,0.5,False,False,False,STD,9,99,97,72,-30.5,-33.5,157.5,159.5,-33.5,159.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920685,130,41,Michigan Wolverines,UConn Huskies,7.0,4.0,0.0,True,False,True,STD,16,4,77,85,5.5,7.5,146.5,142.5,5.5,146.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920717,2483,331,Oregon Ducks,Eastern Washington Eagles,7.0,5.0,0.5,False,False,False,STD,99,99,98,71,-14.5,-16.5,152.5,149.5,-15.5,152.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920726,2294,2197,Iowa Hawkeyes,Eastern Illinois Panthers,7.0,20.0,0.5,False,False,False,STD,99,99,91,47,-35.5,-34.5,137.5,134.5,-35.5,137.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920733,77,2619,Northwestern Wildcats,Stony Brook Seawolves,7.0,10.0,0.5,False,False,False,STD,99,99,78,65,-13.5,-11.5,144.5,144.5,-14.5,144.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920807,245,94,Texas A&M Aggies,Northern Kentucky Norse,23.0,45.0,0.5,False,False,False,STD,99,99,104,67,-25.5,-26.5,166.5,170.5,-24.5,169.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920894,275,48,Wisconsin Badgers,Delaware Blue Hens,7.0,11.0,0.5,False,False,False,STD,99,99,73,64,-24.5,-25.5,152.5,155.5,-24.5,152.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920920,116,2352,Mount St. Mary's Mountaineers,Loyola Maryland Greyhounds,13.0,22.0,0.5,False,False,False,STD,99,99,68,57,-5.5,-5.5,150.5,148.5,-5.5,150.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401920952,140,79,Kansas City Roos,Southern Illinois Salukis,49.0,18.0,0.5,False,False,False,STD,99,99,100,93,3.5,1.5,145.5,143.5,3.5,146.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921061,2539,2449,San Francisco Dons,North Dakota State Bison,29.0,49.0,0.5,False,False,False,STD,99,99,79,70,-6.5,-8.5,146.5,145.5,-7.5,146.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921140,2210,2430,Elon Phoenix,UNC Greensboro Spartans,10.0,24.0,0.5,False,False,False,STD,99,99,74,65,-7.5,-8.5,154.5,150.5,-7.5,154.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921166,325,2391,Cleveland State Vikings,Michigan Dearborn Wolves,45.0,,0.5,False,False,False,STD,99,99,103,79,,,,,,,,
+2027,2026-11-06,2026-11-06,401921285,222,107,Villanova Wildcats,Holy Cross Crusaders,4.0,22.0,0.5,False,False,False,STD,99,99,95,66,-30.5,-34.5,150.5,151.5,-31.5,151.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921719,2390,2681,Miami Hurricanes,Wagner Seahawks,2.0,19.0,0.5,False,False,False,STD,14,99,83,57,,,,,,,,
+2027,2026-11-06,2026-11-06,401921727,24,2473,Stanford Cardinal,Oakland Golden Grizzlies,2.0,45.0,0.5,False,False,False,STD,99,99,81,63,-14.5,-14.5,151.5,146.5,-14.5,150.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921732,9,2458,Arizona State Sun Devils,Northern Colorado Bears,8.0,5.0,0.5,False,False,False,STD,99,99,90,63,-14.5,-19.5,150.5,143.5,-15.5,149.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921739,252,2437,BYU Cougars,Omaha Mavericks,8.0,49.0,0.5,False,False,False,STD,25,99,108,67,-29.5,-33.5,159.5,161.5,-29.5,160.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921754,2116,43,UCF Knights,Yale Bulldogs,8.0,12.0,0.5,False,False,False,STD,99,99,87,75,-9.5,-9.5,152.5,152.5,-8.5,151.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921767,277,56,West Virginia Mountaineers,Stetson Hatters,8.0,46.0,0.5,False,False,False,STD,99,99,91,53,-24.5,-27.5,143.5,139.5,-24.5,141.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921802,96,256,Kentucky Wildcats,James Madison Dukes,23.0,27.0,0.5,False,False,False,STD,23,99,89,80,-23.5,-23.5,156.5,156.5,-25.5,158.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401921809,99,2640,LSU Tigers,Texas Southern Tigers,23.0,26.0,0.5,False,False,False,STD,99,99,92,51,-30.5,-36.5,159.5,160.5,-30.5,159.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401922021,2751,304,Wyoming Cowboys,Idaho State Bengals,44.0,5.0,0.5,False,False,False,STD,99,99,93,62,-18.5,-18.5,146.5,146.5,-19.5,147.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401922059,2908,2569,South Carolina Upstate Spartans,South Carolina State Bulldogs,6.0,16.0,0.5,False,False,False,STD,99,99,70,78,-7.5,-3.5,148.5,148.5,-7.5,148.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401922210,526,128550,Florida Gulf Coast Eagles,New College Mighty Banyans,46.0,,0.5,False,False,False,STD,99,99,89,67,,,,,,,,
+2027,2026-11-06,2026-11-06,401922219,26,2454,UCLA Bruins,North Florida Ospreys,7.0,46.0,0.5,False,False,False,STD,22,99,114,63,-31.5,-31.5,154.5,157.5,-31.5,155.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401922248,2229,2697,Florida International Panthers,West Florida Argonauts,11.0,46.0,0.5,False,False,False,STD,99,99,85,75,-13.5,-16.5,153.5,163.5,-13.5,154.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401922261,36,70,Colorado State Rams,Idaho Vandals,21.0,5.0,0.5,False,False,False,STD,99,99,78,67,-16.5,-15.5,148.5,151.5,-15.5,148.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401923260,2750,2226,Wright State Raiders,Florida Atlantic Owls,45.0,62.0,0.5,False,False,False,STD,99,99,97,71,-3.5,-3.5,156.5,156.5,-2.5,156.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401925089,2617,2639,Stephen F. Austin Lumberjacks,Texas Lutheran Bulldogs,25.0,,0.5,False,False,False,STD,99,99,89,32,,,,,,,,
+2027,2026-11-06,2026-11-06,401925097,309,357,Louisiana Ragin' Cajuns,Texas A&M-Corpus Christi Islanders,27.0,25.0,0.5,False,False,False,STD,99,99,60,67,-1.5,,134.5,129.5,-2.5,134.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401925641,2010,126826,Alabama A&M Bulldogs,Mississippi U for Women Owls,26.0,,0.5,False,False,False,STD,99,99,103,47,,,,,,,,
+2027,2026-11-06,2026-11-06,401926131,2509,2674,Purdue Boilermakers,Valparaiso Beacons,7.0,18.0,0.5,False,False,False,STD,99,99,80,83,-17.5,-19.5,146.5,144.5,-19.5,146.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401926135,164,2441,Rutgers Scarlet Knights,New Haven Chargers,7.0,19.0,0.5,False,False,False,STD,99,99,81,54,-24.5,-24.5,142.5,137.5,-24.5,142.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401926161,2643,2215,The Citadel Bulldogs,Erskine Flying Fleet,24.0,,0.5,False,False,False,STD,99,99,100,57,,,,,,,,AN open / DK close
+2027,2026-11-06,2026-11-06,401926813,232,2444,Charleston Cougars,Newberry Wolves,10.0,,0.5,False,False,False,STD,99,99,112,66,,,,,,,,
+2027,2026-11-06,2026-11-06,401928622,2623,2654,Missouri State Bears,Truman State Bulldogs,11.0,,0.5,False,False,False,STD,99,99,79,62,,,,,,,,
+2027,2026-11-06,2026-11-06,401928823,82,2523,UIC Flames,Robert Morris Colonials,18.0,45.0,0.5,False,False,False,STD,99,99,79,56,-9.5,-10.5,143.5,142.5,-11.5,143.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401928840,2309,128531,Kent State Golden Flashes,Roberts Wesleyan Redhawks,14.0,,0.5,False,False,False,STD,99,99,102,50,,,,,,,,
+2027,2026-11-06,2026-11-06,401929001,62,3246,Hawai'i Rainbow Warriors,Bethesda Flames,44.0,,0.5,False,False,False,TRNMNT,99,99,116,44,,,,,,,,
+2027,2026-11-06,2026-11-06,401929356,2501,250,Portland Pilots,UT Arlington Mavericks,29.0,30.0,0.0,True,False,False,TRNMNT,99,99,85,89,-1.5,-2.5,150.5,150.5,-1.5,150.5,DraftKings,AN open / DK close
+2027,2026-11-06,2026-11-06,401929385,2198,111166,Eastern Kentucky Colonels,Midway Eagles,30.0,,0.5,False,False,False,STD,99,99,106,68,,,,,,,,
+2027,2026-11-06,2026-11-06,401929410,2571,3065,South Dakota State Jackrabbits,Briar Cliff Chargers,49.0,,0.5,False,False,False,STD,99,99,71,49,,,,,,,,

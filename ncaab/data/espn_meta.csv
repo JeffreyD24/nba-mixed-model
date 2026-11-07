@@ -113468,35 +113468,35 @@ date,espn_id,neutral,conf_game,tournament,notes,home_espn_team,home_name,home_lo
 2026-11-02,401911452,False,False,STD,,2440,Nevada Wolf Pack,Nevada,44.0,99,86,2523,Robert Morris Colonials,Robert Morris,45.0,99,49
 2026-11-02,401920122,False,False,STD,,13,Cal Poly Mustangs,Cal Poly,9.0,99,78,3182,Cal State San Marcos Cougars,Cal State San Marcos,,99,62
 2026-11-02,401917506,False,False,STD,,62,Hawai'i Rainbow Warriors,Hawai'i,44.0,99,74,2547,Seattle U Redhawks,Seattle U,29.0,99,73
-2026-11-03,401906848,False,False,STD,,2633,Tennessee Volunteers,Tennessee,23,8,90,2747,Wofford Terriers,Wofford,24,99,59
-2026-11-03,401920422,False,False,STD,,258,Virginia Cavaliers,Virginia,2,9,89,2182,Drexel Dragons,Drexel,10,99,60
-2026-11-03,401929372,False,False,STD,,8,Arkansas Razorbacks,Arkansas,23,12,106,2029,Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff,26,99,61
-2026-11-03,401906757,False,False,STD,,333,Alabama Crimson Tide,Alabama,23,20,96,2534,Sam Houston Bearkats,Sam Houston,11,99,74
-2026-11-03,401921801,False,False,STD,,96,Kentucky Wildcats,Kentucky,23,23,85,2363,Manhattan Jaspers,Manhattan,13,99,57
-2026-11-03,401926180,False,False,STD,,2430,UNC Greensboro Spartans,UNC Greensboro,24,99,96,2397,Milligan Buffaloes,Milligan,,99,43
-2026-11-03,401925779,False,False,STD,,2184,Duquesne Dukes,Duquesne,3,99,78,2870,Purdue Fort Wayne Mastodons,Purdue Fort Wayne,45,99,71
-2026-11-03,401921819,False,False,STD,,2579,South Carolina Gamecocks,South Carolina,23,99,81,56,Stetson Hatters,Stetson,46,99,55
-2026-11-03,401921153,False,False,STD,,2448,North Carolina A&T Aggies,North Carolina A&T,10,99,92,2684,Warren Wilson Owls,Warren Wilson,,99,53
-2026-11-03,401920376,False,False,STD,,259,Virginia Tech Hokies,Virginia Tech,2,99,88,2154,Coppin State Eagles,Coppin State,16,99,54
-2026-11-03,401920304,False,False,STD,,59,Georgia Tech Yellow Jackets,Georgia Tech,2,99,75,2261,Hampton Pirates,Hampton,10,99,55
-2026-11-03,401920061,False,False,STD,,227,Rhode Island Rams,Rhode Island,3,99,103,107,Holy Cross Crusaders,Holy Cross,22,99,59
-2026-11-03,401909551,False,False,STD,,103,Boston College Eagles,Boston College,2,99,76,2681,Wagner Seahawks,Wagner,19,99,50
-2026-11-03,401928621,False,False,STD,,2623,Missouri State Bears,Missouri State,11,99,88,2876,Lincoln (MO) Blue Tigers,Lincoln (MO),,99,60
-2026-11-03,401927385,False,False,STD,,2460,Northern Iowa Panthers,Northern Iowa,18,99,106,2155,Cornell (IA) Rams,Cornell (IA),,99,70
-2026-11-03,401924950,False,False,STD,,2277,Houston Christian Huskies,Houston Christian,25,99,108,2347,Louisiana Christian Wildcats,Louisiana Christian,,99,45
-2026-11-03,401921808,False,False,STD,,99,LSU Tigers,LSU,23,99,100,2443,LSU New Orleans Privateers,LSU New Orleans,25,99,57
-2026-11-03,401921165,False,False,STD,,142,Missouri Tigers,Missouri,23,99,111,325,Cleveland State Vikings,Cleveland State,45,99,50
-2026-11-03,401920806,False,False,STD,,245,Texas A&M Aggies,Texas A&M,23,99,97,2011,Alabama State Hornets,Alabama State,26,99,66
-2026-11-03,401920702,False,False,STD,,2294,Iowa Hawkeyes,Iowa,7,99,76,288,Lipscomb Bisons,Lipscomb,46,99,54
-2026-11-03,401909796,False,False,STD,,2306,Kansas State Wildcats,Kansas State,8,99,66,2571,South Dakota State Jackrabbits,South Dakota State,49,99,68
-2026-11-03,401928787,False,False,STD,,166,New Mexico State Aggies,New Mexico State,11,99,73,2703,Western New Mexico Mustangs,Western New Mexico,,99,66
-2026-11-03,401924920,False,False,STD,,2751,Wyoming Cowboys,Wyoming,44,99,95,2518,Regis University REGIS UNIVERSITY,Regis University,,99,48
-2026-11-03,401929624,False,False,STD,,300,UC Irvine Anteaters,UC Irvine,9,99,92,411,Chapman Panthers,Chapman,,99,66
-2026-11-03,401925914,False,False,STD,,2502,Portland State Vikings,Portland State,5,99,111,2333,Lewis & Clark River Otters,Lewis & Clark,,99,59
-2026-11-03,401924911,False,False,STD,,2439,UNLV Rebels,UNLV,44,99,89,2464,Northern Arizona Lumberjacks,Northern Arizona,5,99,77
-2026-11-03,401920343,False,False,STD,,2856,California Baptist Lancers,California Baptist,9,99,63,2454,North Florida Ospreys,North Florida,46,99,71
-2026-11-03,401920155,False,False,STD,,21,San Diego State Aztecs,San Diego State,21,99,102,2239,Cal State Fullerton Titans,Cal State Fullerton,9,99,78
-2026-11-03,401917511,False,False,STD,,279,Pacific Tigers,Pacific,29,99,102,3246,Bethesda Flames,Bethesda,,99,47
+2026-11-03,401906848,False,False,STD,,2633,Tennessee Volunteers,Tennessee,23.0,8,90,2747,Wofford Terriers,Wofford,24.0,99,59
+2026-11-03,401920422,False,False,STD,,258,Virginia Cavaliers,Virginia,2.0,9,89,2182,Drexel Dragons,Drexel,10.0,99,60
+2026-11-03,401929372,False,False,STD,,8,Arkansas Razorbacks,Arkansas,23.0,12,106,2029,Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff,26.0,99,61
+2026-11-03,401906757,False,False,STD,,333,Alabama Crimson Tide,Alabama,23.0,20,96,2534,Sam Houston Bearkats,Sam Houston,11.0,99,74
+2026-11-03,401921801,False,False,STD,,96,Kentucky Wildcats,Kentucky,23.0,23,85,2363,Manhattan Jaspers,Manhattan,13.0,99,57
+2026-11-03,401926180,False,False,STD,,2430,UNC Greensboro Spartans,UNC Greensboro,24.0,99,96,2397,Milligan Buffaloes,Milligan,,99,43
+2026-11-03,401925779,False,False,STD,,2184,Duquesne Dukes,Duquesne,3.0,99,78,2870,Purdue Fort Wayne Mastodons,Purdue Fort Wayne,45.0,99,71
+2026-11-03,401921819,False,False,STD,,2579,South Carolina Gamecocks,South Carolina,23.0,99,81,56,Stetson Hatters,Stetson,46.0,99,55
+2026-11-03,401921153,False,False,STD,,2448,North Carolina A&T Aggies,North Carolina A&T,10.0,99,92,2684,Warren Wilson Owls,Warren Wilson,,99,53
+2026-11-03,401920376,False,False,STD,,259,Virginia Tech Hokies,Virginia Tech,2.0,99,88,2154,Coppin State Eagles,Coppin State,16.0,99,54
+2026-11-03,401920304,False,False,STD,,59,Georgia Tech Yellow Jackets,Georgia Tech,2.0,99,75,2261,Hampton Pirates,Hampton,10.0,99,55
+2026-11-03,401920061,False,False,STD,,227,Rhode Island Rams,Rhode Island,3.0,99,103,107,Holy Cross Crusaders,Holy Cross,22.0,99,59
+2026-11-03,401909551,False,False,STD,,103,Boston College Eagles,Boston College,2.0,99,76,2681,Wagner Seahawks,Wagner,19.0,99,50
+2026-11-03,401928621,False,False,STD,,2623,Missouri State Bears,Missouri State,11.0,99,88,2876,Lincoln (MO) Blue Tigers,Lincoln (MO),,99,60
+2026-11-03,401927385,False,False,STD,,2460,Northern Iowa Panthers,Northern Iowa,18.0,99,106,2155,Cornell (IA) Rams,Cornell (IA),,99,70
+2026-11-03,401924950,False,False,STD,,2277,Houston Christian Huskies,Houston Christian,25.0,99,108,2347,Louisiana Christian Wildcats,Louisiana Christian,,99,45
+2026-11-03,401921808,False,False,STD,,99,LSU Tigers,LSU,23.0,99,100,2443,LSU New Orleans Privateers,LSU New Orleans,25.0,99,57
+2026-11-03,401921165,False,False,STD,,142,Missouri Tigers,Missouri,23.0,99,111,325,Cleveland State Vikings,Cleveland State,45.0,99,50
+2026-11-03,401920806,False,False,STD,,245,Texas A&M Aggies,Texas A&M,23.0,99,97,2011,Alabama State Hornets,Alabama State,26.0,99,66
+2026-11-03,401920702,False,False,STD,,2294,Iowa Hawkeyes,Iowa,7.0,99,76,288,Lipscomb Bisons,Lipscomb,46.0,99,54
+2026-11-03,401909796,False,False,STD,,2306,Kansas State Wildcats,Kansas State,8.0,99,66,2571,South Dakota State Jackrabbits,South Dakota State,49.0,99,68
+2026-11-03,401928787,False,False,STD,,166,New Mexico State Aggies,New Mexico State,11.0,99,73,2703,Western New Mexico Mustangs,Western New Mexico,,99,66
+2026-11-03,401924920,False,False,STD,,2751,Wyoming Cowboys,Wyoming,44.0,99,95,2518,Regis University REGIS UNIVERSITY,Regis University,,99,48
+2026-11-03,401929624,False,False,STD,,300,UC Irvine Anteaters,UC Irvine,9.0,99,92,411,Chapman Panthers,Chapman,,99,66
+2026-11-03,401925914,False,False,STD,,2502,Portland State Vikings,Portland State,5.0,99,111,2333,Lewis & Clark River Otters,Lewis & Clark,,99,59
+2026-11-03,401924911,False,False,STD,,2439,UNLV Rebels,UNLV,44.0,99,89,2464,Northern Arizona Lumberjacks,Northern Arizona,5.0,99,77
+2026-11-03,401920343,False,False,STD,,2856,California Baptist Lancers,California Baptist,9.0,99,63,2454,North Florida Ospreys,North Florida,46.0,99,71
+2026-11-03,401920155,False,False,STD,,21,San Diego State Aztecs,San Diego State,21.0,99,102,2239,Cal State Fullerton Titans,Cal State Fullerton,9.0,99,78
+2026-11-03,401917511,False,False,STD,,279,Pacific Tigers,Pacific,29.0,99,102,3246,Bethesda Flames,Bethesda,,99,47
 2026-11-04,401920232,False,False,STD,,159,Dartmouth Big Green,Dartmouth,12,99,107,126956,Framingham State Rams,Framingham State,,99,50
 2026-11-04,401929450,False,False,STD,,295,Old Dominion Monarchs,Old Dominion,27,99,91,131784,Regent Regent Royals,Regent,,99,47
 2026-11-04,401928853,False,False,STD,,2415,Morgan State Bears,Morgan State,16,99,95,3229,Virginia Lynchburg Dragons,Virginia Lynchburg,,99,58
@@ -113588,3 +113588,75 @@ date,espn_id,neutral,conf_game,tournament,notes,home_espn_team,home_name,home_lo
 2026-11-05,401911518,False,False,STD,,302,UC Davis Aggies,UC Davis,44,99,65,2381,Menlo Oaks,Menlo,,99,52
 2026-11-05,401920133,False,False,STD,,2934,Cal State Bakersfield Roadrunners,Cal State Bakersfield,9,99,93,128501,Stanton Elks,Stanton,,99,54
 2026-11-05,401929292,False,False,STD,,2492,Pepperdine Waves,Pepperdine,29,99,106,3167,La Sierra Golden Eagles,La Sierra,,99,66
+2026-11-06,401920685,True,False,STD,Hall of Fame Series - Boston,130,Michigan Wolverines,Michigan,7,16,77,41,UConn Huskies,UConn,4,4,85
+2026-11-06,401920423,False,False,STD,,258,Virginia Cavaliers,Virginia,2,9,97,111,Northeastern Huskies,Northeastern,10,99,72
+2026-11-06,401921719,False,False,STD,,2390,Miami Hurricanes,Miami,2,14,83,2681,Wagner Seahawks,Wagner,19,99,57
+2026-11-06,401909785,False,False,STD,,2305,Kansas Jayhawks,Kansas,8,17,89,2393,Middle Tennessee Blue Raiders,Middle Tennessee,11,99,45
+2026-11-06,401909772,False,False,STD,,66,Iowa State Cyclones,Iowa State,8,18,83,2572,Southern Miss Golden Eagles,Southern Miss,27,99,57
+2026-11-06,401906758,False,False,STD,,333,Alabama Crimson Tide,Alabama,23,20,101,2032,Arkansas State Red Wolves,Arkansas State,27,99,86
+2026-11-06,401922219,False,False,STD,,26,UCLA Bruins,UCLA,7,22,114,2454,North Florida Ospreys,North Florida,46,99,63
+2026-11-06,401921802,False,False,STD,,96,Kentucky Wildcats,Kentucky,23,23,89,256,James Madison Dukes,James Madison,27,99,80
+2026-11-06,401921739,False,False,STD,,252,BYU Cougars,BYU,8,25,108,2437,Omaha Mavericks,Omaha,49,99,67
+2026-11-06,401909552,True,False,STD,Hall of Fame Series - Boston,103,Boston College Eagles,Boston College,2,99,71,113,Massachusetts Minutemen,Massachusetts,14,99,55
+2026-11-06,401922248,False,False,STD,,2229,Florida International Panthers,Florida International,11,99,85,2697,West Florida Argonauts,West Florida,46,99,75
+2026-11-06,401909751,False,False,STD,,239,Baylor Bears,Baylor,8,99,109,2029,Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff,26,99,53
+2026-11-06,401920717,False,False,STD,,2483,Oregon Ducks,Oregon,7,99,98,331,Eastern Washington Eagles,Eastern Washington,5,99,71
+2026-11-06,401926131,False,False,STD,,2509,Purdue Boilermakers,Purdue,7,99,80,2674,Valparaiso Beacons,Valparaiso,18,99,83
+2026-11-06,401922059,False,False,STD,,2908,South Carolina Upstate Spartans,South Carolina Upstate,6,99,70,2569,South Carolina State Bulldogs,South Carolina State,16,99,78
+2026-11-06,401916314,False,False,STD,,194,Ohio State Buckeyes,Ohio State,7,99,89,2754,Youngstown State Penguins,Youngstown State,45,99,65
+2026-11-06,401929385,False,False,STD,,2198,Eastern Kentucky Colonels,Eastern Kentucky,30,99,106,111166,Midway Eagles,Midway,,99,68
+2026-11-06,401928840,False,False,STD,,2309,Kent State Golden Flashes,Kent State,14,99,102,128531,Roberts Wesleyan Redhawks,Roberts Wesleyan,,99,50
+2026-11-06,401926813,False,False,STD,,232,Charleston Cougars,Charleston,10,99,112,2444,Newberry Wolves,Newberry,,99,66
+2026-11-06,401926161,False,False,STD,,2643,The Citadel Bulldogs,The Citadel,24,99,100,2215,Erskine Flying Fleet,Erskine,,99,57
+2026-11-06,401926135,False,False,STD,,164,Rutgers Scarlet Knights,Rutgers,7,99,81,2441,New Haven Chargers,New Haven,19,99,54
+2026-11-06,401922210,False,False,STD,,526,Florida Gulf Coast Eagles,Florida Gulf Coast,46,99,89,128550,New College Mighty Banyans,New College,,99,67
+2026-11-06,401921767,False,False,STD,,277,West Virginia Mountaineers,West Virginia,8,99,91,56,Stetson Hatters,Stetson,46,99,53
+2026-11-06,401921754,False,False,STD,,2116,UCF Knights,UCF,8,99,87,43,Yale Bulldogs,Yale,12,99,75
+2026-11-06,401921285,False,False,STD,,222,Villanova Wildcats,Villanova,4,99,95,107,Holy Cross Crusaders,Holy Cross,22,99,66
+2026-11-06,401921166,False,False,STD,,325,Cleveland State Vikings,Cleveland State,45,99,103,2391,Michigan Dearborn Wolves,Michigan Dearborn,,99,79
+2026-11-06,401921140,False,False,STD,,2210,Elon Phoenix,Elon,10,99,74,2430,UNC Greensboro Spartans,UNC Greensboro,24,99,65
+2026-11-06,401920920,False,False,STD,,116,Mount St. Mary's Mountaineers,Mount St. Mary's,13,99,68,2352,Loyola Maryland Greyhounds,Loyola Maryland,22,99,57
+2026-11-06,401920305,False,False,STD,,59,Georgia Tech Yellow Jackets,Georgia Tech,2,99,95,290,Georgia Southern Eagles,Georgia Southern,27,99,83
+2026-11-06,401920072,False,False,STD,,2244,George Mason Patriots,George Mason,3,99,68,2154,Coppin State Eagles,Coppin State,16,99,51
+2026-11-06,401918956,False,False,STD,,152,NC State Wolfpack,NC State,2,99,77,2193,East Tennessee State Buccaneers,East Tennessee State,24,99,63
+2026-11-06,401917949,False,False,STD,,338,Kennesaw State Owls,Kennesaw State,11,99,71,2046,Austin Peay Governors,Austin Peay,30,99,69
+2026-11-06,401913100,False,False,STD,,153,North Carolina Tar Heels,North Carolina,2,99,109,2747,Wofford Terriers,Wofford,24,99,70
+2026-11-06,401912208,False,False,STD,,228,Clemson Tigers,Clemson,2,99,82,44,American University Eagles,American University,22,99,73
+2026-11-06,401911305,False,False,STD,,225,Brown Bears,Brown,12,99,67,104,Boston University Terriers,Boston University,22,99,72
+2026-11-06,401911249,True,False,STD,,142,Missouri Tigers,Missouri,23,99,84,139,Saint Louis Billikens,Saint Louis,3,99,90
+2026-11-06,401911006,False,False,STD,,2117,Central Michigan Chippewas,Central Michigan,14,99,93,2800,Alma Scots,Alma,,99,50
+2026-11-06,401911005,False,False,STD,,2050,Ball State Cardinals,Ball State,14,99,66,282,Indiana State Sycamores,Indiana State,18,99,69
+2026-11-06,401909695,False,False,STD,,52,Florida State Seminoles,Florida State,2,99,91,2653,Troy Trojans,Troy,27,99,68
+2026-11-06,401909542,False,False,STD,,2752,Xavier Musketeers,Xavier,4,99,76,2199,Eastern Michigan Eagles,Eastern Michigan,14,99,53
+2026-11-06,401906780,False,False,STD,,61,Georgia Bulldogs,Georgia,23,99,91,2506,Presbyterian Blue Hose,Presbyterian,6,99,77
+2026-11-06,401925089,False,False,STD,,2617,Stephen F. Austin Lumberjacks,Stephen F. Austin,25,99,89,2639,Texas Lutheran Bulldogs,Texas Lutheran,,99,32
+2026-11-06,401923260,False,False,STD,,2750,Wright State Raiders,Wright State,45,99,97,2226,Florida Atlantic Owls,Florida Atlantic,62,99,71
+2026-11-06,401920894,False,False,STD,,275,Wisconsin Badgers,Wisconsin,7,99,73,48,Delaware Blue Hens,Delaware,11,99,64
+2026-11-06,401919015,False,False,STD,,5,UAB Blazers,UAB,62,99,70,2447,Nicholls Colonels,Nicholls,25,99,63
+2026-11-06,401928823,False,False,STD,,82,UIC Flames,UIC,18,99,79,2523,Robert Morris Colonials,Robert Morris,45,99,56
+2026-11-06,401928622,False,False,STD,,2623,Missouri State Bears,Missouri State,11,99,79,2654,Truman State Bulldogs,Truman State,,99,62
+2026-11-06,401925641,False,False,STD,,2010,Alabama A&M Bulldogs,Alabama A&M,26,99,103,126826,Mississippi U for Women Owls,Mississippi U for Women,,99,47
+2026-11-06,401925097,False,False,STD,,309,Louisiana Ragin' Cajuns,Louisiana,27,99,60,357,Texas A&M-Corpus Christi Islanders,Texas A&M-Corpus Christi,25,99,67
+2026-11-06,401921809,False,False,STD,,99,LSU Tigers,LSU,23,99,92,2640,Texas Southern Tigers,Texas Southern,26,99,51
+2026-11-06,401920807,False,False,STD,,245,Texas A&M Aggies,Texas A&M,23,99,104,94,Northern Kentucky Norse,Northern Kentucky,45,99,67
+2026-11-06,401920733,False,False,STD,,77,Northwestern Wildcats,Northwestern,7,99,78,2619,Stony Brook Seawolves,Stony Brook,10,99,65
+2026-11-06,401919048,False,False,STD,,2628,TCU Horned Frogs,TCU,8,99,106,2582,Southern Jaguars,Southern,26,99,54
+2026-11-06,401916304,False,False,STD,,135,Minnesota Golden Gophers,Minnesota,7,99,76,2900,St. Thomas Tommies,St. Thomas,49,99,62
+2026-11-06,401909523,False,False,STD,,269,Marquette Golden Eagles,Marquette,4,99,93,2174,Detroit Mercy Titans,Detroit Mercy,45,99,32
+2026-11-06,401906802,False,False,STD,,201,Oklahoma Sooners,Oklahoma,23,99,84,2400,Mississippi Valley State Delta Devils,Mississippi Valley State,26,99,57
+2026-11-06,401922021,False,False,STD,,2751,Wyoming Cowboys,Wyoming,44,99,93,304,Idaho State Bengals,Idaho State,5,99,62
+2026-11-06,401920726,False,False,STD,,2294,Iowa Hawkeyes,Iowa,7,99,91,2197,Eastern Illinois Panthers,Eastern Illinois,20,99,47
+2026-11-06,401917914,False,False,STD,,145,Ole Miss Rebels,Ole Miss,23,99,92,2110,Central Arkansas Bears,Central Arkansas,30,99,60
+2026-11-06,401922261,False,False,STD,,36,Colorado State Rams,Colorado State,21,99,78,70,Idaho Vandals,Idaho,5,99,67
+2026-11-06,401921732,False,False,STD,,9,Arizona State Sun Devils,Arizona State,8,99,90,2458,Northern Colorado Bears,Northern Colorado,5,99,63
+2026-11-06,401919040,False,False,STD,,197,Oklahoma State Cowboys,Oklahoma State,8,99,118,2511,Queens University Royals,Queens University,46,99,68
+2026-11-06,401909797,False,False,STD,,2306,Kansas State Wildcats,Kansas State,8,99,95,2463,Cal State Northridge Matadors,Cal State Northridge,9,99,78
+2026-11-06,401920952,False,False,STD,,140,Kansas City Roos,Kansas City,49,99,100,79,Southern Illinois Salukis,Southern Illinois,18,99,93
+2026-11-06,401929410,False,False,STD,,2571,South Dakota State Jackrabbits,South Dakota State,49,99,71,3065,Briar Cliff Chargers,Briar Cliff,,99,49
+2026-11-06,401929356,True,False,TRNMNT,Rainbow Classic,2501,Portland Pilots,Portland,29,99,85,250,UT Arlington Mavericks,UT Arlington,30,99,89
+2026-11-06,401920344,False,False,STD,,204,Oregon State Beavers,Oregon State,21,99,96,2856,California Baptist Lancers,California Baptist,9,99,68
+2026-11-06,401917515,False,False,STD,,301,San Diego Toreros,San Diego,29,99,96,2627,Tarleton State Texans,Tarleton State,30,99,90
+2026-11-06,401921727,False,False,STD,,24,Stanford Cardinal,Stanford,2,99,81,2473,Oakland Golden Grizzlies,Oakland,45,99,63
+2026-11-06,401921061,False,False,STD,,2539,San Francisco Dons,San Francisco,29,99,79,2449,North Dakota State Bison,North Dakota State,49,99,70
+2026-11-06,401917516,False,False,STD,,2351,Loyola Marymount Lions,Loyola Marymount,29,99,102,124946,Lincoln (CA) Oaklanders,Lincoln (CA),,99,50
+2026-11-06,401929001,False,False,TRNMNT,Rainbow Classic,62,Hawai'i Rainbow Warriors,Hawai'i,44,99,116,3246,Bethesda Flames,Bethesda,,99,44

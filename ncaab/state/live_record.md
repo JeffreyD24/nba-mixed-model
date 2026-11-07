@@ -1,4 +1,4 @@
-# NCAAM PROVISIONAL stale-line spreads, updated 2026-11-06 19:01 ET
+# NCAAM PROVISIONAL stale-line spreads, updated 2026-11-07 09:59 ET
 
 Rule: ncaab/research/MODEL3_RESULTS_2026-11-05.md. 1 unit per alert at the alerted DraftKings number and price.
 

@@ -3788,3 +3788,31 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 11:50,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Ajay Mitchell,ajay mitchell,3.5,-148.0,112.0,OKC,709.196253288,53679067,53679062
 2026-11-07 11:50,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,154.0,-210.0,WAS,709.196253328,12260628,12260629
 2026-11-07 11:50,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Alex Sarr,alex sarr,1.5,-166.0,124.0,WAS,709.196253976,92784087,92784086
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Trae Young,trae young,19.5,100.0,-132.0,WAS,709.196253530,21175415,21175416
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Aday Mara,aday mara,6.5,-114.0,-118.0,OKC,709.196255012,91219507,91219508
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,AJ Dybantsa,aj dybantsa,5.5,120.0,-160.0,WAS,709.196253644,90729348,90729347
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Kyshawn George,kyshawn george,4.5,-152.0,114.0,WAS,709.196254079,74706441,74706439
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Alex Sarr,alex sarr,6.5,-122.0,-108.0,WAS,709.196253980,92784087,92784086
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Trae Young,trae young,2.5,-172.0,126.0,WAS,709.196253525,21175415,21175416
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Kyshawn George,kyshawn george,4.5,114.0,-152.0,WAS,709.196254082,74706441,74706439
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,134.0,-180.0,OKC,709.196253942,41500697,41500698
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Jared McCain,jared mccain,1.5,-152.0,114.0,OKC,709.196253743,63496225,63496226
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Ajay Mitchell,ajay mitchell,3.5,-152.0,114.0,OKC,709.196253288,53679067,53679062
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,158.0,-215.0,WAS,709.196253328,12260628,12260629
+2026-11-07 11:52,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Alex Caruso,alex caruso,2.5,126.0,-168.0,OKC,709.196254946,23677919,23677920
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Fred VanVleet,fred vanvleet,11.5,-120.0,-110.0,HOU,709.196234512,21175485,21175486
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Tari Eason,tari eason,9.5,-114.0,-114.0,HOU,709.196234654,43049623,43049624
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Reed Sheppard,reed sheppard,8.5,102.0,-136.0,HOU,709.196235485,63497028,63497029
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Kevin Durant,kevin durant,21.5,-125.0,-106.0,HOU,709.196231939,12260605,12260606
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Khaman Maluach,khaman maluach,5.5,-118.0,-114.0,PHX,709.196237618,76787777,76787780
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Amen Thompson,amen thompson,14.5,-125.0,-106.0,HOU,709.196232700,62134320,62134329
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Marcus Smart,marcus smart,2.5,148.0,-200.0,HOU,709.196237791,12880787,12880788
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Alperen Sengun,alperen sengun,9.5,-106.0,-122.0,HOU,709.196232452,40296685,40296686
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Tari Eason,tari eason,5.5,-114.0,-114.0,HOU,709.196234653,43049623,43049624
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Fred VanVleet,fred vanvleet,3.5,122.0,-162.0,HOU,709.196234513,21175485,21175486
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Dillon Brooks,dillon brooks,3.5,-118.0,-112.0,PHX,709.196236131,12798648,12798647
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Jalen Green,jalen green,2.5,-158.0,118.0,PHX,709.196236602,41386184,41386185
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-152.0,114.0,PHX,709.196236016,23559725,23559726
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,132.0,-178.0,HOU,709.196235489,63497028,63497029
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,138.0,-186.0,HOU,709.196231971,12260605,12260606
+2026-11-07 11:52,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-144.0,108.0,HOU,709.196232701,62134320,62134329

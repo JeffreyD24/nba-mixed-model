@@ -3080,3 +3080,6 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 09:39,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-148.0,112.0,SAS,709.196241601,61967224,61967225
 2026-11-07 09:39,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196241734,15572079,15572080
 2026-11-07 09:39,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,106.0,-140.0,POR,709.196238656,12260575,12260576
+2026-11-07 09:41,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Cam Johnson,cam johnson,2.5,128.0,-172.0,DEN,709.196220937,51835103,51835094
+2026-11-07 09:41,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-112.0,-118.0,DEN,709.196220682,12730307,12730306
+2026-11-07 09:41,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-102.0,-130.0,DEN,709.196217261,12257278,12257279

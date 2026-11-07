@@ -668,3 +668,45 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 00:21,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Fred VanVleet,fred vanvleet,5.5,100.0,-132.0,HOU,709.196234511,21175485,21175486
 2026-11-07 00:21,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,124.0,-166.0,HOU,709.196235489,63497028,63497029
 2026-11-07 00:21,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,130.0,-174.0,HOU,709.196231971,12260605,12260606
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Franz Wagner,franz wagner,21.5,-128.0,-104.0,ORL,709.196236458,40196992,40196991
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Stephen Curry,stephen curry,26.5,-114.0,-114.0,GSW,709.196238217,12260597,12260598
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Anthony Black,anthony black,14.5,-120.0,-110.0,ORL,709.196236355,50378078,50378080
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Brandin Podziemski,brandin podziemski,14.5,-125.0,-106.0,GSW,709.196238213,52263972,52263968
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Yaxel Lendeborg,yaxel lendeborg,17.5,-136.0,102.0,GSW,709.196238234,64937530,64937543
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Tristan da Silva,tristan da silva,12.5,-102.0,-130.0,ORL,709.196236409,43072432,43072430
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Draymond Green,draymond green,5.5,104.0,-138.0,GSW,709.196238208,12260600,12260599
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Wendell Carter Jr.,wendell carter,12.5,-130.0,-102.0,ORL,709.196236347,41408443,41408444
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Wendell Carter Jr.,wendell carter,9.5,108.0,-144.0,ORL,709.196236373,41408443,41408444
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Desmond Bane,desmond bane,4.5,132.0,-178.0,ORL,709.196236385,38187360,38187370
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Jase Richardson,jase richardson,2.5,-130.0,-102.0,ORL,709.196236397,76284095,76284094
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Tristan da Silva,tristan da silva,3.5,-160.0,120.0,ORL,709.196236420,43072432,43072430
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Franz Wagner,franz wagner,5.5,-118.0,-112.0,ORL,709.196236387,40196992,40196991
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Jase Richardson,jase richardson,2.5,-118.0,-112.0,ORL,709.196236360,76284095,76284094
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Franz Wagner,franz wagner,7.5,110.0,-146.0,ORL,709.196236433,40196992,40196991
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Wendell Carter Jr.,wendell carter,1.5,-112.0,-118.0,ORL,709.196236364,41408443,41408444
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-138.0,104.0,ORL,709.196236448,43072432,43072430
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Anthony Black,anthony black,4.5,-122.0,-108.0,ORL,709.196236325,50378078,50378080
+2026-11-07 00:25,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Desmond Bane,desmond bane,2.5,-168.0,126.0,ORL,709.196236416,38187360,38187370
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Nesmith,aaron nesmith,12.5,-106.0,-125.0,IND,709.196223604,39494853,39494854
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Ivica Zubac,ivica zubac,10.5,-102.0,-130.0,IND,709.196223351,13527611,22190771
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Christian Braun,christian braun,12.5,-112.0,-118.0,DEN,709.196220602,43026473,43026472
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Pascal Siakam,pascal siakam,20.5,-114.0,-114.0,IND,709.196222707,21558499,21558500
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,100.0,-132.0,DEN,709.196220683,12730307,12730306
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,DeMar DeRozan,demar derozan,12.5,102.0,-136.0,DEN,709.196221260,12234472,12234473
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,22.5,-110.0,-120.0,DEN,709.196217709,16127791,16127792
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Pascal Siakam,pascal siakam,6.5,-130.0,-102.0,IND,709.196222705,21558499,21558500
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Andrew Nembhard,andrew nembhard,2.5,-172.0,128.0,IND,709.196222868,43058624,43058625
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Christian Braun,christian braun,4.5,-118.0,-112.0,DEN,709.196220605,43026473,43026472
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Cam Johnson,cam johnson,3.5,-166.0,124.0,DEN,709.196220939,51835103,51835094
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Nikola Jokic,nikola jokic,11.5,-138.0,104.0,DEN,709.196217284,12257278,12257279
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Aaron Gordon,aaron gordon,5.5,-114.0,-114.0,DEN,709.196220686,12730307,12730306
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,DeMar DeRozan,demar derozan,2.5,124.0,-166.0,DEN,709.196221258,12234472,12234473
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Kelly Oubre Jr.,kelly oubre,3.5,102.0,-136.0,IND,709.196223953,41408119,41408118
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Obi Toppin,obi toppin,4.5,-114.0,-114.0,IND,709.196224067,41641966,41641967
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Ivica Zubac,ivica zubac,8.5,118.0,-158.0,IND,709.196223352,13527611,22190771
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Jamal Murray,jamal murray,4.5,-114.0,-114.0,DEN,709.196217705,16127791,16127792
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Cam Johnson,cam johnson,2.5,130.0,-174.0,DEN,709.196220937,51835103,51835094
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,136.0,-182.0,DEN,709.196220607,43026473,43026472
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-118.0,-112.0,DEN,709.196220682,12730307,12730306
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-132.0,100.0,DEN,709.196217261,12257278,12257279
+2026-11-07 00:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,-102.0,-130.0,DEN,709.196217703,16127791,16127792

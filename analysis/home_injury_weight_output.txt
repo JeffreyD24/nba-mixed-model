@@ -1,0 +1,29 @@
+NBA spreads Oct-Jan, Model 1 walk-forward (lag 1), DK openers 2023-24..2025-26, both teams 10+ games; LOSO home-side injury weight
+games: 1679; injury shift s: mean -0.02, sd 1.31, share > 0 51%
+  held-out 2024: w_pos (toward home) 0.17, w_neg (toward away) 1.00  (current model = 1.00, 1.00)
+  held-out 2025: w_pos (toward home) 0.30, w_neg (toward away) 0.77  (current model = 1.00, 1.00)
+  held-out 2026: w_pos (toward home) 0.88, w_neg (toward away) 0.69  (current model = 1.00, 1.00)
+
+Scoreboard (Oct-Jan games): RMSE vs the result and beat-the-close slope (result - close on model - close)
+  m_no (no injuries)     RMSE 14.214 | slope vs close +0.171 (t +1.7)
+  m_inj (current)        RMSE 14.200 | slope vs close +0.099 (t +0.9)
+  m_w (LOSO weights)     RMSE 14.205 | slope vs close +0.121 (t +1.1)
+  DK opener              RMSE 14.167
+  DK close               RMSE 13.945
+
+current (with injuries)
+  home underdogs                                165 bets  47.9%   -14.2u ( -8.5/100)  [2024:-7.1 2025:-3.5 2026:-3.5]
+  live-filter bets (no home dogs)               327 bets  59.6%   +45.3u (+13.6/100)  [2024:+11.1 2025:+15.1 2026:+19.1]
+
+home-side weight (LOSO)
+  home underdogs                                163 bets  49.7%    -8.4u ( -5.1/100)  [2024:-5.0 2025:-1.5 2026:-1.9]
+  live-filter bets (no home dogs)               338 bets  58.9%   +41.9u (+12.2/100)  [2024:+5.6 2025:+18.0 2026:+18.3]
+
+no injuries
+  home underdogs                                194 bets  52.6%    +0.7u ( +0.4/100)  [2024:-1.0 2025:-2.9 2026:+4.6]
+  live-filter bets (no home dogs)               341 bets  58.7%   +40.8u (+11.7/100)  [2024:+5.9 2025:+16.4 2026:+18.5]
+
+PRIMARY TEST: Oct-Jan home-dog ROI, LOSO home-side weight minus current
+  current -8.5/100, weighted -5.1/100, difference +3.4/100; bootstrap 10th percentile -10.0, 90% range -13.9 to +20.6
+  guard: live-filter bets current +13.6/100, weighted +12.2/100 (change -1.5)
+  VERDICT (pre-registered rule): INCONCLUSIVE

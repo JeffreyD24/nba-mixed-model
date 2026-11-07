@@ -245,3 +245,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 23:12,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Kevin Durant,kevin durant,22.5,-106.0,-122.0,HOU,709.196231939,12260605,12260606
 2026-11-06 23:12,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Kevin Durant,kevin durant,5.5,128.0,-172.0,HOU,709.196231951,12260605,12260606
 2026-11-06 23:12,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,136.0,-182.0,HOU,709.196231971,12260605,12260606
+2026-11-06 23:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,-118.0,-112.0,DEN,709.196217273,12257278,12257279
+2026-11-06 23:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,DeMar DeRozan,demar derozan,11.5,-120.0,-110.0,DEN,709.196221260,12234472,12234473
+2026-11-06 23:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Spencer Jones,spencer jones,4.5,-112.0,-118.0,DEN,709.196221362,43257364,43257365
+2026-11-06 23:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,22.5,-112.0,-118.0,DEN,709.196217709,16127791,16127792
+2026-11-06 23:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Nikola Jokic,nikola jokic,11.5,-138.0,104.0,DEN,709.196217284,12257278,12257279
+2026-11-06 23:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,142.0,-192.0,DEN,709.196220607,43026473,43026472
+2026-11-06 23:14,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-136.0,102.0,DEN,709.196217261,12257278,12257279
+2026-11-06 23:14,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-110.0,-122.0,HOU,709.196232450,40296685,40296686
+2026-11-06 23:14,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Alperen Sengun,alperen sengun,9.5,-110.0,-120.0,HOU,709.196232452,40296685,40296686
+2026-11-06 23:14,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Alperen Sengun,alperen sengun,6.5,-140.0,106.0,HOU,709.196232451,40296685,40296686

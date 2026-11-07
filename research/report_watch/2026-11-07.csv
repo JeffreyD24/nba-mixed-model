@@ -1,0 +1,3 @@
+first_seen_et,report,prev_report,report_as_of,date,game_id,away,home,tip_et,team,player,from_status,to_status,p_miss_from,p_miss_to,rated,d_home_margin,d_total
+2026-11-07 09:15:12,2026-11-07_09_15AM,2026-11-07_09_00AM,2026-11-07 09:15:00,2026-11-07,22600190,bkn,atl,2026-11-07 19:30:00,bkn,"Powell, Drake",Questionable,Available,0.497,0.213,True,0.17,-0.125
+2026-11-07 09:15:12,2026-11-07_09_15AM,2026-11-07_09_00AM,2026-11-07 09:15:00,2026-11-07,22600190,bkn,atl,2026-11-07 19:30:00,bkn,"Clowney, Noah",not listed,Questionable,0.0,0.497,True,-0.277,0.083

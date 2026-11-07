@@ -406,3 +406,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-07 11:43:00,295396,2026-11-08T03:00:00.000Z,Portland Trail Blazers,San Antonio Spurs,3327,cons,5.5,-110.0,226.5,-107.0,184.0,-220.0,27.0,47.0,80.0,70.0,13.0,13.0
 2026-11-07 11:44:00,295396,2026-11-08T03:00:00.000Z,Portland Trail Blazers,San Antonio Spurs,3327,dk,5.5,-113.0,226.5,-106.0,180.0,-217.0,,,,,,
 2026-11-07 11:49:00,295396,2026-11-08T03:00:00.000Z,Portland Trail Blazers,San Antonio Spurs,3327,dk,5.5,-113.0,225.5,-115.0,180.0,-217.0,,,,,,
+2026-11-07 11:51:00,295394,2026-11-08T01:30:00.000Z,Golden State Warriors,Orlando Magic,4013,cons,-5.5,-112.0,222.5,-109.0,-220.0,180.0,89.0,62.0,81.0,87.0,95.0,96.0
+2026-11-07 11:51:00,295396,2026-11-08T03:00:00.000Z,Portland Trail Blazers,San Antonio Spurs,3327,cons,5.5,-110.0,226.0,-111.0,184.0,-220.0,27.0,47.0,80.0,70.0,13.0,13.0

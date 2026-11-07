@@ -8,7 +8,7 @@ Both need a Chrome TLS fingerprint (curl_cffi); plain requests get HTTP 403. See
 Config: WORKDIR/feed_config.json  {"dk":[{"sport":"nba","league_id":42648}], "fd":[{"sport":"nba","page":"nba"}]} (+ optional "cadence", "*_budget").
 Each endpoint is fetched when it is due (cadence below, seconds), most overdue first, up to a per-tick request budget, so the load stays
 steady whatever the league size. Only CHANGES are saved (a selection whose line or price moved, appeared, or disappeared = status "off"),
-one new small file per 5 minutes: research/feed/<book>/<sport>/<YYYY-MM-DD>/<HHMM>.csv.gz (never rewritten after its window, so git does not bloat).
+one new small file per 5 minutes: research/feed/<book>/<sport>/<YYYY-MM-DD>/<HHMM>_<run id>.csv.gz (never rewritten after its window, so git does not bloat).
 Memory between ticks (last values, schedule) lives in WORKDIR/_tmp/feed_state.json, not committed: a fresh job re-logs everything once.
 Started games are skipped (live lines belong to live.py). Never raises: a failed fetch is counted and the tick goes on."""
 import os, sys, json, re, time, datetime as dt
@@ -26,6 +26,11 @@ FD_SKIP_TABS = {"Same Game Parlay™", "Odd/Even", "Popular"}      # same as the
 FAR_HOURS = 48
 _STATS = {"requests": 0, "errors": 0, "blocked": 0}
 
+
+
+# Nov 7, 2026 bug fix (RULE 11): two feed jobs once wrote the same <HHMM>.csv.gz and every later save hit an add/add merge conflict
+# (nba-mixed-model run 42311335030 lost 18:42 ET onward). Each job now adds its run id, so files from different jobs never collide.
+RUN_TAG = "_" + (os.environ.get("GITHUB_RUN_ID", "") or "local")[-8:]
 
 def http_get(url, tries=2):
     """(status, json or None). 403 / 429 are not retried (hammering a block makes it worse)."""
@@ -146,7 +151,7 @@ def write(W, rows):
     n = 0
     for (book, sport), g in df.groupby([df.book, df.sport.fillna("")]):
         d = os.path.join(W, "research", "feed", book, sport or "all", f"{win:%Y-%m-%d}"); os.makedirs(d, exist_ok=True)
-        f = os.path.join(d, f"{win:%H%M}.csv.gz")
+        f = os.path.join(d, f"{win:%H%M}{RUN_TAG}.csv.gz")
         # dtype=str (Nov 6, 2026): read as numbers, FanDuel market ids lost a trailing zero (709.196153110 -> 709.19615311; ~8% of rows)
         old = pd.read_csv(f, low_memory=False, dtype={"event_id": str, "market_id": str, "sel_id": str}) if os.path.exists(f) else pd.DataFrame()
         pd.concat([old, g], ignore_index=True).to_csv(f, index=False, compression="gzip"); n += len(g)

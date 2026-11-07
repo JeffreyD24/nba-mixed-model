@@ -29,6 +29,11 @@ SP = os.path.join(W, "_tmp", "fanatics_state.json"); os.makedirs(os.path.dirname
 COLS = ["snap_et", "book", "sport", "event_id", "start_et", "away", "home", "market", "side", "points", "price", "status"]
 
 
+
+# Nov 7, 2026 bug fix (RULE 11): two feed jobs once wrote the same <HHMM>.csv.gz and every later save hit an add/add merge conflict
+# (nba-mixed-model run 42311335030 lost 18:42 ET onward). Each job now adds its run id, so files from different jobs never collide.
+RUN_TAG = "_" + (os.environ.get("GITHUB_RUN_ID", "") or "local")[-8:]
+
 def get(url):
     with urllib.request.urlopen(urllib.request.Request(url, headers=H), timeout=25) as r:
         return json.loads(r.read())
@@ -85,7 +90,7 @@ def rotowire_props(S, snap):
                                     team=r.get("team"), opp=r.get("opp"), book=bk, market=mk, line=v, over=ov, under=un))
         if out:
             d = os.path.join(W, "research", "feed", "rotowire_props", sport, f"{NOW:%Y-%m-%d}"); os.makedirs(d, exist_ok=True)
-            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}.csv.gz")
+            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}{RUN_TAG}.csv.gz")
             old = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=RW_COLS)
             pd.concat([old, pd.DataFrame(out)[RW_COLS]], ignore_index=True).to_csv(f, index=False, compression="gzip")
         n += len(out)
@@ -121,7 +126,7 @@ def rotowire_games(S, snap):
                                         opp=g.get("oppAbbr"), home_away=g.get("homeAway"), book=bk, market=mk, line=ln, price=px))
         if out:
             d = os.path.join(W, "research", "feed", "rotowire_games", sport, f"{NOW:%Y-%m-%d}"); os.makedirs(d, exist_ok=True)
-            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}.csv.gz")
+            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}{RUN_TAG}.csv.gz")
             old = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=RWG_COLS)
             pd.concat([old, pd.DataFrame(out)[RWG_COLS]], ignore_index=True).to_csv(f, index=False, compression="gzip")
         n += len(out)
@@ -167,7 +172,7 @@ def main():
         D = pd.DataFrame(new)[COLS]
         for sport, g in D.groupby("sport"):
             d = os.path.join(W, "research", "feed", "fanatics", sport, f"{NOW:%Y-%m-%d}"); os.makedirs(d, exist_ok=True)
-            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}.csv.gz")
+            f = os.path.join(d, f"{NOW:%H}{NOW.minute // 5 * 5:02d}{RUN_TAG}.csv.gz")
             old = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=COLS)
             pd.concat([old, g], ignore_index=True).to_csv(f, index=False, compression="gzip")
     try: n_rw = rotowire_props(S, snap)

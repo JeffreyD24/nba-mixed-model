@@ -29,7 +29,8 @@ def rows_of(d):
     if isinstance(d, dict):
         for k, v in d.items():
             if isinstance(v, dict) and "columns" in v and "rows" in v:
-                return list(v["columns"]), [dict(zip(v["columns"], r)) if isinstance(r, list) else r for r in v["rows"]]
+                names = [(c.get("Name") or c.get("name") or c.get("field")) if isinstance(c, dict) else c for c in v["columns"]]
+                return names, [dict(zip(names, r)) if isinstance(r, list) else r for r in v["rows"]]
             if isinstance(v, list) and v and isinstance(v[0], dict): return list(v[0].keys()), v
             got = rows_of(v)
             if got[1]: return got
@@ -60,7 +61,7 @@ if not data: sys.exit("no address returned transaction rows (see fetch_log.csv)"
 
 cols, rows, d = data
 json.dump(d, open(os.path.join(OUT, "NBA_Player_Movement.json"), "w"), sort_keys=True, indent=0)
-keys = cols or sorted({k for r in rows for k in r})
+keys = sorted({k for r in rows for k in r})            # from the rows themselves ("columns" is not always a list of names)
 rows = sorted(rows, key=lambda r: tuple(str(r.get(k, "")) for k in keys))
 buf = io.StringIO(); w = csv.DictWriter(buf, fieldnames=keys, extrasaction="ignore"); w.writeheader(); w.writerows(rows)
 open(os.path.join(OUT, "transactions.csv"), "w").write(buf.getvalue())

@@ -2,83 +2,69 @@
  "today": [
   {
    "home": "atl",
-   "away": "wsh",
-   "tip": "2026-11-06 19:00:00",
-   "pred_margin": 9.2,
-   "pred_total": 228.2
-  },
-  {
-   "home": "cha",
-   "away": "bos",
-   "tip": "2026-11-06 19:00:00",
-   "pred_margin": -6.8,
-   "pred_total": 214.3
+   "away": "bkn",
+   "tip": "2026-11-07 19:30:00",
+   "pred_margin": 8.3,
+   "pred_total": 227.2
   },
   {
    "home": "cle",
-   "away": "phi",
-   "tip": "2026-11-06 19:30:00",
-   "pred_margin": -0.9,
-   "pred_total": 231.4
+   "away": "ny",
+   "tip": "2026-11-07 20:00:00",
+   "pred_margin": -0.2,
+   "pred_total": 227.4
   },
   {
-   "home": "dal",
-   "away": "utah",
-   "tip": "2026-11-06 20:00:00",
-   "pred_margin": 8.9,
-   "pred_total": 231.7
+   "home": "gs",
+   "away": "orl",
+   "tip": "2026-11-07 20:30:00",
+   "pred_margin": 7.6,
+   "pred_total": 226.1
   },
   {
-   "home": "lal",
-   "away": "por",
-   "tip": "2026-11-06 22:00:00",
-   "pred_margin": 1.6,
-   "pred_total": 231.7
+   "home": "ind",
+   "away": "den",
+   "tip": "2026-11-07 17:00:00",
+   "pred_margin": -4.0,
+   "pred_total": 229.6
   },
   {
-   "home": "mem",
-   "away": "okc",
-   "tip": "2026-11-06 20:00:00",
-   "pred_margin": 1.7,
-   "pred_total": 224.6
+   "home": "okc",
+   "away": "wsh",
+   "tip": "2026-11-07 20:00:00",
+   "pred_margin": 9.9,
+   "pred_total": 220.6
   },
   {
-   "home": "mil",
-   "away": "tor",
-   "tip": "2026-11-06 20:00:00",
-   "pred_margin": -3.2,
-   "pred_total": 229.9
+   "home": "phx",
+   "away": "hou",
+   "tip": "2026-11-07 21:00:00",
+   "pred_margin": -8.9,
+   "pred_total": 228.7
   },
   {
-   "home": "no",
-   "away": "min",
-   "tip": "2026-11-06 20:00:00",
-   "pred_margin": -5.0,
-   "pred_total": 232.6
-  },
-  {
-   "home": "sac",
+   "home": "por",
    "away": "sa",
-   "tip": "2026-11-06 22:00:00",
-   "pred_margin": -11.1,
-   "pred_total": 229.5
+   "tip": "2026-11-07 22:00:00",
+   "pred_margin": 0.9,
+   "pred_total": 227.3
   }
  ],
  "log": [
-  "NBA tracker run on 2026-11-06 (ET), predicting games on 2026-11-06.",
-  "Schedule: 1200 regular-season games; 121 finished, results through 2026-11-04.",
-  "Injury reports: 7 snapshots requested, 7 new, 129 on file.",
-  "Saved today's model for intraday checks (9 games, 643 players).",
-  "Locked 9 live picks for 2026-11-06 and 0 backfilled.",
-  "Lines: pulled DraftKings lines from ESPN for 23 games.",
-  "Model comparison: locked 18 live and 0 backfilled Model 2/3 predictions.",
+  "NBA tracker run on 2026-11-06 (ET), predicting games on 2026-11-07.",
+  "Schedule: 1200 regular-season games; 123 finished, results through 2026-11-05.",
+  "Injury reports: 8 snapshots requested, 8 new, 137 on file.",
+  "Saved today's model for intraday checks (7 games, 643 players).",
+  "Locked 7 live picks for 2026-11-07 and 0 backfilled.",
+  "Lines: pulled DraftKings lines from ESPN for 9 games.",
+  "Model comparison: locked 14 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 3 - pace x efficiency: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
-  "Alerts graded so far: 44-43 (50.6%), -3.0 units at -110.",
+  "Alerts graded so far: 45-44 (50.6%), -3.1 units at -110.",
   "Your logged bets: 10-7, +2.08u on 17 units staked.",
-  "Line jumps graded: 68; the final result matched the jump's direction 37 times.",
-  "Altitude watch: 9 Denver/Utah home games, +1.1 vs the opener (other games -4.4); difference +5.4 (+/-14.1). All-Star-break rule today: no change; season-end rule today: keep +3.8.",
-  "Bet timing: graded 50 games at up to 11 time points."
+  "Line jumps graded: 74; the final result matched the jump's direction 41 times.",
+  "Altitude watch: 9 Denver/Utah home games, +1.1 vs the opener (other games -4.5); difference +5.6 (+/-14.1). All-Star-break rule today: no change; season-end rule today: keep +3.8.",
+  "Bet timing: graded 52 games at up to 11 time points."
  ]
 }

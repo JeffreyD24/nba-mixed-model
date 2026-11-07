@@ -1,11 +1,11 @@
 {
- "updated_et": "2026-11-06 11:26",
+ "updated_et": "2026-11-06 22:21",
  "games_alt": 9,
- "games_other": 112,
+ "games_other": 114,
  "alt_mean": 1.06,
- "other_mean": -4.38,
- "diff": 5.44,
- "se": 7.19,
+ "other_mean": -4.5,
+ "diff": 5.56,
+ "se": 7.18,
  "if_all_star_break_today": "no change",
  "if_season_end_today": "keep +3.8",
  "rule": "Altitude tripwire (set Nov 4, 2026, research/stats_catalog/ALTITUDE_TRIPWIRE.md): diff = mean(final - DK opener) at Denver/Utah home games minus the same for all other games this season. All-Star break: drop the +3.8 to 0 only if diff < -2.0, otherwise no change. Season end: diff >= +2.0 keep +3.8; 0 to +2.0 halve to +1.9; below 0 drop to 0."

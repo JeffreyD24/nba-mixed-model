@@ -308,3 +308,5 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 21:38:36,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,moneyline,away,0.0,-240,normal
 2026-11-06 21:38:36,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,total,under,221.5,-110,normal
 2026-11-06 21:38:36,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,total,over,221.5,-110,normal
+2026-11-06 21:39:55,295390,2026-11-07,2026-11-07 17:00,den,ind,bet365,event,moneyline,home,0.0,210,normal
+2026-11-06 21:41:01,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,moneyline,home,0.0,200,normal

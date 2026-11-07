@@ -44731,3 +44731,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 21:38:36,295196,2026-11-06,2026-11-06 22:00,por,lal,Caesars,firsthalf,total,under,119.5,-110,normal
 2026-11-06 21:38:36,295196,2026-11-06,2026-11-06 22:00,por,lal,Caesars,thirdquarter,spread,home,-1.5,110,normal
 2026-11-06 21:38:36,295196,2026-11-06,2026-11-06 22:00,por,lal,Caesars,thirdquarter,spread,away,1.5,-140,normal
+2026-11-06 21:39:55,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,total,over,231.5,-109,normal
+2026-11-06 21:41:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,secondquarter,moneyline,home,0.0,200,normal
+2026-11-06 21:41:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,secondquarter,moneyline,away,0.0,-260,normal
+2026-11-06 21:41:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,thirdquarter,moneyline,away,0.0,-330,normal
+2026-11-06 21:41:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,team_total,home_under,106.5,-112,normal
+2026-11-06 21:41:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,team_total,away_over,125.0,-110,normal
+2026-11-06 21:41:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,event,team_total,away_under,125.0,-115,normal
+2026-11-06 21:41:01,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,fourthquarter,moneyline,home,0.0,190,normal

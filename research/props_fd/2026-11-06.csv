@@ -14822,3 +14822,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 21:47,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jake Laravia,jake laravia,5.5,-130.0,102.0,LAL,709.196045224,90251254.0,90251266.0
 2026-11-06 21:47,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Luka Doncic,luka doncic,7.5,110.0,-140.0,LAL,709.196045289,12463224.0,12463223.0
 2026-11-06 21:47,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,4.5,-162.0,126.0,LAL,709.196045222,41574998.0,41574999.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Emanuel Sharp,emanuel sharp,5.5,-108.0,-118.0,SAC,709.196219304,63994314.0,63994315.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Precious Achiuwa,precious achiuwa,8.5,-102.0,-125.0,SAC,709.196063806,38212281.0,38212282.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Domantas Sabonis,domantas sabonis,13.5,-113.0,-113.0,SAC,709.196063804,12601272.0,12601273.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Zach LaVine,zach lavine,19.5,-115.0,-111.0,SAC,709.196063812,12257190.0,12257191.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Domantas Sabonis,domantas sabonis,12.5,-120.0,-108.0,SAC,709.196063808,12601272.0,12601273.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Darius Acuff Jr.,darius acuff,5.5,-136.0,106.0,SAC,709.196063801,90960656.0,90960655.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,108.0,-138.0,SAC,709.196063823,12257190.0,12257191.0
+2026-11-06 21:49,2026-11-06,36279170,2026-11-06 22:10,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,3.5,-146.0,114.0,SAC,709.196100094,22280387.0,22280388.0

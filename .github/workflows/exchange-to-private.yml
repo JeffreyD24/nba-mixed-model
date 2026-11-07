@@ -21,7 +21,10 @@ jobs:
         job: ["poly 10345 2025-12,2026-01", "poly 10345 2026-02,2026-03", "poly 10345 2026-04,2026-05,2026-06", "poly 10345 2026-07,2026-08,2026-09,2026-10,2026-11,2026-12",
               "poly 10470 2025-12", "poly 10470 2026-01", "poly 10470 2026-02", "poly 10470 2026-03,2026-04", "poly 10470 2026-10,2026-11",
               "poly 10346", "poly 10187", "poly 12185", "poly 12756",
-              "kalshi KXNBAGAME", "kalshi KXNHLGAME", "kalshi KXNFLGAME", "kalshi KXNCAAMBGAME", "kalshi KXNCAAFGAME", "kalshi KXNBASPREAD", "kalshi KXNBATOTAL"]
+              "kalshi KXNBAGAME", "kalshi KXNHLGAME", "kalshi KXNFLGAME", "kalshi KXNCAAMBGAME", "kalshi KXNCAAFGAME", "kalshi KXNBASPREAD", "kalshi KXNBATOTAL",
+              # Nov 6, 2026 (NHL props model): Kalshi NHL player-prop series, settled from Nov 22, 2025 (historical tier) to now.
+              # Evidence: nhl-mixed-model/research/probes/kalshi_nhl_series.txt + kalshi_nhl_historical.txt. KXNHLSAVE is new in 2026-27.
+              "kalshi KXNHLGOAL", "kalshi KXNHLPTS", "kalshi KXNHLAST", "kalshi KXNHLFIRSTGOAL", "kalshi KXNHLSAVE"]
     steps:
       - name: Filter
         id: f

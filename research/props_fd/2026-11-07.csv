@@ -3702,3 +3702,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Day'Ron Sharpe,dayron sharpe,8.5,106.0,-140.0,BKN,709.196260039,42351813,42351812
 2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Dyson Daniels,dyson daniels,5.5,-136.0,102.0,ATL,709.196263433,50686100,50686102
 2026-11-07 11:20,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Julius Randle,julius randle,4.5,-106.0,-125.0,BKN,709.196260106,12260654,12260655
+2026-11-07 11:24,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-118.0,-112.0,NYK,709.196234001,41408270,41408268
+2026-11-07 11:24,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Peyton Watson,peyton watson,10.5,-128.0,-104.0,CLE,709.196263772,54472264,54472265
+2026-11-07 11:24,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-104.0,-128.0,NYK,709.196233910,17926928,17926927
+2026-11-07 11:24,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,138.0,-186.0,NYK,709.196233917,17926931,17926932
+2026-11-07 11:24,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-112.0,-118.0,NYK,709.196233932,16220637,16220638
+2026-11-07 11:24,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-120.0,-110.0,NYK,709.196233958,41408270,41408268
+2026-11-07 11:24,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Oso Ighodaro,oso ighodaro,2.5,-120.0,-110.0,PHX,709.196237081,50184535,50184532
+2026-11-07 11:24,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Jalen Green,jalen green,2.5,-158.0,116.0,PHX,709.196236602,41386184,41386185

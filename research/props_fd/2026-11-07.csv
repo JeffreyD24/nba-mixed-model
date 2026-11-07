@@ -3334,3 +3334,12 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Dylan Harper,dylan harper,4.5,-152.0,114.0,SAS,709.196242474,76027865,76027863
 2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-154.0,116.0,SAS,709.196241601,61967224,61967225
 2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196241734,15572079,15572080
+2026-11-07 10:09,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Andrew Nembhard,andrew nembhard,7.5,-102.0,-130.0,IND,709.196222869,43058624,43058625
+2026-11-07 10:09,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,134.0,-180.0,DEN,709.196220607,43026473,43026472
+2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Miles McBride,miles mcbride,7.5,100.0,-132.0,NYK,709.196233898,42109139,42109140
+2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-104.0,-128.0,NYK,709.196233910,17926928,17926927
+2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Karl-Anthony Towns,karl anthony towns,12.5,-144.0,108.0,NYK,709.196233980,41408270,41408268
+2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Evan Mobley,evan mobley,8.5,-118.0,-112.0,CLE,709.196263458,41407628,41407629
+2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,136.0,-182.0,NYK,709.196233917,17926931,17926932
+2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,James Harden,james harden,6.5,104.0,-138.0,CLE,709.196263550,12260579,12260580
+2026-11-07 10:09,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,140.0,-186.0,NYK,709.196233878,16220637,16220638

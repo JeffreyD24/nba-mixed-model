@@ -82,3 +82,4 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 20:20,297429,Canisius Golden Griffins,St. Bonaventure Bonnies,9.5,-1.57,-9.38,-7.38,-9.4,0.1,PASS,edge 0.10 < 0.5,-9.23,0.27,PASS,edge 0.27 < 0.62,2026-11-06 19:01
 2026-11-06 20:25,297625,Seattle Redhawks,Portland State Vikings,-10.5,12.17,12.27,13.26,10.9,0.4,PASS,edge 0.40 < 0.5,10.98,0.48,PASS,edge 0.48 < 0.62,2026-11-06 19:01
 2026-11-06 20:25,297644,Santa Clara Broncos,Sacramento State Hornets,-18.5,29.67,32.7,21.68,19.47,0.97,PASS,a team has under 3 games,19.18,0.68,PASS,a team has under 3 games,2026-11-06 19:01
+2026-11-06 20:30,302315,Davidson Wildcats,Mercer Bears,-10.5,15.59,13.58,11.31,10.76,0.26,PASS,edge 0.26 < 0.5,10.77,0.27,PASS,edge 0.27 < 0.62,2026-11-06 19:01

@@ -55,3 +55,15 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 20:24:43,295394,2026-11-07,2026-11-07 20:30,orl,gs,FanDuel,event,spread,away,6.5,-115,normal
 2026-11-06 20:24:43,295394,2026-11-07,2026-11-07 20:30,orl,gs,FanDuel,event,total,over,219.5,-115,normal
 2026-11-06 20:24:43,295394,2026-11-07,2026-11-07 20:30,orl,gs,FanDuel,event,total,under,219.5,-105,normal
+2026-11-06 20:27:12,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,spread,home,6.5,-110,normal
+2026-11-06 20:27:12,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,spread,away,-6.5,-110,normal
+2026-11-06 20:28:27,295390,2026-11-07,2026-11-07 17:00,den,ind,Caesars,event,moneyline,home,0.0,185,opener
+2026-11-06 20:28:27,295390,2026-11-07,2026-11-07 17:00,den,ind,Caesars,event,moneyline,away,0.0,-225,opener
+2026-11-06 20:28:27,295390,2026-11-07,2026-11-07 17:00,den,ind,Caesars,event,spread,home,6.5,-110,opener
+2026-11-06 20:28:27,295390,2026-11-07,2026-11-07 17:00,den,ind,Caesars,event,spread,away,-6.5,-110,opener
+2026-11-06 20:28:27,295390,2026-11-07,2026-11-07 17:00,den,ind,Caesars,event,total,over,228.5,-110,opener
+2026-11-06 20:28:27,295390,2026-11-07,2026-11-07 17:00,den,ind,Caesars,event,total,under,228.5,-110,opener
+2026-11-06 20:29:43,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,moneyline,home,0.0,188,normal
+2026-11-06 20:29:43,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,moneyline,away,0.0,-225,normal
+2026-11-06 20:29:43,295394,2026-11-07,2026-11-07 20:30,orl,gs,Consensus,event,moneyline,home,0.0,-215,normal
+2026-11-06 20:29:43,295394,2026-11-07,2026-11-07 20:30,orl,gs,Consensus,event,moneyline,away,0.0,180,normal

@@ -55,3 +55,14 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 20:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-154,116,DEN,709.196221261,12234472,12234473
 2026-11-06 20:25,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,100,-132,DEN,709.196217703,16127791,16127792
 2026-11-06 20:27,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Spencer Jones,spencer jones,4.5,-112,-118,DEN,709.196221362,43257364,43257365
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Cam Johnson,cam johnson,11.5,-112,-118,DEN,709.196220934,51835103,51835094
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,100,-132,DEN,709.196220683,12730307,12730306
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Cam Johnson,cam johnson,3.5,-162,122,DEN,709.196220939,51835103,51835094
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Nikola Jokic,nikola jokic,11.5,-144,108,DEN,709.196217284,12257278,12257279
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,DeMar DeRozan,demar derozan,2.5,124,-166,DEN,709.196221258,12234472,12234473
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Jamal Murray,jamal murray,4.5,-118,-112,DEN,709.196217705,16127791,16127792
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Cam Johnson,cam johnson,2.5,130,-174,DEN,709.196220937,51835103,51835094
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,134,-180,DEN,709.196220607,43026473,43026472
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-136,102,DEN,709.196217261,12257278,12257279
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-160,120,DEN,709.196221261,12234472,12234473
+2026-11-06 20:29,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,-104,-128,DEN,709.196217703,16127791,16127792

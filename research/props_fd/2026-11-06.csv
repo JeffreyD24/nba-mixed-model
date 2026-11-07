@@ -14946,3 +14946,35 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 22:05,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,-108.0,-115.0,POR,709.196048601,12260620.0,12260621.0
 2026-11-06 22:05,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Luka Doncic,luka doncic,7.5,110.0,-140.0,LAL,709.196045289,12463224.0,12463223.0
 2026-11-06 22:05,2026-11-06,36279174,2026-11-06 22:10,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,5.5,124.0,-158.0,LAL,709.196045222,41574998.0,41574999.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Precious Achiuwa,precious achiuwa,8.5,-102.0,-125.0,SAC,709.196063806,38212281.0,38212282.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Luke Kornet,luke kornet,3.5,-111.0,-115.0,SAS,709.196220265,27592805.0,27592806.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Zach LaVine,zach lavine,19.5,-113.0,-113.0,SAC,709.196063812,12257190.0,12257191.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Devin Vassell,devin vassell,11.5,-115.0,-111.0,SAS,709.196062641,38295529.0,38295528.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Julian Champagnie,julian champagnie,9.5,100.0,-128.0,SAS,709.196062658,43049038.0,43049039.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Dylan Harper,dylan harper,16.5,-130.0,102.0,SAS,709.196062571,76027865.0,76027863.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Malik Monk,malik monk,12.5,-108.0,-118.0,SAC,709.196100096,22280387.0,22280388.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Dylan Cardwell,dylan cardwell,3.5,-130.0,102.0,SAC,709.196218982,79985336.0,79985361.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,pts,Victor Wembanyama,victor wembanyama,27.5,-102.0,-125.0,SAS,709.196062623,61967224.0,61967225.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Domantas Sabonis,domantas sabonis,12.5,-108.0,-118.0,SAC,709.196063808,12601272.0,12601273.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Luke Kornet,luke kornet,3.5,-156.0,122.0,SAS,709.196220262,27592805.0,27592806.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Dylan Cardwell,dylan cardwell,5.5,-113.0,-115.0,SAC,709.196218981,79985336.0,79985361.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Stephon Castle,stephon castle,5.5,114.0,-146.0,SAS,709.196062587,64780942.0,64780943.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Darius Acuff Jr.,darius acuff,3.5,118.0,-150.0,SAC,709.196063813,90960656.0,90960655.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Keldon Johnson,keldon johnson,4.5,-111.0,-115.0,SAS,709.196062646,37873186.0,37873185.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Dylan Harper,dylan harper,5.5,102.0,-130.0,SAS,709.196062586,76027865.0,76027863.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,reb,Devin Vassell,devin vassell,4.5,132.0,-170.0,SAS,709.196062563,38295529.0,38295528.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Stephon Castle,stephon castle,6.5,108.0,-138.0,SAS,709.196062653,64780942.0,64780943.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,De'Aaron Fox,deaaron fox,5.5,-111.0,-115.0,SAS,709.196062558,15572079.0,15572080.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Darius Acuff Jr.,darius acuff,5.5,-140.0,110.0,SAC,709.196063801,90960656.0,90960655.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Zach LaVine,zach lavine,2.5,110.0,-140.0,SAC,709.196063823,12257190.0,12257191.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Malik Monk,malik monk,3.5,-146.0,114.0,SAC,709.196100094,22280387.0,22280388.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Dylan Harper,dylan harper,4.5,-162.0,126.0,SAS,709.196062603,76027865.0,76027863.0
+2026-11-06 22:07,2026-11-06,36279170,2026-11-06 22:11,San Antonio Spurs @ Sacramento Kings,sac,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-180.0,140.0,SAS,709.196062582,61967224.0,61967225.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Deni Avdija,deni avdija,23.5,-120.0,-108.0,POR,709.196048602,37901072.0,37901070.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Robert Williams III,robert williams,6.5,100.0,-128.0,POR,709.196048562,90846389.0,90846386.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,pts,Jrue Holiday,jrue holiday,13.5,-128.0,100.0,POR,709.196048583,12260620.0,12260621.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Jrue Holiday,jrue holiday,4.5,114.0,-146.0,POR,709.196048593,12260620.0,12260621.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Toumani Camara,toumani camara,3.5,-148.0,116.0,POR,709.196048568,43450264.0,43450266.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,reb,Deni Avdija,deni avdija,6.5,-118.0,-108.0,POR,709.196048584,37901072.0,37901070.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Jrue Holiday,jrue holiday,4.5,-111.0,-115.0,POR,709.196048601,12260620.0,12260621.0
+2026-11-06 22:07,2026-11-06,36279174,2026-11-06 22:12,Portland Trail Blazers @ Los Angeles Lakers,lal,por,ast,Austin Reaves,austin reaves,5.5,126.0,-162.0,LAL,709.196045222,41574998.0,41574999.0

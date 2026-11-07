@@ -1278,3 +1278,8 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 02:26,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Jrue Holiday,jrue holiday,4.5,118.0,-158.0,POR,709.196239142,12260620,12260621
 2026-11-07 02:26,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Deni Avdija,deni avdija,6.5,102.0,-136.0,POR,709.196238601,37901072,37901070
 2026-11-07 02:26,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,106.0,-140.0,POR,709.196238656,12260575,12260576
+2026-11-07 02:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-114.0,-114.0,NYK,709.196234001,41408270,41408268
+2026-11-07 02:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,17.5,-102.0,-130.0,NYK,709.196233906,16220637,16220638
+2026-11-07 02:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Landry Shamet,landry shamet,10.5,-102.0,-130.0,NYK,709.196233962,22599731,22599732
+2026-11-07 02:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-132.0,100.0,NYK,709.196233958,41408270,41408268
+2026-11-07 02:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,142.0,-192.0,NYK,709.196233878,16220637,16220638

@@ -1799,11 +1799,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 05:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,138.0,-186.0,DEN,709.196220607,43026473,43026472
 2026-11-07 05:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-154.0,116.0,DEN,709.196221261,12234472,12234473
 2026-11-07 05:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,108.0,-144.0,DEN,709.196217703,16127791,16127792
-2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,102.0,-136.0,HOU,709.196233870,43049093,43049094
+2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,102.0,-136.0,HOU,709.19623387,43049093,43049094
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Collin Gillespie,collin gillespie,8.5,-128.0,-104.0,PHX,709.196237548,43026356,43026355
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Tari Eason,tari eason,9.5,-112.0,-118.0,HOU,709.196234654,43049623,43049624
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Luke Kennard,luke kennard,5.5,-128.0,-104.0,PHX,709.196237721,16954514,16954515
-2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-112.0,-118.0,HOU,709.196232450,40296685,40296686
+2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-112.0,-118.0,HOU,709.19623245,40296685,40296686
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Reed Sheppard,reed sheppard,8.5,100.0,-132.0,HOU,709.196235485,63497028,63497029
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Kevin Durant,kevin durant,22.5,100.0,-132.0,HOU,709.196231939,12260605,12260606
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Marcus Smart,marcus smart,2.5,146.0,-200.0,HOU,709.196237791,12880787,12880788
@@ -1813,3 +1813,20 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Jalen Green,jalen green,2.5,-154.0,116.0,PHX,709.196236602,41386184,41386185
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-146.0,110.0,PHX,709.196236016,23559725,23559726
 2026-11-07 05:48,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,126.0,-168.0,HOU,709.196235489,63497028,63497029
+2026-11-07 05:50,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Cam Johnson,cam johnson,11.5,-110.0,-118.0,DEN,709.196220934,51835103,51835094
+2026-11-07 05:50,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Nesmith,aaron nesmith,12.5,-106.0,-125.0,IND,709.196223604,39494853,39494854
+2026-11-07 05:50,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,-102.0,-130.0,DEN,709.196217273,12257278,12257279
+2026-11-07 05:50,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,DeMar DeRozan,demar derozan,12.5,100.0,-132.0,DEN,709.196221260,12234472,12234473
+2026-11-07 05:50,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Kelly Oubre Jr.,kelly oubre,3.5,104.0,-138.0,IND,709.196223953,41408119,41408118
+2026-11-07 05:50,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Andrew Nembhard,andrew nembhard,7.5,102.0,-136.0,IND,709.196222869,43058624,43058625
+2026-11-07 05:50,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-160.0,120.0,DEN,709.196221261,12234472,12234473
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,9.5,-130.0,-102.0,NYK,709.196233928,17926931,17926932
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,17.5,102.0,-136.0,NYK,709.196233906,16220637,16220638
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Miles McBride,miles mcbride,7.5,100.0,-132.0,NYK,709.196233898,42109139,42109140
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-104.0,-128.0,NYK,709.196233910,17926928,17926927
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Karl-Anthony Towns,karl anthony towns,12.5,-144.0,108.0,NYK,709.196233980,41408270,41408268
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,136.0,-186.0,NYK,709.196233917,17926931,17926932
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-125.0,-106.0,NYK,709.196233932,16220637,16220638
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,James Harden,james harden,6.5,100.0,-132.0,CLE,709.196263550,12260579,12260580
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-130.0,-102.0,NYK,709.196233958,41408270,41408268
+2026-11-07 05:50,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Mikal Bridges,mikal bridges,2.5,-168.0,126.0,NYK,709.196233961,17926931,17926932

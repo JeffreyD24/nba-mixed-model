@@ -76,3 +76,4 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 19:35,297433,UC San Diego Tritons,Fresno State Bulldogs,-9.5,13.1,7.23,9.52,9.5,0.0,PASS,edge 0.00 < 0.5,10.0,0.5,PASS,edge 0.50 < 0.62,2026-11-06 19:01
 2026-11-06 19:40,297631,UNLV Rebels,Samford Bulldogs,-11.5,14.3,11.26,14.06,11.85,0.35,PASS,edge 0.35 < 0.5,11.81,0.31,PASS,edge 0.31 < 0.62,2026-11-06 19:01
 2026-11-06 19:40,297424,High Point Panthers,Washington State Cougars,-11.5,20.14,15.41,13.12,11.91,0.41,PASS,edge 0.41 < 0.5,13.06,1.56,PASS,a team has under 3 games,2026-11-06 19:01
+2026-11-06 19:58,303340,UC Irvine Anteaters,San Jose State Spartans,-7.5,11.55,6.33,14.14,8.21,0.71,PASS,a team has under 3 games,8.16,0.66,PASS,a team has under 3 games,2026-11-06 19:01

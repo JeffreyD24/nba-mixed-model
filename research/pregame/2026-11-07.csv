@@ -5701,3 +5701,17 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 07:13:27,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetRivers,firstquarter,team_total,away_over,29.5,-113,normal
 2026-11-07 07:13:27,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetRivers,firstquarter,team_total,away_under,29.5,-121,normal
 2026-11-07 07:15:56,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Consensus,event,total,over,226.5,-111,normal
+2026-11-07 07:17:14,295393,2026-11-07,2026-11-07 20:00,wsh,okc,BetMGM,event,team_total,away_over,103.5,-115,normal
+2026-11-07 07:17:14,295393,2026-11-07,2026-11-07 20:00,wsh,okc,BetMGM,event,total,under,220.5,-118,normal
+2026-11-07 07:17:14,295393,2026-11-07,2026-11-07 20:00,wsh,okc,BetMGM,event,total,over,220.5,-110,normal
+2026-11-07 07:17:14,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,event,team_total,home_under,110.5,-105,normal
+2026-11-07 07:17:14,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,event,team_total,home_over,110.5,-115,normal
+2026-11-07 07:17:14,295396,2026-11-07,2026-11-07 22:00,sa,por,BetMGM,event,total,under,29.5,-110,normal
+2026-11-07 07:17:14,295396,2026-11-07,2026-11-07 22:00,sa,por,BetMGM,event,total,over,29.5,-120,normal
+2026-11-07 07:18:29,295396,2026-11-07,2026-11-07 22:00,sa,por,Fanatics,event,moneyline,home,0.0,170,normal
+2026-11-07 07:18:29,295396,2026-11-07,2026-11-07 22:00,sa,por,Fanatics,event,moneyline,away,0.0,-205,normal
+2026-11-07 07:19:44,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,firstquarter,spread,away,-2.5,-105,normal
+2026-11-07 07:19:44,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,firstquarter,spread,home,2.5,-125,normal
+2026-11-07 07:20:57,295390,2026-11-07,2026-11-07 17:00,den,ind,bet365,event,moneyline,home,0.0,230,normal
+2026-11-07 07:20:57,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,secondquarter,moneyline,home,0.0,120,normal
+2026-11-07 07:20:57,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,secondquarter,moneyline,away,0.0,-160,normal

@@ -1105,7 +1105,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,De'Aaron Fox,deaaron fox,3.5,-108.0,-122.0,SAS,709.196241744,15572079,15572080
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Toumani Camara,toumani camara,3.5,-154.0,116.0,POR,709.196238645,43450264,43450266
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Deni Avdija,deni avdija,6.5,-118.0,-112.0,POR,709.196238627,37901072,37901070
-2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-104.0,-128.0,POR,709.196238650,43450264,43450266
+2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-104.0,-128.0,POR,709.19623865,43450264,43450266
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Donovan Clingan,donovan clingan,1.5,-125.0,-106.0,POR,709.196238655,50752175,50752173
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Stephon Castle,stephon castle,6.5,108.0,-144.0,SAS,709.196242497,64780942,64780943
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Devin Vassell,devin vassell,2.5,-114.0,-114.0,SAS,709.196242498,38295529,38295528
@@ -1116,3 +1116,18 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196241734,15572079,15572080
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Deni Avdija,deni avdija,6.5,100.0,-132.0,POR,709.196238601,37901072,37901070
 2026-11-07 02:04,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,112.0,-148.0,POR,709.196238656,12260575,12260576
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Franz Wagner,franz wagner,21.5,-125.0,-106.0,ORL,709.196236458,40196992,40196991
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Anthony Black,anthony black,14.5,-122.0,-106.0,ORL,709.196236355,50378078,50378080
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Tristan da Silva,tristan da silva,12.5,100.0,-132.0,ORL,709.196236409,43072432,43072430
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Wendell Carter Jr.,wendell carter,12.5,-130.0,-102.0,ORL,709.196236347,41408443,41408444
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Wendell Carter Jr.,wendell carter,9.5,110.0,-146.0,ORL,709.196236373,41408443,41408444
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Desmond Bane,desmond bane,4.5,136.0,-182.0,ORL,709.196236385,38187360,38187370
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Anthony Black,anthony black,4.5,102.0,-136.0,ORL,709.196236454,50378078,50378080
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Jase Richardson,jase richardson,2.5,-130.0,-102.0,ORL,709.196236397,76284095,76284094
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Franz Wagner,franz wagner,5.5,-122.0,-108.0,ORL,709.196236387,40196992,40196991
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Jase Richardson,jase richardson,2.5,-114.0,-114.0,ORL,709.196236360,76284095,76284094
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Wendell Carter Jr.,wendell carter,1.5,-114.0,-114.0,ORL,709.196236364,41408443,41408444
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Draymond Green,draymond green,6.5,104.0,-138.0,GSW,709.196238223,12260600,12260599
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-136.0,102.0,ORL,709.196236448,43072432,43072430
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Anthony Black,anthony black,4.5,-108.0,-122.0,ORL,709.196236325,50378078,50378080
+2026-11-07 02:06,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Desmond Bane,desmond bane,2.5,-166.0,124.0,ORL,709.196236416,38187360,38187370

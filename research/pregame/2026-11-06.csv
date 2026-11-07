@@ -44132,3 +44132,7 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 20:48:33,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,event,moneyline,home,0.0,875,normal
 2026-11-06 20:48:33,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,event,total,under,7.5,-110,normal
 2026-11-06 20:48:33,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,event,total,over,7.5,-120,normal
+2026-11-06 20:49:49,295195,2026-11-06,2026-11-06 22:00,sa,sac,Caesars,firstquarter,spread,home,5.5,-115,normal
+2026-11-06 20:49:49,295195,2026-11-06,2026-11-06 22:00,sa,sac,Caesars,firstquarter,spread,away,-5.5,-115,normal
+2026-11-06 20:49:49,295195,2026-11-06,2026-11-06 22:00,sa,sac,Caesars,secondhalf,spread,away,-8.5,-105,normal
+2026-11-06 20:49:49,295195,2026-11-06,2026-11-06 22:00,sa,sac,Caesars,secondhalf,spread,home,8.5,-125,normal

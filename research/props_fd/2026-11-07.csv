@@ -2673,3 +2673,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 08:47,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Jared McCain,jared mccain,1.5,-154.0,116.0,OKC,709.196253743,63496225,63496226
 2026-11-07 08:47,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,154.0,-210.0,WAS,709.196253328,12260628,12260629
 2026-11-07 08:47,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Alex Caruso,alex caruso,2.5,130.0,-174.0,OKC,709.196254946,23677919,23677920
+2026-11-07 08:53,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Scoot Henderson,scoot henderson,13.5,-106.0,-122.0,POR,709.196238684,62064858,62064857
+2026-11-07 08:53,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Toumani Camara,toumani camara,11.5,-102.0,-130.0,POR,709.196238637,43450264,43450266
+2026-11-07 08:53,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Damian Lillard,damian lillard,20.5,-128.0,-104.0,POR,709.196238689,12260575,12260576
+2026-11-07 08:53,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Donovan Clingan,donovan clingan,11.5,-102.0,-130.0,POR,709.196238628,50752175,50752173
+2026-11-07 08:53,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-106.0,-125.0,POR,709.196238650,43450264,43450266
+2026-11-07 08:53,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Donovan Clingan,donovan clingan,1.5,-144.0,108.0,POR,709.196238655,50752175,50752173
+2026-11-07 08:53,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Jrue Holiday,jrue holiday,4.5,100.0,-132.0,POR,709.196239142,12260620,12260621

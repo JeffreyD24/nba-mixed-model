@@ -19345,3 +19345,7 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 12:33:48,295396,2026-11-07,2026-11-07 22:00,sa,por,bet365,firstquarter,total,under,58.5,-110,normal
 2026-11-07 12:33:48,295396,2026-11-07,2026-11-07 22:00,sa,por,bet365,secondquarter,moneyline,home,0.0,115,normal
 2026-11-07 12:33:48,295396,2026-11-07,2026-11-07 22:00,sa,por,bet365,secondquarter,moneyline,away,0.0,-145,normal
+2026-11-07 12:35:58,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,event,team_total,away_over,118.5,-110,normal
+2026-11-07 12:35:58,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,event,team_total,away_under,118.5,-120,normal
+2026-11-07 12:35:58,295395,2026-11-07,2026-11-07 21:00,hou,phx,Fanatics,thirdquarter,team_total,home_over,27.5,-140,normal
+2026-11-07 12:35:58,295395,2026-11-07,2026-11-07 21:00,hou,phx,Fanatics,thirdquarter,team_total,home_under,27.5,105,normal

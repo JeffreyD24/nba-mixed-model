@@ -1,4 +1,4 @@
-# NCAAM M2 totals TEST record 2026-27 (not bets), updated 2026-11-06 10:03 ET
+# NCAAM M2 totals TEST record 2026-27 (not bets), updated 2026-11-06 19:00 ET
 
 Rule: |M2 total - DraftKings' own opener| >= 6 (DraftKings rows only), both teams with a conference id and 3+ games, -110.
 Fable review Nov 5 BLOCKED live use; re-review at ~300 DraftKings bets. Break-even CLV 1.02.

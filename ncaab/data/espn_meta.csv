@@ -113476,6 +113476,7 @@ date,espn_id,neutral,conf_game,tournament,notes,home_espn_team,home_name,home_lo
 2026-11-03,401926180,False,False,STD,,2430,UNC Greensboro Spartans,UNC Greensboro,24,99,96,2397,Milligan Buffaloes,Milligan,,99,43
 2026-11-03,401925779,False,False,STD,,2184,Duquesne Dukes,Duquesne,3,99,78,2870,Purdue Fort Wayne Mastodons,Purdue Fort Wayne,45,99,71
 2026-11-03,401921819,False,False,STD,,2579,South Carolina Gamecocks,South Carolina,23,99,81,56,Stetson Hatters,Stetson,46,99,55
+2026-11-03,401921153,False,False,STD,,2448,North Carolina A&T Aggies,North Carolina A&T,10,99,92,2684,Warren Wilson Owls,Warren Wilson,,99,53
 2026-11-03,401920376,False,False,STD,,259,Virginia Tech Hokies,Virginia Tech,2,99,88,2154,Coppin State Eagles,Coppin State,16,99,54
 2026-11-03,401920304,False,False,STD,,59,Georgia Tech Yellow Jackets,Georgia Tech,2,99,75,2261,Hampton Pirates,Hampton,10,99,55
 2026-11-03,401920061,False,False,STD,,227,Rhode Island Rams,Rhode Island,3,99,103,107,Holy Cross Crusaders,Holy Cross,22,99,59
@@ -113496,7 +113497,6 @@ date,espn_id,neutral,conf_game,tournament,notes,home_espn_team,home_name,home_lo
 2026-11-03,401920343,False,False,STD,,2856,California Baptist Lancers,California Baptist,9,99,63,2454,North Florida Ospreys,North Florida,46,99,71
 2026-11-03,401920155,False,False,STD,,21,San Diego State Aztecs,San Diego State,21,99,102,2239,Cal State Fullerton Titans,Cal State Fullerton,9,99,78
 2026-11-03,401917511,False,False,STD,,279,Pacific Tigers,Pacific,29,99,102,3246,Bethesda Flames,Bethesda,,99,47
-2026-11-03,401921153,False,False,STD,,2448,North Carolina A&T Aggies,North Carolina A&T,10,99,0,2684,Warren Wilson Owls,Warren Wilson,,99,0
 2026-11-04,401920232,False,False,STD,,159,Dartmouth Big Green,Dartmouth,12,99,107,126956,Framingham State Rams,Framingham State,,99,50
 2026-11-04,401929450,False,False,STD,,295,Old Dominion Monarchs,Old Dominion,27,99,91,131784,Regent Regent Royals,Regent,,99,47
 2026-11-04,401928853,False,False,STD,,2415,Morgan State Bears,Morgan State,16,99,95,3229,Virginia Lynchburg Dragons,Virginia Lynchburg,,99,58

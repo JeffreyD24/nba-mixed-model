@@ -604,3 +604,4 @@ seen_at_et,game_id,date,away,home,market,line_home,long_side,slug,bid,ask,bid_de
 2026-11-07 06:30,22600211,2026-11-10,mil,ny,moneyline,,away,aec-nba-mil-ny-2026-11-10,0.13,0.21,8.0,13.0,0.83,0.19,832.6,443.65,team
 2026-11-07 06:30,22600214,2026-11-10,mia,utah,moneyline,,away,aec-nba-mia-uta-2026-11-10,0.52,0.79,8.0,8.0,0.345,0.82,0.06,0.03,team
 2026-11-07 06:35,22600211,2026-11-10,mil,ny,moneyline,,away,aec-nba-mil-ny-2026-11-10,0.14,0.21,8.0,15.0,0.825,0.19,832.6,443.65,team
+2026-11-07 06:40,22600211,2026-11-10,mil,ny,moneyline,,away,aec-nba-mil-ny-2026-11-10,0.14,0.21,9.0,12.0,0.825,0.19,832.6,443.65,team

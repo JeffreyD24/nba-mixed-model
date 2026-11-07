@@ -1,0 +1,9 @@
+seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds,line_status
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,spread,home,6.5,-111,normal
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,spread,away,-6.5,-111,normal
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,total,under,229.5,-116,normal
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,total,over,229.5,-111,normal
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Open,event,spread,away,-6.5,-111,
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Open,event,spread,home,6.5,-111,
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Open,event,total,over,229.5,-111,
+2026-11-06 20:09:42,295390,2026-11-07,2026-11-07 17:00,den,ind,Open,event,total,under,229.5,-116,

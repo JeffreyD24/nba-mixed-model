@@ -11,7 +11,7 @@ import os, sys, glob, gzip, shutil
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 D = os.path.join(HERE, "derived")
-SAVE = ("props_features.csv", "rule_audit_R8.csv")   # NBA (Nov 5, 2026): add patterns as new build products are saved
+SAVE = ("props_features.csv", "rule_audit_R8.csv", "old_sbr_preds_*.csv")   # NBA (Nov 5, 2026): add patterns as new build products are saved
 
 
 def ensure(work, names=None):

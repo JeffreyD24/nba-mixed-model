@@ -1,23 +1,23 @@
 NBA tournament with injuries (missed last game, z_prior) - CHOOSE 2019-2022 (verdict). Pre-registered: NBA_INJ_PREREG.md
 
-== SPREAD: fit 2014-2018 (4320 games), test 2019-2022 (3657 games; 5 test games dropped for a missing team row)
-  6 stack            dMSE +0.31 [+0.00,+0.63] P<0 0.05 | 338 bets 52.7% +1.8u CLV +0.49 | PASS
-  7 stack + missed   dMSE +0.20 [-0.16,+0.58] P<0 0.18 | 535 bets 52.9% +5.3u CLV +0.47 | -
-  missed coefficient (fit seasons): +0.201 points per z  (home; positive = healthier home side covers more)
-  paired dMSE (7 - 6): -0.109 [-0.344,+0.123]
-     2019: paired +0.031; 7: 113 bets 57.5% +11.1u CLV +0.25
-     2020: paired -0.538; 7: 126 bets 51.6% -1.9u CLV +0.34
-     2021: paired +0.236; 7: 104 bets 49.0% -6.6u CLV +0.92
-     2022: paired -0.175; 7: 192 bets 53.1% +2.7u CLV +0.42
+== SPREAD: fit 2014-2018 (4976 games), test 2019-2022 (3657 games; 5 test games dropped for a missing team row)
+  6 stack            dMSE +0.24 [-0.10,+0.59] P<0 0.14 | 406 bets 54.4% +15.9u CLV +0.55 | -
+  7 stack + missed   dMSE +0.11 [-0.31,+0.54] P<0 0.33 | 668 bets 51.0% -17.0u CLV +0.41 | -
+  missed coefficient (fit seasons): +0.230 points per z  (home; positive = healthier home side covers more)
+  paired dMSE (7 - 6): -0.123 [-0.392,+0.139]
+     2019: paired +0.013; 7: 161 bets 49.1% -10.2u CLV +0.30
+     2020: paired -0.556; 7: 144 bets 51.4% -2.7u CLV +0.36
+     2021: paired +0.263; 7: 133 bets 51.9% -1.3u CLV +0.82
+     2022: paired -0.215; 7: 230 bets 51.7% -2.8u CLV +0.27
   VERDICT (spread): not shown
 
-== TOTAL: fit 2014-2018 (4636 games), test 2019-2022 (3956 games; 5 test games dropped for a missing team row)
-  6 stack            dMSE +1.30 [+0.65,+1.93] P<0 0.00 | 457 bets 55.8% +29.8u CLV +1.40 | PASS
-  7 stack + missed   dMSE +1.30 [+0.65,+1.93] P<0 0.00 | 457 bets 55.8% +29.8u CLV +1.40 | PASS
-  missed coefficient (fit seasons): +0.001 points per z  (total; negative = fewer points when good players are out)
-  paired dMSE (7 - 6): -0.001 [-0.002,+0.001]
-     2019: paired +0.002; 7: 93 bets 55.9% +6.3u CLV +0.97
-     2020: paired -0.002; 7: 144 bets 50.7% -4.6u CLV +1.26
-     2021: paired -0.001; 7: 89 bets 60.7% +14.1u CLV +1.51
-     2022: paired -0.001; 7: 131 bets 58.0% +14.1u CLV +1.79
+== TOTAL: fit 2014-2018 (5345 games), test 2019-2022 (3956 games; 5 test games dropped for a missing team row)
+  6 stack            dMSE +1.39 [+0.73,+2.03] P<0 0.00 | 469 bets 54.8% +21.6u CLV +1.30 | PASS
+  7 stack + missed   dMSE +1.40 [+0.75,+2.04] P<0 0.00 | 473 bets 54.1% +15.7u CLV +1.25 | PASS
+  missed coefficient (fit seasons): -0.028 points per z  (total; negative = fewer points when good players are out)
+  paired dMSE (7 - 6): +0.014 [-0.024,+0.054]
+     2019: paired -0.067; 7: 103 bets 55.3% +5.8u CLV +0.84
+     2020: paired +0.074; 7: 147 bets 48.3% -11.5u CLV +1.27
+     2021: paired +0.024; 7: 87 bets 59.8% +12.3u CLV +1.02
+     2022: paired +0.037; 7: 136 bets 55.9% +9.1u CLV +1.67
   VERDICT (total): not shown

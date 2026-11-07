@@ -4245,3 +4245,8 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 04:02:05,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,home_under,116.5,-110,normal
 2026-11-07 04:02:05,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,away_under,110.5,-120,normal
 2026-11-07 04:02:05,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,home_over,116.5,-120,normal
+2026-11-07 04:08:22,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,team_total,away_under,103.5,-105,normal
+2026-11-07 04:08:22,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,team_total,away_over,103.5,-120,normal
+2026-11-07 04:08:22,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,team_total,home_under,116.5,-115,normal
+2026-11-07 04:10:49,295393,2026-11-07,2026-11-07 20:00,wsh,okc,bet365,event,total,over,220.5,-107,normal
+2026-11-07 04:10:49,295393,2026-11-07,2026-11-07 20:00,wsh,okc,bet365,event,total,under,220.5,-113,normal

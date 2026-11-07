@@ -975,3 +975,22 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-07 04:05,22600191,2026-11-07,Total 3-Point Field Goals,3914044,Landry Shamet,,1.5,145.0,2.5,-136.0,2026-11-07T11:21Z,under
 2026-11-07 04:05,22600191,2026-11-07,Total 3-Point Field Goals,4431823,Miles McBride,,1.5,-105.0,1.5,-104.0,2026-11-07T11:26Z,over
 2026-11-07 04:05,22600191,2026-11-07,Total 3-Point Field Goals,4431823,Miles McBride,,1.5,-125.0,1.5,-126.0,2026-11-07T11:26Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total Assists,4066320,Desmond Bane,,2.5,-158.0,2.5,-164.0,2026-11-07T11:53Z,over
+2026-11-07 04:10,22600193,2026-11-07,Total Assists,4066320,Desmond Bane,,2.5,120.0,2.5,124.0,2026-11-07T11:53Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total Assists,4712849,Anthony Black,,4.5,-101.0,4.5,103.0,2026-11-07T11:53Z,over
+2026-11-07 04:10,22600193,2026-11-07,Total Assists,4712849,Anthony Black,,4.5,-131.0,4.5,-136.0,2026-11-07T11:53Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total Rebounds,6589,Draymond Green,,5.5,100.0,5.5,105.0,2026-11-07T11:22Z,over
+2026-11-07 04:10,22600193,2026-11-07,Total Rebounds,6589,Draymond Green,,5.5,-131.0,5.5,-138.0,2026-11-07T11:22Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total Rebounds,4566434,Franz Wagner,,5.5,-126.0,5.5,-122.0,2026-11-07T11:48Z,over
+2026-11-07 04:10,22600193,2026-11-07,Total Rebounds,4566434,Franz Wagner,,5.5,-104.0,5.5,-108.0,2026-11-07T11:48Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total 3-Point Field Goals,5239561,Jase Richardson,,0.5,-240.0,1.5,177.0,2026-11-07T12:00Z,over
+2026-11-07 04:10,22600193,2026-11-07,Total 3-Point Field Goals,5239561,Jase Richardson,,0.5,179.0,1.5,-237.0,2026-11-07T12:00Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total Points and Assists,3975,Stephen Curry,,32.5,-106.0,31.5,-121.0,2026-11-07T12:05Z,over
+2026-11-07 04:10,22600193,2026-11-07,Total Points and Assists,3975,Stephen Curry,,32.5,-124.0,31.5,-109.0,2026-11-07T12:05Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total Points and Rebounds,6589,Draymond Green,,11.5,-134.0,11.5,-133.0,2026-11-07T12:00Z,under
+2026-11-07 04:10,22600193,2026-11-07,Total Assists and Rebounds,5239561,Jase Richardson,,5.5,-109.0,5.5,-114.0,2026-11-07T11:54Z,over
+2026-11-07 04:10,22600193,2026-11-07,Total Assists and Rebounds,5239561,Jase Richardson,,5.5,-120.0,5.5,-115.0,2026-11-07T11:54Z,under
+2026-11-07 04:10,22600193,2026-11-07,"Total Points, Rebounds, and Assists",6589,Draymond Green,,17.5,-112.0,17.5,-112.0,2026-11-07T11:30Z,over
+2026-11-07 04:10,22600193,2026-11-07,"Total Points, Rebounds, and Assists",4277847,Wendell Carter Jr.,,24.5,-106.0,24.5,-105.0,2026-11-07T12:00Z,over
+2026-11-07 04:10,22600193,2026-11-07,"Total Points, Rebounds, and Assists",4566434,Franz Wagner,,35.5,-106.0,34.5,-123.0,2026-11-07T11:58Z,over
+2026-11-07 04:10,22600193,2026-11-07,"Total Points, Rebounds, and Assists",4566434,Franz Wagner,,35.5,-124.0,34.5,-107.0,2026-11-07T11:58Z,under

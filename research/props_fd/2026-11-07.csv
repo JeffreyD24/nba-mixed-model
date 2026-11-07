@@ -3625,3 +3625,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Brandin Podziemski,brandin podziemski,3.5,-168.0,126.0,GSW,709.196238204,52263972,52263968
 2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Yaxel Lendeborg,yaxel lendeborg,4.5,-108.0,-122.0,GSW,709.196238212,64937530,64937543
 2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-136.0,102.0,ORL,709.196236448,43072432,43072430
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Cam Johnson,cam johnson,12.5,-106.0,-125.0,DEN,709.196220934,51835103,51835094
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,22.5,-125.0,-106.0,DEN,709.196217709,16127791,16127792
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Pascal Siakam,pascal siakam,20.5,-120.0,-110.0,IND,709.196222707,21558499,21558500
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,-106.0,-125.0,DEN,709.196220683,12730307,12730306
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Cam Johnson,cam johnson,3.5,-158.0,118.0,DEN,709.196220939,51835103,51835094
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Obi Toppin,obi toppin,4.5,-104.0,-128.0,IND,709.196224067,41641966,41641967
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Pascal Siakam,pascal siakam,3.5,-154.0,116.0,IND,709.196222706,21558499,21558500
+2026-11-07 11:02,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,134.0,-180.0,DEN,709.196220607,43026473,43026472

@@ -2144,3 +2144,15 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Jamal Murray,jamal murray,4.5,-112.0,-118.0,DEN,709.196217705,16127791,16127792
 2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-148.0,114.0,DEN,709.196221261,12234472,12234473
 2026-11-07 07:48,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,104.0,-138.0,DEN,709.196217703,16127791,16127792
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Nickeil Alexander-Walker,nickeil alexander walker,20.5,-130.0,-102.0,ATL,709.196263393,38310472,38310473
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Luguentz Dort,luguentz dort,10.5,-104.0,-128.0,ATL,709.196263413,35489576,35489577
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,pts,Dyson Daniels,dyson daniels,10.5,-125.0,-106.0,ATL,709.196263418,50686100,50686102
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,CJ McCollum,cj mccollum,2.5,-112.0,-118.0,ATL,709.196264265,12260572,12260571
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Kingston Flemings,kingston flemings,3.5,116.0,-158.0,ATL,709.196263410,91126163,91126164
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,reb,Nickeil Alexander-Walker,nickeil alexander walker,3.5,128.0,-172.0,ATL,709.196263406,38310472,38310473
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Nolan Traore,nolan traore,4.5,122.0,-162.0,BKN,709.196260010,85959192,85959193
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,CJ McCollum,cj mccollum,3.5,-106.0,-125.0,ATL,709.196264266,12260572,12260571
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Julius Randle,julius randle,4.5,-108.0,-122.0,BKN,709.196260106,12260654,12260655
+2026-11-07 07:50,2026-11-07,36282778,2026-11-07 19:40,Brooklyn Nets @ Atlanta Hawks,atl,bkn,ast,Nickeil Alexander-Walker,nickeil alexander walker,3.5,116.0,-154.0,ATL,709.196263409,38310472,38310473
+2026-11-07 07:50,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Donovan Clingan,donovan clingan,1.5,-144.0,108.0,POR,709.196238655,50752175,50752173
+2026-11-07 07:50,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Scoot Henderson,scoot henderson,3.5,132.0,-178.0,POR,709.196238664,62064858,62064857

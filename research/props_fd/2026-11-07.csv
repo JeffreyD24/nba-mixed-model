@@ -1944,11 +1944,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 06:53,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Kelly Oubre Jr.,kelly oubre,3.5,104.0,-138.0,IND,709.196223953,41408119,41408118
 2026-11-07 06:53,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Obi Toppin,obi toppin,4.5,-106.0,-125.0,IND,709.196224067,41641966,41641967
 2026-11-07 06:53,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-112.0,-118.0,DEN,709.196217261,12257278,12257279
-2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,-102.0,-130.0,HOU,709.196233870,43049093,43049094
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,-102.0,-130.0,HOU,709.19623387,43049093,43049094
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Marcus Smart,marcus smart,6.5,-120.0,-110.0,HOU,709.196237789,12880787,12880788
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Tari Eason,tari eason,9.5,-120.0,-110.0,HOU,709.196234654,43049623,43049624
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Dillon Brooks,dillon brooks,15.5,-114.0,-114.0,PHX,709.196236132,12798648,12798647
-2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-112.0,-118.0,HOU,709.196232450,40296685,40296686
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-112.0,-118.0,HOU,709.19623245,40296685,40296686
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Reed Sheppard,reed sheppard,8.5,104.0,-138.0,HOU,709.196235485,63497028,63497029
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Kevin Durant,kevin durant,22.5,100.0,-132.0,HOU,709.196231939,12260605,12260606
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Fred VanVleet,fred vanvleet,3.5,122.0,-162.0,HOU,709.196234513,21175485,21175486
@@ -1960,3 +1960,26 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Fred VanVleet,fred vanvleet,5.5,110.0,-146.0,HOU,709.196234511,21175485,21175486
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,130.0,-174.0,HOU,709.196235489,63497028,63497029
 2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,132.0,-178.0,HOU,709.196231971,12260605,12260606
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Pascal Siakam,pascal siakam,20.5,-120.0,-110.0,IND,709.196222707,21558499,21558500
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,100.0,-132.0,DEN,709.196217273,12257278,12257279
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,102.0,-136.0,DEN,709.196220683,12730307,12730306
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Andrew Nembhard,andrew nembhard,16.5,104.0,-138.0,IND,709.196222867,43058624,43058625
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,22.5,-130.0,-102.0,DEN,709.196217709,16127791,16127792
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Pascal Siakam,pascal siakam,6.5,-106.0,-125.0,IND,709.196222705,21558499,21558500
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Andrew Nembhard,andrew nembhard,2.5,-166.0,124.0,IND,709.196222868,43058624,43058625
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,DeMar DeRozan,demar derozan,2.5,120.0,-160.0,DEN,709.196221258,12234472,12234473
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Kelly Oubre Jr.,kelly oubre,3.5,108.0,-144.0,IND,709.196223953,41408119,41408118
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Obi Toppin,obi toppin,4.5,-108.0,-122.0,IND,709.196224067,41641966,41641967
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Ivica Zubac,ivica zubac,8.5,120.0,-160.0,IND,709.196223352,13527611,22190771
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-114.0,-114.0,DEN,709.196217261,12257278,12257279
+2026-11-07 06:55,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,DeMar DeRozan,demar derozan,2.5,-154.0,116.0,DEN,709.196221261,12234472,12234473
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Toumani Camara,toumani camara,11.5,-104.0,-128.0,POR,709.196238637,43450264,43450266
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Jrue Holiday,jrue holiday,12.5,-128.0,-104.0,POR,709.196239148,12260620,12260621
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Damian Lillard,damian lillard,20.5,-128.0,-104.0,POR,709.196238689,12260575,12260576
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Scoot Henderson,scoot henderson,2.5,-114.0,-114.0,POR,709.196238661,62064858,62064857
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Deni Avdija,deni avdija,6.5,-120.0,-110.0,POR,709.196238627,37901072,37901070
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-104.0,-128.0,POR,709.196238650,43450264,43450266
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Devin Vassell,devin vassell,2.5,-114.0,-114.0,SAS,709.196242498,38295529,38295528
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Jrue Holiday,jrue holiday,4.5,118.0,-158.0,POR,709.196239142,12260620,12260621
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196241734,15572079,15572080
+2026-11-07 06:55,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,114.0,-148.0,POR,709.196238656,12260575,12260576

@@ -2934,3 +2934,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 09:21,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Devin Booker,devin booker,5.5,124.0,-166.0,PHX,709.196235821,12257187,12257186
 2026-11-07 09:21,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Jalen Green,jalen green,2.5,-158.0,118.0,PHX,709.196236602,41386184,41386185
 2026-11-07 09:21,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-152.0,114.0,PHX,709.196236016,23559725,23559726
+2026-11-07 09:23,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Stephen Curry,stephen curry,4.5,-132.0,100.0,GSW,709.196238220,12260597,12260598
+2026-11-07 09:23,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Brandin Podziemski,brandin podziemski,3.5,-174.0,130.0,GSW,709.196238204,52263972,52263968
+2026-11-07 09:23,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Draymond Green,draymond green,6.5,116.0,-154.0,GSW,709.196238223,12260600,12260599
+2026-11-07 09:23,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Yaxel Lendeborg,yaxel lendeborg,4.5,-104.0,-128.0,GSW,709.196238212,64937530,64937543

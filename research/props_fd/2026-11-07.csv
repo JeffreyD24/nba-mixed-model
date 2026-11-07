@@ -1308,9 +1308,38 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Ajay Mitchell,ajay mitchell,19.5,-110.0,-120.0,OKC,709.196253285,53679067,53679062
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Anthony Davis,anthony davis,20.5,-110.0,-120.0,WAS,709.196253325,12260628,12260629
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Shai Gilgeous-Alexander,shai gilgeous alexander,31.5,-104.0,-128.0,OKC,709.196253113,21662973,21662974
-2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Trae Young,trae young,19.5,-102.0,-130.0,WAS,709.196253530,21175415,21175416
+2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Trae Young,trae young,19.5,-102.0,-130.0,WAS,709.19625353,21175415,21175416
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Shai Gilgeous-Alexander,shai gilgeous alexander,4.5,108.0,-144.0,OKC,709.196253054,21662973,21662974
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Trae Young,trae young,2.5,-162.0,122.0,WAS,709.196253525,21175415,21175416
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,5.5,-108.0,-122.0,OKC,709.196253119,21662973,21662974
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,154.0,-210.0,WAS,709.196253328,12260628,12260629
 2026-11-07 03:35,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Trae Young,trae young,9.5,-114.0,-114.0,WAS,709.196253527,21175415,21175416
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Ajay Mitchell,ajay mitchell,19.5,-108.0,-122.0,OKC,709.196253285,53679067,53679062
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Anthony Davis,anthony davis,20.5,-108.0,-122.0,WAS,709.196253325,12260628,12260629
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Shai Gilgeous-Alexander,shai gilgeous alexander,31.5,-102.0,-130.0,OKC,709.196253113,21662973,21662974
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Trae Young,trae young,19.5,100.0,-132.0,WAS,709.196253530,21175415,21175416
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,AJ Dybantsa,aj dybantsa,18.5,-104.0,-128.0,WAS,709.196253638,90729348,90729347
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Jared McCain,jared mccain,13.5,-106.0,-125.0,OKC,709.196253747,63496225,63496226
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Shai Gilgeous-Alexander,shai gilgeous alexander,4.5,104.0,-138.0,OKC,709.196253054,21662973,21662974
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Ajay Mitchell,ajay mitchell,4.5,134.0,-180.0,OKC,709.196253290,53679067,53679062
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Jared McCain,jared mccain,3.5,118.0,-158.0,OKC,709.196253744,63496225,63496226
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,AJ Dybantsa,aj dybantsa,5.5,118.0,-158.0,WAS,709.196253644,90729348,90729347
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Anthony Davis,anthony davis,9.5,-112.0,-118.0,WAS,709.196253322,12260628,12260629
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,AJ Dybantsa,aj dybantsa,2.5,142.0,-192.0,WAS,709.196253642,90729348,90729347
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Jared McCain,jared mccain,1.5,-144.0,108.0,OKC,709.196253743,63496225,63496226
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Ajay Mitchell,ajay mitchell,3.5,-138.0,104.0,OKC,709.196253288,53679067,53679062
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,5.5,-110.0,-120.0,OKC,709.196253119,21662973,21662974
+2026-11-07 03:37,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,152.0,-205.0,WAS,709.196253328,12260628,12260629
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-118.0,-112.0,NYK,709.196234001,41408270,41408268
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,9.5,-122.0,-108.0,NYK,709.196233928,17926931,17926932
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,17.5,100.0,-132.0,NYK,709.196233906,16220637,16220638
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Landry Shamet,landry shamet,10.5,102.0,-136.0,NYK,709.196233962,22599731,22599732
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Miles McBride,miles mcbride,7.5,-106.0,-125.0,NYK,709.196233898,42109139,42109140
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-130.0,-102.0,NYK,709.196233958,41408270,41408268
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Mikal Bridges,mikal bridges,2.5,-174.0,130.0,NYK,709.196233961,17926931,17926932
+2026-11-07 03:37,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,138.0,-186.0,NYK,709.196233878,16220637,16220638
+2026-11-07 03:37,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Miles Bridges,miles bridges,16.5,100.0,-132.0,PHX,709.196236017,23559725,23559726
+2026-11-07 03:37,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Devin Booker,devin booker,23.5,-125.0,-106.0,PHX,709.196235822,12257187,12257186
+2026-11-07 03:37,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Oso Ighodaro,oso ighodaro,6.5,-130.0,-102.0,PHX,709.196236821,50184535,50184532
+2026-11-07 03:37,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Collin Gillespie,collin gillespie,3.5,110.0,-146.0,PHX,709.196237553,43026356,43026355
+2026-11-07 03:37,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Miles Bridges,miles bridges,2.5,-146.0,110.0,PHX,709.196236016,23559725,23559726

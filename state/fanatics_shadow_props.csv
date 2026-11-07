@@ -2,3 +2,4 @@ logged_at_et,kind,sport,date,home,away,market,side,player,stat,our_book,our_line
 2026-11-06 19:03:53,prop,nba,2026-11-06,,,pts,under,Jamison Battle,pts,FanDuel,10.5,-136,11.5,-120.0,True,
 2026-11-07 00:08:09,prop,nba,2026-11-07,,,reb,under,Jase Richardson,reb,FanDuel,2.5,-102,,,,Fanatics line not found
 2026-11-07 00:31:20,prop,nba,2026-11-07,,,pts,under,Damian Lillard,pts,FanDuel,20.5,-106,,,,Fanatics line not found
+2026-11-07 03:37:56,prop,nba,2026-11-07,,,pts,under,AJ Dybantsa,pts,FanDuel,18.5,-128,15.5,-110.0,False,

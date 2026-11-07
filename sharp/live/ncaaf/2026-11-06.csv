@@ -1570,3 +1570,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-06 20:43:00,289896,2026-11-08T03:30:00.000Z,Oregon State Beavers,Texas State Bobcats,7961,cons,-6.5,-106.0,70.5,-110.0,-235.0,185.0,61.0,61.0,39.0,79.0,94.0,97.0
 2026-11-06 20:44:00,289900,2026-11-07T20:30:00.000Z,Wake Forest Demon Deacons,Merrimack Warriors,1448,cons,-47.5,-110.0,58.5,-112.0,,,39.0,48.0,32.0,14.0,,
 2026-11-06 20:47:00,289917,2026-11-08T00:30:00.000Z,Arizona State Sun Devils,Colorado Buffaloes,3635,dk,-3.0,-118.0,48.5,-108.0,-162.0,136.0,,,,,,
+2026-11-06 20:49:00,289828,2026-11-07T03:15:00.000Z,Arizona Wildcats,TCU Horned Frogs,31271,fd,-6.5,-115.0,46.5,-108.0,-245.0,202.0,,,,,,
+2026-11-06 20:50:00,289917,2026-11-08T00:30:00.000Z,Arizona State Sun Devils,Colorado Buffaloes,3635,fd,-3.5,-102.0,48.5,-110.0,-160.0,132.0,,,,,,

@@ -89,12 +89,23 @@ def margin(mod, h, a, hc, ac, hh):
     v = o[h] - o[a] + dd[a] - dd[h] + 2 * m["hca"] * hh
     if mod == "M8": v += m["co"].get(hc, 0) - m["co"].get(ac, 0) + m["cd"].get(ac, 0) - m["cd"].get(hc, 0)
     return v
-def notify(title, body):
+def notify(title, body, b=None):
+    """b: the bet record; its DraftKings / FanDuel bet-slip links are looked up live (Nov 7, 2026: buttons open the bet, not the app)"""
+    dk = fd = None
+    if b is not None:
+        try:
+            sys.path.insert(0, W); import odds_feed as F
+            dk = F.game_link("dk", 92483, b["away"], b["home"], "spread", b["side"], b["line"])
+            fd = F.game_link("fd", "ncaab", b["away"], b["home"], "spread", b["side"], b["line"])     # only when FanDuel has the same line
+        except Exception as ex: print("NCAAM bet links failed:", ex)
+    acts = (f"view, Bet on DraftKings, {dk or 'https://sportsbook.draftkings.com/leagues/basketball/ncaab'}"
+            + (f"; view, Bet on FanDuel (same line), {fd}" if fd else ""))
+    try: sys.path.insert(0, W); import alert_text; title, body = alert_text.fit_title(title, body)
+    except Exception as ex: print("title fit skipped:", ex)
     topic = os.environ.get("NTFY_TOPIC")
-    if not topic: print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
+    if not topic: print("NTFY_TOPIC not set; would have sent:", title, "|", body, "|", acts); return False
     req = urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode("utf-8"), method="POST",
-          headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": "high", "Tags": "basketball",
-                   "Actions": "view, Bet on DraftKings, https://sportsbook.draftkings.com/leagues/basketball/ncaab; view, FanDuel, https://sportsbook.fanduel.com/navigation/ncaab"})
+          headers={"Title": title.encode("ascii", "ignore").decode(), "Priority": "high", "Tags": "basketball", "Actions": acts})
     try: urllib.request.urlopen(req, timeout=15); return True
     except Exception as ex: print("ntfy failed:", ex); return False
 known = set(L.an_id.astype(int)) if len(L) else set(); idx = {int(a): i for i, a in enumerate(L.an_id)} if len(L) else {}
@@ -167,11 +178,10 @@ for d in dates:
                 fdev = ((g.get("markets") or {}).get("69") or {}).get("event") or {}
                 fo = next((o for o in fdev.get("spread", []) if o.get("side") == side and not o.get("is_alt_market")), None)
                 fd_txt = f"FanDuel {float(fo['value']):+g} ({float(fo['odds']):+.0f})" if fo and fo.get("value") is not None and fo.get("odds") is not None else "FanDuel: no line yet"
-                title = f"[BET] PROVISIONAL NCAAM: {team} {bl:+g} ({float(px):+.0f}) DraftKings"
-                body = (f"BET {team} {bl:+g} at DraftKings ({float(px):+.0f}): DraftKings' opening number only. {an} @ {hn}, {tip:%a %-I:%M %p}.\n"
-                        f"Stale-line rule: the opener is {abs(e):.2f} pts off the predicted close ({-pc:+.1f} home), so the line should move toward {team}. "
-                        f"\nSTOP: bet only {team} {bl:+g} at {MAX_PRICE} or better. If DraftKings' number is no longer {bl:+g}, or the price is worse than {MAX_PRICE}, don't bet it (the rule only bets DraftKings' first number; Nov 6, 2026).\nLINES: DraftKings {bl:+g} ({float(px):+.0f}) | {fd_txt}\n"
-                        f"PROVISIONAL (2023-26 at DraftKings' opener: 623 bets 57.9%, +65.5u, CLV +1.27). Own record; stops at -15u, or at 100 bets if CLV < +0.63.")
+                # Nov 7, 2026 (Jeffrey): short alerts (what / where / until when); the model numbers stay in live_evals.csv / live_bets.csv
+                title = f"BET {team} {bl:+g} {float(px):+.0f} at DraftKings"
+                body = (f"Bet until {team} {bl:+g} at {MAX_PRICE} or better (DraftKings' opening number only).\n"
+                        f"{an} @ {hn}, {tip:%a %-I:%M %p}." + (f"\n{fd_txt}." if fo else ""))
                 bets.append(dict(at_et=str(NOW)[:16], an_id=gid, date=d, home=hn, away=an, side=side, team=team, line=bl, price=px, edge=round(abs(e), 2),
                                  pred_close_home=round(-pc, 2), sent=False, title=title, body=body))
             if why2 is None:   # after v1's alert block, inside its own try: a v2 error can never drop a v1 alert (Fable re-review, Nov 6, 2026)
@@ -195,7 +205,7 @@ json.dump(dict(last_poll_et=str(NOW), dates=dates), open(SP, "w"))
 if bets:
     Bf = pd.read_csv(BP)
     for b in bets:
-        ok = notify(b["title"], b["body"]); Bf.loc[(Bf.an_id == b["an_id"]) & (Bf.at_et == b["at_et"]), "sent"] = ok; print("NCAAM BET:", b["title"])
+        ok = notify(b["title"], b["body"], b); Bf.loc[(Bf.an_id == b["an_id"]) & (Bf.at_et == b["at_et"]), "sent"] = ok; print("NCAAM BET:", b["title"])
     Bf.to_csv(BP, index=False)
 print(f"NCAAM lines: {len(new_rows)} new DraftKings openers, {len(evals)} evaluated, {len(bets)} BET alerts{' (rule stopped)' if stopped else ''}; "
       f"v2 paper picks {len(paper2)}{' (v2 off: ' + V2_OFF + ')' if V2_OFF else ''}")

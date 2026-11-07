@@ -46,6 +46,13 @@ FAST_REMIND_GAP = 4                 #   (~5 min; 4 so a check a few seconds earl
 def ntfy_open(req, tries=4):
     """urlopen for ntfy pushes with retries (Nov 6, 2026): ntfy.sh answers HTTP 429 to bursts, and a refused push used to be lost.
     Retries after 5, 15, 30 s on 429 / 5xx / network errors; the last error is raised as before."""
+    try:                                          # Nov 7, 2026: titles fit one line on the phone (alert_text.py); full title leads the body
+        import alert_text
+        _t = req.get_header("Title")
+        if _t:
+            _nt, _nb = alert_text.fit_title(_t, (req.data or b"").decode("utf-8"))
+            if _nt != _t: req.add_header("Title", _nt); req.data = _nb.encode("utf-8")
+    except Exception as _ex: print("title fit skipped:", _ex)
     import time, urllib.error
     for i in range(tries):
         try:

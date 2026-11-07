@@ -226,6 +226,70 @@ def tick(W, cfg=None, now=None):
     return n
 
 
+# ------------------------------------------------------------------ bet-slip links for game lines, read live (Nov 7, 2026)
+def _tn(x):
+    import unicodedata
+    x = unicodedata.normalize("NFKD", str(x)).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9& ]+", " ", x.replace("st.", "state")).split()
+
+
+def same_team(a, b):
+    """team names from different sources: equal, one starting with the other ('Louisville' / 'Louisville Cardinals'),
+    or the same nickname ('GS Warriors' / 'Golden State Warriors')"""
+    x, y = _tn(a), _tn(b)
+    if not x or not y: return False
+    if x == y: return True
+    n = min(len(x), len(y))
+    extra = (x if len(x) > n else y)[n:]
+    school = {"state", "st", "oh", "fl", "tech", "a&m", "a&t", "southern", "northern", "eastern", "western", "central", "christian",
+              "international", "tennessee", "texas", "carolina", "kentucky", "illinois", "michigan", "florida", "georgia", "of",
+              "at", "university", "college", "poly", "pacific", "baptist", "methodist"}
+    if x[:n] == y[:n] and len(extra) <= 2 and not (set(extra) & school): return True
+    return len(x) > 1 and len(y) > 1 and x[-1] == y[-1] and x[0][:1] == y[0][:1]
+
+
+_GL = {}
+
+
+def game_link(book, where, away, home, market, side, line=None):
+    """Bet-slip link for a full-game line, read live from the book (cached 60 s): book 'dk' (where = DraftKings league id) or 'fd'
+    (where = FanDuel page id). market 'moneyline' / 'spread' / 'total'; side 'home' / 'away' / 'over' / 'under'; line = that side's
+    own line. None unless exactly one selection matches both teams, the market, the side and the line."""
+    from urllib.parse import quote
+    try:
+        k = (book, where); c = _GL.get(k)
+        if not c or time.time() - c[0] > 60:
+            if book == "dk":
+                st, j = http_get(f"{DKB}/leagues/{where}")
+                rows = dk_rows(j, "", "", *dk_maps(j)[::-1]) if st == 200 else []
+            else:
+                st, j = http_get(f"{FDB}/content-managed-page?page=CUSTOM&customPageId={where}&{AK}&timezone=America%2FNew_York")
+                rows = fd_rows(j, "", "", "page") if st == 200 else []
+            c = (time.time(), rows); _GL[k] = c
+        names = {"moneyline": ("Moneyline",), "spread": ("Spread", "Puck Line", "Run Line"), "total": ("Total", "Total Points", "Total Goals", "Total Runs")}[market]
+        out = []
+        for r in c[1]:
+            if r["market"] not in names or r.get("status", "on") != "on": continue
+            if not (same_team(r["away"], away) and same_team(r["home"], home)): continue
+            if side in ("over", "under"):
+                if str(r["label"]).lower() != side: continue
+            elif book == "dk":
+                if str(r.get("outcome")) != side.capitalize(): continue
+            elif not same_team(r["label"], home if side == "home" else away): continue
+            if market != "moneyline" and line is not None:
+                try:
+                    if abs(float(r["points"]) - float(line)) > 1e-6: continue
+                except (TypeError, ValueError): continue
+            out.append(r)
+        if len(out) != 1: return None
+        r = out[0]
+        if book == "dk": return f"https://sportsbook.draftkings.com/event/{r['event_id']}?outcomes={quote(str(r['sel_id']), safe='')}"
+        mid, sid = str(r["sel_id"]).split(":", 1)
+        return f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={mid}&selectionId[0]={int(float(sid))}"
+    except Exception as ex:
+        print("game link failed:", type(ex).__name__, str(ex)[:100]); return None
+
+
 if __name__ == "__main__":
     W = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else "."
     try: tick(W)

@@ -124,6 +124,14 @@ def merge_current(L, sport="nba"):
         L.at[i, "current_over_odds"] = float(ov.price.iloc[0]) if len(ov) else float("nan")
         L.at[i, "current_under_odds"] = float(un.price.iloc[0]) if len(un) else float("nan")
         L.at[i, "line_source"] = "dkdirect"
+        # Nov 7, 2026 (Jeffrey: "the button needs to link to the actual bet"): the DraftKings bet-slip links for exactly these lines,
+        # from DraftKings' own feed, replacing ESPN's copies (which lag; when they did, alerts fell back to the game page)
+        from urllib.parse import quote as _q
+        for col, part in (("dk_link_home_spread", h), ("dk_link_away_spread", a), ("dk_link_over", ov), ("dk_link_under", un)):
+            if len(part):
+                if col not in L: L[col] = None
+                L[col] = L[col].astype(object)
+                L.at[i, col] = f"https://sportsbook.draftkings.com/event/{part.event_id.iloc[0]}?outcomes={_q(str(part.sel_id.iloc[0]), safe='')}"
     return L
 
 

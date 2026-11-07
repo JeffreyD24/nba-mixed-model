@@ -284,6 +284,35 @@ def dk_total_link(date, home, away, side, line):
         print("[market models] DraftKings link unavailable:", type(ex).__name__, str(ex)[:80]); return DK_NBA_PAGE
 
 
+def short_alert(kind, side, line, px, fdt, Aw, H, when, until=None):
+    """Nov 7, 2026 (Jeffrey: "make sure all of the alerts are cleaned up"): movement / blend alerts in the same three-line format as
+    the other game alerts: what to bet and where (the better book, from fanduel.compare's BEST line), when to stop, the game.
+    kind 'bet' | 'remind' | 'stop'. The model numbers stay in movement_alerts.csv / blend_alerts.csv."""
+    import re as _re, alert as AL
+    book, ln, pr = "DraftKings", float(line), px
+    m_ = _re.search(r"BEST: (FanDuel|DraftKings): (?:over|under) ([\d.]+) \(([+-]?\d+)\)", fdt or "")
+    if m_: book, ln, pr = m_.group(1), float(m_.group(2)), float(m_.group(3))
+    ptxt = f" {int(float(pr)):+d}" if pr is not None and not pd.isna(pr) else ""
+    if kind == "stop":
+        return (f"STOP: don't bet {side.upper()} {float(line):g}",
+                f"The model no longer expects the line to move your way. If you already bet it, just log it.\n{Aw} @ {H}, {when}.")
+    t = f"{'REMINDER: ' if kind == 'remind' else ''}BET {side.upper()} {ln:g}{ptxt} at {book}"
+    u = f"Bet until {side.upper()} {until:g} at {AL.MAX_PRICE} or better." if until is not None else f"Bet at {AL.MAX_PRICE} or better."
+    return t, f"{u}\n{Aw} @ {H}, {when}."
+
+
+def move_until(side, line, move):
+    """last line still worth betting for a movement bet (the alert's old 'don't bet if it reaches X' minus one half point)"""
+    c = float(line) + (abs(move) if side == "over" else -abs(move))
+    st = (max(float(line) + 0.5, np.ceil((c - 0.5) * 2) / 2) if side == "over" else min(float(line) - 0.5, np.floor((c + 0.5) * 2) / 2))
+    return st - 0.5 if side == "over" else st + 0.5
+
+
+def blend_until(side, fair):
+    st = (np.ceil((fair - BLEND_STOP) * 2) / 2 if side == "over" else np.floor((fair + BLEND_STOP) * 2) / 2)
+    return st - 0.5 if side == "over" else st + 0.5
+
+
 def fd_extra(r, side, dk_line):
     """FanDuel button args for a reminder: only when FanDuel has a line for this total (Nov 5, 2026)"""
     try:
@@ -410,7 +439,8 @@ def check():
                      f"{AL.MAX_PRICE} and FanDuel has nothing as good. A DON'T BET push follows if the model stops expecting the move.")
             if fdt: body = fdt + "\n" + body
             try:
-                sent = AL.notify(f"BET {what} (PROVISIONAL movement): {Aw} @ {H}, {tip_txt}", body, priority="high",
+                _t, _b = short_alert("bet", side, r.dk_now, px, fdt, Aw, H, tip_txt, move_until(side, r.dk_now, r.pred))   # full text above stays in the record
+                sent = AL.notify(_t, _b, priority="high",
                                  tags="chart_with_upwards_trend" if side == "over" else "chart_with_downwards_trend",
                                  kind="bet", dk=dk_total_link(r.date, r.home, r.away, side, float(r.dk_now)), fd=fdl, best=best)
             except Exception as ex:
@@ -477,7 +507,8 @@ def check():
                          f"than {AL.MAX_PRICE} and FanDuel has nothing as good.")
                 if fdt: body = fdt + "\n" + body
                 try:
-                    sent = AL.notify(f"BET {what} (PROVISIONAL blend): {Aw} @ {H}, {tip_txt}", body, priority="high",
+                    _t, _b = short_alert("bet", side, r.dk_now, px, fdt, Aw, H, tip_txt, blend_until(side, fair))
+                    sent = AL.notify(_t, _b, priority="high",
                                      tags="scales", kind="bet", dk=dk_total_link(r.date, r.home, r.away, side, float(r.dk_now)), fd=fdl, best=best)
                 except Exception as ex:
                     skip = f"NOT sent: ntfy error ({type(ex).__name__})"
@@ -502,9 +533,7 @@ def check():
             e_side = (fair - q.dk_now) * (1 if r.side == "over" else -1)
             H, Aw = str(r.home).upper(), str(r.away).upper(); what = f"{str(r.side).upper()} {float(r.line):g}"
             if e_side < BLEND_STOP:
-                AL.notify(f"DON'T BET - {what} (PROVISIONAL blend): {Aw} @ {H}",
-                          f"DON'T BET: the blend's edge at DraftKings {q.dk_now:g} is now {e_side:+.1f} pts (alerted {float(r.line):g}, "
-                          f"edge {abs(float(r.edge)):.1f}). No bet is logged for it. If you did bet it, log it and ignore this.",
+                AL.notify(*short_alert("stop", r.side, r.line, None, None, Aw, H, f"{pd.Timestamp(r.tip_et):%a %-I:%M %p}"),
                           priority="high", tags="no_entry", kind="stop")
                 B.loc[i, "stopped_at_et"] = str(NOW)[:16]; bchanged = True; continue
             # reminder while the edge AT TODAY'S LINE is still 2+ (a 9 PM alert slept through still gets a 6 AM reminder, at the new line)
@@ -512,9 +541,8 @@ def check():
             if not dk_confirmed(r.date, r.home, r.away, q.dk_now): continue
             lastr = r.reminded_at_et if isinstance(r.reminded_at_et, str) else r.alerted_at_et
             if (NOW - pd.Timestamp(lastr)).total_seconds() / 60 < AL.remind_gap_min(r.tip_et, NOW): continue
-            AL.notify(f"REMINDER - BET {str(r.side).upper()} {q.dk_now:g} (PROVISIONAL blend): {Aw} @ {H}",
-                      f"REMINDER: still a BET and not logged yet. DraftKings now {q.dk_now:g} (alerted {float(r.line):g}); blend edge "
-                      f"{e_side:+.1f} pts. Tip {pd.Timestamp(r.tip_et):%a %-I:%M %p}. If you already bet it, log it to stop these.",
+            AL.notify(*short_alert("remind", str(r.side), q.dk_now, q.price_o if r.side == "over" else q.price_u, None, Aw, H,
+                                   f"{pd.Timestamp(r.tip_et):%a %-I:%M %p}", blend_until(str(r.side), fair)),
                       priority="default", tags="alarm_clock", kind="bet",
                       dk=dk_total_link(r.date, r.home, r.away, r.side, float(q.dk_now)),
                       **fd_extra(r, r.side, float(q.dk_now)))
@@ -533,9 +561,7 @@ def check():
         H, Aw = str(r.home).upper(), str(r.away).upper()
         what = f"{str(r.side).upper()} {float(r.line):g}"
         if mv < STOP_MOVE:
-            AL.notify(f"DON'T BET - {what} (PROVISIONAL movement): {Aw} @ {H}",
-                      f"DON'T BET: the movement model no longer expects more movement your way from here (predicted {mv:+.1f} pts now; "
-                      f"DraftKings {cur:g}, alerted {float(r.line):g}). No bet is logged for it. If you did bet it, log it and ignore this.",
+            AL.notify(*short_alert("stop", str(r.side), r.line, None, None, Aw, H, f"{pd.Timestamp(r.tip_et):%a %-I:%M %p}"),
                       priority="high", tags="no_entry", kind="stop")
             A.loc[i, "stopped_at_et"] = str(NOW)[:16]; changed = True; p("DON'T BET:", what, Aw, "@", H); continue
         worse = (cur > float(r.line)) if r.side == "over" else (cur < float(r.line))
@@ -544,9 +570,9 @@ def check():
         if not (AL.REMIND_HOURS[0] <= NOW.hour < AL.REMIND_HOURS[1]): continue
         lastr = r.reminded_at_et if isinstance(r.reminded_at_et, str) else r.alerted_at_et
         if (NOW - pd.Timestamp(lastr)).total_seconds() / 60 < AL.remind_gap_min(r.tip_et, NOW): continue
-        AL.notify(f"REMINDER - BET {str(r.side).upper()} {cur:g} (PROVISIONAL movement): {Aw} @ {H}",
-                  f"REMINDER: still a BET and not logged yet. DraftKings now {cur:g} (alerted {float(r.line):g}); predicted move "
-                  f"{mv:+.1f} pts your way. Tip {pd.Timestamp(r.tip_et):%a %-I:%M %p}. If you already bet it, log it to stop these.",
+        _q = P[P.key == r.key].iloc[0]
+        AL.notify(*short_alert("remind", str(r.side), cur, _q.price_o if r.side == "over" else _q.price_u, None, Aw, H,
+                               f"{pd.Timestamp(r.tip_et):%a %-I:%M %p}", move_until(str(r.side), cur, pred_now[r.key])),
                   priority="default", tags="alarm_clock", kind="bet",
                   dk=dk_total_link(r.date, r.home, r.away, r.side, float(cur)), **fd_extra(r, r.side, float(cur)))
         A.loc[i, "reminded_at_et"] = str(NOW)[:16]; changed = True

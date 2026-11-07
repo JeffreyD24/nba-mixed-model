@@ -57,6 +57,28 @@ def bet_link(sport, day, home_name, away_name, market, side, line):
         print("FanDuel bet link failed:", type(ex).__name__, str(ex)[:100]); return None
 
 
+def live_link(sport, day, home_name, away_name, market, side, line):
+    """Nov 7, 2026 (Jeffrey: buttons must open the bet, not the app): FanDuel bet-slip link read live from FanDuel's own league page
+    (Chrome-fingerprint client, odds_feed.http_get; cached 60 s) when the 5-minute feed doesn't have this exact line yet. None if no match."""
+    try:
+        import odds_feed as F
+        c = _CACHE.get(("fdpage", sport))
+        if not c or time.time() - c[0] > 60:
+            st, j = F.http_get(f"{F.FDB}/content-managed-page?page=CUSTOM&customPageId={sport}&{F.AK}&timezone=America%2FNew_York")
+            c = (time.time(), F.fd_rows(j, sport, "", "page") if st == 200 else []); _CACHE[("fdpage", sport)] = c
+        if not home_name or not away_name: return None
+        want = f"{away_name} @ {home_name}".lower()
+        lab = side if side in ("over", "under") else (home_name if side == "home" else away_name)
+        g = [r for r in c[1] if str(r["event"]).lower() == want and r["market"] in FD_MARKET[market] and r["status"] == "on"
+             and str(r["label"]).lower() == str(lab).lower()
+             and (market == "moneyline" or line is None or abs(_num(r["points"]) - float(line)) < 1e-6)]
+        if len(g) != 1: return None
+        mid, sid = str(g[0]["sel_id"]).split(":", 1)
+        return f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={mid}&selectionId[0]={int(float(sid))}"
+    except Exception as ex:
+        print("FanDuel live link failed:", type(ex).__name__, str(ex)[:100]); return None
+
+
 def _code(abbr):
     if not abbr: return None
     if hasattr(espn, "code"): return espn.code(abbr)
@@ -143,7 +165,8 @@ def compare(sport, day, home, away, market, side, dk_line, dk_px, label=None, ed
         fl, fp = quote(sport, day, home, away, market, side)
         lab = label or side
         _q = lines(sport, day).get((home, away)) or {}
-        link = (bet_link(sport, day, _q.get("home_name"), _q.get("away_name"), market, side, fl) if fp is not None else None) or FD_PAGE[sport]
+        link = ((bet_link(sport, day, _q.get("home_name"), _q.get("away_name"), market, side, fl)
+                 or live_link(sport, day, _q.get("home_name"), _q.get("away_name"), market, side, fl)) if fp is not None else None) or FD_PAGE[sport]
         def fmt(ln, px):
             if ln is None or (isinstance(ln, float) and np.isnan(ln)): s = f"{lab}"
             elif market == "total": s = f"{lab} {float(ln):g}"

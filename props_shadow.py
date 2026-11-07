@@ -39,6 +39,13 @@ FULL = {"Atlanta Hawks": "atl", "Boston Celtics": "bos", "Brooklyn Nets": "bkn",
 def ntfy_open(req, tries=4):
     """urlopen for ntfy pushes with retries (Nov 6, 2026): ntfy.sh answers HTTP 429 to bursts, and a refused push used to be lost.
     Retries after 5, 15, 30 s on 429 / 5xx / network errors; the last error is raised as before."""
+    try:                                          # Nov 7, 2026: titles fit one line on the phone (alert_text.py); full title leads the body
+        import alert_text
+        _t = req.get_header("Title")
+        if _t:
+            _nt, _nb = alert_text.fit_title(_t, (req.data or b"").decode("utf-8"))
+            if _nt != _t: req.add_header("Title", _nt); req.data = _nb.encode("utf-8")
+    except Exception as _ex: print("title fit skipped:", _ex)
     import time, urllib.error
     for i in range(tries):
         try:
@@ -96,7 +103,7 @@ def snapshot():
     for gdate, new in allnew.groupby("date"):
         path = os.path.join(W, "research", "props_fd", f"{gdate}.csv"); os.makedirs(os.path.dirname(path), exist_ok=True)
         if os.path.exists(path):
-            old = pd.read_csv(path); last = old.sort_values("seen_at_et").drop_duplicates(["event_id", "stat", "name"], keep="last")
+            old = pd.read_csv(path, dtype=IDS); last = old.sort_values("seen_at_et").drop_duplicates(["event_id", "stat", "name"], keep="last")
             m = new.merge(last[["event_id", "stat", "name", "line", "over", "under"]], on=["event_id", "stat", "name"], how="left", suffixes=("", "_old"))
             new = new[~((m.line == m.line_old) & (m.over == m.over_old) & (m.under == m.under_old)).values]
             pd.concat([old, new], ignore_index=True).to_csv(path, index=False)
@@ -246,6 +253,26 @@ LIVE = os.path.join(W, "state", "props_live.csv")
 PO_PATH = os.path.join(W, "data", "props_v1b_open_params.json")
 
 
+IDS = {"market_id": str, "over_sel": str, "under_sel": str}   # Nov 7, 2026: read FanDuel ids as text; as numbers 9% lost a trailing zero
+                                                               # (709.196221260 -> 709.19622126) and their bet-slip links broke (fix_mid repairs)
+
+
+def fix_mid(m):
+    """FanDuel market ids are '709.' + 9 digits; put back trailing zeros lost when a file was read as numbers"""
+    m = str(m)
+    if m in ("", "nan", "None"): return m
+    a, _, b = m.partition(".")
+    return f"{a}.{b.ljust(9, '0')}" if b else m
+
+
+def fd_slip(market_id, sel):
+    """FanDuel bet-slip link for one prop selection, or None"""
+    try:
+        if pd.isna(market_id) or pd.isna(sel): return None
+        return f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={fix_mid(market_id)}&selectionId[0]={int(float(sel))}"
+    except (TypeError, ValueError): return None
+
+
 def push(title, body, actions=""):
     topic = os.environ.get("NTFY_TOPIC")
     if not topic: print("NTFY_TOPIC not set; would have sent:", title, "|", body); return False
@@ -264,7 +291,7 @@ def live():
     if TODAY < PO["live_from"]: print(f"props live: starts {PO['live_from']} (the first day FanDuel openers are captured from the night before)"); return
     path = os.path.join(W, "research", "props_fd", f"{TODAY}.csv")
     if not os.path.exists(path): print("props live: no FanDuel lines for today yet"); return
-    A = pd.read_csv(path).sort_values("seen_at_et")
+    A = pd.read_csv(path, dtype=IDS).sort_values("seen_at_et")
     first = A.drop_duplicates(["event_id", "stat", "name"], keep="first"); last = A.drop_duplicates(["event_id", "stat", "name"], keep="last")
     J = last.merge(first[["event_id", "stat", "name", "line", "over", "under", "seen_at_et"]], on=["event_id", "stat", "name"], suffixes=("", "_open"))
     tip = pd.to_datetime(J.tip_et); first_seen = pd.to_datetime(J.seen_at_et_open)
@@ -319,8 +346,7 @@ def live():
                 import dk_props, fanduel
                 dkq = dk_props.quote(r.stat, r.name)
                 ev_fd = ps_at(r.line) * float(dec(price)) - 1
-                fd_link = (f"https://sportsbook.fanduel.com/addToBetslip?marketId[0]={r.market_id}&selectionId[0]={int(float(r.over_sel if side == 'over' else r.under_sel))}"   # int(): pandas made the id a float, '43049111.0' broke the link (Nov 6, 2026)
-                           if pd.notna(getattr(r, "market_id", np.nan)) else fanduel.FD_PAGE["nba"])
+                fd_link = fd_slip(getattr(r, "market_id", np.nan), getattr(r, "over_sel" if side == "over" else "under_sel", np.nan)) or fanduel.FD_PAGE["nba"]
                 dk_link = None
                 if dkq:
                     dpx = dkq[side]; pdk = ps_at(dkq["line"]); ev_dk = pdk * float(dec(dpx)) - 1
@@ -399,7 +425,11 @@ def followups(A, PO):
             status = "bet"
         else:
             continue
-        try: sent = push(title, body, "view, Open FanDuel, https://sportsbook.fanduel.com/navigation/nba")
+        # Nov 7, 2026 (Jeffrey): the button opens the bet itself. BET again -> FanDuel bet slip for this selection now;
+        # STOP -> no button (nothing to bet; same as the game STOP alerts)
+        lk = fd_slip(q.market_id.iloc[0] if "market_id" in q else np.nan, q[f"{side}_sel"].iloc[0] if f"{side}_sel" in q else np.nan) if status == "bet" else None
+        acts = f"view, Bet on FanDuel, {lk}" if lk else ("view, Open FanDuel, https://sportsbook.fanduel.com/navigation/nba" if status == "bet" else "")
+        try: sent = push(title, body, acts)
         except Exception as e: sent = False; print("follow-up push failed:", e)
         new.append(dict(key=r.key, sent_at_et=NOW.strftime("%Y-%m-%d %H:%M"), status=status, line_now=ln, price_now=int(px), stop_price=sp, pushed=sent))
         print("props follow-up:", title)

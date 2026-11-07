@@ -331,7 +331,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Pascal Siakam,pascal siakam,20.5,-120.0,-110.0,IND,709.196222707,21558499,21558500
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Kelly Oubre Jr.,kelly oubre,9.5,-112.0,-118.0,IND,709.196223952,41408119,41408118
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,102.0,-136.0,DEN,709.196220683,12730307,12730306
-2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,DeMar DeRozan,demar derozan,11.5,-120.0,-110.0,DEN,709.196221260,12234472,12234473
+2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,DeMar DeRozan,demar derozan,11.5,-120.0,-110.0,DEN,709.19622126,12234472,12234473
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Spencer Jones,spencer jones,4.5,-114.0,-114.0,DEN,709.196221362,43257364,43257365
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Andrew Nembhard,andrew nembhard,2.5,-166.0,124.0,IND,709.196222868,43058624,43058625
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Christian Braun,christian braun,4.5,-114.0,-114.0,DEN,709.196220605,43026473,43026472
@@ -348,11 +348,11 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-112.0,-118.0,DEN,709.196220682,12730307,12730306
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-136.0,102.0,DEN,709.196217261,12257278,12257279
 2026-11-06 23:43,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,-102.0,-130.0,DEN,709.196217703,16127791,16127792
-2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,-102.0,-130.0,HOU,709.196233870,43049093,43049094
+2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,-102.0,-130.0,HOU,709.19623387,43049093,43049094
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Fred VanVleet,fred vanvleet,12.5,100.0,-132.0,HOU,709.196234512,21175485,21175486
-2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-108.0,-122.0,HOU,709.196232450,40296685,40296686
+2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-108.0,-122.0,HOU,709.19623245,40296685,40296686
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Kevin Durant,kevin durant,22.5,-102.0,-130.0,HOU,709.196231939,12260605,12260606
-2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Amen Thompson,amen thompson,14.5,-120.0,-110.0,HOU,709.196232700,62134320,62134329
+2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Amen Thompson,amen thompson,14.5,-120.0,-110.0,HOU,709.1962327,62134320,62134329
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Jabari Smith,jabari smith,6.5,124.0,-166.0,HOU,709.196233872,43049093,43049094
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Amen Thompson,amen thompson,6.5,-148.0,112.0,HOU,709.196232697,62134320,62134329
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Kevin Durant,kevin durant,5.5,124.0,-166.0,HOU,709.196231951,12260605,12260606
@@ -361,3 +361,28 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Fred VanVleet,fred vanvleet,5.5,102.0,-136.0,HOU,709.196234511,21175485,21175486
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,140.0,-186.0,HOU,709.196231971,12260605,12260606
 2026-11-06 23:43,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-136.0,102.0,HOU,709.196232701,62134320,62134329
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Obi Toppin,obi toppin,11.5,-112.0,-118.0,IND,709.196224066,41641966,41641967
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Christian Braun,christian braun,12.5,-118.0,-112.0,DEN,709.196220602,43026473,43026472
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Pascal Siakam,pascal siakam,20.5,-118.0,-112.0,IND,709.196222707,21558499,21558500
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Kelly Oubre Jr.,kelly oubre,9.5,-114.0,-114.0,IND,709.196223952,41408119,41408118
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,DeMar DeRozan,demar derozan,11.5,-122.0,-110.0,DEN,709.196221260,12234472,12234473
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Andrew Nembhard,andrew nembhard,2.5,-172.0,128.0,IND,709.196222868,43058624,43058625
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Nikola Jokic,nikola jokic,11.5,-144.0,108.0,DEN,709.196217284,12257278,12257279
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Aaron Nesmith,aaron nesmith,3.5,102.0,-136.0,IND,709.196223603,39494853,39494854
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Kelly Oubre Jr.,kelly oubre,3.5,104.0,-138.0,IND,709.196223953,41408119,41408118
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Ivica Zubac,ivica zubac,7.5,-122.0,-108.0,IND,709.196223352,13527611,22190771
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,136.0,-182.0,DEN,709.196220607,43026473,43026472
+2026-11-06 23:45,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,100.0,-132.0,DEN,709.196217703,16127791,16127792
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-118.0,-112.0,NYK,709.196234001,41408270,41408268
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,9.5,-125.0,-106.0,NYK,709.196233928,17926931,17926932
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Landry Shamet,landry shamet,10.5,100.0,-132.0,NYK,709.196233962,22599731,22599732
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-104.0,-128.0,NYK,709.196233910,17926928,17926927
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,134.0,-180.0,NYK,709.196233917,17926931,17926932
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Jalen Brunson,jalen brunson,3.5,130.0,-174.0,NYK,709.196233972,17926928,17926927
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Landry Shamet,landry shamet,2.5,116.0,-154.0,NYK,709.196233994,22599731,22599732
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-146.0,110.0,NYK,709.196233932,16220637,16220638
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Mikal Bridges,mikal bridges,2.5,-168.0,126.0,NYK,709.196233961,17926931,17926932
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,140.0,-188.0,NYK,709.196233878,16220637,16220638
+2026-11-06 23:45,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Jalen Brunson,jalen brunson,6.5,-106.0,-125.0,NYK,709.196233944,17926928,17926927
+2026-11-06 23:45,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Tari Eason,tari eason,9.5,-108.0,-122.0,HOU,709.196234654,43049623,43049624
+2026-11-06 23:45,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Tari Eason,tari eason,5.5,110.0,-146.0,HOU,709.196234653,43049623,43049624

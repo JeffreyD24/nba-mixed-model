@@ -3324,3 +3324,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 09:59,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Yaxel Lendeborg,yaxel lendeborg,4.5,-108.0,-122.0,GSW,709.196238212,64937530,64937543
 2026-11-07 09:59,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Anthony Black,anthony black,4.5,-152.0,114.0,ORL,709.196236325,50378078,50378080
 2026-11-07 09:59,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Desmond Bane,desmond bane,2.5,-174.0,130.0,ORL,709.196236416,38187360,38187370
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Toumani Camara,toumani camara,11.5,-104.0,-128.0,POR,709.196238637,43450264,43450266
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Devin Vassell,devin vassell,11.5,-112.0,-118.0,SAS,709.196242492,38295529,38295528
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Donovan Clingan,donovan clingan,11.5,-102.0,-130.0,POR,709.196238628,50752175,50752173
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-106.0,-125.0,POR,709.196238650,43450264,43450266
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Donovan Clingan,donovan clingan,1.5,-172.0,128.0,POR,709.196238655,50752175,50752173
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Stephon Castle,stephon castle,6.5,110.0,-146.0,SAS,709.196242497,64780942,64780943
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Devin Vassell,devin vassell,2.5,-114.0,-114.0,SAS,709.196242498,38295529,38295528
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Dylan Harper,dylan harper,4.5,-152.0,114.0,SAS,709.196242474,76027865,76027863
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Victor Wembanyama,victor wembanyama,2.5,-154.0,116.0,SAS,709.196241601,61967224,61967225
+2026-11-07 10:07,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,De'Aaron Fox,deaaron fox,5.5,-132.0,100.0,SAS,709.196241734,15572079,15572080

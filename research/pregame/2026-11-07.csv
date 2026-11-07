@@ -4381,3 +4381,5 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 04:40:54,295394,2026-11-07,2026-11-07 20:30,orl,gs,Fanatics,event,team_total,home_under,114.5,-125,opener
 2026-11-07 04:40:54,295394,2026-11-07,2026-11-07 20:30,orl,gs,Fanatics,event,team_total,home_over,114.5,-105,opener
 2026-11-07 04:40:54,295394,2026-11-07,2026-11-07 20:30,orl,gs,Fanatics,event,team_total,away_under,107.5,-110,opener
+2026-11-07 04:43:26,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,total,under,219.5,-107,normal
+2026-11-07 04:43:26,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,total,over,219.5,-115,normal

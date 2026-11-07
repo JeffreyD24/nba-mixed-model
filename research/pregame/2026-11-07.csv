@@ -601,3 +601,17 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 22:25:39,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,event,moneyline,home,0.0,140,normal
 2026-11-06 22:25:39,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,event,total,over,227.5,-110,normal
 2026-11-06 22:25:39,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,event,total,under,227.5,-110,normal
+2026-11-06 22:28:14,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,moneyline,home,0.0,205,normal
+2026-11-06 22:28:14,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,moneyline,away,0.0,-250,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,Consensus,event,moneyline,home,0.0,138,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,Consensus,event,moneyline,away,0.0,-164,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,Consensus,event,spread,away,-3.5,-115,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,Consensus,event,spread,home,3.5,-105,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,FanDuel,event,moneyline,away,0.0,-166,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,FanDuel,event,moneyline,home,0.0,140,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,FanDuel,event,spread,away,-3.5,-115,normal
+2026-11-06 22:31:00,295392,2026-11-07,2026-11-07 20:00,ny,cle,FanDuel,event,spread,home,3.5,-105,normal
+2026-11-06 22:31:00,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,spread,away,-6.5,-110,normal
+2026-11-06 22:31:00,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,spread,home,6.5,-110,normal
+2026-11-06 22:31:00,295395,2026-11-07,2026-11-07 21:00,hou,phx,Fanatics,event,spread,away,-6.5,-110,normal
+2026-11-06 22:31:00,295395,2026-11-07,2026-11-07 21:00,hou,phx,Fanatics,event,spread,home,6.5,-110,normal

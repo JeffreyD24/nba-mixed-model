@@ -4373,3 +4373,11 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 04:33:27,295396,2026-11-07,2026-11-07 22:00,sa,por,Fanatics,event,moneyline,home,0.0,165,normal
 2026-11-07 04:33:27,295396,2026-11-07,2026-11-07 22:00,sa,por,Fanatics,event,moneyline,away,0.0,-200,normal
 2026-11-07 04:35:55,295395,2026-11-07,2026-11-07 21:00,hou,phx,BetMGM,event,total,under,221.5,-110,normal
+2026-11-07 04:39:42,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,away_over,110.5,-105,normal
+2026-11-07 04:39:42,295391,2026-11-07,2026-11-07 19:30,bkn,atl,Fanatics,event,team_total,away_under,110.5,-125,normal
+2026-11-07 04:39:42,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Fanatics,event,team_total,home_over,116.5,-105,normal
+2026-11-07 04:39:42,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Fanatics,event,team_total,home_under,116.5,-125,normal
+2026-11-07 04:40:54,295394,2026-11-07,2026-11-07 20:30,orl,gs,Fanatics,event,team_total,away_over,107.5,-120,opener
+2026-11-07 04:40:54,295394,2026-11-07,2026-11-07 20:30,orl,gs,Fanatics,event,team_total,home_under,114.5,-125,opener
+2026-11-07 04:40:54,295394,2026-11-07,2026-11-07 20:30,orl,gs,Fanatics,event,team_total,home_over,114.5,-105,opener
+2026-11-07 04:40:54,295394,2026-11-07,2026-11-07 20:30,orl,gs,Fanatics,event,team_total,away_under,107.5,-110,opener

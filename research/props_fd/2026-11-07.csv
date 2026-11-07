@@ -1937,6 +1937,26 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 06:51,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Miles Bridges,miles bridges,16.5,100.0,-132.0,PHX,709.196236017,23559725,23559726
 2026-11-07 06:51,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Luke Kennard,luke kennard,5.5,-122.0,-108.0,PHX,709.196237721,16954514,16954515
 2026-11-07 06:51,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Dillon Brooks,dillon brooks,3.5,-136.0,102.0,PHX,709.196236131,12798648,12798647
-2026-11-07 06:51,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Khaman Maluach,khaman maluach,5.5,104.0,-138.0,PHX,709.196237620,76787777,76787780
+2026-11-07 06:51,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Khaman Maluach,khaman maluach,5.5,104.0,-138.0,PHX,709.19623762,76787777,76787780
 2026-11-07 06:51,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Devin Booker,devin booker,5.5,126.0,-168.0,PHX,709.196235821,12257187,12257186
 2026-11-07 06:51,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Jalen Green,jalen green,2.5,-158.0,118.0,PHX,709.196236602,41386184,41386185
+2026-11-07 06:53,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,100.0,-132.0,DEN,709.196220683,12730307,12730306
+2026-11-07 06:53,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Kelly Oubre Jr.,kelly oubre,3.5,104.0,-138.0,IND,709.196223953,41408119,41408118
+2026-11-07 06:53,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Obi Toppin,obi toppin,4.5,-106.0,-125.0,IND,709.196224067,41641966,41641967
+2026-11-07 06:53,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,-112.0,-118.0,DEN,709.196217261,12257278,12257279
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,-102.0,-130.0,HOU,709.196233870,43049093,43049094
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Marcus Smart,marcus smart,6.5,-120.0,-110.0,HOU,709.196237789,12880787,12880788
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Tari Eason,tari eason,9.5,-120.0,-110.0,HOU,709.196234654,43049623,43049624
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Dillon Brooks,dillon brooks,15.5,-114.0,-114.0,PHX,709.196236132,12798648,12798647
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-112.0,-118.0,HOU,709.196232450,40296685,40296686
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Reed Sheppard,reed sheppard,8.5,104.0,-138.0,HOU,709.196235485,63497028,63497029
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Kevin Durant,kevin durant,22.5,100.0,-132.0,HOU,709.196231939,12260605,12260606
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Fred VanVleet,fred vanvleet,3.5,122.0,-162.0,HOU,709.196234513,21175485,21175486
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Jabari Smith,jabari smith,6.5,124.0,-166.0,HOU,709.196233872,43049093,43049094
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Kevin Durant,kevin durant,5.5,126.0,-168.0,HOU,709.196231951,12260605,12260606
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Dillon Brooks,dillon brooks,2.5,138.0,-186.0,PHX,709.196236752,12798648,12798647
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Alperen Sengun,alperen sengun,6.5,-136.0,102.0,HOU,709.196232451,40296685,40296686
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Devin Booker,devin booker,5.5,124.0,-166.0,PHX,709.196235821,12257187,12257186
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Fred VanVleet,fred vanvleet,5.5,110.0,-146.0,HOU,709.196234511,21175485,21175486
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,130.0,-174.0,HOU,709.196235489,63497028,63497029
+2026-11-07 06:53,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,132.0,-178.0,HOU,709.196231971,12260605,12260606

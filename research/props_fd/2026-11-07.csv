@@ -2260,3 +2260,23 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 08:14,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Wendell Carter Jr.,wendell carter,1.5,-118.0,-112.0,ORL,709.196236364,41408443,41408444
 2026-11-07 08:14,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-138.0,104.0,ORL,709.196236448,43072432,43072430
 2026-11-07 08:14,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Anthony Black,anthony black,4.5,-138.0,104.0,ORL,709.196236325,50378078,50378080
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Scoot Henderson,scoot henderson,12.5,-132.0,100.0,POR,709.196238684,62064858,62064857
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Toumani Camara,toumani camara,11.5,-104.0,-128.0,POR,709.196238637,43450264,43450266
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Deni Avdija,deni avdija,23.5,-104.0,-128.0,POR,709.196238599,37901072,37901070
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,pts,Donovan Clingan,donovan clingan,11.5,100.0,-132.0,POR,709.196238628,50752175,50752173
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Jrue Holiday,jrue holiday,4.5,120.0,-160.0,POR,709.196239146,12260620,12260621
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Scoot Henderson,scoot henderson,2.5,-128.0,-104.0,POR,709.196238661,62064858,62064857
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Damian Lillard,damian lillard,3.5,-128.0,-104.0,POR,709.196238675,12260575,12260576
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Deni Avdija,deni avdija,6.5,-118.0,-112.0,POR,709.196238627,37901072,37901070
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Donovan Clingan,donovan clingan,1.5,-146.0,110.0,POR,709.196238655,50752175,50752173
+2026-11-07 08:16,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Scoot Henderson,scoot henderson,3.5,120.0,-160.0,POR,709.196238664,62064858,62064857
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-118.0,-112.0,NYK,709.196234001,41408270,41408268
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Mikal Bridges,mikal bridges,9.5,-128.0,-104.0,NYK,709.196233928,17926931,17926932
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,17.5,100.0,-132.0,NYK,709.196233906,16220637,16220638
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Miles McBride,miles mcbride,7.5,-102.0,-130.0,NYK,709.196233898,42109139,42109140
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-102.0,-130.0,NYK,709.196233910,17926928,17926927
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,136.0,-182.0,NYK,709.196233917,17926931,17926932
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Jalen Brunson,jalen brunson,3.5,128.0,-172.0,NYK,709.196233972,17926928,17926927
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-114.0,-114.0,NYK,709.196233932,16220637,16220638
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Peyton Watson,peyton watson,2.5,140.0,-188.0,CLE,709.196263774,54472264,54472265
+2026-11-07 08:16,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Karl-Anthony Towns,karl anthony towns,3.5,-132.0,100.0,NYK,709.196233958,41408270,41408268

@@ -4072,3 +4072,15 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-07 07:25,22600195,2026-11-07,"Total Points, Rebounds, and Assists",4845367,Stephon Castle,,27.5,-106.0,28.5,-119.0,2026-11-07T15:10Z,under
 2026-11-07 07:25,22600195,2026-11-07,"Total Points, Rebounds, and Assists",5037871,Dylan Harper,,28.5,-108.0,27.5,-125.0,2026-11-07T14:49Z,over
 2026-11-07 07:25,22600195,2026-11-07,"Total Points, Rebounds, and Assists",5037871,Dylan Harper,,28.5,-122.0,27.5,-105.0,2026-11-07T14:49Z,under
+2026-11-07 07:32,22600193,2026-11-07,Total Points,6589,Draymond Green,,5.5,105.0,5.5,-101.0,2026-11-07T10:21Z,over
+2026-11-07 07:32,22600193,2026-11-07,Total Points,6589,Draymond Green,,5.5,-134.0,5.5,-126.0,2026-11-07T10:21Z,under
+2026-11-07 07:32,22600193,2026-11-07,Total Points,5175737,Yaxel Lendeborg,,18.5,-102.0,17.5,-120.0,2026-11-07T15:17Z,over
+2026-11-07 07:32,22600193,2026-11-07,Total Points,5175737,Yaxel Lendeborg,,18.5,-125.0,17.5,-107.0,2026-11-07T15:17Z,under
+2026-11-07 07:32,22600193,2026-11-07,Total Assists,5239561,Jase Richardson,,2.5,-111.0,2.5,-128.0,2026-11-07T11:53Z,over
+2026-11-07 07:32,22600193,2026-11-07,Total Assists,5239561,Jase Richardson,,2.5,-118.0,2.5,-103.0,2026-11-07T11:53Z,under
+2026-11-07 07:32,22600193,2026-11-07,Total Points and Assists,6589,Draymond Green,,11.5,-118.0,11.5,-130.0,2026-11-07T11:30Z,over
+2026-11-07 07:32,22600193,2026-11-07,Total Points and Assists,6589,Draymond Green,,11.5,-112.0,11.5,-101.0,2026-11-07T11:30Z,under
+2026-11-07 07:32,22600193,2026-11-07,Total Points and Rebounds,6589,Draymond Green,,10.5,-119.0,11.5,101.0,2026-11-07T15:14Z,over
+2026-11-07 07:32,22600193,2026-11-07,Total Points and Rebounds,6589,Draymond Green,,10.5,-110.0,11.5,-133.0,2026-11-07T15:14Z,under
+2026-11-07 07:32,22600193,2026-11-07,"Total Points, Rebounds, and Assists",6589,Draymond Green,,17.5,-102.0,17.5,-112.0,2026-11-07T11:30Z,over
+2026-11-07 07:32,22600193,2026-11-07,"Total Points, Rebounds, and Assists",6589,Draymond Green,,17.5,-129.0,17.5,-117.0,2026-11-07T11:30Z,under

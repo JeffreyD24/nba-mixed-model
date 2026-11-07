@@ -2474,3 +2474,7 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 08:24,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,158.0,-215.0,WAS,709.196253328,12260628,12260629
 2026-11-07 08:24,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Alex Sarr,alex sarr,1.5,-188.0,140.0,WAS,709.196253976,92784087,92784086
 2026-11-07 08:24,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Trae Young,trae young,9.5,108.0,-144.0,WAS,709.196253527,21175415,21175416
+2026-11-07 08:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Peyton Watson,peyton watson,4.5,104.0,-138.0,CLE,709.196263768,54472264,54472265
+2026-11-07 08:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,James Harden,james harden,6.5,-108.0,-122.0,CLE,709.196263550,12260579,12260580
+2026-11-07 08:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Donovan Mitchell,donovan mitchell,5.5,108.0,-140.0,CLE,709.196263457,15907303,15907304
+2026-11-07 08:30,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Evan Mobley,evan mobley,3.5,126.0,-168.0,CLE,709.196263466,41407628,41407629

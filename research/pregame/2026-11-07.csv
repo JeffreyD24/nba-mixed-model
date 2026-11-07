@@ -3919,3 +3919,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 03:03:39,295390,2026-11-07,2026-11-07 17:00,den,ind,Caesars,event,total,under,228.5,-110,normal
 2026-11-07 03:03:39,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,under,224.0,-115,normal
 2026-11-07 03:03:39,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,over,224.0,-105,normal
+2026-11-07 03:07:22,295396,2026-11-07,2026-11-07 22:00,sa,por,BetRivers,event,moneyline,home,0.0,170,normal
+2026-11-07 03:07:22,295396,2026-11-07,2026-11-07 22:00,sa,por,BetRivers,event,moneyline,away,0.0,-220,normal
+2026-11-07 03:07:22,295396,2026-11-07,2026-11-07 22:00,sa,por,BetRivers,event,spread,home,1.5,150,normal
+2026-11-07 03:07:22,295396,2026-11-07,2026-11-07 22:00,sa,por,BetRivers,event,spread,away,-1.5,-190,normal
+2026-11-07 03:09:53,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,event,moneyline,away,0.0,-300,normal
+2026-11-07 03:09:53,295390,2026-11-07,2026-11-07 17:00,den,ind,Fanatics,event,moneyline,home,0.0,240,normal
+2026-11-07 03:09:53,295392,2026-11-07,2026-11-07 20:00,ny,cle,Consensus,event,spread,away,-4.5,-114,normal
+2026-11-07 03:09:53,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Fanatics,event,total,over,219.5,-110,normal
+2026-11-07 03:09:53,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Fanatics,event,total,under,219.5,-110,normal
+2026-11-07 03:11:03,295394,2026-11-07,2026-11-07 20:30,orl,gs,Consensus,event,total,over,221.5,-111,normal

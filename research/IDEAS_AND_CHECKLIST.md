@@ -88,7 +88,8 @@ the three models are combined. Stay on Sonnet for: data downloads, cleaning, run
 - Data: github.com/FinnedAI/sportsbookreview-scraper
 
 ## Sharp money (Nov 5, 2026; sharp/SHARP_RESULTS_2026-11-05.md)
-- [ ] Historical timing: does Pinnacle (Odds API hourly multi-book snapshots 2020-26) move before DraftKings, and does following its first move beat DK's opener? Pre-register.
+- [x] Historical timing: does Pinnacle (Odds API hourly multi-book snapshots 2020-26) move before DraftKings, and does following its first move beat DK's opener? Pre-register. Done Nov 7: same-snapshot gap passes (betting-goals models/tests/PIN_VS_DK_SAMETIME_RESULTS.md).
+- [ ] (Nov 7) Add the same-snapshot sharp-book gap (Pinnacle/BetOnline line - DK line at bet time) as an input to the totals, spread and movement models; leave-one-season-out. Live needs a sharp feed (paid Odds API).
 - [ ] Early-money warning: once the live tracker has history, does a money gap >= 10 against our bet seen BEFORE the line moves predict our losers? (Lead: NBA totals v4 sharp-disagree 197 bets 49.7%.)
 - [ ] Steam and reverse line moves from live data: which books move first, and how much of DK's move follows.
 - [ ] Polymarket: follow large, historically profitable wallets in sports markets (public trade history with wallet ids).

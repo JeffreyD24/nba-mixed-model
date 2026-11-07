@@ -18345,3 +18345,9 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 11:43:52,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,firstquarter,total,over,58.0,-120,normal
 2026-11-07 11:43:52,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,secondhalf,spread,home,2.5,-120,normal
 2026-11-07 11:43:52,295396,2026-11-07,2026-11-07 22:00,sa,por,Caesars,secondhalf,spread,away,-2.5,-110,normal
+2026-11-07 11:45:07,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,secondquarter,team_total,home_under,27.5,105,normal
+2026-11-07 11:45:07,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,secondquarter,team_total,home_over,27.5,-125,normal
+2026-11-07 11:45:07,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,firsthalf,team_total,home_over,56.5,-110,normal
+2026-11-07 11:45:07,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,firsthalf,team_total,home_under,56.5,-110,normal
+2026-11-07 11:45:07,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,firsthalf,total,under,115.5,-102,normal
+2026-11-07 11:45:07,295396,2026-11-07,2026-11-07 22:00,sa,por,DraftKings,firsthalf,total,over,115.5,-118,normal

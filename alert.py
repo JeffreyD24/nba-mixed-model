@@ -208,7 +208,7 @@ def dk_link(ln, market, side, line):
 def notify(title, body, priority="high", tags="basketball", link=None, dk=None, kind="info", fd=None, best=None, actions=None):
     """kind: 'bet' (a BET verdict), 'stop' (DON'T BET follow-up), 'test', or 'info' (not pushed while BET_ONLY).
     dk / fd: DraftKings / FanDuel links (better book first, from fanduel.compare). link: unused since Nov 4, 2026 (Log button removed)."""
-    if BET_ONLY and kind not in ("bet", "stop", "test", "bailout"):   # bailout: asked for Nov 4, 2026 (bailout.py)
+    if BET_ONLY and kind not in ("bet", "stop", "stop_plain", "test", "bailout"):   # stop_plain: a STOP already in the short format   # bailout: asked for Nov 4, 2026 (bailout.py)
         print("Logged only (not pushed):", title); return False
     # Nov 6, 2026 (Jeffrey): bet alerts, reminders, BACK IN RANGE and DON'T BET say only what to bet, where, and when to stop
     # (fanduel.compact_alert; the full text stays in the alert records). Anything it can't read goes out unchanged.
@@ -1023,7 +1023,17 @@ def main():
                 what = f"{str(r.side).upper()} {float(r.line):g}"; nowtxt = f"{cur:g}"
             body = (f"DON'T BET: {why}.\nThe BET alert at {pd.Timestamp(r.alerted_at_et):%-I:%M %p} was {what}; no bet is logged for it. "
                     f"DraftKings now: {nowtxt}, model {now_['model']:.1f}. If you did bet it, log it and ignore this." + now_["hist"])
-            notify(f"DON'T BET - {what}: {Aw} @ {H}, {now_['tip']}", body, priority="high", tags="no_entry", kind="stop")
+            # Nov 7, 2026 (Jeffrey: "how come I didn't get a don't bet alert?" for HOU@PHX): the 1:30 AM STOP said "OVER 222.5" (DraftKings'
+            # line) while the BET alert said "OVER 220.5 at FanDuel", and the short format dropped the reason. Now the STOP names the same
+            # bet and book as the BET alert and says why; sent as-is (no compact_alert rewrite).
+            alerted = what
+            if r.market == "total" and str(r.get("best_book")) == "FanDuel" and pd.notna(r.get("fd_line")):
+                alerted = f"{str(r.side).upper()} {float(r.fd_line):g} at FanDuel"
+            elif r.market == "total" or r.market == "spread":
+                alerted = f"{what} at DraftKings"
+            stitle = f"STOP: don't bet {alerted}"
+            sbody = (f"Why: {why}. If you already bet it, just log it (or cash out).\n{Aw} @ {H}, {now_['tip']}.")
+            notify(stitle, sbody, priority="high", tags="no_entry", kind="stop_plain")
             A.loc[i, "stopped_at_et"] = str(NOW)[:16]; n_rem += 1
             print("DON'T BET:", what, "|", why)
     if new or n_rem:

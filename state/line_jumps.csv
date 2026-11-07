@@ -87,3 +87,4 @@ game_id,market,detected_at_et,date,away,home,from_line,to_line,move,steady_since
 22600025,total,2026-11-06 17:35,2026-11-06,wsh,atl,229.5,227.5,-2.0,2026-11-06 15:20,2026-11-06 17:05,2026-11-06 17:35,30.0,1.4,228.2,away from model,ATL 5:06 PM: Johnson (ankle) is out for Friday's game against the Wizards.,1.0,False,,,
 22600025,spread,2026-11-06 18:25,2026-11-06,wsh,atl,-6.5,-8.5,-2.0,2026-11-06 17:25,2026-11-06 17:35,2026-11-06 17:35,0.0,1.4,9.2,toward model,WSH 5:37 PM: Davis (ankle) is listed as out for Friday's game against the Hawks. | ATL 5:06 PM: Johnson (ankle) is out for Friday's game against the Wizards.,2.0,False,,,
 22600026,total,2026-11-06 18:50,2026-11-06,bos,cha,207.5,209.5,2.0,2026-11-06 17:50,2026-11-06 17:55,2026-11-06 18:40,45.0,0.3,214.3,toward model,,0.0,False,,,
+22600195,spread,2026-11-07 00:00,2026-11-07,sa,por,4.5,2.5,-2.0,2026-11-06 22:12,2026-11-07 00:00,2026-11-07 00:00,0.0,22.0,0.9,toward model,,0.0,False,,,

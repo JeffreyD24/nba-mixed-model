@@ -1,0 +1,1976 @@
+{
+ "id": "185087",
+ "chatChannel": {
+  "id": "nba-den-ind-2026-11-07",
+  "type": "CHAT_CHANNEL_TYPE_MESSAGING",
+  "chatMemberCount": 4587
+ },
+ "ticker": "nba-den-ind-2026-11-07",
+ "slug": "nba-den-ind-2026-11-07",
+ "title": "DEN Nuggets vs. IND Pacers",
+ "description": "DEN Nuggets vs. IND Pacers",
+ "startDate": "2026-11-07T22:00:00Z",
+ "endDate": "2026-11-08T04:59:00Z",
+ "active": true,
+ "closed": false,
+ "archived": false,
+ "category": "sports",
+ "createdAt": "2026-10-24T05:00:24Z",
+ "updatedAt": "2026-11-07T04:55:57Z",
+ "startTime": "2026-11-07T22:00:00Z",
+ "seriesSlug": "nba-2025",
+ "period": "NS",
+ "markets": [
+  {
+   "id": "1740842",
+   "question": "Who will win in the upcoming basketball event DEN Nuggets vs IND Pacers scheduled for November 7, 2026 at 10:00 PM UTC?",
+   "slug": "aec-nba-den-ind-2026-11-07",
+   "endDate": "2026-11-21T22:00:00Z",
+   "category": "sports",
+   "startDate": "2026-10-24T05:00:24Z",
+   "description": "This market will settle to the winner of the DEN Nuggets vs IND Pacers professional basketball game scheduled for November 7, 2026 at 5:00PM ET (as of the listing of the event's first instrument). Overtime is included if played. If the game is delayed, postponed, suspended or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+   "active": true,
+   "marketType": "moneyline",
+   "closed": false,
+   "createdAt": "2026-10-24T05:00:24Z",
+   "updatedAt": "2026-11-07T04:55:40Z",
+   "archived": false,
+   "orderPriceMinTickSize": 0.01,
+   "gameStartTime": "2026-11-07T22:00:00Z",
+   "manualActivation": false,
+   "sportsMarketType": "basketball_team_full_game_winner",
+   "marketSides": [
+    {
+     "id": "3481154",
+     "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+     "identifier": "aec-nba-den-ind-2026-11-07",
+     "createdAt": "2026-10-24T05:00:24Z",
+     "updatedAt": "2026-10-24T05:00:24Z",
+     "description": "Nuggets",
+     "price": "0.7100",
+     "marketId": 1740842,
+     "long": true,
+     "teamId": 40,
+     "team": {
+      "id": 40,
+      "name": "Denver Nuggets",
+      "abbreviation": "den",
+      "league": "nba",
+      "record": "4-3",
+      "logo": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+      "alias": "Denver Nuggets",
+      "safeName": "Nuggets",
+      "homeIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+      "awayIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+      "colorPrimary": "#255fb5",
+      "providerId": 20,
+      "ordering": "away",
+      "longIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+      "shortIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+      "displayAbbreviation": "DEN",
+      "providerIds": [
+       {
+        "provider": "PROVIDER_SPORTSDATAIO",
+        "providerId": "20"
+       },
+       {
+        "provider": "PROVIDER_SPORTRADAR",
+        "providerId": "583ed102-fb46-11e1-82cb-f4ce4684ea4c"
+       },
+       {
+        "provider": "PROVIDER_OPTICODDS",
+        "providerId": "C0312DE08463"
+       }
+      ],
+      "longIconDark": "https://static.polymarket.us/images/teams/nba-den/DEN_dark_inset6.png",
+      "shortIconDark": "https://static.polymarket.us/images/teams/nba-den/DEN_dark_inset6.png",
+      "color": {
+       "light": "#255FB5",
+       "dark": "#255FB5"
+      },
+      "imageDisplayType": "IMAGE_DISPLAY_TYPE_LOGO"
+     },
+     "quote": {
+      "value": "0.7200",
+      "currency": "USD"
+     },
+     "tradable": true
+    },
+    {
+     "id": "3481155",
+     "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+     "identifier": "aec-nba-den-ind-2026-11-07",
+     "createdAt": "2026-10-24T05:00:24Z",
+     "updatedAt": "2026-10-24T05:00:24Z",
+     "description": "Pacers",
+     "price": "0.7200",
+     "marketId": 1740842,
+     "long": false,
+     "teamId": 19,
+     "team": {
+      "id": 19,
+      "name": "Indiana Pacers",
+      "abbreviation": "ind",
+      "league": "nba",
+      "record": "3-6",
+      "logo": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+      "alias": "Indiana Pacers",
+      "safeName": "Pacers",
+      "homeIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+      "awayIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+      "colorPrimary": "#e4a00c",
+      "providerId": 13,
+      "ordering": "home",
+      "longIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+      "shortIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+      "displayAbbreviation": "IND",
+      "providerIds": [
+       {
+        "provider": "PROVIDER_SPORTSDATAIO",
+        "providerId": "13"
+       },
+       {
+        "provider": "PROVIDER_SPORTRADAR",
+        "providerId": "583ec7cd-fb46-11e1-82cb-f4ce4684ea4c"
+       },
+       {
+        "provider": "PROVIDER_OPTICODDS",
+        "providerId": "F342C875E571"
+       }
+      ],
+      "longIconDark": "https://static.polymarket.us/images/teams/nba-ind/IND_dark_inset6.png",
+      "shortIconDark": "https://static.polymarket.us/images/teams/nba-ind/IND_dark_inset6.png",
+      "color": {
+       "light": "#E4A00C",
+       "dark": "#FDBB30"
+      },
+      "imageDisplayType": "IMAGE_DISPLAY_TYPE_LOGO"
+     },
+     "quote": {
+      "value": "0.29",
+      "currency": "USD"
+     },
+     "tradable": true
+    }
+   ],
+   "outcomes": "[\"Nuggets\",\"Pacers\"]",
+   "outcomePrices": "[\"0.7100\",\"0.7200\"]",
+   "ep3Status": "OPEN",
+   "status": "MARKET_STATUS_OPEN",
+   "assetPriceTerms": null,
+   "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+   "hidden": false,
+   "tags": [],
+   "title": "Denver Nuggets vs Indiana Pacers",
+   "feeCoefficient": 0.095,
+   "bestBidQuote": {
+    "value": "0.7100",
+    "currency": "USD"
+   },
+   "bestAskQuote": {
+    "value": "0.7200",
+    "currency": "USD"
+   },
+   "titleShort": "DEN vs IND",
+   "ep3SyncedAt": "2026-11-05T12:40:14Z",
+   "minimumTradeQty": 0.01,
+   "comboEnabled": true,
+   "politics": null,
+   "eventSubcategory": "BASKETBALL"
+  }
+ ],
+ "gameId": 20024066,
+ "sportradarGameId": "f72f7616-1d4c-470b-b17e-08645e612a6b",
+ "eventState": {
+  "id": 142096270,
+  "gameId": 20024066,
+  "sportradarGameId": "f72f7616-1d4c-470b-b17e-08645e612a6b",
+  "type": "basketball",
+  "createdAt": "2026-11-07T01:02:40.656517Z",
+  "updatedAt": "2026-11-07T04:56:10.543157Z",
+  "mainSpreadLine": -6.5,
+  "mainTotalLine": 228.5,
+  "marketGroupStats": [
+   {
+    "marketGroupId": "game-lines/spread/full-game",
+    "line": -6.5
+   },
+   {
+    "marketGroupId": "game-lines/totals/full-game",
+    "line": 228.5
+   },
+   {
+    "marketGroupId": "game-lines/spread/1st-half",
+    "line": -3.5
+   },
+   {
+    "marketGroupId": "game-lines/totals/1st-half",
+    "line": 111.5
+   },
+   {
+    "marketGroupId": "game-lines/spread/1st-quarter",
+    "line": -2.5
+   },
+   {
+    "marketGroupId": "game-lines/totals/1st-quarter",
+    "line": 56.5
+   },
+   {
+    "marketGroupId": "game-lines/spread/2nd-quarter",
+    "line": -1.5
+   },
+   {
+    "marketGroupId": "game-lines/totals/2nd-quarter",
+    "line": 55.5
+   },
+   {
+    "marketGroupId": "game-lines/spread/3rd-quarter",
+    "line": -1.5
+   },
+   {
+    "marketGroupId": "game-lines/totals/3rd-quarter",
+    "line": 59.5
+   },
+   {
+    "marketGroupId": "game-lines/spread/4th-quarter",
+    "line": -1.5
+   },
+   {
+    "marketGroupId": "game-lines/totals/4th-quarter",
+    "line": 56.5
+   }
+  ],
+  "periodScores": [],
+  "eventId": 185087
+ },
+ "participants": [],
+ "hidden": false,
+ "tags": [
+  {
+   "id": "2",
+   "label": "Sports",
+   "slug": "sports",
+   "createdAt": "2025-09-25T16:13:27Z",
+   "updatedAt": "2026-11-07T04:57:32Z",
+   "subtags": [],
+   "hub": null,
+   "featuredEventIds": []
+  },
+  {
+   "id": "3",
+   "label": "Games",
+   "slug": "games",
+   "createdAt": "2025-09-25T16:13:27Z",
+   "updatedAt": "2026-11-07T04:57:32Z",
+   "subtags": [],
+   "hub": null,
+   "featuredEventIds": []
+  },
+  {
+   "id": "5",
+   "label": "NBA",
+   "slug": "nba",
+   "createdAt": "2025-10-21T18:23:05Z",
+   "updatedAt": "2026-11-07T04:57:32Z",
+   "image": "https://static-preprod.polymarket.us/images/leagues/nba/NBA_dark.png",
+   "tradable": false,
+   "league": {
+    "id": 2,
+    "name": "NBA",
+    "sportId": 1,
+    "tagId": 5,
+    "image": "https://static-preprod.polymarket.us/images/leagues/nba/NBA_dark.png",
+    "resolution": "https://www.nba.com/",
+    "ordering": "away",
+    "activeSeriesId": 4,
+    "isOperational": true,
+    "automaticResolution": false,
+    "createdAt": "2026-03-05T18:30:42Z",
+    "slug": "nba",
+    "abbreviation": "NBA"
+   },
+   "parentId": 11,
+   "subtags": [],
+   "hub": null,
+   "featuredEventIds": []
+  },
+  {
+   "id": "11",
+   "label": "Basketball",
+   "slug": "basketball",
+   "createdAt": "2026-03-05T18:30:42Z",
+   "updatedAt": "2026-11-07T04:57:32Z",
+   "image": "https://static.polymarket.us/images/new-category-icons/Icon-Basketball.png",
+   "tradable": false,
+   "sport": {
+    "id": 1,
+    "name": "Basketball",
+    "tagId": 11,
+    "createdAt": "2026-03-05T18:30:42Z",
+    "slug": "basketball",
+    "image": "https://static.polymarket.us/images/new-category-icons/Icon-Basketball.png"
+   },
+   "subtags": [
+    {
+     "id": "5",
+     "label": "NBA",
+     "slug": "nba",
+     "createdAt": "2025-10-21T18:23:05Z",
+     "updatedAt": "2026-11-07T04:57:32Z",
+     "image": "https://static-preprod.polymarket.us/images/leagues/nba/NBA_dark.png",
+     "tradable": false,
+     "league": {
+      "id": 2,
+      "name": "NBA",
+      "sportId": 1,
+      "tagId": 5,
+      "image": "https://static-preprod.polymarket.us/images/leagues/nba/NBA_dark.png",
+      "resolution": "https://www.nba.com/",
+      "ordering": "away",
+      "activeSeriesId": 4,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-03-05T18:30:42Z",
+      "slug": "nba",
+      "abbreviation": "NBA"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "94",
+     "label": "WNBA",
+     "slug": "wnba",
+     "updatedAt": "2026-11-01T05:16:22Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-logos/CBB/Polymarket_NCAAMB_SYRA_L%40320x320.png",
+     "tradable": false,
+     "league": {
+      "id": 28,
+      "name": "WNBA",
+      "sportId": 1,
+      "tagId": 94,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/wcbb.png",
+      "ordering": "away",
+      "activeSeriesId": 49,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-05-06T12:55:52Z",
+      "slug": "wnba"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1359",
+     "label": "EuroLeague",
+     "slug": "eurolg",
+     "updatedAt": "2026-11-06T22:15:21Z",
+     "image": "https://static.polymarket.us/images/euroleague.png",
+     "tradable": false,
+     "league": {
+      "id": 255,
+      "name": "EuroLeague",
+      "sportId": 1,
+      "tagId": 1359,
+      "image": "https://static.polymarket.us/images/euroleague.png",
+      "ordering": "home",
+      "activeSeriesId": 340,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-17T19:46:10Z",
+      "slug": "eurolg"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1495",
+     "label": "CBA",
+     "slug": "cba",
+     "updatedAt": "2026-11-03T15:00:20Z",
+     "image": "https://static.polymarket.us/images/Random/CBA.png",
+     "tradable": false,
+     "league": {
+      "id": 314,
+      "name": "China CBA",
+      "sportId": 1,
+      "tagId": 1495,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/cba.png",
+      "ordering": "home",
+      "activeSeriesId": 416,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-24T02:28:48Z",
+      "slug": "cba"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "8",
+     "label": "CBB",
+     "slug": "cbb",
+     "createdAt": "2025-12-02T21:55:00Z",
+     "updatedAt": "2026-11-07T04:57:32Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-logos/CBB/Polymarket_NCAAMB_NCAR_L%40320x320.png",
+     "tradable": false,
+     "league": {
+      "id": 4,
+      "name": "CBB",
+      "sportId": 1,
+      "tagId": 8,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/NCAAMB.png",
+      "resolution": "https://www.ncaa.com/",
+      "ordering": "away",
+      "activeSeriesId": 7,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-03-05T18:30:42Z",
+      "slug": "cbb",
+      "abbreviation": "CBB"
+     },
+     "parentId": 11,
+     "subtags": [
+      {
+       "id": "1998",
+       "label": "D1",
+       "slug": "cbb-d1",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "1999",
+       "label": "Big South",
+       "slug": "cbb-big-south",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2000",
+       "label": "Atlantic 10",
+       "slug": "cbb-atlantic-10",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2001",
+       "label": "Northeast",
+       "slug": "cbb-northeast",
+       "updatedAt": "2026-11-07T04:28:25Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2002",
+       "label": "Big East",
+       "slug": "cbb-big-east",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2003",
+       "label": "Mid Eastern Athletic",
+       "slug": "cbb-meac",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2004",
+       "label": "Big West",
+       "slug": "cbb-big-west",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2005",
+       "label": "American",
+       "slug": "cbb-aac",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2006",
+       "label": "Horizon",
+       "slug": "cbb-horizon",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2007",
+       "label": "Summit League",
+       "slug": "cbb-summit-league",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2008",
+       "label": "Southland",
+       "slug": "cbb-southland",
+       "updatedAt": "2026-11-07T03:58:44Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2009",
+       "label": "SEC",
+       "slug": "cbb-sec",
+       "updatedAt": "2026-11-07T03:58:44Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2010",
+       "label": "ACC",
+       "slug": "cbb-acc",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2011",
+       "label": "West Coast",
+       "slug": "cbb-west-coast",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2012",
+       "label": "Atlantic Sun",
+       "slug": "cbb-asun",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "1949",
+       "label": "Top 25",
+       "slug": "cbb-top-25",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2013",
+       "label": "Southern",
+       "slug": "cbb-southern",
+       "updatedAt": "2026-11-07T02:58:23Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2014",
+       "label": "Big Ten",
+       "slug": "cbb-big-ten",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2015",
+       "label": "America East",
+       "slug": "cbb-america-east",
+       "updatedAt": "2026-11-07T01:29:48Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2016",
+       "label": "MAAC",
+       "slug": "cbb-maac",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2017",
+       "label": "Big 12",
+       "slug": "cbb-big-12",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2018",
+       "label": "Patriot League",
+       "slug": "cbb-patriot-league",
+       "updatedAt": "2026-11-07T02:58:23Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2019",
+       "label": "Sun Belt",
+       "slug": "cbb-sun-belt",
+       "updatedAt": "2026-11-07T04:13:31Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2020",
+       "label": "Ivy",
+       "slug": "cbb-ivy",
+       "updatedAt": "2026-11-07T02:58:23Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2021",
+       "label": "Coastal Athletic Association",
+       "slug": "cbb-caa",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2022",
+       "label": "Mid-American",
+       "slug": "cbb-mid-american",
+       "updatedAt": "2026-11-07T03:43:43Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2023",
+       "label": "Southwestern Athletic",
+       "slug": "cbb-swac",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2024",
+       "label": "United Athletic",
+       "slug": "cbb-uac",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2025",
+       "label": "Conference USA",
+       "slug": "cbb-conference-usa",
+       "updatedAt": "2026-11-07T04:28:25Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2026",
+       "label": "Big Sky",
+       "slug": "cbb-big-sky",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2027",
+       "label": "Missouri Valley",
+       "slug": "cbb-missouri-valley",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2028",
+       "label": "Mountain West",
+       "slug": "cbb-mountain-west",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2029",
+       "label": "Ohio Valley",
+       "slug": "cbb-ohio-valley",
+       "updatedAt": "2026-11-07T03:58:44Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2030",
+       "label": "Pac-12",
+       "slug": "cbb-pac-12",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 8,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      }
+     ],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1702",
+     "label": "BSKT Cup 3x3",
+     "slug": "bskt3x3",
+     "updatedAt": "2026-11-06T18:33:23Z",
+     "image": "https://static.polymarket.us/images/6734d5d86d31fd5cd9ee3b15_bskt-logo_Colorful_Chakra_Set_01_by_MissChatz-copy-3-min-1-.png",
+     "tradable": false,
+     "league": {
+      "id": 385,
+      "name": "BSKT Cup 3x3",
+      "sportId": 1,
+      "tagId": 1702,
+      "ordering": "home",
+      "activeSeriesId": 568,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-10-08T20:20:12Z",
+      "slug": "bskt3x3"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1341",
+     "label": "NBL",
+     "slug": "nbl",
+     "updatedAt": "2026-11-07T01:29:48Z",
+     "image": "https://static.polymarket.us/images/Random/NBL_-Australia-_logo.svg.webp",
+     "tradable": false,
+     "league": {
+      "id": 250,
+      "name": "Australia NBL",
+      "sportId": 1,
+      "tagId": 1341,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/nbl.png",
+      "ordering": "home",
+      "activeSeriesId": 329,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-16T06:30:14Z",
+      "slug": "nbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1384",
+     "label": "LNB Elite",
+     "slug": "lnb",
+     "updatedAt": "2026-11-06T21:16:26Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/lnb.png",
+     "tradable": false,
+     "league": {
+      "id": 269,
+      "name": "France LNB Elite",
+      "sportId": 1,
+      "tagId": 1384,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/lnb.png",
+      "ordering": "home",
+      "activeSeriesId": 357,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-19T06:30:32Z",
+      "slug": "lnb"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1388",
+     "label": "LBA",
+     "slug": "lba",
+     "updatedAt": "2026-11-02T21:45:37Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/lba.png",
+     "tradable": false,
+     "league": {
+      "id": 271,
+      "name": "Italy LBA Serie A",
+      "sportId": 1,
+      "tagId": 1388,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/lba.png",
+      "ordering": "home",
+      "activeSeriesId": 359,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-19T06:31:04Z",
+      "slug": "lba"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1354",
+     "label": "Champions League",
+     "slug": "bcl",
+     "updatedAt": "2026-11-04T21:00:53Z",
+     "image": "https://static.polymarket.us/images/Champions-League.png",
+     "tradable": false,
+     "league": {
+      "id": 254,
+      "name": "Basketball Champions League",
+      "sportId": 1,
+      "tagId": 1354,
+      "ordering": "home",
+      "activeSeriesId": 337,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-17T15:26:00Z",
+      "slug": "bcl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1353",
+     "label": "LNBP",
+     "slug": "lnbp",
+     "updatedAt": "2026-11-06T05:02:29Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/lnbp.png",
+     "tradable": false,
+     "league": {
+      "id": 253,
+      "name": "LNBP",
+      "sportId": 1,
+      "tagId": 1353,
+      "ordering": "home",
+      "activeSeriesId": 336,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-17T15:25:58Z",
+      "slug": "lnbp"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "28",
+     "label": "WCBB",
+     "slug": "wcbb",
+     "updatedAt": "2026-11-07T04:57:32Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-logos/CBB/Polymarket_NCAAMB_STMN_L%40320x320.png",
+     "tradable": false,
+     "league": {
+      "id": 17,
+      "name": "WCBB",
+      "sportId": 1,
+      "tagId": 28,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/wcbb.png",
+      "ordering": "away",
+      "activeSeriesId": 21,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-03-27T14:52:26Z",
+      "slug": "wcbb"
+     },
+     "parentId": 11,
+     "subtags": [
+      {
+       "id": "2031",
+       "label": "Top 25",
+       "slug": "wcbb-top-25",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2032",
+       "label": "D1",
+       "slug": "wcbb-d1",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2033",
+       "label": "Coastal Athletic Association",
+       "slug": "wcbb-caa",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2034",
+       "label": "ACC",
+       "slug": "wcbb-acc",
+       "updatedAt": "2026-11-07T02:14:26Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2035",
+       "label": "Conference USA",
+       "slug": "wcbb-conference-usa",
+       "updatedAt": "2026-11-07T02:29:38Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2036",
+       "label": "Southland",
+       "slug": "wcbb-southland",
+       "updatedAt": "2026-11-07T04:13:31Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2037",
+       "label": "SEC",
+       "slug": "wcbb-sec",
+       "updatedAt": "2026-11-07T04:13:31Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2038",
+       "label": "Big 12",
+       "slug": "wcbb-big-12",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2039",
+       "label": "Horizon",
+       "slug": "wcbb-horizon",
+       "updatedAt": "2026-11-07T03:28:33Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2040",
+       "label": "Big Ten",
+       "slug": "wcbb-big-ten",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2041",
+       "label": "Atlantic 10",
+       "slug": "wcbb-atlantic-10",
+       "updatedAt": "2026-11-07T03:28:33Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2042",
+       "label": "Southern",
+       "slug": "wcbb-southern",
+       "updatedAt": "2026-11-06T22:44:31Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2043",
+       "label": "Ohio Valley",
+       "slug": "wcbb-ohio-valley",
+       "updatedAt": "2026-11-07T01:29:48Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2044",
+       "label": "West Coast",
+       "slug": "wcbb-west-coast",
+       "updatedAt": "2026-11-07T04:13:31Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2045",
+       "label": "Atlantic Sun",
+       "slug": "wcbb-asun",
+       "updatedAt": "2026-11-07T02:14:26Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2046",
+       "label": "Northeast",
+       "slug": "wcbb-northeast",
+       "updatedAt": "2026-11-07T02:14:26Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2047",
+       "label": "Pac-12",
+       "slug": "wcbb-pac-12",
+       "updatedAt": "2026-11-07T04:57:32Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2048",
+       "label": "Southwestern Athletic",
+       "slug": "wcbb-swac",
+       "updatedAt": "2026-11-07T01:29:48Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2049",
+       "label": "Mountain West",
+       "slug": "wcbb-mountain-west",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2050",
+       "label": "Mid Eastern Athletic",
+       "slug": "wcbb-meac",
+       "updatedAt": "2026-11-07T02:29:38Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2051",
+       "label": "Big West",
+       "slug": "wcbb-big-west",
+       "updatedAt": "2026-11-07T04:13:31Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2052",
+       "label": "Mid-American",
+       "slug": "wcbb-mid-american",
+       "updatedAt": "2026-11-07T03:28:33Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2053",
+       "label": "MAAC",
+       "slug": "wcbb-maac",
+       "updatedAt": "2026-11-07T02:29:38Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2054",
+       "label": "American",
+       "slug": "wcbb-aac",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2055",
+       "label": "Missouri Valley",
+       "slug": "wcbb-missouri-valley",
+       "updatedAt": "2026-11-07T04:13:31Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2056",
+       "label": "America East",
+       "slug": "wcbb-america-east",
+       "updatedAt": "2026-11-07T02:29:38Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2057",
+       "label": "Big South",
+       "slug": "wcbb-big-south",
+       "updatedAt": "2026-11-07T03:28:33Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2058",
+       "label": "Ivy",
+       "slug": "wcbb-ivy",
+       "updatedAt": "2026-11-07T01:29:48Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2059",
+       "label": "Patriot League",
+       "slug": "wcbb-patriot-league",
+       "updatedAt": "2026-11-07T03:28:33Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2060",
+       "label": "Sun Belt",
+       "slug": "wcbb-sun-belt",
+       "updatedAt": "2026-11-07T01:44:56Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2061",
+       "label": "Big East",
+       "slug": "wcbb-big-east",
+       "updatedAt": "2026-11-07T01:29:48Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2062",
+       "label": "United Athletic",
+       "slug": "wcbb-uac",
+       "updatedAt": "2026-11-07T03:13:53Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2063",
+       "label": "Big Sky",
+       "slug": "wcbb-big-sky",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      },
+      {
+       "id": "2064",
+       "label": "Summit League",
+       "slug": "wcbb-summit-league",
+       "updatedAt": "2026-11-07T04:43:02Z",
+       "parentId": 28,
+       "subtags": [],
+       "hub": null,
+       "featuredEventIds": []
+      }
+     ],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1537",
+     "label": "Korean Basketball League",
+     "slug": "kbl",
+     "updatedAt": "2026-11-07T04:57:32Z",
+     "league": {
+      "id": 323,
+      "name": "Korean Basketball League",
+      "sportId": 1,
+      "tagId": 1537,
+      "ordering": "home",
+      "activeSeriesId": 438,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-28T17:48:14Z",
+      "slug": "kbl",
+      "abbreviation": "kbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1386",
+     "label": "BSL",
+     "slug": "bsl",
+     "updatedAt": "2026-11-07T02:58:23Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/bsl.png",
+     "tradable": false,
+     "league": {
+      "id": 270,
+      "name": "Turkey BSL",
+      "sportId": 1,
+      "tagId": 1386,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/bsl.png",
+      "ordering": "home",
+      "activeSeriesId": 358,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-19T06:30:48Z",
+      "slug": "bsl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1497",
+     "label": "B.League Premier",
+     "slug": "jpbl",
+     "updatedAt": "2026-11-07T04:43:02Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/jpbl.png",
+     "league": {
+      "id": 315,
+      "name": "Japan B.League Premier",
+      "sportId": 1,
+      "tagId": 1497,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/jpbl.png",
+      "ordering": "home",
+      "activeSeriesId": 417,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-24T06:30:22Z",
+      "slug": "jpbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1648",
+     "label": "Adriatic ABA League",
+     "slug": "aba",
+     "updatedAt": "2026-11-06T23:29:08Z",
+     "league": {
+      "id": 374,
+      "name": "Adriatic ABA League",
+      "sportId": 1,
+      "tagId": 1648,
+      "ordering": "home",
+      "activeSeriesId": 555,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-10-05T16:05:18Z",
+      "slug": "aba"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1347",
+     "label": "Germany BBL",
+     "slug": "bbl",
+     "updatedAt": "2026-11-07T02:58:23Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/bbl.png",
+     "tradable": false,
+     "league": {
+      "id": 252,
+      "name": "Basketball Bundesliga",
+      "sportId": 1,
+      "tagId": 1347,
+      "ordering": "home",
+      "activeSeriesId": 331,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-16T18:05:39Z",
+      "slug": "bbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1405",
+     "label": "GBL",
+     "slug": "gbl",
+     "updatedAt": "2026-11-07T04:28:25Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/gbl.png",
+     "tradable": false,
+     "league": {
+      "id": 273,
+      "name": "Greece GBL",
+      "sportId": 1,
+      "tagId": 1405,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/gbl.png",
+      "ordering": "home",
+      "activeSeriesId": 361,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-21T06:30:23Z",
+      "slug": "gbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1382",
+     "label": "VTB United League",
+     "slug": "vtb",
+     "updatedAt": "2026-11-07T01:59:02Z",
+     "image": "https://static.polymarket.us/images/league-logos/vtb-ae04ce6da11f.png",
+     "league": {
+      "id": 266,
+      "name": "VTB United League",
+      "sportId": 1,
+      "tagId": 1382,
+      "ordering": "home",
+      "activeSeriesId": 356,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-19T00:10:08Z",
+      "slug": "vtb"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "614",
+     "label": "ACB",
+     "slug": "acb",
+     "updatedAt": "2026-11-06T22:15:21Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/acb.png",
+     "tradable": false,
+     "league": {
+      "id": 74,
+      "name": "Spain Liga ACB",
+      "sportId": 1,
+      "tagId": 614,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/acb.png",
+      "ordering": "home",
+      "activeSeriesId": 345,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-07-06T23:14:40Z",
+      "slug": "acb"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1390",
+     "label": "LKL",
+     "slug": "lkl",
+     "updatedAt": "2026-11-06T22:59:55Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/lkl.png",
+     "tradable": false,
+     "league": {
+      "id": 272,
+      "name": "Lithuania LKL",
+      "sportId": 1,
+      "tagId": 1390,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/lkl.png",
+      "ordering": "home",
+      "activeSeriesId": 360,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-19T06:31:19Z",
+      "slug": "lkl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1413",
+     "label": "Liga OTP banka",
+     "slug": "slnbl",
+     "updatedAt": "2026-11-04T19:02:22Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/slnbl.jpg",
+     "league": {
+      "id": 275,
+      "name": "Slovenia Liga OTP banka",
+      "sportId": 1,
+      "tagId": 1413,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/slnbl.jpg",
+      "ordering": "home",
+      "activeSeriesId": 363,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-21T17:57:46Z",
+      "slug": "slnbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1411",
+     "label": "Basketligaen",
+     "slug": "denbl",
+     "updatedAt": "2026-11-07T02:29:38Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/denbl.png",
+     "league": {
+      "id": 274,
+      "name": "Denmark Basketligaen",
+      "sportId": 1,
+      "tagId": 1411,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/denbl.png",
+      "ordering": "home",
+      "activeSeriesId": 362,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-21T17:57:43Z",
+      "slug": "denbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1415",
+     "label": "SBL",
+     "slug": "svkbl",
+     "updatedAt": "2026-11-06T22:30:43Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/svkbl.png",
+     "league": {
+      "id": 276,
+      "name": "Slovakia SBL",
+      "sportId": 1,
+      "tagId": 1415,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/svkbl.png",
+      "ordering": "home",
+      "activeSeriesId": 364,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-21T17:57:51Z",
+      "slug": "svkbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1417",
+     "label": "NB I/A",
+     "slug": "hunbl",
+     "updatedAt": "2026-11-07T01:29:48Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/hunbl.png",
+     "league": {
+      "id": 277,
+      "name": "Hungary NB I/A",
+      "sportId": 1,
+      "tagId": 1417,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/hunbl.png",
+      "ordering": "home",
+      "activeSeriesId": 365,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-21T17:57:58Z",
+      "slug": "hunbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1499",
+     "label": "SLB",
+     "slug": "slb",
+     "updatedAt": "2026-11-06T22:15:21Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/slb.png",
+     "tradable": false,
+     "league": {
+      "id": 316,
+      "name": "British Super League Basketball",
+      "sportId": 1,
+      "tagId": 1499,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/slb.png",
+      "ordering": "home",
+      "activeSeriesId": 418,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-24T06:30:33Z",
+      "slug": "slb"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1649",
+     "label": "Czech NBL",
+     "slug": "cznbl",
+     "updatedAt": "2026-11-06T19:03:29Z",
+     "league": {
+      "id": 375,
+      "name": "Czech NBL",
+      "sportId": 1,
+      "tagId": 1649,
+      "ordering": "home",
+      "activeSeriesId": 556,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-10-05T16:05:18Z",
+      "slug": "cznbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1650",
+     "label": "Korisliiga",
+     "slug": "koris",
+     "updatedAt": "2026-11-06T18:33:23Z",
+     "league": {
+      "id": 376,
+      "name": "Korisliiga",
+      "sportId": 1,
+      "tagId": 1650,
+      "ordering": "home",
+      "activeSeriesId": 557,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-10-05T18:50:59Z",
+      "slug": "koris"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1500",
+     "label": "Italian Serie A2",
+     "slug": "ita2",
+     "updatedAt": "2026-10-31T22:02:55Z",
+     "league": {
+      "id": 317,
+      "name": "Italian Serie A2",
+      "sportId": 1,
+      "tagId": 1500,
+      "ordering": "home",
+      "activeSeriesId": 419,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-24T13:43:24Z",
+      "slug": "ita2"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1501",
+     "label": "Austrian Superliga",
+     "slug": "autbl",
+     "updatedAt": "2026-11-06T22:44:31Z",
+     "image": "https://static.polymarket.us/images/league-logos/autbl-2138daa1062c.png",
+     "league": {
+      "id": 318,
+      "name": "Austrian Superliga",
+      "sportId": 1,
+      "tagId": 1501,
+      "ordering": "home",
+      "activeSeriesId": 420,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-24T13:45:27Z",
+      "slug": "autbl"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1418",
+     "label": "Elite 2",
+     "slug": "fra2",
+     "updatedAt": "2026-11-06T22:15:21Z",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/fra.png",
+     "tradable": false,
+     "league": {
+      "id": 278,
+      "name": "France Elite 2",
+      "sportId": 1,
+      "tagId": 1418,
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-images/fra.png",
+      "ordering": "home",
+      "activeSeriesId": 366,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-21T17:58:04Z",
+      "slug": "fra2"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    },
+    {
+     "id": "1294",
+     "label": "FIBA Women's World Cup",
+     "slug": "fibawwc",
+     "updatedAt": "2026-09-13T21:04:36Z",
+     "league": {
+      "id": 233,
+      "name": "FIBA Women's World Cup",
+      "sportId": 1,
+      "tagId": 1294,
+      "ordering": "home",
+      "activeSeriesId": 307,
+      "isOperational": true,
+      "automaticResolution": false,
+      "createdAt": "2026-09-11T22:28:26Z",
+      "slug": "fibawwc"
+     },
+     "parentId": 11,
+     "subtags": [],
+     "hub": null,
+     "featuredEventIds": []
+    }
+   ],
+   "hub": null,
+   "featuredEventIds": []
+  }
+ ],
+ "teams": [
+  {
+   "id": 40,
+   "name": "Denver Nuggets",
+   "abbreviation": "den",
+   "league": "nba",
+   "record": "4-3",
+   "logo": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+   "alias": "Denver Nuggets",
+   "safeName": "Nuggets",
+   "homeIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+   "awayIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+   "colorPrimary": "#255fb5",
+   "providerId": 20,
+   "longIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+   "shortIcon": "https://static.polymarket.us/images/teams/nba-den/DEN_light_inset6.png",
+   "displayAbbreviation": "DEN",
+   "providerIds": [
+    {
+     "provider": "PROVIDER_SPORTSDATAIO",
+     "providerId": "20"
+    },
+    {
+     "provider": "PROVIDER_SPORTRADAR",
+     "providerId": "583ed102-fb46-11e1-82cb-f4ce4684ea4c"
+    },
+    {
+     "provider": "PROVIDER_OPTICODDS",
+     "providerId": "C0312DE08463"
+    }
+   ],
+   "longIconDark": "https://static.polymarket.us/images/teams/nba-den/DEN_dark_inset6.png",
+   "shortIconDark": "https://static.polymarket.us/images/teams/nba-den/DEN_dark_inset6.png",
+   "color": {
+    "light": "#255FB5",
+    "dark": "#255FB5"
+   },
+   "imageDisplayType": "IMAGE_DISPLAY_TYPE_LOGO"
+  },
+  {
+   "id": 19,
+   "name": "Indiana Pacers",
+   "abbreviation": "ind",
+   "league": "nba",
+   "record": "3-6",
+   "logo": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+   "alias": "Indiana Pacers",
+   "safeName": "Pacers",
+   "homeIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+   "awayIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+   "colorPrimary": "#e4a00c",
+   "providerId": 13,
+   "longIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+   "shortIcon": "https://static.polymarket.us/images/teams/nba-ind/IND_light_inset6.png",
+   "displayAbbreviation": "IND",
+   "providerIds": [
+    {
+     "provider": "PROVIDER_SPORTSDATAIO",
+     "providerId": "13"
+    },
+    {
+     "provider": "PROVIDER_SPORTRADAR",
+     "providerId": "583ec7cd-fb46-11e1-82cb-f4ce4684ea4c"
+    },
+    {
+     "provider": "PROVIDER_OPTICODDS",
+     "providerId": "F342C875E571"
+    }
+   ],
+   "longIconDark": "https://static.polymarket.us/images/teams/nba-ind/IND_dark_inset6.png",
+   "shortIconDark": "https://static.polymarket.us/images/teams/nba-ind/IND_dark_inset6.png",
+   "color": {
+    "light": "#E4A00C",
+    "dark": "#FDBB30"
+   },
+   "imageDisplayType": "IMAGE_DISPLAY_TYPE_LOGO"
+  }
+ ],
+ "metadata": {
+  "politics": null,
+  "gameState": {
+   "id": 142096270,
+   "gameId": 20024066,
+   "sportradarGameId": "f72f7616-1d4c-470b-b17e-08645e612a6b",
+   "type": "basketball",
+   "createdAt": "2026-11-07T01:02:40.656517Z",
+   "updatedAt": "2026-11-07T04:56:10.543157Z",
+   "mainSpreadLine": -6.5,
+   "mainTotalLine": 228.5,
+   "marketGroupStats": [
+    {
+     "marketGroupId": "game-lines/spread/full-game",
+     "line": -6.5
+    },
+    {
+     "marketGroupId": "game-lines/totals/full-game",
+     "line": 228.5
+    },
+    {
+     "marketGroupId": "game-lines/spread/1st-half",
+     "line": -3.5
+    },
+    {
+     "marketGroupId": "game-lines/totals/1st-half",
+     "line": 111.5
+    },
+    {
+     "marketGroupId": "game-lines/spread/1st-quarter",
+     "line": -2.5
+    },
+    {
+     "marketGroupId": "game-lines/totals/1st-quarter",
+     "line": 56.5
+    },
+    {
+     "marketGroupId": "game-lines/spread/2nd-quarter",
+     "line": -1.5
+    },
+    {
+     "marketGroupId": "game-lines/totals/2nd-quarter",
+     "line": 55.5
+    },
+    {
+     "marketGroupId": "game-lines/spread/3rd-quarter",
+     "line": -1.5
+    },
+    {
+     "marketGroupId": "game-lines/totals/3rd-quarter",
+     "line": 59.5
+    },
+    {
+     "marketGroupId": "game-lines/spread/4th-quarter",
+     "line": -1.5
+    },
+    {
+     "marketGroupId": "game-lines/totals/4th-quarter",
+     "line": 56.5
+    }
+   ],
+   "periodScores": [],
+   "eventId": 0
+  }
+ },
+ "sortType": "price",
+ "marketGroups": [
+  {
+   "id": "PRIMARY",
+   "title": "Primary",
+   "order": 0,
+   "marketIds": [
+    "1740842"
+   ],
+   "initialCollapsed": false,
+   "live": false
+  }
+ ],
+ "primaryTag": {
+  "id": "5",
+  "label": "NBA",
+  "slug": "nba",
+  "createdAt": "2025-10-21T18:23:05Z",
+  "updatedAt": "2026-11-07T04:57:32Z",
+  "image": "https://static-preprod.polymarket.us/images/leagues/nba/NBA_dark.png",
+  "tradable": false,
+  "league": {
+   "id": 2,
+   "name": "NBA",
+   "sportId": 1,
+   "tagId": 5,
+   "image": "https://static-preprod.polymarket.us/images/leagues/nba/NBA_dark.png",
+   "resolution": "https://www.nba.com/",
+   "ordering": "away",
+   "activeSeriesId": 4,
+   "isOperational": true,
+   "automaticResolution": false,
+   "createdAt": "2026-03-05T18:30:42Z",
+   "slug": "nba",
+   "abbreviation": "NBA"
+  },
+  "parentId": 11,
+  "subtags": [],
+  "hub": null,
+  "featuredEventIds": []
+ },
+ "streamProvider": "",
+ "streamRequiresAuth": false,
+ "combos": {
+  "enabled": true,
+  "numMarkets": 242,
+  "numSpreadsAndTotalsMarkets": 63
+ },
+ "marketCounts": {
+  "numMarkets": 243,
+  "numSpreadsAndTotalsMarkets": 63
+ },
+ "fixtureId": "8QGLAhQRJxTIlDgrBJ6E",
+ "insiderTradingRules": null,
+ "payoutEstimateMessage": "",
+ "payoutEstimateTime": ""
+}

@@ -3727,3 +3727,33 @@ seen_at_et,game_id,date,market,athlete_id,player,team_ref,line,odds,open_line,op
 2026-11-07 07:00,22600194,2026-11-07,"Total Points, Rebounds, and Assists",4066383,Miles Bridges,,25.5,-119.0,25.5,-115.0,2026-11-07T12:07Z,under
 2026-11-07 07:00,22600194,2026-11-07,"Total Points, Rebounds, and Assists",4601023,Oso Ighodaro,,16.5,-102.0,15.5,-119.0,2026-11-07T12:56Z,over
 2026-11-07 07:00,22600194,2026-11-07,"Total Points, Rebounds, and Assists",4601023,Oso Ighodaro,,16.5,-129.0,15.5,-111.0,2026-11-07T12:56Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points,3112335,Nikola Jokic,,26.5,-108.0,23.5,-108.0,2026-11-07T13:56Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points,3112335,Nikola Jokic,,26.5,-118.0,23.5,-118.0,2026-11-07T13:56Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points,3149673,Pascal Siakam,,20.5,-125.0,20.5,-123.0,2026-11-07T14:51Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points,3149673,Pascal Siakam,,20.5,-102.0,20.5,-103.0,2026-11-07T14:51Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points,3936299,Jamal Murray,,22.5,-121.0,22.5,-105.0,2026-11-07T14:51Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points,3936299,Jamal Murray,,22.5,-105.0,22.5,-121.0,2026-11-07T14:51Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Rebounds,3112335,Nikola Jokic,,11.5,-122.0,11.5,-110.0,2026-11-07T08:31Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Rebounds,3112335,Nikola Jokic,,11.5,-108.0,11.5,-120.0,2026-11-07T08:31Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Assists,3112335,Nikola Jokic,,36.5,-110.0,36.5,-110.0,2026-11-07T14:51Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Assists,3112335,Nikola Jokic,,36.5,-120.0,36.5,-120.0,2026-11-07T14:51Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3064290,Aaron Gordon,,18.5,-115.0,18.5,-121.0,2026-11-07T08:55Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3064290,Aaron Gordon,,18.5,-114.0,18.5,-109.0,2026-11-07T08:55Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3112335,Nikola Jokic,,38.5,-110.0,38.5,-111.0,2026-11-07T14:51Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3112335,Nikola Jokic,,38.5,-119.0,38.5,-119.0,2026-11-07T14:51Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3138196,Cameron Johnson,,15.5,-107.0,15.5,-111.0,2026-11-07T08:55Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3138196,Cameron Johnson,,15.5,-123.0,15.5,-119.0,2026-11-07T08:55Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3936299,Jamal Murray,,27.5,-113.0,26.5,-120.0,2026-11-07T11:49Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Points and Rebounds,3936299,Jamal Murray,,27.5,-116.0,26.5,-109.0,2026-11-07T11:49Z,under
+2026-11-07 07:05,22600189,2026-11-07,Total Assists and Rebounds,3112335,Nikola Jokic,,21.5,-114.0,21.5,-107.0,2026-11-07T08:55Z,over
+2026-11-07 07:05,22600189,2026-11-07,Total Assists and Rebounds,3112335,Nikola Jokic,,21.5,-116.0,21.5,-122.0,2026-11-07T08:55Z,under
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3978,DeMar DeRozan,,16.5,-129.0,17.5,-114.0,2026-11-07T14:51Z,over
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3978,DeMar DeRozan,,16.5,-102.0,17.5,-115.0,2026-11-07T14:51Z,under
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3064290,Aaron Gordon,,21.5,-105.0,21.5,-109.0,2026-11-07T08:55Z,over
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3064290,Aaron Gordon,,21.5,-125.0,21.5,-120.0,2026-11-07T08:55Z,under
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3112335,Nikola Jokic,,48.5,-111.0,48.5,-109.0,2026-11-07T14:51Z,over
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3112335,Nikola Jokic,,48.5,-119.0,48.5,-120.0,2026-11-07T14:51Z,under
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3936299,Jamal Murray,,34.5,-105.0,32.5,-118.0,2026-11-07T14:45Z,over
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",3936299,Jamal Murray,,34.5,-125.0,32.5,-111.0,2026-11-07T14:45Z,under
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",4431767,Christian Braun,,19.5,-127.0,20.5,-102.0,2026-11-07T14:51Z,over
+2026-11-07 07:05,22600189,2026-11-07,"Total Points, Rebounds, and Assists",4431767,Christian Braun,,19.5,-104.0,20.5,-128.0,2026-11-07T14:51Z,under

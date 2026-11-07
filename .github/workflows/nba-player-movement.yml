@@ -1,0 +1,36 @@
+name: NBA player movement (trades, signings) from NBA.com
+# Nov 7, 2026 (RULE 13 collector): saves NBA.com's player-movement JSON to data/external/nba_player_movement/ (tools/fetch_player_movement.py).
+# Used for the "recent arrival" checks and roster changes. Runs daily; also on a change to the script, and by hand.
+on:
+  schedule:
+    - cron: "41 15 * * *"      # 10:41 AM EST / 11:41 AM EDT
+  push:
+    branches: [main]
+    paths: [tools/fetch_player_movement.py, .github/workflows/nba-player-movement.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: nba-player-movement
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch
+        run: python tools/fetch_player_movement.py . || echo "FETCH_FAILED=1" >> "$GITHUB_ENV"
+      - name: Commit
+        run: |
+          git config user.name "nba-tracker-bot"; git config user.email "actions@users.noreply.github.com"
+          git add data/external/nba_player_movement
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -q -m "NBA player movement $(TZ=America/New_York date '+%F')"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && break; sleep 10; done
+      - name: Fail if no source answered
+        if: env.FETCH_FAILED == '1'
+        run: exit 1

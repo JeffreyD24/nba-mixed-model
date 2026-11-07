@@ -901,3 +901,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 23:05:56,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetRivers,event,moneyline,away,0.0,-215,normal
 2026-11-06 23:05:56,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetRivers,event,spread,away,-3.5,-141,normal
 2026-11-06 23:05:56,295392,2026-11-07,2026-11-07 20:00,ny,cle,BetRivers,event,spread,home,3.5,114,normal
+2026-11-06 23:07:14,295392,2026-11-07,2026-11-07 20:00,ny,cle,bet365,event,moneyline,home,0.0,152,normal
+2026-11-06 23:07:14,295392,2026-11-07,2026-11-07 20:00,ny,cle,bet365,event,moneyline,away,0.0,-180,normal
+2026-11-06 23:07:14,295392,2026-11-07,2026-11-07 20:00,ny,cle,Fanatics,event,moneyline,away,0.0,-175,normal
+2026-11-06 23:07:14,295392,2026-11-07,2026-11-07 20:00,ny,cle,Fanatics,event,moneyline,home,0.0,145,normal
+2026-11-06 23:07:14,295392,2026-11-07,2026-11-07 20:00,ny,cle,Fanatics,event,spread,home,4.5,-115,normal
+2026-11-06 23:07:14,295392,2026-11-07,2026-11-07 20:00,ny,cle,Fanatics,event,spread,away,-4.5,-105,normal
+2026-11-06 23:10:56,295392,2026-11-07,2026-11-07 20:00,ny,cle,DraftKings,event,moneyline,home,0.0,155,normal
+2026-11-06 23:10:56,295392,2026-11-07,2026-11-07 20:00,ny,cle,DraftKings,event,moneyline,away,0.0,-185,normal
+2026-11-06 23:10:56,295392,2026-11-07,2026-11-07 20:00,ny,cle,DraftKings,event,spread,away,-4.5,-114,normal
+2026-11-06 23:10:56,295392,2026-11-07,2026-11-07 20:00,ny,cle,DraftKings,event,spread,home,4.5,-106,normal

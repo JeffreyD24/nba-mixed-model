@@ -2202,3 +2202,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 00:30:52,295395,2026-11-07,2026-11-07 21:00,hou,phx,BetRivers,event,total,over,222.5,-107,normal
 2026-11-07 00:30:52,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,moneyline,home,0.0,240,normal
 2026-11-07 00:30:52,295395,2026-11-07,2026-11-07 21:00,hou,phx,Caesars,event,moneyline,away,0.0,-305,normal
+2026-11-07 00:32:11,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,total,over,229.0,-110,normal
+2026-11-07 00:32:11,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,team_total,away_under,104.5,-118,normal
+2026-11-07 00:32:11,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,team_total,away_over,104.5,-110,normal
+2026-11-07 00:32:11,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,team_total,home_under,116.5,-110,normal
+2026-11-07 00:32:11,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,event,team_total,home_over,116.5,-115,normal
+2026-11-07 00:34:41,295395,2026-11-07,2026-11-07 21:00,hou,phx,BetRivers,event,moneyline,away,0.0,-250,normal
+2026-11-07 00:34:41,295395,2026-11-07,2026-11-07 21:00,hou,phx,BetRivers,event,moneyline,home,0.0,195,normal
+2026-11-07 00:34:41,295395,2026-11-07,2026-11-07 21:00,hou,phx,BetRivers,event,spread,away,-6.5,-115,normal
+2026-11-07 00:34:41,295395,2026-11-07,2026-11-07 21:00,hou,phx,BetRivers,event,spread,home,6.5,-107,normal
+2026-11-07 00:34:41,295395,2026-11-07,2026-11-07 21:00,hou,phx,BetRivers,event,total,over,222.5,-108,normal

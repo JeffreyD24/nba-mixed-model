@@ -95,3 +95,4 @@ game_id,market,detected_at_et,date,away,home,from_line,to_line,move,steady_since
 22600195,total,2026-11-07 02:10,2026-11-07,sa,por,228.5,226.5,-2.0,2026-11-06 22:12,2026-11-07 01:50,2026-11-07 02:10,20.0,19.8,227.3,away from model,,0.0,False,,,
 22600194,total,2026-11-07 08:20,2026-11-07,hou,phx,221.5,223.5,2.0,2026-11-07 01:55,2026-11-07 08:20,2026-11-07 08:20,0.0,12.7,228.7,toward model,,0.0,False,,,
 22600192,total,2026-11-07 08:22,2026-11-07,wsh,okc,219.5,221.5,2.0,2026-11-07 06:55,2026-11-07 07:55,2026-11-07 08:22,27.0,11.6,220.6,away from model,,0.0,False,,,
+22600191,total,2026-11-07 11:30,2026-11-07,ny,cle,224.5,222.5,-2.0,2026-11-07 08:20,2026-11-07 11:30,2026-11-07 11:30,0.0,8.5,226.1,away from model,"CLE 10:08 AM: Merrill (elbow) won't return to Friday's game against the 76ers, Dave McMenamin of ESPN.com reports. | CLE 10:07 AM: Allen (knee) is out for Friday's game against the 76ers.",2.0,False,,,

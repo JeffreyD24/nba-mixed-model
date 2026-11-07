@@ -2068,3 +2068,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 07:28,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Aaron Gordon,aaron gordon,2.5,-114.0,-114.0,DEN,709.196220682,12730307,12730306
 2026-11-07 07:28,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Nikola Jokic,nikola jokic,9.5,100.0,-132.0,DEN,709.196217261,12257278,12257279
 2026-11-07 07:28,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,102.0,-136.0,DEN,709.196217703,16127791,16127792
+2026-11-07 07:30,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Scoot Henderson,scoot henderson,2.5,-112.0,-118.0,POR,709.196238661,62064858,62064857
+2026-11-07 07:30,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Toumani Camara,toumani camara,1.5,-106.0,-122.0,POR,709.196238650,43450264,43450266
+2026-11-07 07:30,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Donovan Clingan,donovan clingan,1.5,-136.0,102.0,POR,709.196238655,50752175,50752173
+2026-11-07 07:30,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Scoot Henderson,scoot henderson,3.5,138.0,-186.0,POR,709.196238664,62064858,62064857
+2026-11-07 07:30,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Jrue Holiday,jrue holiday,4.5,100.0,-132.0,POR,709.196239142,12260620,12260621
+2026-11-07 07:30,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,110.0,-146.0,POR,709.196238656,12260575,12260576

@@ -1763,10 +1763,10 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 05:29,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Kevin Durant,kevin durant,3.5,130.0,-174.0,HOU,709.196231971,12260605,12260606
 2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Karl-Anthony Towns,karl anthony towns,20.5,-118.0,-112.0,NYK,709.196234001,41408270,41408268
 2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,17.5,102.0,-136.0,NYK,709.196233906,16220637,16220638
-2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-104.0,-128.0,NYK,709.196233910,17926928,17926927
+2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-104.0,-128.0,NYK,709.19623391,17926928,17926927
 2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Landry Shamet,landry shamet,2.5,118.0,-158.0,NYK,709.196233994,22599731,22599732
 2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,OG Anunoby,og anunoby,5.5,-130.0,-102.0,NYK,709.196233932,16220637,16220638
-2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,James Harden,james harden,6.5,100.0,-132.0,CLE,709.196263550,12260579,12260580
+2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,James Harden,james harden,6.5,100.0,-132.0,CLE,709.19626355,12260579,12260580
 2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Donovan Mitchell,donovan mitchell,5.5,108.0,-144.0,CLE,709.196263457,15907303,15907304
 2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Peyton Watson,peyton watson,2.5,140.0,-186.0,CLE,709.196263774,54472264,54472265
 2026-11-07 05:31,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Evan Mobley,evan mobley,3.5,128.0,-172.0,CLE,709.196263466,41407628,41407629

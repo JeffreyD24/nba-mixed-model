@@ -3416,3 +3416,34 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 10:20,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Fred VanVleet,fred vanvleet,5.5,114.0,-152.0,HOU,709.196234511,21175485,21175486
 2026-11-07 10:20,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Reed Sheppard,reed sheppard,2.5,134.0,-180.0,HOU,709.196235489,63497028,63497029
 2026-11-07 10:20,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,ast,Amen Thompson,amen thompson,3.5,-130.0,-102.0,HOU,709.196232701,62134320,62134329
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Desmond Bane,desmond bane,19.5,-110.0,-120.0,ORL,709.196236361,38187360,38187370
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Franz Wagner,franz wagner,21.5,-130.0,-102.0,ORL,709.196236458,40196992,40196991
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Jase Richardson,jase richardson,7.5,-128.0,-104.0,ORL,709.196236395,76284095,76284094
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Anthony Black,anthony black,14.5,-120.0,-110.0,ORL,709.196236355,50378078,50378080
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Tristan da Silva,tristan da silva,12.5,-104.0,-125.0,ORL,709.196236409,43072432,43072430
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Wendell Carter Jr.,wendell carter,12.5,-125.0,-106.0,ORL,709.196236347,41408443,41408444
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Jase Richardson,jase richardson,2.5,-118.0,-112.0,ORL,709.196236360,76284095,76284094
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Franz Wagner,franz wagner,7.5,116.0,-154.0,ORL,709.196236433,40196992,40196991
+2026-11-07 10:22,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-138.0,104.0,ORL,709.196236448,43072432,43072430
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Ajay Mitchell,ajay mitchell,19.5,-110.0,-120.0,OKC,709.196253285,53679067,53679062
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Kyshawn George,kyshawn george,15.5,-112.0,-118.0,WAS,709.196254077,74706441,74706439
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Kenrich Williams,kenrich williams,7.5,-132.0,100.0,OKC,709.196253832,26962656,26962657
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Shai Gilgeous-Alexander,shai gilgeous alexander,31.5,-104.0,-128.0,OKC,709.196253113,21662973,21662974
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Trae Young,trae young,19.5,-102.0,-130.0,WAS,709.196253530,21175415,21175416
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Alex Caruso,alex caruso,7.5,-120.0,-110.0,OKC,709.196254948,23677919,23677920
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Aday Mara,aday mara,7.5,-130.0,-102.0,OKC,709.196255010,91219507,91219508
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Bilal Coulibaly,bilal coulibaly,7.5,-128.0,-104.0,WAS,709.196254256,62134999,62135001
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,pts,Jared McCain,jared mccain,13.5,-108.0,-122.0,OKC,709.196253747,63496225,63496226
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Aday Mara,aday mara,6.5,-114.0,-118.0,OKC,709.196255012,91219507,91219508
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Alex Caruso,alex caruso,3.5,-102.0,-130.0,OKC,709.196254943,23677919,23677920
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Jared McCain,jared mccain,3.5,114.0,-152.0,OKC,709.196253744,63496225,63496226
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,AJ Dybantsa,aj dybantsa,5.5,118.0,-158.0,WAS,709.196253644,90729348,90729347
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Alex Sarr,alex sarr,6.5,-130.0,-102.0,WAS,709.196253980,92784087,92784086
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Bilal Coulibaly,bilal coulibaly,3.5,138.0,-186.0,WAS,709.196254257,62134999,62135001
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,reb,Trae Young,trae young,2.5,-168.0,126.0,WAS,709.196253525,21175415,21175416
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Kyshawn George,kyshawn george,4.5,110.0,-146.0,WAS,709.196254082,74706441,74706439
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Isaiah Hartenstein,isaiah hartenstein,3.5,134.0,-180.0,OKC,709.196253942,41500697,41500698
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Jared McCain,jared mccain,1.5,-148.0,112.0,OKC,709.196253743,63496225,63496226
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Shai Gilgeous-Alexander,shai gilgeous alexander,5.5,-132.0,100.0,OKC,709.196253119,21662973,21662974
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Anthony Davis,anthony davis,2.5,152.0,-205.0,WAS,709.196253328,12260628,12260629
+2026-11-07 10:22,2026-11-07,36282777,2026-11-07 20:10,Washington Wizards @ Oklahoma City Thunder,okc,wsh,ast,Alex Sarr,alex sarr,1.5,-192.0,142.0,WAS,709.196253976,92784087,92784086

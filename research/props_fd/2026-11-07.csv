@@ -8,3 +8,9 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 20:06,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,-112,-118,DEN,709.196217273,12257278,12257279
 2026-11-06 20:06,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Jamal Murray,jamal murray,4.5,-114,-114,DEN,709.196217705,16127791,16127792
 2026-11-06 20:06,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Jamal Murray,jamal murray,6.5,-102,-130,DEN,709.196217703,16127791,16127792
+2026-11-06 20:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Christian Braun,christian braun,12.5,-114,-114,DEN,709.196220602,43026473,43026472
+2026-11-06 20:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Nikola Jokic,nikola jokic,26.5,-114,-114,DEN,709.196217273,12257278,12257279
+2026-11-06 20:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Jamal Murray,jamal murray,23.5,-102,-130,DEN,709.196217709,16127791,16127792
+2026-11-06 20:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Christian Braun,christian braun,4.5,-114,-114,DEN,709.196220605,43026473,43026472
+2026-11-06 20:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,reb,Nikola Jokic,nikola jokic,11.5,-138,104,DEN,709.196217284,12257278,12257279
+2026-11-06 20:10,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Christian Braun,christian braun,2.5,142,-192,DEN,709.196220607,43026473,43026472

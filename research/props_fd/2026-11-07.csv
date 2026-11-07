@@ -3615,3 +3615,13 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 10:46,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Desmond Bane,desmond bane,2.5,-174.0,130.0,ORL,709.196236416,38187360,38187370
 2026-11-07 10:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,James Harden,james harden,6.5,-104.0,-128.0,CLE,709.196263550,12260579,12260580
 2026-11-07 10:46,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Peyton Watson,peyton watson,2.5,140.0,-188.0,CLE,709.196263774,54472264,54472265
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Stephen Curry,stephen curry,26.5,-110.0,-120.0,GSW,709.196238217,12260597,12260598
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Brandin Podziemski,brandin podziemski,15.5,100.0,-132.0,GSW,709.196238213,52263972,52263968
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Yaxel Lendeborg,yaxel lendeborg,17.5,-128.0,-102.0,GSW,709.196238234,64937530,64937543
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Will Richard,will richard,5.5,100.0,-132.0,GSW,709.196306471,43059450,43059451
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Brandin Podziemski,brandin podziemski,5.5,-118.0,-112.0,GSW,709.196238216,52263972,52263968
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Stephen Curry,stephen curry,3.5,-158.0,118.0,GSW,709.196238205,12260597,12260598
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Stephen Curry,stephen curry,4.5,-130.0,-102.0,GSW,709.196238220,12260597,12260598
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Brandin Podziemski,brandin podziemski,3.5,-168.0,126.0,GSW,709.196238204,52263972,52263968
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Yaxel Lendeborg,yaxel lendeborg,4.5,-108.0,-122.0,GSW,709.196238212,64937530,64937543
+2026-11-07 10:48,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Tristan da Silva,tristan da silva,1.5,-136.0,102.0,ORL,709.196236448,43072432,43072430

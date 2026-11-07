@@ -207,3 +207,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-07 06:32:00,295396,2026-11-08T03:00:00.000Z,Portland Trail Blazers,San Antonio Spurs,848,dk,5.5,-104.0,226.5,-115.0,180.0,-216.0,,,,,,
 2026-11-07 06:32:00,295396,2026-11-08T03:00:00.000Z,Portland Trail Blazers,San Antonio Spurs,848,fd,5.5,-115.0,226.5,-115.0,162.0,-194.0,,,,,,
 2026-11-07 06:34:00,295393,2026-11-08T01:00:00.000Z,Oklahoma City Thunder,Washington Wizards,782,dk,-11.5,-110.0,220.5,-107.0,-477.0,367.0,,,,,,
+2026-11-07 06:43:00,295390,2026-11-07T22:00:00.000Z,Indiana Pacers,Denver Nuggets,1272,cons,7.5,-111.0,229.0,-110.0,230.0,-280.0,24.0,19.0,75.0,72.0,8.0,6.0
+2026-11-07 06:43:00,295393,2026-11-08T01:00:00.000Z,Oklahoma City Thunder,Washington Wizards,782,cons,-11.5,-110.0,220.0,-111.0,-500.0,375.0,79.0,82.0,80.0,61.0,95.0,94.0

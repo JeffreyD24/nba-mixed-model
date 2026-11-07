@@ -83,3 +83,6 @@ at_et,an_id,home,away,dk_home_spread,M2,M8,MKTL,pred_close_margin,edge,verdict,r
 2026-11-06 20:25,297625,Seattle Redhawks,Portland State Vikings,-10.5,12.17,12.27,13.26,10.9,0.4,PASS,edge 0.40 < 0.5,10.98,0.48,PASS,edge 0.48 < 0.62,2026-11-06 19:01
 2026-11-06 20:25,297644,Santa Clara Broncos,Sacramento State Hornets,-18.5,29.67,32.7,21.68,19.47,0.97,PASS,a team has under 3 games,19.18,0.68,PASS,a team has under 3 games,2026-11-06 19:01
 2026-11-06 20:30,302315,Davidson Wildcats,Mercer Bears,-10.5,15.59,13.58,11.31,10.76,0.26,PASS,edge 0.26 < 0.5,10.77,0.27,PASS,edge 0.27 < 0.62,2026-11-06 19:01
+2026-11-06 20:40,297422,UC Santa Barbara Gauchos,Oakland Golden Grizzlies,-11.5,4.06,-0.5,-11.05,8.79,-2.71,PASS,a team has under 3 games,10.05,-1.45,PASS,a team has under 3 games,2026-11-06 19:01
+2026-11-06 20:40,297423,Saint Joseph's (PA) Hawks,Lafayette Leopards,-17.5,20.28,23.87,13.73,17.44,-0.06,PASS,edge 0.06 < 0.5,17.63,0.13,PASS,edge 0.13 < 0.62,2026-11-06 19:01
+2026-11-06 20:40,297645,Utah State Aggies,Omaha Mavericks,-26.5,33.49,30.67,25.72,26.83,0.33,PASS,edge 0.33 < 0.5,28.19,1.69,PASS,a team has under 3 games,2026-11-06 19:01

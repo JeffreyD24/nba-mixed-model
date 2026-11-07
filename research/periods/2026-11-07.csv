@@ -1,3 +1,8 @@
 seen_at_et,game_id,date,away,home,status,period,book,home_spread,home_spread_odds,away_spread_odds,total,over_odds,under_odds,home_ml,away_ml,away_team_total,away_tt_over_odds,away_tt_under_odds,home_team_total,home_tt_over_odds,home_tt_under_odds
 2026-11-06 20:05,22600189,2026-11-07,den,ind,scheduled,game,Consensus,6.5,-111.0,-111.0,229.5,-111.0,-116.0,,,,,,,,
 2026-11-06 20:05,22600189,2026-11-07,den,ind,scheduled,game,Open,6.5,-111.0,-111.0,229.5,-111.0,-116.0,,,,,,,,
+2026-11-06 20:15,22600189,2026-11-07,den,ind,scheduled,game,Consensus,6.5,-111.0,-111.0,228.5,-116.0,-111.0,,,,,,,,
+2026-11-06 20:15,22600193,2026-11-07,orl,gs,scheduled,game,Consensus,-6.5,-105.0,-116.0,219.5,-116.0,-111.0,,,,,,,,
+2026-11-06 20:15,22600193,2026-11-07,orl,gs,scheduled,game,Open,-6.5,-105.0,-116.0,219.5,-116.0,-111.0,,,,,,,,
+2026-11-06 20:15,22600194,2026-11-07,hou,phx,scheduled,game,Consensus,6.5,-111.0,-111.0,220.5,-111.0,-116.0,,,,,,,,
+2026-11-06 20:15,22600194,2026-11-07,hou,phx,scheduled,game,Open,6.5,-111.0,-111.0,220.5,-111.0,-116.0,,,,,,,,

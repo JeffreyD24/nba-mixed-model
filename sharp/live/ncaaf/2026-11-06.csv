@@ -1510,3 +1510,5 @@ seen_at,an_id,start,home,away,num_bets,book,spread,spread_px,total,over_px,ml_ho
 2026-11-06 19:15:00,289909,2026-11-07T18:00:00.000Z,Kansas State Wildcats,Oklahoma State Cowboys,6134,cons,6.5,-108.0,62.5,-105.0,195.0,-235.0,59.0,44.0,10.0,18.0,6.0,7.0
 2026-11-06 19:15:00,289901,2026-11-08T00:30:00.000Z,Michigan Wolverines,Michigan State Spartans,4942,cons,-14.5,-107.0,39.5,-112.0,-637.0,462.0,72.0,97.0,86.0,89.0,98.0,77.0
 2026-11-06 19:16:00,289901,2026-11-08T00:30:00.000Z,Michigan Wolverines,Michigan State Spartans,4942,dk,,,40.5,-105.0,,,,,,,,
+2026-11-06 19:21:00,289841,2026-11-07T01:00:00.000Z,Illinois Fighting Illini,Nebraska Cornhuskers,26424,cons,4.0,-110.0,52.5,-105.0,157.0,-190.0,56.0,69.0,18.0,61.0,17.0,57.0
+2026-11-06 19:23:00,289841,2026-11-07T01:00:00.000Z,Illinois Fighting Illini,Nebraska Cornhuskers,27611,fd,4.5,-114.0,52.5,-105.0,152.0,-182.0,,,,,,

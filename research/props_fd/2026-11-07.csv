@@ -765,3 +765,8 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 00:33,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Damian Lillard,damian lillard,3.5,-132.0,100.0,POR,709.196238675,12260575,12260576
 2026-11-07 00:33,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,reb,Toumani Camara,toumani camara,3.5,-158.0,118.0,POR,709.196238645,43450264,43450266
 2026-11-07 00:33,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Deni Avdija,deni avdija,6.5,-102.0,-130.0,POR,709.196238601,37901072,37901070
+2026-11-07 00:35,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Nesmith,aaron nesmith,12.5,-104.0,-128.0,IND,709.196223604,39494853,39494854
+2026-11-07 00:35,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Ivica Zubac,ivica zubac,10.5,100.0,-132.0,IND,709.196223351,13527611,22190771
+2026-11-07 00:35,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Pascal Siakam,pascal siakam,20.5,-120.0,-110.0,IND,709.196222707,21558499,21558500
+2026-11-07 00:35,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,pts,Aaron Gordon,aaron gordon,13.5,102.0,-136.0,DEN,709.196220683,12730307,12730306
+2026-11-07 00:35,2026-11-07,36282776,2026-11-07 17:10,Denver Nuggets @ Indiana Pacers,ind,den,ast,Andrew Nembhard,andrew nembhard,7.5,102.0,-136.0,IND,709.196222869,43058624,43058625

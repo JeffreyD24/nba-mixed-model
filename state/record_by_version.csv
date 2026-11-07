@@ -3,9 +3,11 @@ NBA spreads v1,spread,5,5,2,3,0,0,-1.18,-0.236,Model 1; bet when the opener is 3
 NBA totals v1,total,6,6,3,3,0,0,-0.31,-0.0517,Model 1 (mixed model + injury reports); bet when the opener is 3+ pts off
 NBA totals v2,total,3,3,2,1,0,0,0.82,0.2733,+ shooting-luck correction (league-relative 0.5); price cap -120; alerts only for bets
 NBA totals v4,total,3,3,3,0,0,0,2.75,0.9167,+ early-season shrink of the shooting-luck correction: x games/(games+15)
-NBA totals v6,total,3,0,0,0,0,3,0.0,,"v5 + totals from 2.5 pts of edge (2.5-3 band PROVISIONAL, own record: tier provisional_totals; 2023-26 band 309 bets +17.5u CLV +1.10); FanDuel CT line in every alert, better book marked; a bet over DraftKings' -120 cap is still a BET at FanDuel if FanDuel has the same or better line at -120 or better; Log button removed"
-PROVISIONAL: NBA props at FanDuel openers (4h+ before tip),prop,2,0,0,0,0,2,0.0,,
+NBA totals v6,total,4,2,1,1,0,2,-0.09,-0.045,"v5 + totals from 2.5 pts of edge (2.5-3 band PROVISIONAL, own record: tier provisional_totals; 2023-26 band 309 bets +17.5u CLV +1.10); FanDuel CT line in every alert, better book marked; a bet over DraftKings' -120 cap is still a BET at FanDuel if FanDuel has the same or better line at -120 or better; Log button removed"
+PROVISIONAL: NBA props at FanDuel openers (4h+ before tip),prop,5,0,0,0,0,5,0.0,,
+"PROVISIONAL: NBA props at FanDuel openers (LATE, 1-4h)",prop,2,0,0,0,0,2,0.0,,
 PROVISIONAL: NBA props at FanDuel openers (STALE opener),prop,4,0,0,0,0,4,0.0,,
-PROVISIONAL: NBA totals 2.5-3 pt edges,total,1,0,0,0,0,1,0.0,,
-PROVISIONAL: NBA totals line-movement (market models v1-an),total,1,0,0,0,0,1,0.0,,
-OVERALL,all,28,17,10,7,0,11,2.08,0.1224,
+PROVISIONAL: NBA totals 2.5-3 pt edges,total,2,1,0,1,0,1,-1.0,-1.0,
+PROVISIONAL: NBA totals blend v4 + market (market models blend v1),total,1,0,0,0,0,1,0.0,,
+PROVISIONAL: NBA totals line-movement (market models v1-an),total,2,1,0,1,0,1,-1.0,-1.0,
+OVERALL,all,37,21,11,10,0,16,-0.01,-0.0005,

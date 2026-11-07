@@ -1,6 +1,13 @@
 {
  "today": [
   {
+   "home": "ind",
+   "away": "den",
+   "tip": "2026-11-07 17:00:00",
+   "pred_margin": -4.0,
+   "pred_total": 229.6
+  },
+  {
    "home": "atl",
    "away": "bkn",
    "tip": "2026-11-07 19:30:00",
@@ -15,25 +22,18 @@
    "pred_total": 227.4
   },
   {
-   "home": "gs",
-   "away": "orl",
-   "tip": "2026-11-07 20:30:00",
-   "pred_margin": 7.6,
-   "pred_total": 226.1
-  },
-  {
-   "home": "ind",
-   "away": "den",
-   "tip": "2026-11-07 17:00:00",
-   "pred_margin": -4.0,
-   "pred_total": 229.6
-  },
-  {
    "home": "okc",
    "away": "wsh",
    "tip": "2026-11-07 20:00:00",
    "pred_margin": 9.9,
    "pred_total": 220.6
+  },
+  {
+   "home": "gs",
+   "away": "orl",
+   "tip": "2026-11-07 20:30:00",
+   "pred_margin": 7.6,
+   "pred_total": 226.1
   },
   {
    "home": "phx",
@@ -51,20 +51,20 @@
   }
  ],
  "log": [
-  "NBA tracker run on 2026-11-06 (ET), predicting games on 2026-11-07.",
-  "Schedule: 1200 regular-season games; 123 finished, results through 2026-11-05.",
-  "Injury reports: 8 snapshots requested, 8 new, 137 on file.",
-  "Saved today's model for intraday checks (7 games, 643 players).",
-  "Locked 7 live picks for 2026-11-07 and 0 backfilled.",
-  "Lines: pulled DraftKings lines from ESPN for 9 games.",
-  "Model comparison: locked 14 live and 0 backfilled Model 2/3 predictions.",
+  "NBA tracker run on 2026-11-07 (ET), predicting games on 2026-11-07.",
+  "Schedule: 1200 regular-season games; 132 finished, results through 2026-11-06.",
+  "Injury reports: 0 snapshots requested, 0 new, 137 on file.",
+  "Saved today's model for intraday checks (7 games, 644 players).",
+  "Locked 0 live picks for 2026-11-07 and 0 backfilled.",
+  "Lines: pulled DraftKings lines from ESPN for 16 games.",
+  "Model comparison: locked 0 live and 0 backfilled Model 2/3 predictions.",
   "  Model 1 - team strength: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 2 - player-based: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
   "  Model 3 - pace x efficiency: 0 games graded; at the opening line, edge 3+: spreads 0-0, totals 0-0.",
-  "Alerts graded so far: 45-44 (50.6%), -3.1 units at -110.",
-  "Your logged bets: 10-7, +2.08u on 17 units staked.",
-  "Line jumps graded: 74; the final result matched the jump's direction 41 times.",
-  "Altitude watch: 9 Denver/Utah home games, +1.1 vs the opener (other games -4.5); difference +5.6 (+/-14.1). All-Star-break rule today: no change; season-end rule today: keep +3.8.",
-  "Bet timing: graded 52 games at up to 11 time points."
+  "Alerts graded so far: 52-57 (47.7%), -9.7 units at -110.",
+  "Your logged bets: 11-10, -0.01u on 21 units staked.",
+  "Line jumps graded: 88; the final result matched the jump's direction 45 times.",
+  "Altitude watch: 9 Denver/Utah home games, +1.1 vs the opener (other games -4.2); difference +5.3 (+/-14.0). All-Star-break rule today: no change; season-end rule today: keep +3.8.",
+  "Bet timing: graded 61 games at up to 11 time points."
  ]
 }

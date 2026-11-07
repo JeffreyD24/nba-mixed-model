@@ -1,2 +1,5 @@
 date,game_id,away,home,report,players,market,news,printed,first_seen,detect_lag_min,line_printed,line_seen,line_+5,line_+15,line_+30,line_close,result
-2026-11-06,22600030,tor,mil,2026-11-05_08_15PM,"Barnes, Scottie",spread,0.68,2026-11-05 20:15:00,2026-11-05 20:15:11,0.2,-8.5,-8.5,-8.5,-7.5,-7.5,-6.5,
+2026-11-06,22600027,phi,cle,2026-11-06_06_45PM,"Allen, Jarrett; Watson, Peyton",spread,-0.59,2026-11-06 18:45:00,2026-11-06 18:46:08,1.1,-2.5,-2.5,-2.5,-2.5,-2.5,-2.5,24.0
+2026-11-06,22600030,tor,mil,2026-11-05_08_15PM,"Barnes, Scottie",spread,0.68,2026-11-05 20:15:00,2026-11-05 20:15:11,0.2,-8.5,-8.5,-8.5,-7.5,-7.5,-3.5,-14.0
+2026-11-06,22600030,tor,mil,2026-11-06_06_45PM,"Quickley, Immanuel; Poeltl, Jakob; Barnes, Scottie; Anderson, Kyle",spread,1.11,2026-11-06 18:45:00,2026-11-06 18:46:08,1.1,-4.5,-4.5,-4.5,-3.5,-3.5,-3.5,-14.0
+2026-11-06,22600030,tor,mil,2026-11-06_06_45PM,"Quickley, Immanuel; Poeltl, Jakob; Barnes, Scottie; Anderson, Kyle",total,-0.52,2026-11-06 18:45:00,2026-11-06 18:46:08,1.1,228.5,228.5,228.5,227.5,228.5,228.5,228.0

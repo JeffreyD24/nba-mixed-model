@@ -299,8 +299,8 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,OG Anunoby,og anunoby,16.5,-128.0,-104.0,NYK,709.196233906,16220637,16220638
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Landry Shamet,landry shamet,10.5,102.0,-136.0,NYK,709.196233962,22599731,22599732
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Miles McBride,miles mcbride,7.5,100.0,-132.0,NYK,709.196233898,42109139,42109140
-2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-106.0,-125.0,NYK,709.196233910,17926928,17926927
-2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Karl-Anthony Towns,karl anthony towns,13.5,102.0,-136.0,NYK,709.196233980,41408270,41408268
+2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,pts,Jalen Brunson,jalen brunson,26.5,-106.0,-125.0,NYK,709.19623391,17926928,17926927
+2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Karl-Anthony Towns,karl anthony towns,13.5,102.0,-136.0,NYK,709.19623398,41408270,41408268
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Mikal Bridges,mikal bridges,3.5,132.0,-178.0,NYK,709.196233917,17926931,17926932
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Jalen Brunson,jalen brunson,3.5,128.0,-174.0,NYK,709.196233972,17926928,17926927
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,reb,Landry Shamet,landry shamet,2.5,118.0,-158.0,NYK,709.196233994,22599731,22599732
@@ -309,8 +309,8 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Mikal Bridges,mikal bridges,2.5,-174.0,130.0,NYK,709.196233961,17926931,17926932
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,OG Anunoby,og anunoby,2.5,138.0,-186.0,NYK,709.196233878,16220637,16220638
 2026-11-06 23:35,2026-11-07,36282780,2026-11-07 20:10,New York Knicks @ Cleveland Cavaliers,cle,ny,ast,Jalen Brunson,jalen brunson,6.5,-108.0,-122.0,NYK,709.196233944,17926928,17926927
-2026-11-06 23:35,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,-102.0,-130.0,HOU,709.196233870,43049093,43049094
-2026-11-06 23:35,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-106.0,-122.0,HOU,709.196232450,40296685,40296686
+2026-11-06 23:35,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Jabari Smith,jabari smith,14.5,-102.0,-130.0,HOU,709.19623387,43049093,43049094
+2026-11-06 23:35,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,pts,Alperen Sengun,alperen sengun,20.5,-106.0,-122.0,HOU,709.19623245,40296685,40296686
 2026-11-06 23:35,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Jabari Smith,jabari smith,6.5,124.0,-166.0,HOU,709.196233872,43049093,43049094
 2026-11-06 23:35,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Alperen Sengun,alperen sengun,9.5,-110.0,-120.0,HOU,709.196232452,40296685,40296686
 2026-11-06 23:35,2026-11-07,36282781,2026-11-07 21:10,Houston Rockets @ Phoenix Suns,phx,hou,reb,Kevin Durant,kevin durant,5.5,128.0,-172.0,HOU,709.196231951,12260605,12260606

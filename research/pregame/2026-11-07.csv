@@ -3941,3 +3941,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 03:12:22,295396,2026-11-07,2026-11-07 22:00,sa,por,BetMGM,event,moneyline,away,0.0,-210,normal
 2026-11-07 03:12:22,295396,2026-11-07,2026-11-07 22:00,sa,por,BetMGM,event,total,under,227.5,-110,normal
 2026-11-07 03:12:22,295396,2026-11-07,2026-11-07 22:00,sa,por,BetMGM,event,total,over,227.5,-110,normal
+2026-11-07 03:19:55,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,under,223.5,-110,normal
+2026-11-07 03:19:55,295392,2026-11-07,2026-11-07 20:00,ny,cle,Caesars,event,total,over,223.5,-110,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,DraftKings,event,spread,home,-6.5,-115,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,DraftKings,event,spread,away,6.5,-106,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,DraftKings,event,total,over,227.5,-105,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,DraftKings,event,total,under,227.5,-115,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,BetMGM,event,team_total,away_under,110.5,-118,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,BetMGM,event,team_total,home_over,116.5,-118,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,BetMGM,event,spread,away,6.5,-105,normal
+2026-11-07 03:21:01,295391,2026-11-07,2026-11-07 19:30,bkn,atl,BetMGM,event,spread,home,-6.5,-115,normal

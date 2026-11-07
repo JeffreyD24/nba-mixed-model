@@ -809,3 +809,27 @@ seen_at_et,date,event_id,tip_et,game,home,away,stat,player,name,line,over,under,
 2026-11-07 00:41,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Jrue Holiday,jrue holiday,4.5,118.0,-158.0,POR,709.196239142,12260620,12260621
 2026-11-07 00:41,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Deni Avdija,deni avdija,6.5,100.0,-132.0,POR,709.196238601,37901072,37901070
 2026-11-07 00:41,2026-11-07,36282779,2026-11-07 22:10,San Antonio Spurs @ Portland Trail Blazers,por,sa,ast,Damian Lillard,damian lillard,4.5,110.0,-146.0,POR,709.196238656,12260575,12260576
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Franz Wagner,franz wagner,21.5,-130.0,-102.0,ORL,709.196236458,40196992,40196991
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Jase Richardson,jase richardson,7.5,-130.0,-102.0,ORL,709.196236395,76284095,76284094
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Anthony Black,anthony black,14.5,-120.0,-110.0,ORL,709.196236355,50378078,50378080
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Brandin Podziemski,brandin podziemski,14.5,-125.0,-106.0,GSW,709.196238213,52263972,52263968
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Yaxel Lendeborg,yaxel lendeborg,17.5,-130.0,-102.0,GSW,709.196238234,64937530,64937543
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Tristan da Silva,tristan da silva,12.5,102.0,-136.0,ORL,709.196236409,43072432,43072430
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Draymond Green,draymond green,5.5,100.0,-132.0,GSW,709.196238208,12260600,12260599
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,pts,Wendell Carter Jr.,wendell carter,12.5,-125.0,-106.0,ORL,709.196236347,41408443,41408444
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Wendell Carter Jr.,wendell carter,9.5,112.0,-148.0,ORL,709.196236373,41408443,41408444
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Draymond Green,draymond green,5.5,102.0,-136.0,GSW,709.196238232,12260600,12260599
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Desmond Bane,desmond bane,4.5,134.0,-180.0,ORL,709.196236385,38187360,38187370
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Anthony Black,anthony black,4.5,-118.0,-112.0,ORL,709.196236454,50378078,50378080
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Jase Richardson,jase richardson,2.5,-128.0,-104.0,ORL,709.196236397,76284095,76284094
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Yaxel Lendeborg,yaxel lendeborg,7.5,102.0,-136.0,GSW,709.196238224,64937530,64937543
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Tristan da Silva,tristan da silva,3.5,-166.0,124.0,ORL,709.196236420,43072432,43072430
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Franz Wagner,franz wagner,5.5,-120.0,-110.0,ORL,709.196236387,40196992,40196991
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Brandin Podziemski,brandin podziemski,5.5,-114.0,-114.0,GSW,709.196238216,52263972,52263968
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,reb,Stephen Curry,stephen curry,3.5,-162.0,122.0,GSW,709.196238205,12260597,12260598
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Stephen Curry,stephen curry,4.5,-144.0,108.0,GSW,709.196238220,12260597,12260598
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Brandin Podziemski,brandin podziemski,3.5,-166.0,124.0,GSW,709.196238204,52263972,52263968
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Franz Wagner,franz wagner,7.5,110.0,-146.0,ORL,709.196236433,40196992,40196991
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Wendell Carter Jr.,wendell carter,1.5,-114.0,-114.0,ORL,709.196236364,41408443,41408444
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Yaxel Lendeborg,yaxel lendeborg,4.5,-106.0,-125.0,GSW,709.196238212,64937530,64937543
+2026-11-07 00:55,2026-11-07,36282775,2026-11-07 20:40,Orlando Magic @ Golden State Warriors,gs,orl,ast,Anthony Black,anthony black,4.5,-118.0,-112.0,ORL,709.196236325,50378078,50378080

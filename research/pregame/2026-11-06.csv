@@ -43920,3 +43920,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-06 20:33:25,295195,2026-11-06,2026-11-06 22:00,sa,sac,bet365,secondquarter,moneyline,home,0.0,200,normal
 2026-11-06 20:33:25,295195,2026-11-06,2026-11-06 22:00,sa,sac,bet365,firstquarter,total,over,60.5,100,normal
 2026-11-06 20:33:25,295195,2026-11-06,2026-11-06 22:00,sa,sac,bet365,firstquarter,total,under,60.5,-120,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,secondquarter,moneyline,home,0.0,198,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,Consensus,secondquarter,moneyline,away,0.0,-260,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,firsthalf,team_total,away_over,64.5,-105,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,firsthalf,team_total,away_under,64.5,-120,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,firsthalf,team_total,home_under,54.5,-110,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,firsthalf,team_total,home_over,54.5,-118,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,firsthalf,total,under,118.5,-105,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,firsthalf,total,over,118.5,-115,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,event,total,under,231.5,-110,normal
+2026-11-06 20:35:16,295195,2026-11-06,2026-11-06 22:00,sa,sac,BetMGM,event,total,over,231.5,-110,normal

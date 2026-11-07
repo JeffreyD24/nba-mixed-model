@@ -4221,3 +4221,13 @@ seen_at_et,an_game_id,date,start_et,away,home,book,period,market,side,value,odds
 2026-11-07 03:48:17,295393,2026-11-07,2026-11-07 20:00,wsh,okc,FanDuel,fourthquarter,spread,away,1.5,-104,normal
 2026-11-07 03:48:17,295393,2026-11-07,2026-11-07 20:00,wsh,okc,FanDuel,fourthquarter,total,under,52.5,-111,normal
 2026-11-07 03:48:17,295393,2026-11-07,2026-11-07 20:00,wsh,okc,FanDuel,fourthquarter,total,over,52.5,-115,normal
+2026-11-07 03:52:04,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,total,over,229.0,-110,normal
+2026-11-07 03:52:04,295390,2026-11-07,2026-11-07 17:00,den,ind,Consensus,event,total,under,229.0,-112,normal
+2026-11-07 03:53:16,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,total,over,221.5,-107,normal
+2026-11-07 03:53:16,295395,2026-11-07,2026-11-07 21:00,hou,phx,bet365,event,total,under,221.5,-113,normal
+2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,team_total,away_over,25.5,-113,normal
+2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,team_total,away_under,25.5,-113,normal
+2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,spread,home,-3.5,-104,normal
+2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,spread,away,3.5,-122,normal
+2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,total,over,54.5,-102,normal
+2026-11-07 03:56:05,295393,2026-11-07,2026-11-07 20:00,wsh,okc,Consensus,thirdquarter,total,under,54.5,-125,normal
